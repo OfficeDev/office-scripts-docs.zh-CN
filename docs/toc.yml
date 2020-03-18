@@ -1,0 +1,38 @@
+- name: Office 脚本文档
+  href: index.md
+- name: Web 上的 Excel 中的 Office 脚本
+  items:
+    - name: 概述
+      href: overview/excel.md
+    - name: 教程
+      items:
+        - name: Office 脚本基础知识
+          href: tutorials/excel-tutorial.md
+        - name: 使用脚本读取工作簿数据
+          href: tutorials/excel-read-tutorial.md
+    - name: 脚本基础
+      href: develop/scripting-fundamentals.md
+    - name: 概念
+      items:
+        - name: 内置 JavaScript 对象
+          href: develop/javascript-objects.md
+        - name: 代码编辑器环境
+          href: overview/code-editor-environment.md
+        - name: Office 脚本与 Office 外接程序之间的差异
+          href: resources/add-ins-differences.md
+        - name: 撤消 Office 脚本的效果
+          href: testing/undo.md
+    - name: 疑难解答
+      href: testing/troubleshooting.md
+    - name: 示例
+      items:
+        - name: 示例脚本
+          href: resources/excel-samples.md
+        - name: 方案
+          items:
+            - name: 概述
+              href: resources/scenarios/sample-scenario-overview.md
+            - name: 分析 web 下载内容
+              href: resources/scenarios/analyze-web-downloads.md
+            - name: 年级计算器
+              href: resources/scenarios/grade-calculator.md

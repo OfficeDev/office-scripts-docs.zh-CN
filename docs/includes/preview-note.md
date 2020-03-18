@@ -1,0 +1,2 @@
+> [!NOTE]
+> 在 web 上的 Excel 中的 Office 脚本是[公共预览版](https://techcommunity.microsoft.com/t5/excel-blog/announcing-office-scripts-preview/ba-p/1093559)，需要[由管理员启用](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)。 此处所述的功能在开发功能时可能会有所更改。 您可以通过 Excel 中的 "**帮助 > 反馈**" 按钮提交 Office 脚本的反馈。 您可以提交有关[OfficeDev/office-scripts-](https://github.com/OfficeDev/office-scripts-docs/issues)文档 GitHub 存储库的文档反馈。
