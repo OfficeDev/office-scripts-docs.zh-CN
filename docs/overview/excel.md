@@ -1,0 +1,53 @@
+---
+title: Excel 网页版中的 Office 脚本
+description: Office 脚本中的操作录制器和代码编辑器简介。
+ms.date: 02/24/2020
+localization_priority: Priority
+ms.openlocfilehash: dd48467bc8105a3d31d9fa21e547c703e9e37cce
+ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42700139"
+---
+# <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本（预览版）
+
+Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 你可以使用操作录制器录制 Excel 操作，这会创建一个脚本。 此外，你还可以使用代码编辑器创建和编辑脚本。 本文档系列将指导你如何使用这些工具。 我们将向你介绍操作录制器，让你了解如何录制频繁的 Excel 操作。 你还将学习如何使用代码编辑器创建或更新自己的脚本。
+
+<br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
+
+[!INCLUDE [Preview note](../includes/preview-note.md)]
+
+## <a name="when-to-use-office-scripts"></a>何时使用 Office 脚本
+
+你可以使用脚本录制和重播不同工作簿和工作表上的 Excel 操作。 如果你发现自己正在执行重复操作，则 Office 脚本可以将整个工作流程缩减为按一下按钮，从而为你提供帮助。
+
+例如，假如你在 Excel 中打开一个会计网站的 .csv 文件，以此开始一天的工作。 你需要花几分钟删除不必要的列，设置表格格式，添加公式和在新工作表中创建一个数据透视表。 你可以使用操作录制器录制这些每天重复的操作。 录制之后，运行脚本即可处理整个 .csv 转换。 这样不仅可以消除忘记步骤的风险，而且还能够与他们共享流程，无需为他们提供任何指导。 Office 脚本可以自动化常见任务，使你和你的工作空间可以更有效率、更加高效。
+
+## <a name="action-recorder"></a>操作录制器
+
+![录制若干操作之后的操作录制器。](../images/action-recorder-intro.png)
+
+操作录制器可以录制你在 Excel 中进行的操作，并将它们转换为脚本。 运行操作录制器之后，你可以在编辑单元格、更改格式和创建表格时捕获 Excel 操作。 可以在其他工作表和工作簿上运行生成的脚本，以重复创建原始操作。
+
+## <a name="code-editor"></a>代码编辑器
+
+![显示以上脚本的脚本代码的代码编辑器。](../images/code-editor-intro.png)
+
+使用操作录制器录制的所有脚本均可通过代码编辑器编辑。 这使你能够调整和自定义脚本，以更好地满足你的准确需求。 此外，你还可以添加不能直接通过 Excel UI 访问的逻辑和功能，例如条件语句 (if/else) 和循环。
+
+一种简单的开始学习 Office 脚本方式就是在 Excel 网页版上录制脚本，然后查看生成的代码。 另一种选择是按照我们的[教程](../tutorials/excel-tutorial.md)进行，以更具指导性的结构化方式进行学习。
+
+## <a name="next-steps"></a>后续步骤
+
+完成 [Excel 网页版上的 Office 脚本教程](../tutorials/excel-tutorial.md)，以了解如何创建你的第一个 Office 脚本。
+
+## <a name="see-also"></a>另请参阅
+
+- [Excel 网页版上的 Office 脚本的脚本基础知识](../develop/scripting-fundamentals.md)
+- [Office 脚本 API 参考](/javascript/api/office-scripts/overview)
+- [Office 脚本疑难解答](../testing/troubleshooting.md)
+- [M365 中的 Office 脚本设置](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
+- [Excel 中的 Office 脚本简介 (support.office.com)](https://support.office.com/article/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
