@@ -1,6 +1,6 @@
 - name: Office 脚本文档
   href: index.md
-- name: Web 上的 Excel 中的 Office 脚本
+- name: Excel 网页版中的 Office 脚本
   items:
     - name: 概述
       href: overview/excel.md
@@ -10,7 +10,7 @@
           href: tutorials/excel-tutorial.md
         - name: 使用脚本读取工作簿数据
           href: tutorials/excel-read-tutorial.md
-    - name: 脚本基础
+    - name: 脚本基础知识
       href: develop/scripting-fundamentals.md
     - name: 概念
       items:
@@ -18,6 +18,8 @@
           href: develop/javascript-objects.md
         - name: 代码编辑器环境
           href: overview/code-editor-environment.md
+        - name: Office 脚本和 VBA 宏之间的区别
+          href: resources/vba-differences.md
         - name: Office 脚本与 Office 外接程序之间的差异
           href: resources/add-ins-differences.md
         - name: 撤消 Office 脚本的效果
