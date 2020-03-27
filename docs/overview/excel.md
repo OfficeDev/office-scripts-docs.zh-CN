@@ -3,12 +3,12 @@ title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
 ms.date: 02/24/2020
 localization_priority: Priority
-ms.openlocfilehash: dd48467bc8105a3d31d9fa21e547c703e9e37cce
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: fb1d32068f9a738bb99412c2892cf22b4119b9b1
+ms.sourcegitcommit: d556aaefac80e55f53ac56b7f6ecbc657ebd426f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700139"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42978347"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本（预览版）
 
