@@ -1,20 +1,22 @@
 ---
 title: Office 脚本与 Office 外接程序之间的差异
 description: Office 脚本与 Office 外接程序之间的行为和 API 差异。
-ms.date: 12/12/2019
+ms.date: 03/23/2020
 localization_priority: Normal
-ms.openlocfilehash: 4626afb66b54c94a72f29b039c601435c089d64d
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: 2290d4e34b7a7286d67443de9e9c64bad4fcd4b7
+ms.sourcegitcommit: d556aaefac80e55f53ac56b7f6ecbc657ebd426f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700127"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42978702"
 ---
 # <a name="differences-between-office-scripts-and-office-add-ins"></a>Office 脚本与 Office 外接程序之间的差异
 
 Office 外接程序和 Office 脚本具有很多共同之处。 它们都通过 Office JavaScript API 的`Excel`命名空间提供对 Excel 工作簿的自动控制。 但是，Office 脚本的作用范围更有限。
 
-Office 脚本运行到完成时只需要按手动按钮，而 Office 外接程序依赖于用户交互并在工作簿使用时保持不变。 如果发现您的 Excel 扩展需要超过脚本平台的功能，请访问[Office 外接程序文档](/office/dev/add-ins)以了解有关 Office 外接程序的详细信息。
+![显示不同 Office 扩展性解决方案的焦点区域的四象限图。 Office 脚本和 Office Web 外接程序都集中在 Web 和协作上，但 Office 脚本适用于最终用户（而 Office Web 外接程序面向专业开发人员）。](../images/office-programmability-diagram.png)
+
+Office 脚本运行到完成时需要按手动按钮按下或以 "[自动](https://flow.microsoft.com/)运行" 的步骤，而 office 加载项在其任务窗格处于打开状态时保持不变。 这意味着外接程序可以在会话期间维护状态，而 Office 脚本不会在两个运行之间保持内部状态。 如果发现您的 Excel 扩展需要超过脚本平台的功能，请访问[Office 外接程序文档](/office/dev/add-ins)以了解有关 Office 外接程序的详细信息。
 
 本文的其余部分将介绍 Office 外接程序和 Office 脚本之间的主要差异。
 
@@ -38,6 +40,7 @@ Office 脚本无法使用[通用 api](/javascript/api/office)。 如果需要身
 
 ## <a name="see-also"></a>另请参阅
 
-- [Web 上的 Excel 中的 Office 脚本](../overview/excel.md)
+- [Excel 网页版中的 Office 脚本](../overview/excel.md)
+- [Office 脚本和 VBA 宏之间的区别](vba-differences.md)
 - [Office 脚本疑难解答](../testing/troubleshooting.md)
 - [生成 Excel 任务窗格加载项](/office/dev/add-ins/quickstarts/excel-quickstart-jquery)
