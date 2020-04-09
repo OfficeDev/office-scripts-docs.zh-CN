@@ -1,20 +1,20 @@
 ---
 title: Web 上的 Excel 中 Office 脚本的示例脚本
 description: 要用于 web 上 Excel 中的 Office 脚本的一组代码示例。
-ms.date: 02/19/2020
+ms.date: 04/06/2020
 localization_priority: Normal
-ms.openlocfilehash: abb4064dfde8b644035e725832e481e6463e979e
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: abf6b87b63ad027cca8ee5c947b687f54815409c
+ms.sourcegitcommit: 0b2232c4c228b14d501edb8bb489fe0e84748b42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700134"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43191008"
 ---
 # <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中 Office 脚本的示例脚本（预览）
 
 下面的示例是您在自己的工作簿中尝试的简单脚本。 若要在 Excel 网页上使用它们，请执行以下操作：
 
-1. 打开 "**自动**" 选项卡。
+1. 打开“**自动**”选项卡。
 2. 按**代码编辑器**。
 3. 在代码编辑器的任务窗格中，按 "**新建脚本**"。
 4. 将整个脚本替换为您选择的示例。
@@ -47,7 +47,9 @@ async function main(context: Excel.RequestContext) {
 
 ### <a name="work-with-dates"></a>使用日期
 
-此示例使用 JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date)对象获取当前日期和时间，然后将这些值写入活动工作表中的两个单元格。
+本节中的示例演示如何使用 JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date)对象。
+
+下面的示例获取当前日期和时间，然后将这些值写入活动工作表中的两个单元格。
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
@@ -63,6 +65,22 @@ async function main(context: Excel.RequestContext) {
   
   // Add the time string to B1.
   timeRange.values = [[date.toLocaleTimeString()]];
+}
+```
+
+下一个示例读取存储在 Excel 中的日期，并将其转换为 JavaScript Date 对象。 它使用[日期的数字序列号](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46)作为 JavaScript 日期的输入。
+
+```TypeScript
+async function main(context: Excel.RequestContext) {
+  // Read a date at cell A1 from Excel.
+  let dateRange = context.workbook.worksheets.getActiveWorksheet().getRange("A1");
+  dateRange.load("values");
+  await context.sync();
+
+  // Convert the Excel date to a JavaScript Date object.
+  let excelDateValue = dateRange.values[0][0];
+  let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
+  console.log(javaScriptDate);
 }
 ```
 

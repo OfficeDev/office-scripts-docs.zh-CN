@@ -1,16 +1,16 @@
 ---
-title: 在 Office 脚本中使用内置 JavaScript 对象
+title: 在 Office 脚本中使用内置的 JavaScript 对象
 description: 如何：从 web 上的 Excel 中的 Office 脚本中调用内置 JavaScript Api。
-ms.date: 01/21/2020
+ms.date: 04/06/2020
 localization_priority: Normal
-ms.openlocfilehash: e0fcd98117125ead18e55675e195415ff59c0c5d
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: a4b698215edea5f266e159fee0e08690904dd379
+ms.sourcegitcommit: 0b2232c4c228b14d501edb8bb489fe0e84748b42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700113"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43191016"
 ---
-# <a name="using-built-in-javascript-objects-in-office-scripts"></a>在 Office 脚本中使用内置 JavaScript 对象
+# <a name="using-built-in-javascript-objects-in-office-scripts"></a>在 Office 脚本中使用内置的 JavaScript 对象
 
 JavaScript 提供了几个内置对象，您可以在 Office 脚本中使用，而不管您是在 JavaScript 还是使用[TypeScript](../overview/code-editor-environment.md) （javascript 的超集）编写脚本。 本文介绍如何使用 Office 脚本中的某些内置 JavaScript 对象在 web 上运行 Excel。
 
@@ -94,7 +94,7 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-## <a name="date"></a>Date
+## <a name="date"></a>日期
 
 [Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)对象提供处理脚本中的日期的标准化方法。 `Date.now()`生成具有当前日期和时间的对象，这在向脚本的数据输入中添加时间戳时非常有用。
 
@@ -112,6 +112,8 @@ async function main(context: Excel.RequestContext) {
   range.values = [[date.toLocaleDateString()]];
 }
 ```
+
+示例中的 "[处理日期](../resources/excel-samples.md#work-with-dates)" 部分具有与日期相关的脚本。
 
 ## <a name="math"></a>数学
 
