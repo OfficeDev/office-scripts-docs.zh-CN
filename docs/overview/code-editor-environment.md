@@ -1,14 +1,14 @@
 ---
 title: Office 脚本代码编辑器环境
 description: Excel 网页版中 Office 脚本的先决条件和环境信息。
-ms.date: 01/21/2020
+ms.date: 04/08/2020
 localization_priority: Normal
-ms.openlocfilehash: 06318305e4e0091ce4fd8d1cd8130c474e18aed9
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: 6b26adf886172f085980bed0488b4aa7a6815991
+ms.sourcegitcommit: b13dedb5ee2048f0a244aa2294bf2c38697cb62c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700128"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43215264"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office 脚本代码编辑器环境
 
@@ -33,8 +33,12 @@ Office 脚本使用专用版本[Office 外接程序](/office/dev/add-ins/overvie
 
 Excel 代码编辑器使用与 Visual Studio Code 相同的智能感知引擎。 若要了解有关此功能的详细信息，请访问[Visual Studio Code 的智能感知功能](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features)。
 
+## <a name="external-library-support"></a>外部库支持
+
+Office 脚本不支持使用外部第三方 JavaScript 库。 您当前无法从脚本调用 Office 脚本 Api 之外的任何其他库。 您仍有权访问任何[内置 JavaScript 对象](../develop/javascript-objects.md)，如[数学](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)。
+
 ## <a name="see-also"></a>另请参阅
 
 - [Office 脚本 API 参考](/javascript/api/office-scripts/overview)
 - [Office 脚本疑难解答](../testing/troubleshooting.md)
-- [在 Office 脚本中使用内置 JavaScript 对象](../develop/javascript-objects.md)
+- [在 Office 脚本中使用内置的 JavaScript 对象](../develop/javascript-objects.md)

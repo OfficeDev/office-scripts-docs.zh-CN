@@ -1,14 +1,14 @@
 ---
 title: 在 Office 脚本中使用内置的 JavaScript 对象
 description: 如何：从 web 上的 Excel 中的 Office 脚本中调用内置 JavaScript Api。
-ms.date: 04/06/2020
+ms.date: 04/08/2020
 localization_priority: Normal
-ms.openlocfilehash: a4b698215edea5f266e159fee0e08690904dd379
-ms.sourcegitcommit: 0b2232c4c228b14d501edb8bb489fe0e84748b42
+ms.openlocfilehash: 54cadb6e9ce60e631488bbe7de00c29a6db35eb7
+ms.sourcegitcommit: b13dedb5ee2048f0a244aa2294bf2c38697cb62c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43191016"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43215257"
 ---
 # <a name="using-built-in-javascript-objects-in-office-scripts"></a>在 Office 脚本中使用内置的 JavaScript 对象
 
@@ -146,6 +146,10 @@ async function main(context: Excel.RequestContext) {
 }
 
 ```
+
+## <a name="use-of-external-javascript-libraries-is-not-supported"></a>不支持使用外部 JavaScript 库
+
+Office 脚本不支持使用外部第三方库。 您的脚本只能使用内置 JavaScript 对象和 Office 脚本 Api。
 
 ## <a name="see-also"></a>另请参阅
 
