@@ -1,6 +1,6 @@
 - name: Office 脚本文档
   href: index.md
-- name: Excel 网页版中的 Office 脚本
+- name: Excel web 版中的 Office 脚本
   items:
     - name: 概述
       href: overview/excel.md
@@ -18,11 +18,11 @@
           href: develop/javascript-objects.md
         - name: 代码编辑器环境
           href: overview/code-editor-environment.md
-        - name: Office 脚本和 VBA 宏之间的区别
+        - name: Office 脚本与 VBA 宏之间的差异
           href: resources/vba-differences.md
-        - name: Office 脚本与 Office 外接程序之间的差异
+        - name: Office 脚本与 Office 加载项之间的差异
           href: resources/add-ins-differences.md
-        - name: 撤消 Office 脚本的效果
+        - name: 消除 Office 脚本的影响
           href: testing/undo.md
     - name: 疑难解答
       href: testing/troubleshooting.md
@@ -30,11 +30,11 @@
       items:
         - name: 示例脚本
           href: resources/excel-samples.md
-        - name: 方案
+        - name: 应用场景
           items:
             - name: 概述
               href: resources/scenarios/sample-scenario-overview.md
-            - name: 分析 web 下载内容
+            - name: 分析 Web 下载项
               href: resources/scenarios/analyze-web-downloads.md
-            - name: 年级计算器
+            - name: 成绩计算器
               href: resources/scenarios/grade-calculator.md
