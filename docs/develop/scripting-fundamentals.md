@@ -1,14 +1,14 @@
 ---
 title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
-ms.date: 01/27/2020
+ms.date: 04/24/2020
 localization_priority: Priority
-ms.openlocfilehash: 5a709c16e23c00ffc7ee7949a3cb11459dc2d530
-ms.sourcegitcommit: d556aaefac80e55f53ac56b7f6ecbc657ebd426f
+ms.openlocfilehash: 8449654e359f665677f3d416a8e28fa4d6930f26
+ms.sourcegitcommit: 350bd2447f616fa87bb23ac826c7731fb813986b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42978704"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43919796"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中 Office 脚本的脚本基础（预览）
 
@@ -29,7 +29,7 @@ ms.locfileid: "42978704"
 
 ### <a name="ranges"></a>Range
 
-Range 是工作簿中的一组连续单元格。 脚本通常使用 A1 样式表示法（例如，对于行 **B** 和列 **3** 中单个单元格的 **B3** 或从行 **C** 至 **F**和列 **2** 至 **4** 的单元格的 **C2:F4**）来定义范围。
+Range 是工作簿中的一组连续单元格。 脚本通常使用 A1 样式表示法（例如，对于列 **B** 和行 **3** 中单个的单元格 **B3** 或从列 **C** 至 **列F**和行 **2** 至 **行4** 的单元格 **C2:F4**）来定义范围。
 
 Range 具有三个核心属性：`values`、`formulas` 和 `format`。 这些属性获取或设置单元格值、要计算的公式以及单元格的视觉对象格式设置。
 
@@ -155,7 +155,7 @@ async function main(context: Excel.RequestContext) {
 
 因为脚本和工作簿在不同的位置运行，所以两者之间的任何数据传输都需要时间。 为了提高脚本性能，对命令进行排队，直到脚本显式调用 `sync` 操作来同步脚本和工作簿。 脚本可以独立运行，直到需要执行以下任一操作：
 
-- 从工作簿中读取数据（在执行 `load` 之后）。
+- 从工作簿中读取数据（遵循返回 [ClientResult](/javascript/api/office-scripts/excel/excel.clientresult) 的 `load` 操作或方法）。
 - 将数据写入工作簿（通常是因为脚本已完成）。
 
 下图显示了脚本和工作簿之间的示例控制流：
@@ -173,7 +173,7 @@ await context.sync();
 > [!NOTE]
 > 脚本结束时将隐式调用 `context.sync()`。
 
-`sync` 操作完成后，工作簿将更新以反映脚本已指定的任何写入操作。 写入操作在 Excel 对象上设置任何属性（例如 `range.format.fill.color = "red"`），或调用更改属性的方法（例如 `range.format.autoFitColumns()`）。 `sync` 操作还可以通过使用 `load` 操作从脚本请求的工作簿中读取任何值（如下一节所述）。
+`sync` 操作完成后，工作簿将更新以反映脚本已指定的任何写入操作。 写入操作在 Excel 对象上设置任何属性（例如 `range.format.fill.color = "red"`），或调用更改属性的方法（例如 `range.format.autoFitColumns()`）。 `sync` 操作还从脚本请求的工作簿中读取任何值，方式是通过使用能返回 `ClientResult` 的 `load` 操作或方法（如下一节所述）。
 
 将脚本与工作簿同步可能需要一些时间，具体取决于网络。 应尽量减少 `sync` 调用的次数，以帮助脚本快速运行。  
 
@@ -210,6 +210,25 @@ await context.sync(); // Synchronize with the workbook to get the properties.
 
 > [!TIP]
 > 要了解有关在 Office 脚本中使用集合的更多信息，请参阅[在 Office 脚本中使用内置 JavaScript 对象的数组部分](javascript-objects.md#array)一文。
+
+### <a name="clientresult"></a>ClientResult
+
+从工作簿中返回信息的方法与`load`/`sync`范例的模式相同。 举个例子，`TableCollection.getCount`获取集合中的表的数量。 `getCount` 返回 `ClientResult<number>`，这意味着返回 `ClientResult` 中的 `value` 属性为 "数字"。 在调用 `context.sync()` 之前，脚本无法访问此值。 与加载属性很相似，直到 `sync` 调用，`value` 是本地 "空" 值。
+
+以下脚本获取工作簿中的表的总数，并将该数目记录到控制台。
+
+```TypeScript
+async function main(context: Excel.RequestContext) {
+  let tableCount = context.workbook.tables.getCount();
+
+  // This sync call implicitly loads tableCount.value.
+  // Any other ClientResult values are loaded too.
+  await context.sync();
+
+  // Trying to log the value before calling sync would throw an error.
+  console.log(tableCount.value);
+}
+```
 
 ## <a name="see-also"></a>另请参阅
 
