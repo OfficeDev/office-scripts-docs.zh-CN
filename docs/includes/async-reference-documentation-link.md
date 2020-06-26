@@ -1,0 +1,3 @@
+<span data-ttu-id="b154f-101">使用[此链接可查看 API 参考文档的异步版本](/javascript/api/office-scripts/excel?view=office-scripts-async)。</span><span class="sxs-lookup"><span data-stu-id="b154f-101">Use [this link to view the async version of the API reference documentation](/javascript/api/office-scripts/excel?view=office-scripts-async).</span></span> <span data-ttu-id="b154f-102">您可以使用参考文档中目录上方的版本选择控件在标准 Api 和异步版本之间进行切换。</span><span class="sxs-lookup"><span data-stu-id="b154f-102">You can switch between the standard APIs and the async versions using the version selection control above the table-of-contents in the reference documentation.</span></span>
+
+![参考文档中的版本选择控件。](../images/reference-documentation-version-picker.png)
