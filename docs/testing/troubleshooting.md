@@ -1,14 +1,14 @@
 ---
 title: Office 脚本疑难解答
 description: Office 脚本的调试提示和技术，以及帮助资源。
-ms.date: 12/13/2019
+ms.date: 05/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 959faff875f342dc1b1ab158ad9ded24732b0894
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: 6448980eec45214a589444229db0fd781b9fea13
+ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700114"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44878617"
 ---
 # <a name="troubleshooting-office-scripts"></a>Office 脚本疑难解答
 
@@ -19,16 +19,11 @@ ms.locfileid: "42700114"
 有时，在进行故障排除时，您需要将消息打印到屏幕。 这些值可显示变量的当前值或触发的代码路径。 为此，请将文本记录到控制台。
 
 ```TypeScript
-console.log("Logging my range's address.");
-myRange.load("address");
-await context.sync();
-console.log(myRange.address);
+console.log("Logging myRange's address.");
+console.log(myRange.getAddress());
 ```
 
-> [!IMPORTANT]
-> 在记录对象`load`属性之前， `sync`请不要忘记工作表数据和工作簿。
-
-传递给`console.log`的字符串将显示在代码编辑器的日志记录控制台中。 若要打开控制台，请按**省略号**按钮，然后选择 "**日志 ...** "。
+传递给的字符串 `console.log` 将显示在代码编辑器的日志记录控制台中。 若要打开控制台，请按**省略号**按钮，然后选择 "**日志 ...** "。
 
 日志不会影响工作簿。
 
@@ -46,6 +41,7 @@ console.log(myRange.address);
 
 ## <a name="see-also"></a>另请参阅
 
-- [Web 上的 Excel 中的 Office 脚本](../overview/excel.md)
+- [Excel web 版中的 Office 脚本](../overview/excel.md)
 - [Web 上的 Excel 中 Office 脚本的脚本基础](../develop/scripting-fundamentals.md)
-- [撤消 Office 脚本的效果](undo.md)
+- [消除 Office 脚本的影响](undo.md)
+- [提高 Office 脚本的性能](../develop/web-client-performance.md)

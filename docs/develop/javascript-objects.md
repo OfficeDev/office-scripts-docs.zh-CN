@@ -1,14 +1,14 @@
 ---
 title: 在 Office 脚本中使用内置的 JavaScript 对象
 description: 如何：从 web 上的 Excel 中的 Office 脚本中调用内置 JavaScript Api。
-ms.date: 04/08/2020
+ms.date: 04/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 54cadb6e9ce60e631488bbe7de00c29a6db35eb7
-ms.sourcegitcommit: b13dedb5ee2048f0a244aa2294bf2c38697cb62c
+ms.openlocfilehash: b5d70e77aef79c38a8cfd680c9d03bb126c402b2
+ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43215257"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44878533"
 ---
 # <a name="using-built-in-javascript-objects-in-office-scripts"></a>在 Office 脚本中使用内置的 JavaScript 对象
 
@@ -23,27 +23,25 @@ JavaScript 提供了几个内置对象，您可以在 Office 脚本中使用，�
 
 ### <a name="working-with-ranges"></a>处理区域
 
-区域包含多个直接映射到该范围中的单元格的二维数组。 其中包括`values`、 `formulas`和`numberFormat`等属性。 数组类型属性的[加载](scripting-fundamentals.md#sync-and-load)方式必须与任何其他属性一样。
+区域包含多个直接映射到该范围中的单元格的二维数组。 这些数组包含有关该范围中每个单元格的特定信息。 例如， `Range.getValues` 返回这些单元格中的所有值（二维数组的行和列映射到该工作表子部分的行和列）。 `Range.getFormulas`以及 `Range.getNumberFormats` 返回像这样的数组的其他频繁使用的方法 `Range.getValues` 。
 
 下面的脚本在**A1： D4**范围中搜索任何包含 "$" 的数字格式。 该脚本将这些单元格中的填充颜色设置为 "黄色"。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the range From A1 to D4.
-  let range = context.workbook.worksheets.getActiveWorksheet().getRange("A1:D4");
+  let range = workbook.getActiveWorksheet().getRange("A1:D4");
 
-  // Load the numberFormat property on the range.
-  range.load("numberFormat");
-  await context.sync();
-
+  // Get the number formats for each cell in the range.
+  let rangeNumberFormats = range.getNumberFormats();
   // Iterate through the arrays of rows and columns corresponding to those in the range.
-  range.numberFormat.forEach((rowItem, rowIndex) => {
-    range.numberFormat[rowIndex].forEach((columnItem, columnIndex) => {
+  rangeNumberFormats.forEach((rowItem, rowIndex) => {
+    rangeNumberFormats[rowIndex].forEach((columnItem, columnIndex) => {
       // Treat the numberFormat as a string so we can do text comparisons.
       let columnItemText = columnItem as string;
       if (columnItemText.indexOf("$") >= 0) {
         // Set the cell's fill to yellow.
-        range.getCell(rowIndex, columnIndex).format.fill.color = "yellow";
+        range.getCell(rowIndex, columnIndex).getFormat().getFill().setColor("yellow");
       }
     });
   });
@@ -52,42 +50,38 @@ async function main(context: Excel.RequestContext) {
 
 ### <a name="working-with-collections"></a>使用集合
 
-集合中包含许多 Excel 对象。 例如，工作表中的所有[形状](/javascript/api/office-scripts/excel/excel.shape)都包含在[ShapeCollection](/javascript/api/office-scripts/excel/excel.shapecollection)中（作为`Worksheet.shapes`属性）。 每`*Collection`个对象都`items`包含一个属性，该属性是一个存储该集合中的对象的数组。 这可以像常规 JavaScript 数组一样进行处理，但必须首先加载集合中的项目。 如果需要在集合中的每个对象上使用属性，请使用分层加载语句（`items/propertyName`）。
+集合中包含许多 Excel 对象。 该集合由 Office 脚本 API 管理并作为一个数组公开。 例如，工作表中的所有[形状](/javascript/api/office-scripts/excel/excelscript.shape)都包含在 `Shape[]` 方法返回的中 `Worksheet.getShapes` 。 您可以使用此数组读取集合中的值，也可以从父对象的方法访问特定的对象 `get*` 。
+
+> [!NOTE]
+> 请勿手动添加或删除这些集合数组中的对象。 `add`对父对象和 `delete` 集合类型对象上的方法使用方法。 例如，使用方法向[工作表](/javascript/api/office-scripts/excel/excelscript.worksheet)中添加[表](/javascript/api/office-scripts/excel/excelscript.table) `Worksheet.addTable` 并删除 `Table` using `Table.delete` 。
 
 下面的脚本记录当前工作表中的每个形状的类型。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
-  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+  let selectedSheet = workbook.getActiveWorksheet();
 
   // Get the shapes in this worksheet.
-  let shapes = selectedSheet.shapes;
-  shapes.load("items/type");
-  await context.sync();
+  let shapes = selectedSheet.getShapes();
 
   // Log the type of every shape in the collection.
-  shapes.items.forEach((shape) => {
-    console.log(shape.type);
+  shapes.forEach((shape) => {
+    console.log(shape.getType());
   });
 }
 ```
 
-您可以使用`getItem`或`getItemAt`方法从集合中加载单个对象。 `getItem`通过使用唯一标识符（如名称）获取对象（这些名称通常由脚本指定）。 `getItemAt`通过使用其在集合中的索引获取对象。 在可以使用该对象之前， `await context.sync();`必须先调用一个命令。
-
 下面的脚本删除当前工作表中最旧的形状。
 
 ```Typescript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
-  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+  let selectedSheet = workbook.getActiveWorksheet();
 
   // Get the first (oldest) shape in the worksheet.
   // Note that this script will thrown an error if there are no shapes.
-  let shape = selectedSheet.shapes.getItemAt(0);
-
-  // Sync to load `shape` from the collection.
-  await context.sync();
+  let shape = selectedSheet.getShapes()[0];
 
   // Remove the shape from the worksheet.
   shape.delete();
@@ -98,18 +92,18 @@ async function main(context: Excel.RequestContext) {
 
 [Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)对象提供处理脚本中的日期的标准化方法。 `Date.now()`生成具有当前日期和时间的对象，这在向脚本的数据输入中添加时间戳时非常有用。
 
-下面的脚本将当前日期添加到工作表中。 请注意，通过使用`toLocaleDateString`方法，Excel 会将值识别为日期，并自动更改单元格的数字格式。
+下面的脚本将当前日期添加到工作表中。 请注意，通过使用 `toLocaleDateString` 方法，Excel 会将值识别为日期，并自动更改单元格的数字格式。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the range for cell A1.
-  let range = context.workbook.worksheets.getActiveWorksheet().getRange("A1");
+  let range = workbook.getActiveWorksheet().getRange("A1");
 
   // Get the current date and time.
   let date = new Date(Date.now());
 
   // Set the value at A1 to the current date, using a localized string.
-  range.values = [[date.toLocaleDateString()]];
+  range.setValue(date.toLocaleDateString());
 }
 ```
 
@@ -119,29 +113,28 @@ async function main(context: Excel.RequestContext) {
 
 [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)对象为常见的数学运算提供了方法和常量。 这些功能在 Excel 中也可以提供许多功能，而无需使用工作簿的计算引擎。 这将使您的脚本不必查询工作簿，从而提高性能。
 
-下面的脚本使用`Math.min`来查找并记录**A1： D4**范围中的最小数字。 请注意，此示例假定整个区域仅包含数字，而不包含字符串。
+下面的脚本使用 `Math.min` 来查找并记录**A1： D4**范围中的最小数字。 请注意，此示例假定整个区域仅包含数字，而不包含字符串。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the range from A1 to D4.
-  let comparisonRange = context.workbook.worksheets.getActiveWorksheet().getRange("A1:D4");
-  
+  let comparisonRange = workbook.getActiveWorksheet().getRange("A1:D4");
+
   // Load the range's values.
-  comparisonRange.load("values");
-  await context.sync();
+  let comparisonRangeValues = comparisonRange.getValues();
 
   // Set the minimum values as the first value.
-  let minimum = comparisonRange.values[0][0];
+  let minimum = comparisonRangeValues[0][0];
 
   // Iterate over each row looking for the smallest value.
-  comparisonRange.values.forEach((rowItem, rowIndex) => {
+  comparisonRangeValues.forEach((rowItem, rowIndex) => {
     // Iterate over each column looking for the smallest value.
-    comparisonRange.values[rowIndex].forEach((columnItem) => {
+    comparisonRangeValues[rowIndex].forEach((columnItem) => {
       // Use `Math.min` to set the smallest value as either the current cell's value or the previous minimum.
       minimum = Math.min(minimum, columnItem);
     });
   });
-  
+
   console.log(minimum);
 }
 

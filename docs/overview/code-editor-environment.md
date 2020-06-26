@@ -1,14 +1,14 @@
 ---
 title: Office 脚本代码编辑器环境
 description: Excel 网页版中 Office 脚本的先决条件和环境信息。
-ms.date: 04/08/2020
+ms.date: 04/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 6b26adf886172f085980bed0488b4aa7a6815991
-ms.sourcegitcommit: b13dedb5ee2048f0a244aa2294bf2c38697cb62c
+ms.openlocfilehash: efe6ddbe39a1ea3850b4dc6fea0fa885b80c0c28
+ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43215264"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44878666"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office 脚本代码编辑器环境
 
@@ -25,7 +25,7 @@ Office 脚本主要是自包含的代码段。 仅使用 TypeScript 的功能的
 
 ## <a name="office-scripts-javascript-api"></a>Office 脚本 JavaScript API
 
-Office 脚本使用专用版本[Office 外接程序](/office/dev/add-ins/overview/index)使用的 Office JavaScript api。[Office 脚本与 Office 外接程序一](../resources/add-ins-differences.md#apis)文中的区别介绍了两个平台之间的差异。 您可以在[Office 脚本 API 参考文档](/javascript/api/office-scripts/overview)中查看脚本的所有可用 api。
+Office 脚本将专用版本用于[Office 外接程序](/office/dev/add-ins/overview/index)的 Office JavaScript api。虽然这两个 Api 中存在相似性，但不应假定代码可以在这两个平台之间进行移植。 [Office 脚本与 Office 外接程序一](../resources/add-ins-differences.md#apis)文中的区别介绍了两个平台之间的差异。 您可以在[Office 脚本 API 参考文档](/javascript/api/office-scripts/overview)中查看脚本的所有可用 api。
 
 ## <a name="intellisense"></a>IntelliSense
 
