@@ -6,10 +6,14 @@
       href: overview/excel.md
     - name: 教程
       items:
-        - name: Office 脚本基础知识
+        - name: 了解 Office 脚本的基础知识
           href: tutorials/excel-tutorial.md
         - name: 使用脚本读取工作簿数据
           href: tutorials/excel-read-tutorial.md
+        - name: 开始通过 Power Automate 使用脚本
+          href: tutorials/excel-power-automate-manual.md
+        - name: 自动通过 Power Automate 运行脚本
+          href: tutorials/excel-power-automate-trigger.md
     - name: 脚本基础知识
       href: develop/scripting-fundamentals.md
     - name: 概念
@@ -22,10 +26,18 @@
           href: resources/vba-differences.md
         - name: Office 脚本与 Office 加载项之间的差异
           href: resources/add-ins-differences.md
+        - name: 与 Power Automate 集成
+          href: develop/power-automate-integration.md
+    - name: 疑难解答
+      items:
+        - name: 疑难解答基础知识
+          href: testing/troubleshooting.md
+        - name: 改进脚本性能
+          href: develop/web-client-performance.md
         - name: 消除 Office 脚本的影响
           href: testing/undo.md
-    - name: 疑难解答
-      href: testing/troubleshooting.md
+        - name: 使用异步模型（旧版）
+          href: develop/excel-async-model.md
     - name: 示例
       items:
         - name: 示例脚本
@@ -38,3 +50,5 @@
               href: resources/scenarios/analyze-web-downloads.md
             - name: 成绩计算器
               href: resources/scenarios/grade-calculator.md
+            - name: 任务提醒（通过 Power Automate）
+              href: resources/scenarios/task-reminders.md
