@@ -1,14 +1,14 @@
 ---
 title: Office 脚本示例方案：分析 web 下载
 description: 在将该信息组织到表中之前，获取 Excel 工作簿中的原始 internet 流量数据并确定原始位置的示例。
-ms.date: 06/15/2020
+ms.date: 06/25/2020
 localization_priority: Normal
-ms.openlocfilehash: 2a74fada55115faf79f0b625b8a7cd6352deb651
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 425d2af432d6b3c4b7604daf7935d2cc1ec059a8
+ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44999265"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office 脚本示例方案：分析 web 下载
 
@@ -30,6 +30,9 @@ ms.locfileid: "44878645"
 此示例是 demoed 年2月2020的 Office 外接程序开发人员社区呼叫的一部分。
 
 > [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
+
+> [!NOTE]
+> 此视频中显示的代码使用较旧的 API 模型（ [Office 脚本异步 api](../../develop/excel-async-model.md)）。 此页面上显示的示例已更新，但代码看上去与录制略有不同。 这些更改不会影响脚本的行为或演示者演示中的其他内容。
 
 ## <a name="setup-instructions"></a>设置说明
 

@@ -1,14 +1,14 @@
 ---
 title: 在 Office 脚本中使用内置的 JavaScript 对象
 description: 如何：从 web 上的 Excel 中的 Office 脚本中调用内置 JavaScript Api。
-ms.date: 04/24/2020
+ms.date: 06/29/2020
 localization_priority: Normal
-ms.openlocfilehash: b5d70e77aef79c38a8cfd680c9d03bb126c402b2
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 1c8ac757574e8c4be64b373f8d4bf421ddfa0c79
+ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44999258"
 ---
 # <a name="using-built-in-javascript-objects-in-office-scripts"></a>在 Office 脚本中使用内置的 JavaScript 对象
 
@@ -50,10 +50,10 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="working-with-collections"></a>使用集合
 
-集合中包含许多 Excel 对象。 该集合由 Office 脚本 API 管理并作为一个数组公开。 例如，工作表中的所有[形状](/javascript/api/office-scripts/excel/excelscript.shape)都包含在 `Shape[]` 方法返回的中 `Worksheet.getShapes` 。 您可以使用此数组读取集合中的值，也可以从父对象的方法访问特定的对象 `get*` 。
+集合中包含许多 Excel 对象。 该集合由 Office 脚本 API 管理并作为一个数组公开。 例如，工作表中的所有[形状](/javascript/api/office-scripts/excelscript/excelscript.shape)都包含在 `Shape[]` 方法返回的中 `Worksheet.getShapes` 。 您可以使用此数组读取集合中的值，也可以从父对象的方法访问特定的对象 `get*` 。
 
 > [!NOTE]
-> 请勿手动添加或删除这些集合数组中的对象。 `add`对父对象和 `delete` 集合类型对象上的方法使用方法。 例如，使用方法向[工作表](/javascript/api/office-scripts/excel/excelscript.worksheet)中添加[表](/javascript/api/office-scripts/excel/excelscript.table) `Worksheet.addTable` 并删除 `Table` using `Table.delete` 。
+> 请勿手动添加或删除这些集合数组中的对象。 `add`对父对象和 `delete` 集合类型对象上的方法使用方法。 例如，使用方法向[工作表](/javascript/api/office-scripts/excelscript/excelscript.worksheet)中添加[表](/javascript/api/office-scripts/excelscript/excelscript.table) `Worksheet.addTable` 并删除 `Table` using `Table.delete` 。
 
 下面的脚本记录当前工作表中的每个形状的类型。
 
