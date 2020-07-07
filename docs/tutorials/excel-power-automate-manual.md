@@ -1,14 +1,13 @@
 ---
-title: 开始使用自动加电的脚本
-description: 有关使用手动触发器将 Power 自动化与 Office 脚本集成的教程。
-ms.date: 06/09/2020
+title: 开始通过 Power Automate 使用脚本
+description: 有关在 Power 中使用 Office 脚本以通过手动触发器实现自动化的教程。
+ms.date: 06/29/2020
 localization_priority: Priority
-ms.openlocfilehash: 37c2d9ae4c5456a1355362c70695fc61c236a725
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
-ms.translationtype: MT
+ms.openlocfilehash: b2a10692929de90506f58851e9322afa63e15ca0
+ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878740"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45043410"
 ---
 # <a name="start-using-scripts-with-power-automate-preview"></a>开始使用启用了 Power 自动化的脚本（预览）
 

@@ -1,25 +1,24 @@
 ---
-title: 将 Office 脚本与电源自动化相集成
+title: 使用 Power 自动运行 Office 脚本
 description: 如何在使用 Power 自动工作流的网站上获取适用于 Excel 的 Office 脚本。
-ms.date: 06/24/2020
+ms.date: 06/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 977d9c88d75c8070eb729a443b4e8bc9a32e456d
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
-ms.translationtype: MT
+ms.openlocfilehash: 0ea58324998d23020e04cb37dfeea065791757f5
+ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878733"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45043382"
 ---
-# <a name="integrate-office-scripts-with-power-automate"></a>将 Office 脚本与电源自动化相集成
+# <a name="run-office-scripts-with-power-automate"></a>使用 Power 自动运行 Office 脚本
 
-[Power 自动](https://flow.microsoft.com)将脚本集成到更大的工作流中。 您可以使用 Power 自动执行操作，例如，将电子邮件的内容添加到工作表的表中，或在基于工作簿注释的项目管理工具中创建操作。 如果你刚开始使用 "电源自动化"，我们建议[使用 Power 自动化获取访问入门](/power-automate/getting-started)。 在这里，你可以了解有关跨多个服务自动化工作流的详细信息。
+通过使用[电源自动化](https://flow.microsoft.com)，可以将 Office 脚本添加到更大的自动化工作流中。 您可以使用 Power 自动执行操作，例如，将电子邮件的内容添加到工作表的表中，或在基于工作簿注释的项目管理工具中创建操作。 如果你刚开始使用 "电源自动化"，我们建议[使用 Power 自动化获取访问入门](/power-automate/getting-started)。 在这里，你可以了解有关跨多个服务自动化工作流的详细信息。
 
 > [!IMPORTANT]
 > 目前，不能从[共享流](/power-automate/share-buttons)中运行 Office 脚本。 只有创建脚本的用户才能运行它，甚至可以通过 Power 自动化。
 
 ## <a name="getting-started"></a>入门
 
-若要开始结合使用电源自动化功能和 Office 脚本，请遵循教程[开始使用启用电源自动化的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 完成本教程和[使用 Power 自动化教程自动运行脚本](../tutorials/excel-power-automate-trigger.md)后，请返回此处了解有关平台集成的详细信息。
+若要开始结合使用电源自动化功能和 Office 脚本，请遵循教程[开始使用启用电源自动化的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 在完成本教程和[使用 Power 自动化教程自动运行脚本](../tutorials/excel-power-automate-trigger.md)后，请返回此处以了解有关连接 Office 脚本以实现自动处理功能流的详细信息。
 
 ## <a name="excel-online-business-connector"></a>Excel Online （业务）连接器
 
@@ -135,7 +134,7 @@ function main(
 ## <a name="see-also"></a>另请参阅
 
 - [在使用 Power 自动化的 web 上运行 Excel 中的 Office 脚本](../tutorials/excel-power-automate-manual.md)
-- [自动运行具有 Power 自动化功能的脚本](../tutorials/excel-power-automate-trigger.md)
+- [自动通过 Power Automate 运行脚本](../tutorials/excel-power-automate-trigger.md)
 - [Excel 网页版中 Office 脚本的脚本基础](scripting-fundamentals.md)
 - [Power Automate 入门](/power-automate/getting-started)
 - [Excel Online （业务）连接器参考文档](/connectors/excelonlinebusiness/)

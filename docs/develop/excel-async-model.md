@@ -3,12 +3,11 @@ title: 使用 Office 脚本异步 Api 支持旧版脚本
 description: Office 脚本异步 Api 的入门知识，以及如何使用旧脚本的加载/同步模式。
 ms.date: 06/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 78a09232060d862a4e0944356ba2f33f7a264ea1
-ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
-ms.translationtype: MT
+ms.openlocfilehash: 6c31a39c8e1fe53f2f5587183a6b32e100d2b457
+ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44999274"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45043396"
 ---
 # <a name="using-the-office-scripts-async-apis-to-support-legacy-scripts"></a>使用 Office 脚本异步 Api 支持旧版脚本
 
@@ -37,7 +36,7 @@ async function main(context: Excel.RequestContext) {
 
 因为脚本和工作簿在不同的位置运行，所以两者之间的任何数据传输都需要时间。 在异步 API 中，命令将一直排队，直到脚本显式调用 `sync` 操作以同步脚本和工作簿。 脚本可以独立运行，直到需要执行以下任一操作：
 
-- 从工作簿中读取数据（遵循返回 [ClientResult](/javascript/api/office-scripts/excelscript/excel.clientresult?view=office-scripts-async) 的 `load` 操作或方法）。
+- 从工作簿中读取数据（遵循返回 [ClientResult](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async) 的 `load` 操作或方法）。
 - 将数据写入工作簿（通常是因为脚本已完成）。
 
 下图显示了脚本和工作簿之间的示例控制流：
@@ -116,7 +115,7 @@ async function main(context: Excel.RequestContext){
 
 ### <a name="clientresult"></a>ClientResult
 
-异步 API 中从工作簿返回信息的方法的模式与范例中的方法类似 `load` / `sync` 。 举个例子，`TableCollection.getCount`获取集合中的表的数量。 `getCount` 返回 `ClientResult<number>`，这意味着返回 `ClientResult` 中的 `value` 属性为 "数字"。 在调用 `context.sync()` 之前，脚本无法访问此值。 与加载属性很相似，直到 `sync` 调用，`value` 是本地 "空" 值。
+异步 API 中从工作簿返回信息的方法的模式与范例中的方法类似 `load` / `sync` 。 举个例子，`TableCollection.getCount`获取集合中的表的数量。 `getCount`返回 a `ClientResult<number>` ，表示 `value` 返回的属性 [`ClientResult`](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async) 为数字。 在调用 `context.sync()` 之前，脚本无法访问此值。 与加载属性很相似，直到 `sync` 调用，`value` 是本地 "空" 值。
 
 以下脚本获取工作簿中的表的总数，并将该数目记录到控制台。
 

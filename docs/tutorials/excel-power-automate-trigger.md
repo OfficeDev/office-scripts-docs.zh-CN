@@ -1,14 +1,13 @@
 ---
-title: 自动运行具有 Power 自动化功能的脚本
-description: 本教程介绍了如何使用自动外部触发器（如通过 Outlook 接收邮件），在 web 上使用适用于 Excel 的 Office 脚本来自动进行电源自动进行集成。
-ms.date: 06/09/2020
+title: 自动通过 Power Automate 运行脚本
+description: 本教程介绍了如何使用自动外部触发器（通过 Outlook 接收邮件）在 web 上运行 Excel 的 Office 脚本。
+ms.date: 06/29/2020
 localization_priority: Priority
-ms.openlocfilehash: 538a6533e4628a0f555d08eadda060a20830a7ae
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
-ms.translationtype: MT
+ms.openlocfilehash: a750197d6b5ae770ad7d2e17b3ee00dc65ee8875
+ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878731"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45043417"
 ---
 # <a name="automatically-run-scripts-with-power-automate-preview"></a>自动运行带电自动化的脚本（预览）
 
@@ -263,6 +262,6 @@ function main(
 
 ## <a name="next-steps"></a>后续步骤
 
-访问将[Office 脚本与 power](../develop/power-automate-integration.md)自动化结合使用，以详细了解如何使用 power 自动化连接 office 脚本。
+访问 "[使用 power 自动运行 Office 脚本](../develop/power-automate-integration.md)"，以详细了解如何通过 power 自动化连接 office 脚本。
 
 您还可以查看[自动任务提醒示例方案](../resources/scenarios/task-reminders.md)，以了解如何使用工作组自适应卡片将 Office 脚本和电力自动化组合在一起。
