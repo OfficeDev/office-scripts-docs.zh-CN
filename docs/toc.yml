@@ -26,7 +26,9 @@
           href: resources/vba-differences.md
         - name: Office 脚本与 Office 加载项之间的差异
           href: resources/add-ins-differences.md
-        - name: 与 Power Automate 集成
+        - name: Office 脚本中的外部 API 呼叫支持
+          href: develop/external-calls.md
+        - name: 通过 Power Automate 运行脚本
           href: develop/power-automate-integration.md
     - name: 疑难解答
       items:
