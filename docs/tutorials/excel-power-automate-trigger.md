@@ -1,15 +1,16 @@
 ---
-title: 自动通过 Power Automate 运行脚本
+title: 使用自动电源自动化流自动运行脚本
 description: 本教程介绍了如何使用自动外部触发器（通过 Outlook 接收邮件）在 web 上运行 Excel 的 Office 脚本。
-ms.date: 06/29/2020
+ms.date: 07/01/2020
 localization_priority: Priority
-ms.openlocfilehash: a750197d6b5ae770ad7d2e17b3ee00dc65ee8875
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: fc98fb36fd5a8c5ef10bc3b767d6f5add0306246
+ms.sourcegitcommit: edf58aed3cd38f57e5e7227465a1ef5515e15703
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043417"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "45081626"
 ---
-# <a name="automatically-run-scripts-with-power-automate-preview"></a>自动运行带电自动化的脚本（预览）
+# <a name="automatically-run-scripts-with-automated-power-automate-flows-preview"></a>使用自动电源自动化流自动运行脚本（预览）
 
 本教程向您介绍如何通过自动[功能自动执行](https://flow.microsoft.com)工作流，在 web 上使用适用于 Excel 的 Office 脚本。 您的脚本将在您每次收到电子邮件时自动运行，并在 Excel 工作簿中记录来自电子邮件的信息。
 

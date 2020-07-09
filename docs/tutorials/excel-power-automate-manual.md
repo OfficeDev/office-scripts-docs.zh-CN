@@ -1,13 +1,14 @@
 ---
 title: 开始通过 Power Automate 使用脚本
 description: 有关在 Power 中使用 Office 脚本以通过手动触发器实现自动化的教程。
-ms.date: 06/29/2020
+ms.date: 07/01/2020
 localization_priority: Priority
-ms.openlocfilehash: b2a10692929de90506f58851e9322afa63e15ca0
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: 83e072a45fc724ff2aac5bf5f3893dcb64eaf2ff
+ms.sourcegitcommit: edf58aed3cd38f57e5e7227465a1ef5515e15703
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043410"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "45081633"
 ---
 # <a name="start-using-scripts-with-power-automate-preview"></a>开始使用启用了 Power 自动化的脚本（预览）
 
@@ -123,4 +124,4 @@ Power 自动执行无法使用相对引用 `Workbook.getActiveWorksheet` ，如�
 
 ## <a name="next-steps"></a>后续步骤
 
-完成 "[使用 Power 自动运行脚本](excel-power-automate-trigger.md)" 教程。 它向您介绍如何将数据从工作流服务传递到您的 Office 脚本。
+使用自动[电源自动化流教程完成自动运行脚本](excel-power-automate-trigger.md)。 它向您介绍如何将数据从工作流服务传递到您的 Office 脚本。

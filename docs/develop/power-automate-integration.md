@@ -1,13 +1,14 @@
 ---
 title: 使用 Power 自动运行 Office 脚本
 description: 如何在使用 Power 自动工作流的网站上获取适用于 Excel 的 Office 脚本。
-ms.date: 06/29/2020
+ms.date: 07/01/2020
 localization_priority: Normal
-ms.openlocfilehash: 0ea58324998d23020e04cb37dfeea065791757f5
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: 40a67f3d0e8f049a8ec5516c0af54c5fc6fb9319
+ms.sourcegitcommit: edf58aed3cd38f57e5e7227465a1ef5515e15703
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043382"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "45081591"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>使用 Power 自动运行 Office 脚本
 
@@ -18,7 +19,7 @@ ms.locfileid: "45043382"
 
 ## <a name="getting-started"></a>入门
 
-若要开始结合使用电源自动化功能和 Office 脚本，请遵循教程[开始使用启用电源自动化的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 在完成本教程和[使用 Power 自动化教程自动运行脚本](../tutorials/excel-power-automate-trigger.md)后，请返回此处以了解有关连接 Office 脚本以实现自动处理功能流的详细信息。
+若要开始结合使用电源自动化功能和 Office 脚本，请遵循教程[开始使用启用电源自动化的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 完成本教程和使用自动电源自动[运行脚本的流程](../tutorials/excel-power-automate-trigger.md)教程后，请返回此处，以了解有关连接 Office 脚本以实现自动处理功能流的详细信息。
 
 ## <a name="excel-online-business-connector"></a>Excel Online （业务）连接器
 
@@ -27,7 +28,16 @@ ms.locfileid: "45043382"
 > [!IMPORTANT]
 > "运行脚本" 操作为使用 Excel connector 的用户提供对工作簿及其数据的有效访问权限。 此外，还存在一些使用脚本进行外部 API 调用的安全风险，如[Power 自动化中的外部调用](external-calls.md)中所述。 如果您的管理员担心暴露高度敏感的数据，则可以关闭 Excel Online 连接器或限制对 Office 脚本的访问，方法是通过[Office 脚本管理员控件](https://support.microsoft.com/office/19d3c51a-6ca2-40ab-978d-60fa49554dcf)。
 
-## <a name="passing-data-from-power-automate-into-a-script"></a>将数据从电源自动化传递到脚本中
+## <a name="data-transfer-in-flows-for-scripts"></a>脚本流中的数据传输
+
+利用电源自动化，可以在流的各个步骤之间传递数据片段。 可以将脚本配置为接受所需的任何类型的信息，并从您的工作簿中返回您想要的任何内容。 您的脚本的输入通过向函数添加参数 `main` （除了）来指定 `workbook: ExcelScript.Workbook` 。 脚本中的输出通过将返回类型添加到来声明 `main` 。
+
+> [!NOTE]
+> 当您在流中创建 "运行脚本" 块时，将填充接受的参数和返回的类型。 如果更改了脚本的参数或返回类型，您将需要恢复流的 "运行脚本" 块。 这将确保正确分析数据。
+
+以下各节介绍了用于 Power 自动化的脚本输入和输出的详细信息。 如果您想要学习本主题的实践方法，请尝试[使用自动电源自动化流教程中的自动运行脚本](../tutorials/excel-power-automate-trigger.md)或浏览[自动任务提醒](../resources/scenarios/task-reminders.md)示例方案。
+
+### <a name="main-parameters-passing-data-to-a-script"></a>`main`参数：将数据传递给脚本
 
 所有脚本输入都被指定为函数的附加参数 `main` 。 例如，如果您希望脚本接受一个 `string` 表示输入名称的，则会将 `main` 签名更改为 `function main(workbook: ExcelScript.Workbook, name: string)` 。
 
@@ -72,7 +82,7 @@ ms.locfileid: "45043382"
 
 10. 允许使用默认参数值（例如 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` 。
 
-## <a name="returning-data-from-a-script-back-to-power-automate"></a>将数据从脚本返回到增强功能自动化
+## <a name="returning-data-from-a-script"></a>从脚本中返回数据
 
 脚本可以返回工作簿中的数据，以用作电源自动化流中的动态内容。 与输入参数一样，Power 自动化将一些限制放在返回类型上。
 
@@ -134,7 +144,7 @@ function main(
 ## <a name="see-also"></a>另请参阅
 
 - [在使用 Power 自动化的 web 上运行 Excel 中的 Office 脚本](../tutorials/excel-power-automate-manual.md)
-- [自动通过 Power Automate 运行脚本](../tutorials/excel-power-automate-trigger.md)
+- [使用自动电源自动化流自动运行脚本](../tutorials/excel-power-automate-trigger.md)
 - [Excel 网页版中 Office 脚本的脚本基础](scripting-fundamentals.md)
 - [Power Automate 入门](/power-automate/getting-started)
 - [Excel Online （业务）连接器参考文档](/connectors/excelonlinebusiness/)
