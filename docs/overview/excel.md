@@ -1,18 +1,20 @@
 ---
 title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
-ms.date: 02/24/2020
+ms.date: 06/29/2020
 localization_priority: Priority
-ms.openlocfilehash: fb1d32068f9a738bb99412c2892cf22b4119b9b1
-ms.sourcegitcommit: d556aaefac80e55f53ac56b7f6ecbc657ebd426f
+ms.openlocfilehash: 046dd4eac0cce14117da75199841f0b2f72031bc
+ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42978347"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45043403"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本（预览版）
 
-Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 你可以使用操作录制器录制 Excel 操作，这会创建一个脚本。 此外，你还可以使用代码编辑器创建和编辑脚本。 本文档系列将指导你如何使用这些工具。 我们将向你介绍操作录制器，让你了解如何录制频繁的 Excel 操作。 你还将学习如何使用代码编辑器创建或更新自己的脚本。
+Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 你可以使用操作录制器录制 Excel 操作，这会创建一个脚本。 此外，你还可以使用代码编辑器创建和编辑脚本。 然后，可在组织中共享你的脚本，以便同事也可实现其工作流的自动化。
+
+本文档系列将指导你如何使用这些工具。 我们将向你介绍操作录制器，让你了解如何录制频繁的 Excel 操作。 你还将学习如何使用代码编辑器创建或更新自己的脚本。
 
 <br>
 
@@ -40,14 +42,27 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 一种简单的开始学习 Office 脚本方式就是在 Excel 网页版上录制脚本，然后查看生成的代码。 另一种选择是按照我们的[教程](../tutorials/excel-tutorial.md)进行，以更具指导性的结构化方式进行学习。
 
+## <a name="sharing-scripts"></a>共享脚本
+
+![显示“在此工作簿中与其他人共享”选项的脚本“详细信息”页面。](../images/script-sharing.png)
+
+Office 脚本可与 Excel 工作簿的其他用户共享。 在工作簿中与其他人共享脚本时，该脚本将附加到工作簿中。 你的脚本存储在你的 OneDrive 中，当你共享一个脚本时，你将在打开的工作簿中创建指向该脚本的链接。
+
+有关共享和取消共享脚本的详细信息，请参阅[在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b?storagetype=live&ui=en-US&rs=en-US&ad=US)一文。
+
+## <a name="connecting-office-scripts-to-power-automate"></a>将 Office 脚本连接到 Power Automate
+
+[Power Automate](https://flow.microsoft.com/) 是一种可帮助你在多个应用和服务之间创建自动化工作流的服务。 Office 脚本可以在这些工作流中使用，以便你在工作簿之外控制脚本。 你可以按计划运行脚本，在回复电子邮件时触发它们，等等。 若要了解有关连接这些自动化服务的基础知识，请访问[使用 Power Automate 在 Excel 网页版中运行 Office 脚本](../tutorials/excel-power-automate-manual.md)教程。
+
 ## <a name="next-steps"></a>后续步骤
 
 完成 [Excel 网页版上的 Office 脚本教程](../tutorials/excel-tutorial.md)，以了解如何创建你的第一个 Office 脚本。
 
 ## <a name="see-also"></a>另请参阅
 
-- [Excel 网页版上的 Office 脚本的脚本基础知识](../develop/scripting-fundamentals.md)
+- [Excel 网页版中 Office 脚本的脚本基础知识](../develop/scripting-fundamentals.md)
 - [Office 脚本 API 参考](/javascript/api/office-scripts/overview)
 - [Office 脚本疑难解答](../testing/troubleshooting.md)
 - [M365 中的 Office 脚本设置](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
 - [Excel 中的 Office 脚本简介 (support.office.com)](https://support.office.com/article/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
+- [在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b?storagetype=live&ui=en-US&rs=en-US&ad=US)
