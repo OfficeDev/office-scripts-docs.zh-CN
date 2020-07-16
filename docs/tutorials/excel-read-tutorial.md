@@ -1,14 +1,14 @@
 ---
 title: 在 Excel 网页版中使用 Office 脚本读取工作簿数据
 description: 有关从工作簿中读取数据并评估脚本中的数据的 Office 脚本教程。
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 localization_priority: Priority
-ms.openlocfilehash: 42ed0fe5843a78692f9660b873211e3668702164
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: 93204184d4b5947b2a67107b1fd73c178a73c32e
+ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700103"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44878682"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中使用 Office 脚本读取工作簿数据
 
@@ -19,12 +19,7 @@ ms.locfileid: "42700103"
 
 ## <a name="prerequisites"></a>先决条件
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
-在开始本教程之前，你需要具有 Office 脚本的访问权限，要求如下：
-
-- [Excel 网页版](https://www.office.com/launch/excel)。
-- 要求管理员[为组织启用 Office 脚本](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)，这会将“自动”选项卡添加到功能区****。
+[!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
 
 > [!IMPORTANT]
 > 本教程面向在 JavaScript 或 TypeScript 方面具备初级到中级知识的人员。 如果你不熟悉 JavaScript，建议查看 [Mozilla JavaScript 教程](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)。 请访问 [Excel 网页版中的 Office 脚本](../overview/excel.md)，以了解有关脚本环境的详细信息。
@@ -56,33 +51,25 @@ ms.locfileid: "42700103"
     将脚本内容替换为以下代码：
 
     ```TypeScript
-    async function main(context: Excel.RequestContext) {
-      // Get the current worksheet.
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
+    function main(workbook: ExcelScript.Workbook) {
+        // Get the current worksheet.
+        let selectedSheet = workbook.getActiveWorksheet();
 
-      // Format the range to display numerical dollar amounts.
-      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]];
+        // Format the range to display numerical dollar amounts.
+        selectedSheet.getRange("D2:E8").setNumberFormat("$#,##0.00");
 
-      // Fit the width of all the used columns to the data.
-      selectedSheet.getUsedRange().format.autofitColumns();
+        // Fit the width of all the used columns to the data.
+        selectedSheet.getUsedRange().getFormat().autofitColumns();
     }
     ```
 
-5. 现在，让我们从数字列之一中读取一个值。 将以下代码添加到脚本末尾：
+5. 现在，让我们从数字列之一中读取一个值。 将以下代码添加到脚本的末尾（在结束 `}` 之前）：
 
     ```TypeScript
     // Get the value of cell D2.
     let range = selectedSheet.getRange("D2");
-    range.load("values");
-    await context.sync();
-  
-    // Print the value of D2.
-    console.log(range.values);
+    console.log(range.getValues());
     ```
-
-    请注意对 `load` 和 `sync` 的调用。 你可以在 [Excel 网页版中的 Office 脚本的脚本基础知识](../develop/scripting-fundamentals.md#sync-and-load)中了解这些方法的详细信息。 现在，我们知道你必须请求要读取的数据，然后将脚本与工作簿同步来读取该数据。
 
 6. 运行脚本。
 7. 打开控制台。 转到“省略号”菜单，然后按“日志...”********。
@@ -99,10 +86,12 @@ ms.locfileid: "42700103"
 1. 将以下代码添加到脚本末尾：
 
     ```TypeScript
-    // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-    let positiveValue = Math.abs(range.values[0][0]);
-    range.values = [[positiveValue]];
+        // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+    let positiveValue = Math.abs(range.getValue());
+    range.setValue(positiveValue);
     ```
+
+    请注意，我们正在使用 `getValue` 和 `setValue`。 这些方法适用于单个单元格。 处理多单元格区域时，需使用 `getValues` 和 `setValues`。
 
 2. 单元格 **D2** 的值现在应为正值。
 
@@ -113,47 +102,44 @@ ms.locfileid: "42700103"
 1. 删除仅影响单个单元格的代码（先前的绝对值代码），以便你的脚本现在如下所示：
 
     ```TypeScript
-    async function main(context: Excel.RequestContext) {
-      // Get the current worksheet.
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
+    function main(workbook: ExcelScript.Workbook) {
+        // Get the current worksheet.
+        let selectedSheet = workbook.getActiveWorksheet();
 
-      // Format the range to display numerical dollar amounts.
-      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]];
+        // Format the range to display numerical dollar amounts.
+        selectedSheet.getRange("D2:E8").setNumberFormat("$#,##0.00");
 
-      // Fit the width of all the used columns to the data.
-      selectedSheet.getUsedRange().format.autofitColumns();
+        // Fit the width of all the used columns to the data.
+        selectedSheet.getUsedRange().getFormat().autofitColumns();
     }
     ```
 
-2. 添加循环访问最后两列中的行的循环。 对于每个单元格，脚本将值设置为当前值的绝对值。
+2. 在脚本末尾添加循环访问最后两列中的行的循环。 对于每个单元格，脚本将值设置为当前值的绝对值。
 
     请注意，定义单元格位置的数组是从零开始的。 这意味着单元格 **A1** 为 `range[0][0]`。
 
     ```TypeScript
     // Get the values of the used range.
     let range = selectedSheet.getUsedRange();
-    range.load("rowCount,values");
-    await context.sync();
+    let rangeValues = range.getValues();
 
     // Iterate over the fourth and fifth columns and set their values to their absolute value.
-    for (let i = 1; i < range.rowCount; i++) {
-      // The column at index 3 is column "4" in the worksheet.
-      if (range.values[i][3] != 0) {
-        let positiveValue = Math.abs(range.values[i][3]);
-        selectedSheet.getCell(i, 3).values = [[positiveValue]];
-      }
+    for (let i = 1; i < range.getRowCount(); i++) {
+        // The column at index 3 is column "4" in the worksheet.
+        if (rangeValues[i][3] != 0) {
+            let positiveValue = Math.abs(rangeValues[i][3]);
+            selectedSheet.getCell(i, 3).setValue(positiveValue);
+        }
 
-      // The column at index 4 is column "5" in the worksheet.
-      if (range.values[i][4] != 0) {
-        let positiveValue = Math.abs(range.values[i][4]);
-        selectedSheet.getCell(i, 4).values = [[positiveValue]];
-      }
+        // The column at index 4 is column "5" in the worksheet.
+        if (rangeValues[i][4] != 0) {
+            let positiveValue = Math.abs(rangeValues[i][4]);
+            selectedSheet.getCell(i, 4).setValue(positiveValue);
+        }
     }
     ```
 
-    此部分的脚本执行几项重要任务。 首先，加载已用区域的值和行计数。 这样，我们就可以查看值并知道何时停止。 其次，循环访问已用区域，检查“借记”或“信贷”列中的每个单元格********。 最后，如果单元格中的值不为 0，则该值将替换为其绝对值。 我们正在避免使用零，因此可以将空白单元格保留原样。
+    此部分的脚本执行几项重要任务。 首先，获取已用区域的值和行计数。 这样，我们就可以查看值并知道何时停止。 其次，循环访问已用区域，检查“借记”或“信贷”列中的每个单元格********。 最后，如果单元格中的值不为 0，则该值将替换为其绝对值。 我们正在避免使用零，因此可以将空白单元格保留原样。
 
 3. 运行脚本。
 
