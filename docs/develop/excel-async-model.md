@@ -1,21 +1,21 @@
 ---
-title: 使用 Office 脚本异步 Api 支持旧版脚本
-description: Office 脚本异步 Api 的入门知识，以及如何使用旧脚本的加载/同步模式。
-ms.date: 06/29/2020
+title: 支持使用异步 Api 的较旧的 Office 脚本
+description: Office 脚本异步 Api 的入门知识，以及如何对旧版脚本使用 load/sync 模式。
+ms.date: 07/08/2020
 localization_priority: Normal
-ms.openlocfilehash: 6c31a39c8e1fe53f2f5587183a6b32e100d2b457
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: e7ca5b276cff0e3a38bffc2af1541c0051cf5490
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043396"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160458"
 ---
-# <a name="using-the-office-scripts-async-apis-to-support-legacy-scripts"></a>使用 Office 脚本异步 Api 支持旧版脚本
+# <a name="support-older-office-scripts-that-use-the-async-apis"></a>支持使用异步 Api 的较旧的 Office 脚本
 
-本文将教您如何使用旧版、异步、Api 编写脚本。 这些 Api 与标准的同步 Office 脚本 Api 具有相同的核心功能，但它们要求您的脚本控制脚本和工作簿之间的数据同步。
+本文将教您如何维护和更新使用较旧模型的异步 Api 的脚本。 这些 Api 与 now-standard 同步 Office 脚本 Api 具有相同的核心功能，但它们要求您的脚本控制脚本和工作簿之间的数据同步。
 
 > [!IMPORTANT]
-> 异步模型仅可用于在实现当前[API 模型](scripting-fundamentals.md?view=office-scripts)之前创建的脚本。 脚本将被永久锁定为它们创建时所拥有的 API 模型。 这也意味着，如果您想要将旧脚本转换为新模型，则必须使用全新的脚本。 我们建议您在进行更改时将旧脚本更新到新模型，因为当前模型更易于使用。 将[旧的异步脚本转换为 "当前模型"](#converting-legacy-async-scripts-to-the-current-model)部分包含有关如何进行此转换的建议。
+> 异步模型仅可用于在实现当前[API 模型](scripting-fundamentals.md?view=office-scripts)之前创建的脚本。 脚本将被永久锁定为它们创建时所拥有的 API 模型。 这也意味着，如果您想要将旧脚本转换为新模型，则必须创建全新的脚本。 我们建议您在进行更改时将旧脚本更新到新模型，因为当前模型更易于使用。 将[异步脚本转换为 "当前模型"](#converting-async-scripts-to-the-current-model)部分包含有关如何进行此转换的建议。
 
 ## <a name="main-function"></a>`main` 函数
 
@@ -55,7 +55,7 @@ await context.sync();
 > [!NOTE]
 > 脚本结束时将隐式调用 `context.sync()`。
 
-`sync` 操作完成后，工作簿将更新以反映脚本已指定的任何写入操作。 写入操作在 Excel 对象上设置任何属性（例如 `range.format.fill.color = "red"`），或调用更改属性的方法（例如 `range.format.autoFitColumns()`）。 `sync` 操作还从脚本请求的工作簿中读取任何值，方式是通过使用能返回 `ClientResult` 的 `load` 操作或方法（如下一节所述）。
+`sync` 操作完成后，工作簿将更新以反映脚本已指定的任何写入操作。 写操作是设置 Excel 对象（例如， `range.format.fill.color = "red"` ）或调用更改属性（如）的方法的任何属性 `range.format.autoFitColumns()` 。 `sync` 操作还从脚本请求的工作簿中读取任何值，方式是通过使用能返回 `ClientResult` 的 `load` 操作或方法（如下一节所述）。
 
 将脚本与工作簿同步可能需要一些时间，具体取决于网络。 最大程度地减少 `sync` 用于帮助脚本运行速度的调用次数。 否则，异步 Api 不会更快地成为标准的同步 Api。
 
@@ -137,7 +137,7 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-## <a name="converting-legacy-async-scripts-to-the-current-model"></a>将旧的异步脚本转换为当前模型
+## <a name="converting-async-scripts-to-the-current-model"></a>将异步脚本转换为当前模型
 
 当前 API 模型不使用 `load` 、 `sync` 或 `RequestContext` 。 这使脚本更易于编写和维护。 转换旧脚本的最佳资源是[堆栈溢出](https://stackoverflow.com/questions/tagged/office-scripts)。 在这里，你可以向社区寻求有关特定方案的帮助。 以下指南应帮助概述你需要执行的常规步骤。
 

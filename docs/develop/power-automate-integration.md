@@ -1,25 +1,24 @@
 ---
 title: 使用 Power 自动运行 Office 脚本
 description: 如何在使用 Power 自动工作流的网站上获取适用于 Excel 的 Office 脚本。
-ms.date: 07/01/2020
+ms.date: 07/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 40a67f3d0e8f049a8ec5516c0af54c5fc6fb9319
-ms.sourcegitcommit: edf58aed3cd38f57e5e7227465a1ef5515e15703
+ms.openlocfilehash: bd8fea08b7a9303ad2ceace787de6457a33fb979
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "45081591"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160444"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>使用 Power 自动运行 Office 脚本
 
-通过使用[电源自动化](https://flow.microsoft.com)，可以将 Office 脚本添加到更大的自动化工作流中。 您可以使用 Power 自动执行操作，例如，将电子邮件的内容添加到工作表的表中，或在基于工作簿注释的项目管理工具中创建操作。 如果你刚开始使用 "电源自动化"，我们建议[使用 Power 自动化获取访问入门](/power-automate/getting-started)。 在这里，你可以了解有关跨多个服务自动化工作流的详细信息。
-
-> [!IMPORTANT]
-> 目前，不能从[共享流](/power-automate/share-buttons)中运行 Office 脚本。 只有创建脚本的用户才能运行它，甚至可以通过 Power 自动化。
+通过使用[电源自动化](https://flow.microsoft.com)，可以将 Office 脚本添加到更大的自动化工作流中。 您可以使用 Power 自动执行操作，例如，将电子邮件的内容添加到工作表的表中，或在基于工作簿注释的项目管理工具中创建操作。
 
 ## <a name="getting-started"></a>入门
 
-若要开始结合使用电源自动化功能和 Office 脚本，请遵循教程[开始使用启用电源自动化的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 完成本教程和使用自动电源自动[运行脚本的流程](../tutorials/excel-power-automate-trigger.md)教程后，请返回此处，以了解有关连接 Office 脚本以实现自动处理功能流的详细信息。
+如果你刚开始使用 "电源自动化"，我们建议[使用 Power 自动化获取访问入门](/power-automate/getting-started)。 在这里，你可以了解有关你可使用的所有自动化可能性的详细信息。 此处的文档重点介绍 Office 脚本与电源自动化的工作方式，以及如何帮助改进 Excel 体验。
+
+若要开始结合使用电源自动化功能和 Office 脚本，请遵循教程[开始使用启用电源自动化的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 在完成了教程和将[数据传递到自动运行电源自动化流教程中的脚本](../tutorials/excel-power-automate-trigger.md)之后，请返回此处以了解有关连接 Office 脚本以实现自动处理功能流的详细信息。
 
 ## <a name="excel-online-business-connector"></a>Excel Online （业务）连接器
 
@@ -33,9 +32,9 @@ ms.locfileid: "45081591"
 利用电源自动化，可以在流的各个步骤之间传递数据片段。 可以将脚本配置为接受所需的任何类型的信息，并从您的工作簿中返回您想要的任何内容。 您的脚本的输入通过向函数添加参数 `main` （除了）来指定 `workbook: ExcelScript.Workbook` 。 脚本中的输出通过将返回类型添加到来声明 `main` 。
 
 > [!NOTE]
-> 当您在流中创建 "运行脚本" 块时，将填充接受的参数和返回的类型。 如果更改了脚本的参数或返回类型，您将需要恢复流的 "运行脚本" 块。 这将确保正确分析数据。
+> 在流中创建 "运行脚本" 块时，将填充接受的参数和返回的类型。 如果更改了脚本的参数或返回类型，您将需要恢复流的 "运行脚本" 块。 这样可确保正确分析数据。
 
-以下各节介绍了用于 Power 自动化的脚本输入和输出的详细信息。 如果您想要学习本主题的实践方法，请尝试[使用自动电源自动化流教程中的自动运行脚本](../tutorials/excel-power-automate-trigger.md)或浏览[自动任务提醒](../resources/scenarios/task-reminders.md)示例方案。
+以下各节介绍了用于 Power 自动化的脚本输入和输出的详细信息。 如果你想要学习本主题的实践方法，请尝试[在自动运行电源自动化流教程中将数据传递到脚本](../tutorials/excel-power-automate-trigger.md)，或浏览[自动任务提醒](../resources/scenarios/task-reminders.md)示例方案。
 
 ### <a name="main-parameters-passing-data-to-a-script"></a>`main`参数：将数据传递给脚本
 
@@ -82,7 +81,7 @@ ms.locfileid: "45081591"
 
 10. 允许使用默认参数值（例如 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` 。
 
-## <a name="returning-data-from-a-script"></a>从脚本中返回数据
+### <a name="returning-data-from-a-script"></a>从脚本中返回数据
 
 脚本可以返回工作簿中的数据，以用作电源自动化流中的动态内容。 与输入参数一样，Power 自动化将一些限制放在返回类型上。
 
@@ -100,19 +99,19 @@ ms.locfileid: "45081591"
 
 Power 自动在所选的 Excel 工作簿中代表你运行脚本。 在这种情况下，工作簿可能会关闭。 在运行时，任何依赖用户的当前状态（如）的 API `Workbook.getActiveWorksheet` 都将在通过电源自动运行时失败。 在设计脚本时，请务必对工作表和区域使用绝对引用。
 
-如果从 Power 自动流中的脚本调用，以下函数将引发错误并失败。
+如果从 Power 自动流中的脚本调用，以下方法将引发错误并失败。
 
-- `Chart.activate`
-- `Range.select`
-- `Workbook.getActiveCell`
-- `Workbook.getActiveChart`
-- `Workbook.getActiveChartOrNullObject`
-- `Workbook.getActiveSlicer`
-- `Workbook.getActiveSlicerOrNullObject`
-- `Workbook.getActiveWorksheet`
-- `Workbook.getSelectedRange`
-- `Workbook.getSelectedRanges`
-- `Worksheet.activate`
+| Class | 方法 |
+|--|--|
+| [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
+| [区域](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
+| [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `activate` |
 
 ## <a name="example"></a>示例
 
@@ -144,7 +143,7 @@ function main(
 ## <a name="see-also"></a>另请参阅
 
 - [在使用 Power 自动化的 web 上运行 Excel 中的 Office 脚本](../tutorials/excel-power-automate-manual.md)
-- [使用自动电源自动化流自动运行脚本](../tutorials/excel-power-automate-trigger.md)
-- [Excel 网页版中 Office 脚本的脚本基础](scripting-fundamentals.md)
+- [在自动运行的电源自动化流中将数据传递给脚本](../tutorials/excel-power-automate-trigger.md)
+- [Excel 网页版中 Office 脚本的脚本基础知识](scripting-fundamentals.md)
 - [Power Automate 入门](/power-automate/getting-started)
 - [Excel Online （业务）连接器参考文档](/connectors/excelonlinebusiness/)

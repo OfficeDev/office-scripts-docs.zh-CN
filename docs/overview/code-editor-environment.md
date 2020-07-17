@@ -1,14 +1,14 @@
 ---
 title: Office 脚本代码编辑器环境
 description: Excel 网页版中 Office 脚本的先决条件和环境信息。
-ms.date: 04/24/2020
+ms.date: 07/10/2020
 localization_priority: Normal
-ms.openlocfilehash: efe6ddbe39a1ea3850b4dc6fea0fa885b80c0c28
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 643ea2d5bd69adf4311546465ccd65c08dacf4b4
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878666"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160493"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office 脚本代码编辑器环境
 
@@ -36,6 +36,10 @@ Excel 代码编辑器使用与 Visual Studio Code 相同的智能感知引擎。
 ## <a name="external-library-support"></a>外部库支持
 
 Office 脚本不支持使用外部第三方 JavaScript 库。 您当前无法从脚本调用 Office 脚本 Api 之外的任何其他库。 您仍有权访问任何[内置 JavaScript 对象](../develop/javascript-objects.md)，如[数学](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)。
+
+## <a name="browser-support"></a>浏览器支持
+
+Office 脚本在任何[支持 Web Office 的](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452)浏览器中工作。 但是，Internet Explorer 11 （IE 11）不支持某些 JavaScript 功能。 [ES6 或更高版本](https://www.w3schools.com/Js/js_es6.asp)中引入的任何功能将不适用于 IE 11。 如果组织中的人员仍在使用该浏览器，请务必在共享这些脚本时在该环境中对其进行测试。
 
 ## <a name="see-also"></a>另请参阅
 
