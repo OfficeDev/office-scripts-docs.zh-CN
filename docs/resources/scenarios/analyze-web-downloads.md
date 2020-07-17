@@ -10,39 +10,39 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/01/2020
 ms.locfileid: "44999265"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a><span data-ttu-id="80924-103">Office 脚本示例方案：分析 web 下载</span><span class="sxs-lookup"><span data-stu-id="80924-103">Office Scripts sample scenario: Analyze web downloads</span></span>
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a><span data-ttu-id="1cc9e-103">Office 脚本示例方案：分析 web 下载</span><span class="sxs-lookup"><span data-stu-id="1cc9e-103">Office Scripts sample scenario: Analyze web downloads</span></span>
 
-<span data-ttu-id="80924-104">在这种情况下，您将负责分析来自公司网站的下载报告。</span><span class="sxs-lookup"><span data-stu-id="80924-104">In this scenario, you're tasked with analyzing download reports from your company's website.</span></span> <span data-ttu-id="80924-105">此分析的目标是确定 web 流量是来自世界各地还是其他地方。</span><span class="sxs-lookup"><span data-stu-id="80924-105">The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.</span></span>
+<span data-ttu-id="1cc9e-104">在这种情况下，您将负责分析来自公司网站的下载报告。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-104">In this scenario, you're tasked with analyzing download reports from your company's website.</span></span> <span data-ttu-id="1cc9e-105">此分析的目标是确定 web 流量是来自世界各地还是其他地方。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-105">The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.</span></span>
 
-<span data-ttu-id="80924-106">您的同事将原始数据上传到工作簿。</span><span class="sxs-lookup"><span data-stu-id="80924-106">Your colleagues upload the raw data to your workbook.</span></span> <span data-ttu-id="80924-107">每周的数据集都有自己的工作表。</span><span class="sxs-lookup"><span data-stu-id="80924-107">Each week's set of data has its own worksheet.</span></span> <span data-ttu-id="80924-108">还有一个显示每周趋势的表格和图表的**摘要**工作表。</span><span class="sxs-lookup"><span data-stu-id="80924-108">There is also the **Summary** worksheet with a table and chart that shows week-over-week trends.</span></span>
+<span data-ttu-id="1cc9e-106">您的同事将原始数据上传到工作簿。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-106">Your colleagues upload the raw data to your workbook.</span></span> <span data-ttu-id="1cc9e-107">每周的数据集都有自己的工作表。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-107">Each week's set of data has its own worksheet.</span></span> <span data-ttu-id="1cc9e-108">还有一个显示每周趋势的表格和图表的**摘要**工作表。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-108">There is also the **Summary** worksheet with a table and chart that shows week-over-week trends.</span></span>
 
-<span data-ttu-id="80924-109">您将开发一个脚本，用于分析活动工作表中每周的下载数据。</span><span class="sxs-lookup"><span data-stu-id="80924-109">You'll develop a script that analyzes weekly downloads data in the active worksheet.</span></span> <span data-ttu-id="80924-110">它将分析与每个下载关联的 IP 地址，并确定是否来自美国。</span><span class="sxs-lookup"><span data-stu-id="80924-110">It will parse the IP address associated with each download and determine whether or not it came from the US.</span></span> <span data-ttu-id="80924-111">该答案将作为布尔值（"TRUE" 或 "FALSE"）插入到工作表中，条件格式将应用于这些单元格。</span><span class="sxs-lookup"><span data-stu-id="80924-111">The answer will be inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting will be applied to those cells.</span></span> <span data-ttu-id="80924-112">将在工作表上汇总 IP 地址位置结果，并将其复制到摘要表。</span><span class="sxs-lookup"><span data-stu-id="80924-112">The IP address location results will be totaled on the worksheet and copied to the summary table.</span></span>
+<span data-ttu-id="1cc9e-109">您将开发一个脚本，用于分析活动工作表中每周的下载数据。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-109">You'll develop a script that analyzes weekly downloads data in the active worksheet.</span></span> <span data-ttu-id="1cc9e-110">它将分析与每个下载关联的 IP 地址，并确定是否来自美国。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-110">It will parse the IP address associated with each download and determine whether or not it came from the US.</span></span> <span data-ttu-id="1cc9e-111">该答案将作为布尔值（"TRUE" 或 "FALSE"）插入到工作表中，条件格式将应用于这些单元格。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-111">The answer will be inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting will be applied to those cells.</span></span> <span data-ttu-id="1cc9e-112">将在工作表上汇总 IP 地址位置结果，并将其复制到摘要表。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-112">The IP address location results will be totaled on the worksheet and copied to the summary table.</span></span>
 
-## <a name="scripting-skills-covered"></a><span data-ttu-id="80924-113">涵盖的脚本技能</span><span class="sxs-lookup"><span data-stu-id="80924-113">Scripting skills covered</span></span>
+## <a name="scripting-skills-covered"></a><span data-ttu-id="1cc9e-113">涵盖的脚本技能</span><span class="sxs-lookup"><span data-stu-id="1cc9e-113">Scripting skills covered</span></span>
 
-- <span data-ttu-id="80924-114">文本解析</span><span class="sxs-lookup"><span data-stu-id="80924-114">Text parsing</span></span>
-- <span data-ttu-id="80924-115">脚本中的 Subfunctions</span><span class="sxs-lookup"><span data-stu-id="80924-115">Subfunctions in scripts</span></span>
-- <span data-ttu-id="80924-116">条件格式</span><span class="sxs-lookup"><span data-stu-id="80924-116">Conditional formatting</span></span>
-- <span data-ttu-id="80924-117">表格</span><span class="sxs-lookup"><span data-stu-id="80924-117">Tables</span></span>
+- <span data-ttu-id="1cc9e-114">文本解析</span><span class="sxs-lookup"><span data-stu-id="1cc9e-114">Text parsing</span></span>
+- <span data-ttu-id="1cc9e-115">脚本中的 Subfunctions</span><span class="sxs-lookup"><span data-stu-id="1cc9e-115">Subfunctions in scripts</span></span>
+- <span data-ttu-id="1cc9e-116">条件格式</span><span class="sxs-lookup"><span data-stu-id="1cc9e-116">Conditional formatting</span></span>
+- <span data-ttu-id="1cc9e-117">表格</span><span class="sxs-lookup"><span data-stu-id="1cc9e-117">Tables</span></span>
 
-## <a name="demo-video"></a><span data-ttu-id="80924-118">演示视频</span><span class="sxs-lookup"><span data-stu-id="80924-118">Demo video</span></span>
+## <a name="demo-video"></a><span data-ttu-id="1cc9e-118">演示视频</span><span class="sxs-lookup"><span data-stu-id="1cc9e-118">Demo video</span></span>
 
-<span data-ttu-id="80924-119">此示例是 demoed 年2月2020的 Office 外接程序开发人员社区呼叫的一部分。</span><span class="sxs-lookup"><span data-stu-id="80924-119">This sample was demoed as part of the Office Add-ins developer community call for February 2020.</span></span>
+<span data-ttu-id="1cc9e-119">此示例是 demoed 年2月2020的 Office 外接程序开发人员社区呼叫的一部分。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-119">This sample was demoed as part of the Office Add-ins developer community call for February 2020.</span></span>
 
 > [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
 
 > [!NOTE]
-> <span data-ttu-id="80924-120">此视频中显示的代码使用较旧的 API 模型（ [Office 脚本异步 api](../../develop/excel-async-model.md)）。</span><span class="sxs-lookup"><span data-stu-id="80924-120">The code shown in this video uses an older API model (the [Office Scripts Async APIs](../../develop/excel-async-model.md)).</span></span> <span data-ttu-id="80924-121">此页面上显示的示例已更新，但代码看上去与录制略有不同。</span><span class="sxs-lookup"><span data-stu-id="80924-121">The sample presented on this page has been updated, but the code looks a little different from the recording.</span></span> <span data-ttu-id="80924-122">这些更改不会影响脚本的行为或演示者演示中的其他内容。</span><span class="sxs-lookup"><span data-stu-id="80924-122">The changes don't affect the behavior of the script or the other content in the presenter's demo.</span></span>
+> <span data-ttu-id="1cc9e-120">此视频中显示的代码使用较旧的 API 模型（ [Office 脚本异步 api](../../develop/excel-async-model.md)）。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-120">The code shown in this video uses an older API model (the [Office Scripts Async APIs](../../develop/excel-async-model.md)).</span></span> <span data-ttu-id="1cc9e-121">此页面上显示的示例已更新，但代码看上去与录制略有不同。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-121">The sample presented on this page has been updated, but the code looks a little different from the recording.</span></span> <span data-ttu-id="1cc9e-122">这些更改不会影响脚本的行为或演示者演示中的其他内容。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-122">The changes don't affect the behavior of the script or the other content in the presenter's demo.</span></span>
 
-## <a name="setup-instructions"></a><span data-ttu-id="80924-123">设置说明</span><span class="sxs-lookup"><span data-stu-id="80924-123">Setup instructions</span></span>
+## <a name="setup-instructions"></a><span data-ttu-id="1cc9e-123">设置说明</span><span class="sxs-lookup"><span data-stu-id="1cc9e-123">Setup instructions</span></span>
 
-1. <span data-ttu-id="80924-124">将<a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>下载到你的 OneDrive。</span><span class="sxs-lookup"><span data-stu-id="80924-124">Download <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> to your OneDrive.</span></span>
+1. <span data-ttu-id="1cc9e-124">将<a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>下载到你的 OneDrive。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-124">Download <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> to your OneDrive.</span></span>
 
-2. <span data-ttu-id="80924-125">使用适用于 web 的 Excel 打开工作簿。</span><span class="sxs-lookup"><span data-stu-id="80924-125">Open the workbook with Excel for the web.</span></span>
+2. <span data-ttu-id="1cc9e-125">使用适用于 web 的 Excel 打开工作簿。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-125">Open the workbook with Excel for the web.</span></span>
 
-3. <span data-ttu-id="80924-126">在 "**自动化**" 选项卡上，打开**代码编辑器**。</span><span class="sxs-lookup"><span data-stu-id="80924-126">Under the **Automate** tab, open the **Code Editor**.</span></span>
+3. <span data-ttu-id="1cc9e-126">在 "**自动化**" 选项卡上，打开**代码编辑器**。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-126">Under the **Automate** tab, open the **Code Editor**.</span></span>
 
-4. <span data-ttu-id="80924-127">在 "**代码编辑器**" 任务窗格中，按 "**新建脚本**"，并将以下脚本粘贴到编辑器中。</span><span class="sxs-lookup"><span data-stu-id="80924-127">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
+4. <span data-ttu-id="1cc9e-127">在 "**代码编辑器**" 任务窗格中，按 "**新建脚本**"，并将以下脚本粘贴到编辑器中。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-127">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -215,17 +215,17 @@ ms.locfileid: "44999265"
     }
     ```
 
-5. <span data-ttu-id="80924-128">重命名脚本以**分析 Web 下载**并保存它。</span><span class="sxs-lookup"><span data-stu-id="80924-128">Rename the script to **Analyze Web Downloads** and save it.</span></span>
+5. <span data-ttu-id="1cc9e-128">重命名脚本以**分析 Web 下载**并保存它。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-128">Rename the script to **Analyze Web Downloads** and save it.</span></span>
 
-## <a name="running-the-script"></a><span data-ttu-id="80924-129">运行脚本</span><span class="sxs-lookup"><span data-stu-id="80924-129">Running the script</span></span>
+## <a name="running-the-script"></a><span data-ttu-id="1cc9e-129">运行脚本</span><span class="sxs-lookup"><span data-stu-id="1cc9e-129">Running the script</span></span>
 
-<span data-ttu-id="80924-130">导航到任意**一周 \* \* **工作表，并运行**分析 Web 下载**脚本。</span><span class="sxs-lookup"><span data-stu-id="80924-130">Navigate to any of the **Week\*\*** worksheets and run the **Analyze Web Downloads** script.</span></span> <span data-ttu-id="80924-131">该脚本将应用在当前工作表上标签的条件格式和位置。</span><span class="sxs-lookup"><span data-stu-id="80924-131">The script will apply the conditional formatting and location labelling on the current sheet.</span></span> <span data-ttu-id="80924-132">它还将更新**摘要**工作表。</span><span class="sxs-lookup"><span data-stu-id="80924-132">It will also update the **Summary** worksheet.</span></span>
+<span data-ttu-id="1cc9e-130">导航到任意**一周 \* \* **工作表，并运行**分析 Web 下载**脚本。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-130">Navigate to any of the **Week\*\*** worksheets and run the **Analyze Web Downloads** script.</span></span> <span data-ttu-id="1cc9e-131">该脚本将应用在当前工作表上标签的条件格式和位置。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-131">The script will apply the conditional formatting and location labelling on the current sheet.</span></span> <span data-ttu-id="1cc9e-132">它还将更新**摘要**工作表。</span><span class="sxs-lookup"><span data-stu-id="1cc9e-132">It will also update the **Summary** worksheet.</span></span>
 
-### <a name="before-running-the-script"></a><span data-ttu-id="80924-133">运行脚本之前</span><span class="sxs-lookup"><span data-stu-id="80924-133">Before running the script</span></span>
+### <a name="before-running-the-script"></a><span data-ttu-id="1cc9e-133">运行脚本之前</span><span class="sxs-lookup"><span data-stu-id="1cc9e-133">Before running the script</span></span>
 
 ![显示原始 web 流量数据的工作表。](../../images/scenario-analyze-web-downloads-before.png)
 
-### <a name="after-running-the-script"></a><span data-ttu-id="80924-135">运行脚本后</span><span class="sxs-lookup"><span data-stu-id="80924-135">After running the script</span></span>
+### <a name="after-running-the-script"></a><span data-ttu-id="1cc9e-135">运行脚本后</span><span class="sxs-lookup"><span data-stu-id="1cc9e-135">After running the script</span></span>
 
 ![显示以前的 web 流量行的格式化 IP 位置信息的工作表。](../../images/scenario-analyze-web-downloads-after.png)
 
