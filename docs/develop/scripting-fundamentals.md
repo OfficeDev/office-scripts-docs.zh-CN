@@ -1,14 +1,14 @@
 ---
 title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
-ms.date: 06/29/2020
+ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: 9ea24f26052877bc70862c8a05321d588f409b11
-ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
+ms.openlocfilehash: 6c02f4fb986e6a0ed1dd7afb099aaa1c9d1ea276
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44999300"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160472"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中 Office 脚本的脚本基础（预览）
 
@@ -22,14 +22,14 @@ ms.locfileid: "44999300"
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
-// Your code goes here
+  // Your code goes here
 }
 ```
 
 运行脚本时，`main` 函数中的代码将运行。 `main` 可以调用脚本中的其他函数，但是该函数中未包含的代码将不会运行。
 
 > [!CAUTION]
-> 如果你的 `main` 函数看起来像 `async function main(context: Excel.RequestContext)`，则你的脚本使用的是旧版异步 API 模型。 请参阅[使用 Office 脚本异步 API 支持旧版脚本](excel-async-model.md)，了解详细信息，包括如何将旧脚本转换为当前 API 模型。
+> 如果你的 `main` 函数看起来像 `async function main(context: Excel.RequestContext)`，那你的脚本使用的是旧版异步 API 模型。 有关详细信息（包括如何将你的脚本转换为当前 API 模型），请参阅[支持使用异步 API 的旧 Office 脚本](excel-async-model.md)。
 
 ## <a name="object-model"></a>对象模型
 
@@ -60,9 +60,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="ranges"></a>Ranges
 
-Range 是工作簿中的一组连续单元格。 脚本通常使用 A1 样式表示法（例如，对于列 **B** 和行 **3** 中单个的单元格 **B3** 或从列 **C** 至 **列F**和行 **2** 至 **行4** 的单元格 **C2:F4**）来定义范围。
+Range 是工作簿中的一组连续单元格。 脚本通常使用 A1 样式表示法（例如，对于列 **B** 和行 **3** 中单个单元格，即 **B3** 或从列 **C** 至列 **F**和行 **2** 至行 **4** 的单元格，即 **C2:F4**）来定义范围。
 
-Range 有三个核心属性：值、公式和格式。 这些属性将获取或设置单元格值、要计算的公式以及单元格的视觉对象格式。 它们可通过 `getValues`、`getFormulas` 和 `getFormat` 进行访问。 值和公式可通过 `setValues` 和 `setFormulas` 进行更改，而格式是由单独设置的多个较小对象组成的 `RangeFormat` 对象。
+Range 有三个核心属性：值、公式和格式。 这些属性将获取或设置单元格值、要计算的公式以及单元格的视觉对象格式。 它们可通过 `getValues`、`getFormulas` 和 `getFormat` 进行访问。 值和公式可通过 `setValues` 和 `setFormulas` 进行更改，而格式则是由单独设置的多个较小对象组成的 `RangeFormat` 对象。
 
 Range 使用二维数组管理信息。 有关如何在 Office 脚本框架中处理这些数组的详细信息，请参阅[《在 Office 脚本中使用内置的 JavaScript 对象》的“使用区域”部分](javascript-objects.md#working-with-ranges)。
 
@@ -163,7 +163,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="collections-and-other-object-relations"></a>集合和其他对象关系
 
-任何子对象都可通过其父对象访问。 例如，可从 `Workbook` 对象中读取 `Worksheets`。 父类上将会有一个相关的 `get` 方法（例如 `Workbook.getWorksheets()` 或 `Workbook.getWorksheet(name)`）。 单数形式的 `get` 方法将返回单个对象，并且需要特定对象的 ID 或名称（如工作表名称）。 复数形式的 `get` 方法会将整个对象集合作为数组返回。 如果集合为空，将得到一个空数组 (`[]`)。
+任何子对象都可通过其父对象访问。 例如，可从 `Workbook` 对象中读取 `Worksheets`。 父类上将会有一个相关的 `get` 方法（例如 `Workbook.getWorksheets()` 或 `Workbook.getWorksheet(name)` ）。 单数形式的 `get` 方法将返回单个对象，并且需要特定对象的 ID 或名称（如工作表名称）。 复数形式的 `get` 方法会将整个对象集合作为数组返回。 如果集合为空，将得到一个空数组 (`[]`)。
 
 检索到相应集合后，可在其上面使用常规数组操作（如获取其 `length` 或使用 `for`、`for..of` 或 `while` 循环进行迭代）或使用 TypeScript 数组方法（如 `map` 或 `forEach`）。 你还可以使用数组索引值访问集合中的单个对象。 例如，`workbook.getTables()[0]` 将返回集合中的第一个表格。 请阅读[《在 Office 脚本中使用内置的 JavaScript 对象》的“使用集合”部分](javascript-objects.md#working-with-collections)，深入了解如何在 Office 脚本框架中使用内置数组功能。
 

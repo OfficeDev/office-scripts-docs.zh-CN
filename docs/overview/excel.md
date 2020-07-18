@@ -1,14 +1,14 @@
 ---
 title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
-ms.date: 06/29/2020
+ms.date: 07/10/2020
 localization_priority: Priority
-ms.openlocfilehash: 046dd4eac0cce14117da75199841f0b2f72031bc
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: a27d1797ba2e968cbf4f56c4313223978dc9087c
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043403"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160465"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本（预览版）
 
@@ -24,7 +24,7 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 ## <a name="when-to-use-office-scripts"></a>何时使用 Office 脚本
 
-你可以使用脚本录制和重播不同工作簿和工作表上的 Excel 操作。 如果你发现自己正在执行重复操作，则 Office 脚本可以将整个工作流程缩减为按一下按钮，从而为你提供帮助。
+你可以使用脚本录制和重播不同工作簿和工作表上的 Excel 操作。 如果你发现自己正在重复执行相同的操作，则可以将所有工作转变为易于运行的 Office 脚本。 通过 Excel 中的一个按钮运行脚本，或将其与 Power Automate 结合使用，简化整个工作流程。
 
 例如，假如你在 Excel 中打开一个会计网站的 .csv 文件，以此开始一天的工作。 你需要花几分钟删除不必要的列，设置表格格式，添加公式和在新工作表中创建一个数据透视表。 你可以使用操作录制器录制这些每天重复的操作。 录制之后，运行脚本即可处理整个 .csv 转换。 这样不仅可以消除忘记步骤的风险，而且还能够与他们共享流程，无需为他们提供任何指导。 Office 脚本可以自动化常见任务，使你和你的工作空间可以更有效率、更加高效。
 
