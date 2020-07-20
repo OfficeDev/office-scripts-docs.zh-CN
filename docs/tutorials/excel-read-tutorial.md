@@ -1,14 +1,14 @@
 ---
 title: 在 Excel 网页版中使用 Office 脚本读取工作簿数据
 description: 有关从工作簿中读取数据并评估脚本中的数据的 Office 脚本教程。
-ms.date: 04/23/2020
+ms.date: 07/10/2020
 localization_priority: Priority
-ms.openlocfilehash: 93204184d4b5947b2a67107b1fd73c178a73c32e
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: fef1df7cab70ccef67a12ee466af5a89803d0992
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878682"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160406"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中使用 Office 脚本读取工作簿数据
 
@@ -72,10 +72,9 @@ ms.locfileid: "44878682"
     ```
 
 6. 运行脚本。
-7. 打开控制台。 转到“省略号”菜单，然后按“日志...”********。
-8. 应在控制台中看到 `[Array[1]]`。 这不是数字，因为区域是数据的二维数组。 该二维区域直接记录到控制台。 幸运的是，代码编辑器可以让你看到数组的内容。
-9. 将二维数组记录到控制台时，它会对每行下面的列值进行分组。 按蓝色三角形展开数组日志。
-10. 按新出现的蓝色三角形展开数组的第二级别。 现在，你应该会看到：
+7. 应在控制台中看到 `[Array[1]]`。 这不是数字，因为区域是数据的二维数组。 该二维区域直接记录到控制台。 幸运的是，代码编辑器让你能够看到数组的内容。
+8. 将二维数组记录到控制台时，它会对每行下面的列值进行分组。 按蓝色三角形展开数组日志。
+9. 按新出现的蓝色三角形展开数组的第二级别。 现在，你应该会看到：
 
     ![控制台日志显示嵌套在两个数组下的输出“-20.05”。](../images/tutorial-4.png)
 
@@ -86,7 +85,7 @@ ms.locfileid: "44878682"
 1. 将以下代码添加到脚本末尾：
 
     ```TypeScript
-        // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+    // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
     let positiveValue = Math.abs(range.getValue());
     range.setValue(positiveValue);
     ```
@@ -124,7 +123,8 @@ ms.locfileid: "44878682"
     let rangeValues = range.getValues();
 
     // Iterate over the fourth and fifth columns and set their values to their absolute value.
-    for (let i = 1; i < range.getRowCount(); i++) {
+    let rowCount = range.getRowCount();
+    for (let i = 1; i < rowCount; i++) {
         // The column at index 3 is column "4" in the worksheet.
         if (rangeValues[i][3] != 0) {
             let positiveValue = Math.abs(rangeValues[i][3]);
