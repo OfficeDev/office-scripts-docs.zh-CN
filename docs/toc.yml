@@ -10,9 +10,9 @@
           href: tutorials/excel-tutorial.md
         - name: 使用脚本读取工作簿数据
           href: tutorials/excel-read-tutorial.md
-        - name: 开始通过 Power Automate 使用脚本
+        - name: 通过 Power Automate 手动流调用脚本
           href: tutorials/excel-power-automate-manual.md
-        - name: 自动通过 Power Automate 运行脚本
+        - name: 将数据传递到自动运行的 Power Automate 流中
           href: tutorials/excel-power-automate-trigger.md
     - name: 脚本基础知识
       href: develop/scripting-fundamentals.md
@@ -38,7 +38,7 @@
           href: develop/web-client-performance.md
         - name: 消除 Office 脚本的影响
           href: testing/undo.md
-        - name: 使用异步模型（旧版）
+        - name: 支持更旧的 Office 脚本
           href: develop/excel-async-model.md
     - name: 示例
       items:
