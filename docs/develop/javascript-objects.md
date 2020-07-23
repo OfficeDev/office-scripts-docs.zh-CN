@@ -1,14 +1,14 @@
 ---
 title: 在 Office 脚本中使用内置的 JavaScript 对象
 description: 如何：从 web 上的 Excel 中的 Office 脚本中调用内置 JavaScript Api。
-ms.date: 06/29/2020
+ms.date: 07/16/2020
 localization_priority: Normal
-ms.openlocfilehash: 1c8ac757574e8c4be64b373f8d4bf421ddfa0c79
-ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
+ms.openlocfilehash: 4bb5fb5444887005ececbbfdf0130cba3784e0c4
+ms.sourcegitcommit: 8d549884e68170f808d3d417104a4451a37da83c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44999258"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45229594"
 ---
 # <a name="using-built-in-javascript-objects-in-office-scripts"></a>在 Office 脚本中使用内置的 JavaScript 对象
 
@@ -107,7 +107,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-示例中的 "[处理日期](../resources/excel-samples.md#work-with-dates)" 部分具有与日期相关的脚本。
+示例中的 "[处理日期](../resources/excel-samples.md#dates)" 部分具有与日期相关的脚本。
 
 ## <a name="math"></a>数学
 
