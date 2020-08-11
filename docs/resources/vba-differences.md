@@ -3,27 +3,27 @@ title: Office 脚本和 VBA 宏之间的区别
 description: Office 脚本和 Excel VBA 宏之间的行为和 API 差异。
 ms.date: 06/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 8a8929f0c6a73a8e9041bb4b55cce1edd539e166
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: 8c246545943341607a7aced4da792b8e49880cb0
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043389"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616687"
 ---
 # <a name="differences-between-office-scripts-and-vba-macros"></a>Office 脚本和 VBA 宏之间的区别
 
 Office 脚本和 VBA 宏具有很多共同之处。 它们都允许用户通过易于使用的操作录制器自动执行解决方案，并允许编辑这些录制。 这两个框架都旨在让可能不会考虑自己的程序员在 Excel 中创建小型程序的人员。
 基本区别在于，VBA 宏是为桌面解决方案开发的，而 Office 脚本是通过跨平台支持和安全性设计的，以指导原则为依据。 目前，仅在 web 上的 Excel 中支持 Office 脚本。
 
-![显示不同 Office 扩展性解决方案的重点领域的四象限图。 Office 脚本和 VBA 宏都旨在帮助最终用户创建解决方案，但 Office 脚本是为 web 和协作（而 VBA 是针对桌面）而构建的。](../images/office-programmability-diagram.png)
+![显示不同 Office 扩展性解决方案的重点领域的四象限图。 Office 脚本和 VBA 宏都旨在帮助最终用户创建解决方案，但 Office 脚本是为 web 和协作 (而构建的，而 VBA 则用于桌面) 。 ) ](../images/office-programmability-diagram.png)
 
-本文介绍 VBA 宏（以及常规的 VBA）和 Office 脚本之间的主要差异。 由于 Office 脚本仅适用于 Excel，所以这里只讨论唯一的主机。
+本文介绍 VBA 宏 (的主要区别以及常规) 和 Office 脚本中的 VBA。 由于 Office 脚本仅适用于 Excel，所以这里只讨论唯一的主机。
 
 ## <a name="platform-and-ecosystem"></a>平台和生态系统
 
 VBA 设计用于桌面，而 Office 脚本是为 web 设计的。 VBA 可以与用户桌面进行交互，以与类似的技术（如 COM 和 OLE）进行连接。 但是，VBA 无法方便地调用到 internet。
 
-Office 脚本使用通用运行时或 JavaScript。 这将提供一致的行为和可访问性，而无需考虑用于运行脚本的计算机。 它们还可以调用其他 web 服务。
+Office 脚本使用适用于 JavaScript 的通用运行时。 这将提供一致的行为和可访问性，而无需考虑用于运行脚本的计算机。 它们还可以调用其他 web 服务。
 
 ## <a name="security"></a>安全性
 
@@ -37,7 +37,7 @@ VBA 宏与 Excel 具有相同的安全净空。 这样，他们就可以拥有�
 
 ## <a name="power-automate"></a>Power Automate
 
-可以通过 "Power 自动化" 运行 Office 脚本。 您的工作簿可以通过计划或事件驱动的流进行更新，让您无需打开 Excel 即可自动执行工作流。 这意味着只要您的工作簿存储在 OneDrive 中（并可供电源自动访问），流就可以运行您的脚本，而不管您和您的组织使用的是 Excel 的桌面、Mac 还是 web 客户端。
+可以通过 "Power 自动化" 运行 Office 脚本。 您的工作簿可以通过计划或事件驱动的流进行更新，让您无需打开 Excel 即可自动执行工作流。 这意味着，只要您的工作簿存储在 OneDrive (中并可访问以实现自动) ，流就可以运行您的脚本，而不管您和您的组织使用的是 Excel 的桌面、Mac 还是 web 客户端。
 
 VBA 没有电源自动连接器。 所有受支持的 VBA 方案都涉及用户参与宏的执行。
 

@@ -1,14 +1,14 @@
 ---
 title: Office 脚本示例方案：年级计算器
 description: 一个用于确定一类学生的百分比和信函等级的示例。
-ms.date: 06/01/2020
+ms.date: 07/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 6f8e3db756c72cf1d0e2f774ccd819c041f0c42d
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 4e488c6cc67bda9122b88c55070654632d9c7fa2
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878638"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616737"
 ---
 # <a name="office-scripts-sample-scenario-grade-calculator"></a>Office 脚本示例方案：年级计算器
 
@@ -132,8 +132,8 @@ ms.locfileid: "44878638"
         setCellValueConditionalFormatting(
           grade,
           totalRange,
-          "#9C0006",
-          "#FFC7CE",
+          "#443300",
+          "#FFEE22",
           ExcelScript.ConditionalCellValueOperator.equalTo
         );
       })
@@ -178,7 +178,7 @@ ms.locfileid: "44878638"
 
 ## <a name="running-the-script"></a>运行脚本
 
-在唯一的工作表上运行**年级计算器**脚本。 该脚本将对分数进行合计并为每个学生分配一个字母等级。 如果任何一年级的分数多于工作分配或测试的数量，则会将有问题的等级标记为红色，并且不计算总计。
+在唯一的工作表上运行**年级计算器**脚本。 该脚本将对分数进行合计并为每个学生分配一个字母等级。 如果任何一年级的分数多于工作分配或测试的数量，则会将有问题的等级标记为红色，并且不计算总计。 此外，任何 ' A ' 等级都以绿色突出显示，而 ' F ' 等级以黄色加亮显示。
 
 ### <a name="before-running-the-script"></a>运行脚本之前
 

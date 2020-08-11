@@ -1,14 +1,14 @@
 ---
 title: 使用 Power 自动运行 Office 脚本
 description: 如何在使用 Power 自动工作流的网站上获取适用于 Excel 的 Office 脚本。
-ms.date: 07/10/2020
+ms.date: 07/24/2020
 localization_priority: Normal
-ms.openlocfilehash: bd8fea08b7a9303ad2ceace787de6457a33fb979
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: a427948847d7ab84962cdede7fb44d214592909f
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160444"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616673"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>使用 Power 自动运行 Office 脚本
 
@@ -20,16 +20,16 @@ ms.locfileid: "45160444"
 
 若要开始结合使用电源自动化功能和 Office 脚本，请遵循教程[开始使用启用电源自动化的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 在完成了教程和将[数据传递到自动运行电源自动化流教程中的脚本](../tutorials/excel-power-automate-trigger.md)之后，请返回此处以了解有关连接 Office 脚本以实现自动处理功能流的详细信息。
 
-## <a name="excel-online-business-connector"></a>Excel Online （业务）连接器
+## <a name="excel-online-business-connector"></a>Excel Online (商业) 连接器
 
-[连接器](/connectors/connectors)是电源自动化和应用程序之间的桥梁。 [Excel Online （业务）连接器](/connectors/excelonlinebusiness)提供对 excel 工作簿的流访问。 "运行脚本" 操作允许您调用任何可通过所选工作簿访问的 Office 脚本。 您不仅可以通过流运行脚本，还可以通过脚本在工作簿之间传递数据。
+[连接器](/connectors/connectors)是电源自动化和应用程序之间的桥梁。 [Excel Online (Business) 连接器](/connectors/excelonlinebusiness)为您的流提供对 Excel 工作簿的访问权限。 "运行脚本" 操作允许您调用任何可通过所选工作簿访问的 Office 脚本。 您还可以为脚本输入参数，以便流可以提供数据，或让脚本返回有关流中后续步骤的信息。
 
 > [!IMPORTANT]
 > "运行脚本" 操作为使用 Excel connector 的用户提供对工作簿及其数据的有效访问权限。 此外，还存在一些使用脚本进行外部 API 调用的安全风险，如[Power 自动化中的外部调用](external-calls.md)中所述。 如果您的管理员担心暴露高度敏感的数据，则可以关闭 Excel Online 连接器或限制对 Office 脚本的访问，方法是通过[Office 脚本管理员控件](https://support.microsoft.com/office/19d3c51a-6ca2-40ab-978d-60fa49554dcf)。
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>脚本流中的数据传输
 
-利用电源自动化，可以在流的各个步骤之间传递数据片段。 可以将脚本配置为接受所需的任何类型的信息，并从您的工作簿中返回您想要的任何内容。 您的脚本的输入通过向函数添加参数 `main` （除了）来指定 `workbook: ExcelScript.Workbook` 。 脚本中的输出通过将返回类型添加到来声明 `main` 。
+利用电源自动化，可以在流的各个步骤之间传递数据片段。 可以将脚本配置为接受所需的任何类型的信息，并从您的工作簿中返回您想要的任何内容。 脚本的输入通过将参数添加到函数中来指定， `main` (除了 `workbook: ExcelScript.Workbook`) 之外。 脚本中的输出通过将返回类型添加到来声明 `main` 。
 
 > [!NOTE]
 > 在流中创建 "运行脚本" 块时，将填充接受的参数和返回的类型。 如果更改了脚本的参数或返回类型，您将需要恢复流的 "运行脚本" 块。 这样可确保正确分析数据。
@@ -46,15 +46,15 @@ ms.locfileid: "45160444"
 
 1. 第一个参数的类型必须为 `ExcelScript.Workbook` 。 其参数名称无关紧要。
 
-2. 每个参数都必须具有一个类型。
+2. 每个参数都必须具有一个类型 (，如 `string` 或 `number`) 。
 
 3. 支持基本类型 `string` 、、、、、 `number` `boolean` `any` `unknown` `object` 和 `undefined` 。
 
 4. 支持前面列出的基本类型的数组。
 
-5. 嵌套的数组支持作为参数（而不是返回类型）。
+5. 嵌套的数组支持作为参数 (但不支持) 的返回类型。
 
-6. 如果联合类型是属于单个类型（ `string` 、或）的文本的联合，则允许联合类型 `number` `boolean` 。 此外，还支持具有未定义的受支持类型的联合。
+6. 如果联合类型是属于单个类型 (（如) ）的文本联合，则允许联合类型 `"Left" | "Right"` 。 包含未定义的受支持类型的联合也受支持 (如 `string | undefined`) 。
 
 7. 如果对象类型包含类型 `string` 、 `number` 、、支持的 `boolean` 数组或其他受支持的对象的属性，则允许这些对象类型。 下面的示例演示受支持为参数类型的嵌套对象：
 
@@ -77,9 +77,9 @@ ms.locfileid: "45160444"
     function main(workbook: ExcelScript.Workbook): {name: string, email: string}
     ```
 
-9. 可选参数是允许的，并且可以使用 optional 修饰符 `?` （例如，）来表示 `function main(workbook: ExcelScript.Workbook, Name?: string)` 。
+9. 可选参数是允许的，并且可以使用 optional 修饰符以 `?` (例如， `function main(workbook: ExcelScript.Workbook, Name?: string)`) 。
 
-10. 允许使用默认参数值（例如 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` 。
+10. 例如， (允许使用默认参数值 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` 。
 
 ### <a name="returning-data-from-a-script"></a>从脚本中返回数据
 
@@ -143,7 +143,7 @@ function main(
 ## <a name="see-also"></a>另请参阅
 
 - [在使用 Power 自动化的 web 上运行 Excel 中的 Office 脚本](../tutorials/excel-power-automate-manual.md)
-- [在自动运行的电源自动化流中将数据传递给脚本](../tutorials/excel-power-automate-trigger.md)
+- [将数据传递到自动运行的 Power Automate 流中的脚本](../tutorials/excel-power-automate-trigger.md)
 - [Excel 网页版中 Office 脚本的脚本基础知识](scripting-fundamentals.md)
 - [Power Automate 入门](/power-automate/getting-started)
-- [Excel Online （业务）连接器参考文档](/connectors/excelonlinebusiness/)
+- [Excel Online (Business) 连接器参考文档](/connectors/excelonlinebusiness/)

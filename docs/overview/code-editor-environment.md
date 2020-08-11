@@ -1,14 +1,14 @@
 ---
 title: Office 脚本代码编辑器环境
 description: Excel 网页版中 Office 脚本的先决条件和环境信息。
-ms.date: 07/10/2020
+ms.date: 07/23/2020
 localization_priority: Normal
-ms.openlocfilehash: 643ea2d5bd69adf4311546465ccd65c08dacf4b4
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: 6a496d6c245879eae60e60b9b0cd6fced9e9259a
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160493"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616694"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office 脚本代码编辑器环境
 
@@ -16,7 +16,7 @@ Office 脚本在[TypeScript 或 JavaScript](#scripting-language-typescript-or-ja
 
 ## <a name="scripting-language-typescript-or-javascript"></a>脚本语言： TypeScript 或 JavaScript
 
-Office 脚本是用[TypeScript](https://www.typescriptlang.org/docs/home.html)或[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript)编写的。 操作记录器在 TypeScript （JavaScript 的超集）中生成代码。 Office 脚本文档使用 TypeScript，但如果您更熟悉 JavaScript，则可以改为使用。
+Office 脚本是用[TypeScript](https://www.typescriptlang.org/docs/home.html)或[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript)编写的。 操作记录器在 TypeScript (中生成代码，这是 JavaScript) 的超集。 Office 脚本文档使用 TypeScript，但如果您更熟悉 JavaScript，则可以改为使用。
 
 Office 脚本主要是自包含的代码段。 仅使用 TypeScript 的功能的一小部分。 因此，您可以编辑脚本，而无需了解 TypeScript 的复杂性。 代码编辑器还处理安装、编译和代码的执行，因此您无需担心脚本本身。 您可以了解语言并创建脚本，而无需以前的编程知识。 但是，如果您是编程新手，我们建议您先了解一些基础知识，然后再继续使用 Office 脚本：
 
@@ -36,10 +36,6 @@ Excel 代码编辑器使用与 Visual Studio Code 相同的智能感知引擎。
 ## <a name="external-library-support"></a>外部库支持
 
 Office 脚本不支持使用外部第三方 JavaScript 库。 您当前无法从脚本调用 Office 脚本 Api 之外的任何其他库。 您仍有权访问任何[内置 JavaScript 对象](../develop/javascript-objects.md)，如[数学](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)。
-
-## <a name="browser-support"></a>浏览器支持
-
-Office 脚本在任何[支持 Web Office 的](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452)浏览器中工作。 但是，Internet Explorer 11 （IE 11）不支持某些 JavaScript 功能。 [ES6 或更高版本](https://www.w3schools.com/Js/js_es6.asp)中引入的任何功能将不适用于 IE 11。 如果组织中的人员仍在使用该浏览器，请务必在共享这些脚本时在该环境中对其进行测试。
 
 ## <a name="see-also"></a>另请参阅
 

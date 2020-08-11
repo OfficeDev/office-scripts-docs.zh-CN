@@ -1,5 +1,3 @@
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
 在开始本教程之前，你需要具有 Office 脚本的访问权限，要求如下：
 
 - [Excel 网页版](https://www.office.com/launch/excel)。
