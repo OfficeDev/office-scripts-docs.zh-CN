@@ -36,6 +36,8 @@
           href: testing/troubleshooting.md
         - name: 改进脚本性能
           href: develop/web-client-performance.md
+        - name: 平台限制
+          href: testing/platform-limits.md
         - name: 消除 Office 脚本的影响
           href: testing/undo.md
         - name: 支持更旧的 Office 脚本

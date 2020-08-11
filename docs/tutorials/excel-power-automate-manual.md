@@ -1,25 +1,25 @@
 ---
 title: 通过手动 Power Automate 流呼叫脚本
 description: 有关通过手动触发器在 Power Automate 中使用 Office 脚本的教程。
-ms.date: 07/14/2020
+ms.date: 07/24/2020
 localization_priority: Priority
-ms.openlocfilehash: 70fca2620973ecefe9eda40f02e28f064b713677
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: f447e465bc0b09043d64752266bc9b6dbe5a5d89
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160432"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616752"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow-preview"></a>通过手动 Power Automate 流呼叫脚本（预览版）
 
-本教程将指导你如何通过 [Power Automate](https://flow.microsoft.com) 在 web 上运行 Office Script for Excel。
+本教程将指导你如何通过 [Power Automate](https://flow.microsoft.com) 在 web 上运行 Office Script for Excel。 你将创建一个脚本，以当前时间更新两个单元格的值。 然后，你可以将该脚本连接到手动触发的 Power Automate 流，以便每当按下 Power Automate 中的按钮时，脚本便会运行。 了解基本模式后，可展开流以包括其他应用程序，并自动执行更多日常工作流。
 
-## <a name="prerequisites"></a>必备条件
+> [!TIP]
+> 如果你不熟悉 Office 脚本，建议先查看[在 Excel 网页版中录制、编辑和创建 Office 脚本](excel-tutorial.md)教程。 [Office 脚本使用 TypeScript](../overview/code-editor-environment.md)，本教程面向在 JavaScript 或 TypeScript 方面具备初级到中级知识的人员。 如果你不熟悉 JavaScript，建议从 [Mozilla JavaScript 教程](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)入手。
+
+## <a name="prerequisites"></a>先决条件
 
 [!INCLUDE [Tutorial prerequisites](../includes/power-automate-tutorial-prerequisites.md)]
-
-> [!IMPORTANT]
-> 本教程假定你已完成[在 Excel 网页版中录制、编辑和创建 Office 脚本](excel-tutorial.md)教程。
 
 ## <a name="prepare-the-workbook"></a>准备工作簿
 
@@ -89,7 +89,7 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
 
     ![运行脚本（预览版）的 Power Automate 操作选项。](../images/power-automate-tutorial-5.png)
 
-8. 为 **运行脚本** 连接器指定以下设置：
+8. 接下来，选择要在流步骤中使用的工作簿和脚本。 对于本教程，你将使用在 OneDrive 中创建的工作簿，但可以在 OneDrive 或 SharePoint 网站中使用任何工作簿。 为 **运行脚本** 连接器指定以下设置：
 
     - **位置**：OneDrive for Business
     - **文档库**： OneDrive

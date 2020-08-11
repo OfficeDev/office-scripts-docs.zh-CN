@@ -1,28 +1,25 @@
 ---
 title: 在 Excel 网页版中使用 Office 脚本读取工作簿数据
 description: 有关从工作簿中读取数据并评估脚本中的数据的 Office 脚本教程。
-ms.date: 07/10/2020
+ms.date: 07/20/2020
 localization_priority: Priority
-ms.openlocfilehash: fef1df7cab70ccef67a12ee466af5a89803d0992
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: cdd09f13bb53cfff8c051360f2306cdb6956d86d
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160406"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616703"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中使用 Office 脚本读取工作簿数据
 
-本教程将介绍如何在 Excel 网页版中使用 Office 脚本从工作簿中读取数据。 然后，你将编辑所读取的数据，并将其放回工作簿中。
+本教程将介绍如何在 Excel 网页版中使用 Office 脚本从工作簿中读取数据。 你将编写一个新脚本，该脚本可设置银行对帐单的格式并规范化该对帐单中的数据。 在此数据清理过程中，你的脚本将从事务单元格中读取值，将一个简单的公式应用到每个值，并将生成的答案写入工作簿。 通过从工作簿中读取数据，可在脚本中自动执行某些决策过程。
 
 > [!TIP]
-> 如果你不熟悉 Office 脚本，建议先查看[在 Excel 网页版中录制、编辑和创建 Office 脚本](excel-tutorial.md)教程。
+> 如果你不熟悉 Office 脚本，建议先查看[在 Excel 网页版中录制、编辑和创建 Office 脚本](excel-tutorial.md)教程。 [Office 脚本使用 TypeScript](../overview/code-editor-environment.md)，本教程面向在 JavaScript 或 TypeScript 方面具备初级到中级知识的人员。 如果你不熟悉 JavaScript，建议从 [Mozilla JavaScript 教程](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)入手。
 
 ## <a name="prerequisites"></a>先决条件
 
 [!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
-
-> [!IMPORTANT]
-> 本教程面向在 JavaScript 或 TypeScript 方面具备初级到中级知识的人员。 如果你不熟悉 JavaScript，建议查看 [Mozilla JavaScript 教程](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)。 请访问 [Excel 网页版中的 Office 脚本](../overview/excel.md)，以了解有关脚本环境的详细信息。
 
 ## <a name="read-a-cell"></a>读取单元格
 
@@ -150,3 +147,5 @@ ms.locfileid: "45160406"
 ## <a name="next-steps"></a>后续步骤
 
 打开“代码编辑器”，然后尝试使用一些 [Excel 网页版中的 Office 脚本的示例脚本](../resources/excel-samples.md)。 还可以访问 [Excel 网页版中的 Office 脚本的脚本基础知识](../develop/scripting-fundamentals.md)，了解有关创建 Office 脚本的详细信息。
+
+下一系列的 Office 脚本教程重点介绍如何将 Office 脚本与 Power Automate 一起使用。 在[使用 Power Automate 运行 Office 脚本](../develop/power-automate-integration.md)中了解有关结合两个平台的优势的更多信息，或尝试[通过 Power Automate 手动流调用脚本](excel-power-automate-manual.md)教程来创建使用 Office 脚本的 Power Automate 流。

@@ -1,14 +1,14 @@
 ---
 title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
-ms.date: 07/10/2020
+ms.date: 07/21/2020
 localization_priority: Priority
-ms.openlocfilehash: a27d1797ba2e968cbf4f56c4313223978dc9087c
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: 557a4f8fac8fbeafe150f425170c8e45f62986c6
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160465"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616718"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本（预览版）
 
@@ -20,7 +20,24 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
 
+## <a name="requirements"></a>Requirements
+
 [!INCLUDE [Preview note](../includes/preview-note.md)]
+
+若要使用 Office 脚本，需要以下内容。
+
+1. [Excel 网页版](https://www.office.com/launch/excel)（不支持桌面等其他平台）。
+1. [管理员已启用](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf) Office 脚本。
+1. 可访问 Microsoft 365 Office 桌面应用的任何商业版或教育版 Microsoft 365 许可证，例如：
+
+    - Office 365 商业版
+    - Office 365 商业高级版
+    - Office 365 专业增强版
+    - Office 365 专业增强版（设备）
+    - Office 365 企业版 E3
+    - Office 365 企业版 E5
+    - Office 365 A3
+    - Office 365 A5
 
 ## <a name="when-to-use-office-scripts"></a>何时使用 Office 脚本
 
