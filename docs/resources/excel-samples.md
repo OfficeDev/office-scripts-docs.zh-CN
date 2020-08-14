@@ -1,24 +1,24 @@
 ---
 title: Web 上的 Excel 中 Office 脚本的示例脚本
 description: 要用于 web 上 Excel 中的 Office 脚本的一组代码示例。
-ms.date: 07/16/2020
+ms.date: 08/04/2020
 localization_priority: Normal
-ms.openlocfilehash: fa330bfa284799e26ee2cf49800102072d66612b
-ms.sourcegitcommit: 8d549884e68170f808d3d417104a4451a37da83c
+ms.openlocfilehash: 4f8d6f2395a841a8dcba2ea0e712e645a84a6d91
+ms.sourcegitcommit: 1c88abcf5df16a05913f12df89490ce843cfebe2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229601"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "46665227"
 ---
-# <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中 Office 脚本的示例脚本（预览）
+# <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本示例脚本 (预览) 
 
 下面的示例是您在自己的工作簿中尝试的简单脚本。 若要在 Excel 网页上使用它们，请执行以下操作：
 
 1. 打开“**自动**”选项卡。
-2. 按**代码编辑器**。
-3. 在代码编辑器的任务窗格中，按 "**新建脚本**"。
+2. 按 **代码编辑器**。
+3. 在代码编辑器的任务窗格中，按 " **新建脚本** "。
 4. 将整个脚本替换为您选择的示例。
-5. 在代码编辑器的任务窗格中按 "**运行**"。
+5. 在代码编辑器的任务窗格中按 " **运行** "。
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "45229601"
 
 ### <a name="read-and-log-one-cell"></a>读取和记录一个单元格
 
-此示例读取**A1**的值并将其打印到控制台。
+此示例读取 **A1** 的值并将其打印到控制台。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -167,9 +167,38 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### <a name="querying-and-deleting-from-a-collection"></a>查询和删除集合
+
+此脚本将创建一个新的工作表。 它将检查工作表的现有副本并在生成新工作表之前将其删除。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Name of the worksheet to be added.
+  let name = "Index";
+
+  // Get any worksheet with that name.
+  let sheet = workbook.getWorksheet("Index");
+  
+  // If `null` wasn't returned, then there's already a worksheet with that name.
+  if (sheet) {
+    console.log(`Worksheet by the name ${name} already exists. Deleting it.`);
+    // Delete the sheet.
+    sheet.delete();
+  }
+  
+  // Add a blank worksheet with the name "Index".
+  // Note that this code runs regardless of whether an existing sheet was deleted.
+  console.log(`Adding the worksheet named ${name}.`);
+  let newSheet = workbook.addWorksheet("Index");
+
+  // Switch to the new worksheet.
+  newSheet.activate();
+}
+```
+
 ## <a name="dates"></a>日期
 
-本节中的示例演示如何使用 JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date)对象。
+本节中的示例演示如何使用 JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) 对象。
 
 下面的示例获取当前日期和时间，然后将这些值写入活动工作表中的两个单元格。
 
@@ -190,7 +219,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-下一个示例读取存储在 Excel 中的日期，并将其转换为 JavaScript Date 对象。 它使用[日期的数字序列号](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46)作为 JavaScript 日期的输入。
+下一个示例读取存储在 Excel 中的日期，并将其转换为 JavaScript Date 对象。 它使用 [日期的数字序列号](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) 作为 JavaScript 日期的输入。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -250,7 +279,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="log-the-grand-total-values-from-a-pivottable"></a>记录数据透视表中的 "总计" 值
 
-本示例在工作簿中查找第一个数据透视表，并将值记录在 "总计" 单元格中（在下图中突出显示为绿色）。
+本示例在工作簿中查找第一个数据透视表，并将 "总计" 单元格中的值记录 () 下图中的绿色突出显示）。
 
 ![一个水果销售数据透视表，总计行突出显示为绿色。](../images/sample-pivottable-grand-total-row.png)
 
@@ -276,9 +305,68 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+## <a name="formulas"></a>公式
+
+这些示例使用 Excel 公式，并演示如何在脚本中使用它们。
+
+## <a name="single-formula"></a>单个公式
+
+此脚本设置单元格的公式，然后显示 Excel 如何单独存储单元格的公式和值。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  let selectedSheet = workbook.getActiveWorksheet();
+
+  // Set A1 to 2.
+  let a1 = selectedSheet.getRange("A1");
+  a1.setValue(2);
+
+  // Set B1 to the formula =(2*A1), which should equal 4.
+  let b1 = selectedSheet.getRange("B1")
+  b1.setFormula("=(2*A1)");
+
+  // Log the current results for `getFormula` and `getValue` at B1.
+  console.log(`B1 - Formula: ${b1.getFormula()} | Value: ${b1.getValue()}`);
+}
+```
+
+### <a name="spilling-results-from-a-formula"></a>Spilling 公式中的结果
+
+此脚本使用换位函数将区域 "A1： D2" 转置为 "A4： B7"。 如果换位的转置结果为 #SPILL 错误，它将清除目标区域并再次应用公式。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  let sheet = workbook.getActiveWorksheet();
+  // Use the data in A1:D2 for the sample.
+  let dataAddress = "A1:D2"
+  let inputRange = sheet.getRange(dataAddress);
+
+  // Place the transposed data starting at A4.
+  let targetStartCell = sheet.getRange("A4");
+
+  // Compute the target range.
+  let targetRange = targetStartCell.getResizedRange(inputRange.getColumnCount() - 1, inputRange.getRowCount() - 1);
+
+  // Call the transpose helper function.
+  targetStartCell.setFormula(`=TRANSPOSE(${dataAddress})`);
+
+  // Check if the range update resulted in a spill error.
+  let checkValue = targetStartCell.getValue() as string;
+  if (checkValue === '#SPILL!') {
+    // Clear the target range and call the transpose function again.
+    console.log("Target range has data that is preventing update. Clearing target range.");
+    targetRange.clear();
+    targetStartCell.setFormula(`=TRANSPOSE(${dataAddress})`);
+  }
+
+  // Select the transposed range to highlight it.
+  targetRange.select();
+}
+```
+
 ## <a name="scenario-samples"></a>方案示例
 
-有关 showcasing 大型的真实解决方案的示例，请访问[Office 脚本的示例方案](scenarios/sample-scenario-overview.md)。
+有关 showcasing 大型的真实解决方案的示例，请访问 [Office 脚本的示例方案](scenarios/sample-scenario-overview.md)。
 
 ## <a name="suggest-new-samples"></a>建议新示例
 
