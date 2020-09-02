@@ -3,12 +3,12 @@ title: Office 脚本疑难解答
 description: Office 脚本的调试提示和技术，以及帮助资源。
 ms.date: 07/23/2020
 localization_priority: Normal
-ms.openlocfilehash: 00727b497d49a2d1d3f9c61e259b8d8d75028a59
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 0a2c9ab209bc36e8ba2bdb25a6ab79d9f900f29a
+ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616680"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "47321591"
 ---
 # <a name="troubleshooting-office-scripts"></a>Office 脚本疑难解答
 
@@ -29,24 +29,24 @@ console.log(myRange.getAddress());
 
 ## <a name="error-messages"></a>错误消息
 
-如果 Excel 脚本在运行时遇到问题，则会产生错误。 您将看到提示窗口，询问您是否要**查看日志**。 按该按钮打开控制台并显示任何错误。
+如果 Excel 脚本在运行时遇到问题，则会产生错误。 您将看到提示窗口，询问您是否要 **查看日志**。 按该按钮打开控制台并显示任何错误。
 
 ## <a name="automate-tab-not-appearing"></a>"自动" 选项卡未显示
 
-以下步骤将帮助解决与 Excel for the web 中未显示的 "**自动**" 选项卡相关的任何问题。
+以下步骤将帮助解决与 web 上的 Excel 中未出现的 " **自动** " 选项卡相关的任何问题。
 
 1. [请确保你的 Microsoft 365 许可证包括 Office 脚本](../overview/excel.md#requirements)。
-1. [让管理员启用该功能](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)。
+1. [让管理员启用该功能](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 1. [检查您的浏览器是否受支持](platform-limits.md#browser-support)。
 1. [确保启用了第三方 cookie](platform-limits.md#third-party-cookies)。
 
 ## <a name="help-resources"></a>帮助资源
 
-[堆栈溢出](https://stackoverflow.com/questions/tagged/office-scripts)是一种愿意帮助处理编码问题的开发人员社区。 通常情况下，你可以通过快速堆栈溢出搜索找到问题的解决方案。 如果不是，请询问问题并使用 "office-scripts" 标记对其进行标记。 请务必指出您正在创建 Office*脚本*，而不是 office*外接程序*。
+[堆栈溢出](https://stackoverflow.com/questions/tagged/office-scripts) 是一种愿意帮助处理编码问题的开发人员社区。 通常情况下，你可以通过快速堆栈溢出搜索找到问题的解决方案。 如果不是，请询问问题并使用 "office-scripts" 标记对其进行标记。 请务必指出您正在创建 Office *脚本*，而不是 office *外接程序*。
 
-如果您遇到 Office JavaScript API 问题，请在[OfficeDev/Office js](https://github.com/OfficeDev/office-js) GitHub 存储库中创建问题。 产品团队的成员将响应问题并提供进一步的帮助。 在**OfficeDev/js**存储库中创建问题表示您在 OFFICE JavaScript API 库中发现产品团队应解决的缺陷。
+如果您遇到 Office JavaScript API 问题，请在 [OfficeDev/Office js](https://github.com/OfficeDev/office-js) GitHub 存储库中创建问题。 产品团队的成员将响应问题并提供进一步的帮助。 在 **OfficeDev/js** 存储库中创建问题表示您在 OFFICE JavaScript API 库中发现产品团队应解决的缺陷。
 
-如果操作记录器或编辑器存在问题，请通过 Excel 中的 "帮助" **> 反馈**按钮发送反馈。
+如果操作记录器或编辑器存在问题，请通过 Excel 中的 "帮助" **> 反馈** 按钮发送反馈。
 
 ## <a name="see-also"></a>另请参阅
 

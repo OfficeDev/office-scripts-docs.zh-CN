@@ -3,12 +3,12 @@ title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
 ms.date: 07/21/2020
 localization_priority: Priority
-ms.openlocfilehash: 557a4f8fac8fbeafe150f425170c8e45f62986c6
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 6b60e46c13a211dc793638bcca6535f04a529096
+ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616718"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "47321579"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本（预览版）
 
@@ -27,7 +27,7 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 若要使用 Office 脚本，需要以下内容。
 
 1. [Excel 网页版](https://www.office.com/launch/excel)（不支持桌面等其他平台）。
-1. [管理员已启用](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf) Office 脚本。
+1. [管理员已启用](/microsoft-365/admin/manage/manage-office-scripts-settings) Office 脚本。
 1. 可访问 Microsoft 365 Office 桌面应用的任何商业版或教育版 Microsoft 365 许可证，例如：
 
     - Office 365 商业版

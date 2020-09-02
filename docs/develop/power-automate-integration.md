@@ -3,29 +3,29 @@ title: 使用 Power 自动运行 Office 脚本
 description: 如何在使用 Power 自动工作流的网站上获取适用于 Excel 的 Office 脚本。
 ms.date: 07/24/2020
 localization_priority: Normal
-ms.openlocfilehash: a427948847d7ab84962cdede7fb44d214592909f
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 87bd4e15ef7680a7456077494e3fda8208d6b9d8
+ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616673"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "47321570"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>使用 Power 自动运行 Office 脚本
 
 通过使用[电源自动化](https://flow.microsoft.com)，可以将 Office 脚本添加到更大的自动化工作流中。 您可以使用 Power 自动执行操作，例如，将电子邮件的内容添加到工作表的表中，或在基于工作簿注释的项目管理工具中创建操作。
 
-## <a name="getting-started"></a>入门
+## <a name="getting-started"></a>开始使用
 
-如果你刚开始使用 "电源自动化"，我们建议[使用 Power 自动化获取访问入门](/power-automate/getting-started)。 在这里，你可以了解有关你可使用的所有自动化可能性的详细信息。 此处的文档重点介绍 Office 脚本与电源自动化的工作方式，以及如何帮助改进 Excel 体验。
+如果你刚开始使用 "电源自动化"，我们建议 [使用 Power 自动化获取访问入门](/power-automate/getting-started)。 在这里，你可以了解有关你可使用的所有自动化可能性的详细信息。 此处的文档重点介绍 Office 脚本与电源自动化的工作方式，以及如何帮助改进 Excel 体验。
 
-若要开始结合使用电源自动化功能和 Office 脚本，请遵循教程[开始使用启用电源自动化的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 在完成了教程和将[数据传递到自动运行电源自动化流教程中的脚本](../tutorials/excel-power-automate-trigger.md)之后，请返回此处以了解有关连接 Office 脚本以实现自动处理功能流的详细信息。
+若要开始结合使用电源自动化功能和 Office 脚本，请遵循教程 [开始使用启用电源自动化的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 在完成了教程和将 [数据传递到自动运行电源自动化流教程中的脚本](../tutorials/excel-power-automate-trigger.md) 之后，请返回此处以了解有关连接 Office 脚本以实现自动处理功能流的详细信息。
 
 ## <a name="excel-online-business-connector"></a>Excel Online (商业) 连接器
 
-[连接器](/connectors/connectors)是电源自动化和应用程序之间的桥梁。 [Excel Online (Business) 连接器](/connectors/excelonlinebusiness)为您的流提供对 Excel 工作簿的访问权限。 "运行脚本" 操作允许您调用任何可通过所选工作簿访问的 Office 脚本。 您还可以为脚本输入参数，以便流可以提供数据，或让脚本返回有关流中后续步骤的信息。
+[连接器](/connectors/connectors) 是电源自动化和应用程序之间的桥梁。 [Excel Online (Business) 连接器](/connectors/excelonlinebusiness)为您的流提供对 Excel 工作簿的访问权限。 "运行脚本" 操作允许您调用任何可通过所选工作簿访问的 Office 脚本。 您还可以为脚本输入参数，以便流可以提供数据，或让脚本返回有关流中后续步骤的信息。
 
 > [!IMPORTANT]
-> "运行脚本" 操作为使用 Excel connector 的用户提供对工作簿及其数据的有效访问权限。 此外，还存在一些使用脚本进行外部 API 调用的安全风险，如[Power 自动化中的外部调用](external-calls.md)中所述。 如果您的管理员担心暴露高度敏感的数据，则可以关闭 Excel Online 连接器或限制对 Office 脚本的访问，方法是通过[Office 脚本管理员控件](https://support.microsoft.com/office/19d3c51a-6ca2-40ab-978d-60fa49554dcf)。
+> "运行脚本" 操作为使用 Excel connector 的用户提供对工作簿及其数据的有效访问权限。 此外，还存在一些使用脚本进行外部 API 调用的安全风险，如 [Power 自动化中的外部调用](external-calls.md)中所述。 如果您的管理员担心暴露高度敏感的数据，则可以关闭 Excel Online 连接器或限制对 Office 脚本的访问，方法是通过 [Office 脚本管理员控件](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>脚本流中的数据传输
 
@@ -34,13 +34,13 @@ ms.locfileid: "46616673"
 > [!NOTE]
 > 在流中创建 "运行脚本" 块时，将填充接受的参数和返回的类型。 如果更改了脚本的参数或返回类型，您将需要恢复流的 "运行脚本" 块。 这样可确保正确分析数据。
 
-以下各节介绍了用于 Power 自动化的脚本输入和输出的详细信息。 如果你想要学习本主题的实践方法，请尝试[在自动运行电源自动化流教程中将数据传递到脚本](../tutorials/excel-power-automate-trigger.md)，或浏览[自动任务提醒](../resources/scenarios/task-reminders.md)示例方案。
+以下各节介绍了用于 Power 自动化的脚本输入和输出的详细信息。 如果你想要学习本主题的实践方法，请尝试 [在自动运行电源自动化流教程中将数据传递到脚本](../tutorials/excel-power-automate-trigger.md) ，或浏览 [自动任务提醒](../resources/scenarios/task-reminders.md) 示例方案。
 
-### <a name="main-parameters-passing-data-to-a-script"></a>`main`参数：将数据传递给脚本
+### <a name="main-parameters-passing-data-to-a-script"></a>`main` 参数：将数据传递给脚本
 
 所有脚本输入都被指定为函数的附加参数 `main` 。 例如，如果您希望脚本接受一个 `string` 表示输入名称的，则会将 `main` 签名更改为 `function main(workbook: ExcelScript.Workbook, name: string)` 。
 
-当您在电源自动化中配置流时，您可以将脚本输入指定为静态值、[表达式](/power-automate/use-expressions-in-conditions)或动态内容。 有关单个服务连接器的详细信息，请参阅[Power 自动连接器文档](/connectors/)中的。
+当您在电源自动化中配置流时，您可以将脚本输入指定为静态值、 [表达式](/power-automate/use-expressions-in-conditions)或动态内容。 有关单个服务连接器的详细信息，请参阅 [Power 自动连接器文档](/connectors/)中的。
 
 向脚本函数中添加输入参数时 `main` ，请考虑以下余量和限制。
 
@@ -115,7 +115,7 @@ Power 自动在所选的 Excel 工作簿中代表你运行脚本。 在这种情
 
 ## <a name="example"></a>示例
 
-下面的屏幕截图显示了只要向您分配[GitHub](https://github.com/)问题时触发的电源自动化流。 流运行一个将问题添加到 Excel 工作簿中的表的脚本。 如果该表中有五个或更多问题，流将发送电子邮件提醒。
+下面的屏幕截图显示了只要向您分配 [GitHub](https://github.com/) 问题时触发的电源自动化流。 流运行一个将问题添加到 Excel 工作簿中的表的脚本。 如果该表中有五个或更多问题，流将发送电子邮件提醒。
 
 ![示例流，如 Power 自动化流编辑器中所示。](../images/power-automate-parameter-return-sample.png)
 
