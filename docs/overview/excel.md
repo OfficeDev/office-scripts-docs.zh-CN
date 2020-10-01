@@ -1,14 +1,14 @@
 ---
 title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
-ms.date: 07/21/2020
+ms.date: 09/29/2020
 localization_priority: Priority
-ms.openlocfilehash: 6b60e46c13a211dc793638bcca6535f04a529096
-ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
+ms.openlocfilehash: 965e28be285d59d79d46fe005ab16f29b271041f
+ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "47321579"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "48319670"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本（预览版）
 
@@ -27,6 +27,7 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 若要使用 Office 脚本，需要以下内容。
 
 1. [Excel 网页版](https://www.office.com/launch/excel)（不支持桌面等其他平台）。
+1. OneDrive for Business。
 1. [管理员已启用](/microsoft-365/admin/manage/manage-office-scripts-settings) Office 脚本。
 1. 可访问 Microsoft 365 Office 桌面应用的任何商业版或教育版 Microsoft 365 许可证，例如：
 
@@ -65,7 +66,10 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 Office 脚本可与 Excel 工作簿的其他用户共享。 在工作簿中与其他人共享脚本时，该脚本将附加到工作簿中。 你的脚本存储在你的 OneDrive 中，当你共享一个脚本时，你将在打开的工作簿中创建指向该脚本的链接。
 
-有关共享和取消共享脚本的详细信息，请参阅[在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b?storagetype=live&ui=en-US&rs=en-US&ad=US)一文。
+有关共享和取消共享脚本的详细信息，请参阅[在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)一文。
+
+> [!NOTE]
+> 由于 Office 脚本存储在用户的 OneDrive 上，因此它们遵循相同的保留和删除策略。 若要了解如何处理从组织中删除了用户所创建和共享的脚本，请参阅 [OneDrive 保留和删除](/onedrive/retention-and-deletion)。
 
 ## <a name="connecting-office-scripts-to-power-automate"></a>将 Office 脚本连接到 Power Automate
 
