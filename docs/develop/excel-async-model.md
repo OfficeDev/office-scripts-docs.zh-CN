@@ -3,19 +3,19 @@ title: 支持使用异步 Api 的较旧的 Office 脚本
 description: Office 脚本异步 Api 的入门知识，以及如何对旧版脚本使用 load/sync 模式。
 ms.date: 07/08/2020
 localization_priority: Normal
-ms.openlocfilehash: e7ca5b276cff0e3a38bffc2af1541c0051cf5490
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: 8c90c263e7e3b232447ac6b62da2b2f373b63a87
+ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160458"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "48319658"
 ---
 # <a name="support-older-office-scripts-that-use-the-async-apis"></a>支持使用异步 Api 的较旧的 Office 脚本
 
 本文将教您如何维护和更新使用较旧模型的异步 Api 的脚本。 这些 Api 与 now-standard 同步 Office 脚本 Api 具有相同的核心功能，但它们要求您的脚本控制脚本和工作簿之间的数据同步。
 
 > [!IMPORTANT]
-> 异步模型仅可用于在实现当前[API 模型](scripting-fundamentals.md?view=office-scripts)之前创建的脚本。 脚本将被永久锁定为它们创建时所拥有的 API 模型。 这也意味着，如果您想要将旧脚本转换为新模型，则必须创建全新的脚本。 我们建议您在进行更改时将旧脚本更新到新模型，因为当前模型更易于使用。 将[异步脚本转换为 "当前模型"](#converting-async-scripts-to-the-current-model)部分包含有关如何进行此转换的建议。
+> 异步模型仅可用于在实现当前 [API 模型](scripting-fundamentals.md?view=office-scripts&preserve-view=true)之前创建的脚本。 脚本将被永久锁定为它们创建时所拥有的 API 模型。 这也意味着，如果您想要将旧脚本转换为新模型，则必须创建全新的脚本。 我们建议您在进行更改时将旧脚本更新到新模型，因为当前模型更易于使用。 将 [异步脚本转换为 "当前模型"](#converting-async-scripts-to-the-current-model) 部分包含有关如何进行此转换的建议。
 
 ## <a name="main-function"></a>`main` 函数
 
@@ -37,7 +37,7 @@ async function main(context: Excel.RequestContext) {
 
 因为脚本和工作簿在不同的位置运行，所以两者之间的任何数据传输都需要时间。 在异步 API 中，命令将一直排队，直到脚本显式调用 `sync` 操作以同步脚本和工作簿。 脚本可以独立运行，直到需要执行以下任一操作：
 
-- 从工作簿中读取数据（遵循返回 [ClientResult](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async) 的 `load` 操作或方法）。
+- 从工作簿中读取数据（遵循返回 [ClientResult](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async&preserve-view=true) 的 `load` 操作或方法）。
 - 将数据写入工作簿（通常是因为脚本已完成）。
 
 下图显示了脚本和工作簿之间的示例控制流：
@@ -55,7 +55,7 @@ await context.sync();
 > [!NOTE]
 > 脚本结束时将隐式调用 `context.sync()`。
 
-`sync` 操作完成后，工作簿将更新以反映脚本已指定的任何写入操作。 写操作是设置 Excel 对象（例如， `range.format.fill.color = "red"` ）或调用更改属性（如）的方法的任何属性 `range.format.autoFitColumns()` 。 `sync` 操作还从脚本请求的工作簿中读取任何值，方式是通过使用能返回 `ClientResult` 的 `load` 操作或方法（如下一节所述）。
+`sync` 操作完成后，工作簿将更新以反映脚本已指定的任何写入操作。 写操作是在 Excel 对象上设置任何属性 (例如， `range.format.fill.color = "red"`) 或调用更改 (属性的方法，如 `range.format.autoFitColumns()`) 。 `sync` 操作还从脚本请求的工作簿中读取任何值，方式是通过使用能返回 `ClientResult` 的 `load` 操作或方法（如下一节所述）。
 
 将脚本与工作簿同步可能需要一些时间，具体取决于网络。 最大程度地减少 `sync` 用于帮助脚本运行速度的调用次数。 否则，异步 Api 不会更快地成为标准的同步 Api。
 
@@ -116,7 +116,7 @@ async function main(context: Excel.RequestContext){
 
 ### <a name="clientresult"></a>ClientResult
 
-异步 API 中从工作簿返回信息的方法的模式与范例中的方法类似 `load` / `sync` 。 举个例子，`TableCollection.getCount`获取集合中的表的数量。 `getCount`返回 a `ClientResult<number>` ，表示 `value` 返回的属性 [`ClientResult`](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async) 为数字。 在调用 `context.sync()` 之前，脚本无法访问此值。 与加载属性很相似，直到 `sync` 调用，`value` 是本地 "空" 值。
+异步 API 中从工作簿返回信息的方法的模式与范例中的方法类似 `load` / `sync` 。 举个例子，`TableCollection.getCount`获取集合中的表的数量。 `getCount` 返回 a `ClientResult<number>` ，表示 `value` 返回的属性 [`ClientResult`](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async&preserve-view=true) 为数字。 在调用 `context.sync()` 之前，脚本无法访问此值。 与加载属性很相似，直到 `sync` 调用，`value` 是本地 "空" 值。
 
 以下脚本获取工作簿中的表的总数，并将该数目记录到控制台。
 
@@ -139,17 +139,17 @@ async function main(context: Excel.RequestContext) {
 
 ## <a name="converting-async-scripts-to-the-current-model"></a>将异步脚本转换为当前模型
 
-当前 API 模型不使用 `load` 、 `sync` 或 `RequestContext` 。 这使脚本更易于编写和维护。 转换旧脚本的最佳资源是[堆栈溢出](https://stackoverflow.com/questions/tagged/office-scripts)。 在这里，你可以向社区寻求有关特定方案的帮助。 以下指南应帮助概述你需要执行的常规步骤。
+当前 API 模型不使用 `load` 、 `sync` 或 `RequestContext` 。 这使脚本更易于编写和维护。 转换旧脚本的最佳资源是 [堆栈溢出](https://stackoverflow.com/questions/tagged/office-scripts)。 在这里，你可以向社区寻求有关特定方案的帮助。 以下指南应帮助概述你需要执行的常规步骤。
 
 1. 创建一个新脚本，并将旧的异步代码复制到该脚本中。 `main`请务必改用 current，而不要包含旧的方法签名 `function main(workbook: ExcelScript.Workbook)` 。
 
 2. 删除所有 `load` 和 `sync` 调用。 不再需要它们。
 
-3. 已删除所有属性。 现在，您可以通过和方法访问这些对象 `get` `set` ，因此您需要将这些属性引用切换到方法调用。 例如， `mySheet.getRange("A2:C2").format.fill.color = "blue";` 您现在可以使用如下所示的方法，而不是通过属性访问来设置单元格的填充颜色：`mySheet.getRange("A2:C2").getFormat().getFill().setColor("blue");`
+3. 已删除所有属性。 现在，您可以通过和方法访问这些对象 `get` `set` ，因此您需要将这些属性引用切换到方法调用。 例如， `mySheet.getRange("A2:C2").format.fill.color = "blue";` 您现在可以使用如下所示的方法，而不是通过属性访问来设置单元格的填充颜色： `mySheet.getRange("A2:C2").getFormat().getFill().setColor("blue");`
 
 4. 集合类已被数组替换。 `add` `get` 这些集合类的和方法被移至拥有集合的对象，因此必须相应地更新引用。 例如，若要从工作簿中的第一个工作表中获取一个名为 "MyChart" 的图表，请使用以下代码： `workbook.getWorksheets()[0].getChart("MyChart");` 。 请注意， `[0]` 若要访问返回的返回的的第一个值 `Worksheet[]` `getWorksheets()` 。
 
-5. 为清楚起见，一些方法已重命名，添加为方便。 有关更多详细信息，请参阅[Office 脚本 API 参考](/javascript/api/office-scripts/overview?view=office-scripts)。
+5. 为清楚起见，一些方法已重命名，添加为方便。 有关更多详细信息，请参阅 [Office 脚本 API 参考](/javascript/api/office-scripts/overview?view=office-scripts&preserve-view=true) 。
 
 ## <a name="office-scripts-async-api-reference-documentation"></a>Office 脚本异步 API 参考文档
 
