@@ -5,7 +5,7 @@ ms.date: 06/15/2020
 localization_priority: Normal
 ms.openlocfilehash: 4d5b7c70f14e3fc598b95a6226e3ef8caf89f651
 ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
-ms.translationtype: Auto
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/25/2020
 ms.locfileid: "44878749"
@@ -14,7 +14,7 @@ ms.locfileid: "44878749"
 
 Office 脚本的用途是自动化通常执行的一系列任务以节省时间。 较慢的脚本可能感觉不会加快工作流的速度。 大多数情况下，您的脚本完全正常，并按预期运行。 但是，有几个可能会影响性能的 avoidable 方案。
 
-速度较慢的脚本的最常见原因是与工作簿之间的通信过多。 您的脚本在本地计算机上运行，而该工作簿存在于云中。 在某些情况下，您的脚本会将其本地数据与工作簿的同步。 这意味着， `workbook.addWorksheet()` 在这种幕后同步发生时，任何写操作（如）都仅适用于工作簿。 同样，任何读取操作（例如 `myRange.getValues()` ）仅在这些时间从脚本的工作簿中获取数据。 在这两种情况下，脚本都会在对数据进行操作之前提取信息。 例如，以下代码将准确记录所用区域中的行数。
+速度较慢的脚本的最常见原因是与工作簿之间的通信过多。 您的脚本在本地计算机上运行，而该工作簿存在于云中。 在某些情况下，您的脚本会将其本地数据与工作簿的同步。 这意味着， `workbook.addWorksheet()` 只有在发生这种幕后同步时，才会将任何写入操作 (例如，) 仅应用于工作簿。 同样，任何读操作 (例如， `myRange.getValues()`) 仅在这些时间从脚本的工作簿中获取数据。 在这两种情况下，脚本都会在对数据进行操作之前提取信息。 例如，以下代码将准确记录所用区域中的行数。
 
 ```TypeScript
 let usedRange = workbook.getActiveWorksheet().getUsedRange();
@@ -74,7 +74,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="remove-unnecessary-consolelog-statements"></a>删除不必要的 `console.log` 语句
 
-控制台日志记录是[调试脚本](../testing/troubleshooting.md)的重要工具。 但是，它确实强制脚本与工作簿同步，以确保记录的信息是最新的。 在共享脚本之前，请考虑删除不必要的日志记录语句（如用于测试的日志记录语句）。 除非语句在循环中，否则通常不会引起显著的性能问题 `console.log()` 。
+控制台日志记录是 [调试脚本](../testing/troubleshooting.md)的重要工具。 但是，它确实强制脚本与工作簿同步，以确保记录的信息是最新的。 请考虑删除不必要的日志记录语句 (如用于在共享脚本之前测试) 的记录语句。 除非语句在循环中，否则通常不会引起显著的性能问题 `console.log()` 。
 
 ### <a name="avoid-using-trycatch-blocks"></a>避免使用 try/catch 块
 
@@ -100,9 +100,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="case-by-case-help"></a>按大小写帮助
 
-随着 Office 脚本平台扩展以配合使用[电源自动化](https://flow.microsoft.com/)、[自适应卡](https://docs.microsoft.com/adaptive-cards)和其他跨产品功能，脚本工作簿通信的详细信息会变得更加复杂。 如果需要帮助使脚本运行得更快，请通过[堆栈溢出](https://stackoverflow.com/questions/tagged/office-scripts)。 请务必使用 "office-scripts" 标记你的问题，以便专家可以找到它和帮助。
+随着 Office 脚本平台扩展以配合使用 [电源自动化](https://flow.microsoft.com/)、 [自适应卡](https://docs.microsoft.com/adaptive-cards)和其他跨产品功能，脚本工作簿通信的详细信息会变得更加复杂。 如果需要帮助使脚本运行得更快，请通过 [堆栈溢出](https://stackoverflow.com/questions/tagged/office-scripts)。 请务必使用 "office-scripts" 标记你的问题，以便专家可以找到它和帮助。
 
 ## <a name="see-also"></a>另请参阅
 
-- [Excel 网页版中 Office 脚本的脚本基础](scripting-fundamentals.md)
+- [Excel 网页版中 Office 脚本的脚本基础知识](scripting-fundamentals.md)
 - [MDN web 文档：循环和迭代](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Loops_and_iteration)
