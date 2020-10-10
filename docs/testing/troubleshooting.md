@@ -1,14 +1,14 @@
 ---
 title: Office 脚本疑难解答
 description: Office 脚本的调试提示和技术，以及帮助资源。
-ms.date: 07/23/2020
+ms.date: 10/08/2020
 localization_priority: Normal
-ms.openlocfilehash: 0a2c9ab209bc36e8ba2bdb25a6ab79d9f900f29a
-ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
+ms.openlocfilehash: 9b3f4be778f3cdb4711d1e41d4d68f87ebca8152
+ms.sourcegitcommit: 42fa3b629c93930b4e73e9c4c01d0c8bdf6d7487
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "47321591"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48411542"
 ---
 # <a name="troubleshooting-office-scripts"></a>Office 脚本疑难解答
 
@@ -31,7 +31,7 @@ console.log(myRange.getAddress());
 
 如果 Excel 脚本在运行时遇到问题，则会产生错误。 您将看到提示窗口，询问您是否要 **查看日志**。 按该按钮打开控制台并显示任何错误。
 
-## <a name="automate-tab-not-appearing"></a>"自动" 选项卡未显示
+## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>"自动" 选项卡未显示或 Office 脚本不可用
 
 以下步骤将帮助解决与 web 上的 Excel 中未出现的 " **自动** " 选项卡相关的任何问题。
 
@@ -39,6 +39,8 @@ console.log(myRange.getAddress());
 1. [让管理员启用该功能](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 1. [检查您的浏览器是否受支持](platform-limits.md#browser-support)。
 1. [确保启用了第三方 cookie](platform-limits.md#third-party-cookies)。
+
+[!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
 ## <a name="help-resources"></a>帮助资源
 
@@ -50,7 +52,7 @@ console.log(myRange.getAddress());
 
 ## <a name="see-also"></a>另请参阅
 
-- [Excel web 版中的 Office 脚本](../overview/excel.md)
+- [Excel 网页版中的 Office 脚本](../overview/excel.md)
 - [Web 上的 Excel 中 Office 脚本的脚本基础](../develop/scripting-fundamentals.md)
 - [Office 脚本的平台限制](platform-limits.md)
 - [提高 Office 脚本的性能](../develop/web-client-performance.md)
