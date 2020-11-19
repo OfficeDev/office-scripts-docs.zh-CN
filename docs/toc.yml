@@ -28,6 +28,8 @@
           href: resources/add-ins-differences.md
         - name: Office 脚本中的外部 API 呼叫支持
           href: develop/external-calls.md
+        - name: 文件存储和所有权
+          href: overview/script-storage.md
         - name: 通过 Power Automate 运行脚本
           href: develop/power-automate-integration.md
     - name: 疑难解答
