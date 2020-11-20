@@ -1,14 +1,14 @@
 ---
 title: Office 脚本疑难解答
 description: Office 脚本的调试提示和技术，以及帮助资源。
-ms.date: 10/08/2020
+ms.date: 10/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 9b3f4be778f3cdb4711d1e41d4d68f87ebca8152
-ms.sourcegitcommit: 42fa3b629c93930b4e73e9c4c01d0c8bdf6d7487
+ms.openlocfilehash: b45957bd336edce527397253cacec8cb09df715a
+ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48411542"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49342876"
 ---
 # <a name="troubleshooting-office-scripts"></a>Office 脚本疑难解答
 
@@ -23,7 +23,7 @@ console.log("Logging myRange's address.");
 console.log(myRange.getAddress());
 ```
 
-传递给的字符串 `console.log` 将显示在代码编辑器的日志记录控制台中。 若要打开控制台，请按**省略号**按钮，然后选择 "**日志 ...** "。
+传递给的字符串 `console.log` 将显示在代码编辑器的日志记录控制台中。 若要打开控制台，请按 **省略号** 按钮，然后选择 "**日志 ...** "。
 
 日志不会影响工作簿。
 
@@ -36,9 +36,9 @@ console.log(myRange.getAddress());
 以下步骤将帮助解决与 web 上的 Excel 中未出现的 " **自动** " 选项卡相关的任何问题。
 
 1. [请确保你的 Microsoft 365 许可证包括 Office 脚本](../overview/excel.md#requirements)。
-1. [让管理员启用该功能](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 1. [检查您的浏览器是否受支持](platform-limits.md#browser-support)。
 1. [确保启用了第三方 cookie](platform-limits.md#third-party-cookies)。
+1. [确保您的管理员未在 Microsoft 365 管理中心中禁用 Office 脚本](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -52,7 +52,7 @@ console.log(myRange.getAddress());
 
 ## <a name="see-also"></a>另请参阅
 
-- [Excel 网页版中的 Office 脚本](../overview/excel.md)
+- [Excel web 版中的 Office 脚本](../overview/excel.md)
 - [Web 上的 Excel 中 Office 脚本的脚本基础](../develop/scripting-fundamentals.md)
 - [Office 脚本的平台限制](platform-limits.md)
 - [提高 Office 脚本的性能](../develop/web-client-performance.md)

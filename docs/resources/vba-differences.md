@@ -1,14 +1,14 @@
 ---
 title: Office 脚本和 VBA 宏之间的区别
 description: Office 脚本和 Excel VBA 宏之间的行为和 API 差异。
-ms.date: 06/30/2020
+ms.date: 11/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 8c246545943341607a7aced4da792b8e49880cb0
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 7b9186d03489a43836c6e9da7bd28e0abc135f63
+ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616687"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49342883"
 ---
 # <a name="differences-between-office-scripts-and-vba-macros"></a>Office 脚本和 VBA 宏之间的区别
 
@@ -27,7 +27,7 @@ Office 脚本使用适用于 JavaScript 的通用运行时。 这将提供一致
 
 ## <a name="security"></a>安全性
 
-VBA 宏与 Excel 具有相同的安全净空。 这样，他们就可以拥有对桌面的完全访问权限。 Office 脚本仅具有对工作簿的访问权限，而不是承载工作簿的计算机。 此外，不能与脚本共享任何 JavaScript 身份验证令牌，因此脚本永远不能通过外部服务进行身份验证。
+VBA 宏与 Excel 具有相同的安全净空。 这样，他们就可以拥有对桌面的完全访问权限。 Office 脚本仅具有对工作簿的访问权限，而不是承载工作簿的计算机。 此外，不能与脚本共享任何 JavaScript 身份验证令牌。 这意味着，该脚本既不具有已登录用户的令牌，也不具有用于登录外部服务的任何 API 功能，因此它们无法使用现有令牌代表用户进行外部呼叫。
 
 管理员具有三个 VBA 宏选项：允许租户上的所有宏、不允许租户上的宏，或仅允许带有签名证书的宏。 这种缺乏的粒度使得难以隔离单个损坏的主角。 目前，Office 脚本是针对租户的 "打开" 或 "关闭"。 不过，我们正在努力为管理员提供对各个脚本和脚本编写者的更多控制。
 
