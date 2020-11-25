@@ -3,20 +3,20 @@ title: Office 脚本示例方案：分析 web 下载
 description: 在将该信息组织到表中之前，获取 Excel 工作簿中的原始 internet 流量数据并确定原始位置的示例。
 ms.date: 07/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 20c52c4f26b5939fb5de5e04df504e6672dd4200
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: adc2cb401830b66b245c0dfcc4441b7ac9c8c61f
+ms.sourcegitcommit: 009935c5773761c5833e5857491af47e2c95d851
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160451"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49408964"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office 脚本示例方案：分析 web 下载
 
 在这种情况下，您将负责分析来自公司网站的下载报告。 此分析的目标是确定 web 流量是来自世界各地还是其他地方。
 
-您的同事将原始数据上传到工作簿。 每周的数据集都有自己的工作表。 还有一个显示每周趋势的表格和图表的**摘要**工作表。
+您的同事将原始数据上传到工作簿。 每周的数据集都有自己的工作表。 还有一个显示每周趋势的表格和图表的 **摘要** 工作表。
 
-您将开发一个脚本，用于分析活动工作表中每周的下载数据。 它将分析与每个下载关联的 IP 地址，并确定是否来自美国。 该答案将作为布尔值（"TRUE" 或 "FALSE"）插入到工作表中，条件格式将应用于这些单元格。 将在工作表上汇总 IP 地址位置结果，并将其复制到摘要表。
+您将开发一个脚本，用于分析活动工作表中每周的下载数据。 它将分析与每个下载关联的 IP 地址，并确定是否来自美国。 该答案将作为布尔值插入到工作表中， ( 为 "TRUE" 或 "FALSE" ) 并且条件格式将应用于这些单元格。 将在工作表上汇总 IP 地址位置结果，并将其复制到摘要表。
 
 ## <a name="scripting-skills-covered"></a>涵盖的脚本技能
 
@@ -32,17 +32,17 @@ ms.locfileid: "45160451"
 > [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
 
 > [!NOTE]
-> 此视频中显示的代码使用较旧的 API 模型（ [Office 脚本异步 api](../../develop/excel-async-model.md)）。 此页面上显示的示例已更新，但代码看上去与录制略有不同。 这些更改不会影响脚本的行为或演示者演示中的其他内容。
+> 此视频中显示的代码使用较旧的 API 模型 ([Office 脚本的异步 api](../../develop/excel-async-model.md)) 。 此页面上显示的示例已更新，但代码看上去与录制略有不同。 这些更改不会影响脚本的行为或演示者演示中的其他内容。
 
 ## <a name="setup-instructions"></a>设置说明
 
-1. 将<a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>下载到你的 OneDrive。
+1. 将 <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> 下载到你的 OneDrive。
 
 2. 使用适用于 web 的 Excel 打开工作簿。
 
-3. 在 "**自动化**" 选项卡上，打开**代码编辑器**。
+3. 在 " **自动化** " 选项卡上，打开 **代码编辑器**。
 
-4. 在 "**代码编辑器**" 任务窗格中，按 "**新建脚本**"，并将以下脚本粘贴到编辑器中。
+4. 在 " **代码编辑器** " 任务窗格中，按 " **新建脚本** "，并将以下脚本粘贴到编辑器中。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -182,8 +182,8 @@ ms.locfileid: "45160451"
         formula1: "=TRUE",
         operator: ExcelScript.ConditionalCellValueOperator.equalTo
       });
-      conditionalFormatTrue.getCellValue().getFormat().getFill().setColor("#F8CCAD");
-      conditionalFormatTrue.getCellValue().setRule({
+      conditionalFormatFalse.getCellValue().getFormat().getFill().setColor("#F8CCAD");
+      conditionalFormatFalse.getCellValue().setRule({
         formula1: "=FALSE",
         operator: ExcelScript.ConditionalCellValueOperator.equalTo
       });
@@ -220,11 +220,11 @@ ms.locfileid: "45160451"
     }
     ```
 
-5. 重命名脚本以**分析 Web 下载**并保存它。
+5. 重命名脚本以 **分析 Web 下载** 并保存它。
 
 ## <a name="running-the-script"></a>运行脚本
 
-导航到任意**一周 \* \* **工作表，并运行**分析 Web 下载**脚本。 该脚本将应用在当前工作表上标签的条件格式和位置。 它还将更新**摘要**工作表。
+导航到任意 **一周 \* \*** 工作表，并运行 **分析 Web 下载** 脚本。 该脚本将应用在当前工作表上标签的条件格式和位置。 它还将更新 **摘要** 工作表。
 
 ### <a name="before-running-the-script"></a>运行脚本之前
 
