@@ -1,14 +1,14 @@
 ---
 title: Office 脚本示例方案：自动任务提醒
 description: 使用 Power 自动处理和自适应卡自动完成项目管理电子表格中的任务提醒的示例。
-ms.date: 06/09/2020
+ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: f764c37dafdd964e9435d504770d10b1608428b8
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 90769eca0201e450e25778db0eb5c62284b9feb0
+ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878808"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49571439"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Office 脚本示例方案：自动任务提醒
 
@@ -65,7 +65,7 @@ ms.locfileid: "44878808"
         let row = bodyRangeValues[i];
         if (row[STATUS_REPORT_INDEX] === "") {
           // Save the email to return.
-          people.push({ name: row[NAME_INDEX], email: row[EMAIL_INDEX] });
+          people.push({ name: row[NAME_INDEX].toString(), email: row[EMAIL_INDEX].toString() });
         }
       }
 
@@ -154,11 +154,11 @@ ms.locfileid: "44878808"
 
 10. 从选项中选择 " **手动触发流** "，然后按 " **创建**"。
 
-11. 流需要调用 **获取人员** 脚本，以获取具有空状态字段的所有员工。 按 " **新建步骤** "，然后选择 " **Excel Online (Business) **。 在 "**操作**"下，选择 **运行脚本（预览版）**。 为流步骤提供以下项：
+11. 流需要调用 **获取人员** 脚本，以获取具有空状态字段的所有员工。 按 " **新建步骤** "，然后选择 " **Excel Online (Business)**。 在 "**操作**"下，选择 **运行脚本（预览版）**。 为流步骤提供以下项：
 
     - **位置**：OneDrive for Business
     - **文档库**： OneDrive
-    - **文件**： task-reminders.xlsx
+    - **文件**： *通过文件浏览器选择 task-reminders.xlsx ()*
     - **脚本**：获取人员
 
     ![首次运行脚本流步骤。](../../images/scenario-task-reminders-first-flow-step.png)
@@ -167,7 +167,7 @@ ms.locfileid: "44878808"
 
 13. 对于 " **收件人** " 字段，从动态内容添加 **电子邮件** (所选内容将使用 Excel 徽标) 。 添加 **电子邮件** 会导致流步骤被 **应用于每个** 块。 这意味着将通过电源自动化来循环访问数组。
 
-14. 发送自适应卡片需要将智能卡的 JSON 作为 **邮件**提供。 您可以使用 [自适应卡片设计器](https://adaptivecards.io/designer/) 来创建自定义卡片。 对于此示例，请使用以下 JSON。  
+14. 发送自适应卡片需要将智能卡的 JSON 作为 **邮件** 提供。 您可以使用 [自适应卡片设计器](https://adaptivecards.io/designer/) 来创建自定义卡片。 对于此示例，请使用以下 JSON。  
 
     ```json
     {
@@ -213,14 +213,14 @@ ms.locfileid: "44878808"
     - **更新邮件**：感谢你提交状态报告。 您的响应已成功添加到电子表格中。
     - **是否应更新卡片**：是
 
-16. 在 " **应用于每个** " 块中，在 " **向团队用户发布自适应卡并等待响应**" 后，按 " **添加操作**"。 选择 " **Excel Online (商业) **"。 在 "**操作**"下，选择 **运行脚本（预览版）**。 为流步骤提供以下项：
+16. 在 " **应用于每个** " 块中，在 " **向团队用户发布自适应卡并等待响应**" 后，按 " **添加操作**"。 选择 " **Excel Online (商业)**"。 在 "**操作**"下，选择 **运行脚本（预览版）**。 为流步骤提供以下项：
 
     - **位置**：OneDrive for Business
     - **文档库**： OneDrive
-    - **文件**： task-reminders.xlsx
+    - **文件**： *通过文件浏览器选择 task-reminders.xlsx ()*
     - **脚本**：保存状态
-    - **senderEmail**：电子邮件 * (来自 Excel 的动态内容) *
-    - **statusReportResponse**： * 来自团队) 的响应 (动态内容 *
+    - **senderEmail**：电子邮件 *(来自 Excel 的动态内容)*
+    - **statusReportResponse**： *来自团队) 的响应 (动态内容*
 
     ![适用于每个流步骤。](../../images/scenario-task-reminders-last-flow-step.png)
 
