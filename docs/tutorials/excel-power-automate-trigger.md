@@ -1,14 +1,14 @@
 ---
 title: 将数据传递到自动运行的 Power Automate 流中的脚本
 description: 有关在收到邮件时通过 Power Automate 在 Web 上运行 Office Scripts for Excel，并将流数据传递到脚本的教程。
-ms.date: 07/24/2020
+ms.date: 11/30/2020
 localization_priority: Priority
-ms.openlocfilehash: f6842e27686909bad92138e6d2f9ac1892cac891
-ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
+ms.openlocfilehash: b73f40c70669fedbe8a0adcf346995cb20b62d37
+ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48319677"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49571477"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow-preview"></a>将数据传递到自动运行的 Power Automate 流中的脚本（预览版）
 
@@ -58,7 +58,7 @@ Power Automate 无法使用`Workbook.getActiveWorksheet`之类的[相对引用](
 
 ## <a name="create-an-office-script"></a>创建 Office 脚本
 
-我们来创建一个脚本来记录电子邮件中的信息。 我们想知道一周中的哪几天我们收到最多的邮件，以及有多少发件人发送邮件。 我们的工作簿中有一个表格，其中包含**日期**，**星期几**，**电子邮件地址**和**主题**列。 我们的工作表还具有一个数据透视表，该数据透视表在**星期**和**电子邮件地址**（这些是行层次结构）上进行透视。 唯一**主题**的计数是所显示的聚合信息（数据层次结构）。 更新电子邮件表后，我们的脚本将刷新该数据透视表。
+我们来创建一个脚本来记录电子邮件中的信息。 我们想知道一周中的哪几天我们收到最多的邮件，以及有多少发件人发送邮件。 我们的工作簿中有一个表格，其中包含 **日期**，**星期几**，**电子邮件地址** 和 **主题** 列。 我们的工作表还具有一个数据透视表，该数据透视表在 **星期** 和 **电子邮件地址**（这些是行层次结构）上进行透视。 唯一 **主题** 的计数是所显示的聚合信息（数据层次结构）。 更新电子邮件表后，我们的脚本将刷新该数据透视表。
 
 1. 在 **"代码编辑器"** 中，选择 **"New Script"**。
 
@@ -158,7 +158,7 @@ function main(
 
     ![Power Automate 中的“创建”按钮。](../images/power-automate-tutorial-1.png)
 
-3. 在**从空白开始**部分中，选择**即时流**。 这将创建由事件（例如接收电子邮件）触发的工作流。
+3. 在 **从空白开始** 部分中，选择 **即时流**。 这将创建由事件（例如接收电子邮件）触发的工作流。
 
     ![Power Automate 中的 Automated 流程选项。](../images/power-automate-params-tutorial-1.png)
 
@@ -182,9 +182,9 @@ function main(
 8. 接下来，选择要在流步骤中使用的工作簿、脚本和脚本输入参数。 对于本教程，你将使用在 OneDrive 中创建的工作簿，但可以在 OneDrive 或 SharePoint 网站中使用任何工作簿。 为 **运行脚本** 连接器指定以下设置：
 
     - **位置**：OneDrive for Business
-    - **文档库**： OneDrive
-    - **文件**： MyWorkbook.xlsx
-    - **Script**： "记录电子邮件"
+    - **文档库**：OneDrive
+    - **文件**: MyWorkbook.xlsx *（通过文件浏览器选择）*
+    - **脚本**：记录电子邮件
     - **from**：来自 *（Outlook 中的动态内容）*
     - **dateReceived**：收到时间 *（Outlook 中的动态内容）*
     - **subject**： "主题" *（Outlook 中的动态内容）*
@@ -199,7 +199,7 @@ function main(
 
 ## <a name="manage-the-script-in-power-automate"></a>在 Power Automate 功能中管理脚本
 
-1. 在 Power Automate 主页面上，选择**我的流**。
+1. 在 Power Automate 主页面上，选择 **我的流**。
 
     ![Power Automate 中的 "我的流" 按钮。](../images/power-automate-tutorial-7.png)
 

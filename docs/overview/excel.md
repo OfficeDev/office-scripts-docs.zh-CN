@@ -1,14 +1,14 @@
 ---
 title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
-ms.date: 09/29/2020
+ms.date: 11/13/2020
 localization_priority: Priority
-ms.openlocfilehash: 965e28be285d59d79d46fe005ab16f29b271041f
-ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
+ms.openlocfilehash: a065c8eb5fc52c7525383927b7e1490e703eb179
+ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48319670"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49571457"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本（预览版）
 
@@ -28,7 +28,6 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 1. [Excel 网页版](https://www.office.com/launch/excel)（不支持桌面等其他平台）。
 1. OneDrive for Business。
-1. [管理员已启用](/microsoft-365/admin/manage/manage-office-scripts-settings) Office 脚本。
 1. 可访问 Microsoft 365 Office 桌面应用的任何商业版或教育版 Microsoft 365 许可证，例如：
 
     - Office 365 商业版
@@ -39,6 +38,9 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
     - Office 365 企业版 E5
     - Office 365 A3
     - Office 365 A5
+
+> [!NOTE]
+> 如果符合这些要求，但仍不能看到 **Automate** 选项卡，你的管理员可能已禁用此功能，或者环境存在其他问题。 请按照 [Automate 选项卡未出现或 Office 脚本不可用 ](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable) 下的步骤开始使用 Office 脚本。
 
 ## <a name="when-to-use-office-scripts"></a>何时使用 Office 脚本
 
@@ -66,10 +68,10 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 Office 脚本可与 Excel 工作簿的其他用户共享。 在工作簿中与其他人共享脚本时，该脚本将附加到工作簿中。 你的脚本存储在你的 OneDrive 中，当你共享一个脚本时，你将在打开的工作簿中创建指向该脚本的链接。
 
-有关共享和取消共享脚本的详细信息，请参阅[在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)一文。
+有关共享和取消共享脚本的详细信息，请参阅 [ 在 Excel 网页版中共享 Office 脚本 ](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b) 一文。
 
 > [!NOTE]
-> 由于 Office 脚本存储在用户的 OneDrive 上，因此它们遵循相同的保留和删除策略。 若要了解如何处理从组织中删除了用户所创建和共享的脚本，请参阅 [OneDrive 保留和删除](/onedrive/retention-and-deletion)。
+> 请参阅 [ Office 脚本存储和所有权 ](script-storage.md) 了解关于如何在 OneDrive 中存储脚本的详细信息。
 
 ## <a name="connecting-office-scripts-to-power-automate"></a>将 Office 脚本连接到 Power Automate
 
@@ -86,4 +88,4 @@ Office 脚本可与 Excel 工作簿的其他用户共享。 在工作簿中与�
 - [Office 脚本疑难解答](../testing/troubleshooting.md)
 - [M365 中的 Office 脚本设置](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
 - [Excel 中的 Office 脚本简介 (support.office.com)](https://support.office.com/article/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
-- [在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b?storagetype=live&ui=en-US&rs=en-US&ad=US)
+- [在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)

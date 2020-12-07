@@ -1,14 +1,14 @@
 ---
 title: 通过手动 Power Automate 流呼叫脚本
 description: 有关通过手动触发器在 Power Automate 中使用 Office 脚本的教程。
-ms.date: 07/24/2020
+ms.date: 11/30/2020
 localization_priority: Priority
-ms.openlocfilehash: f447e465bc0b09043d64752266bc9b6dbe5a5d89
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 831812f5ead549ee3ea3b8c643fc16d5467edbe8
+ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616752"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49571470"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow-preview"></a>通过手动 Power Automate 流呼叫脚本（预览版）
 
@@ -69,7 +69,7 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
 
     ![Power Automate 中的“创建”按钮。](../images/power-automate-tutorial-1.png)
 
-3. 在**从空白开始**部分中，选择**即时流**。 这将创建手动激活的工作流。
+3. 在 **从空白开始** 部分中，选择 **即时流**。 这将创建手动激活的工作流。
 
     ![用于创建新工作流的 "即时流" 选项。](../images/power-automate-tutorial-2.png)
 
@@ -92,8 +92,8 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
 8. 接下来，选择要在流步骤中使用的工作簿和脚本。 对于本教程，你将使用在 OneDrive 中创建的工作簿，但可以在 OneDrive 或 SharePoint 网站中使用任何工作簿。 为 **运行脚本** 连接器指定以下设置：
 
     - **位置**：OneDrive for Business
-    - **文档库**： OneDrive
-    - **文件**： MyWorkbook.xlsx
+    - **文档库**：OneDrive
+    - **文件**: MyWorkbook.xlsx *（通过文件浏览器选择）*
     - **脚本**：设置日期和时间
 
     ![以 Power Automate 功能运行脚本的连接器设置。](../images/power-automate-tutorial-6.png)
@@ -104,7 +104,7 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
 
 ## <a name="run-the-script-through-power-automate"></a>通过 Power Automate 运行脚本
 
-1. 在 Power Automate 主页面上，选择**我的流**。
+1. 在 Power Automate 主页面上，选择 **我的流**。
 
     ![Power Automate 中的 "我的流" 按钮。](../images/power-automate-tutorial-7.png)
 
@@ -118,7 +118,7 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
 
 5. 按 **"运行流程"**。 此时将运行流，该流将运行相关的 Office 脚本。
 
-6. 按“**完成**”。 你应该看到**运行**部分进行了相应的更新。
+6. 按“**完成**”。 你应该看到 **运行** 部分进行了相应的更新。
 
 7. 刷新页面，查看 Power Automate 的结果。 如果成功，请转到工作簿查看已更新的单元格。 如果失败，请验证流的设置并再次运行。
 
