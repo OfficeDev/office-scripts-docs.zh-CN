@@ -1,33 +1,34 @@
 ---
 title: Office 脚本中的外部 API 呼叫支持
-description: 在 Office 脚本中进行外部 API 调用的支持和指南。
-ms.date: 09/24/2020
+description: 支持和指导在 Office 脚本中调用外部 API。
+ms.date: 01/05/2021
 localization_priority: Normal
-ms.openlocfilehash: fa77e606e2b3ab90144507660d71561b278e82e5
-ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
+ms.openlocfilehash: 1091031bc2e12f3e1e79b177c69874ee4ce61dd8
+ms.sourcegitcommit: 30c4b731dc8d18fca5aa74ce59e18a4a63eb4ffc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48319628"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "49784142"
 ---
 # <a name="external-api-call-support-in-office-scripts"></a>Office 脚本中的外部 API 呼叫支持
 
-Office 脚本平台不支持对 [外部 api](https://developer.mozilla.org/docs/Web/API)的调用。 但是，在适当的情况下，可以运行这些呼叫。 外部呼叫只能通过 Excel 客户端进行，而不是 [在正常情况下](#external-calls-from-power-automate)的电源自动运行。
+脚本作者不应期望在平台预览阶段使用外部 [API](https://developer.mozilla.org/docs/Web/API) 时出现一致的行为。 因此，不要依赖外部 API 实现关键脚本方案。
 
-在平台的预览阶段使用外部 Api 时，脚本作者不应预期一致的行为。 这是因为 JavaScript 运行时如何管理与工作簿的交互。 脚本可能在 API 调用完成之前结束 (或 `Promise` 完全解决) 。 因此，不要依赖于对关键脚本方案的外部 Api。
+通常，只能通过 Excel 应用程序（而不是 Power Automate）调用[外部 API。](#external-calls-from-power-automate)
 
 > [!CAUTION]
-> 外部调用可能会导致敏感数据暴露给不需要的终结点。 你的管理员可以针对此类呼叫建立防火墙保护。
+> 外部调用可能会导致敏感数据向不需要的终结点公开。 管理员可以针对此类呼叫建立防火墙保护。
 
-## <a name="definition-files-for-external-apis"></a>外部 Api 的定义文件
+## <a name="working-with-fetch"></a>使用 `fetch`
 
-外部 Api 的定义文件不包含在 Office 脚本中。 使用此类 Api 会为缺少的定义生成编译时错误。 仅当通过 Excel 客户端) 运行时，Api 仍将运行 (，如下面的脚本所示：
+提取 [API](https://developer.mozilla.org/docs/Web/API/Fetch_API) 从外部服务检索信息。 它是一 `async` 个 API，因此你需要调整 `main` 脚本的签名。 创建 `main` 函数 `async` ，并返回一个 `Promise<void>` 。 还应确保调用 `await` `fetch` 和 `json` 检索。 这将确保在脚本结束之前完成这些操作。
+
+以下脚本用于 `fetch` 从给定 URL 中的测试服务器检索 JSON 数据。
 
 ```typescript
 async function main(workbook: ExcelScript.Workbook): Promise <void> {
-  /* The following line of code generates the error:
-   * "Cannot find name 'fetch'".
-   * It will still run and return the JSON from the testing service.
+  /* 
+   * Retrieve JSON data from a test server.
    */
   let fetchResult = await fetch('https://jsonplaceholder.typicode.com/todos/1');
   let json = await fetchResult.json();
@@ -37,13 +38,16 @@ async function main(workbook: ExcelScript.Workbook): Promise <void> {
 }
 ```
 
-## <a name="external-calls-from-power-automate"></a>来自电源自动执行的外部呼叫
+[Office 脚本示例方案：来自 NOAA 的 Graph](../resources/scenarios/noaa-data-fetch.md)水级数据演示用于从国家远洋和保存管理局的"三项工程"和"当前"数据库检索记录的提取命令。
 
-使用 Power 自动化运行脚本时，任何外部 API 调用都将失败。 这是通过 Excel 客户端和 Power 自动化运行脚本之间的行为差异。 在将脚本生成到流中之前，请务必检查脚本中的这些引用。
+## <a name="external-calls-from-power-automate"></a>来自 Power Automate 的外部调用
+
+当使用 Power Automate 运行脚本时，任何外部 API 调用都失败。 这是通过 Excel 客户端和 Power Automate 运行脚本的行为差异。 在将脚本构建到流中之前，请务必检查脚本中是否包含此类引用。
 
 > [!WARNING]
-> 如果外部呼叫 [Excel Online 连接器](/connectors/excelonlinebusiness) 在 Power 自动化中出现故障，则可以帮助您降低现有数据丢失防护策略。 但是，在您的组织外和组织的防火墙外部，这些脚本将通过 "电源自动完成" 运行。 若要进一步保护此外部环境中的恶意用户，管理员可以控制 Office 脚本的使用。 您的管理员可以通过 [Office 脚本管理员控件](/microsoft-365/admin/manage/manage-office-scripts-settings)在 web 上禁用 excel Online 连接器，或在 web 上关闭 Excel 的 office 脚本。
+> 通过 Power Automate [Excel Online](/connectors/excelonlinebusiness) 连接器进行的外部调用失败，以帮助构建现有数据丢失防护策略。 但是，通过 Power Automate 运行的脚本在组织外部和组织的防火墙之外执行。 对于此外部环境中恶意用户的额外保护，管理员可控制 Office 脚本的使用。 管理员可以在 Power Automate 中禁用 Excel Online 连接器，或者通过 Office 脚本管理员控件关闭 Excel 网页版 [Office 脚本](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 
 ## <a name="see-also"></a>另请参阅
 
 - [在 Office 脚本中使用内置的 JavaScript 对象](javascript-objects.md)
+- [Office 脚本示例方案：绘制 NOAA 中的水级数据](../resources/scenarios/noaa-data-fetch.md)

@@ -1,14 +1,14 @@
 ---
 title: 在 Excel 网页版中使用 Office 脚本读取工作簿数据
 description: 有关从工作簿中读取数据并评估脚本中的数据的 Office 脚本教程。
-ms.date: 07/20/2020
+ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: cdd09f13bb53cfff8c051360f2306cdb6956d86d
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 0848a24e7333842b5b3b1f82ec8f270514c34d2f
+ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616703"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49772966"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中使用 Office 脚本读取工作簿数据
 
@@ -42,8 +42,8 @@ ms.locfileid: "46616703"
     |2019 年 10 月 25 日 |支票 |Best For You Organics Company | -85.64 | |
     |2019 年 11 月 1 日 |支票 |外部存款 | |1000 |
 
-3. 打开“代码编辑器”，然后选择“新建脚本”********。
-4. 让我们来清理格式。 这是一个财务文档，因此更改“借记”和“信贷”列中的数字格式以将值显示为美元金额********。 我们还调整列宽以适应数据。
+3. 打开“**所有脚本**”，然后选择“**新脚本**”。
+4. 让我们来清理格式。 这是一个财务文档，因此更改“借记”和“信贷”列中的数字格式以将值显示为美元金额。 我们还调整列宽以适应数据。
 
     将脚本内容替换为以下代码：
 
@@ -73,27 +73,28 @@ ms.locfileid: "46616703"
 8. 将二维数组记录到控制台时，它会对每行下面的列值进行分组。 按蓝色三角形展开数组日志。
 9. 按新出现的蓝色三角形展开数组的第二级别。 现在，你应该会看到：
 
-    ![控制台日志显示嵌套在两个数组下的输出“-20.05”。](../images/tutorial-4.png)
+    ![控制台日志显示嵌套在两个数组下的输出“-20.05”](../images/tutorial-4.png)
 
 ## <a name="modify-the-value-of-a-cell"></a>修改单元格的值
 
 现在，我们可以读取数据，让我们使用该数据来修改工作簿。 使单元格 **D2** 的值与 `Math.abs` 函数呈正相关。 [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) 对象包含许多脚本具有访问权限的函数。 可在[使用 Office 脚本中的内置 JavaScript 对象](../develop/javascript-objects.md)中找到有关 `Math` 和其他内置对象的详细信息。
 
-1. 将以下代码添加到脚本末尾：
+1. 我们将使用 `getValue` 和 `setValue` 方法更改单元格的值。 这些方法适用于单个单元格。 处理多单元格区域时，需使用 `getValues` 和 `setValues`。 将以下代码添加到脚本末尾：
 
     ```TypeScript
     // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-    let positiveValue = Math.abs(range.getValue());
+    let positiveValue = Math.abs(range.getValue() as number);
     range.setValue(positiveValue);
     ```
 
-    请注意，我们正在使用 `getValue` 和 `setValue`。 这些方法适用于单个单元格。 处理多单元格区域时，需使用 `getValues` 和 `setValues`。
+    > [!NOTE]
+    > 我们正使用 `as` 关键字将 `range.getValue()` 的返回值 [转换](https://www.typescripttutorial.net/typescript-tutorial/type-casting/) 为 `number`。  这样做很有必要，因为区域可能是字符串、数字或布尔值。 在本实例中，我们明确需要数字。
 
 2. 单元格 **D2** 的值现在应为正值。
 
 ## <a name="modify-the-values-of-a-column"></a>修改列的值
 
-现在，我们知道如何读取和写入单个单元格，让我们对脚本进行一般化，使其适用于整个“借记”和“信贷”列********。
+现在，我们知道如何读取和写入单个单元格，让我们对脚本进行一般化，使其适用于整个“借记”和“信贷”列。
 
 1. 删除仅影响单个单元格的代码（先前的绝对值代码），以便你的脚本现在如下所示：
 
@@ -124,25 +125,25 @@ ms.locfileid: "46616703"
     for (let i = 1; i < rowCount; i++) {
         // The column at index 3 is column "4" in the worksheet.
         if (rangeValues[i][3] != 0) {
-            let positiveValue = Math.abs(rangeValues[i][3]);
+            let positiveValue = Math.abs(rangeValues[i][3] as number);
             selectedSheet.getCell(i, 3).setValue(positiveValue);
         }
 
         // The column at index 4 is column "5" in the worksheet.
         if (rangeValues[i][4] != 0) {
-            let positiveValue = Math.abs(rangeValues[i][4]);
+            let positiveValue = Math.abs(rangeValues[i][4] as number);
             selectedSheet.getCell(i, 4).setValue(positiveValue);
         }
     }
     ```
 
-    此部分的脚本执行几项重要任务。 首先，获取已用区域的值和行计数。 这样，我们就可以查看值并知道何时停止。 其次，循环访问已用区域，检查“借记”或“信贷”列中的每个单元格********。 最后，如果单元格中的值不为 0，则该值将替换为其绝对值。 我们正在避免使用零，因此可以将空白单元格保留原样。
+    此部分的脚本执行几项重要任务。 首先，获取已用区域的值和行计数。 这样，我们就可以查看值并知道何时停止。 其次，循环访问已用区域，检查“借记”或“信贷”列中的每个单元格。 最后，如果单元格中的值不为 0，则该值将替换为其绝对值。 我们正在避免使用零，因此可以将空白单元格保留原样。
 
 3. 运行脚本。
 
     现在，你的银行帐单如下所示：
 
-    ![银行帐单作为仅包含正值的格式表。](../images/tutorial-5.png)
+    ![银行帐单作为仅包含正值的格式表](../images/tutorial-5.png)
 
 ## <a name="next-steps"></a>后续步骤
 
