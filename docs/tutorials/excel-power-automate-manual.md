@@ -1,14 +1,14 @@
 ---
 title: 通过手动 Power Automate 流呼叫脚本
 description: 有关通过手动触发器在 Power Automate 中使用 Office 脚本的教程。
-ms.date: 11/30/2020
+ms.date: 12/28/2020
 localization_priority: Priority
-ms.openlocfilehash: 831812f5ead549ee3ea3b8c643fc16d5467edbe8
-ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
+ms.openlocfilehash: 763a61f65afbdbb55346bb3d99f216da33e8419c
+ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49571470"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49772983"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow-preview"></a>通过手动 Power Automate 流呼叫脚本（预览版）
 
@@ -23,7 +23,7 @@ ms.locfileid: "49571470"
 
 ## <a name="prepare-the-workbook"></a>准备工作簿
 
-Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件等相对引用。 因此，我们需要一个具有 Power Automate 可以引用的一致名称的工作簿和工作表。
+Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](../testing/power-automate-troubleshooting.md#avoid-using-relative-references)访问工作簿组件。 因此，我们需要一个具有 Power Automate 可以引用的一致名称的工作簿和工作表。
 
 1. 创建名为 **MyWorkbook** 的新工作簿。
 
@@ -31,7 +31,7 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
 
 ## <a name="create-an-office-script"></a>创建 Office 脚本
 
-1. 转到 "**自动**" 选项卡，然后选择 "**代码编辑器**"。
+1. 转到“**自动**”选项卡，然后选择“**所有脚本**”。
 
 2. 选择 "**New Script**"。
 
@@ -67,15 +67,15 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
 
 2. 在屏幕左侧显示的菜单中，按 "**创建**"。 这将带你进入创建新工作流的方式列表。
 
-    ![Power Automate 中的“创建”按钮。](../images/power-automate-tutorial-1.png)
+    ![Power Automate 中的“创建”按钮](../images/power-automate-tutorial-1.png)
 
 3. 在 **从空白开始** 部分中，选择 **即时流**。 这将创建手动激活的工作流。
 
-    ![用于创建新工作流的 "即时流" 选项。](../images/power-automate-tutorial-2.png)
+    ![用于创建新工作流的“即时流”选项](../images/power-automate-tutorial-2.png)
 
 4. 在出现的对话框窗口中，在 "**流名称**" 文本框中输入流的名称，从 "**选择如何触发流**" 下的选项列表中，选择 "**手动触发流** "，然后按 "**创建**"。
 
-    ![用于创建新的即时流的 "手动触发器" 选项。](../images/power-automate-tutorial-3.png)
+    ![用于创建新的即时流的手动触发器选项](../images/power-automate-tutorial-3.png)
 
     请注意，手动触发流仅是许多类型流中的一种。 在下一个教程中，你将创建收到电子邮件时自动运行的流程。
 
@@ -83,11 +83,11 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
 
 6. 选择 "**标准**" 选项卡，然后选择 "**Excel Online （企业）**"。
 
-    ![Excel Online （商业版）的 Power Automate 选项。](../images/power-automate-tutorial-4.png)
+    ![Power Automate 中的 Excel Online（商业版）选项](../images/power-automate-tutorial-4.png)
 
 7. 在 "**操作**"下，选择 **运行脚本（预览版）**。
 
-    ![运行脚本（预览版）的 Power Automate 操作选项。](../images/power-automate-tutorial-5.png)
+    ![Power Automate 中的“运行脚本”（预览版）操作选项](../images/power-automate-tutorial-5.png)
 
 8. 接下来，选择要在流步骤中使用的工作簿和脚本。 对于本教程，你将使用在 OneDrive 中创建的工作簿，但可以在 OneDrive 或 SharePoint 网站中使用任何工作簿。 为 **运行脚本** 连接器指定以下设置：
 
@@ -96,7 +96,7 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
     - **文件**: MyWorkbook.xlsx *（通过文件浏览器选择）*
     - **脚本**：设置日期和时间
 
-    ![以 Power Automate 功能运行脚本的连接器设置。](../images/power-automate-tutorial-6.png)
+    ![Power Automate 中用于运行脚本的连接器设置](../images/power-automate-tutorial-6.png)
 
 9. 按“**保存**”。
 
@@ -106,13 +106,13 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
 
 1. 在 Power Automate 主页面上，选择 **我的流**。
 
-    ![Power Automate 中的 "我的流" 按钮。](../images/power-automate-tutorial-7.png)
+    ![Power Automate 中的“我的流”按钮](../images/power-automate-tutorial-7.png)
 
 2. 从 "**我的流**" 选项卡中显示的流列表中选择 **我的教程流**。这将显示之前创建的流程的详细信息。
 
 3. 按 **"运行"**。
 
-    ![Power Automate 中的“运行”按钮。](../images/power-automate-tutorial-8.png)
+    ![Power Automate 中的“运行”按钮](../images/power-automate-tutorial-8.png)
 
 4. 将显示用于运行流的任务窗格。 如果系统要求 **登录** 到 Excel Online，请按 **"继续"** 操作。
 
@@ -122,7 +122,7 @@ Power Automate 无法使用 `Workbook.getActiveWorksheet` 访问工作簿组件�
 
 7. 刷新页面，查看 Power Automate 的结果。 如果成功，请转到工作簿查看已更新的单元格。 如果失败，请验证流的设置并再次运行。
 
-    ![Power Automate 输出显示成功流运行。](../images/power-automate-tutorial-9.png)
+    ![Power Automate 输出显示成功流运行](../images/power-automate-tutorial-9.png)
 
 ## <a name="next-steps"></a>后续步骤
 

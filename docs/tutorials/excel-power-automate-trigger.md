@@ -1,14 +1,14 @@
 ---
 title: 将数据传递到自动运行的 Power Automate 流中的脚本
 description: 有关在收到邮件时通过 Power Automate 在 Web 上运行 Office Scripts for Excel，并将流数据传递到脚本的教程。
-ms.date: 11/30/2020
+ms.date: 12/28/2020
 localization_priority: Priority
-ms.openlocfilehash: b73f40c70669fedbe8a0adcf346995cb20b62d37
-ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
+ms.openlocfilehash: 3f81ac13b0827f27adc611895d6bb090df10da5c
+ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49571477"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49772990"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow-preview"></a>将数据传递到自动运行的 Power Automate 流中的脚本（预览版）
 
@@ -23,11 +23,11 @@ ms.locfileid: "49571477"
 
 ## <a name="prepare-the-workbook"></a>准备工作簿
 
-Power Automate 无法使用`Workbook.getActiveWorksheet`之类的[相对引用](../develop/power-automate-integration.md#avoid-using-relative-references)访问工作簿组件。 因此，我们需要一个具有一致名称的工作簿和工作表，以供 Power Automate 引用。
+Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](../testing/power-automate-troubleshooting.md#avoid-using-relative-references)访问工作簿组件。 因此，我们需要一个具有一致名称的工作簿和工作表，以供 Power Automate 引用。
 
 1. 创建名为 **MyWorkbook** 的新工作簿。
 
-2. 转到 "**自动**" 选项卡，然后选择 "**代码编辑器**"。
+2. 转到“**自动**”选项卡，然后选择“**所有脚本**”。
 
 3. 选择 "**New Script**"。
 
@@ -60,7 +60,7 @@ Power Automate 无法使用`Workbook.getActiveWorksheet`之类的[相对引用](
 
 我们来创建一个脚本来记录电子邮件中的信息。 我们想知道一周中的哪几天我们收到最多的邮件，以及有多少发件人发送邮件。 我们的工作簿中有一个表格，其中包含 **日期**，**星期几**，**电子邮件地址** 和 **主题** 列。 我们的工作表还具有一个数据透视表，该数据透视表在 **星期** 和 **电子邮件地址**（这些是行层次结构）上进行透视。 唯一 **主题** 的计数是所显示的聚合信息（数据层次结构）。 更新电子邮件表后，我们的脚本将刷新该数据透视表。
 
-1. 在 **"代码编辑器"** 中，选择 **"New Script"**。
+1. 在“**代码编辑器**”任务窗格中，选择“**新建脚本**”。
 
 2. 我们将在本指南后面创建流程发送有关收到的每封电子邮件的脚本信息。 脚本需要通过 `main` 函数中的参数接受该输入。 将默认脚本替换为以下脚本：
 
@@ -160,11 +160,11 @@ function main(
 
 3. 在 **从空白开始** 部分中，选择 **即时流**。 这将创建由事件（例如接收电子邮件）触发的工作流。
 
-    ![Power Automate 中的 Automated 流程选项。](../images/power-automate-params-tutorial-1.png)
+    ![Power Automate 中的 Automated 流程选项](../images/power-automate-params-tutorial-1.png)
 
 4. 在出现的对话框窗口中，在 "**流名称**" 文本框中输入流的名称。 然后从"**选择流的触发器**" 下的 "选项" 列表中选择 "**新电子邮件到达时**"。 可能需要使用搜索框搜索选项。 最后，按 **创建**。
 
-    ![在 Power Automate 中“构建自动流程窗口”的一部分，其中显示“新邮件到达”选项。](../images/power-automate-params-tutorial-2.png)
+    ![在 Power Automate 中“构建自动流程窗口”的一部分，其中显示“新邮件到达”选项](../images/power-automate-params-tutorial-2.png)
 
     > [!NOTE]
     > 本教程使用 Outlook。 可改为使用你喜欢的电子邮件服务，但某些选项可能不同。
@@ -173,11 +173,11 @@ function main(
 
 6. 选择 "**标准**" 选项卡，然后选择 "**Excel Online （企业）**"。
 
-    ![Excel Online （商业版）的 Power Automate 选项。](../images/power-automate-tutorial-4.png)
+    ![Power Automate 中的 Excel Online（商业版）选项](../images/power-automate-tutorial-4.png)
 
 7. 在 "**操作**"下，选择 **运行脚本（预览版）**。
 
-    ![运行脚本（预览版）的 Power Automate 操作选项。](../images/power-automate-tutorial-5.png)
+    ![Power Automate 中的“运行脚本”（预览版）操作选项](../images/power-automate-tutorial-5.png)
 
 8. 接下来，选择要在流步骤中使用的工作簿、脚本和脚本输入参数。 对于本教程，你将使用在 OneDrive 中创建的工作簿，但可以在 OneDrive 或 SharePoint 网站中使用任何工作簿。 为 **运行脚本** 连接器指定以下设置：
 
@@ -191,7 +191,7 @@ function main(
 
     *请注意，仅当选择脚本后，才会显示脚本的参数。*
 
-    ![运行脚本（预览版）的 Power Automate 操作选项的参数。](../images/power-automate-params-tutorial-3.png)
+    ![Power Automate 中“运行脚本”（预览）操作选项的参数](../images/power-automate-params-tutorial-3.png)
 
 9. 按“**保存**”。
 
@@ -201,18 +201,18 @@ function main(
 
 1. 在 Power Automate 主页面上，选择 **我的流**。
 
-    ![Power Automate 中的 "我的流" 按钮。](../images/power-automate-tutorial-7.png)
+    ![Power Automate 中的“我的流”按钮](../images/power-automate-tutorial-7.png)
 
 2. 选择你的流程。 可在此处查看 "运行历史记录"。 可刷新页面，或按 "刷新 **所有运行"** 按钮更新历史记录。 收到电子邮件后，流将立即触发。 通过发送自己的邮件来测试流。
 
 当流被触发并成功运行脚本时，应该可以看到工作簿的表和数据透视表更新。
 
-![流运行几次之后的电子邮件表。](../images/power-automate-params-tutorial-4.png)
+![流运行几次之后的电子邮件表](../images/power-automate-params-tutorial-4.png)
 
-![流之后的数据透视表已经运行了几次。](../images/power-automate-params-tutorial-5.png)
+![流之后的数据透视表已经运行了几次](../images/power-automate-params-tutorial-5.png)
 
 ## <a name="next-steps"></a>后续步骤
 
-访问[使用 Power Automate 运行 Office 脚本](../develop/power-automate-integration.md)，以了解有关将 Office Script 与 Power Automate 连接的更多信息。
+完成[从脚本返回数据到自动运行 Power Automated 流](excel-power-automate-returns.md)教程。 它教你如何将数据从脚本返回到流。
 
 你还可以查看[自动任务提醒示例场景](../resources/scenarios/task-reminders.md)，以了解如何将 Office 脚本和 Power Automate 与 Team Adaptive Cards 结合使用。
