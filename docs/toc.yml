@@ -1,60 +1,67 @@
-- name: Office 脚本文档
-  href: index.md
-- name: Excel web 版中的 Office 脚本
-  items:
-    - name: 概述
-      href: overview/excel.md
-    - name: 教程
-      items:
-        - name: 了解 Office 脚本的基础知识
-          href: tutorials/excel-tutorial.md
-        - name: 使用脚本读取工作簿数据
-          href: tutorials/excel-read-tutorial.md
-        - name: 通过 Power Automate 手动流调用脚本
-          href: tutorials/excel-power-automate-manual.md
-        - name: 将数据传递到自动运行的 Power Automate 流中
-          href: tutorials/excel-power-automate-trigger.md
-    - name: 脚本基础知识
-      href: develop/scripting-fundamentals.md
-    - name: 概念
-      items:
-        - name: 内置 JavaScript 对象
-          href: develop/javascript-objects.md
-        - name: 代码编辑器环境
-          href: overview/code-editor-environment.md
-        - name: Office 脚本与 VBA 宏之间的差异
-          href: resources/vba-differences.md
-        - name: Office 脚本与 Office 加载项之间的差异
-          href: resources/add-ins-differences.md
-        - name: Office 脚本中的外部 API 呼叫支持
-          href: develop/external-calls.md
-        - name: 文件存储和所有权
-          href: overview/script-storage.md
-        - name: 通过 Power Automate 运行脚本
-          href: develop/power-automate-integration.md
-    - name: 疑难解答
-      items:
-        - name: 疑难解答基础知识
-          href: testing/troubleshooting.md
-        - name: 改进脚本性能
-          href: develop/web-client-performance.md
-        - name: 平台限制
-          href: testing/platform-limits.md
-        - name: 消除 Office 脚本的影响
-          href: testing/undo.md
-        - name: 支持更旧的 Office 脚本
-          href: develop/excel-async-model.md
-    - name: 示例
-      items:
-        - name: 示例脚本
-          href: resources/excel-samples.md
-        - name: 应用场景
-          items:
-            - name: 概述
-              href: resources/scenarios/sample-scenario-overview.md
-            - name: 分析 Web 下载项
-              href: resources/scenarios/analyze-web-downloads.md
-            - name: 成绩计算器
-              href: resources/scenarios/grade-calculator.md
-            - name: 任务提醒（通过 Power Automate）
-              href: resources/scenarios/task-reminders.md
+items:
+  - name: Office 脚本文档
+    href: index.md
+  - name: Excel web 版中的 Office 脚本
+    items:
+      - name: 概述
+        href: overview/excel.md
+      - name: 教程
+        items:
+          - name: 了解 Office 脚本的基础知识
+            href: tutorials/excel-tutorial.md
+          - name: 使用脚本读取工作簿数据
+            href: tutorials/excel-read-tutorial.md
+          - name: 通过 Power Automate 手动流调用脚本
+            href: tutorials/excel-power-automate-manual.md
+          - name: 使用来自自动运行 Power Automate 流的脚本中的数据。
+            href: tutorials/excel-power-automate-trigger.md
+          - name: 将脚本中数据传递到 Power Automate 流
+            href: tutorials/excel-power-automate-returns.md
+      - name: 脚本基础知识
+        href: develop/scripting-fundamentals.md
+      - name: 概念
+        items:
+          - name: 内置 JavaScript 对象
+            href: develop/javascript-objects.md
+          - name: 代码编辑器环境
+            href: overview/code-editor-environment.md
+          - name: Office 脚本与 VBA 宏之间的差异
+            href: resources/vba-differences.md
+          - name: Office 脚本与 Office 加载项之间的差异
+            href: resources/add-ins-differences.md
+          - name: Office 脚本中的外部 API 呼叫支持
+            href: develop/external-calls.md
+          - name: 文件存储和所有权
+            href: overview/script-storage.md
+          - name: 通过 Power Automate 运行脚本
+            href: develop/power-automate-integration.md
+      - name: 疑难解答
+        items:
+          - name: 疑难解答基础知识
+            href: testing/troubleshooting.md
+          - name: Power Automate 疑难解答
+            href: testing/power-automate-troubleshooting.md
+          - name: 改进脚本性能
+            href: develop/web-client-performance.md
+          - name: 平台限制
+            href: testing/platform-limits.md
+          - name: 消除 Office 脚本的影响
+            href: testing/undo.md
+          - name: 支持更旧的 Office 脚本
+            href: develop/excel-async-model.md
+      - name: 示例
+        items:
+          - name: 示例脚本
+            href: resources/excel-samples.md
+          - name: 应用场景
+            items:
+              - name: 概述
+                href: resources/scenarios/sample-scenario-overview.md
+              - name: 分析 Web 下载项
+                href: resources/scenarios/analyze-web-downloads.md
+              - name: 成绩计算器
+                href: resources/scenarios/grade-calculator.md
+              - name: 从 NOAA 中删除图形水级别的数据
+                href: resources/scenarios/noaa-data-fetch.md
+              - name: 任务提醒（通过 Power Automate）
+                href: resources/scenarios/task-reminders.md
