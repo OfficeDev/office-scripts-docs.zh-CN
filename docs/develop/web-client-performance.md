@@ -1,20 +1,20 @@
 ---
 title: 提高 Office 脚本的性能
-description: 通过了解 Excel 工作簿和脚本之间的通信来创建更快的脚本。
+description: 通过了解 Excel 工作簿和脚本之间的通信创建更快的脚本。
 ms.date: 06/15/2020
 localization_priority: Normal
-ms.openlocfilehash: 4d5b7c70f14e3fc598b95a6226e3ef8caf89f651
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: ce50a6fd7ad02ddcd2dd304be8b4dd8fa3d0acf3
+ms.sourcegitcommit: 7580dcb8f2f97974c2a9cce25ea30d6526730e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878749"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "49867868"
 ---
 # <a name="improve-the-performance-of-your-office-scripts"></a>提高 Office 脚本的性能
 
-Office 脚本的用途是自动化通常执行的一系列任务以节省时间。 较慢的脚本可能感觉不会加快工作流的速度。 大多数情况下，您的脚本完全正常，并按预期运行。 但是，有几个可能会影响性能的 avoidable 方案。
+Office 脚本的用途是自动执行通常执行的一系列任务，以节省时间。 较慢的脚本可能感觉无法加快您的工作流速度。 大多数情况下，脚本将完全正常，并可以正常运行。 但是，有一些可避免的方案可能会影响性能。
 
-速度较慢的脚本的最常见原因是与工作簿之间的通信过多。 您的脚本在本地计算机上运行，而该工作簿存在于云中。 在某些情况下，您的脚本会将其本地数据与工作簿的同步。 这意味着， `workbook.addWorksheet()` 只有在发生这种幕后同步时，才会将任何写入操作 (例如，) 仅应用于工作簿。 同样，任何读操作 (例如， `myRange.getValues()`) 仅在这些时间从脚本的工作簿中获取数据。 在这两种情况下，脚本都会在对数据进行操作之前提取信息。 例如，以下代码将准确记录所用区域中的行数。
+导致脚本运行缓慢的最常见原因是与工作簿的通信过多。 您的脚本在本地计算机上运行，而工作簿存在于云中。 在某些时候，脚本会将其本地数据与工作簿的本地数据同步。 这意味着，当 (后台) 时，任何写入操作（如) ）都 `workbook.addWorksheet()` 只应用于工作簿。 同样，任何读取 (，) 这些时间仅从脚本 `myRange.getValues()` 的工作簿获取数据。 在任一情况下，脚本先提取信息，然后再处理数据。 例如，以下代码将准确记录已用区域中的行数。
 
 ```TypeScript
 let usedRange = workbook.getActiveWorksheet().getUsedRange();
@@ -24,21 +24,21 @@ let rowCount = usedRange.getRowCount();
 console.log(rowCount);
 ```
 
-Office 脚本 Api 可确保工作簿或脚本中的任何数据在必要时都是准确且最新的。 您无需担心这些同步即可正确运行脚本。 但是，对此脚本到云通信的感知可帮助您避免不需要的网络调用。
+Office 脚本 API 可确保工作簿或脚本中任何数据准确且在必要时是最新的。 无需担心这些同步，脚本就能够正常运行。 但是，了解此脚本到云的通信可以帮助您避免不必要的网络呼叫。
 
 ## <a name="performance-optimizations"></a>性能优化
 
-您可以应用简单的技术来帮助减少与云的通信。 下面的模式可帮助您提高脚本速度。
+你可以应用简单的技术来帮助减少与云的通信。 以下模式有助于加快脚本速度。
 
-- 读取一次工作簿数据，而不是重复执行循环。
-- 删除不必要 `console.log` 的语句。
+- 读取工作簿数据一次，而不是在循环中重复读取。
+- 删除不必要的 `console.log` 语句。
 - 避免使用 try/catch 块。
 
-### <a name="read-workbook-data-outside-of-a-loop"></a>读取循环外部的工作簿数据
+### <a name="read-workbook-data-outside-of-a-loop"></a>在循环之外读取工作簿数据
 
-从工作簿中获取数据的任何方法都可以触发网络调用。 应尽可能在本地保存数据，而不是反复进行相同的调用。 在处理循环时尤其如此。
+从工作簿获取数据的任何方法都可以触发网络调用。 应尽可能本地保存数据，而不是重复进行同一调用。 在处理循环时尤其如此。
 
-考虑使用脚本来获取工作表的所用区域中的负数计数。 脚本需要循环访问所使用区域中的每个单元格。 若要执行此操作，它需要范围、行数和列数。 在开始循环之前，应将这些变量存储为局部变量。 否则，循环的每个迭代都将强制返回工作簿。
+考虑使用脚本获取工作表的已用区域中的负数计数。 该脚本需要对已用区域内每个单元格进行一次访问。 为此，它需要范围、行数和列数。 您应该在启动循环之前，将那些变量存储为本地变量。 否则，循环的每个迭代将强制返回工作簿。
 
 ```TypeScript
 /**
@@ -70,15 +70,15 @@ function main(workbook: ExcelScript.Workbook) {
 ```
 
 > [!NOTE]
-> 作为实验，请尝试 `usedRangeValues` 将循环中的替换为 `usedRange.getValues()` 。 您可能会注意到，在处理大型区域时脚本运行时间要长得多。
+> 作为实验，请尝试在 `usedRangeValues` 循环中替换为 `usedRange.getValues()` 。 您可能会注意到，在处理较大范围时，脚本需要更长的时间运行。
 
 ### <a name="remove-unnecessary-consolelog-statements"></a>删除不必要的 `console.log` 语句
 
-控制台日志记录是 [调试脚本](../testing/troubleshooting.md)的重要工具。 但是，它确实强制脚本与工作簿同步，以确保记录的信息是最新的。 请考虑删除不必要的日志记录语句 (如用于在共享脚本之前测试) 的记录语句。 除非语句在循环中，否则通常不会引起显著的性能问题 `console.log()` 。
+控制台日志记录是调试 [脚本的重要工具](../testing/troubleshooting.md)。 但是，它会强制脚本与工作簿同步，以确保记录的信息是最新的。 请考虑在共享脚本 (不必要的日志记录语句，例如) 测试日志的日志记录语句。 这通常不会导致明显的性能问题，除非语句 `console.log()` 位于循环中。
 
 ### <a name="avoid-using-trycatch-blocks"></a>避免使用 try/catch 块
 
-建议不要将[ `try` / `catch` 块](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch)用作脚本的预期控制流的一部分。 通过检查从工作簿返回的对象，可以避免大多数错误。 例如，下面的脚本在尝试添加行之前检查工作簿返回的表是否存在。
+建议不要在[ `try` / `catch` 脚本的预期控制](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch)流中使用块。 通过检查从工作簿返回的对象可以避免大多数错误。 例如，下面的脚本在尝试添加行之前检查工作簿返回的表是否存在。
 
 ```TypeScript
 /**
@@ -98,11 +98,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="case-by-case-help"></a>按大小写帮助
+## <a name="case-by-case-help"></a>按案例帮助
 
-随着 Office 脚本平台扩展以配合使用 [电源自动化](https://flow.microsoft.com/)、 [自适应卡](https://docs.microsoft.com/adaptive-cards)和其他跨产品功能，脚本工作簿通信的详细信息会变得更加复杂。 如果需要帮助使脚本运行得更快，请通过 [堆栈溢出](https://stackoverflow.com/questions/tagged/office-scripts)。 请务必使用 "office-scripts" 标记你的问题，以便专家可以找到它和帮助。
+随着 Office 脚本平台扩展以使用[Power Automate、](https://flow.microsoft.com/)[自适应卡片](/adaptive-cards)和其他跨产品功能，脚本工作簿通信的细节变得更加复杂。 如果你需要有关加快脚本运行速度的帮助，请通过 [Stack Overflow 进行联系](https://stackoverflow.com/questions/tagged/office-scripts)。 请务必使用"office-scripts"标记问题，以便专家可以找到它并提供帮助。
 
 ## <a name="see-also"></a>另请参阅
 
 - [Excel 网页版中 Office 脚本的脚本基础知识](scripting-fundamentals.md)
-- [MDN web 文档：循环和迭代](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [MDN Web 文档：循环和迭代](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Loops_and_iteration)
