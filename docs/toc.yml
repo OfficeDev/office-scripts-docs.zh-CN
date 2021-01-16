@@ -59,9 +59,9 @@ items:
                 href: resources/scenarios/sample-scenario-overview.md
               - name: 分析 Web 下载项
                 href: resources/scenarios/analyze-web-downloads.md
+              - name: 从 NOAA 中提取图形水级别的数据
+                href: resources/scenarios/noaa-data-fetch.md
               - name: 成绩计算器
                 href: resources/scenarios/grade-calculator.md
-              - name: 从 NOAA 中删除图形水级别的数据
-                href: resources/scenarios/noaa-data-fetch.md
               - name: 任务提醒（通过 Power Automate）
                 href: resources/scenarios/task-reminders.md
