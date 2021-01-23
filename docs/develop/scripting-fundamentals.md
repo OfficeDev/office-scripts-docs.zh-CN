@@ -3,12 +3,12 @@ title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: 6c02f4fb986e6a0ed1dd7afb099aaa1c9d1ea276
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: acbeec69a5d9ae9e3ebfa95c9070033d1cca2265
+ms.sourcegitcommit: e7e019ba36c2f49451ec08c71a1679eb6dba4268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160472"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "49933271"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中 Office 脚本的脚本基础（预览）
 
@@ -60,7 +60,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="ranges"></a>Ranges
 
-Range 是工作簿中的一组连续单元格。 脚本通常使用 A1 样式表示法（例如，对于列 **B** 和行 **3** 中单个单元格，即 **B3** 或从列 **C** 至列 **F**和行 **2** 至行 **4** 的单元格，即 **C2:F4**）来定义范围。
+Range 是工作簿中的一组连续单元格。 脚本通常使用 A1 样式表示法（例如，对于列 **B** 和行 **3** 中单个单元格，即 **B3** 或从列 **C** 至列 **F** 和行 **2** 至行 **4** 的单元格，即 **C2:F4**）来定义范围。
 
 Range 有三个核心属性：值、公式和格式。 这些属性将获取或设置单元格值、要计算的公式以及单元格的视觉对象格式。 它们可通过 `getValues`、`getFormulas` 和 `getFormat` 进行访问。 值和公式可通过 `setValues` 和 `setFormulas` 进行更改，而格式则是由单独设置的多个较小对象组成的 `RangeFormat` 对象。
 
