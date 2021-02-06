@@ -3,12 +3,12 @@ title: Office 脚本中的 TypeScript 限制
 description: Office 脚本代码编辑器使用的 TypeScript 编译器和 linter 的具体信息。
 ms.date: 01/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 41584ff23b333d17b2e267fdb3b0ec8741f3d203
-ms.sourcegitcommit: df2b64603f91acb37bf95230efd538db0fbf9206
+ms.openlocfilehash: d67e208561ce6ddd706d4c80cf29d2f013a32032
+ms.sourcegitcommit: 98c7bc26f51dc8427669c571135c503d73bcee4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "50099897"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "50125932"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>Office 脚本中的 TypeScript 限制
 
@@ -32,7 +32,7 @@ Office 脚本使用 TypeScript 语言。 大多数情况下，任何 TypeScript 
 
 ### <a name="implicit-any"></a>隐式 `any`
 
-TypeScript 变量类型可以[隐式] ( (https://www.typescriptlang.org/docs/handbook/type-inference.html) 定义。 如果 TypeScript 编译器无法确定变量 (或者由于类型未明确定义或类型推断无法进行) ，则它是隐式的，并且您将收到编译时错误。 `any`
+TypeScript 变量类型可以 [隐式](https://www.typescriptlang.org/docs/handbook/type-inference.html) 定义。 如果 TypeScript 编译器无法确定变量 (或者由于类型未明确定义或类型推断无法进行) ，则它是隐式的，并且您将收到编译时错误。 `any`
 
 任何隐式的最常见情况 `any` 都位于变量声明中，例如 `let value;` 。 有两种方法可以避免这种情况：
 
