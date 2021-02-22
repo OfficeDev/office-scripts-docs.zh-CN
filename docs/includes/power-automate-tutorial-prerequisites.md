@@ -1,5 +1,5 @@
-<span data-ttu-id="9f7a0-101">在开始本教程之前，你需要具有以下应用程序的访问权限：</span><span class="sxs-lookup"><span data-stu-id="9f7a0-101">Before starting this tutorial, you'll need access to the following applications:</span></span>
+<span data-ttu-id="52e24-101">在开始本教程之前，你需要具有以下各项的访问权限：</span><span class="sxs-lookup"><span data-stu-id="52e24-101">Before starting this tutorial, you'll need access to the following:</span></span>
 
-- <span data-ttu-id="9f7a0-102">[Power Automate](/power-automate/organization-q-and-a)。</span><span class="sxs-lookup"><span data-stu-id="9f7a0-102">[Power Automate](/power-automate/organization-q-and-a).</span></span>
-- <span data-ttu-id="9f7a0-103">[Excel 网页版](https://www.office.com/launch/excel)。</span><span class="sxs-lookup"><span data-stu-id="9f7a0-103">[Excel on the web](https://www.office.com/launch/excel).</span></span>
-- <span data-ttu-id="9f7a0-104">[包含 Office 脚本的 Microsoft 365 商业版或教育版计划](/microsoft-365/admin/manage/manage-office-scripts-settings)。</span><span class="sxs-lookup"><span data-stu-id="9f7a0-104">[A Microsoft 365 commercial or EDU plan that includes Office Scripts](/microsoft-365/admin/manage/manage-office-scripts-settings).</span></span>
+- <span data-ttu-id="52e24-102">[Power Automate](/power-automate/organization-q-and-a)。</span><span class="sxs-lookup"><span data-stu-id="52e24-102">[Power Automate](/power-automate/organization-q-and-a).</span></span>
+- <span data-ttu-id="52e24-103">[Excel 网页版](https://www.office.com/launch/excel)。</span><span class="sxs-lookup"><span data-stu-id="52e24-103">[Excel on the web](https://www.office.com/launch/excel).</span></span>
+- <span data-ttu-id="52e24-104">[包含 Office 脚本的 Microsoft 365 商业版或教育版计划](/microsoft-365/admin/manage/manage-office-scripts-settings)。</span><span class="sxs-lookup"><span data-stu-id="52e24-104">[A Microsoft 365 commercial or EDU plan that includes Office Scripts](/microsoft-365/admin/manage/manage-office-scripts-settings).</span></span>
