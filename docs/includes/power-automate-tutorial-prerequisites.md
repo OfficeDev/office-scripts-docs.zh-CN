@@ -1,4 +1,4 @@
-在开始本教程之前，你需要具有以下应用程序的访问权限：
+在开始本教程之前，你需要具有以下各项的访问权限：
 
 - [Power Automate](/power-automate/organization-q-and-a)。
 - [Excel 网页版](https://www.office.com/launch/excel)。

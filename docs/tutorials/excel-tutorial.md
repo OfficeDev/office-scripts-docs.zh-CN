@@ -1,14 +1,14 @@
 ---
 title: 在 Excel 网页版中录制、编辑和创建 Office 脚本
 description: 有关 Office 脚本基础知识的教程，包括使用操作录制器录制脚本以及将数据写入工作簿。
-ms.date: 07/21/2020
+ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: 96bdc286883d87249de260666c7c8ffe2c94cc0f
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: fa2fec54cdb0289590868ee6848a942401f21665
+ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616771"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49772976"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中录制、编辑和创建 Office 脚本
 
@@ -49,7 +49,7 @@ ms.locfileid: "46616771"
 
     你的工作表应如下所示（不要担心颜色是否不同）:
 
-    ![水果销售数据行，其中”橙子”行突出显示为橙色。](../images/tutorial-1.png)
+    ![水果销售数据行，其中“橙子”行突出显示为橙色](../images/tutorial-1.png)
 
 ## <a name="edit-an-existing-script"></a>编辑现有脚本
 
@@ -78,7 +78,7 @@ ms.locfileid: "46616771"
 
 4. 通过按“**运行**”来测试脚本。 工作簿现在应如下所示：
 
-    ![水果销售数据行，其中“橙子”行突出显示为橙色，而“柠檬”行则突出显示为黄色。](../images/tutorial-2.png)
+    ![水果销售数据行，其中“橙子”行突出显示为橙色，而“柠檬”行则突出显示为黄色](../images/tutorial-2.png)
 
 ## <a name="create-a-table"></a>创建表格
 
@@ -100,7 +100,7 @@ ms.locfileid: "46616771"
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
-        // Set fill color to FFC000 for range Sheet12!A2:C2
+        // Set fill color to FFC000 for range Sheet1!A2:C2
         let selectedSheet = workbook.getActiveWorksheet();
         selectedSheet.getRange("A2:C2").getFormat().getFill().setColor("FFC000");
         selectedSheet.getRange("A3:C3").getFormat().getFill().setColor("yellow");
@@ -113,7 +113,7 @@ ms.locfileid: "46616771"
 
 3. 运行脚本。 你看到的表格应类似于：
 
-    ![已排序的水果销售表格。](../images/tutorial-3.png)
+    ![已排序的水果销售表格](../images/tutorial-3.png)
 
     > [!NOTE]
     > 如果重新运行该脚本，将会收到错误消息。 这是因为不能在另一个表格的顶部创建表格。 但是，可以在其他工作表或工作簿上运行脚本。
