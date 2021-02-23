@@ -1,34 +1,34 @@
 ---
-title: Web 上的 Excel 中 Office 脚本的示例脚本
-description: 要用于 web 上 Excel 中的 Office 脚本的一组代码示例。
-ms.date: 08/04/2020
+title: Excel 网页中的 Office 脚本示例脚本
+description: 要与 Excel 网页中的 Office 脚本一起使用的代码示例集合。
+ms.date: 12/21/2020
 localization_priority: Normal
-ms.openlocfilehash: 4f8d6f2395a841a8dcba2ea0e712e645a84a6d91
-ms.sourcegitcommit: 1c88abcf5df16a05913f12df89490ce843cfebe2
+ms.openlocfilehash: 35a7fdb4dcfa4c349aa594e5b13d1b7e4d33a178
+ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "46665227"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49772962"
 ---
-# <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本示例脚本 (预览) 
+# <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本示例 (预览) 
 
-下面的示例是您在自己的工作簿中尝试的简单脚本。 若要在 Excel 网页上使用它们，请执行以下操作：
+以下示例是一些简单的脚本，您可以尝试自己的工作簿。 若要在 Excel 网页中使用它们，请：
 
 1. 打开“**自动**”选项卡。
 2. 按 **代码编辑器**。
-3. 在代码编辑器的任务窗格中，按 " **新建脚本** "。
-4. 将整个脚本替换为您选择的示例。
-5. 在代码编辑器的任务窗格中按 " **运行** "。
+3. 在 **代码编辑器** 的任务窗格中按"新建脚本"。
+4. 将整个脚本替换为你选择的示例。
+5. 在 **代码** 编辑器的任务窗格中按"运行"。
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
-## <a name="scripting-basics"></a>脚本基础
+## <a name="scripting-basics"></a>脚本基础知识
 
-这些示例演示 Office 脚本的基本构建基块。 将这些应用程序添加到脚本以扩展解决方案并解决常见问题。
+这些示例演示 Office 脚本的基本构建基块。 将其添加到脚本以扩展解决方案并解决常见问题。
 
 ### <a name="read-and-log-one-cell"></a>读取和记录一个单元格
 
-此示例读取 **A1** 的值并将其打印到控制台。
+此示例读取 **A1 的值** ，并打印到控制台。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -45,7 +45,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="read-the-active-cell"></a>读取活动单元格
 
-此脚本记录当前活动单元格的值。 如果选择了多个单元格，则将记录最左侧的单元格。
+此脚本记录当前活动单元格的值。 如果选择了多个单元格，将记录最左上方的单元格。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -59,7 +59,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="change-an-adjacent-cell"></a>更改相邻单元格
 
-此脚本使用相对引用获取相邻的单元格。 请注意，如果活动单元格位于最上面一行，则脚本的一部分将失败，因为它引用当前选定的单元格上面的单元格。
+此脚本使用相对引用获取相邻单元格。 请注意，如果活动单元格位于最上面一行，脚本的一部分将失败，因为它引用当前选定单元格上方的单元格。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -86,7 +86,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="change-all-adjacent-cells"></a>更改所有相邻单元格
 
-此脚本将活动单元格中的格式复制到相邻单元格。 请注意，此脚本仅当活动单元格不在工作表的边缘时才有效。
+此脚本将活动单元格中的格式复制到相邻单元格。 请注意，此脚本仅在活动单元格不在工作表边缘时有效。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -107,9 +107,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-each-individual-cell-in-a-range"></a>更改区域中的每个单个单元格
+### <a name="change-each-individual-cell-in-a-range"></a>更改区域的每个单元格
 
-此脚本循环访问当前选定的区域。 它清除当前的格式设置，并将每个单元格中的填充颜色设置为随机颜色。
+此脚本将循环遍历当前选择的范围。 它清除当前格式，将每个单元格中的填充颜色设置为随机颜色。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -136,13 +136,30 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### <a name="get-groups-of-cells-based-on-special-criteria"></a>根据特殊条件获取单元格组
+
+此脚本获取当前工作表使用区域的所有空白单元格。 然后，它突出显示所有带黄色背景的单元格。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the current used range.
+    let range = workbook.getActiveWorksheet().getUsedRange();
+    
+    // Get all the blank cells.
+    let blankCells = range.getSpecialCells(ExcelScript.SpecialCellType.blanks);
+
+    // Highlight the blank cells with a yellow background.
+    blankCells.getFormat().getFill().setColor("yellow");
+}
+```
+
 ## <a name="collections"></a>收藏
 
-这些示例处理工作簿中的对象集合。
+这些示例使用工作簿中的对象集合。
 
-### <a name="iterating-over-collections"></a>循环访问集合
+### <a name="iterating-over-collections"></a>对集合进行 Itererating
 
-此脚本获取并记录工作簿中所有工作表的名称。 它还将其制表符颜色设置为随机颜色。
+此脚本获取并记录工作簿中所有工作表的名称。 它还将选项卡颜色设置为随机颜色。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -167,9 +184,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="querying-and-deleting-from-a-collection"></a>查询和删除集合
+### <a name="querying-and-deleting-from-a-collection"></a>从集合中查询和删除
 
-此脚本将创建一个新的工作表。 它将检查工作表的现有副本并在生成新工作表之前将其删除。
+此脚本创建新的工作表。 它在新建工作表之前检查工作表的现有副本并将其删除。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -198,9 +215,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="dates"></a>日期
 
-本节中的示例演示如何使用 JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) 对象。
+本节中的示例显示如何使用 JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) 对象。
 
-下面的示例获取当前日期和时间，然后将这些值写入活动工作表中的两个单元格。
+以下示例获取当前日期和时间，然后将这些值写入活动工作表中的两个单元格。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -219,7 +236,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-下一个示例读取存储在 Excel 中的日期，并将其转换为 JavaScript Date 对象。 它使用 [日期的数字序列号](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) 作为 JavaScript 日期的输入。
+下一个示例将读取 Excel 中存储的日期，并将其转换为 JavaScript Date 对象。 它将 [日期的数字序列号用作](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript 日期的输入。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -227,7 +244,7 @@ function main(workbook: ExcelScript.Workbook) {
   let dateRange = workbook.getActiveWorksheet().getRange("A1");
 
   // Convert the Excel date to a JavaScript Date object.
-  let excelDateValue = dateRange.getValue();
+  let excelDateValue = dateRange.getValue() as number;
   let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
   console.log(javaScriptDate);
 }
@@ -239,7 +256,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="apply-conditional-formatting"></a>应用条件格式
 
-此示例向工作表中当前使用的区域应用条件格式。 条件格式是前10% 的数值的绿色填充。
+本示例将条件格式应用于工作表中当前使用的范围。 条件格式是前 10% 值的绿色填充。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -259,9 +276,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="create-a-sorted-table"></a>创建已排序的表
+### <a name="create-a-sorted-table"></a>创建排序表
 
-本示例从当前工作表的已用区域创建一个表格，然后基于第一列对其进行排序。
+本示例从当前工作表的已用区域创建一个表格，然后基于第一列对表格进行排序。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -277,11 +294,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="log-the-grand-total-values-from-a-pivottable"></a>记录数据透视表中的 "总计" 值
+### <a name="log-the-grand-total-values-from-a-pivottable"></a>记录数据透视表中的"总计"值
 
-本示例在工作簿中查找第一个数据透视表，并将 "总计" 单元格中的值记录 () 下图中的绿色突出显示）。
+本示例查找工作簿中的第一个数据透视表，并记录"总计"单元格 (在下面的图像中以绿色突出显示) 。
 
-![一个水果销售数据透视表，总计行突出显示为绿色。](../images/sample-pivottable-grand-total-row.png)
+![一个结果销售数据透视表，"总计"行突出显示为绿色。](../images/sample-pivottable-grand-total-row.png)
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -292,7 +309,7 @@ function main(workbook: ExcelScript.Workbook) {
   let pivotColumnLabelRange = pivotTable.getLayout().getColumnLabelRange();
 
   // Get the range displaying the pivoted data.
-  let pivotDataRange = pivotTable.getLayout().getRangeBetweenHeaderAndTotal();
+  let pivotDataRange = pivotTable.getLayout().getBodyAndTotalRange();
 
   // Get the range with the "grand totals" for the PivotTable columns.
   let grandTotalRange = pivotDataRange.getLastRow();
@@ -307,9 +324,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="formulas"></a>公式
 
-这些示例使用 Excel 公式，并演示如何在脚本中使用它们。
+这些示例使用 Excel 公式，并展示如何在脚本中使用它们。
 
-## <a name="single-formula"></a>单个公式
+### <a name="single-formula"></a>单个公式
 
 此脚本设置单元格的公式，然后显示 Excel 如何单独存储单元格的公式和值。
 
@@ -330,9 +347,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="spilling-results-from-a-formula"></a>Spilling 公式中的结果
+### <a name="spilling-results-from-a-formula"></a>从公式中溢出结果
 
-此脚本使用换位函数将区域 "A1： D2" 转置为 "A4： B7"。 如果换位的转置结果为 #SPILL 错误，它将清除目标区域并再次应用公式。
+此脚本使用 TRANSPOSE 函数将区域"A1：D2"转置为"A4：B7"。 如果转置导致#SPILL错误，它将清除目标区域并再次应用公式。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -366,8 +383,8 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="scenario-samples"></a>方案示例
 
-有关 showcasing 大型的真实解决方案的示例，请访问 [Office 脚本的示例方案](scenarios/sample-scenario-overview.md)。
+有关展示大型实际解决方案的示例，请访问 [Office 脚本的示例方案](scenarios/sample-scenario-overview.md)。
 
 ## <a name="suggest-new-samples"></a>建议新示例
 
-我们欢迎您提出新示例建议。 如果有一个可帮助其他脚本开发人员的常见方案，请在下面的 "反馈" 部分告诉我们。
+欢迎提供新示例建议。 如果存在有助于其他脚本开发人员的常见方案，请在下面的反馈部分中告诉我们。
