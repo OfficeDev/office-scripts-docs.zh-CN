@@ -1,18 +1,18 @@
 ---
 title: Excel 网页中的 Office 脚本示例脚本
 description: 要与 Excel 网页中的 Office 脚本一起使用的代码示例集合。
-ms.date: 12/21/2020
+ms.date: 02/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 35a7fdb4dcfa4c349aa594e5b13d1b7e4d33a178
-ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
+ms.openlocfilehash: 4f1f6d4e160c42524df3c69228d182f1cb4838c8
+ms.sourcegitcommit: 5bde455b06ee2ed007f3e462d8ad485b257774ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49772962"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "50837274"
 ---
 # <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本示例 (预览) 
 
-以下示例是一些简单的脚本，您可以尝试自己的工作簿。 若要在 Excel 网页中使用它们，请：
+以下示例是简单脚本，您可以尝试自己的工作簿。 若要在 Excel 网页中使用它们：：
 
 1. 打开“**自动**”选项卡。
 2. 按 **代码编辑器**。
@@ -28,7 +28,7 @@ ms.locfileid: "49772962"
 
 ### <a name="read-and-log-one-cell"></a>读取和记录一个单元格
 
-此示例读取 **A1 的值** ，并打印到控制台。
+此示例读取 **A1 的值，** 并打印到控制台。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -138,7 +138,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="get-groups-of-cells-based-on-special-criteria"></a>根据特殊条件获取单元格组
 
-此脚本获取当前工作表使用区域的所有空白单元格。 然后，它突出显示所有带黄色背景的单元格。
+此脚本获取当前工作表的已用区域的所有空白单元格。 然后，它用黄色背景突出显示所有这些单元格。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -155,9 +155,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="collections"></a>收藏
 
-这些示例使用工作簿中的对象集合。
+这些示例处理工作簿中的对象集合。
 
-### <a name="iterating-over-collections"></a>对集合进行 Itererating
+### <a name="iterating-over-collections"></a>对集合进行 Iterating
 
 此脚本获取并记录工作簿中所有工作表的名称。 它还将选项卡颜色设置为随机颜色。
 
@@ -184,7 +184,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="querying-and-deleting-from-a-collection"></a>从集合中查询和删除
+### <a name="querying-and-deleting-from-a-collection"></a>查询和删除集合
 
 此脚本创建新的工作表。 它在新建工作表之前检查工作表的现有副本并将其删除。
 
@@ -236,7 +236,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-下一个示例将读取 Excel 中存储的日期，并将其转换为 JavaScript Date 对象。 它将 [日期的数字序列号用作](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript 日期的输入。
+下一个示例将读取 Excel 中存储的日期，并将其转换为 JavaScript Date 对象。 它将日期 [的数字序列号用作](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript Date 的输入。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -256,7 +256,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="apply-conditional-formatting"></a>应用条件格式
 
-本示例将条件格式应用于工作表中当前使用的范围。 条件格式是前 10% 值的绿色填充。
+本示例将条件格式应用于工作表中当前使用的范围。 条件格式是前 10% 的值的绿色填充。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -278,7 +278,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="create-a-sorted-table"></a>创建排序表
 
-本示例从当前工作表的已用区域创建一个表格，然后基于第一列对表格进行排序。
+本示例从当前工作表的已用区域创建一个表格，然后根据第一列对表格进行排序。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -298,7 +298,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 本示例查找工作簿中的第一个数据透视表，并记录"总计"单元格 (在下面的图像中以绿色突出显示) 。
 
-![一个结果销售数据透视表，"总计"行突出显示为绿色。](../images/sample-pivottable-grand-total-row.png)
+![一个将"总计"行突出显示为绿色的数据透视表。](../images/sample-pivottable-grand-total-row.png)
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -322,9 +322,46 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### <a name="use-data-validation-to-create-a-drop-down-list"></a>使用数据验证创建下拉列表
+
+此脚本为单元格创建下拉选择列表。 它将所选区域的现有值用作列表的选项。
+
+![显示一个范围中的三个单词，然后在下拉列表中显示这些相同单词的一组之前和之后屏幕截图。](../images/sample-data-validation.png)
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the values for data validation.
+  let selectedRange = workbook.getSelectedRange();
+  let rangeValues = selectedRange.getValues();
+
+  // Convert the values into a comma-delimited string.
+  let dataValidationListString = "";
+  rangeValues.forEach((rangeValueRow) => {
+    rangeValueRow.forEach((value) => {
+      dataValidationListString += value + ",";
+    });
+  });
+
+  // Clear the old range.
+  selectedRange.clear(ExcelScript.ClearApplyTo.contents);
+
+  // Apply the data validation to the first cell in the selected range.
+  let targetCell = selectedRange.getCell(0,0);
+  let dataValidation = targetCell.getDataValidation();
+
+  // Set the content of the drop-down list.
+  dataValidation.setRule({
+      list: {
+        inCellDropDown: true,
+        source: dataValidationListString
+      }
+    });
+}
+```
+
 ## <a name="formulas"></a>公式
 
-这些示例使用 Excel 公式，并展示如何在脚本中使用它们。
+这些示例使用 Excel 公式并展示如何在脚本中使用它们。
 
 ### <a name="single-formula"></a>单个公式
 
@@ -349,7 +386,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="spilling-results-from-a-formula"></a>从公式中溢出结果
 
-此脚本使用 TRANSPOSE 函数将区域"A1：D2"转置为"A4：B7"。 如果转置导致#SPILL错误，它将清除目标区域并再次应用公式。
+此脚本使用 TRANSPOSE 函数将区域"A1：D2"转置为"A4：B7"。 如果转置导致错误#SPILL，它将清除目标区域并再次应用公式。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -383,8 +420,8 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="scenario-samples"></a>方案示例
 
-有关展示大型实际解决方案的示例，请访问 [Office 脚本的示例方案](scenarios/sample-scenario-overview.md)。
+有关展示大型的实际解决方案的示例，请访问 [Office 脚本的示例方案](scenarios/sample-scenario-overview.md)。
 
 ## <a name="suggest-new-samples"></a>建议新示例
 
-欢迎提供新示例建议。 如果存在有助于其他脚本开发人员的常见方案，请在下面的反馈部分中告诉我们。
+我们欢迎您提出有关新示例的建议。 如果存在有助于其他脚本开发人员的常见方案，请在下面的反馈部分中告诉我们。
