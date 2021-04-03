@@ -3,12 +3,12 @@ title: 从脚本返回数据到自动运行 Power Automated 流
 description: 本教程演示了如何通过 Power Automate 运行适用于 Excel 网页版的 Office 脚本来发送提醒电子邮件。
 ms.date: 12/15/2020
 localization_priority: Priority
-ms.openlocfilehash: 1925a95938837707eacddff6832180b12cd2011c
-ms.sourcegitcommit: 5f79e5ba9935edb8a890012f2cde3b89fe80faa0
+ms.openlocfilehash: 31ba31ddbfb36f20087be6aa7d83b1b896a698d1
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "49727061"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570528"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow-preview"></a>从脚本返回数据到自动运行 Power Automated 流（预览） 
 
@@ -48,14 +48,14 @@ ms.locfileid: "49727061"
 
 1. 现在应该有一个空脚本。 我们希望使用脚本从电子表格中获取电子邮件地址。 更改 `main` 以返回字符串，如下所示：
 
-    ```typescript
+    ```TypeScript
     function main(workbook: ExcelScript.Workbook) : string {
     }
     ```
 
 1. 接下来，需要从表中获取所有数据。 这样就可以通过脚本查看每一行。 在 `main` 函数中添加以下代码。
 
-    ```typescript
+    ```TypeScript
     // Get the H1 worksheet.
     let worksheet = workbook.getWorksheet("H1");
 
@@ -68,7 +68,7 @@ ms.locfileid: "49727061"
 
 1. 表中的日期使用 [Excel 的日期序列号](https://support.microsoft.com/office/date-systems-in-excel-e7fe7167-48a9-4b96-bb53-5612a800b487)存储。 需要将这些日期转换为 JavaScript 日期以便进行比较。 将在脚本中添加帮助程序函数。 在 `main` 函数外添加以下代码：
 
-    ```typescript
+    ```TypeScript
     // Convert the Excel date to a JavaScript Date object.
     function convertDate(excelDateValue: number) {
         let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
@@ -78,7 +78,7 @@ ms.locfileid: "49727061"
 
 1. 现在，我们需要弄清楚谁在待命。 他们的行将具有围绕当前日期的开始和结束日期。 我们将编写脚本，假设一次只有一个人待命。 脚本可以返回数组来处理多个值，但现在我们将返回第一个匹配的电子邮件地址。 将以下代码添加到`main` 函数末尾。
 
-    ```typescript
+    ```TypeScript
     // Look for the first row where today's date is between the row's start and end dates.
     let currentDate = new Date();
     for (let row = 0; row < tableValues.length; row++) {
@@ -93,7 +93,7 @@ ms.locfileid: "49727061"
 
 1. 最后的脚本应该如下所示：
 
-    ```typescript
+    ```TypeScript
     function main(workbook: ExcelScript.Workbook) : string {
         // Get the H1 worksheet.
         let worksheet = workbook.getWorksheet("H1");

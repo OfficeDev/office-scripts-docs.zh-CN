@@ -3,12 +3,12 @@ title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: acbeec69a5d9ae9e3ebfa95c9070033d1cca2265
-ms.sourcegitcommit: e7e019ba36c2f49451ec08c71a1679eb6dba4268
+ms.openlocfilehash: 4609dce617d18f7a7c9d2868a24792c51fb048c6
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "49933271"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570232"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中 Office 脚本的脚本基础（预览）
 
@@ -20,7 +20,7 @@ ms.locfileid: "49933271"
 
 每个 Office 脚本都必须包含以 `ExcelScript.Workbook` 类型作为第一参数的 `main` 函数。 执行函数时，Excel 应用程序通过提供相应工作簿作为第一个参数来调用此 `main` 函数。 因此，在记录脚本或从代码编辑器创建新脚本后，请务必不要再修改 `main` 函数的基本签名。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Your code goes here
 }
@@ -48,7 +48,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 以下脚本将获取工作簿中的活动工作表并记录其名称。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the active worksheet.
     let sheet = workbook.getActiveWorksheet();
@@ -169,7 +169,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 以下脚本将获取工作簿中的所有表格。 然后，它将确保显示标题、筛选按钮可见并且将表格样式设置为“TableStyleLight1”。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   /* Get table collection */
   const tables = workbook.getTables();
@@ -191,7 +191,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 以下脚本将在 Excel 工作簿中的第一个工作表上创建一个表格。 请注意，所创建的表格是通过 `addTable` 方法返回的。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the first worksheet.
     let sheet = workbook.getWorksheets()[0];
@@ -213,7 +213,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 以下脚本将删除工作簿中的第一个工作表。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get first worksheet.
     let sheet = workbook.getWorksheets()[0];
