@@ -1,16 +1,16 @@
 ---
-title: Excel 网页中的 Office 脚本示例脚本
+title: Excel 网页中的 Office 脚本的基本脚本
 description: 要与 Excel 网页中的 Office 脚本一起使用的代码示例集合。
-ms.date: 02/12/2021
+ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 4f1f6d4e160c42524df3c69228d182f1cb4838c8
-ms.sourcegitcommit: 5bde455b06ee2ed007f3e462d8ad485b257774ef
+ms.openlocfilehash: f52500f480b7e7fa637a606b99de035da326a4ba
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "50837274"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570514"
 ---
-# <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本示例 (预览) 
+# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Excel 网页中的 Office 脚本的基本脚本
 
 以下示例是简单脚本，您可以尝试自己的工作簿。 若要在 Excel 网页中使用它们：：
 
@@ -20,8 +20,6 @@ ms.locfileid: "50837274"
 4. 将整个脚本替换为你选择的示例。
 5. 在 **代码** 编辑器的任务窗格中按"运行"。
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
 ## <a name="scripting-basics"></a>脚本基础知识
 
 这些示例演示 Office 脚本的基本构建基块。 将其添加到脚本以扩展解决方案并解决常见问题。
@@ -30,7 +28,7 @@ ms.locfileid: "50837274"
 
 此示例读取 **A1 的值，** 并打印到控制台。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
   let selectedSheet = workbook.getActiveWorksheet();
@@ -47,7 +45,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本记录当前活动单元格的值。 如果选择了多个单元格，将记录最左上方的单元格。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the current active cell in the workbook.
   let cell = workbook.getActiveCell();
@@ -61,7 +59,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本使用相对引用获取相邻单元格。 请注意，如果活动单元格位于最上面一行，脚本的一部分将失败，因为它引用当前选定单元格上方的单元格。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the currently active cell in the workbook.
   let activeCell = workbook.getActiveCell();
@@ -88,7 +86,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本将活动单元格中的格式复制到相邻单元格。 请注意，此脚本仅在活动单元格不在工作表边缘时有效。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the active cell.
   let activeCell = workbook.getActiveCell();
@@ -111,7 +109,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本将循环遍历当前选择的范围。 它清除当前格式，将每个单元格中的填充颜色设置为随机颜色。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the currently selected range.
   let range = workbook.getSelectedRange();
@@ -140,7 +138,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本获取当前工作表的已用区域的所有空白单元格。 然后，它用黄色背景突出显示所有这些单元格。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the current used range.
     let range = workbook.getActiveWorksheet().getUsedRange();
@@ -161,7 +159,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本获取并记录工作簿中所有工作表的名称。 它还将选项卡颜色设置为随机颜色。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get all the worksheets in the workbook.
   let sheets = workbook.getWorksheets();
@@ -188,7 +186,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本创建新的工作表。 它在新建工作表之前检查工作表的现有副本并将其删除。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Name of the worksheet to be added.
   let name = "Index";
@@ -328,7 +326,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ![显示一个范围中的三个单词，然后在下拉列表中显示这些相同单词的一组之前和之后屏幕截图。](../images/sample-data-validation.png)
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the values for data validation.
   let selectedRange = workbook.getSelectedRange();
@@ -367,7 +365,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本设置单元格的公式，然后显示 Excel 如何单独存储单元格的公式和值。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   let selectedSheet = workbook.getActiveWorksheet();
 
@@ -388,7 +386,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本使用 TRANSPOSE 函数将区域"A1：D2"转置为"A4：B7"。 如果转置导致错误#SPILL，它将清除目标区域并再次应用公式。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   let sheet = workbook.getActiveWorksheet();
   // Use the data in A1:D2 for the sample.
@@ -417,10 +415,6 @@ function main(workbook: ExcelScript.Workbook) {
   targetRange.select();
 }
 ```
-
-## <a name="scenario-samples"></a>方案示例
-
-有关展示大型的实际解决方案的示例，请访问 [Office 脚本的示例方案](scenarios/sample-scenario-overview.md)。
 
 ## <a name="suggest-new-samples"></a>建议新示例
 

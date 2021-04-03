@@ -15,8 +15,8 @@
 
 * 进行小幅度的更改，[通过 GitHub 参与](#contribute-using-github)。
 * 进行大幅度的更改，或更改涉及代码，[通过 Git 参与](#contribute-using-git)。
-* 通过“GitHub 问题”举报文档缺陷。
-* 在[Excel 中为 Web UserVoice](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)网站请求新文档。
+* 报告 [GitHub 问题的文档错误](https://github.com/OfficeDev/office-scripts-docs/issues)。
+* 请求 [GitHub 问题的新文档](https://github.com/OfficeDev/office-scripts-docs/issues)。
 
 ## <a name="contribute-using-github"></a>通过 GitHub 参与
 
@@ -61,7 +61,7 @@
 
 ## <a name="use-github-git-and-this-repository"></a>使用 GitHub、Git 和此存储库
 
-**注意**：此部分中的大多数信息都可以在 [GitHub 帮助]文章中找到。  如果熟悉 Git 和 GitHub，请跳至**参与和编辑内容**部分，了解此存储库的代码/内容流的具体详情。
+**注意**：此部分中的大多数信息都可以在 [GitHub 帮助]文章中找到。  如果熟悉 Git 和 GitHub，请跳至 **参与和编辑内容** 部分，了解此存储库的代码/内容流的具体详情。
 
 ### <a name="to-set-up-your-fork-of-the-repository"></a>设置存储库分支的具体步骤
 
@@ -91,7 +91,7 @@
 3. 向主存储库提交拉取请求。
 4. 删除分支。
 
-**重要说明**每个分支限制为单个概念/文章以简化工作流并降低合并冲突的机率。适用于新分支的内容包括：
+**重要说明** 每个分支限制为单个概念/文章以简化工作流并降低合并冲突的机率。适用于新分支的内容包括：
 
 * 新文章。
 * 拼写和语法编辑。
@@ -141,7 +141,7 @@
 
 分支成功合并后（即已接受拉取请求），不能继续在该本地分支中操作。这会导致提交其他拉取请求时出现合并冲突。若要进行其他更新，从已成功合并的上游分支中新建本地分支，然后删除最初的本地分支。
 
-例如，如果您的本地分支 X 已成功合并到 OfficeDev/office-文档主分支，并且您希望对合并的内容进行其他更新。 从 OfficeDev/office-scripts-文档主分支创建新的本地分支 X2。 若要实现此操作，请打开 GitBash，然后执行以下命令：
+例如，如果本地分支 X 已成功合并到 OfficeDev/office-scripts-docs 主分支，并且您希望对已合并的内容进行其他更新。 从 OfficeDev/office-scripts-docs master 分支创建新的本地分支 X2。 若要实现此操作，请打开 GitBash，然后执行以下命令：
 
     cd office-scripts-docs
     git pull upstream master:X2
@@ -181,7 +181,7 @@
 
 拉取请求请求获取此协议时，将会自动向你发送需要签署参与者许可协议 (CLA) 的通知。
 
-社区成员**必须签署参与许可协议 (CLA) 才能向项目提供大量提交内容**。只需完成并提交此文档一次。请仔细查看该文档。可能要求你让你的员工签署此文档。
+社区成员 **必须签署参与许可协议 (CLA) 才能向项目提供大量提交内容**。只需完成并提交此文档一次。请仔细查看该文档。可能要求你让你的员工签署此文档。
 
 ### <a name="what-happens-with-my-contributions"></a>会如何处理我的参与内容？
 
