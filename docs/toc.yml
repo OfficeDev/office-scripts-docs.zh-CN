@@ -53,12 +53,44 @@ items:
             href: develop/excel-async-model.md
       - name: 示例
         items:
-          - name: 示例脚本
-            href: resources/excel-samples.md
+          - name: 概述
+            href: resources/samples/samples-overview.md
+          - name: 基本信息
+            items:
+              - name: 脚本基础知识
+                href: resources/excel-samples.md
+              - name: 区域基础
+                href: resources/samples/range-basics.md
+          - name: 超越基础设置
+            items:
+              - name: 添加备注
+                href: resources/samples/add-excel-comments.md
+              - name: 将多个表复制到单个表中
+                href: resources/samples/copy-tables-combine.md
+              - name: 对工作表中的空白行进行计数
+                href: resources/samples/count-blank-rows.md
+              - name: 交叉引用和设置 Excel 文件的格式
+                href: resources/samples/excel-cross-reference.md
+              - name: 文档编号生成器
+                href: resources/samples/document-number-generator.md
+              - name: 图表和表格的电子邮件图像
+                href: resources/samples/email-images-chart-table.md
+              - name: 筛选表格并获取可见区域
+                href: resources/samples/filter-table-get-visible-range.md
+              - name: 管理计算模式
+                href: resources/samples/excel-calculation.md
+              - name: 跨表移动所选行
+                href: resources/samples/move-rows-across-tables.md
+              - name: 将表数据输出为 JSON
+                href: resources/samples/get-table-data.md
+              - name: 从 Excel 单元格中删除超链接
+                href: resources/samples/remove-hyperlinks-from-cells.md
+              - name: 对文件夹中的所有 Excel 文件运行脚本
+                href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
+              - name: 通过 Excel 数据发送 Teams 邀请
+                href: resources/samples/send-teams-invite-from-excel-data.md
           - name: 应用场景
             items:
-              - name: 概述
-                href: resources/scenarios/sample-scenario-overview.md
               - name: 分析 Web 下载项
                 href: resources/scenarios/analyze-web-downloads.md
               - name: 从 NOAA 中提取图形水级别的数据
@@ -67,3 +99,7 @@ items:
                 href: resources/scenarios/grade-calculator.md
               - name: 任务提醒（通过 Power Automate）
                 href: resources/scenarios/task-reminders.md
+          - name: 社区参与
+            items:
+              - name: 季节问候语
+                href: resources/samples/community-seasons-greetings.md
