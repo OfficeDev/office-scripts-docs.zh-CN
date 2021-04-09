@@ -3,12 +3,13 @@ title: Office 脚本入门
 description: 有关 Office 脚本的基础知识，包括访问、环境和脚本模式。
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: f954ee67aa486e4b8185047738ef3d15319a94ae
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ROBOTS: NOINDEX
+ms.openlocfilehash: c1c4675b2fdc1f5ebd9e86f04f5fb011c27a3f1b
+ms.sourcegitcommit: 190ae1c071243f4638d0d650e35f1425914b0156
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571112"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51650365"
 ---
 # <a name="getting-started"></a>入门
 
@@ -775,7 +776,7 @@ function updateTargetRange(
 
 *警告*： `try..catch` 在循环内使用会降低脚本的速度。 避免在循环内部或循环内使用它。
 
-## <a name="range-basics"></a>Range 基础知识
+## <a name="range-basics"></a>区域基础
 
 在继续您的旅程之前，请查看 Range [Basics。](range-basics.md)
 
