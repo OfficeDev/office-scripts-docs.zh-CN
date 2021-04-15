@@ -3,40 +3,40 @@ title: Office 脚本示例方案：自动任务提醒
 description: 使用 Power Automate 和自适应卡片在项目管理电子表格中自动执行任务提醒的示例。
 ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 342abced09119ff286f87c1425e44f9186dc4488
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: a229a06e9f1f9118d57dadac8864bbc7eae7315b
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570225"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755152"
 ---
-# <a name="office-scripts-sample-scenario-automated-task-reminders"></a><span data-ttu-id="20592-103">Office 脚本示例方案：自动任务提醒</span><span class="sxs-lookup"><span data-stu-id="20592-103">Office Scripts sample scenario: Automated task reminders</span></span>
+# <a name="office-scripts-sample-scenario-automated-task-reminders"></a><span data-ttu-id="0035c-103">Office 脚本示例方案：自动任务提醒</span><span class="sxs-lookup"><span data-stu-id="0035c-103">Office Scripts sample scenario: Automated task reminders</span></span>
 
-<span data-ttu-id="20592-104">在此方案中，你将管理项目。</span><span class="sxs-lookup"><span data-stu-id="20592-104">In this scenario you're managing a project.</span></span> <span data-ttu-id="20592-105">每月使用 Excel 工作表跟踪员工的状态。</span><span class="sxs-lookup"><span data-stu-id="20592-105">You use an Excel worksheet to track your employees' status every month.</span></span> <span data-ttu-id="20592-106">你经常需要提醒用户填写其状态，因此你已决定自动执行该提醒过程。</span><span class="sxs-lookup"><span data-stu-id="20592-106">You often need to remind people to fill out their status, so you've decided to automate that reminder process.</span></span>
+<span data-ttu-id="0035c-104">在此方案中，你将管理项目。</span><span class="sxs-lookup"><span data-stu-id="0035c-104">In this scenario you're managing a project.</span></span> <span data-ttu-id="0035c-105">每月使用 Excel 工作表跟踪员工的状态。</span><span class="sxs-lookup"><span data-stu-id="0035c-105">You use an Excel worksheet to track your employees' status every month.</span></span> <span data-ttu-id="0035c-106">你经常需要提醒用户填写其状态，因此你已决定自动执行该提醒过程。</span><span class="sxs-lookup"><span data-stu-id="0035c-106">You often need to remind people to fill out their status, so you've decided to automate that reminder process.</span></span>
 
-<span data-ttu-id="20592-107">你将创建 Power Automate 流，以向缺少状态字段的人发送消息，然后对电子表格应用他们的响应。</span><span class="sxs-lookup"><span data-stu-id="20592-107">You'll create a Power Automate flow to message people with missing status fields and apply their responses to the spreadsheet.</span></span> <span data-ttu-id="20592-108">为此，您将开发一对脚本来处理工作簿处理。</span><span class="sxs-lookup"><span data-stu-id="20592-108">To do this, you'll develop a pair of scripts to handle the working with the workbook.</span></span> <span data-ttu-id="20592-109">第一个脚本获取具有空白状态的人的列表，第二个脚本将状态字符串添加到右侧行。</span><span class="sxs-lookup"><span data-stu-id="20592-109">The first script gets a list of people with blank statuses and the second script adds a status string to the right row.</span></span> <span data-ttu-id="20592-110">你还将使用 [Teams 自适应卡片](/microsoftteams/platform/task-modules-and-cards/what-are-cards) 让员工直接从通知中输入其状态。</span><span class="sxs-lookup"><span data-stu-id="20592-110">You'll also make use of [Teams Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/what-are-cards) to have employees enter their status directly from the notification.</span></span>
+<span data-ttu-id="0035c-107">你将创建 Power Automate 流，以向缺少状态字段的人发送消息，然后对电子表格应用他们的响应。</span><span class="sxs-lookup"><span data-stu-id="0035c-107">You'll create a Power Automate flow to message people with missing status fields and apply their responses to the spreadsheet.</span></span> <span data-ttu-id="0035c-108">为此，您将开发一对脚本来处理工作簿处理。</span><span class="sxs-lookup"><span data-stu-id="0035c-108">To do this, you'll develop a pair of scripts to handle the working with the workbook.</span></span> <span data-ttu-id="0035c-109">第一个脚本获取具有空白状态的人的列表，第二个脚本将状态字符串添加到右侧行。</span><span class="sxs-lookup"><span data-stu-id="0035c-109">The first script gets a list of people with blank statuses and the second script adds a status string to the right row.</span></span> <span data-ttu-id="0035c-110">你还将使用 [Teams 自适应卡片](/microsoftteams/platform/task-modules-and-cards/what-are-cards) 让员工直接从通知中输入其状态。</span><span class="sxs-lookup"><span data-stu-id="0035c-110">You'll also make use of [Teams Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/what-are-cards) to have employees enter their status directly from the notification.</span></span>
 
-## <a name="scripting-skills-covered"></a><span data-ttu-id="20592-111">涵盖的脚本编写技能</span><span class="sxs-lookup"><span data-stu-id="20592-111">Scripting skills covered</span></span>
+## <a name="scripting-skills-covered"></a><span data-ttu-id="0035c-111">涵盖的脚本编写技能</span><span class="sxs-lookup"><span data-stu-id="0035c-111">Scripting skills covered</span></span>
 
-- <span data-ttu-id="20592-112">在 Power Automate 中创建流</span><span class="sxs-lookup"><span data-stu-id="20592-112">Create flows in Power Automate</span></span>
-- <span data-ttu-id="20592-113">将数据传递到脚本</span><span class="sxs-lookup"><span data-stu-id="20592-113">Pass data to scripts</span></span>
-- <span data-ttu-id="20592-114">从脚本返回数据</span><span class="sxs-lookup"><span data-stu-id="20592-114">Return data from scripts</span></span>
-- <span data-ttu-id="20592-115">Teams 自适应卡片</span><span class="sxs-lookup"><span data-stu-id="20592-115">Teams Adaptive Cards</span></span>
-- <span data-ttu-id="20592-116">表格</span><span class="sxs-lookup"><span data-stu-id="20592-116">Tables</span></span>
+- <span data-ttu-id="0035c-112">在 Power Automate 中创建流</span><span class="sxs-lookup"><span data-stu-id="0035c-112">Create flows in Power Automate</span></span>
+- <span data-ttu-id="0035c-113">将数据传递到脚本</span><span class="sxs-lookup"><span data-stu-id="0035c-113">Pass data to scripts</span></span>
+- <span data-ttu-id="0035c-114">从脚本返回数据</span><span class="sxs-lookup"><span data-stu-id="0035c-114">Return data from scripts</span></span>
+- <span data-ttu-id="0035c-115">Teams 自适应卡片</span><span class="sxs-lookup"><span data-stu-id="0035c-115">Teams Adaptive Cards</span></span>
+- <span data-ttu-id="0035c-116">表格</span><span class="sxs-lookup"><span data-stu-id="0035c-116">Tables</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="20592-117">先决条件</span><span class="sxs-lookup"><span data-stu-id="20592-117">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="0035c-117">先决条件</span><span class="sxs-lookup"><span data-stu-id="0035c-117">Prerequisites</span></span>
 
-<span data-ttu-id="20592-118">此方案使用[Power Automate](https://flow.microsoft.com)和 Microsoft [Teams。](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software)</span><span class="sxs-lookup"><span data-stu-id="20592-118">This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software).</span></span> <span data-ttu-id="20592-119">你将需要与用于开发 Office 脚本的帐户关联的两者。</span><span class="sxs-lookup"><span data-stu-id="20592-119">You will need both associated with the account that you use for developing Office Scripts.</span></span> <span data-ttu-id="20592-120">若要免费访问 Microsoft 开发人员订阅以了解这些应用程序并使用这些应用程序，请考虑加入 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。</span><span class="sxs-lookup"><span data-stu-id="20592-120">For free access to a Microsoft Developer subscription to learn about and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).</span></span>
+<span data-ttu-id="0035c-118">此方案使用[Power Automate](https://flow.microsoft.com)和 Microsoft [Teams。](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software)</span><span class="sxs-lookup"><span data-stu-id="0035c-118">This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software).</span></span> <span data-ttu-id="0035c-119">你将需要与用于开发 Office 脚本的帐户关联的两者。</span><span class="sxs-lookup"><span data-stu-id="0035c-119">You will need both associated with the account that you use for developing Office Scripts.</span></span> <span data-ttu-id="0035c-120">若要免费访问 Microsoft 开发人员订阅以了解这些应用程序并使用这些应用程序，请考虑加入 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。</span><span class="sxs-lookup"><span data-stu-id="0035c-120">For free access to a Microsoft Developer subscription to learn about and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).</span></span>
 
-## <a name="setup-instructions"></a><span data-ttu-id="20592-121">设置说明</span><span class="sxs-lookup"><span data-stu-id="20592-121">Setup instructions</span></span>
+## <a name="setup-instructions"></a><span data-ttu-id="0035c-121">设置说明</span><span class="sxs-lookup"><span data-stu-id="0035c-121">Setup instructions</span></span>
 
-1. <span data-ttu-id="20592-122">将 <a href="task-reminders.xlsx">task-reminders.xlsx</a> 下载到 OneDrive。</span><span class="sxs-lookup"><span data-stu-id="20592-122">Download <a href="task-reminders.xlsx">task-reminders.xlsx</a> to your OneDrive.</span></span>
+1. <span data-ttu-id="0035c-122">将 <a href="task-reminders.xlsx">task-reminders.xlsx</a> 下载到 OneDrive。</span><span class="sxs-lookup"><span data-stu-id="0035c-122">Download <a href="task-reminders.xlsx">task-reminders.xlsx</a> to your OneDrive.</span></span>
 
-2. <span data-ttu-id="20592-123">在 Excel 网页中打开工作簿。</span><span class="sxs-lookup"><span data-stu-id="20592-123">Open the workbook in Excel on the web.</span></span>
+2. <span data-ttu-id="0035c-123">在 Excel 网页中打开工作簿。</span><span class="sxs-lookup"><span data-stu-id="0035c-123">Open the workbook in Excel on the web.</span></span>
 
-3. <span data-ttu-id="20592-124">在"**自动化"选项卡** 下，打开 **"所有脚本"。**</span><span class="sxs-lookup"><span data-stu-id="20592-124">Under the **Automate** tab, open **All Scripts**.</span></span>
+3. <span data-ttu-id="0035c-124">在"**自动化"选项卡** 下，打开 **"所有脚本"。**</span><span class="sxs-lookup"><span data-stu-id="0035c-124">Under the **Automate** tab, open **All Scripts**.</span></span>
 
-4. <span data-ttu-id="20592-125">首先，我们需要一个脚本，用于获取电子表格中缺少状态报告的所有员工。</span><span class="sxs-lookup"><span data-stu-id="20592-125">First, we need a script to get all the employees with status reports that are missing from the spreadsheet.</span></span> <span data-ttu-id="20592-126">在" **代码编辑器"** 任务窗格中，按 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。</span><span class="sxs-lookup"><span data-stu-id="20592-126">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
+4. <span data-ttu-id="0035c-125">首先，我们需要一个脚本，用于获取电子表格中缺少状态报告的所有员工。</span><span class="sxs-lookup"><span data-stu-id="0035c-125">First, we need a script to get all the employees with status reports that are missing from the spreadsheet.</span></span> <span data-ttu-id="0035c-126">在" **代码编辑器"** 任务窗格中，按 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。</span><span class="sxs-lookup"><span data-stu-id="0035c-126">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
 
     ```TypeScript
     /**
@@ -87,9 +87,9 @@ ms.locfileid: "51570225"
     }
     ```
 
-5. <span data-ttu-id="20592-127">保存名称为"获取人员" **的脚本**。</span><span class="sxs-lookup"><span data-stu-id="20592-127">Save the script with the name **Get People**.</span></span>
+5. <span data-ttu-id="0035c-127">保存名称为"获取人员" **的脚本**。</span><span class="sxs-lookup"><span data-stu-id="0035c-127">Save the script with the name **Get People**.</span></span>
 
-6. <span data-ttu-id="20592-128">接下来，我们需要第二个脚本处理状态报告卡，将新信息放入电子表格中。</span><span class="sxs-lookup"><span data-stu-id="20592-128">Next, we need a second script to process the status report cards and put the new information in the spreadsheet.</span></span> <span data-ttu-id="20592-129">在" **代码编辑器"** 任务窗格中，按 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。</span><span class="sxs-lookup"><span data-stu-id="20592-129">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
+6. <span data-ttu-id="0035c-128">接下来，我们需要第二个脚本处理状态报告卡，将新信息放入电子表格中。</span><span class="sxs-lookup"><span data-stu-id="0035c-128">Next, we need a second script to process the status report cards and put the new information in the spreadsheet.</span></span> <span data-ttu-id="0035c-129">在" **代码编辑器"** 任务窗格中，按 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。</span><span class="sxs-lookup"><span data-stu-id="0035c-129">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
 
     ```TypeScript
     /**
@@ -143,31 +143,31 @@ ms.locfileid: "51570225"
     }
     ```
 
-7. <span data-ttu-id="20592-130">使用名称保存状态 **保存脚本**。</span><span class="sxs-lookup"><span data-stu-id="20592-130">Save the script with the name **Save Status**.</span></span>
+7. <span data-ttu-id="0035c-130">使用名称保存状态 **保存脚本**。</span><span class="sxs-lookup"><span data-stu-id="0035c-130">Save the script with the name **Save Status**.</span></span>
 
-8. <span data-ttu-id="20592-131">现在，我们需要创建流。</span><span class="sxs-lookup"><span data-stu-id="20592-131">Now, we need to create the flow.</span></span> <span data-ttu-id="20592-132">打开 [Power Automate](https://flow.microsoft.com/)。</span><span class="sxs-lookup"><span data-stu-id="20592-132">Open [Power Automate](https://flow.microsoft.com/).</span></span>
+8. <span data-ttu-id="0035c-131">现在，我们需要创建流。</span><span class="sxs-lookup"><span data-stu-id="0035c-131">Now, we need to create the flow.</span></span> <span data-ttu-id="0035c-132">打开 [Power Automate](https://flow.microsoft.com/)。</span><span class="sxs-lookup"><span data-stu-id="0035c-132">Open [Power Automate](https://flow.microsoft.com/).</span></span>
 
     > [!TIP]
-    > <span data-ttu-id="20592-133">如果之前尚未创建流，请查看我们的教程开始使用 [Power Automate](../../tutorials/excel-power-automate-manual.md) 脚本了解基础知识。</span><span class="sxs-lookup"><span data-stu-id="20592-133">If you haven't created a flow before, please check out our tutorial [Start using scripts with Power Automate](../../tutorials/excel-power-automate-manual.md) to learn the basics.</span></span>
+    > <span data-ttu-id="0035c-133">如果之前尚未创建流，请查看我们的教程开始使用 [Power Automate](../../tutorials/excel-power-automate-manual.md) 脚本了解基础知识。</span><span class="sxs-lookup"><span data-stu-id="0035c-133">If you haven't created a flow before, please check out our tutorial [Start using scripts with Power Automate](../../tutorials/excel-power-automate-manual.md) to learn the basics.</span></span>
 
-9. <span data-ttu-id="20592-134">创建新的即时 **流**。</span><span class="sxs-lookup"><span data-stu-id="20592-134">Create a new **Instant flow**.</span></span>
+9. <span data-ttu-id="0035c-134">创建新的即时 **流**。</span><span class="sxs-lookup"><span data-stu-id="0035c-134">Create a new **Instant flow**.</span></span>
 
-10. <span data-ttu-id="20592-135">从 **选项中选择"手动触发** 流"，然后按"创建 **"。**</span><span class="sxs-lookup"><span data-stu-id="20592-135">Choose **Manually trigger a flow** from the options and press **Create**.</span></span>
+10. <span data-ttu-id="0035c-135">从 **选项中选择"手动触发** 流"，然后按"创建 **"。**</span><span class="sxs-lookup"><span data-stu-id="0035c-135">Choose **Manually trigger a flow** from the options and press **Create**.</span></span>
 
-11. <span data-ttu-id="20592-136">该流需要调用 **"获取人员** "脚本，获取具有空状态字段的所有员工。</span><span class="sxs-lookup"><span data-stu-id="20592-136">The flow needs to call the **Get People** script to get all the employees with empty status fields.</span></span> <span data-ttu-id="20592-137">按 **"新建步骤**"，然后选择 **"Excel Online (Business) "。**</span><span class="sxs-lookup"><span data-stu-id="20592-137">Press **New step** and select **Excel Online (Business)**.</span></span> <span data-ttu-id="20592-138">在 "**操作**"下，选择 **运行脚本（预览版）**。</span><span class="sxs-lookup"><span data-stu-id="20592-138">Under **Actions**, select **Run script (preview)**.</span></span> <span data-ttu-id="20592-139">为流步骤提供以下条目：</span><span class="sxs-lookup"><span data-stu-id="20592-139">Provide the following entries for the flow step:</span></span>
+11. <span data-ttu-id="0035c-136">该流需要调用 **"获取人员** "脚本，获取具有空状态字段的所有员工。</span><span class="sxs-lookup"><span data-stu-id="0035c-136">The flow needs to call the **Get People** script to get all the employees with empty status fields.</span></span> <span data-ttu-id="0035c-137">按 **"新建步骤**"，然后选择 **"Excel Online (Business) "。**</span><span class="sxs-lookup"><span data-stu-id="0035c-137">Press **New step** and select **Excel Online (Business)**.</span></span> <span data-ttu-id="0035c-138">在 "**操作**"下，选择 **运行脚本（预览版）**。</span><span class="sxs-lookup"><span data-stu-id="0035c-138">Under **Actions**, select **Run script (preview)**.</span></span> <span data-ttu-id="0035c-139">为流步骤提供以下条目：</span><span class="sxs-lookup"><span data-stu-id="0035c-139">Provide the following entries for the flow step:</span></span>
 
-    - <span data-ttu-id="20592-140">**位置**：OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="20592-140">**Location**: OneDrive for Business</span></span>
-    - <span data-ttu-id="20592-141">**文档库**：OneDrive</span><span class="sxs-lookup"><span data-stu-id="20592-141">**Document Library**: OneDrive</span></span>
-    - <span data-ttu-id="20592-142">\**文件\*\*\*：task-reminders.xlsx (浏览器选项选择)*</span><span class="sxs-lookup"><span data-stu-id="20592-142">**File**: task-reminders.xlsx *(Chosen through the file browser)*</span></span>
-    - <span data-ttu-id="20592-143">**脚本**：获取人员</span><span class="sxs-lookup"><span data-stu-id="20592-143">**Script**: Get People</span></span>
+    - <span data-ttu-id="0035c-140">**位置**：OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="0035c-140">**Location**: OneDrive for Business</span></span>
+    - <span data-ttu-id="0035c-141">**文档库**：OneDrive</span><span class="sxs-lookup"><span data-stu-id="0035c-141">**Document Library**: OneDrive</span></span>
+    - <span data-ttu-id="0035c-142">\**文件\*\*\*：task-reminders.xlsx (浏览器选项选择)*</span><span class="sxs-lookup"><span data-stu-id="0035c-142">**File**: task-reminders.xlsx *(Chosen through the file browser)*</span></span>
+    - <span data-ttu-id="0035c-143">**脚本**：获取人员</span><span class="sxs-lookup"><span data-stu-id="0035c-143">**Script**: Get People</span></span>
 
-    ![第一个"运行脚本流"步骤。](../../images/scenario-task-reminders-first-flow-step.png)
+    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="Power Automate 流显示第一个运行脚本流步骤。":::
 
-12. <span data-ttu-id="20592-145">接下来，该流需要处理脚本返回的数组中的每个 Employee。</span><span class="sxs-lookup"><span data-stu-id="20592-145">Next, the flow needs to process each Employee in the array returned by the script.</span></span> <span data-ttu-id="20592-146">按 **"新建步骤** "，然后选择"向 Teams 用户发布自适应卡片 **"并等待响应**。</span><span class="sxs-lookup"><span data-stu-id="20592-146">Press **New step** and select **Post an Adaptive Card to a Teams user and wait for a response**.</span></span>
+12. <span data-ttu-id="0035c-145">接下来，该流需要处理脚本返回的数组中的每个 Employee。</span><span class="sxs-lookup"><span data-stu-id="0035c-145">Next, the flow needs to process each Employee in the array returned by the script.</span></span> <span data-ttu-id="0035c-146">按 **"新建步骤** "，然后选择"向 Teams 用户发布自适应卡片 **"并等待响应**。</span><span class="sxs-lookup"><span data-stu-id="0035c-146">Press **New step** and select **Post an Adaptive Card to a Teams user and wait for a response**.</span></span>
 
-13. <span data-ttu-id="20592-147">对于 **"收件人**"字段，添加来自动态内容的电子邮件 (所选内容将具有 Excel 徽标，并) 。</span><span class="sxs-lookup"><span data-stu-id="20592-147">For the **Recipient** field, add **email** from the dynamic content (the selection will have the Excel logo by it).</span></span> <span data-ttu-id="20592-148">添加 **电子邮件** 会导致流步骤被应用到每个块 **包围** 。</span><span class="sxs-lookup"><span data-stu-id="20592-148">Adding **email** causes the flow step to be surrounded by an **Apply to each** block.</span></span> <span data-ttu-id="20592-149">这意味着该数组将由 Power Automate 进行重复。</span><span class="sxs-lookup"><span data-stu-id="20592-149">That means the array will be iterated over by Power Automate.</span></span>
+13. <span data-ttu-id="0035c-147">对于 **"收件人**"字段，添加来自动态内容的电子邮件 (所选内容将具有 Excel 徽标，并) 。</span><span class="sxs-lookup"><span data-stu-id="0035c-147">For the **Recipient** field, add **email** from the dynamic content (the selection will have the Excel logo by it).</span></span> <span data-ttu-id="0035c-148">添加 **电子邮件** 会导致流步骤被应用到每个块 **包围** 。</span><span class="sxs-lookup"><span data-stu-id="0035c-148">Adding **email** causes the flow step to be surrounded by an **Apply to each** block.</span></span> <span data-ttu-id="0035c-149">这意味着该数组将由 Power Automate 进行重复。</span><span class="sxs-lookup"><span data-stu-id="0035c-149">That means the array will be iterated over by Power Automate.</span></span>
 
-14. <span data-ttu-id="20592-150">发送自适应卡片需要将卡片的 JSON 作为消息 **提供**。</span><span class="sxs-lookup"><span data-stu-id="20592-150">Sending an Adaptive Card requires the card's JSON to be provided as the **Message**.</span></span> <span data-ttu-id="20592-151">可以使用自适应卡片 [设计器创建自定义](https://adaptivecards.io/designer/) 卡片。</span><span class="sxs-lookup"><span data-stu-id="20592-151">You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to create custom cards.</span></span> <span data-ttu-id="20592-152">对于此示例，请使用以下 JSON。</span><span class="sxs-lookup"><span data-stu-id="20592-152">For this sample, use the following JSON.</span></span>  
+14. <span data-ttu-id="0035c-150">发送自适应卡片需要将卡片的 JSON 作为消息 **提供**。</span><span class="sxs-lookup"><span data-stu-id="0035c-150">Sending an Adaptive Card requires the card's JSON to be provided as the **Message**.</span></span> <span data-ttu-id="0035c-151">可以使用自适应卡片 [设计器创建自定义](https://adaptivecards.io/designer/) 卡片。</span><span class="sxs-lookup"><span data-stu-id="0035c-151">You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to create custom cards.</span></span> <span data-ttu-id="0035c-152">对于此示例，请使用以下 JSON。</span><span class="sxs-lookup"><span data-stu-id="0035c-152">For this sample, use the following JSON.</span></span>  
 
     ```json
     {
@@ -208,38 +208,38 @@ ms.locfileid: "51570225"
     }
     ```
 
-15. <span data-ttu-id="20592-153">填写其余字段，如下所示：</span><span class="sxs-lookup"><span data-stu-id="20592-153">Fill out the remaining fields as follows:</span></span>
+15. <span data-ttu-id="0035c-153">填写其余字段，如下所示：</span><span class="sxs-lookup"><span data-stu-id="0035c-153">Fill out the remaining fields as follows:</span></span>
 
-    - <span data-ttu-id="20592-154">**更新消息**：感谢您提交状态报告。</span><span class="sxs-lookup"><span data-stu-id="20592-154">**Update message**: Thank you for submitting your status report.</span></span> <span data-ttu-id="20592-155">您的响应已成功添加到电子表格。</span><span class="sxs-lookup"><span data-stu-id="20592-155">Your response has been successfully added to the spreadsheet.</span></span>
-    - <span data-ttu-id="20592-156">**应更新卡片**：是</span><span class="sxs-lookup"><span data-stu-id="20592-156">**Should update card**: Yes</span></span>
+    - <span data-ttu-id="0035c-154">**更新消息**：感谢您提交状态报告。</span><span class="sxs-lookup"><span data-stu-id="0035c-154">**Update message**: Thank you for submitting your status report.</span></span> <span data-ttu-id="0035c-155">您的响应已成功添加到电子表格。</span><span class="sxs-lookup"><span data-stu-id="0035c-155">Your response has been successfully added to the spreadsheet.</span></span>
+    - <span data-ttu-id="0035c-156">**应更新卡片**：是</span><span class="sxs-lookup"><span data-stu-id="0035c-156">**Should update card**: Yes</span></span>
 
-16. <span data-ttu-id="20592-157">在 **"应用到每个** 块"中，在将自适应卡片发布给 Teams 用户并 **等待响应** 后，按 **"添加操作"。**</span><span class="sxs-lookup"><span data-stu-id="20592-157">In the **Apply to each** block, following the **Post an Adaptive Card to a Teams user and wait for a response**, press **Add an action**.</span></span> <span data-ttu-id="20592-158">选择 **Excel Online (Business)**。</span><span class="sxs-lookup"><span data-stu-id="20592-158">Select **Excel Online (Business)**.</span></span> <span data-ttu-id="20592-159">在 "**操作**"下，选择 **运行脚本（预览版）**。</span><span class="sxs-lookup"><span data-stu-id="20592-159">Under **Actions**, select **Run script (preview)**.</span></span> <span data-ttu-id="20592-160">为流步骤提供以下条目：</span><span class="sxs-lookup"><span data-stu-id="20592-160">Provide the following entries for the flow step:</span></span>
+16. <span data-ttu-id="0035c-157">在 **"应用到每个** 块"中，在将自适应卡片发布给 Teams 用户并 **等待响应** 后，按 **"添加操作"。**</span><span class="sxs-lookup"><span data-stu-id="0035c-157">In the **Apply to each** block, following the **Post an Adaptive Card to a Teams user and wait for a response**, press **Add an action**.</span></span> <span data-ttu-id="0035c-158">选择 **Excel Online (Business)**。</span><span class="sxs-lookup"><span data-stu-id="0035c-158">Select **Excel Online (Business)**.</span></span> <span data-ttu-id="0035c-159">在 "**操作**"下，选择 **运行脚本（预览版）**。</span><span class="sxs-lookup"><span data-stu-id="0035c-159">Under **Actions**, select **Run script (preview)**.</span></span> <span data-ttu-id="0035c-160">为流步骤提供以下条目：</span><span class="sxs-lookup"><span data-stu-id="0035c-160">Provide the following entries for the flow step:</span></span>
 
-    - <span data-ttu-id="20592-161">**位置**：OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="20592-161">**Location**: OneDrive for Business</span></span>
-    - <span data-ttu-id="20592-162">**文档库**：OneDrive</span><span class="sxs-lookup"><span data-stu-id="20592-162">**Document Library**: OneDrive</span></span>
-    - <span data-ttu-id="20592-163">\**文件\*\*\*：task-reminders.xlsx (浏览器选项选择)*</span><span class="sxs-lookup"><span data-stu-id="20592-163">**File**: task-reminders.xlsx *(Chosen through the file browser)*</span></span>
-    - <span data-ttu-id="20592-164">**脚本**：保存状态</span><span class="sxs-lookup"><span data-stu-id="20592-164">**Script**: Save Status</span></span>
-    - <span data-ttu-id="20592-165">**senderEmail：** email *(dynamic content from Excel)*</span><span class="sxs-lookup"><span data-stu-id="20592-165">**senderEmail**: email *(dynamic content from Excel)*</span></span>
-    - <span data-ttu-id="20592-166">**statusReportResponse：** 来自 *Teams (动态内容的响应)*</span><span class="sxs-lookup"><span data-stu-id="20592-166">**statusReportResponse**: response *(dynamic content from Teams)*</span></span>
+    - <span data-ttu-id="0035c-161">**位置**：OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="0035c-161">**Location**: OneDrive for Business</span></span>
+    - <span data-ttu-id="0035c-162">**文档库**：OneDrive</span><span class="sxs-lookup"><span data-stu-id="0035c-162">**Document Library**: OneDrive</span></span>
+    - <span data-ttu-id="0035c-163">\**文件\*\*\*：task-reminders.xlsx (浏览器选项选择)*</span><span class="sxs-lookup"><span data-stu-id="0035c-163">**File**: task-reminders.xlsx *(Chosen through the file browser)*</span></span>
+    - <span data-ttu-id="0035c-164">**脚本**：保存状态</span><span class="sxs-lookup"><span data-stu-id="0035c-164">**Script**: Save Status</span></span>
+    - <span data-ttu-id="0035c-165">**senderEmail：** email *(dynamic content from Excel)*</span><span class="sxs-lookup"><span data-stu-id="0035c-165">**senderEmail**: email *(dynamic content from Excel)*</span></span>
+    - <span data-ttu-id="0035c-166">**statusReportResponse：** 来自 *Teams (动态内容的响应)*</span><span class="sxs-lookup"><span data-stu-id="0035c-166">**statusReportResponse**: response *(dynamic content from Teams)*</span></span>
 
-    ![应用到每个流步骤。](../../images/scenario-task-reminders-last-flow-step.png)
+    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="显示适用于每个步骤的 Power Automate 流。":::
 
-17. <span data-ttu-id="20592-168">保存流。</span><span class="sxs-lookup"><span data-stu-id="20592-168">Save the flow.</span></span>
+17. <span data-ttu-id="0035c-168">保存流。</span><span class="sxs-lookup"><span data-stu-id="0035c-168">Save the flow.</span></span>
 
-## <a name="running-the-flow"></a><span data-ttu-id="20592-169">运行流</span><span class="sxs-lookup"><span data-stu-id="20592-169">Running the flow</span></span>
+## <a name="running-the-flow"></a><span data-ttu-id="0035c-169">运行流</span><span class="sxs-lookup"><span data-stu-id="0035c-169">Running the flow</span></span>
 
-<span data-ttu-id="20592-170">若要测试流，请确保任何空状态的表行使用绑定到 Teams 帐户的电子邮件地址 (在测试) 时，你可能应该使用自己的) 。</span><span class="sxs-lookup"><span data-stu-id="20592-170">To test the flow, make sure any table rows with blank status use an email address tied to a Teams account (you should probably use your own email address while testing).</span></span>
+<span data-ttu-id="0035c-170">若要测试流，请确保任何空状态的表行使用绑定到 Teams 帐户的电子邮件地址 (在测试) 时，你可能应该使用自己的) 。</span><span class="sxs-lookup"><span data-stu-id="0035c-170">To test the flow, make sure any table rows with blank status use an email address tied to a Teams account (you should probably use your own email address while testing).</span></span>
 
-<span data-ttu-id="20592-171">可以从流设计器 **中选择"测试** "，也可以从"我的流"页 **运行** 流。</span><span class="sxs-lookup"><span data-stu-id="20592-171">You can either select **Test** from the flow designer, or run the flow from the **My flows** page.</span></span> <span data-ttu-id="20592-172">启动流程并接受使用所需连接后，你应该通过 Teams 从 Power Automate 收到自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="20592-172">After starting the flow and accepting the use of the required connections, you should receive an Adaptive Card from Power Automate through Teams.</span></span> <span data-ttu-id="20592-173">在卡片中填写状态字段后，流程将继续，并更新电子表格，并包含你提供的状态。</span><span class="sxs-lookup"><span data-stu-id="20592-173">Once you fill out the status field in the card, the flow will continue and update the spreadsheet with the status you provide.</span></span>
+<span data-ttu-id="0035c-171">可以从流设计器 **中选择"测试** "，也可以从"我的流"页 **运行** 流。</span><span class="sxs-lookup"><span data-stu-id="0035c-171">You can either select **Test** from the flow designer, or run the flow from the **My flows** page.</span></span> <span data-ttu-id="0035c-172">启动流程并接受使用所需连接后，你应该通过 Teams 从 Power Automate 收到自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="0035c-172">After starting the flow and accepting the use of the required connections, you should receive an Adaptive Card from Power Automate through Teams.</span></span> <span data-ttu-id="0035c-173">在卡片中填写状态字段后，流程将继续，并更新电子表格，并包含你提供的状态。</span><span class="sxs-lookup"><span data-stu-id="0035c-173">Once you fill out the status field in the card, the flow will continue and update the spreadsheet with the status you provide.</span></span>
 
-### <a name="before-running-the-flow"></a><span data-ttu-id="20592-174">运行流之前</span><span class="sxs-lookup"><span data-stu-id="20592-174">Before running the flow</span></span>
+### <a name="before-running-the-flow"></a><span data-ttu-id="0035c-174">运行流之前</span><span class="sxs-lookup"><span data-stu-id="0035c-174">Before running the flow</span></span>
 
-![包含一个缺少状态条目的状态报告工作表。](../../images/scenario-task-reminders-spreadsheet-before.png)
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="包含一个缺少状态条目的状态报告工作表。":::
 
-### <a name="receiving-the-adaptive-card"></a><span data-ttu-id="20592-176">接收自适应卡片</span><span class="sxs-lookup"><span data-stu-id="20592-176">Receiving the Adaptive Card</span></span>
+### <a name="receiving-the-adaptive-card"></a><span data-ttu-id="0035c-176">接收自适应卡片</span><span class="sxs-lookup"><span data-stu-id="0035c-176">Receiving the Adaptive Card</span></span>
 
-![Teams 中的自适应卡片，要求员工提供状态更新。](../../images/scenario-task-reminders-adaptive-card.png)
+:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="Teams 中的自适应卡片，要求员工提供状态更新。":::
 
-### <a name="after-running-the-flow"></a><span data-ttu-id="20592-178">运行流后</span><span class="sxs-lookup"><span data-stu-id="20592-178">After running the flow</span></span>
+### <a name="after-running-the-flow"></a><span data-ttu-id="0035c-178">运行流后</span><span class="sxs-lookup"><span data-stu-id="0035c-178">After running the flow</span></span>
 
-![包含状态报告的工作表，现在填充了状态条目。](../../images/scenario-task-reminders-spreadsheet-after.png)
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="包含状态报告的工作表，现在填充了状态条目。":::

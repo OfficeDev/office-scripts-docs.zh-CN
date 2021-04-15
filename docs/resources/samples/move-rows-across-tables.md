@@ -3,33 +3,33 @@ title: 使用 Office 脚本跨表移动行
 description: 了解如何通过保存筛选器，然后处理和重新应用筛选器来跨表移动行。
 ms.date: 03/30/2021
 localization_priority: Normal
-ms.openlocfilehash: 0a66c8ff0f8e0e7b7f074ad77e8c660fc80b50a9
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 1adaeee1c8307d7775529496df115563831aed4d
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571103"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755040"
 ---
-# <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a><span data-ttu-id="38a9b-103">通过保存筛选器，然后处理和重新应用筛选器，跨表移动行</span><span class="sxs-lookup"><span data-stu-id="38a9b-103">Move rows across tables by saving filters, then processing and reapplying the filters</span></span>
+# <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a><span data-ttu-id="e0e8e-103">通过保存筛选器，然后处理和重新应用筛选器，跨表移动行</span><span class="sxs-lookup"><span data-stu-id="e0e8e-103">Move rows across tables by saving filters, then processing and reapplying the filters</span></span>
 
-<span data-ttu-id="38a9b-104">此脚本执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="38a9b-104">This script does the following:</span></span>
+<span data-ttu-id="e0e8e-104">此脚本执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="e0e8e-104">This script does the following:</span></span>
 
-* <span data-ttu-id="38a9b-105">从源表中选择行，其中列中的值等于 _某个值_。</span><span class="sxs-lookup"><span data-stu-id="38a9b-105">Selects rows from the source table where the value in a column is equal to _some value_.</span></span>
-* <span data-ttu-id="38a9b-106">将所有选定的行移动到另一 (工作表) 中的目标行。</span><span class="sxs-lookup"><span data-stu-id="38a9b-106">Moves all selected rows into another (target) table on another worksheet.</span></span>
-* <span data-ttu-id="38a9b-107">重新应用源表上的相关筛选器。</span><span class="sxs-lookup"><span data-stu-id="38a9b-107">Reapplies the relevant filters on the source table.</span></span>
+* <span data-ttu-id="e0e8e-105">从源表中选择行，其中列中的值等于 _某个值_。</span><span class="sxs-lookup"><span data-stu-id="e0e8e-105">Selects rows from the source table where the value in a column is equal to _some value_.</span></span>
+* <span data-ttu-id="e0e8e-106">将所有选定的行移动到另一 (工作表) 中的目标行。</span><span class="sxs-lookup"><span data-stu-id="e0e8e-106">Moves all selected rows into another (target) table on another worksheet.</span></span>
+* <span data-ttu-id="e0e8e-107">重新应用源表上的相关筛选器。</span><span class="sxs-lookup"><span data-stu-id="e0e8e-107">Reapplies the relevant filters on the source table.</span></span>
 
-![工作簿之前和之后屏幕截图](../../images/table-filter-before-after.png)
+:::image type="content" source="../../images/table-filter-before-after.png" alt-text="工作簿之前和之后屏幕截图":::
 
-<span data-ttu-id="38a9b-109">此解决方案有两个脚本。</span><span class="sxs-lookup"><span data-stu-id="38a9b-109">There are two scripts in this solution.</span></span> <span data-ttu-id="38a9b-110">主要区别是如何选择行。</span><span class="sxs-lookup"><span data-stu-id="38a9b-110">The main difference is how the rows are selected.</span></span>
+<span data-ttu-id="e0e8e-109">此解决方案有两个脚本。</span><span class="sxs-lookup"><span data-stu-id="e0e8e-109">There are two scripts in this solution.</span></span> <span data-ttu-id="e0e8e-110">主要区别是如何选择行。</span><span class="sxs-lookup"><span data-stu-id="e0e8e-110">The main difference is how the rows are selected.</span></span>
 
-* <span data-ttu-id="38a9b-111">第 [一个变量](#sample-code-move-rows-using-table-filter)是，通过应用表格筛选器并读取可见区域来选择行。</span><span class="sxs-lookup"><span data-stu-id="38a9b-111">In the [first variant](#sample-code-move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.</span></span>
-* <span data-ttu-id="38a9b-112">第 [二](#sample-code-move-rows-using-range-values)种是，通过读取值并提取行值来选择行。</span><span class="sxs-lookup"><span data-stu-id="38a9b-112">In the [second](#sample-code-move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.</span></span>
+* <span data-ttu-id="e0e8e-111">第 [一个变量](#sample-code-move-rows-using-table-filter)是，通过应用表格筛选器并读取可见区域来选择行。</span><span class="sxs-lookup"><span data-stu-id="e0e8e-111">In the [first variant](#sample-code-move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.</span></span>
+* <span data-ttu-id="e0e8e-112">第 [二](#sample-code-move-rows-using-range-values)种是，通过读取值并提取行值来选择行。</span><span class="sxs-lookup"><span data-stu-id="e0e8e-112">In the [second](#sample-code-move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.</span></span>
 
-## <a name="sample-excel-file"></a><span data-ttu-id="38a9b-113">示例 Excel 文件</span><span class="sxs-lookup"><span data-stu-id="38a9b-113">Sample Excel file</span></span>
+## <a name="sample-excel-file"></a><span data-ttu-id="e0e8e-113">示例 Excel 文件</span><span class="sxs-lookup"><span data-stu-id="e0e8e-113">Sample Excel file</span></span>
 
-<span data-ttu-id="38a9b-114">下载此 <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> 中使用的文件，以尝试一下！</span><span class="sxs-lookup"><span data-stu-id="38a9b-114">Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this solution to try it out yourself!</span></span>
+<span data-ttu-id="e0e8e-114">下载此 <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> 中使用的文件，以尝试一下！</span><span class="sxs-lookup"><span data-stu-id="e0e8e-114">Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this solution to try it out yourself!</span></span>
 
-## <a name="sample-code-move-rows-using-table-filter"></a><span data-ttu-id="38a9b-115">示例代码：使用表筛选器移动行</span><span class="sxs-lookup"><span data-stu-id="38a9b-115">Sample code: Move rows using table filter</span></span>
+## <a name="sample-code-move-rows-using-table-filter"></a><span data-ttu-id="e0e8e-115">示例代码：使用表筛选器移动行</span><span class="sxs-lookup"><span data-stu-id="e0e8e-115">Sample code: Move rows using table filter</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -146,7 +146,7 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 }
 ```
 
-## <a name="sample-code-move-rows-using-range-values"></a><span data-ttu-id="38a9b-116">示例代码：使用范围值移动行</span><span class="sxs-lookup"><span data-stu-id="38a9b-116">Sample code: Move rows using range values</span></span>
+## <a name="sample-code-move-rows-using-range-values"></a><span data-ttu-id="e0e8e-116">示例代码：使用范围值移动行</span><span class="sxs-lookup"><span data-stu-id="e0e8e-116">Sample code: Move rows using range values</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -247,6 +247,6 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 }
 ```
 
-## <a name="training-video-move-rows-across-tables"></a><span data-ttu-id="38a9b-117">培训视频：跨表移动行</span><span class="sxs-lookup"><span data-stu-id="38a9b-117">Training video: Move rows across tables</span></span>
+## <a name="training-video-move-rows-across-tables"></a><span data-ttu-id="e0e8e-117">培训视频：跨表移动行</span><span class="sxs-lookup"><span data-stu-id="e0e8e-117">Training video: Move rows across tables</span></span>
 
-<span data-ttu-id="38a9b-118">[![观看如何跨表移动行的分步视频](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "如何跨表移动行的分步视频")</span><span class="sxs-lookup"><span data-stu-id="38a9b-118">[![Watch step-by-step video on how to move rows across tables](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Step-by-step video on how to move rows across tables")</span></span>
+<span data-ttu-id="e0e8e-118">[![观看如何跨表移动行的分步视频](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "如何跨表移动行的分步视频")</span><span class="sxs-lookup"><span data-stu-id="e0e8e-118">[![Watch step-by-step video on how to move rows across tables](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Step-by-step video on how to move rows across tables")</span></span>

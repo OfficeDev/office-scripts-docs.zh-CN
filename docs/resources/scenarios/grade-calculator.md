@@ -1,37 +1,37 @@
 ---
-title: Office 脚本示例方案：年级计算器
-description: 一个用于确定一类学生的百分比和信函等级的示例。
-ms.date: 07/24/2020
+title: Office 脚本示例方案：成绩计算器
+description: 确定一类学生成绩的百分比和字母成绩的示例。
+ms.date: 12/17/2020
 localization_priority: Normal
-ms.openlocfilehash: 4e488c6cc67bda9122b88c55070654632d9c7fa2
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: b8c45ad405c06a943c75e76391c1160ecb1bd18e
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616737"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755026"
 ---
-# <a name="office-scripts-sample-scenario-grade-calculator"></a><span data-ttu-id="3843d-103">Office 脚本示例方案：年级计算器</span><span class="sxs-lookup"><span data-stu-id="3843d-103">Office Scripts sample scenario: Grade calculator</span></span>
+# <a name="office-scripts-sample-scenario-grade-calculator"></a><span data-ttu-id="14613-103">Office 脚本示例方案：成绩计算器</span><span class="sxs-lookup"><span data-stu-id="14613-103">Office Scripts sample scenario: Grade calculator</span></span>
 
-<span data-ttu-id="3843d-104">在这种情况下，您是每位学生的长期成绩的指导员计数。</span><span class="sxs-lookup"><span data-stu-id="3843d-104">In this scenario, you're an instructor tallying every student's end-of-term grades.</span></span> <span data-ttu-id="3843d-105">你已为工作分配和测试输入分数。</span><span class="sxs-lookup"><span data-stu-id="3843d-105">You've been entering the scores for their assignments and tests as you go.</span></span> <span data-ttu-id="3843d-106">现在，我们来确定学生的 fates。</span><span class="sxs-lookup"><span data-stu-id="3843d-106">Now, it is time to determine the students' fates.</span></span>
+<span data-ttu-id="14613-104">在此方案中，你是一名教师，对每位学生的学期结束成绩进行评分。</span><span class="sxs-lookup"><span data-stu-id="14613-104">In this scenario, you're an instructor tallying every student's end-of-term grades.</span></span> <span data-ttu-id="14613-105">你一直在输入他们的工作分配和测试的分数。</span><span class="sxs-lookup"><span data-stu-id="14613-105">You've been entering the scores for their assignments and tests as you go.</span></span> <span data-ttu-id="14613-106">现在，是时候确定学生了。</span><span class="sxs-lookup"><span data-stu-id="14613-106">Now, it is time to determine the students' fates.</span></span>
 
-<span data-ttu-id="3843d-107">您将开发一个用于汇总每个点类别的成绩的脚本。</span><span class="sxs-lookup"><span data-stu-id="3843d-107">You'll develop a script that totals the grades for each point category.</span></span> <span data-ttu-id="3843d-108">然后，它将根据总数向每个学生分配一个信函等级。</span><span class="sxs-lookup"><span data-stu-id="3843d-108">It will then assign a letter grade to each student based on the total.</span></span> <span data-ttu-id="3843d-109">为了帮助确保准确性，您将添加两个检查，以查看是否有任何单个分数太低或过高。</span><span class="sxs-lookup"><span data-stu-id="3843d-109">To help ensure accuracy, you'll add a couple checks to see if any individual scores are too low or high.</span></span> <span data-ttu-id="3843d-110">如果学生的分数小于零或大于可能的磅值，则该脚本将使用红色填充标记单元格，而不是学生的分数的总和。</span><span class="sxs-lookup"><span data-stu-id="3843d-110">If a student's score is less than zero or more than the possible point value, the script will flag the cell with a red fill and not total that student's points.</span></span> <span data-ttu-id="3843d-111">这将明确指出需要进行双重检查的记录。</span><span class="sxs-lookup"><span data-stu-id="3843d-111">This will be a clear indication of which records you need to double-check.</span></span> <span data-ttu-id="3843d-112">您还将向成绩添加一些基本格式，以便您可以快速查看课程的顶部和底部。</span><span class="sxs-lookup"><span data-stu-id="3843d-112">You'll also add some basic formatting to the grades so you can quickly view the top and bottom of the class.</span></span>
+<span data-ttu-id="14613-107">您将开发一个脚本，该脚本将针对每个分数类别对成绩进行总计。</span><span class="sxs-lookup"><span data-stu-id="14613-107">You'll develop a script that totals the grades for each point category.</span></span> <span data-ttu-id="14613-108">然后，它将基于总数为每个学生分配一个信函成绩。</span><span class="sxs-lookup"><span data-stu-id="14613-108">It will then assign a letter grade to each student based on the total.</span></span> <span data-ttu-id="14613-109">为了帮助确保准确性，你将添加一些检查，以查看个别分数是否太低或太高。</span><span class="sxs-lookup"><span data-stu-id="14613-109">To help ensure accuracy, you'll add a couple checks to see if any individual scores are too low or high.</span></span> <span data-ttu-id="14613-110">如果学生的分数小于零或大于可能的分数值，该脚本将用红色填充标记该单元格，而不是该学生的总分。</span><span class="sxs-lookup"><span data-stu-id="14613-110">If a student's score is less than zero or more than the possible point value, the script will flag the cell with a red fill and not total that student's points.</span></span> <span data-ttu-id="14613-111">这将清楚地指示需要仔细检查哪些记录。</span><span class="sxs-lookup"><span data-stu-id="14613-111">This will be a clear indication of which records you need to double-check.</span></span> <span data-ttu-id="14613-112">你还将向成绩添加一些基本格式，以便快速查看课程的顶部和底部。</span><span class="sxs-lookup"><span data-stu-id="14613-112">You'll also add some basic formatting to the grades so you can quickly view the top and bottom of the class.</span></span>
 
-## <a name="scripting-skills-covered"></a><span data-ttu-id="3843d-113">涵盖的脚本技能</span><span class="sxs-lookup"><span data-stu-id="3843d-113">Scripting skills covered</span></span>
+## <a name="scripting-skills-covered"></a><span data-ttu-id="14613-113">涵盖的脚本编写技能</span><span class="sxs-lookup"><span data-stu-id="14613-113">Scripting skills covered</span></span>
 
-- <span data-ttu-id="3843d-114">单元格格式</span><span class="sxs-lookup"><span data-stu-id="3843d-114">Cell formatting</span></span>
-- <span data-ttu-id="3843d-115">错误检查</span><span class="sxs-lookup"><span data-stu-id="3843d-115">Error checking</span></span>
-- <span data-ttu-id="3843d-116">正则表达式</span><span class="sxs-lookup"><span data-stu-id="3843d-116">Regular expressions</span></span>
-- <span data-ttu-id="3843d-117">条件格式</span><span class="sxs-lookup"><span data-stu-id="3843d-117">Conditional formatting</span></span>
+- <span data-ttu-id="14613-114">单元格格式</span><span class="sxs-lookup"><span data-stu-id="14613-114">Cell formatting</span></span>
+- <span data-ttu-id="14613-115">错误检查</span><span class="sxs-lookup"><span data-stu-id="14613-115">Error checking</span></span>
+- <span data-ttu-id="14613-116">正则表达式</span><span class="sxs-lookup"><span data-stu-id="14613-116">Regular expressions</span></span>
+- <span data-ttu-id="14613-117">条件格式</span><span class="sxs-lookup"><span data-stu-id="14613-117">Conditional formatting</span></span>
 
-## <a name="setup-instructions"></a><span data-ttu-id="3843d-118">设置说明</span><span class="sxs-lookup"><span data-stu-id="3843d-118">Setup instructions</span></span>
+## <a name="setup-instructions"></a><span data-ttu-id="14613-118">设置说明</span><span class="sxs-lookup"><span data-stu-id="14613-118">Setup instructions</span></span>
 
-1. <span data-ttu-id="3843d-119">将<a href="grade-calculator.xlsx">grade-calculator.xlsx</a>下载到你的 OneDrive。</span><span class="sxs-lookup"><span data-stu-id="3843d-119">Download <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> to your OneDrive.</span></span>
+1. <span data-ttu-id="14613-119">将 <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> 下载到 OneDrive。</span><span class="sxs-lookup"><span data-stu-id="14613-119">Download <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> to your OneDrive.</span></span>
 
-2. <span data-ttu-id="3843d-120">使用适用于 web 的 Excel 打开工作簿。</span><span class="sxs-lookup"><span data-stu-id="3843d-120">Open the workbook with Excel for the web.</span></span>
+2. <span data-ttu-id="14613-120">使用 Excel 网页应用打开工作簿。</span><span class="sxs-lookup"><span data-stu-id="14613-120">Open the workbook with Excel for the web.</span></span>
 
-3. <span data-ttu-id="3843d-121">在 "**自动化**" 选项卡上，打开**代码编辑器**。</span><span class="sxs-lookup"><span data-stu-id="3843d-121">Under the **Automate** tab, open the **Code Editor**.</span></span>
+3. <span data-ttu-id="14613-121">在"**自动化"选项卡** 下，打开 **"所有脚本"。**</span><span class="sxs-lookup"><span data-stu-id="14613-121">Under the **Automate** tab, open **All Scripts**.</span></span>
 
-4. <span data-ttu-id="3843d-122">在 "**代码编辑器**" 任务窗格中，按 "**新建脚本**"，并将以下脚本粘贴到编辑器中。</span><span class="sxs-lookup"><span data-stu-id="3843d-122">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
+4. <span data-ttu-id="14613-122">在" **代码编辑器"** 任务窗格中，按 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。</span><span class="sxs-lookup"><span data-stu-id="14613-122">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -51,9 +51,9 @@ ms.locfileid: "46616737"
 
       // Use regular expressions to read the max score from the assignment, mid-term, and final scores columns.
       let maxScores: string[] = [];
-      const assignmentMaxMatches = studentData[0][1].match(/\d+/);
-      const midtermMaxMatches = studentData[0][2].match(/\d+/);
-      const finalMaxMatches = studentData[0][3].match(/\d+/);
+      const assignmentMaxMatches = (studentData[0][1] as string).match(/\d+/);
+      const midtermMaxMatches = (studentData[0][2] as string).match(/\d+/);
+      const finalMaxMatches = (studentData[0][3] as string).match(/\d+/);
 
       // Check the matches happened before proceeding.
       if (!(assignmentMaxMatches && midtermMaxMatches && finalMaxMatches)) {
@@ -89,7 +89,7 @@ ms.locfileid: "46616737"
           studentData[i][3] > maxScores[2]) {
           continue;
         }
-        const total = studentData[i][1] + studentData[i][2] + studentData[i][3];
+        const total = (studentData[i][1] as number) + (studentData[i][2] as number) + (studentData[i][3] as number);
         let grade: string;
         switch (true) {
           case total < 60:
@@ -108,7 +108,7 @@ ms.locfileid: "46616737"
             grade = "A";
             break;
         }
-
+    
         // Set total score formula.
         studentsRangeFormulas[i][0] = '=RC[-2]+RC[-1]';
         // Set grade cell.
@@ -166,24 +166,24 @@ ms.locfileid: "46616737"
       }
 
       // Apply conditional formatting.
-      let conditionalFormatting : ExcelScript.ConditionalFormat;
+      let conditionalFormatting: ExcelScript.ConditionalFormat;
       conditionalFormatting = range.addConditionalFormat(ExcelScript.ConditionalFormatType.cellValue);
       conditionalFormatting.getCellValue().getFormat().getFont().setColor(fontColor);
       conditionalFormatting.getCellValue().getFormat().getFill().setColor(fillColor);
-      conditionalFormatting.getCellValue().setRule({formula1, operator});
+      conditionalFormatting.getCellValue().setRule({ formula1, operator });
     }
     ```
 
-5. <span data-ttu-id="3843d-123">将脚本重命名为**评分计算器**并保存它。</span><span class="sxs-lookup"><span data-stu-id="3843d-123">Rename the script to **Grade Calculator** and save it.</span></span>
+5. <span data-ttu-id="14613-123">将脚本重命名 **为成绩计算器** 并保存它。</span><span class="sxs-lookup"><span data-stu-id="14613-123">Rename the script to **Grade Calculator** and save it.</span></span>
 
-## <a name="running-the-script"></a><span data-ttu-id="3843d-124">运行脚本</span><span class="sxs-lookup"><span data-stu-id="3843d-124">Running the script</span></span>
+## <a name="running-the-script"></a><span data-ttu-id="14613-124">运行脚本</span><span class="sxs-lookup"><span data-stu-id="14613-124">Running the script</span></span>
 
-<span data-ttu-id="3843d-125">在唯一的工作表上运行**年级计算器**脚本。</span><span class="sxs-lookup"><span data-stu-id="3843d-125">Run the **Grade Calculator** script on the only worksheet.</span></span> <span data-ttu-id="3843d-126">该脚本将对分数进行合计并为每个学生分配一个字母等级。</span><span class="sxs-lookup"><span data-stu-id="3843d-126">The script will total the grades and assign each student a letter grade.</span></span> <span data-ttu-id="3843d-127">如果任何一年级的分数多于工作分配或测试的数量，则会将有问题的等级标记为红色，并且不计算总计。</span><span class="sxs-lookup"><span data-stu-id="3843d-127">If any individual grades have more points than the assignment or test is worth, then the offending grade is marked red and the total is not calculated.</span></span> <span data-ttu-id="3843d-128">此外，任何 ' A ' 等级都以绿色突出显示，而 ' F ' 等级以黄色加亮显示。</span><span class="sxs-lookup"><span data-stu-id="3843d-128">Also, any 'A' grades are highlighted in green, while 'D' and 'F' grades are highlighted in yellow.</span></span>
+<span data-ttu-id="14613-125">在唯 **一的工作表** 上运行成绩计算器脚本。</span><span class="sxs-lookup"><span data-stu-id="14613-125">Run the **Grade Calculator** script on the only worksheet.</span></span> <span data-ttu-id="14613-126">该脚本将总计成绩，并为每个学生分配一个信函成绩。</span><span class="sxs-lookup"><span data-stu-id="14613-126">The script will total the grades and assign each student a letter grade.</span></span> <span data-ttu-id="14613-127">如果任何单个成绩的分数大于作业或测试的分数，则有问题的成绩将标记为红色，不计算总分。</span><span class="sxs-lookup"><span data-stu-id="14613-127">If any individual grades have more points than the assignment or test is worth, then the offending grade is marked red and the total is not calculated.</span></span> <span data-ttu-id="14613-128">此外，任何"A"成绩都用绿色突出显示，而"D"和"F"成绩用黄色突出显示。</span><span class="sxs-lookup"><span data-stu-id="14613-128">Also, any 'A' grades are highlighted in green, while 'D' and 'F' grades are highlighted in yellow.</span></span>
 
-### <a name="before-running-the-script"></a><span data-ttu-id="3843d-129">运行脚本之前</span><span class="sxs-lookup"><span data-stu-id="3843d-129">Before running the script</span></span>
+### <a name="before-running-the-script"></a><span data-ttu-id="14613-129">运行脚本之前</span><span class="sxs-lookup"><span data-stu-id="14613-129">Before running the script</span></span>
 
-![显示学生的分数行的工作表。](../../images/scenario-grade-calculator-before.png)
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="显示学生分数行的工作表。":::
 
-### <a name="after-running-the-script"></a><span data-ttu-id="3843d-131">运行脚本后</span><span class="sxs-lookup"><span data-stu-id="3843d-131">After running the script</span></span>
+### <a name="after-running-the-script"></a><span data-ttu-id="14613-131">运行脚本后</span><span class="sxs-lookup"><span data-stu-id="14613-131">After running the script</span></span>
 
-![在有效学生行中显示带有红色总计的无效单元格的学生分数数据的工作表。](../../images/scenario-grade-calculator-after.png)
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="一个工作表，用于显示有效学生行的学生分数数据，并包含红色总计中的无效单元格。":::
