@@ -4,12 +4,12 @@ description: 有关 Office 脚本的基础知识，包括访问、环境和脚�
 ms.date: 04/01/2021
 localization_priority: Normal
 ROBOTS: NOINDEX
-ms.openlocfilehash: c1c4675b2fdc1f5ebd9e86f04f5fb011c27a3f1b
-ms.sourcegitcommit: 190ae1c071243f4638d0d650e35f1425914b0156
+ms.openlocfilehash: 42b71a21470ac38535e3e95f091ec6267806e54a
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51650365"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755054"
 ---
 # <a name="getting-started"></a>入门
 
@@ -97,7 +97,7 @@ Office 脚本的执行从 函数 `main` 开始。 脚本是包含一个或多个
 * `main`函数是任何脚本的入口点。 执行函数时，Excel 应用程序通过提供工作簿作为其第一个参数来调用此主函数。
 * 在显示时保留第一个参数 `workbook` 及其类型声明很重要。 你可以向函数添加新参数 (请参阅下一节) 但第一个参数保持 `main` 为正常。
 
-![主函数是脚本的入口点](../../images/getting-started-main-introduction.png)
+:::image type="content" source="../../images/getting-started-main-introduction.png" alt-text="主函数是脚本的入口点":::
 
 #### <a name="send-or-receive-data-from-other-apps"></a>发送或接收来自其他应用的数据
 
@@ -105,13 +105,13 @@ Office 脚本的执行从 函数 `main` 开始。 脚本是包含一个或多个
 
 从 Excel 接收数据或将数据发送到 Excel 的方式是通过 `main` 函数。 将它视为信息网关，允许在脚本中描述和使用传入和传出数据。 可以使用 数据类型 从脚本外部接收数据，并返回任何 TypeScript 识别的数据（如 、 、 或 在脚本中定义的接口形式的任何 `string` `string` `number` `boolean` 对象）。
 
-![脚本的输入和输出](../../images/getting-started-data-in-out.png)
+:::image type="content" source="../../images/getting-started-data-in-out.png" alt-text="脚本的输入和输出":::
 
 #### <a name="use-functions-to-organize-and-reuse-code"></a>使用函数组织和重复使用代码
 
 可以使用函数在脚本中组织和重复使用代码。
 
-![在脚本中使用函数](../../images/getting-started-use-functions.png)
+:::image type="content" source="../../images/getting-started-use-functions.png" alt-text="在脚本中使用函数":::
 
 ### <a name="objects-hierarchy-methods-properties-collections"></a>对象、层次结构、方法、属性、集合
 
@@ -496,9 +496,9 @@ let someVariable: any;
 
 类型为 Office 脚本处理 Excel API 的方式 `any` 带来了挑战。 当将变量发送到 Excel API 进行处理时，会导致问题。 了解脚本中使用的变量类型对于处理脚本至关重要，因此禁止对具有类型的任何变量进行 `any` 显式定义。 如果脚本中声明了类型的任何 (，在运行脚本脚本之前) 出现编译时 `any` 错误。 You will see an error in the editor as well.
 
-![显式"任何"错误](../../images/getting-started-eanyi.png)
+:::image type="content" source="../../images/getting-started-eanyi.png" alt-text="显式&quot;任何&quot;错误":::
 
-![输出中显示的显式"任何"错误](../../images/getting-started-expany.png)
+:::image type="content" source="../../images/getting-started-expany.png" alt-text="输出中显示的显式&quot;任何&quot;错误":::
 
 在上一图像中显示的代码中，指示第 5 行 `[5, 16] Explicit Any is not allowed` 16 列声明 `any` 类型。 这可以帮助您找到包含错误的代码行。
 
@@ -529,7 +529,7 @@ let x = 3;
 
 脚本需要用于显式或隐式声明的变量类型。 如果 TypeScript 编译器无法确定变量 (或者因为类型未显式声明或类型推断无法进行) ，则你将在运行脚本) 之前收到编译时间错误 (错误。 You will see an error in the editor as well.
 
-![编辑器中显示的隐式"任何"错误](../../images/getting-started-iany.png)
+:::image type="content" source="../../images/getting-started-iany.png" alt-text="编辑器中显示的隐式&quot;any&quot;错误。":::
 
 以下脚本有编译时间错误，因为声明变量时没有类型，并且 TypeScript 无法确定声明时的类型。
 
@@ -590,15 +590,15 @@ Office 脚本错误可以分为以下类别之一。
 
 可以在编辑器中用红色波浪下划线标识编辑器警告：
 
-![编辑器中显示的编译时警告](../../images/getting-started-eanyi.png)
+:::image type="content" source="../../images/getting-started-eanyi.png" alt-text="编辑器中显示的编译时警告":::
 
 有时，还可能会看到橙色警告下划线和灰色信息性消息。 应仔细检查它们，尽管它们不会导致错误。
 
 无法区分编译时错误和运行时错误，因为两条错误消息看起来相同。 当您实际执行脚本时，这两者均会发生。 下图显示了编译时错误和运行时错误的示例。
 
-![编译时错误的示例](../../images/getting-started-expany.png)
+:::image type="content" source="../../images/getting-started-expany.png" alt-text="编译时错误的示例":::
 
-![运行时错误示例](../../images/getting-started-error-basic.png)
+:::image type="content" source="../../images/getting-started-error-basic.png" alt-text="运行时错误示例":::
 
 在这两种情况下，你将看到发生错误的行号。 然后，你可以检查代码、修复问题，然后再次运行。
 

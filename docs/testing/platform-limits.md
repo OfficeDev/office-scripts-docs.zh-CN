@@ -3,12 +3,12 @@ title: Office 脚本的平台限制和要求
 description: 与 Excel 网页 Excel 一同使用时，Office 脚本的资源限制和浏览器支持
 ms.date: 03/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 93307b6204f409f26c77b5ead33188205d5c4b4d
-ms.sourcegitcommit: 5bde455b06ee2ed007f3e462d8ad485b257774ef
+ms.openlocfilehash: ef733562fb3caa8261fbbd8382923927a46cb7d4
+ms.sourcegitcommit: 5ca286615a11d282e3f80023d22d36a039800eed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "50837263"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51689764"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Office 脚本的平台限制和要求
 
@@ -49,7 +49,7 @@ Office 脚本适用于任何支持 [Office 网页的浏览器](https://support.m
 
 ### <a name="power-automate"></a>Power Automate
 
-将 Office 脚本与 Power Automate 一同使用时，每个用户每天只能进行 **200 次调用**。 此限制在 UTC 时间上午 12：00 重置。
+将 Office 脚本与 Power Automate 一同使用时，每个用户每天只能调用 **400 次运行脚本操作**。 此限制在 UTC 时间上午 12：00 重置。
 
 Power Automate 平台还具有使用限制，可在以下文章中找到这些限制：
 

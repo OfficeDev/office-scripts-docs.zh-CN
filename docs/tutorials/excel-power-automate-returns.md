@@ -3,12 +3,12 @@ title: 从脚本返回数据到自动运行 Power Automated 流
 description: 本教程演示了如何通过 Power Automate 运行适用于 Excel 网页版的 Office 脚本来发送提醒电子邮件。
 ms.date: 12/15/2020
 localization_priority: Priority
-ms.openlocfilehash: 31ba31ddbfb36f20087be6aa7d83b1b896a698d1
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 0c8d8f308147d727a0a5880c11c9c0d924149fb2
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570528"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754899"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow-preview"></a>从脚本返回数据到自动运行 Power Automated 流（预览） 
 
@@ -36,7 +36,7 @@ ms.locfileid: "51570528"
     > [!IMPORTANT]
     > 要编写的脚本使用表中第一个匹配的条目，因此请确保你的名称位于当前周的任何行的上方。
 
-    ![Excel 电子表格中的待命轮换表屏幕截图](../images/power-automate-return-tutorial-1.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="包含呼叫旋转表格数据的工作表。":::
 
 ## <a name="create-an-office-script"></a>创建 Office 脚本
 
@@ -129,11 +129,11 @@ ms.locfileid: "51570528"
 
 1. 在屏幕左侧显示的菜单中，按 "**创建**"。 这将带你进入创建新工作流的方式列表。
 
-    ![Power Automate 中的“创建”按钮。](../images/power-automate-tutorial-1.png)
+    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate 中的&quot;创建&quot;按钮":::
 
 1. 在“**从空白开始**”部分下，选择“**计划云流**”。
 
-    ![Power Automate 中的“已计划云流”按钮](../images/power-automate-return-tutorial-2.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-2.png" alt-text="Power Automate 中的&quot;计划云流&quot;按钮":::
 
 1. 现在需要为这个流程设置时间表。 从 2021 年上半年开始，电子表格在每周一都有一个新的待命任务。 把流设置为星期一早上的首个运行的项。 使用以下选项将流配置为每周星期一运行。
 
@@ -142,7 +142,7 @@ ms.locfileid: "51570528"
     - **重复间隔**：1 周
     - **这些日期**：星期一
 
-    ![显示已计划流的指定选项的窗口](../images/power-automate-return-tutorial-3.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="Power Automate &quot;生成计划云流&quot;对话框显示选项。选项包括流名称、开始时间、重复时间以及一周中的哪一天运行流。":::
 
 1. 按“**创建**”。
 
@@ -150,11 +150,11 @@ ms.locfileid: "51570528"
 
 1. 选择 "**标准**" 选项卡，然后选择 "**Excel Online （企业）**"。
 
-    ![Power Automate 中的 Excel Online（商业版）选项](../images/power-automate-tutorial-4.png)
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate 中的 Excel Online（商业版）选项":::
 
 1. 在 "**操作**"下，选择 **运行脚本（预览版）**。
 
-    ![Power Automate 中的“运行脚本”（预览版）操作选项](../images/power-automate-tutorial-5.png)
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate 中的“运行脚本”（预览版）操作选项":::
 
 1. 接下来，选择要在流步骤中使用的工作簿和脚本。 使用 **on-call-rotation.xlsx** 在 OneDrive 中创建的工作簿。 为 **运行脚本** 连接器指定以下设置：
 
@@ -163,13 +163,13 @@ ms.locfileid: "51570528"
     - **文件**: on-call-rotation.xlsx *（通过文件浏览器选择）*
     - **脚本**：获取待命人员
 
-    ![Power Automate 中用于运行脚本的连接器设置](../images/power-automate-return-tutorial-4.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="用于运行脚本的 Power Automate 连接器设置。":::
 
 1. 按 **"新建步骤"**。
 
 1. 我们将通过发送提醒邮件来结束流。 使用连接器的搜索栏选择“**发送电子邮件 (V2)**”。 使用“**新增动态内容**”控件添加脚本返回的电子邮件地址。 这将被标记为 **结果**，旁边有 Excel 图标。 可以提供你想要的任何主题和正文。
 
-    ![在 Power Automate 中发送电子邮件的连接器设置](../images/power-automate-return-tutorial-5.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="用于发送电子邮件的 Power Automate Outlook 连接器设置。选项包括要发送的文件、电子邮件主题、电子邮件正文以及高级选项。":::
 
     > [!NOTE]
     > 本教程使用 Outlook。 可改为使用你喜欢的电子邮件服务，但某些选项可能不同。
@@ -180,7 +180,7 @@ ms.locfileid: "51570528"
 
 你的流将在每周一早上运行。 现在可以通过按屏幕右上角的“**测试**”按钮来测试脚本。 选择“**手动**”并按 **“运行测试”** 来立即运行流并测试行为。 可能需要向 Excel 和 Outlook 授予权限才能继续。
 
-![Power Automate 测试按钮](../images/power-automate-return-tutorial-6.png)
+:::image type="content" source="../images/power-automate-return-tutorial-6.png" alt-text="&quot;Power Automate Test&quot;按钮":::
 
 > [!TIP]
 > 如果流无法发送电子邮件，请在电子表格中仔细检查是否在表格顶部列出了当前日期范围的有效电子邮件。

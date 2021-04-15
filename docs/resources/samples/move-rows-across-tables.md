@@ -3,12 +3,12 @@ title: 使用 Office 脚本跨表移动行
 description: 了解如何通过保存筛选器，然后处理和重新应用筛选器来跨表移动行。
 ms.date: 03/30/2021
 localization_priority: Normal
-ms.openlocfilehash: 0a66c8ff0f8e0e7b7f074ad77e8c660fc80b50a9
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 1adaeee1c8307d7775529496df115563831aed4d
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571103"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755040"
 ---
 # <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>通过保存筛选器，然后处理和重新应用筛选器，跨表移动行
 
@@ -18,7 +18,7 @@ ms.locfileid: "51571103"
 * 将所有选定的行移动到另一 (工作表) 中的目标行。
 * 重新应用源表上的相关筛选器。
 
-![工作簿之前和之后屏幕截图](../../images/table-filter-before-after.png)
+:::image type="content" source="../../images/table-filter-before-after.png" alt-text="工作簿之前和之后屏幕截图":::
 
 此解决方案有两个脚本。 主要区别是如何选择行。
 

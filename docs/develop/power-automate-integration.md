@@ -1,62 +1,62 @@
 ---
-title: 使用 Power 自动运行 Office 脚本
-description: 如何在使用 Power 自动工作流的网站上获取适用于 Excel 的 Office 脚本。
-ms.date: 07/24/2020
+title: 使用 Power Automate 运行 Office 脚本
+description: 如何让适用于 Excel 网页的 Office 脚本与 Power Automate 工作流一起运行。
+ms.date: 12/16/2020
 localization_priority: Normal
-ms.openlocfilehash: 87bd4e15ef7680a7456077494e3fda8208d6b9d8
-ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
+ms.openlocfilehash: 1ca9aa14efe7cf2c91100a32fbc9a69054012f06
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "47321570"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755068"
 ---
-# <a name="run-office-scripts-with-power-automate"></a>使用 Power 自动运行 Office 脚本
+# <a name="run-office-scripts-with-power-automate"></a>使用 Power Automate 运行 Office 脚本
 
-通过使用[电源自动化](https://flow.microsoft.com)，可以将 Office 脚本添加到更大的自动化工作流中。 您可以使用 Power 自动执行操作，例如，将电子邮件的内容添加到工作表的表中，或在基于工作簿注释的项目管理工具中创建操作。
+[Power Automate](https://flow.microsoft.com) 允许你将 Office 脚本添加到更大的自动化工作流。 可以使用 Power Automate 执行一些操作，如将电子邮件内容添加到工作表表中，或在项目管理工具中基于工作簿注释创建操作。
 
-## <a name="getting-started"></a>开始使用
+## <a name="getting-started"></a>入门
 
-如果你刚开始使用 "电源自动化"，我们建议 [使用 Power 自动化获取访问入门](/power-automate/getting-started)。 在这里，你可以了解有关你可使用的所有自动化可能性的详细信息。 此处的文档重点介绍 Office 脚本与电源自动化的工作方式，以及如何帮助改进 Excel 体验。
+如果你刚开始使用 Power Automate，我们建议访问 Power [Automate 入门](/power-automate/getting-started)。 在那里，你可以了解有关所有可用的自动化可能性的信息。 此处的文档重点介绍 Office 脚本如何与 Power Automate 一起运行，以及这如何有助于改善 Excel 体验。
 
-若要开始结合使用电源自动化功能和 Office 脚本，请遵循教程 [开始使用启用电源自动化的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 在完成了教程和将 [数据传递到自动运行电源自动化流教程中的脚本](../tutorials/excel-power-automate-trigger.md) 之后，请返回此处以了解有关连接 Office 脚本以实现自动处理功能流的详细信息。
+若要开始组合 Power Automate 和 Office 脚本，请按照教程开始使用 Power [Automate 中的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 完成本教程和自动运行的 [Power Automate](../tutorials/excel-power-automate-trigger.md) 流教程中的"将数据传递到脚本"教程后，请返回此处，详细了解如何连接 Office 脚本到 Power Automate 流。
 
-## <a name="excel-online-business-connector"></a>Excel Online (商业) 连接器
+## <a name="excel-online-business-connector"></a>Excel Online (Business) 连接器
 
-[连接器](/connectors/connectors) 是电源自动化和应用程序之间的桥梁。 [Excel Online (Business) 连接器](/connectors/excelonlinebusiness)为您的流提供对 Excel 工作簿的访问权限。 "运行脚本" 操作允许您调用任何可通过所选工作簿访问的 Office 脚本。 您还可以为脚本输入参数，以便流可以提供数据，或让脚本返回有关流中后续步骤的信息。
+[连接器是](/connectors/connectors) Power Automate 和应用程序之间的桥梁。 Excel [Online (Business) 连接器](/connectors/excelonlinebusiness) 可让你流访问 Excel 工作簿。 通过"运行脚本"操作，您可以调用可通过所选工作簿访问的任何 Office 脚本。 还可以为脚本提供输入参数，以便流提供数据，或让脚本返回流中稍后步骤的信息。
 
 > [!IMPORTANT]
-> "运行脚本" 操作为使用 Excel connector 的用户提供对工作簿及其数据的有效访问权限。 此外，还存在一些使用脚本进行外部 API 调用的安全风险，如 [Power 自动化中的外部调用](external-calls.md)中所述。 如果您的管理员担心暴露高度敏感的数据，则可以关闭 Excel Online 连接器或限制对 Office 脚本的访问，方法是通过 [Office 脚本管理员控件](/microsoft-365/admin/manage/manage-office-scripts-settings)。
+> "运行脚本"操作为使用 Excel 连接器的人提供对工作簿及其数据的重要访问权限。 此外，执行外部 API 调用的脚本存在安全风险，如来自 [Power Automate 的外部调用中介绍](external-calls.md)。 如果你的管理员关注高度敏感数据的曝光，他们可以通过 Office 脚本管理员控件关闭 Excel Online 连接器或限制对 Office [脚本的访问](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>脚本流中的数据传输
 
-利用电源自动化，可以在流的各个步骤之间传递数据片段。 可以将脚本配置为接受所需的任何类型的信息，并从您的工作簿中返回您想要的任何内容。 脚本的输入通过将参数添加到函数中来指定， `main` (除了 `workbook: ExcelScript.Workbook`) 之外。 脚本中的输出通过将返回类型添加到来声明 `main` 。
+Power Automate 允许你在流的步骤之间传递数据片段。 可以将脚本配置为接受所需的任何类型的信息，并返回流中所需的工作簿中的内容。 通过向函数添加参数来指定脚本的输入 (`main` 以及 `workbook: ExcelScript.Workbook`) 。 脚本的输出通过向 添加返回类型进行声明 `main` 。
 
 > [!NOTE]
-> 在流中创建 "运行脚本" 块时，将填充接受的参数和返回的类型。 如果更改了脚本的参数或返回类型，您将需要恢复流的 "运行脚本" 块。 这样可确保正确分析数据。
+> 当您在流中创建"Run Script"块时，将填充接受的参数和返回的类型。 如果更改脚本的参数或返回类型，则需要恢复流的"运行脚本"块。 这可确保正确分析数据。
 
-以下各节介绍了用于 Power 自动化的脚本输入和输出的详细信息。 如果你想要学习本主题的实践方法，请尝试 [在自动运行电源自动化流教程中将数据传递到脚本](../tutorials/excel-power-automate-trigger.md) ，或浏览 [自动任务提醒](../resources/scenarios/task-reminders.md) 示例方案。
+以下各节介绍 Power Automate 中使用的脚本的输入和输出的详细信息。 如果你想要实践学习本主题的方法，请尝试在自动运行的 [Power Automate](../tutorials/excel-power-automate-trigger.md) 流教程中将数据传递到脚本，或浏览自动 [任务](../resources/scenarios/task-reminders.md) 提醒示例方案。
 
 ### <a name="main-parameters-passing-data-to-a-script"></a>`main` 参数：将数据传递给脚本
 
-所有脚本输入都被指定为函数的附加参数 `main` 。 例如，如果您希望脚本接受一个 `string` 表示输入名称的，则会将 `main` 签名更改为 `function main(workbook: ExcelScript.Workbook, name: string)` 。
+所有脚本输入都指定为 函数的其他 `main` 参数。 例如，如果您希望脚本接受表示作为输入的名称的 ， `string` 则您需要将 `main` 签名更改为 `function main(workbook: ExcelScript.Workbook, name: string)` 。
 
-当您在电源自动化中配置流时，您可以将脚本输入指定为静态值、 [表达式](/power-automate/use-expressions-in-conditions)或动态内容。 有关单个服务连接器的详细信息，请参阅 [Power 自动连接器文档](/connectors/)中的。
+在 Power Automate 中配置流时，可以将脚本输入指定为静态值、 [表达式](/power-automate/use-expressions-in-conditions)或动态内容。 有关单个服务连接器的详细信息，请参阅 [Power Automate Connector 文档](/connectors/)。
 
-向脚本函数中添加输入参数时 `main` ，请考虑以下余量和限制。
+向脚本函数添加输入参数 `main` 时，请考虑以下允许和限制。
 
-1. 第一个参数的类型必须为 `ExcelScript.Workbook` 。 其参数名称无关紧要。
+1. 第一个参数必须为 类型 `ExcelScript.Workbook` 。 其参数名称无关紧要。
 
-2. 每个参数都必须具有一个类型 (，如 `string` 或 `number`) 。
+2. 每个参数都必须具有类型 (，如 `string` 或 `number`) 。
 
-3. 支持基本类型 `string` 、、、、、 `number` `boolean` `any` `unknown` `object` 和 `undefined` 。
+3. 支持基本类型 `string` `number` 、 、 、 、 `boolean` 、 `any` 和 `unknown` `object` `undefined` 。
 
 4. 支持前面列出的基本类型的数组。
 
-5. 嵌套的数组支持作为参数 (但不支持) 的返回类型。
+5. 嵌套数组作为参数受支持， (作为返回类型) 。
 
-6. 如果联合类型是属于单个类型 (（如) ）的文本联合，则允许联合类型 `"Left" | "Right"` 。 包含未定义的受支持类型的联合也受支持 (如 `string | undefined`) 。
+6. 如果联合类型是属于单个类型文本（如文本）的 (，则允许 `"Left" | "Right"`) 。 支持未定义类型的联合也受支持 (如 `string | undefined`) 。
 
-7. 如果对象类型包含类型 `string` 、 `number` 、、支持的 `boolean` 数组或其他受支持的对象的属性，则允许这些对象类型。 下面的示例演示受支持为参数类型的嵌套对象：
+7. 如果对象类型包含类型 、支持的数组或其他受支持对象的属性 `string` `number` ，则 `boolean` 允许这些对象类型。 以下示例演示作为参数类型支持的嵌套对象：
 
     ```TypeScript
     // Office Scripts can return an Employee object because Position only contains strings and numbers.
@@ -71,55 +71,37 @@ ms.locfileid: "47321570"
     }
     ```
 
-8. 对象必须在脚本中定义其接口或类定义。 也可以以匿名方式直接定义对象，如下面的示例所示：
+8. 对象必须在脚本中定义其接口或类定义。 也可以匿名内联定义对象，如以下示例所示：
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook): {name: string, email: string}
     ```
 
-9. 可选参数是允许的，并且可以使用 optional 修饰符以 `?` (例如， `function main(workbook: ExcelScript.Workbook, Name?: string)`) 。
+9. 允许使用可选参数，并且可以使用可选修饰符参数进行 (`?` 例如 `function main(workbook: ExcelScript.Workbook, Name?: string)` ，) 。
 
-10. 例如， (允许使用默认参数值 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` 。
+10. 允许默认参数值 (例如 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` 。
 
-### <a name="returning-data-from-a-script"></a>从脚本中返回数据
+### <a name="returning-data-from-a-script"></a>从脚本返回数据
 
-脚本可以返回工作簿中的数据，以用作电源自动化流中的动态内容。 与输入参数一样，Power 自动化将一些限制放在返回类型上。
+脚本可以从工作簿中返回数据，以用作 Power Automate 流中的动态内容。 与输入参数一样，Power Automate 对返回类型施加了一些限制。
 
-1. 支持基本类型 `string` 、 `number` 、 `boolean` `void` 和 `undefined` 。
+1. 支持 `string` 基本类型 、 `number` 、 、 `boolean` 和 `void` `undefined` 。
 
 2. 用作返回类型的联合类型遵循与用作脚本参数时相同的限制。
 
-3. 如果数组类型为类型 `string` 、或，则允许使用数组类型 `number` `boolean` 。 如果类型是受支持的联合或受支持的文本类型，也可以使用它们。
+3. 如果数组类型为 、 或 ，则 `string` `number` 允许使用数组类型 `boolean` 。 如果类型是受支持的联合或受支持的文字类型，则也允许它们。
 
 4. 用作返回类型的对象类型遵循与用作脚本参数时相同的限制。
 
-5. 虽然支持隐式键入，但它必须遵循与定义的类型相同的规则。
-
-## <a name="avoid-using-relative-references"></a>避免使用相对引用
-
-Power 自动在所选的 Excel 工作簿中代表你运行脚本。 在这种情况下，工作簿可能会关闭。 在运行时，任何依赖用户的当前状态（如）的 API `Workbook.getActiveWorksheet` 都将在通过电源自动运行时失败。 在设计脚本时，请务必对工作表和区域使用绝对引用。
-
-如果从 Power 自动流中的脚本调用，以下方法将引发错误并失败。
-
-| Class | 方法 |
-|--|--|
-| [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
-| [区域](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
-| [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `activate` |
+5. 支持隐式键入，尽管它必须遵循与定义类型相同的规则。
 
 ## <a name="example"></a>示例
 
-下面的屏幕截图显示了只要向您分配 [GitHub](https://github.com/) 问题时触发的电源自动化流。 流运行一个将问题添加到 Excel 工作簿中的表的脚本。 如果该表中有五个或更多问题，流将发送电子邮件提醒。
+以下屏幕截图显示了每当分配 [GitHub](https://github.com/) 问题时触发的 Power Automate 流。 该流运行一个脚本，该脚本将问题添加到 Excel 工作簿的表中。 如果该表中存在五个或多个问题，则流将发送电子邮件提醒。
 
-![示例流，如 Power 自动化流编辑器中所示。](../images/power-automate-parameter-return-sample.png)
+:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="显示示例流的 Power Automate 流编辑器。":::
 
-`main`脚本的功能将问题 ID 和问题标题指定为输入参数，脚本将返回 "问题" 表中的行数。
+脚本函数将问题 ID 和问题标题指定为输入参数，脚本返回问题 `main` 表中的行数。
 
 ```TypeScript
 function main(
@@ -142,8 +124,9 @@ function main(
 
 ## <a name="see-also"></a>另请参阅
 
-- [在使用 Power 自动化的 web 上运行 Excel 中的 Office 脚本](../tutorials/excel-power-automate-manual.md)
+- [使用 Power Automate 在 Excel 网页中运行 Office 脚本](../tutorials/excel-power-automate-manual.md)
 - [将数据传递到自动运行的 Power Automate 流中的脚本](../tutorials/excel-power-automate-trigger.md)
-- [Excel 网页版中 Office 脚本的脚本基础知识](scripting-fundamentals.md)
+- [从脚本返回数据到自动运行 Power Automated 流](../tutorials/excel-power-automate-returns.md)
+- [Power Automate with Office Scripts 疑难解答信息](../testing/power-automate-troubleshooting.md)
 - [Power Automate 入门](/power-automate/getting-started)
 - [Excel Online (Business) 连接器参考文档](/connectors/excelonlinebusiness/)

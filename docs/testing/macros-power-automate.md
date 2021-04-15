@@ -3,12 +3,12 @@ title: 在 Power Automate 流中使用宏文件
 description: 了解如何在 Power Automate 流中使用宏文件或 xlsm 文件。
 ms.date: 03/18/2021
 localization_priority: Normal
-ms.openlocfilehash: ec1fe00eb9ddc382ae4bc02187de7a36c97288b1
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: a7929fc485ae2118d30a4f2783538d0e04deca2a
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571247"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755012"
 ---
 # <a name="how-to-use-macro-files-in-power-automate-flows"></a>如何在 Power Automate 流中使用宏文件
 
@@ -16,11 +16,11 @@ ms.locfileid: "51571247"
 
 但是，无法从"文件"下拉列表中选择宏 (请参阅以下屏幕截图中的示例) 。
 
-![运行脚本操作中无 xlsm](../images/no-xlsm.png)
+:::image type="content" source="../images/no-xlsm.png" alt-text="显示未选择宏文件的 Power Automate Run 脚本操作。显示的错误为&quot;File&quot;是必需的。":::
 
 解决此问题的一个方法就是将"获取文件元数据"操作 (OneDrive 或 SharePoint) ，并使用"运行脚本"操作中的 ID 属性，如以下屏幕截图所示。
 
-![运行脚本操作中的 xlsm](../images/xlsm-in-pa.png)
+:::image type="content" source="../images/xlsm-in-pa.png" alt-text="Power Automate Run 脚本操作显示已选中的宏文件且没有运行脚本错误。":::
 
 > [!NOTE]
 > 某些 XLSM (，尤其是具有 ActiveX/Form) 的 XLSM 在 Excel 联机连接器中可能不起作用。 请确保在部署解决方案之前进行测试。

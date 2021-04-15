@@ -3,12 +3,12 @@ title: Excel 网页中的 Office 脚本的基本脚本
 description: 要与 Excel 网页中的 Office 脚本一起使用的代码示例集合。
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: f52500f480b7e7fa637a606b99de035da326a4ba
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 32c380a2abdb0596bbfdb387768735fbfdcf7c08
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570514"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755089"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Excel 网页中的 Office 脚本的基本脚本
 
@@ -296,7 +296,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 本示例查找工作簿中的第一个数据透视表，并记录"总计"单元格 (在下面的图像中以绿色突出显示) 。
 
-![一个将"总计"行突出显示为绿色的数据透视表。](../images/sample-pivottable-grand-total-row.png)
+:::image type="content" source="../images/sample-pivottable-grand-total-row.png" alt-text="一个数据透视表，其中&quot;总计&quot;行突出显示为绿色，显示品红。":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -324,7 +324,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本为单元格创建下拉选择列表。 它将所选区域的现有值用作列表的选项。
 
-![显示一个范围中的三个单词，然后在下拉列表中显示这些相同单词的一组之前和之后屏幕截图。](../images/sample-data-validation.png)
+:::image type="content" source="../images/sample-data-validation.png" alt-text="显示包含颜色选项&quot;红色、蓝色、绿色&quot;且旁边有三个单元格的工作表，下拉列表中显示的选项相同。":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

@@ -3,12 +3,12 @@ title: 通过电子邮件发送 Excel 图表和表格的图像
 description: 了解如何使用 Office 脚本和 Power Automate 提取 Excel 图表和表格的图像，并通过电子邮件发送这些图像。
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 7eb12526f97d72de31acdc3c9a4228c670875e2b
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: de3cf16537cb12db45d4d465d367d797d053afc4
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571128"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754808"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>使用 Office 脚本和 Power Automate 通过电子邮件发送图表和表格的图像
 
@@ -23,15 +23,15 @@ ms.locfileid: "51571128"
 
 _输入数据_
 
-![输入数据](../../images/input-data.png)
+:::image type="content" source="../../images/input-data.png" alt-text="显示输入数据表格的工作表。":::
 
 _输出图表_
 
-![创建的图表](../../images/chart-created.png)
+:::image type="content" source="../../images/chart-created.png" alt-text="创建的柱形图显示客户到期金额。":::
 
 _通过 Power Automate 流接收的电子邮件_
 
-![接收的电子邮件](../../images/email-received.png)
+:::image type="content" source="../../images/email-received.png" alt-text="由显示在正文中嵌入的 Excel 图表的流发送的电子邮件。":::
 
 ## <a name="solution"></a>解决方案
 

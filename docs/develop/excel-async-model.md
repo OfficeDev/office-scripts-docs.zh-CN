@@ -3,12 +3,12 @@ title: 支持使用异步 API 的较旧 Office 脚本
 description: Office 脚本异步 API 的一个开始，以及如何对较旧的脚本使用加载/同步模式。
 ms.date: 02/08/2021
 localization_priority: Normal
-ms.openlocfilehash: d61a5d8affae2077b23e140645c19dac977ff0d2
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 143f52a7ffefb4f19ee36ba4343fd7c2f1cbdffe
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570281"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755075"
 ---
 # <a name="support-older-office-scripts-that-use-the-async-apis"></a>支持使用异步 API 的较旧 Office 脚本
 
@@ -42,7 +42,7 @@ async function main(context: Excel.RequestContext) {
 
 下图显示了脚本和工作簿之间的示例控制流：
 
-![该图显示了从脚本转到工作簿的读取和写入操作。](../images/load-sync.png)
+:::image type="content" source="../images/load-sync.png" alt-text="该图显示了从脚本转到工作簿的读取和写入操作。":::
 
 ### <a name="sync"></a>同步
 

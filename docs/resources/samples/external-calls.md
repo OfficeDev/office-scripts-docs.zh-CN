@@ -3,12 +3,12 @@ title: 在 Office 脚本中执行外部 API 调用
 description: 了解如何在 Office 脚本中执行外部 API 调用。
 ms.date: 03/30/2021
 localization_priority: Normal
-ms.openlocfilehash: d0abfa0bb1adedc7535059ed359b8053d9f1c84d
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 0ed57ed3b97309dbb7ea196695dcc347e133b3cf
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571243"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754801"
 ---
 # <a name="external-api-calls-from-office-scripts"></a>Office 脚本中的外部 API 调用
 
@@ -40,8 +40,6 @@ Office 脚本允许 [有限的外部 API 调用支持](../../develop/external-ca
 ## <a name="scenario"></a>方案
 
 此脚本获取有关用户的 GitHub 存储库的基本信息。
-
-![获取存储库信息示例](../../images/git.png)
 
 ## <a name="resources-used-in-the-sample"></a>示例中使用的资源
 

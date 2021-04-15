@@ -3,12 +3,12 @@ title: Office 脚本示例方案：自动任务提醒
 description: 使用 Power Automate 和自适应卡片在项目管理电子表格中自动执行任务提醒的示例。
 ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 342abced09119ff286f87c1425e44f9186dc4488
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: a229a06e9f1f9118d57dadac8864bbc7eae7315b
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570225"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755152"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Office 脚本示例方案：自动任务提醒
 
@@ -161,7 +161,7 @@ ms.locfileid: "51570225"
     - **文件***：task-reminders.xlsx (浏览器选项选择)*
     - **脚本**：获取人员
 
-    ![第一个"运行脚本流"步骤。](../../images/scenario-task-reminders-first-flow-step.png)
+    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="Power Automate 流显示第一个运行脚本流步骤。":::
 
 12. 接下来，该流需要处理脚本返回的数组中的每个 Employee。 按 **"新建步骤** "，然后选择"向 Teams 用户发布自适应卡片 **"并等待响应**。
 
@@ -222,7 +222,7 @@ ms.locfileid: "51570225"
     - **senderEmail：** email *(dynamic content from Excel)*
     - **statusReportResponse：** 来自 *Teams (动态内容的响应)*
 
-    ![应用到每个流步骤。](../../images/scenario-task-reminders-last-flow-step.png)
+    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="显示适用于每个步骤的 Power Automate 流。":::
 
 17. 保存流。
 
@@ -234,12 +234,12 @@ ms.locfileid: "51570225"
 
 ### <a name="before-running-the-flow"></a>运行流之前
 
-![包含一个缺少状态条目的状态报告工作表。](../../images/scenario-task-reminders-spreadsheet-before.png)
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="包含一个缺少状态条目的状态报告工作表。":::
 
 ### <a name="receiving-the-adaptive-card"></a>接收自适应卡片
 
-![Teams 中的自适应卡片，要求员工提供状态更新。](../../images/scenario-task-reminders-adaptive-card.png)
+:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="Teams 中的自适应卡片，要求员工提供状态更新。":::
 
 ### <a name="after-running-the-flow"></a>运行流后
 
-![包含状态报告的工作表，现在填充了状态条目。](../../images/scenario-task-reminders-spreadsheet-after.png)
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="包含状态报告的工作表，现在填充了状态条目。":::

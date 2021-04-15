@@ -3,12 +3,12 @@ title: Office 脚本中的 TypeScript 限制
 description: Office 脚本代码编辑器使用的 TypeScript 编译器和 linter 的具体信息。
 ms.date: 02/05/2021
 localization_priority: Normal
-ms.openlocfilehash: 8c9d1beafb236e7ba10dedf00fab944c40fb954d
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 88d0b5873a2f7350f88417d2e340343dbd183606
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570274"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755047"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>Office 脚本中的 TypeScript 限制
 
@@ -22,11 +22,11 @@ Office 脚本使用 TypeScript 语言。 在大多数情况下，任何 TypeScri
 
 You cannot explicitly declare a variable to be of type `any` in Office Scripts (that is， `let someVariable: any;`) . 类型 `any` 导致 Excel 处理时出现问题。 例如， `Range` 需要知道值是 、 `string` 或 `number` `boolean` 。 如果脚本中的类型明确定义为 (，在运行脚本脚本之前) 出现编译时 `any` 错误。
 
-![在代码编辑器的悬停文本中显式显示任何消息](../images/explicit-any-editor-message.png)
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的显式&quot;any&quot;消息":::
 
-![控制台窗口中的显式任何错误](../images/explicit-any-error-message.png)
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="控制台窗口中的 Explicit Any 错误。":::
 
-在以上屏幕截图 `[5, 16] Explicit Any is not allowed` 中，指明#5列#16定义 `any` 类型。 这可以帮助您找到错误。
+在上一 `[5, 16] Explicit Any is not allowed` 张屏幕截图中，#5列#16定义 `any` 类型。 这可以帮助您找到错误。
 
 若要解决此问题，请始终定义变量的类型。 如果不确定变量的类型，可以使用联合 [类型](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html)。 对于保留值的变量（可以是 、 或 (值的类型是以下值之一 `Range` `string` `number` `boolean` `Range` `string | number | boolean`) 。
 
