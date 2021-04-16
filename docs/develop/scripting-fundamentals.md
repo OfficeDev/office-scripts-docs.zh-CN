@@ -3,12 +3,12 @@ title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: 4609dce617d18f7a7c9d2868a24792c51fb048c6
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 2c2fd683e77a0dfbfd3e9df8c79db31e78ceee8b
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570232"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755061"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中 Office 脚本的脚本基础（预览）
 
@@ -109,7 +109,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 运行此脚本将在当前工作表中创建以下数据：
 
-![显示值行、公式列和格式化标题的销售记录。](../images/range-sample.png)
+:::image type="content" source="../images/range-sample.png" alt-text="包含由值行、公式列和带格式的标头组成的销售记录的工作表。":::
 
 ### <a name="charts-tables-and-other-data-objects"></a>Chart、Table 和其他数据对象
 
@@ -133,7 +133,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 在工作表上使用之前的数据运行此脚本将创建下表：
 
-![使用之前的销售记录制成的表。](../images/table-sample.png)
+:::image type="content" source="../images/table-sample.png" alt-text="包含根据以前销售记录所创建表的工作表。":::
 
 #### <a name="creating-a-chart"></a>创建图表
 
@@ -159,7 +159,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 在工作表上使用上一个表运行此脚本将创建以下图表：
 
-![一个柱形图，显示上一个销售记录中三个项目的数量。](../images/chart-sample.png)
+:::image type="content" source="../images/chart-sample.png" alt-text="一个柱形图，显示上一个销售记录中三个项目的数量。":::
 
 ### <a name="collections-and-other-object-relations"></a>集合和其他对象关系
 
