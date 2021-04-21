@@ -25,7 +25,7 @@
 
 - 若要询问有关设计 Office 脚本或运行 Office 脚本的 Office.js API 的问题，请向 Stack Overflow 发布问题，然后使用"office-scripts"标记标记 https://stackoverflow.com/questions/tagged/office-scripts) (。
 - 若要报告 Office.js API 的问题，请创建 [OfficeDev/office-js](https://github.com/OfficeDev/office-js)存储库中的问题，产品团队监视的成员会监视客户报告的问题。
-- 若要提交 Office 脚本的功能请求，请向 [Microsoft Q&A](https://docs.microsoft.com/answers/products/m365)发布你的想法，或者如果功能请求已存在，请为它添加投票。 在请求你的功能时，请务必使用"Office-Scripts-Dev"标记。
+- 若要提交 Office 脚本的功能请求，将你的想法张贴到"[](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)用户语音"页面，或者如果功能请求已存在，请为它添加投票，或者如果功能请求已存在，请为它添加投票。 请务必将请求提交到"宏、脚本和加载项"类别中的 Excel 网页下。
 
 ## <a name="copyright"></a>版权
 
