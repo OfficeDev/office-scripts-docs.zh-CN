@@ -1,23 +1,25 @@
 ---
 title: 对文件夹中的所有 Excel 文件运行脚本
-description: 了解如何对 OneDrive for Business 上文件夹中的所有 Excel 文件运行脚本。
-ms.date: 03/31/2021
+description: 了解如何对 OneDrive for Business 上文件夹中的所有 Excel 文件运行OneDrive for Business。
+ms.date: 04/02/2021
 localization_priority: Normal
-ms.openlocfilehash: a11876e8241a069a7c640bbcf2c36b4842d3bd90
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 6376dcac0eb36c04c2b60b2717d18cd730a0a8ee
+ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571255"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52026839"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>对文件夹中的所有 Excel 文件运行脚本
 
-此项目对位于 OneDrive for Business 上的文件夹中的所有文件执行一组自动化任务。 还可以在 SharePoint 文件夹上使用。
-该代码对 Excel 文件执行计算，添加格式，并插入一个[@mentions注释。](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7)
+此项目对位于 OneDrive for Business 上的文件夹中的所有文件执行一组自动化OneDrive for Business。 它还可用于文件夹SharePoint文件夹。
+该代码对Excel文件执行计算，添加格式，并插入一个[@mentions注释。](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7)
+
+下载文件 <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip，</a>将文件解压缩到本示例中使用的名为 **Sales** 的文件夹，然后自己试用！
 
 ## <a name="sample-code-add-formatting-and-insert-comment"></a>示例代码：添加格式并插入注释
 
-下载文件 <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip，</a>将文件解压缩到本示例中使用的名为 **Sales** 的文件夹，然后自己试用！
+这是在每个单独的工作簿上运行的脚本。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -61,6 +63,31 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>培训视频：对文件夹中的所有 Excel 文件运行脚本
+## <a name="power-automate-flow-run-the-script-on-every-workbook-in-the-folder"></a>Power Automate流：对文件夹内每个工作簿运行脚本
 
-[观看分步视频，](https://youtu.be/xMg711o7k6w) 了解如何对 OneDrive for Business 或 SharePoint 文件夹中的所有 Excel 文件运行脚本。
+此流对"销售"文件夹中每个工作簿运行脚本。
+
+1. 创建新的即时 **云流**。
+1. 选择 **"手动触发流"，** 然后按"**创建"。**
+1. 添加一 **个新** 步骤，该步骤使用 **OneDrive for Business** 连接器和 **"在文件夹操作中列出文件**"。
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="已完成的OneDrive for Business连接器Power Automate。":::
+1. 选择包含提取的工作簿的"Sales"文件夹。
+1. 若要确保仅选择工作簿，请选择"**新建步骤"，****然后选择"条件**"并设置以下值：
+    1. **文件名** (OneDrive文件名值) 
+    1. "ends with"
+    1. "xlsx"。
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="The Power Automate condition block that applies subsequent actions to each file.":::
+1. Under the **If yes** branch， add the Excel Online (**Business)** connector with the Run script (**preview)** action. 对操作使用以下值：
+    1. **位置**：OneDrive for Business
+    1. **文档库**：OneDrive
+    1. **文件****： (** id OneDrive文件 ID 值) 
+    1. **脚本**：脚本名称
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="已完成的 Excel Online (Business) 连接器Power Automate。":::
+1. 保存流并试用。
+
+## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>培训视频：对文件夹中的所有Excel文件运行脚本
+
+[观看分步视频，](https://youtu.be/xMg711o7k6w)了解如何对 Excel 或 SharePoint 文件夹中的所有 OneDrive for Business 文件运行脚本。

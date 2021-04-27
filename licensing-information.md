@@ -992,7 +992,7 @@ uri-js 4.2.2 - BSD-2-Clause https://github.com/garycourt/uri-js
 
 版权所有 (c) 2019， Project contributors 版权所有 (c) 2008-2019， Eli Skeggs， Dominic Sayers， GlobeSherpa
 
-版权所有 (c) 2019， Project contributors 保留所有权利。
+版权所有 (c) 2019，Project保留所有权利。
 
 如果满足以下条件，则允许在源表单和二进制表单中重新分发和使用（有或无需修改）：
  * 重新分发源代码必须保留上述版权声明、此条件列表和以下免责声明。
@@ -4011,7 +4011,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4036,7 +4036,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4061,7 +4061,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4473,7 +4473,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4498,7 +4498,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4523,7 +4523,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4548,7 +4548,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4573,7 +4573,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4598,7 +4598,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4623,7 +4623,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -8035,11 +8035,11 @@ MIT
 
 eventsource 1.0.7 - MIT http://github.com/EventSource/eventsource
 
-版权所有 (事件) GitHub 版权所有者， Inc. 和其他节点参与者。
+版权所有 (EventSource) .GitHub Inc. 和其他节点参与者。
 
 MIT 许可证
 
-版权所有 (中心) EventSource GitHub 组织
+版权所有 () EventSource GitHub组织
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -9012,11 +9012,11 @@ hex-color-regex 1.1.0 - MIT https://github.com/regexps/hex-color-regex#readme
 
 history 4.10.1 - MIT https://github.com/ReactTraining/history#readme
 
-版权所有 (2016-2018) React 培训
+版权所有 (c) React Training 2016-2018
 
 MIT 许可证
 
-版权所有 (2016-2018) React 培训
+版权所有 (c) React Training 2016-2018
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -11397,7 +11397,7 @@ mkdirp 0.5.5 - MIT https://github.com/substack/node-mkdirp#readme
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 版权所有 (c) 2015 版权 (c) Joshaven Copyright (c) 2014）（ (）C) Artyom Shal进行创作。
 版权所有 (2015) David 为 2015 年 2 月 2 日第二版 (c) 2014 年 3 月 3 日，Microsoft Corporation (2015 年 3 月) 2015 年版 (c) 。
@@ -11423,7 +11423,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 版权所有 (c) 2015 版权 (c) Joshaven Copyright (c) 2014）（ (）C) Artyom Shal进行创作。
 版权所有 (2015) David 为 2015 年 2 月 2 日第二版 (c) 2014 年 3 月 3 日，Microsoft Corporation (2015 年 3 月) 2015 年版 (c) 。
@@ -12032,7 +12032,7 @@ MIT 许可证
 
 本软件像现在一样提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途的担保和非担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-注意：Fluent UI React 中引用的字体和图标的使用受以下位置列出的条款限制 https://aka.ms/fluentui-assets-license
+注意：Fluent UI React引用的字体和图标的使用受以下位置列出的条款限制https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -13576,6 +13576,54 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
+prettier 2.0.5 - MIT https://prettier.io/
+
+版权所有 Google Inc. 版权所有 (microsoft) 2014-2016 teambition 版权所有 (c) Microsoft Corporation。
+版权所有 (c) 2014-2015，Jon Schlinkert。
+版权所有 (2014-2016) Jon Schlinkert。
+版权所有 (c) 2014-2017，Jon Schlinkert。
+版权所有 (c) 2015-2017，Jon Schlinkert。
+版权所有 (一) 为一的。版权所有 (2014-) Jon Schlinkert。
+版权所有 (facebook) Inc. 及其关联公司。
+版权所有 (2014) Nikulin <ifaaan@gmail.com> 版权所有 2014、2015、2016、2017、2018、Lydell 版权所有 (c) 2013 Yusuke Suzuki <utatane.tea@gmail.com> 版权所有 (c) 2013-2014 Yusuke Suzuki <utatane.tea@gmail.com>
+
+版权所有©为为一名或多名撰稿人
+
+向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+prettier 2.2.1 - MIT https://prettier.io/
+
+ (c) bv 版权所有 Google LLC 版权所有 Google Inc. (c) bv (u，t) ，function t，r (c) Kr Cr t，zr Cr a，your Cr (c) Kr Tr t，zr Tr a，Your Tr Copyright (c) Microsoft Corporation。
+版权所有 (c) 2014-2015，Jon Schlinkert。
+版权所有 (2014-2016) Jon Schlinkert。
+版权所有 (c) 2014-2017，Jon Schlinkert。
+版权所有 (c) 2015-2017，Jon Schlinkert。
+版权所有 (一) 为一的。版权所有 (2014-) Jon Schlinkert。
+版权所有 (facebook) Inc. 及其关联公司。
+版权所有 (2014) Nikulin <ifaaan@gmail.com> 版权所有 2014、2015、2016、2017、2018、Lydell 版权所有 (c) 2013 Yusuke Suzuki <utatane.tea@gmail.com> 版权所有 (c) 2013-2014 Yusuke Suzuki <utatane.tea@gmail.com>
+
+版权所有©为为一名或多名撰稿人
+
+向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 pretty-bytes 5.3.0 - MIT https://github.com/sindresorhus/pretty-bytes#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
@@ -14137,11 +14185,11 @@ MIT 许可证 (MIT)
 
 react-router 5.2.0 - MIT https://github.com/ReactTraining/react-router#readme
 
- () Sindre Sorhus 版权所有 2015，Yahoo！ Inc. 版权所有 (c) React Training 2016-2018 版权所有 (c) 2013-present，Facebook， Inc. 版权所有 (c) Facebook， Inc. 及其关联公司。
+ () Sindre Sorhus 版权所有 2015，Yahoo！ Inc. 版权所有 (c) React Training 2016-2018 版权所有 (c) 2013-present， Facebook， Inc. 版权所有 (c) Facebook， Inc. 及其关联公司。
 
 MIT 许可证
 
-版权所有 (2016-2018) React 培训
+版权所有 (c) React Training 2016-2018
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -14156,11 +14204,11 @@ MIT 许可证
 
 react-router-dom 5.2.0 - MIT https://github.com/ReactTraining/react-router#readme
 
- () Sindre Sorhus 版权所有 2015，Yahoo！ Inc. 版权所有 (c) React Training 2016-2018 版权所有 (c) 2013-present，Facebook， Inc. 版权所有 (c) Facebook， Inc. 及其关联公司。
+ () Sindre Sorhus 版权所有 2015，Yahoo！ Inc. 版权所有 (c) React Training 2016-2018 版权所有 (c) 2013-present， Facebook， Inc. 版权所有 (c) Facebook， Inc. 及其关联公司。
 
 MIT 许可证
 
-版权所有 (2016-2018) React 培训
+版权所有 (c) React Training 2016-2018
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -16622,7 +16670,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-url-polyfill 1.1.9 - MIT https://github.com/lifaon74/url-polyfill#readme
+url-polyfill 1.1.12 - MIT https://github.com/lifaon74/url-polyfill#readme
 
 版权所有 (c) 2017 Valentin Richard
 
@@ -17025,9 +17073,9 @@ MIT 许可证
 
 whatwg-fetch 3.0.0 - MIT https://github.com/github/fetch#readme
 
-版权所有 (2014) 2016 GitHub， Inc.
+版权所有 (c) 2014-2016 GitHub， Inc.
 
-版权所有 (2014) 2016 GitHub， Inc.
+版权所有 (c) 2014-2016 GitHub， Inc.
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
