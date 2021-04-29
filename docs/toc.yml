@@ -89,6 +89,8 @@ items:
                 href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
               - name: 通过 Excel 数据发送 Teams 邀请
                 href: resources/samples/send-teams-invite-from-excel-data.md
+              - name: 在 Office 脚本中使用外部提取呼叫
+                href: resources/samples/external-fetch-calls.md
           - name: 应用场景
             items:
               - name: 分析 Web 下载项
