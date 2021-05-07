@@ -1,16 +1,16 @@
 ---
-title: 在 Excel 中添加注释
+title: 在内容中添加Excel
 description: 了解如何使用 Office 脚本在工作表中添加注释。
-ms.date: 03/29/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: aaaf26df6973bd081290b0fbb67edecad8627e53
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: d592b37c3af8e475c81e8650dda44921fee7aeaf
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571283"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232506"
 ---
-# <a name="add-comments-in-excel"></a>在 Excel 中添加注释
+# <a name="add-comments-in-excel"></a>在内容中添加Excel
 
 本示例演示如何向单元格添加注释，包括 [@mentioning添加注释](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) 。
 
@@ -72,4 +72,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="training-video-add-comments"></a>培训视频：添加注释
 
-[![观看有关如何在 Excel 文件中添加注释的分步视频](../../images/comments-vid.jpg)](https://youtu.be/CpR78nkaOFw "有关如何在 Excel 文件中添加注释的分步视频")
+[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/CpR78nkaOFw)。

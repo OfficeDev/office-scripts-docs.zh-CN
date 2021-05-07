@@ -1,37 +1,37 @@
 ---
-title: 从 Excel 数据发送 Teams 会议
-description: 了解如何使用 Office 脚本从 Excel 数据发送 Teams 会议。
-ms.date: 03/30/2021
+title: 从Teams数据发送Excel会议
+description: 了解如何使用 Office 脚本从Teams发送Excel会议。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 807c9228049504c089c8dafe63a5d9ccaab94399
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: b0a3d5732727fd399fe34f3645336840ba4c156d
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571286"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232730"
 ---
-# <a name="send-teams-meeting-from-excel-data"></a>从 Excel 数据发送 Teams 会议
+# <a name="send-teams-meeting-from-excel-data"></a>从Teams数据发送Excel会议
 
-此解决方案演示如何使用 Office 脚本和 Power Automate 操作从 Excel 文件选择行，并使用它发送 Teams 会议邀请，然后更新 Excel。
+此解决方案演示如何使用 Office 脚本和 Power Automate 操作从 Excel 文件选择行，并使用它发送 Teams 会议邀请，然后更新Excel。
 
 ## <a name="example-scenario"></a>示例应用场景
 
-* HR 招聘人员管理 Excel 文件中候选人的面试计划。
-* 招聘人员需要向候选人和面试者发送 Teams 会议邀请。 业务规则包括：
+* 人力资源招聘人员管理应聘者在一个职位Excel计划。
+* 招聘人员需要将Teams会议邀请发送给候选人和面试者。 业务规则包括：
 
      () 邀请仅发送给未在文件列中记录的邀请的发送者。
 
      (b) 将来的面试日期 (任何过去的日期) 。
 
-* 招聘人员需要更新 Excel 文件，并确认已针对符合条件的记录发送了所有 Teams 会议。
+* 招聘人员需要更新Excel文件，确认已针对符合条件的记录Teams所有会议。
 
 解决方案有 3 个部分：
 
-1. 用于根据条件从表中提取数据并作为 JSON 数据返回对象数组的 Office 脚本。
-1. 然后，将数据发送到 Teams **创建 Teams 会议** 操作以发送邀请。 JSON 数组中每个实例发送一个 Teams 会议。
-1. 将相同的 JSON 数据发送到另一个 Office 脚本以更新邀请的状态。
+1. Office用于根据条件从表中提取数据并作为 JSON 数据返回对象数组的脚本。
+1. 然后，数据将发送到Teams **创建Teams会议操作** 以发送邀请。 在 JSON Teams每个实例发送一个会议。
+1. 将相同的 JSON 数据发送到另一Office脚本以更新邀请的状态。
 
-## <a name="sample-excel-file"></a>示例 Excel 文件
+## <a name="sample-excel-file"></a>示例Excel文件
 
 下载此 <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> 中使用的文件，然后自己试用！
 
@@ -228,6 +228,6 @@ interface InterviewInvite  {
 }
 ```
 
-## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>培训视频：从 Excel 数据发送 Teams 会议
+## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>培训视频：从Teams发送Excel会议
 
-[![观看分步视频，了解如何从 Excel 数据发送 Teams 会议](../../images/teams-invite-vid.jpg)](https://youtu.be/HyBdx52NOE8 "如何从 Excel 数据发送 Teams 会议分步视频")
+[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/HyBdx52NOE8)。

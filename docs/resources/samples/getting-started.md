@@ -1,62 +1,62 @@
 ---
-title: Office 脚本入门
-description: 有关 Office 脚本的基础知识，包括访问、环境和脚本模式。
+title: Office脚本入门
+description: 有关脚本Office，包括访问、环境和脚本模式。
 ms.date: 04/01/2021
 localization_priority: Normal
 ROBOTS: NOINDEX
-ms.openlocfilehash: 42b71a21470ac38535e3e95f091ec6267806e54a
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: d30c4fb4523c49b559e057eede4d5de162b74f9c
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755054"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232758"
 ---
 # <a name="getting-started"></a>入门
 
-本节提供有关 Office 脚本的基础知识的详细信息，包括访问、环境、脚本基础知识和几个基本脚本模式。
+本节提供有关脚本的Office，包括访问、环境、脚本基础知识和几个基本脚本模式。
 
 ## <a name="environment-setup"></a>环境设置
 
 了解访问、环境和脚本编辑器的基础知识。
 
-[![Office 脚本应用程序的基础知识](../../images/getting-started-env.png)](https://youtu.be/vvCtxsjPxo8 "Office 脚本应用程序的基础知识")
+[![Office脚本应用程序的基础知识](../../images/getting-started-env.png)](https://youtu.be/vvCtxsjPxo8 "Office脚本应用程序的基础知识")
 
 ### <a name="access"></a>Access
 
-Office Scripts requires admin settings available for Microsoft 365 administrator under **Settings**  >  **Org settings** Office  >  **Scripts**. 默认情况下，会为所有用户打开它。 有两个子设置，管理员可以打开和关闭它们。
+Office脚本需要管理员的管理员Microsoft 365"设置""Office"  >    >  **脚本"下**。 默认情况下，会为所有用户打开它。 有两个子设置，管理员可以打开和关闭它们。
 
 * 在组织内部共享脚本的能力
-* 在 Power Automate 中使用脚本的能力
+* 能够在脚本中使用Power Automate
 
-您可以通过在 Excel 网页浏览器 (浏览器) 中打开文件并查看 Excel 功能区中是否显示"自动"选项卡，来判断您是否可以访问 Office 脚本。
+可以通过 Office在 Excel web 版 (浏览器) 中打开文件并查看"自动"选项卡是否显示在 Excel 功能区中，来判断你能否访问 Excel 脚本。
 如果仍然看不到"自动执行 **"选项卡，** 请查看 [此疑难解答部分](../../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable)。
 
 ### <a name="availability"></a>供应情况
 
-Office 脚本仅适用于 Excel 网页版中的企业版 E3+ 许可证 (用户和 E1 帐户不支持) 。 Windows 和 Mac 上的 Excel 尚不支持 Office 脚本。
+Office脚本仅适用于用户Excel web 版Enterprise E3+ (和 E1 帐户) 。 Office在 mac 和 Excel 上Windows脚本。
 
 ### <a name="scripts-and-editor"></a>脚本和编辑程序
 
-代码编辑器内置于 Excel 网页版 (联机) 。 如果你已使用编辑器（如Visual Studio Code 或 Sublime），则此编辑体验将非常相似。
-代码编辑器使用Visual Studio大多数快捷键在 Office 脚本编辑体验中也工作。 请查看以下快捷键讲义。
+代码编辑器内置于 Excel web 版 (联机) 。 如果你已使用编辑器（如 Visual Studio Code 或 Sublime），则此编辑体验将非常相似。
+编辑器使用Visual Studio Code大多数快捷键在 Office 脚本编辑体验中也工作。 请查看以下快捷键讲义。
 
 * [macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 * [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
 #### <a name="key-things-to-note"></a>要注意的关键内容
 
-* Office 脚本仅适用于存储在 OneDrive for Business、SharePoint 网站和团队网站中的文件。
+* Office脚本仅适用于存储在网站、OneDrive for Business网站SharePoint团队网站中的文件。
 * 编辑器不会显示脚本的扩展名。 实际上，这些是 TypeScript 文件，但它们使用名为 的自定义扩展存储 `.osts` 。
-* 脚本存储在你自己的 OneDrive for Business 文件夹中 `My Files/Documents/OfficeScripts` 。 无需管理此文件夹。 对于部件，你可以忽略这一方面，因为编辑器管理查看/编辑体验。
-* 脚本不会存储为 Excel 文件的一部分。 它们单独存储。
-* 你可以与 Excel 文件共享脚本，这实际上意味着你将脚本与文件链接，而不是附加它。 有权访问 Excel 文件的任何人也能够查看、运行或 **制作脚本** 副本。  与 VBA 宏相比，这是一个关键区别。
+* 脚本存储在你自己的脚本OneDrive for Business文件夹中 `My Files/Documents/OfficeScripts` 。 无需管理此文件夹。 对于部件，你可以忽略这一方面，因为编辑器管理查看/编辑体验。
+* 脚本不会存储为文件Excel的一部分。 它们单独存储。
+* 您可以将脚本与 Excel 文件共享，这实际上意味着您将脚本与文件链接，而不是附加它。 有权访问脚本Excel用户也能够查看、运行或 **制作脚本** 副本。   与 VBA 宏相比，这是一个关键区别。
 * 除非你共享脚本，否则其他人无法访问它，因为它驻留在你自己的库中。
-* 无法从本地磁盘或自定义云位置链接脚本。 Office 脚本仅识别并运行上述 OneDrive 文件夹的预定义 (或共享脚本) 脚本。
-* 在编辑过程中，文件会临时保存在浏览器中，但在关闭 Excel 窗口将其保存到 OneDrive 位置之前，必须保存脚本。 请不要忘记在编辑后保存文件。
+* 无法从本地磁盘或自定义云位置链接脚本。 Office脚本仅识别并运行上述脚本或共享脚本 (OneDrive预定义) 脚本。
+* 在编辑过程中，文件会临时保存在浏览器中，但您必须在关闭 Excel 窗口之前保存脚本，才能将其保存到OneDrive位置。 请不要忘记在编辑后保存文件。
 
 ## <a name="gentle-introduction-to-scripting"></a>脚本简介简介
 
-Office 脚本是使用 TypeScript 语言编写的独立脚本，其中包含对选定的 Excel 工作簿执行一些自动化操作的说明。 所有自动化指令都自包含在脚本中，脚本无法调用或调用其他脚本。 所有脚本都存储在独立文件中，并存储在用户的 OneDrive 文件夹中。 可以录制新脚本、编辑录制的脚本或从头开始编写全新的脚本，所有这些都在内置编辑器界面中完成。 Office 脚本的最好的一部分是，它们不需要用户进一步设置。 没有外部库、网页或 UI 元素、设置等。所有环境设置都由 Office 脚本处理，它允许通过简单的 API 界面轻松而快速地访问自动化。
+Office脚本是使用 TypeScript 语言编写的独立脚本，其中包含针对所选工作簿执行Excel操作的说明。 所有自动化指令都自包含在脚本中，脚本无法调用或调用其他脚本。 所有脚本都存储在独立文件中，并存储在用户的 OneDrive 文件夹中。 可以录制新脚本、编辑录制的脚本或从头开始编写全新的脚本，所有这些都在内置编辑器界面中完成。 脚本的最佳Office是不需要用户进一步进行设置。 没有外部库、网页或 UI 元素、设置等。所有环境设置都由 Office Scripts 处理，它允许通过简单的 API 接口轻松而快速地访问自动化。
 
 一些有助于了解如何编辑和浏览脚本的基本概念包括：
 
@@ -69,15 +69,15 @@ Office 脚本是使用 TypeScript 语言编写的独立脚本，其中包含对�
 
 本视频和部分详细介绍了其中一些概念。
 
-[![Office 脚本基础知识](../../images/getting-started-v_script.png)](https://youtu.be/8Zsrc1uaiiU "脚本的基础知识")
+[![脚本Office基础知识](../../images/getting-started-v_script.png)](https://youtu.be/8Zsrc1uaiiU "脚本的基础知识")
 
 ### <a name="language-typescript"></a>语言：TypeScript
 
-[Office 脚本](../../index.md) 是使用 [TypeScript](https://www.typescriptlang.org/)语言编写的，该语言是一种基于 JavaScript (之一的开放源代码语言，它通过添加静态类型定义) 最常用的语言之一。 正如网站所说明的，提供一种方法来描述对象的形状，提供更好的文档，并允许 `Types` TypeScript 验证代码是否正常工作。
+[Office](../../index.md)脚本是使用[TypeScript](https://www.typescriptlang.org/)语言编写的，TypeScript 语言是一种开放源代码语言，它通过添加静态类型定义 (全球最常用的语言之一) JavaScript) 构建。 正如网站所说明的，提供一种方法来描述对象的形状，提供更好的文档，并允许 `Types` TypeScript 验证代码是否正常工作。
 
-语言语法本身使用 [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) 编写，其他键入使用 TypeScript 约定在脚本中定义。 在大多数情况下，您可以将 Office 脚本视为使用 JavaScript 编写的。 必须了解 JavaScript 语言的基础知识，以开始 Office 脚本之旅;尽管你无需精通它，但可以开始你的自动化之旅。 使用 Office 脚本的操作录制器，您可以了解脚本语句，因为包含代码注释，您可以遵循和进行小型编辑。
+语言语法本身使用 [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) 编写，其他键入使用 TypeScript 约定在脚本中定义。 在大多数情况下，你可以将脚本视为Office JavaScript 编写的脚本。 必须了解 JavaScript 语言的基础知识，以开始Office脚本之旅;尽管你无需精通它，但可以开始你的自动化之旅。 使用 Office 脚本的操作录制器，可以了解脚本语句，因为包含代码注释，您可以遵循和进行小型编辑。
 
-允许脚本与 Excel 交互的 Office 脚本 API 是为可能没有太多编码背景的最终用户设计的。 API 可以同步调用，你无需了解高级主题，如承诺或回调。 Office 脚本 API 设计提供：
+Office脚本 API（允许脚本与 Excel交互）是为可能没有太多编码背景的最终用户设计的。 API 可以同步调用，你无需了解高级主题，如承诺或回调。 Office脚本 API 设计提供：
 
 * 包含方法、getters/setters 的简单对象模型。
 * 作为常规数组的易于访问的对象集合。
@@ -86,24 +86,24 @@ Office 脚本是使用 TypeScript 语言编写的独立脚本，其中包含对�
 
 ### <a name="main-function-the-scripts-starting-point"></a>`main` function：脚本的起始点
 
-Office 脚本的执行从 函数 `main` 开始。 脚本是包含一个或多个函数以及类型、接口、变量等声明的单个文件。若要随脚本一起操作，请从 函数开始，因为 Excel 始终在您执行任何脚本时首先 `main` `main` 调用 函数。 函数将始终具有至少一个名为 (参数或) 参数，该参数只是一个标识脚本所针对的当前工作簿的 `main` `workbook` 变量名称。 你可以定义其他参数，以使用 Power Automate (脱机) 执行。
+Office脚本的执行从 函数 `main` 开始。 脚本是包含一个或多个函数以及类型、接口、变量等声明的单个文件。若要随脚本一起操作，请从 函数开始，Excel执行任何脚本时始终先 `main` `main` 调用 函数。 函数将始终具有至少一个名为 (参数或) 参数，该参数只是一个标识脚本所针对的当前工作簿的 `main` `workbook` 变量名称。 你可以定义用于脱机执行Power Automate (参数) 参数。
 
 * `function main(workbook: ExcelScript.Workbook)`
 
-可以将脚本组织为较小的函数，帮助实现代码的可重复性、清晰度等。其他函数可以位于主函数内部或外部，但始终位于同一文件中。 脚本是自包含的，只能使用在同一文件中定义的函数。 脚本无法调用或调用其他 Office 脚本。
+可以将脚本组织为较小的函数，帮助实现代码的可重复性、清晰度等。其他函数可以位于主函数内部或外部，但始终位于同一文件中。 脚本是自包含的，只能使用在同一文件中定义的函数。 脚本无法调用或调用另一个Office脚本。
 
 因此，总之：
 
-* `main`函数是任何脚本的入口点。 执行函数时，Excel 应用程序通过提供工作簿作为其第一个参数来调用此主函数。
+* `main`函数是任何脚本的入口点。 当函数执行时，Excel应用程序通过提供工作簿作为其第一个参数来调用此主函数。
 * 在显示时保留第一个参数 `workbook` 及其类型声明很重要。 你可以向函数添加新参数 (请参阅下一节) 但第一个参数保持 `main` 为正常。
 
 :::image type="content" source="../../images/getting-started-main-introduction.png" alt-text="主函数是脚本的入口点":::
 
 #### <a name="send-or-receive-data-from-other-apps"></a>发送或接收来自其他应用的数据
 
-可以通过在 Power Automate 中运行脚本将 Excel 连接到 [组织的其他部分](https://flow.microsoft.com)。 详细了解在 [Power Automate 流中运行 Office 脚本](../../develop/power-automate-integration.md)。
+可以通过在 Excel 中运行脚本，将 Power Automate 连接到[组织的其他Power Automate。](https://flow.microsoft.com) 详细了解如何运行[Office 流中的 Power Automate 脚本](../../develop/power-automate-integration.md)。
 
-从 Excel 接收数据或将数据发送到 Excel 的方式是通过 `main` 函数。 将它视为信息网关，允许在脚本中描述和使用传入和传出数据。 可以使用 数据类型 从脚本外部接收数据，并返回任何 TypeScript 识别的数据（如 、 、 或 在脚本中定义的接口形式的任何 `string` `string` `number` `boolean` 对象）。
+接收数据或将数据发送到用户Excel是通过 `main` 函数。 将它视为信息网关，允许在脚本中描述和使用传入和传出数据。 可以使用 数据类型 从脚本外部接收数据，并返回任何 TypeScript 识别的数据（如 、 、 或 在脚本中定义的接口形式的任何 `string` `string` `number` `boolean` 对象）。
 
 :::image type="content" source="../../images/getting-started-data-in-out.png" alt-text="脚本的输入和输出":::
 
@@ -115,7 +115,7 @@ Office 脚本的执行从 函数 `main` 开始。 脚本是包含一个或多个
 
 ### <a name="objects-hierarchy-methods-properties-collections"></a>对象、层次结构、方法、属性、集合
 
-Excel 的所有对象模型在对象的层次结构中定义，从类型 为 的 workbook 对象开始 `ExcelScript.Workbook` 。 对象可以包含方法、属性和其他对象。 对象使用 方法相互链接。 对象的方法可以返回另一个对象或对象集合。 使用代码编辑器的 IntelliSense (代码) 功能是浏览对象层次结构的一种很好的方法。 您还可以使用官方 [参考文档网站](/javascript/api/office-scripts/overview) 来跟踪对象之间的关系。
+所有Excel对象模型在对象的层次结构中定义，从类型 为 的 workbook 对象开始 `ExcelScript.Workbook` 。 对象可以包含方法、属性和其他对象。 对象使用 方法相互链接。 对象的方法可以返回另一个对象或对象集合。 使用代码编辑器的 IntelliSense (代码) 是浏览对象层次结构的一种很好的方法。 您还可以使用官方 [参考文档网站](/javascript/api/office-scripts/overview) 来跟踪对象之间的关系。
 
 对象 [是](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object) 一组属性，而属性是名称或键 (值) 之间的关联。 属性的值可以是一个函数，在这种情况下，该属性称为方法。 对于 Office 脚本对象模型，对象表示 Excel 文件中用户与之交互的内容，如图表、超链接、数据透视表等。它还可以表示对象的行为，如工作表的保护属性。
 
@@ -125,8 +125,8 @@ TypeScript 对象和属性与方法的主题相当深入。 为了开始使用�
 * 属性在本质上是标量 (字符串、布尔值、数字) 。 例如，工作簿的名称、工作表的位置、表格是否具有页脚的值。
 * 方法使用开放关闭括号"调用"或"执行"。 示例：`table.delete()`。 有时，参数在打开关闭的括号之间包含，以传递给函数 `range.setValue('Hello')` ：。 可以将许多参数传递给函数 (其协定/签名参数定义) 使用 分隔 `,` 。  例如：`worksheet.addTable('A1:D6', true)`。 您可以传递方法所需的任何类型的参数，如字符串、数字、布尔值，甚至是其他对象，例如 ，其中 是脚本中其他位置创建 `worksheet.addTable(targetRange, true)` `targetRange` 的对象。
 * 方法可以返回标量属性 (名称、地址等) 或其他对象 (区域、图表) ，或者不返回任何 (例如方法) 的情况。 `delete` 通过声明变量或分配给现有变量，您可以接收该方法返回的值。 您可以在语句的左侧看到 ，例如 `const table = worksheet.addTable('A1:D6', true)` 。
-* 大多数情况下，Office 脚本对象模型由包含用于链接 Excel 对象模型的各个部分的方法的对象组成。 很少遇到标量或对象值的属性。
-* 在 Office 脚本中，Excel 对象模型方法必须包含开放式关闭括号。 不允许使用不带它们的方法 (例如将方法分配给变量) 。
+* 在大部分方面，Office脚本对象模型由对象组成，这些对象具有用于链接 Excel 对象模型的各个部分的方法。 很少遇到标量或对象值的属性。
+* 在Office脚本中，Excel对象模型方法必须包含开放式关闭括号。 不允许使用不带它们的方法 (例如将方法分配给变量) 。
 
 让我们看一下对象上的一些 `workbook` 方法。
 
@@ -152,7 +152,7 @@ function main(workbook: ExcelScript.Workbook) {
 * `getTable()`此方法接受一个 (表名称的参数，) 并返回工作簿中的特定表。
 * 该方法返回一个 (，该数组集合在很多位置) 工作簿中所有切片器对象 `getSlicers()` 的集合。
 
-你会注意到，所有这些方法都有前缀，这只是 Office 脚本对象模型中使用的约定，用于传达 `get` 该方法将返回某些内容。 它们通常也称为"getters"。
+你会注意到，所有这些方法都有前缀，这只是 Office Scripts 对象模型中用于传达该方法将返回某些内容 `get` 约定。 它们通常也称为"getters"。
 
 有两种其他类型的方法，我们将在下一个示例中看到：
 
@@ -170,7 +170,7 @@ function main(workbook: ExcelScript.Workbook) {
 在此示例中：
 
 * `setName()`方法为工作表设置一个新名称。 `setPosition()` 将位置设置到第一个单元格。
-* 这些方法通过设置工作簿的属性或行为来修改 Excel 文件。 这些方法称为"setters"。
+* 这些方法通过Excel属性或行为来修改工作簿文件。 这些方法称为"setters"。
 * 通常，"setter"具有配套"getter"，例如 `worksheet.getPosition` `worksheet.setPosition` 和 ，两者都是方法。
 
 #### <a name="undefined-and-null-primitive-types"></a>`undefined` 和 `null` 基元类型
@@ -319,7 +319,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 * [数组的语言基础知识](https://developer.mozilla.org//docs/Learn/JavaScript/First_steps/Arrays)
 
-此脚本演示如何使用 Office 脚本 API 中支持的集合。 它使用随机颜色为文件的每个工作表选项卡着色。
+此脚本演示如何使用脚本 API 中Office集合。 它使用随机颜色为文件的每个工作表选项卡着色。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -355,14 +355,14 @@ function main(workbook: ExcelScript.Workbook) {
 
 您可以在代码编辑器中轻松识别类型，因为它通常以不同的颜色显示。 通常， `:` 类型声明之前有一个冒号。  
 
-在 TypeScript 中，写入类型是可选的，因为类型推断允许你获得大量功能，而无需编写其他代码。 大多数情况下，TypeScript 语言非常适用于推断变量类型。 但是，在某些情况下，如果语言无法清楚地标识类型，则 Office 脚本需要显式定义类型声明。 此外，Office 脚本 `any` 中不允许显式或隐式。 稍后将详细了解这一点。
+在 TypeScript 中，写入类型是可选的，因为类型推断允许你获得大量功能，而无需编写其他代码。 大多数情况下，TypeScript 语言非常适用于推断变量类型。 但是，在某些情况下，Office如果语言无法清楚地标识类型，脚本需要显式定义类型声明。 此外，在脚本中 `any` 不允许显式Office隐式。 稍后会详细介绍。
 
 ### <a name="excelscript-types"></a>`ExcelScript` types
 
-在 Office 脚本中，您将使用以下类型。
+在Office脚本中，您将使用以下类型。
 
 * 本机语言类型，如 `number` `string` `object` `boolean` 、、、、 `null` 等。
-* Excel API 类型。 它们以 `ExcelScript` 开头。 例如， `ExcelScript.Range` `ExcelScript.Table` 、 等。
+* ExcelAPI 类型。 它们以 `ExcelScript` 开头。 例如， `ExcelScript.Range` `ExcelScript.Table` 、 等。
 * 您可能在脚本 using 语句中定义的任何自定义 `interface` 接口。
 
 接下来，请参阅每个组的示例。
@@ -494,7 +494,7 @@ function add10(data: number) {
 let someVariable: any; 
 ```
 
-类型为 Office 脚本处理 Excel API 的方式 `any` 带来了挑战。 当将变量发送到 Excel API 进行处理时，会导致问题。 了解脚本中使用的变量类型对于处理脚本至关重要，因此禁止对具有类型的任何变量进行 `any` 显式定义。 如果脚本中声明了类型的任何 (，在运行脚本脚本之前) 出现编译时 `any` 错误。 You will see an error in the editor as well.
+类型 `any` 为脚本处理 Office API Excel带来了挑战。 当将变量发送到其他 API 以进行处理时Excel会导致问题。 了解脚本中使用的变量类型对于处理脚本至关重要，因此禁止对具有类型的任何变量进行 `any` 显式定义。 如果脚本中声明了类型的任何 (，在运行脚本脚本之前) 出现编译时 `any` 错误。 You will see an error in the editor as well.
 
 :::image type="content" source="../../images/getting-started-eanyi.png" alt-text="显式&quot;任何&quot;错误":::
 
@@ -529,7 +529,7 @@ let x = 3;
 
 脚本需要用于显式或隐式声明的变量类型。 如果 TypeScript 编译器无法确定变量 (或者因为类型未显式声明或类型推断无法进行) ，则你将在运行脚本) 之前收到编译时间错误 (错误。 You will see an error in the editor as well.
 
-:::image type="content" source="../../images/getting-started-iany.png" alt-text="编辑器中显示的隐式&quot;any&quot;错误。":::
+:::image type="content" source="../../images/getting-started-iany.png" alt-text="编辑器中显示的隐式&quot;any&quot;错误":::
 
 以下脚本有编译时间错误，因为声明变量时没有类型，并且 TypeScript 无法确定声明时的类型。
 
@@ -582,7 +582,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="error-handling"></a>错误处理
 
-Office 脚本错误可以分为以下类别之一。
+Office脚本错误可以分为以下类别之一。
 
 1. 编辑器中显示的编译时警告
 1. 编译时错误，该错误在您运行时出现，但在执行开始之前出现
@@ -621,7 +621,7 @@ if (indexSheet) {
 
 ### <a name="do-pre-checks-at-the-beginning-of-the-script"></a>在脚本开头进行预检查
 
-最佳做法是，在运行脚本之前，始终确保所有输入都存在于 Excel 文件中。 您可能已对工作簿中的对象进行了某些假设。 如果不存在这些对象，则脚本在读取对象或其数据时可能会遇到错误。 与其在部分更新或处理完成后中间开始处理和错误，不如在脚本开头执行所有预检查。
+最佳做法是，在运行脚本之前，始终确保所有输入Excel文件存在于该文件中。 您可能已对工作簿中的对象进行了某些假设。 如果不存在这些对象，则脚本在读取对象或其数据时可能会遇到错误。 与其在部分更新或处理完成后中间开始处理和错误，不如在脚本开头执行所有预检查。
 
 例如，以下脚本需要显示名为 Table1 和 Table2 的两个表。 因此，脚本将检查其状态，并结束于语句和相应的 `return` 消息（如果不存在）。
 
@@ -682,7 +682,7 @@ function inputPresent( workbook: ExcelScript.Workbook): boolean {
 
 大多数情况下，不需要中止脚本 () `throw` 脚本。 这是因为脚本通常会通知用户脚本由于问题而无法运行。 在大多数情况下，用一条错误消息和函数中的语句结束脚本 `return` `main` 就足够了。
 
-但是，如果脚本作为 Power Automate 的一部分运行，则当不满足某些条件时，您可能需要中止流。 因此，不要出错，而应发出语句来中止脚本，以便任何后续代码语句 `return` `throw` 不会运行，这一点很重要。
+但是，如果脚本作为脚本的一Power Automate运行，则当不满足某些条件时，您可能需要中止该流。 因此，不要出错，而应发出语句来中止脚本，以便任何后续代码语句 `return` `throw` 不会运行，这一点很重要。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -776,10 +776,6 @@ function updateTargetRange(
 
 *警告*： `try..catch` 在循环内使用会降低脚本的速度。 避免在循环内部或循环内使用它。
 
-## <a name="range-basics"></a>区域基础
-
-在继续您的旅程之前，请查看 Range [Basics。](range-basics.md)
-
 ## <a name="basic-performance-considerations"></a>基本性能注意事项
 
 ### <a name="avoid-slow-operations-in-the-loop"></a>避免循环中运行缓慢的操作
@@ -837,4 +833,4 @@ workbook.getWorksheet('Sheet1').getRange('A1:G37').clear(ExcelScript.ClearApplyT
 * 代码块由左大括号定义和标识 `{` `}` ：。 条件、语句、 `if` `while` `for` 循环、函数定义等需要块。
 * 函数可以调用其他函数，甚至可以在函数中定义函数。
 
-总的来说，TypeScript 是一种不同的语言，它们之间有几个相似之处。 但是，Office 脚本 API 本身使用类似的术语和数据模型 (对象模型) 层次结构作为 VBA API，这应该可以帮助您四处导航。
+总的来说，TypeScript 是一种不同的语言，它们之间有几个相似之处。 但是，Office脚本 API 本身使用与 VBA API 类似的术语和数据模型 (对象模型) 层次结构，这应该可以帮助您四处导航。

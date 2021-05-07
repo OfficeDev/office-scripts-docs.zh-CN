@@ -1,14 +1,14 @@
 ---
 title: 对工作表中的空行计数
-description: 了解如何使用 Office 脚本检测工作表中是否有空行而不是数据，然后报告要用于 Power Automate 流的空白行数。
+description: 了解如何使用 Office 脚本检测工作表中是否有空行而不是数据，然后报告要用于数据流的空白Power Automate计数。
 ms.date: 03/31/2021
 localization_priority: Normal
-ms.openlocfilehash: 088ab97c686484ca5c13c875b80431ac28d20736
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: db84f2446c168f867c325a05129fe982c9645731
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754829"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232583"
 ---
 # <a name="count-blank-rows-on-sheets"></a>对工作表中的空行计数
 
@@ -22,11 +22,11 @@ ms.locfileid: "51754829"
 
 _此工作表返回 4 个空行的计数_
 
-:::image type="content" source="../../images/blank-rows.png" alt-text="显示包含空白行的数据的工作表。":::
+:::image type="content" source="../../images/blank-rows.png" alt-text="显示包含空白行的数据的工作表":::
 
 _此工作表返回 0 个空 (所有行都有一些数据)_
 
-:::image type="content" source="../../images/no-blank-rows.png" alt-text="显示不带空白行的数据的工作表。":::
+:::image type="content" source="../../images/no-blank-rows.png" alt-text="显示不含空白行的数据的工作表":::
 
 ## <a name="sample-code-count-blank-rows-on-a-given-sheet"></a>示例代码：对给定工作表上的空白行计数
 
@@ -90,6 +90,6 @@ function main(workbook: ExcelScript.Workbook): number
 }
 ```
 
-## <a name="use-with-power-automate"></a>与 Power Automate 一同使用
+## <a name="use-with-power-automate"></a>与 Power Automate
 
-:::image type="content" source="../../images/use-in-power-automate.png" alt-text="显示如何设置以运行 Office 脚本的 Power Automate 流。":::
+:::image type="content" source="../../images/use-in-power-automate.png" alt-text="显示Power Automate运行脚本的 Office 流":::

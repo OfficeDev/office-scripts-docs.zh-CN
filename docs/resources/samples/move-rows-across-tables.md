@@ -1,14 +1,14 @@
 ---
-title: 使用 Office 脚本跨表移动行
+title: 使用脚本跨表Office行
 description: 了解如何通过保存筛选器，然后处理和重新应用筛选器来跨表移动行。
-ms.date: 03/30/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 1adaeee1c8307d7775529496df115563831aed4d
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 959fb002b0ba485b43f4de7de3004e1074f768a7
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755040"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232751"
 ---
 # <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>通过保存筛选器，然后处理和重新应用筛选器，跨表移动行
 
@@ -25,7 +25,7 @@ ms.locfileid: "51755040"
 * 第 [一个变量](#sample-code-move-rows-using-table-filter)是，通过应用表格筛选器并读取可见区域来选择行。
 * 第 [二](#sample-code-move-rows-using-range-values)种是，通过读取值并提取行值来选择行。
 
-## <a name="sample-excel-file"></a>示例 Excel 文件
+## <a name="sample-excel-file"></a>示例Excel文件
 
 下载此 <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> 中使用的文件，以尝试一下！
 
@@ -249,4 +249,4 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 
 ## <a name="training-video-move-rows-across-tables"></a>培训视频：跨表移动行
 
-[![观看如何跨表移动行的分步视频](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "如何跨表移动行的分步视频")
+[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/_3t3Pk4i2L0)。

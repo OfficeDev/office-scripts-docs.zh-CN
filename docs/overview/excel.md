@@ -3,12 +3,12 @@ title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
 ms.date: 11/13/2020
 localization_priority: Priority
-ms.openlocfilehash: 726d5e2ea44f6e61708c9692826f37a526250670
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 233baf33648f5fc8358b2aa8ce063ad5cdd68499
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755127"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232660"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中的 Office 脚本（预览版）
 
@@ -50,13 +50,13 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 ## <a name="action-recorder"></a>操作录制器
 
-:::image type="content" source="../images/action-recorder-intro.png" alt-text="操作记录器记录的操作列表。":::
+:::image type="content" source="../images/action-recorder-intro.png" alt-text="操作记录器记录的操作列表":::
 
 操作录制器可以录制你在 Excel 中进行的操作，并将它们转换为脚本。 运行操作录制器之后，你可以在编辑单元格、更改格式和创建表格时捕获 Excel 操作。 可以在其他工作表和工作簿上运行生成的脚本，以重复创建原始操作。
 
 ## <a name="code-editor"></a>代码编辑器
 
-:::image type="content" source="../images/code-editor-intro.png" alt-text="代码编辑器显示本教程中使用的脚本代码。":::
+:::image type="content" source="../images/code-editor-intro.png" alt-text="代码编辑器显示本教程中使用的脚本代码":::
 
 使用操作录制器录制的所有脚本均可通过代码编辑器编辑。 这使你能够调整和自定义脚本，以更好地满足你的准确需求。 此外，你还可以添加不能直接通过 Excel UI 访问的逻辑和功能，例如条件语句 (if/else) 和循环。
 
@@ -64,7 +64,7 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 ## <a name="sharing-scripts"></a>共享脚本
 
-:::image type="content" source="../images/script-sharing.png" alt-text="显示“在此工作簿中与其他人共享”选项的脚本“详细信息”页面。":::
+:::image type="content" source="../images/script-sharing.png" alt-text="显示“在此工作簿中与其他人共享”选项的脚本详细信息页面":::
 
 Office 脚本可与 Excel 工作簿的其他用户共享。 在工作簿中与其他人共享脚本时，该脚本将附加到工作簿中。 你的脚本存储在你的 OneDrive 中，当你共享一个脚本时，你将在打开的工作簿中创建指向该脚本的链接。
 

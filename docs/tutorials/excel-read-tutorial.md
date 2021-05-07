@@ -3,12 +3,12 @@ title: 在 Excel 网页版中使用 Office 脚本读取工作簿数据
 description: 有关从工作簿中读取数据并评估脚本中的数据的 Office 脚本教程。
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: d6321cb91a425da3fd45329d5171f1d5694b2b99
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 979ad949f999f67ee9de750c53ba4690ce6294e6
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754852"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232849"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中使用 Office 脚本读取工作簿数据
 
@@ -71,7 +71,7 @@ ms.locfileid: "51754852"
 6. 运行脚本。
 7. 应在控制台中看到 `[Array[1]]`。 这不是数字，因为区域是数据的二维数组。 该二维区域直接记录到控制台。 幸运的是，代码编辑器让你能够看到数组的内容。
 8. 将二维数组记录到控制台时，它会对每行下面的列值进行分组。 按蓝色三角形展开数组日志。
-9. 按新出现的蓝色三角形展开数组的第二级别。 现在，你应该会看到：
+9. 通过按新出现的蓝色三角形展开数组的第二级别。现在应该看到以下内容：
 
     :::image type="content" source="../images/tutorial-4.png" alt-text="控制台日志显示输出&quot;-20.05&quot;，嵌套在两数组":::
 
@@ -143,10 +143,10 @@ ms.locfileid: "51754852"
 
     现在，你的银行帐单如下所示：
 
-    :::image type="content" source="../images/tutorial-5.png" alt-text="一个工作表，显示银行对账单为仅具有正值的带格式的表格。":::
+    :::image type="content" source="../images/tutorial-5.png" alt-text="显示银行对账单为仅包含正值的带格式表格的工作表。":::
 
 ## <a name="next-steps"></a>后续步骤
 
-打开“代码编辑器”，然后尝试使用一些 [Excel 网页版中的 Office 脚本的示例脚本](../resources/excel-samples.md)。 还可以访问 [Excel 网页版中的 Office 脚本的脚本基础知识](../develop/scripting-fundamentals.md)，了解有关创建 Office 脚本的详细信息。
+打开“代码编辑器”，然后尝试使用一些 [Excel 网页版中的 Office 脚本的示例脚本](../resources/samples/excel-samples.md)。 还可以访问 [Excel 网页版中的 Office 脚本的脚本基础知识](../develop/scripting-fundamentals.md)，了解有关创建 Office 脚本的详细信息。
 
 下一系列的 Office 脚本教程重点介绍如何将 Office 脚本与 Power Automate 一起使用。 在[使用 Power Automate 运行 Office 脚本](../develop/power-automate-integration.md)中了解有关结合两个平台的优势的更多信息，或尝试[通过 Power Automate 手动流调用脚本](excel-power-automate-manual.md)教程来创建使用 Office 脚本的 Power Automate 流。

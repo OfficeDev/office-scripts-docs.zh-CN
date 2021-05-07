@@ -1,16 +1,16 @@
 ---
-title: Office 脚本示例方案：成绩计算器
+title: Office脚本示例方案：成绩计算器
 description: 确定一类学生成绩的百分比和字母成绩的示例。
 ms.date: 12/17/2020
 localization_priority: Normal
-ms.openlocfilehash: b8c45ad405c06a943c75e76391c1160ecb1bd18e
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: e2ef6e7522fc88219bf6ba40900a1ecceecb263b
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755026"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232695"
 ---
-# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office 脚本示例方案：成绩计算器
+# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office脚本示例方案：成绩计算器
 
 在此方案中，你是一名教师，对每位学生的学期结束成绩进行评分。 你一直在输入他们的工作分配和测试的分数。 现在，是时候确定学生了。
 
@@ -25,9 +25,9 @@ ms.locfileid: "51755026"
 
 ## <a name="setup-instructions"></a>设置说明
 
-1. 将 <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> 下载到 OneDrive。
+1. 将<a href="grade-calculator.xlsx">grade-calculator.xlsx</a>下载到OneDrive。
 
-2. 使用 Excel 网页应用打开工作簿。
+2. 使用 Web Excel打开工作簿。
 
 3. 在"**自动化"选项卡** 下，打开 **"所有脚本"。**
 
@@ -182,8 +182,8 @@ ms.locfileid: "51755026"
 
 ### <a name="before-running-the-script"></a>运行脚本之前
 
-:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="显示学生分数行的工作表。":::
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="显示学生分数行的工作表":::
 
 ### <a name="after-running-the-script"></a>运行脚本后
 
-:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="一个工作表，用于显示有效学生行的学生分数数据，并包含红色总计中的无效单元格。":::
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="一个工作表，显示有效学生行中红色总计中无效单元格的学生分数数据":::

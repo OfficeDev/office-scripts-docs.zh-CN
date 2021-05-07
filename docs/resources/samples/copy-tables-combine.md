@@ -1,25 +1,25 @@
 ---
-title: 将多个 Excel 表中的数据合并到单个表中
-description: 了解如何使用 Office 脚本将多个 Excel 表中的数据合并到一个表中。
-ms.date: 03/30/2021
+title: 将多个数据表中的Excel组合到一个表中
+description: 了解如何使用 Office 脚本将多个Excel表中的数据合并到一个表中。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 2f3f7232216f686946861d8c2cdec44013333ec7
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: ac8c7d0a3f0f4f3d7d3217ffac31aff1a5595d17
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571207"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232443"
 ---
-# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>将多个 Excel 表中的数据合并到单个表中
+# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>将多个数据表中的Excel组合到一个表中
 
-此示例将多个 Excel 表中的数据合并到一个包含所有行的表中。 它假定使用的所有表都具有相同的结构。
+此示例将来自多个Excel的数据组合到一个包含所有行的表中。 它假定使用的所有表都具有相同的结构。
 
 此脚本有两种变体：
 
-1. 第 [一个](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table) 脚本将 Excel 文件的所有表组合在一起。
+1. 第[一个](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table)脚本将合并该脚本文件Excel表。
 1. 第 [二个](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) 脚本有选择地获取一组工作表中的表。
 
-## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a>示例代码：将多个 Excel 表中的数据合并到一个表中
+## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a>示例代码：将数据从多个Excel组合到一个表中
 
 下载示例文件 <a href="tables-copy.xlsx">tables-copy.xlsx</a> 并使用以下脚本尝试一下！
 
@@ -49,7 +49,7 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 }
 ```
 
-## <a name="sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table"></a>示例代码：将选定工作表中多个 Excel 表中的数据合并到单个表中
+## <a name="sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table"></a>示例代码：将选定工作表Excel多个数据表的数据合并到一个表中
 
 下载示例文件 <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> 并使用以下脚本尝试一下！
 
@@ -86,6 +86,6 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 }
 ```
 
-## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>培训视频：将多个 Excel 表中的数据合并到一个表中
+## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>培训视频：将数据从多个Excel表组合到一个表中
 
-[![观看分步视频，了解如何将多个 Excel 表中的数据合并到单个表中](../../images/merge-tables-vid.jpg)](https://youtu.be/di-8JukK3Lc "如何将多个 Excel 表中的数据合并到单个表中的分步视频")
+[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/di-8JukK3Lc)。

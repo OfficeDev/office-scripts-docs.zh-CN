@@ -1,14 +1,14 @@
 ---
 title: 通过电子邮件发送图表和Excel图像
 description: 了解如何使用脚本Office脚本Power Automate提取图表和Excel图像并通过电子邮件发送。
-ms.date: 04/05/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 0265250f7fd885cb4899d0b9493b4285496965ff
-ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
+ms.openlocfilehash: b49b6670562d117bb3dd6dcf894c54432bc5ceaa
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52026863"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232590"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>使用Office脚本Power Automate脚本和脚本，以通过电子邮件发送图表和表格的图像
 
@@ -23,15 +23,15 @@ ms.locfileid: "52026863"
 
 _输入数据_
 
-:::image type="content" source="../../images/input-data.png" alt-text="显示输入数据表格的工作表。":::
+:::image type="content" source="../../images/input-data.png" alt-text="显示输入数据表格的工作表":::
 
 _输出图表_
 
-:::image type="content" source="../../images/chart-created.png" alt-text="创建的柱形图显示客户到期金额。":::
+:::image type="content" source="../../images/chart-created.png" alt-text="创建的柱形图显示客户到期金额":::
 
 _通过流收到Power Automate的电子邮件_
 
-:::image type="content" source="../../images/email-received.png" alt-text="流发送的电子邮件，Excel嵌入正文中的图表。":::
+:::image type="content" source="../../images/email-received.png" alt-text="由显示在正文中嵌入Excel图表的流发送的电子邮件":::
 
 ## <a name="solution"></a>解决方案
 
@@ -101,7 +101,7 @@ interface ReportImages {
     * **文件**：工作簿 ([选择器选项选择)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **脚本**：脚本名称
 
-    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="已完成的 Excel Online (Business) 连接器Power Automate。":::
+    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="已完成的 Excel Online (Business) 连接器Power Automate":::
 1. 此示例使用 Outlook 作为电子邮件客户端。 可以使用支持的任何Power Automate连接器，但其余步骤假定你已选择Outlook。 添加一 **个新** 步骤，该步骤使用 **Office 365 Outlook** 连接器和 **V2** (发送) 操作。 对操作使用以下值：
     * **目标**：测试电子邮件帐户 (或个人) 
     * **主题**：请查看报告数据
@@ -121,9 +121,9 @@ interface ReportImages {
     </p>
     ```
 
-    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="已完成的Office 365 Outlook连接器Power Automate。":::
+    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="已完成的Office 365 Outlook连接器Power Automate":::
 1. 保存流并试用。
 
 ## <a name="training-video-extract-and-email-images-of-chart-and-table"></a>培训视频：提取图表和表格的图像和电子邮件图像
 
-[![观看分步视频，了解如何提取图表和表格的图像并通过电子邮件发送图像](../../images/charts-image-vid.jpg)](https://youtu.be/152GJyqc-Kw "如何提取图表和表格的图像和通过电子邮件发送图像的分步视频")
+[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/152GJyqc-Kw)。

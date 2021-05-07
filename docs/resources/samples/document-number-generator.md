@@ -3,12 +3,12 @@ title: 在工作簿中生成唯一标识符
 description: 了解如何使用 Office 脚本生成唯一标识符，以及向表和范围添加行。
 ms.date: 03/18/2021
 localization_priority: Normal
-ms.openlocfilehash: c75eba551cc1c05426db613c78d41431b5177842
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 62c930bfc638dc46b36daf81b6d1ec976c90a8d0
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754836"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232478"
 ---
 # <a name="generate-a-unique-identifier-in-a-workbook"></a>在工作簿中生成唯一标识符
 
@@ -20,23 +20,23 @@ ms.locfileid: "51754836"
 
     _在添加新行之前_
 
-    :::image type="content" source="../../images/document-number-generator-range-before.png" alt-text="在添加行之前显示数据范围的工作表。":::
+    :::image type="content" source="../../images/document-number-generator-range-before.png" alt-text="显示添加行之前的数据范围的工作表":::
 
     _添加新行后_
 
-    :::image type="content" source="../../images/document-number-generator-range-after.png" alt-text="显示添加行后数据范围的工作表。":::
+    :::image type="content" source="../../images/document-number-generator-range-after.png" alt-text="显示添加行后数据范围的工作表":::
 
 * [版本 2：读取行并将其添加到表中](#sample-code-generate-key-and-add-row-to-table)
 
     _在添加新行之前_
 
-    :::image type="content" source="../../images/document-number-generator-table-before.png" alt-text="在添加行之前显示表格的工作表。":::
+    :::image type="content" source="../../images/document-number-generator-table-before.png" alt-text="在添加行之前显示表格的工作表":::
 
     _添加新行后_
 
-    :::image type="content" source="../../images/document-number-generator-table-after.png" alt-text="添加行后显示表格的工作表。":::
+    :::image type="content" source="../../images/document-number-generator-table-after.png" alt-text="添加行后显示表格的工作表":::
 
-## <a name="sample-excel-file"></a>示例 Excel 文件
+## <a name="sample-excel-file"></a>示例Excel文件
 
 下载此 <a href="document-number-generator.xlsx">document-number-generator.xlsx</a> 中使用的文件，以尝试一下！
 

@@ -3,12 +3,12 @@ title: Office脚本示例方案：Graph NOAA 中的水级数据
 description: 从 NOAA 数据库提取 JSON 数据并使用它创建图表的示例。
 ms.date: 04/26/2021
 localization_priority: Normal
-ms.openlocfilehash: 8aea11f42bf2a81fa53cbf4f6ee7280213b97085
-ms.sourcegitcommit: d466b82f27bc61aeba193f902c9bc65ecbf60e4e
+ms.openlocfilehash: d35af59d9eed1abc9f3844834c92752ed80de80f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52066299"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232688"
 ---
 # <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office脚本示例方案：从 NOAA 提取和绘制水级数据
 
@@ -119,4 +119,4 @@ ms.locfileid: "52066299"
 
 ### <a name="after-running-the-script"></a>运行脚本后
 
-:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="运行脚本后的工作表显示一些水级数据和图表。":::
+:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="运行脚本后的工作表显示一些水级数据和图表":::

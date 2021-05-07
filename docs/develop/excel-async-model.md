@@ -1,18 +1,18 @@
 ---
-title: 支持使用异步 API 的较旧 Office 脚本
-description: Office 脚本异步 API 的一个开始，以及如何对较旧的脚本使用加载/同步模式。
+title: 支持Office异步 API 的较旧脚本
+description: 有关脚本异步 API Office以及如何使用较早脚本的加载/同步模式的一个开始。
 ms.date: 02/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 143f52a7ffefb4f19ee36ba4343fd7c2f1cbdffe
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 437fb2e389d6d3963f93cdb44c5529749c4d3569
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755075"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232408"
 ---
-# <a name="support-older-office-scripts-that-use-the-async-apis"></a>支持使用异步 API 的较旧 Office 脚本
+# <a name="support-older-office-scripts-that-use-the-async-apis"></a>支持Office异步 API 的较旧脚本
 
-本文将指导你如何维护和更新使用旧模型的异步 API 的脚本。 这些 API 具有与现在标准同步的 Office 脚本 API 相同的核心功能，但它们要求脚本控制脚本和工作簿之间的数据同步。
+本文将指导你如何维护和更新使用旧模型的异步 API 的脚本。 这些 API 具有与现在标准同步 Office Scripts API 相同的核心功能，但它们需要脚本来控制脚本和工作簿之间的数据同步。
 
 > [!IMPORTANT]
 > 异步模型只能用于实现当前 API 模型之前创建的 [脚本](scripting-fundamentals.md)。 脚本被永久锁定到它们创建时具有的 API 模型。 这也意味着如果你想要将旧脚本转换为新模型，则必须创建全新的脚本。 我们建议你在进行更改时将旧脚本更新到新模型，因为当前模型更易于使用。 将 [异步脚本转换为当前模型](#converting-async-scripts-to-the-current-model) 部分提供了如何进行此转换的建议。
@@ -42,7 +42,7 @@ async function main(context: Excel.RequestContext) {
 
 下图显示了脚本和工作簿之间的示例控制流：
 
-:::image type="content" source="../images/load-sync.png" alt-text="该图显示了从脚本转到工作簿的读取和写入操作。":::
+:::image type="content" source="../images/load-sync.png" alt-text="显示从脚本进入工作簿的读取和写入操作图表":::
 
 ### <a name="sync"></a>同步
 
@@ -55,7 +55,7 @@ await context.sync();
 > [!NOTE]
 > 脚本结束时将隐式调用 `context.sync()`。
 
-`sync` 操作完成后，工作簿将更新以反映脚本已指定的任何写入操作。 写入操作是在 Excel 对象上设置任何属性 (例如，) 或调用更改属性属性的方法 (例如 `range.format.fill.color = "red"` `range.format.autoFitColumns()`) ）。 `sync` 操作还从脚本请求的工作簿中读取任何值，方式是通过使用能返回 `ClientResult` 的 `load` 操作或方法（如下一节所述）。
+`sync` 操作完成后，工作簿将更新以反映脚本已指定的任何写入操作。 写入操作是在 Excel 对象上设置 (属性，例如) 或调用更改属性 (方法，例如 `range.format.fill.color = "red"` `range.format.autoFitColumns()`) 。 `sync` 操作还从脚本请求的工作簿中读取任何值，方式是通过使用能返回 `ClientResult` 的 `load` 操作或方法（如下一节所述）。
 
 将脚本与工作簿同步可能需要一些时间，具体取决于网络。 尽量减少调用 `sync` 次数以帮助脚本快速运行。 否则，异步 API 不是比标准同步 API 速度更快。
 
@@ -149,8 +149,8 @@ async function main(context: Excel.RequestContext) {
 
 4. 集合类已被数组取代。 这些 `add` `get` 集合类的 和 方法已移动到拥有该集合的对象，因此必须相应地更新引用。 例如，若要从工作簿的第一个工作表获取名为"MyChart"的图表，请使用以下代码： `workbook.getWorksheets()[0].getChart("MyChart");` 。 请注意 `[0]` ，以访问 返回 `Worksheet[]` 的第一个值 `getWorksheets()` 。
 
-5. 为了清楚起见，一些方法已重命名并进行了添加，以方便使用。 有关详细信息，请参阅 [Office 脚本 API](/javascript/api/office-scripts/overview) 参考。
+5. 为了清楚起见，一些方法已重命名并进行了添加，以方便使用。 有关详细信息，[请参阅 Office Scripts API](/javascript/api/office-scripts/overview)参考。
 
-## <a name="office-scripts-async-api-reference-documentation"></a>Office 脚本异步 API 参考文档
+## <a name="office-scripts-async-api-reference-documentation"></a>Office脚本异步 API 参考文档
 
-异步 API 与 Office 外接程序中使用的 API 等效。参考文档位于 Office 加载项 [JavaScript API](/javascript/api/excel?view=excel-js-online&preserve-view=true)参考 的 Excel 部分。
+异步 API 等效于在加载项Office API。参考文档位于加载项[JavaScript API](/javascript/api/excel?view=excel-js-online&preserve-view=true)Excel 的 Office 部分。

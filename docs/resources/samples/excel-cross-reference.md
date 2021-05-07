@@ -1,28 +1,28 @@
 ---
-title: 交叉引用和格式化 Excel 文件
-description: 了解如何使用 Office 脚本和 Power Automate 交叉引用和格式化 Excel 文件。
-ms.date: 03/18/2021
+title: 交叉引用和格式化Excel文件
+description: 了解如何使用脚本Office脚本Power Automate交叉引用和格式化Excel文件。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 287de604733b7e6a126d0c81cb4e23351e558c61
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 858fe561c1a82f471bc3c0f43d81e457fb02b627
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571271"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232380"
 ---
-# <a name="cross-reference-and-format-an-excel-file"></a>交叉引用和格式化 Excel 文件
+# <a name="cross-reference-and-format-an-excel-file"></a>交叉引用和格式化Excel文件
 
-此解决方案演示如何使用 Office 脚本和 Power Automate 交叉引用两个 Excel 文件并设置其格式。
+此解决方案演示如何使用脚本Excel脚本和脚本对两个Office文件进行交叉Power Automate。
 
 项目实现以下目标：
 
 1. 使用一个 Run 脚本 <a href="events.xlsx">events.xlsx</a> 事件数据。
-1. 将该数据传递给包含事件事务数据的第二个 Excel 文件，并使用该数据执行数据的基本验证，并使用 Office 脚本对缺失或不正确的数据进行格式设置。
+1. 将该数据传递给包含事件事务数据的第二Excel文件，并使用该数据对数据进行基本验证，并使用 Office Scripts 对缺失或错误数据进行格式设置。
 1. 将结果通过电子邮件发送给审阅者。
 
-有关更多详细信息，请参阅交叉 [引用和使用 Office](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)脚本设置两个 Excel 文件的格式。
+有关更多详细信息，请参阅交叉引用和使用脚本[设置两Excel文件Office格式](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)。
 
-## <a name="sample-excel-files"></a>示例 Excel 文件
+## <a name="sample-excel-files"></a>示例Excel文件
 
 下载此解决方案中使用的以下文件，以尝试一下！
 
@@ -125,6 +125,6 @@ capacity: number
 }
 ```
 
-## <a name="training-video-cross-reference-and-format-an-excel-file"></a>培训视频：交叉引用和格式化 Excel 文件
+## <a name="training-video-cross-reference-and-format-an-excel-file"></a>培训视频：交叉引用和格式化Excel文件
 
-[![观看如何交叉引用和格式化 Excel 文件的分步视频](../../images/cross-ref-tables-vid.jpg)](https://youtu.be/dVwqBf483qo "如何交叉引用和格式化 Excel 文件的分步视频")
+[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/dVwqBf483qo")。

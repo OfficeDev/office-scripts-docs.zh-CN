@@ -1,14 +1,14 @@
 ---
 title: 季节问候语
 description: 了解如何使用Office脚本在树状中显示Excel web 版。
-ms.date: 04/02/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: d0f50cf32c3b5c9b098813b3e8dc07dbb4367c25
-ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
+ms.openlocfilehash: a328ba66fedc245ff73300d7f47cd339ec87234f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52026910"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232576"
 ---
 # <a name="seasons-greetings"></a>季节问候语
 
@@ -16,7 +16,7 @@ ms.locfileid: "52026910"
 
 享受！
 
-[![观看"四月一日"问候语脚本的运行](../../images/community-seasons.png)](https://youtu.be/HBiGEkzmkgo "执行中的四年问候语脚本！")
+[观看 YouTube 频道的"Les's IT 博客"上的](https://youtu.be/HBiGEkzmkgo)"四月三十日"问候语脚本的运行。
 
 ## <a name="script"></a>Script
 

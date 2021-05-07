@@ -1,18 +1,18 @@
 ---
-title: 筛选 Excel 表并获取可见区域
-description: 了解如何使用 Office 脚本筛选 Excel 表，并获取作为对象数组的可见区域。
-ms.date: 03/16/2021
+title: 筛选Excel并获取可见区域
+description: 了解如何使用 Office Scripts 筛选 Excel 表，并获取作为对象数组的可见区域。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: c0a5842af4a62162225e3fc10203c261b91e010a
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: a310857e6055b3da57c353dc7ad78a6fbdd86d4e
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571242"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232373"
 ---
-# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>筛选 Excel 表并获取可见区域作为 JSON 对象
+# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>筛选Excel，并获取作为 JSON 对象的可见区域
 
-此示例筛选 Excel 表，并返回可见区域作为 JSON 对象。 此 JSON 可以作为较大解决方案的一部分提供给 Power Automate 流。
+此示例筛选一Excel，并作为 JSON 对象返回可见区域。 此 JSON 可以作为较大解决方案的Power Automate提供给一个流。
 
 ## <a name="example-scenario"></a>示例应用场景
 
@@ -83,43 +83,43 @@ interface ReturnTemplate {
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Debra Berger",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }, {
     "Station": "Station-1",
     "Shift": "Afternoon",
     "Date": "27-Oct-20",
     "Responsible": "Delia Dennis",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }, {
     "Station": "Station-1",
     "Shift": "Afternoon",
     "Date": "28-Oct-20",
     "Responsible": "Lidia Holloway",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }],
   "Station-2": [{
     "Station": "Station-2",
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Gerhart Moller",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }, {
     "Station": "Station-2",
     "Shift": "Afternoon",
     "Date": "28-Oct-20",
     "Responsible": "Grady Archie",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }],
   "Station-3": [{
     "Station": "Station-3",
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Isaiah Langer",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }]
 }
 ```
 
-## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>培训视频：筛选 Excel 表并获取可见区域
+## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>培训视频：筛选Excel表并获取可见区域
 
-[![观看有关如何筛选 Excel 表和获取可见范围的分步视频](../../images/visible-range-as-objects-vid.jpg)](https://youtu.be/Mv7BrvPq84A "如何筛选 Excel 表和获取可见范围的分步视频")
+[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/Mv7BrvPq84A)。

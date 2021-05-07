@@ -3,12 +3,12 @@ title: 通过手动 Power Automate 流呼叫脚本
 description: 有关通过手动触发器在 Power Automate 中使用 Office 脚本的教程。
 ms.date: 12/28/2020
 localization_priority: Priority
-ms.openlocfilehash: fd3a4758e9d90f5eb40de9c9665c197cfae93740
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 0a5fc93dbad1ee9804840fa11a06b689b7e7abda
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754913"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232870"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow-preview"></a>通过手动 Power Automate 流呼叫脚本（预览版）
 

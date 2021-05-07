@@ -3,12 +3,12 @@ title: 在 Excel 网页版中录制、编辑和创建 Office 脚本
 description: 有关 Office 脚本基础知识的教程，包括使用操作录制器录制脚本以及将数据写入工作簿。
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: ae864cc08453a9c8a2538f15ceee1275e131725d
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 9f1b2e29d60ec0e370bdb29fde0f04be831a222b
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754843"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232863"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中录制、编辑和创建 Office 脚本
 
@@ -49,7 +49,7 @@ ms.locfileid: "51754843"
 
     你的工作表应如下所示（不要担心颜色是否不同）:
 
-    :::image type="content" source="../images/tutorial-1.png" alt-text="一个工作表，其中以橙色突出显示了包含&quot;橙子&quot;的行的水果销售数据行。":::
+    :::image type="content" source="../images/tutorial-1.png" alt-text="显示水果销售数据行的工作表，该行包含以橙色突出显示的“橙子”。":::
 
 ## <a name="edit-an-existing-script"></a>编辑现有脚本
 
@@ -78,7 +78,7 @@ ms.locfileid: "51754843"
 
 4. 通过按“**运行**”来测试脚本。 工作簿现在应如下所示：
 
-    :::image type="content" source="../images/tutorial-2.png" alt-text="一个工作表，显示以橙色突出显示的&quot;橙子&quot;行和以黄色突出显示的&quot;花样&quot;行。":::
+    :::image type="content" source="../images/tutorial-2.png" alt-text="显示水果销售数据行的工作表，其中“橙子”行以橙色突出显示，“柠檬”行以黄色突出显示":::
 
 ## <a name="create-a-table"></a>创建表格
 
@@ -111,9 +111,9 @@ ms.locfileid: "51754843"
 
     表格具有 `TableSort` 对象，可通过 `Table.getSort` 方法进行访问。 可以对该对象应用排序条件。 `apply` 方法接受 `SortField` 对象的数组。 在本示例中，我们只有一个排序条件，因此只使用一个 `SortField`。 `key: 0` 将具有排序定义值的列设置为“0”（这是表格上的第一列，在本示例中为 **A**）。 `ascending: true` 以升序（而不是降序）对数据进行排序。
 
-3. 运行脚本。 你看到的表格应类似于：
+3. 运行脚本。应看到如下所示的表：
 
-    :::image type="content" source="../images/tutorial-3.png" alt-text="显示已排序的水果销售表的工作表。":::
+    :::image type="content" source="../images/tutorial-3.png" alt-text="显示已排序水果销售表的工作表。":::
 
     > [!NOTE]
     > 如果重新运行该脚本，将会收到错误消息。 这是因为不能在另一个表格的顶部创建表格。 但是，可以在其他工作表或工作簿上运行脚本。

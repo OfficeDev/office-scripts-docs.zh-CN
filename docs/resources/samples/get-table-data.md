@@ -1,34 +1,34 @@
 ---
-title: 将 Excel 数据输出为 JSON
-description: 了解如何将 Excel 表数据输出为 JSON 以在 Power Automate 中使用。
+title: 输出Excel JSON
+description: 了解如何将Excel数据输出为 JSON，以用于Power Automate。
 ms.date: 03/18/2021
 localization_priority: Normal
-ms.openlocfilehash: db6eb8f8645079eebc369e0a0622539075853953
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: c6b033a68fdbde2b053f65d1a54db58da6c93b2e
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754794"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232534"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>将 Excel 表数据输出为 JSON，以在 Power Automate 中使用
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>输出Excel数据作为 JSON，用于Power Automate
 
-Excel 表数据可以表示为 JSON 形式的对象数组。 每个对象代表表格中的一行。 这有助于以用户可见的一致格式从 Excel 中提取数据。 然后，可通过 Power Automate 流向其他系统提供数据。
+Excel表数据可以表示为 JSON 形式的对象数组。 每个对象代表表格中的一行。 这有助于以用户可见的Excel格式从数据中提取数据。 然后，可通过流向其他系统Power Automate数据。
 
 _输入表数据_
 
-:::image type="content" source="../../images/table-input.png" alt-text="显示输入表数据的工作表。":::
+:::image type="content" source="../../images/table-input.png" alt-text="显示输入表数据的工作表":::
 
 此示例的变体还包括其中一个表格列中的超链接。 这允许在 JSON 中显示其他级别的单元格数据。
 
 _包含超链接的输入表数据_
 
-:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="显示格式化为超链接的表格数据的列的工作表。":::
+:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="显示格式化为超链接的表格数据列的工作表":::
 
 _用于编辑超链接的对话框_
 
-:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="显示更改超链接的选项的&quot;编辑超链接&quot;对话框。":::
+:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="显示更改超链接的选项的&quot;编辑超链接&quot;对话框":::
 
-## <a name="sample-excel-file"></a>示例 Excel 文件
+## <a name="sample-excel-file"></a>示例Excel文件
 
 下载这些 <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> 中使用的文件，然后自己试用！
 
@@ -253,6 +253,6 @@ interface TableData {
 }]
 ```
 
-## <a name="use-in-power-automate"></a>在 Power Automate 中的使用
+## <a name="use-in-power-automate"></a>在 Power Automate
 
-有关在 Power Automate 中如何使用此类脚本的信息，请参阅 [使用 Power Automate 创建自动化工作流](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
+若要了解如何在工作流中使用此Power Automate，请参阅使用 Power Automate 创建[自动Power Automate。](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)

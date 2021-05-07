@@ -1,46 +1,46 @@
 ---
-title: 使用 Power Automate 运行 Office 脚本
-description: 如何让适用于 Excel 网页的 Office 脚本与 Power Automate 工作流一起运行。
+title: 使用Office运行 Power Automate
+description: 如何获取Office脚本Excel web 版工作流Power Automate脚本。
 ms.date: 12/16/2020
 localization_priority: Normal
-ms.openlocfilehash: 1ca9aa14efe7cf2c91100a32fbc9a69054012f06
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: fd2622880f08c253f4333e642d1ebb0410bce681
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755068"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232415"
 ---
-# <a name="run-office-scripts-with-power-automate"></a>使用 Power Automate 运行 Office 脚本
+# <a name="run-office-scripts-with-power-automate"></a>使用Office运行 Power Automate
 
-[Power Automate](https://flow.microsoft.com) 允许你将 Office 脚本添加到更大的自动化工作流。 可以使用 Power Automate 执行一些操作，如将电子邮件内容添加到工作表表中，或在项目管理工具中基于工作簿注释创建操作。
+[Power Automate，](https://flow.microsoft.com)可以将Office脚本添加到更大的自动化工作流。 可以使用Power Automate操作，如将电子邮件内容添加到工作表表中，或在项目管理工具中基于工作簿注释创建操作。
 
 ## <a name="getting-started"></a>入门
 
-如果你刚开始使用 Power Automate，我们建议访问 Power [Automate 入门](/power-automate/getting-started)。 在那里，你可以了解有关所有可用的自动化可能性的信息。 此处的文档重点介绍 Office 脚本如何与 Power Automate 一起运行，以及这如何有助于改善 Excel 体验。
+如果你刚开始Power Automate，我们建议你访问入门[Power Automate。](/power-automate/getting-started) 在那里，你可以了解有关所有可用的自动化可能性的信息。 此处的文档重点介绍脚本Office脚本Power Automate以及该脚本如何有助于改进Excel体验。
 
-若要开始组合 Power Automate 和 Office 脚本，请按照教程开始使用 Power [Automate 中的脚本](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 完成本教程和自动运行的 [Power Automate](../tutorials/excel-power-automate-trigger.md) 流教程中的"将数据传递到脚本"教程后，请返回此处，详细了解如何连接 Office 脚本到 Power Automate 流。
+若要开始Power Automate脚本Office脚本，请按照教程[开始将脚本与脚本Power Automate。](../tutorials/excel-power-automate-manual.md) 这将教您如何创建调用简单脚本的流。 完成该教程和自动运行的[Power Automate](../tutorials/excel-power-automate-trigger.md)流教程中的将数据传递到脚本后，请返回此处，详细了解如何将 Office 脚本连接到 Power Automate 流。
 
-## <a name="excel-online-business-connector"></a>Excel Online (Business) 连接器
+## <a name="excel-online-business-connector"></a>ExcelOnline (Business) 连接器
 
-[连接器是](/connectors/connectors) Power Automate 和应用程序之间的桥梁。 Excel [Online (Business) 连接器](/connectors/excelonlinebusiness) 可让你流访问 Excel 工作簿。 通过"运行脚本"操作，您可以调用可通过所选工作簿访问的任何 Office 脚本。 还可以为脚本提供输入参数，以便流提供数据，或让脚本返回流中稍后步骤的信息。
+[连接器](/connectors/connectors)是应用程序与Power Automate之间的桥梁。 使用[Excel Online (Business) 连接器](/connectors/excelonlinebusiness)，流可以访问Excel工作簿。 通过"运行脚本"操作，您可以调用Office工作簿可访问的任何脚本。 还可以为脚本提供输入参数，以便流提供数据，或让脚本返回流中稍后步骤的信息。
 
 > [!IMPORTANT]
-> "运行脚本"操作为使用 Excel 连接器的人提供对工作簿及其数据的重要访问权限。 此外，执行外部 API 调用的脚本存在安全风险，如来自 [Power Automate 的外部调用中介绍](external-calls.md)。 如果你的管理员关注高度敏感数据的曝光，他们可以通过 Office 脚本管理员控件关闭 Excel Online 连接器或限制对 Office [脚本的访问](/microsoft-365/admin/manage/manage-office-scripts-settings)。
+> "运行脚本"操作为使用 Excel 连接器的人提供对工作簿及其数据的重要访问权限。 此外，执行外部 API 调用的脚本存在安全风险，如外部从 Power Automate[中Power Automate。](external-calls.md) 如果你的管理员关注高度敏感数据的曝光，他们可以通过 Excel 脚本管理员控制来关闭 Excel Online 连接器或Office脚本Office[访问](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>脚本流中的数据传输
 
-Power Automate 允许你在流的步骤之间传递数据片段。 可以将脚本配置为接受所需的任何类型的信息，并返回流中所需的工作簿中的内容。 通过向函数添加参数来指定脚本的输入 (`main` 以及 `workbook: ExcelScript.Workbook`) 。 脚本的输出通过向 添加返回类型进行声明 `main` 。
+Power Automate允许你在流的步骤之间传递数据片段。 可以将脚本配置为接受所需的任何类型的信息，并返回流中所需的工作簿中的内容。 通过向函数添加参数来指定脚本的输入 (`main` 以及 `workbook: ExcelScript.Workbook`) 。 脚本的输出通过向 添加返回类型进行声明 `main` 。
 
 > [!NOTE]
 > 当您在流中创建"Run Script"块时，将填充接受的参数和返回的类型。 如果更改脚本的参数或返回类型，则需要恢复流的"运行脚本"块。 这可确保正确分析数据。
 
-以下各节介绍 Power Automate 中使用的脚本的输入和输出的详细信息。 如果你想要实践学习本主题的方法，请尝试在自动运行的 [Power Automate](../tutorials/excel-power-automate-trigger.md) 流教程中将数据传递到脚本，或浏览自动 [任务](../resources/scenarios/task-reminders.md) 提醒示例方案。
+以下各节介绍用于脚本的输入和输出的详细信息Power Automate。 如果你想要实践学习本主题的方法，请尝试在自动运行的 Power Automate 流教程中将数据传递到[](../tutorials/excel-power-automate-trigger.md)脚本，或浏览自动[任务](../resources/scenarios/task-reminders.md)提醒示例方案。
 
 ### <a name="main-parameters-passing-data-to-a-script"></a>`main` 参数：将数据传递给脚本
 
 所有脚本输入都指定为 函数的其他 `main` 参数。 例如，如果您希望脚本接受表示作为输入的名称的 ， `string` 则您需要将 `main` 签名更改为 `function main(workbook: ExcelScript.Workbook, name: string)` 。
 
-在 Power Automate 中配置流时，可以将脚本输入指定为静态值、 [表达式](/power-automate/use-expressions-in-conditions)或动态内容。 有关单个服务连接器的详细信息，请参阅 [Power Automate Connector 文档](/connectors/)。
+在脚本中配置流Power Automate，可以将脚本输入指定为静态值、[表达式](/power-automate/use-expressions-in-conditions)或动态内容。 有关单个服务连接器的详细信息，请参阅[Power Automate Connector 文档](/connectors/)。
 
 向脚本函数添加输入参数 `main` 时，请考虑以下允许和限制。
 
@@ -83,7 +83,7 @@ Power Automate 允许你在流的步骤之间传递数据片段。 可以将脚�
 
 ### <a name="returning-data-from-a-script"></a>从脚本返回数据
 
-脚本可以从工作簿中返回数据，以用作 Power Automate 流中的动态内容。 与输入参数一样，Power Automate 对返回类型施加了一些限制。
+脚本可以从工作簿中返回要用作活动流中的动态Power Automate内容。 与输入参数一样，Power Automate对返回类型施加一些限制。
 
 1. 支持 `string` 基本类型 、 `number` 、 、 `boolean` 和 `void` `undefined` 。
 
@@ -97,9 +97,9 @@ Power Automate 允许你在流的步骤之间传递数据片段。 可以将脚�
 
 ## <a name="example"></a>示例
 
-以下屏幕截图显示了每当分配 [GitHub](https://github.com/) 问题时触发的 Power Automate 流。 该流运行一个脚本，该脚本将问题添加到 Excel 工作簿的表中。 如果该表中存在五个或多个问题，则流将发送电子邮件提醒。
+以下屏幕截图显示了Power Automate分配问题时触发GitHub流。 [](https://github.com/) 该流运行一个脚本，该脚本将问题添加到工作簿Excel表中。 如果该表中存在五个或多个问题，则流将发送电子邮件提醒。
 
-:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="显示示例流的 Power Automate 流编辑器。":::
+:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="显示Power Automate流的流编辑器":::
 
 脚本函数将问题 ID 和问题标题指定为输入参数，脚本返回问题 `main` 表中的行数。
 
@@ -124,9 +124,9 @@ function main(
 
 ## <a name="see-also"></a>另请参阅
 
-- [使用 Power Automate 在 Excel 网页中运行 Office 脚本](../tutorials/excel-power-automate-manual.md)
+- [在Office中运行Excel web 版脚本Power Automate](../tutorials/excel-power-automate-manual.md)
 - [将数据传递到自动运行的 Power Automate 流中的脚本](../tutorials/excel-power-automate-trigger.md)
 - [从脚本返回数据到自动运行 Power Automated 流](../tutorials/excel-power-automate-returns.md)
-- [Power Automate with Office Scripts 疑难解答信息](../testing/power-automate-troubleshooting.md)
+- [有关使用脚本Power Automate疑Office信息](../testing/power-automate-troubleshooting.md)
 - [Power Automate 入门](/power-automate/getting-started)
-- [Excel Online (Business) 连接器参考文档](/connectors/excelonlinebusiness/)
+- [ExcelOnline (Business) 连接器参考文档](/connectors/excelonlinebusiness/)

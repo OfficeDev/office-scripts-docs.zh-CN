@@ -1,30 +1,30 @@
 ---
-title: Office 脚本中的 TypeScript 限制
-description: Office 脚本代码编辑器使用的 TypeScript 编译器和 linter 的具体信息。
+title: 脚本中的 TypeScript Office限制
+description: TypeScript 编译器和 linter 的特定信息，Office脚本代码编辑器。
 ms.date: 02/05/2021
 localization_priority: Normal
-ms.openlocfilehash: 88d0b5873a2f7350f88417d2e340343dbd183606
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 40eb6923d7b0c47dfeb4c846cdcc745e5d893c13
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755047"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232457"
 ---
-# <a name="typescript-restrictions-in-office-scripts"></a>Office 脚本中的 TypeScript 限制
+# <a name="typescript-restrictions-in-office-scripts"></a>脚本中的 TypeScript Office限制
 
-Office 脚本使用 TypeScript 语言。 在大多数情况下，任何 TypeScript 或 JavaScript 代码都适用于 Office 脚本。 但是，代码编辑器会强制执行一些限制，以确保脚本一致且符合 Excel 工作簿的运行要求。
+Office脚本使用 TypeScript 语言。 在大多数情况下，任何 TypeScript 或 JavaScript 代码都适用于Office脚本。 但是，代码编辑器会强制执行一些限制，以确保脚本一致且符合您的工作簿Excel运行。
 
-## <a name="no-any-type-in-office-scripts"></a>Office 脚本中无"任何"类型
+## <a name="no-any-type-in-office-scripts"></a>在脚本中，没有"Office"类型
 
-在[](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) TypeScript 中，写入类型是可选的，因为可以推断出这些类型。 但是，Office 脚本要求变量不能为 [任何 类型](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)。 Office 脚本 `any` 中不允许显式和隐式。 这些情况报告为错误。
+在[](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) TypeScript 中，写入类型是可选的，因为可以推断出这些类型。 但是，Office脚本要求变量不能为[任何 类型](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)。 在脚本中 `any` 不允许显式和隐式Office脚本。 这些情况报告为错误。
 
 ### <a name="explicit-any"></a>显式 `any`
 
-You cannot explicitly declare a variable to be of type `any` in Office Scripts (that is， `let someVariable: any;`) . 类型 `any` 导致 Excel 处理时出现问题。 例如， `Range` 需要知道值是 、 `string` 或 `number` `boolean` 。 如果脚本中的类型明确定义为 (，在运行脚本脚本之前) 出现编译时 `any` 错误。
+您不能在脚本脚本中显式声明Office类型 `any` (，即 `let someVariable: any;`) 。 类型 `any` 导致由事件处理时Excel。 例如， `Range` 需要知道值是 、 `string` 或 `number` `boolean` 。 如果脚本中的类型明确定义为 (，在运行脚本脚本之前) 出现编译时 `any` 错误。
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的显式&quot;any&quot;消息":::
 
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="控制台窗口中的 Explicit Any 错误。":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="控制台窗口中的 Explicit Any 错误":::
 
 在上一 `[5, 16] Explicit Any is not allowed` 张屏幕截图中，#5列#16定义 `any` 类型。 这可以帮助您找到错误。
 
@@ -39,13 +39,13 @@ TypeScript 变量类型可以 [隐式](https://www.typescriptlang.org/docs/handb
 * 将变量分配给隐式可识别的类型 (`let value = 5;` 或 `let value = workbook.getWorksheet();`) 。
 * 显式键入变量 `let value: number;` () 
 
-## <a name="no-inheriting-office-script-classes-or-interfaces"></a>不继承 Office 脚本类或接口
+## <a name="no-inheriting-office-script-classes-or-interfaces"></a>不继承Office脚本类或接口
 
-在 Office 脚本中创建的类和接口无法扩展 [或实现](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) Office 脚本类或接口。 换句话说，命名空间中 `ExcelScript` 没有任何内容可以有子类或子接口。
+在脚本中创建的类和Office无法[扩展](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance)或实现Office脚本类或接口。 换句话说，命名空间中 `ExcelScript` 没有任何内容可以有子类或子接口。
 
 ## <a name="incompatible-typescript-functions"></a>不兼容的 TypeScript 函数
 
-Office 脚本 API 不能用于以下项：
+Office脚本 API 不能用于以下项：
 
 * [生成器函数](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions)
 * [Array.sort](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
@@ -81,13 +81,13 @@ let filteredArray = myArray.filter((x) => {
 
 ## <a name="performance-warnings"></a>性能警告
 
-如果脚本可能有性能问题，代码编辑器 [的 linter](https://wikipedia.org/wiki/Lint_(software)) 会发出警告。 改进 Office 脚本的性能中记录了这些案例 [及其处理的方法](web-client-performance.md)。
+如果脚本可能有性能问题，代码编辑器 [的 linter](https://wikipedia.org/wiki/Lint_(software)) 会发出警告。 这些案例及其处理的方法记录在 改进 Office[脚本 的性能中](web-client-performance.md)。
 
 ## <a name="external-api-calls"></a>外部 API 调用
 
-有关详细信息 [，请参阅 Office 脚本中的](external-calls.md) 外部 API 调用支持。
+有关详细信息[，请参阅 Office Scripts](external-calls.md)中的外部 API 调用支持。
 
 ## <a name="see-also"></a>另请参阅
 
 * [Excel 网页版中 Office 脚本的脚本基础知识](scripting-fundamentals.md)
-* [提高 Office 脚本的性能](web-client-performance.md)
+* [提高脚本Office性能](web-client-performance.md)

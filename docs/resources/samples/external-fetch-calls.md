@@ -1,16 +1,16 @@
 ---
-title: 在脚本中使用外部Office调用
+title: 在 Office 脚本中使用外部提取呼叫
 description: 了解如何在脚本中执行外部 API Office调用。
-ms.date: 04/05/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: a77ceb61c2ff46a7b6226b798462b7be2c8e1c54
-ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
+ms.openlocfilehash: 721bfa39eea1e9973efc7fd13efa5bac734b76dd
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52026990"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232520"
 ---
-# <a name="use-external-fetch-calls-in-office-scripts"></a>在脚本中使用外部Office调用
+# <a name="use-external-fetch-calls-in-office-scripts"></a>在 Office 脚本中使用外部提取呼叫
 
 此脚本获取有关用户存储库GitHub信息。 它显示了如何在 `fetch` 简单方案中使用。
 
@@ -51,4 +51,4 @@ interface License {
 
 ## <a name="training-video-how-to-make-external-api-calls"></a>培训视频：如何进行外部 API 调用
 
-[![观看有关如何进行外部 API 调用的视频](../../images/api-vid.png)](https://youtu.be/fulP29J418E "如何进行外部 API 调用的视频")
+[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/fulP29J418E)。

@@ -3,12 +3,12 @@ title: 从脚本返回数据到自动运行 Power Automated 流
 description: 本教程演示了如何通过 Power Automate 运行适用于 Excel 网页版的 Office 脚本来发送提醒电子邮件。
 ms.date: 12/15/2020
 localization_priority: Priority
-ms.openlocfilehash: 0c8d8f308147d727a0a5880c11c9c0d924149fb2
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 54fcfc773d4d2a8d352f7bd22593ac817e7ded0e
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754899"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232877"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow-preview"></a>从脚本返回数据到自动运行 Power Automated 流（预览） 
 
@@ -36,7 +36,7 @@ ms.locfileid: "51754899"
     > [!IMPORTANT]
     > 要编写的脚本使用表中第一个匹配的条目，因此请确保你的名称位于当前周的任何行的上方。
 
-    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="包含呼叫旋转表格数据的工作表。":::
+    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="包含待命轮换表数据工作表。":::
 
 ## <a name="create-an-office-script"></a>创建 Office 脚本
 
@@ -142,7 +142,7 @@ ms.locfileid: "51754899"
     - **重复间隔**：1 周
     - **这些日期**：星期一
 
-    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="Power Automate &quot;生成计划云流&quot;对话框显示选项。选项包括流名称、开始时间、重复时间以及一周中的哪一天运行流。":::
+    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="Power Automate“生成计划云流”对话框显示选项。选项包括流名称、开始时间、重复频率以及一周中的哪一天运行流。":::
 
 1. 按“**创建**”。
 
@@ -150,9 +150,9 @@ ms.locfileid: "51754899"
 
 1. 选择 "**标准**" 选项卡，然后选择 "**Excel Online （企业）**"。
 
-    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate 中的 Excel Online（商业版）选项":::
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate 中的 Excel Online (商业版)选项":::
 
-1. 在 "**操作**"下，选择 **运行脚本（预览版）**。
+1. 在“**操作**”下，选择“**运行脚本（预览版）**”。
 
     :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate 中的“运行脚本”（预览版）操作选项":::
 
@@ -172,7 +172,7 @@ ms.locfileid: "51754899"
     :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="用于发送电子邮件的 Power Automate Outlook 连接器设置。选项包括要发送的文件、电子邮件主题、电子邮件正文以及高级选项。":::
 
     > [!NOTE]
-    > 本教程使用 Outlook。 可改为使用你喜欢的电子邮件服务，但某些选项可能不同。
+    > 此教程使用 Outlook。可以改用你喜欢的电子邮件服务，但某些选项可能不同。
 
 1. 按“**保存**”。
 

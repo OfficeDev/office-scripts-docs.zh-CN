@@ -1,16 +1,16 @@
 ---
-title: 从 Excel 工作表的每个单元格中删除超链接
-description: 了解如何使用 Office 脚本从 Excel 工作表的每个单元格中删除超链接。
-ms.date: 03/18/2021
+title: 从工作表的每个单元格中删除Excel超链接
+description: 了解如何使用脚本Office工作表中每个单元格删除Excel超链接。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 07b670aac3368e38b9b93283404befee608391a7
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: eb5f486cb5228e639727c5ee7e6c335d5e94239f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571101"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232744"
 ---
-# <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>从 Excel 工作表的每个单元格中删除超链接
+# <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>从工作表的每个单元格中删除Excel超链接
 
  本示例清除当前工作表的所有超链接。 它会遍历工作表，如果存在与单元格关联的任何超链接，它会清除超链接，但会保留单元格值。 还记录完成遍历所花的时间。
 
@@ -80,6 +80,6 @@ function removeHyperLink(targetRange: ExcelScript.Range): void {
 }
 ```
 
-## <a name="training-video-remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>培训视频：从 Excel 工作表的每个单元格中删除超链接
+## <a name="training-video-remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>培训视频：从工作表中的每个单元格Excel超链接
 
-[![观看分步视频，了解如何从 Excel 工作表的每个单元格中删除超链接](../../images/hyperlinks-vid.jpg)](https://youtu.be/v20fdinxpHU "如何从 Excel 工作表的每个单元格中删除超链接的分步视频")
+[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/v20fdinxpHU)。

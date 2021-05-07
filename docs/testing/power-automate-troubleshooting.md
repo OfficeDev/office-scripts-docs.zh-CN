@@ -1,67 +1,67 @@
 ---
-title: Power Automate with Office Scripts 疑难解答信息
-description: 有关 Office 脚本和 Power Automate 之间集成的提示、平台信息和已知问题。
+title: 有关使用脚本Power Automate疑Office信息
+description: 使用技巧脚本和脚本之间的集成时，Office、平台信息和Power Automate。
 ms.date: 01/14/2021
 localization_priority: Normal
-ms.openlocfilehash: 59f4cd8b3476c2ee2a1a862f136173a543ba8a15
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: bcfedb8db88d74f16e46c604121bceff3c7c7382
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755005"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232646"
 ---
-# <a name="troubleshooting-information-for-power-automate-with-office-scripts"></a>Power Automate with Office Scripts 疑难解答信息
+# <a name="troubleshooting-information-for-power-automate-with-office-scripts"></a>有关使用脚本Power Automate疑Office信息
 
-借助 Power Automate，你可以将 Office 脚本自动化上一个级别。 但是，由于 Power Automate 在独立的 Excel 会话中代表您运行脚本，因此有一些重要的注意事项。
+Power Automate，你可以将Office脚本自动化上一个级别。 但是，Power Automate在独立会话中代表您Excel脚本，因此有一些重要的注意事项。
 
 > [!TIP]
-> 如果刚开始将 Office 脚本与 Power Automate 一同使用，请从使用 [Power Automate 运行 Office 脚本](../develop/power-automate-integration.md) 开始了解平台。
+> 如果你刚开始将 Office 脚本与 Power Automate 一起Power Automate运行 Office [Scripts with Power Automate](../develop/power-automate-integration.md)了解平台。
 
 ## <a name="avoid-using-relative-references"></a>避免使用相对引用
 
-Power Automate 代表你运行所选 Excel 工作簿中的脚本。 发生这种情况时，工作簿可能会关闭。 依赖于用户当前状态的任何 API（如 ）在 Power Automate 中的行为 `Workbook.getActiveWorksheet` 可能有所不同。 这是因为 API 基于用户视图或游标的相对位置，并且 Power Automate 流中不存在该引用。
+Power Automate代表您Excel所选工作簿中运行脚本。 发生这种情况时，工作簿可能会关闭。 任何依赖用户当前状态（如 ）的 API 在用户 `Workbook.getActiveWorksheet` Power Automate。 这是因为 API 基于用户视图或游标的相对位置，并且该引用不存在于Power Automate流中。
 
-某些相对引用 API 在 Power Automate 中引发错误。 其他人有一个默认行为，表示用户的状态。 在设计脚本时，请确保对工作表和范围使用绝对引用。 这使 Power Automate 流程保持一致，即使工作表已重新排列。
+某些相对引用 API 在Power Automate。 其他人有一个默认行为，表示用户的状态。 在设计脚本时，请确保对工作表和范围使用绝对引用。 这样，即使Power Automate重新排列，也使工作表流保持一致。
 
-### <a name="script-methods-that-fail-when-run-power-automate-flows"></a>运行 Power Automate 流时失败的脚本方法
+### <a name="script-methods-that-fail-when-run-power-automate-flows"></a>在流中运行时失败的Power Automate方法
 
-从 Power Automate 流中的脚本调用时，以下方法将引发错误并失败。
+以下方法将引发错误，并且从脚本流中的脚本调用时Power Automate失败。
 
-| 类 | Method |
+| 类 | 方法 |
 |--|--|
 | [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
-| [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
+| [区域](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
 
-### <a name="script-methods-with-a-default-behavior-in-power-automate-flows"></a>Power Automate 流中具有默认行为的脚本方法
+### <a name="script-methods-with-a-default-behavior-in-power-automate-flows"></a>脚本方法，其默认行为在Power Automate流
 
 以下方法使用默认行为代替任何用户的当前状态。
 
-| 类 | Method | Power Automate 行为 |
+| 类 | 方法 | Power Automate行为 |
 |--|--|--|
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | 返回工作簿中的第一个工作表或该方法当前激活的 `Worksheet.activate` 工作表。 |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | 出于目的，将工作表标记为活动工作表 `Workbook.getActiveWorksheet` 。 |
 
 ## <a name="select-workbooks-with-the-file-browser-control"></a>使用文件浏览器控件选择工作簿
 
-生成 Power **Automate 流的 Run 脚本** 步骤时，需要选择哪个工作簿是流的一部分。 使用文件浏览器选择工作簿，而不是手动键入工作簿的名称。
+构建流 **中的"运行**"Power Automate步骤时，需要选择哪个工作簿是流的一部分。 使用文件浏览器选择工作簿，而不是手动键入工作簿的名称。
 
-:::image type="content" source="../images/power-automate-file-browser.png" alt-text="显示显示选取器文件浏览器选项的 Power Automate Run 脚本操作。":::
+:::image type="content" source="../images/power-automate-file-browser.png" alt-text="显示Power Automate选取器文件浏览器选项的&quot;运行脚本&quot;操作":::
 
-有关 Power Automate 限制的更多上下文和有关动态选择工作簿的潜在解决方法的讨论，请参阅 Microsoft Power Automate Community 中的 [此线程](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#)。
+有关工作簿动态Power Automate可能的解决方法的更多上下文，请参阅 Microsoft Power Automate Community 中的[此线程](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#)。
 
 ## <a name="time-zone-differences"></a>时区差异
 
-Excel 文件没有固有位置或时区。 用户每次打开工作簿时，其会话都会使用该用户的本地时区进行日期计算。 Power Automate 始终使用 UTC。
+Excel文件没有固有位置或时区。 用户每次打开工作簿时，其会话都会使用该用户的本地时区进行日期计算。 Power Automate始终使用 UTC。
 
-如果脚本使用日期或时间，则在本地测试脚本时与通过 Power Automate 运行脚本时可能有行为差异。 Power Automate 允许你转换、格式化和调整时间。 有关如何[在](https://flow.microsoft.com/blog/working-with-dates-and-times/)Power Automate 和[ `main` Parameters： Passing data to a script](../develop/power-automate-integration.md#main-parameters-passing-data-to-a-script)中使用这些函数的说明，请参阅在流内使用日期和时间，以了解如何为脚本提供该时间信息。
+如果您的脚本使用日期或时间，则在本地测试脚本时与在脚本运行期间的行为Power Automate。 Power Automate允许你转换、设置格式和调整时间。 有关如何[在](https://flow.microsoft.com/blog/working-with-dates-and-times/)Power Automate 和[ `main` Parameters： Passing data to a script](../develop/power-automate-integration.md#main-parameters-passing-data-to-a-script)中使用这些函数的说明，请参阅在流内使用日期和时间，以了解如何为脚本提供该时间信息。
 
 ## <a name="see-also"></a>另请参阅
 
 - [Office 脚本疑难解答](troubleshooting.md)
-- [使用 Power Automate 运行 Office 脚本](../develop/power-automate-integration.md)
-- [Excel Online (Business) 连接器参考文档](/connectors/excelonlinebusiness/)
+- [使用Office运行 Power Automate](../develop/power-automate-integration.md)
+- [ExcelOnline (Business) 连接器参考文档](/connectors/excelonlinebusiness/)

@@ -1,20 +1,20 @@
 ---
 title: 编写大型数据集时的性能优化
-description: 了解如何在 Office 脚本中编写大型数据集时优化性能。
-ms.date: 03/04/2021
+description: 了解如何在脚本中编写大型数据集时优化Office性能。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 190072e58238be95a2939f73dcda077ed91db848
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: dcbcf156ef624c4c5ce35c44d501286d507d9c40
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571259"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232716"
 ---
 # <a name="performance-optimization-when-writing-a-large-dataset"></a>编写大型数据集时的性能优化
 
 ## <a name="basic-performance-optimization"></a>基本性能优化
 
-有关 Office 脚本中的性能基础知识，请参阅 [入门](getting-started.md#basic-performance-considerations) 文章的性能部分。
+有关脚本Office基础知识，请参阅[入门文章](getting-started.md#basic-performance-considerations)的性能部分。
 
 ## <a name="sample-code-optimize-performance-of-a-large-dataset"></a>示例代码：优化大型数据集的性能
 
@@ -153,4 +153,4 @@ function getRandomString(length: number): string {
 
 ## <a name="training-video-optimize-performance-when-writing-a-large-dataset"></a>培训视频：在编写大型数据集时优化性能
 
-[![观看有关在编写大型数据集时如何优化性能的视频](../../images/largedata-vid.png)](https://youtu.be/BP9Kp0Ltj7U "有关在编写大型数据集时如何优化性能的视频")
+[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/BP9Kp0Ltj7U)。

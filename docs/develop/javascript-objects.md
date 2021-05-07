@@ -1,31 +1,31 @@
 ---
 title: 在 Office 脚本中使用内置的 JavaScript 对象
-description: 如何：从 web 上的 Excel 中的 Office 脚本中调用内置 JavaScript Api。
+description: 如何从 Excel web 版 中的 Office 脚本调用内置 JavaScript EXCEL WEB 版。
 ms.date: 07/16/2020
 localization_priority: Normal
-ms.openlocfilehash: 4bb5fb5444887005ececbbfdf0130cba3784e0c4
-ms.sourcegitcommit: 8d549884e68170f808d3d417104a4451a37da83c
+ms.openlocfilehash: e3b36265f235678eee18fbf369058b165da46210
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229594"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232401"
 ---
 # <a name="using-built-in-javascript-objects-in-office-scripts"></a>在 Office 脚本中使用内置的 JavaScript 对象
 
-JavaScript 提供了几个内置对象，您可以在 Office 脚本中使用，而不管您是在 JavaScript 还是使用[TypeScript](../overview/code-editor-environment.md) （javascript 的超集）编写脚本。 本文介绍如何使用 Office 脚本中的某些内置 JavaScript 对象在 web 上运行 Excel。
+JavaScript 提供了多个可用于 Office 脚本的内置对象，无论你是使用 JavaScript 还是[TypeScript](../overview/code-editor-environment.md)编写脚本， (JavaScript 脚本的超集) 。 本文介绍如何使用 Office Scripts for Excel web 版 中的一些内置 JavaScript 对象。
 
 > [!NOTE]
-> 有关所有内置 JavaScript 对象的完整列表，请参阅 Mozilla 的[标准内置对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects)一文。
+> 有关所有内置 JavaScript 对象的完整列表，请参阅 Mozilla 的 [Standard 内置对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) 文章。
 
 ## <a name="array"></a>数组
 
-[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)对象提供了在脚本中使用数组的标准化方法。 虽然阵列是标准的 JavaScript 构造，但它们与 Office 脚本有以下两种主要的关系：范围和集合。
+[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)对象提供了一种在脚本中处理数组的标准化方法。 虽然数组是标准 JavaScript 构造，但是它们Office与脚本相关：范围和集合。
 
-### <a name="working-with-ranges"></a>处理区域
+### <a name="working-with-ranges"></a>使用区域
 
-区域包含多个直接映射到该范围中的单元格的二维数组。 这些数组包含有关该范围中每个单元格的特定信息。 例如， `Range.getValues` 返回这些单元格中的所有值（二维数组的行和列映射到该工作表子部分的行和列）。 `Range.getFormulas`以及 `Range.getNumberFormats` 返回像这样的数组的其他频繁使用的方法 `Range.getValues` 。
+区域包含多个二维数组，这些数组直接映射到该范围中的单元格。 这些数组包含有关该范围中每个单元格的特定信息。 例如，返回这些单元格的所有值 (二维数组映射到该工作表子节中的行和列的行和列 `Range.getValues`) 。 `Range.getFormulas``Range.getNumberFormats`和 是返回数组的其他常用方法，如 `Range.getValues` 。
 
-下面的脚本在**A1： D4**范围中搜索任何包含 "$" 的数字格式。 该脚本将这些单元格中的填充颜色设置为 "黄色"。
+以下脚本在 **A1：D4** 范围内搜索包含"$"的任何数字格式。 该脚本将这些单元格中的填充颜色设置为"黄色"。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -50,12 +50,12 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="working-with-collections"></a>使用集合
 
-集合中包含许多 Excel 对象。 该集合由 Office 脚本 API 管理并作为一个数组公开。 例如，工作表中的所有[形状](/javascript/api/office-scripts/excelscript/excelscript.shape)都包含在 `Shape[]` 方法返回的中 `Worksheet.getShapes` 。 您可以使用此数组读取集合中的值，也可以从父对象的方法访问特定的对象 `get*` 。
+许多Excel对象都包含在集合中。 该集合由 Office 脚本 API 管理，并作为数组公开。 例如，工作表中所有 [Shapes](/javascript/api/office-scripts/excelscript/excelscript.shape) 都包含在 `Shape[]` 方法返回的 `Worksheet.getShapes` 中。 可以使用此数组读取集合中的值，也可以从父对象的方法访问特定 `get*` 对象。
 
 > [!NOTE]
-> 请勿手动添加或删除这些集合数组中的对象。 `add`对父对象和 `delete` 集合类型对象上的方法使用方法。 例如，使用方法向[工作表](/javascript/api/office-scripts/excelscript/excelscript.worksheet)中添加[表](/javascript/api/office-scripts/excelscript/excelscript.table) `Worksheet.addTable` 并删除 `Table` using `Table.delete` 。
+> 不要手动添加或删除这些集合数组中的对象。 对 `add` 父对象使用 方法，对 `delete` 集合类型对象使用方法。 例如，使用 方法将 [Table](/javascript/api/office-scripts/excelscript/excelscript.table) 添加到 [Worksheet，](/javascript/api/office-scripts/excelscript/excelscript.worksheet) `Worksheet.addTable` 并删除 using `Table` `Table.delete` 。
 
-下面的脚本记录当前工作表中的每个形状的类型。
+以下脚本记录当前工作表中每个形状的类型。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -72,7 +72,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-下面的脚本删除当前工作表中最旧的形状。
+以下脚本删除当前工作表中最早的形状。
 
 ```Typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -90,9 +90,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="date"></a>日期
 
-[Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)对象提供处理脚本中的日期的标准化方法。 `Date.now()`生成具有当前日期和时间的对象，这在向脚本的数据输入中添加时间戳时非常有用。
+[Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)对象提供了一种使用脚本中的日期的标准化方法。 `Date.now()` 生成一个包含当前日期和时间的对象，在向脚本的数据输入中添加时间戳时，这非常有用。
 
-下面的脚本将当前日期添加到工作表中。 请注意，通过使用 `toLocaleDateString` 方法，Excel 会将值识别为日期，并自动更改单元格的数字格式。
+以下脚本将当前日期添加到工作表。 请注意，通过使用 `toLocaleDateString` 方法，Excel值识别为日期并自动更改单元格的编号格式。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -107,13 +107,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-示例中的 "[处理日期](../resources/excel-samples.md#dates)" 部分具有与日期相关的脚本。
+示例 [的"使用日期](../resources/samples/excel-samples.md#dates) "部分具有更多与日期相关的脚本。
 
 ## <a name="math"></a>数学
 
-[Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)对象为常见的数学运算提供了方法和常量。 这些功能在 Excel 中也可以提供许多功能，而无需使用工作簿的计算引擎。 这将使您的脚本不必查询工作簿，从而提高性能。
+[Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)对象提供用于常见数学运算的方法和常量。 这些函数也提供许多Excel，而无需使用工作簿的计算引擎。 这样一来，脚本就无需查询工作簿，从而提高了性能。
 
-下面的脚本使用 `Math.min` 来查找并记录**A1： D4**范围中的最小数字。 请注意，此示例假定整个区域仅包含数字，而不包含字符串。
+以下脚本用于 `Math.min` 查找和记录 **A1：D4 范围中最小的** 数字。 请注意，此示例假定整个区域仅包含数字，而不包含字符串。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -142,9 +142,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="use-of-external-javascript-libraries-is-not-supported"></a>不支持使用外部 JavaScript 库
 
-Office 脚本不支持使用外部第三方库。 您的脚本只能使用内置 JavaScript 对象和 Office 脚本 Api。
+Office脚本不支持使用外部第三方库。 脚本只能使用内置的 JavaScript 对象和 Office 脚本 API。
 
 ## <a name="see-also"></a>另请参阅
 
 - [标准内置对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects)
-- [Office 脚本代码编辑器环境](../overview/code-editor-environment.md)
+- [Office脚本代码编辑器环境](../overview/code-editor-environment.md)

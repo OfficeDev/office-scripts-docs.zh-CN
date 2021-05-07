@@ -1,16 +1,16 @@
 ---
-title: Office 脚本示例方案：分析 Web 下载
-description: 在将这些信息组织到表中之前，获取 Excel 工作簿中的原始 Internet 流量数据并确定源位置的示例。
-ms.date: 12/17/2020
+title: Office脚本示例方案：分析 Web 下载
+description: 一个示例，在将信息组织到表中Excel工作簿中的原始 Internet 流量数据并确定源位置。
+ms.date: 04/27/2021
 localization_priority: Normal
-ms.openlocfilehash: e351cd6c4a12e83a07a2f4ce5678d7aa10625118
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 6c5958e9957ca49c370ae34456236bdd15f41c44
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755033"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232709"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office 脚本示例方案：分析 Web 下载
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office脚本示例方案：分析 Web 下载
 
 在此方案中，你需要分析公司网站的下载报告。 此分析的目标是确定 Web 流量是否来自美国或世界上的其他地方。
 
@@ -23,22 +23,13 @@ ms.locfileid: "51755033"
 - 文本分析
 - 脚本中的子功能
 - 条件格式
-- 表格
-
-## <a name="demo-video"></a>演示视频
-
-此示例作为 2020 年 2 月 Office 外接程序开发人员社区通话的一部分进行演示。
-
-> [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
-
-> [!NOTE]
-> 此视频中显示的代码使用较旧的 API 模型 ([Office 脚本异步 API](../../develop/excel-async-model.md)) 。 此页面上显示的示例已更新，但代码看起来与录制有点不同。 更改不会影响脚本的行为或演示者演示的其他内容。
+- Tables
 
 ## <a name="setup-instructions"></a>设置说明
 
-1. 将 <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> 下载到 OneDrive。
+1. 将<a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>下载到OneDrive。
 
-2. 使用 Excel 网页应用打开工作簿。
+2. 使用 Web Excel打开工作簿。
 
 3. 在"**自动化"选项卡** 下，打开 **"所有脚本"。**
 
@@ -226,10 +217,10 @@ ms.locfileid: "51755033"
 
 ### <a name="before-running-the-script"></a>运行脚本之前
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="显示原始 Web 流量数据的工作表。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="显示原始 Web 流量数据的工作表":::
 
 ### <a name="after-running-the-script"></a>运行脚本后
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="显示以前 Web 流量行的格式化 IP 位置信息的工作表。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="显示以前 Web 流量行的格式化 IP 位置信息的工作表":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="汇总了运行脚本的工作表的摘要表和图表。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="汇总了运行脚本的工作表的摘要表和图表":::
