@@ -1,27 +1,27 @@
 ---
-title: 将多个 Excel 表中的数据合并到单个表中
-description: 了解如何使用 Office 脚本将多个 Excel 表中的数据合并到一个表中。
-ms.date: 03/30/2021
+title: 将多个数据表中的Excel组合到一个表中
+description: 了解如何使用 Office 脚本将多个Excel表中的数据合并到一个表中。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 2f3f7232216f686946861d8c2cdec44013333ec7
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: ac8c7d0a3f0f4f3d7d3217ffac31aff1a5595d17
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571207"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232443"
 ---
-# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a><span data-ttu-id="ca4f3-103">将多个 Excel 表中的数据合并到单个表中</span><span class="sxs-lookup"><span data-stu-id="ca4f3-103">Combine data from multiple Excel tables into a single table</span></span>
+# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a><span data-ttu-id="ed2b6-103">将多个数据表中的Excel组合到一个表中</span><span class="sxs-lookup"><span data-stu-id="ed2b6-103">Combine data from multiple Excel tables into a single table</span></span>
 
-<span data-ttu-id="ca4f3-104">此示例将多个 Excel 表中的数据合并到一个包含所有行的表中。</span><span class="sxs-lookup"><span data-stu-id="ca4f3-104">This sample combines data from multiple Excel tables into a single table that includes all the rows.</span></span> <span data-ttu-id="ca4f3-105">它假定使用的所有表都具有相同的结构。</span><span class="sxs-lookup"><span data-stu-id="ca4f3-105">It assumes that all tables being used have the same structure.</span></span>
+<span data-ttu-id="ed2b6-104">此示例将来自多个Excel的数据组合到一个包含所有行的表中。</span><span class="sxs-lookup"><span data-stu-id="ed2b6-104">This sample combines data from multiple Excel tables into a single table that includes all the rows.</span></span> <span data-ttu-id="ed2b6-105">它假定使用的所有表都具有相同的结构。</span><span class="sxs-lookup"><span data-stu-id="ed2b6-105">It assumes that all tables being used have the same structure.</span></span>
 
-<span data-ttu-id="ca4f3-106">此脚本有两种变体：</span><span class="sxs-lookup"><span data-stu-id="ca4f3-106">There are two variations of this script:</span></span>
+<span data-ttu-id="ed2b6-106">此脚本有两种变体：</span><span class="sxs-lookup"><span data-stu-id="ed2b6-106">There are two variations of this script:</span></span>
 
-1. <span data-ttu-id="ca4f3-107">第 [一个](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table) 脚本将 Excel 文件的所有表组合在一起。</span><span class="sxs-lookup"><span data-stu-id="ca4f3-107">The [first script](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table) combines all tables in the Excel file.</span></span>
-1. <span data-ttu-id="ca4f3-108">第 [二个](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) 脚本有选择地获取一组工作表中的表。</span><span class="sxs-lookup"><span data-stu-id="ca4f3-108">The [second script](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) selectively gets tables within a set of worksheets.</span></span>
+1. <span data-ttu-id="ed2b6-107">第[一个](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table)脚本将合并该脚本文件Excel表。</span><span class="sxs-lookup"><span data-stu-id="ed2b6-107">The [first script](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table) combines all tables in the Excel file.</span></span>
+1. <span data-ttu-id="ed2b6-108">第 [二个](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) 脚本有选择地获取一组工作表中的表。</span><span class="sxs-lookup"><span data-stu-id="ed2b6-108">The [second script](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) selectively gets tables within a set of worksheets.</span></span>
 
-## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a><span data-ttu-id="ca4f3-109">示例代码：将多个 Excel 表中的数据合并到一个表中</span><span class="sxs-lookup"><span data-stu-id="ca4f3-109">Sample code: Combine data from multiple Excel tables into a single table</span></span>
+## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a><span data-ttu-id="ed2b6-109">示例代码：将数据从多个Excel组合到一个表中</span><span class="sxs-lookup"><span data-stu-id="ed2b6-109">Sample code: Combine data from multiple Excel tables into a single table</span></span>
 
-<span data-ttu-id="ca4f3-110">下载示例文件 <a href="tables-copy.xlsx">tables-copy.xlsx</a> 并使用以下脚本尝试一下！</span><span class="sxs-lookup"><span data-stu-id="ca4f3-110">Download the sample file <a href="tables-copy.xlsx">tables-copy.xlsx</a> and use it with the following script to try it out yourself!</span></span>
+<span data-ttu-id="ed2b6-110">下载示例文件 <a href="tables-copy.xlsx">tables-copy.xlsx</a> 并使用以下脚本尝试一下！</span><span class="sxs-lookup"><span data-stu-id="ed2b6-110">Download the sample file <a href="tables-copy.xlsx">tables-copy.xlsx</a> and use it with the following script to try it out yourself!</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -49,9 +49,9 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 }
 ```
 
-## <a name="sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table"></a><span data-ttu-id="ca4f3-111">示例代码：将选定工作表中多个 Excel 表中的数据合并到单个表中</span><span class="sxs-lookup"><span data-stu-id="ca4f3-111">Sample code: Combine data from multiple Excel tables in select worksheets into a single table</span></span>
+## <a name="sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table"></a><span data-ttu-id="ed2b6-111">示例代码：将选定工作表Excel多个数据表的数据合并到一个表中</span><span class="sxs-lookup"><span data-stu-id="ed2b6-111">Sample code: Combine data from multiple Excel tables in select worksheets into a single table</span></span>
 
-<span data-ttu-id="ca4f3-112">下载示例文件 <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> 并使用以下脚本尝试一下！</span><span class="sxs-lookup"><span data-stu-id="ca4f3-112">Download the sample file <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> and use it with the following script to try it out yourself!</span></span>
+<span data-ttu-id="ed2b6-112">下载示例文件 <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> 并使用以下脚本尝试一下！</span><span class="sxs-lookup"><span data-stu-id="ed2b6-112">Download the sample file <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> and use it with the following script to try it out yourself!</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -86,6 +86,6 @@ function updateRange(sheet: ExcelScript.Worksheet, data: string[][]): ExcelScrip
 }
 ```
 
-## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a><span data-ttu-id="ca4f3-113">培训视频：将多个 Excel 表中的数据合并到一个表中</span><span class="sxs-lookup"><span data-stu-id="ca4f3-113">Training video: Combine data from multiple Excel tables into a single table</span></span>
+## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a><span data-ttu-id="ed2b6-113">培训视频：将数据从多个Excel表组合到一个表中</span><span class="sxs-lookup"><span data-stu-id="ed2b6-113">Training video: Combine data from multiple Excel tables into a single table</span></span>
 
-<span data-ttu-id="ca4f3-114">[![观看分步视频，了解如何将多个 Excel 表中的数据合并到单个表中](../../images/merge-tables-vid.jpg)](https://youtu.be/di-8JukK3Lc "如何将多个 Excel 表中的数据合并到单个表中的分步视频")</span><span class="sxs-lookup"><span data-stu-id="ca4f3-114">[![Watch step-by-step video on how to combine data from multiple Excel tables into a single table](../../images/merge-tables-vid.jpg)](https://youtu.be/di-8JukK3Lc "Step-by-step video on how to combine data from multiple Excel tables into a single table")</span></span>
+<span data-ttu-id="ed2b6-114">[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/di-8JukK3Lc)。</span><span class="sxs-lookup"><span data-stu-id="ed2b6-114">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/di-8JukK3Lc).</span></span>

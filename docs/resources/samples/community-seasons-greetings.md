@@ -1,26 +1,26 @@
 ---
 title: 季节问候语
 description: 了解如何使用Office脚本在树状中显示Excel web 版。
-ms.date: 04/02/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: d0f50cf32c3b5c9b098813b3e8dc07dbb4367c25
-ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
+ms.openlocfilehash: a328ba66fedc245ff73300d7f47cd339ec87234f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52026910"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232576"
 ---
-# <a name="seasons-greetings"></a><span data-ttu-id="e4016-103">季节问候语</span><span class="sxs-lookup"><span data-stu-id="e4016-103">Seasons greetings</span></span>
+# <a name="seasons-greetings"></a><span data-ttu-id="b4a50-103">季节问候语</span><span class="sxs-lookup"><span data-stu-id="b4a50-103">Seasons greetings</span></span>
 
-<span data-ttu-id="e4016-104">此脚本由 [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) 在假日假日的快乐中贡献！</span><span class="sxs-lookup"><span data-stu-id="e4016-104">This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season!</span></span> <span data-ttu-id="e4016-105">这是一个有趣脚本，它使用脚本显示Excel web 版树Office树。</span><span class="sxs-lookup"><span data-stu-id="e4016-105">It's a fun script that shows a singing tree in Excel on the web using Office Scripts.</span></span>
+<span data-ttu-id="b4a50-104">此脚本由 [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) 在假日假日的快乐中贡献！</span><span class="sxs-lookup"><span data-stu-id="b4a50-104">This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season!</span></span> <span data-ttu-id="b4a50-105">这是一个有趣脚本，它使用脚本显示Excel web 版树Office树。</span><span class="sxs-lookup"><span data-stu-id="b4a50-105">It's a fun script that shows a singing tree in Excel on the web using Office Scripts.</span></span>
 
-<span data-ttu-id="e4016-106">享受！</span><span class="sxs-lookup"><span data-stu-id="e4016-106">Enjoy!</span></span>
+<span data-ttu-id="b4a50-106">享受！</span><span class="sxs-lookup"><span data-stu-id="b4a50-106">Enjoy!</span></span>
 
-<span data-ttu-id="e4016-107">[![观看"四月一日"问候语脚本的运行](../../images/community-seasons.png)](https://youtu.be/HBiGEkzmkgo "执行中的四年问候语脚本！")</span><span class="sxs-lookup"><span data-stu-id="e4016-107">[![Watch the Seasons greetings script in action](../../images/community-seasons.png)](https://youtu.be/HBiGEkzmkgo "Seasons greetings script in action!")</span></span>
+<span data-ttu-id="b4a50-107">[观看 YouTube 频道的"Les's IT 博客"上的](https://youtu.be/HBiGEkzmkgo)"四月三十日"问候语脚本的运行。</span><span class="sxs-lookup"><span data-stu-id="b4a50-107">[Watch the Seasons greetings script in action on the "Les's IT Blog" YouTube channel](https://youtu.be/HBiGEkzmkgo).</span></span>
 
-## <a name="script"></a><span data-ttu-id="e4016-108">Script</span><span class="sxs-lookup"><span data-stu-id="e4016-108">Script</span></span>
+## <a name="script"></a><span data-ttu-id="b4a50-108">Script</span><span class="sxs-lookup"><span data-stu-id="b4a50-108">Script</span></span>
 
-<span data-ttu-id="e4016-109">下载此 <a href="happy-tree.xlsx">happy-tree.xlsx</a> 中使用的文件，以尝试一下！</span><span class="sxs-lookup"><span data-stu-id="e4016-109">Download the file <a href="happy-tree.xlsx">happy-tree.xlsx</a> used in this solution to try it out yourself!</span></span>
+<span data-ttu-id="b4a50-109">下载此 <a href="happy-tree.xlsx">happy-tree.xlsx</a> 中使用的文件，以尝试一下！</span><span class="sxs-lookup"><span data-stu-id="b4a50-109">Download the file <a href="happy-tree.xlsx">happy-tree.xlsx</a> used in this solution to try it out yourself!</span></span>
 
 ```TypeScript
 /* Original version by Leslie Black.  */

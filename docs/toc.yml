@@ -58,15 +58,13 @@ items:
           - name: 基本信息
             items:
               - name: 脚本基础知识
-                href: resources/excel-samples.md
-              - name: 区域基础
-                href: resources/samples/range-basics.md
-          - name: 超越基础设置
-            items:
+                href: resources/samples/excel-samples.md
               - name: 添加备注
                 href: resources/samples/add-excel-comments.md
               - name: 将多个表复制到单个表中
                 href: resources/samples/copy-tables-combine.md
+          - name: 超越基础设置
+            items:
               - name: 对工作表中的空白行进行计数
                 href: resources/samples/count-blank-rows.md
               - name: 交叉引用和设置 Excel 文件的格式
