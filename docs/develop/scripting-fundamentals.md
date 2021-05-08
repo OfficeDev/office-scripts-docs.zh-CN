@@ -3,12 +3,12 @@ title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: 2c2fd683e77a0dfbfd3e9df8c79db31e78ceee8b
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 685f83952fa6aecc660524a95dec57e149522820
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755061"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232387"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中 Office 脚本的脚本基础（预览）
 
@@ -109,7 +109,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 运行此脚本将在当前工作表中创建以下数据：
 
-:::image type="content" source="../images/range-sample.png" alt-text="包含由值行、公式列和带格式的标头组成的销售记录的工作表。":::
+:::image type="content" source="../images/range-sample.png" alt-text="包含由值行、公式列和带格式的标头组成的销售记录的工作表":::
 
 ### <a name="charts-tables-and-other-data-objects"></a>Chart、Table 和其他数据对象
 
@@ -117,7 +117,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### <a name="creating-a-table"></a>创建表
 
-通过使用数据填充范围创建表。 会将格式设置和表控件（如筛选器）自动应用到该范围。
+通过使用数据填充区域创建表。自动将格式设置和表格控件（如筛选器）应用到区域。
 
 以下脚本使用上一个示例中的范围创建一个表。
 
@@ -133,7 +133,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 在工作表上使用之前的数据运行此脚本将创建下表：
 
-:::image type="content" source="../images/table-sample.png" alt-text="包含根据以前销售记录所创建表的工作表。":::
+:::image type="content" source="../images/table-sample.png" alt-text="包含根据以前销售记录所创建的表的工作表":::
 
 #### <a name="creating-a-chart"></a>创建图表
 
@@ -159,7 +159,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 在工作表上使用上一个表运行此脚本将创建以下图表：
 
-:::image type="content" source="../images/chart-sample.png" alt-text="一个柱形图，显示上一个销售记录中三个项目的数量。":::
+:::image type="content" source="../images/chart-sample.png" alt-text="显示上一个销售记录中三个项目的数量的柱形图":::
 
 ### <a name="collections-and-other-object-relations"></a>集合和其他对象关系
 
@@ -167,7 +167,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 检索到相应集合后，可在其上面使用常规数组操作（如获取其 `length` 或使用 `for`、`for..of` 或 `while` 循环进行迭代）或使用 TypeScript 数组方法（如 `map` 或 `forEach`）。 你还可以使用数组索引值访问集合中的单个对象。 例如，`workbook.getTables()[0]` 将返回集合中的第一个表格。 请阅读[《在 Office 脚本中使用内置的 JavaScript 对象》的“使用集合”部分](javascript-objects.md#working-with-collections)，深入了解如何在 Office 脚本框架中使用内置数组功能。
 
-以下脚本将获取工作簿中的所有表格。 然后，它将确保显示标题、筛选按钮可见并且将表格样式设置为“TableStyleLight1”。
+以下脚本获取工作簿中所有表。然后可确保显示标题、筛选按钮可见，并且表格样式设置为“TableStyleLight1”。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
