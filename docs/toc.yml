@@ -69,8 +69,6 @@ items:
                 href: resources/samples/count-blank-rows.md
               - name: 交叉引用和设置 Excel 文件的格式
                 href: resources/samples/excel-cross-reference.md
-              - name: 文档编号生成器
-                href: resources/samples/document-number-generator.md
               - name: 图表和表格的电子邮件图像
                 href: resources/samples/email-images-chart-table.md
               - name: 筛选表格并获取可见区域
