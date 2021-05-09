@@ -1,14 +1,14 @@
 ---
 title: 对文件夹中的所有 Excel 文件运行脚本
 description: 了解如何对 OneDrive for Business 上文件夹中的所有 Excel 文件运行OneDrive for Business。
-ms.date: 04/28/2021
+ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: a6b869e2b346635e2b28fa7c6273c1a86a5bc5c5
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: cfe603f3b7fa0ffc27aa3478b2f54788ad645b3f
+ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232625"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "52285806"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>对文件夹中的所有 Excel 文件运行脚本
 
@@ -23,16 +23,23 @@ ms.locfileid: "52232625"
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
+  // Get the table named "Table1" in the workbook.
   let table1 = workbook.getTable("Table1");
+
+  // If the table is empty, end the script.
   const rowCount = table1.getRowCount();
   if (rowCount === 0) {
     return;
   }
+
+  // Force the workbook to be completely recalculated.
   workbook.getApplication().calculate(ExcelScript.CalculationType.full);
 
-  const amountDueCol = table1.getColumnByName('Amount Due');
-  const amountDueValues = amountDueCol.getRangeBetweenHeaderAndTotal().getValues();
+  // Get the "Amount Due" column from the table.
+  const amountDueColumn = table1.getColumnByName('Amount Due');
+  const amountDueValues = amountDueColumn.getRangeBetweenHeaderAndTotal().getValues();
 
+  // Find the highest amount that's due.
   let highestValue = amountDueValues[0][0];
   let row = 0;
   for (let i = 1; i < amountDueValues.length; i++) {
@@ -41,18 +48,17 @@ function main(workbook: ExcelScript.Workbook) {
       row = i;
     }
   }
-  // Set fill color to FFFF00 for range in table Table1 cell in row 0 on column "Amount due".
-  table1.getColumn("Amount due")
-    .getRangeBetweenHeaderAndTotal()
-    .getRow(row)
+
+  let highestAmountDue = table1.getColumn("Amount due").getRangeBetweenHeaderAndTotal().getRow(row);
+
+  // Set the fill color to yellow for the cell with the highest value in the "Amount Due" column.
+  highestAmountDue
     .getFormat()
     .getFill()
     .setColor("FFFF00");
-  let selectedSheet = workbook.getActiveWorksheet();
-  // Insert comment at cell InvoiceAmounts!F2.
-  workbook.addComment(table1.getColumn("Amount due")
-    .getRangeBetweenHeaderAndTotal()
-    .getRow(row), {
+
+  // Insert an @mention comment in the cell.
+  workbook.addComment(highestAmountDue, {
     mentions: [{
       email: "AdeleV@M365x904181.OnMicrosoft.com",
       id: 0,

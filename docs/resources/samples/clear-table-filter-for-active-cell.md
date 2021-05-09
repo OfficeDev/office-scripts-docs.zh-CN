@@ -1,14 +1,14 @@
 ---
 title: 基于活动单元格位置清除表格列筛选器
 description: 了解如何根据活动单元格位置清除表列筛选器。
-ms.date: 03/04/2021
+ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: bbca4adce1de2cfade2c4f84273bf0bc06b5cc4b
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 06fba191a79f4641d4d1017bda332c7559b50e6d
+ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232499"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "52285925"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>基于活动单元格位置清除表格列筛选器
 
@@ -30,36 +30,37 @@ _清除列筛选器后_
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
-    // Get active cell.
+    // Get the active cell.
     const cell = workbook.getActiveCell();
 
     // Get all tables associated with that cell.
     const tables = cell.getTables();
     
-    // If there is no table on the selection, return/exit.
+    // If there is no table on the selection, end the script.
     if (tables.length !== 1) {
       console.log("The selection is not in a table.");
       return;
     }
 
-    // Get table (since it is already determined that there is only
-    // a single table part of the selection).
+    // Get the first table associated with the active cell.
     const currentTable = tables[0];
 
+    // Log key information about the table.
     console.log(currentTable.getName());
     console.log(currentTable.getRange().getAddress());
 
-    const entireCol = cell.getEntireColumn();
-    const intersect = entireCol.getIntersection(currentTable.getRange());
+    // Get the table header above the current cell by referencing its column.
+    const entireColumn = cell.getEntireColumn();
+    const intersect = entireColumn.getIntersection(currentTable.getRange());
     console.log(intersect.getAddress());
 
     const headerCellValue = intersect.getCell(0,0).getValue() as string;
     console.log(headerCellValue);
 
-    // Get column.
-    const col = currentTable.getColumnByName(headerCellValue);
+    // Get the TableColumn object matching that header.
+    const tableColumn = currentTable.getColumnByName(headerCellValue);
 
-    // Clear filter.
-    col.getFilter().clear();
+    // Clear the filter on that table column.
+    tableColumn.getFilter().clear();
 }
 ```

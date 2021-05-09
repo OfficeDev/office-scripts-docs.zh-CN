@@ -1,14 +1,14 @@
 ---
 title: Office脚本示例
 description: 可用于Office脚本示例和方案。
-ms.date: 04/28/2021
+ms.date: 05/07/2021
 localization_priority: Normal
-ms.openlocfilehash: 625db792763606e8db77abdc4665b7db2732892f
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 6df28f3b9d88f202b3b16661a36296bb8bee6c73
+ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232737"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "52285841"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office脚本示例和方案
 
@@ -24,7 +24,7 @@ ms.locfileid: "52232737"
 
 ## <a name="basics"></a>基本信息
 
-| Project | 详细信息 |
+| 项目 | 详细信息 |
 |---------|---------|
 | [脚本基础知识](../excel-samples.md) | 这些示例演示了脚本的基本Office构建基块。 |
 | [在内容中添加Excel](add-excel-comments.md) | 本示例演示如何向单元格添加注释，包括@mentioning添加注释。 |
@@ -34,14 +34,13 @@ ms.locfileid: "52232737"
 
 请查看以下端到端项目，该项目可自动执行示例方案以及 YouTube) 上承载的完整脚本、Excel 文件示例[ (。 ](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)
 
-| Project | 详细信息 |
+| 项目 | 详细信息 |
 |---------|---------|
 | [计算特定工作表或所有工作表中的空行数](count-blank-rows.md) | 本示例检测工作表中是否有预计存在数据的空白行，然后报告空白行计数，以用于Power Automate流。 |
 | [交叉引用和格式化Excel文件](excel-cross-reference.md) | 此解决方案演示如何使用脚本Excel脚本和脚本对两个Office文件进行交叉Power Automate。 |
 | [电子邮件图表和表格图像](email-images-chart-table.md) | 此示例使用Office脚本Power Automate操作来创建图表，并通过电子邮件将图表作为图像发送。 |
 | [外部提取调用](external-fetch-calls.md) | 此示例使用 `fetch` 从脚本的 GitHub获取信息。 |
 | [筛选Excel并获取可见区域](filter-table-get-visible-range.md) | 此示例筛选一Excel，并作为 JSON 对象返回可见区域。 此 JSON 可以作为较大解决方案的Power Automate提供给一个流。 |
-| [在工作簿中生成唯一标识符](document-number-generator.md) | 此方案可帮助用户生成具有特定格式的唯一文档编号，并添加一个范围或表中的条目。 |
 | [在计算模式下管理Excel](excel-calculation.md) | 此示例演示如何在脚本中使用计算模式Excel web 版计算Office方法。 |
 | [跨表移动行](move-rows-across-tables.md) | 此示例演示如何通过保存筛选器，然后处理和重新应用筛选器来跨表移动行。 |
 | [输出Excel JSON](get-table-data.md) | 此解决方案演示如何将Excel数据输出为 JSON，以用于Power Automate。 |
@@ -64,7 +63,7 @@ Office脚本可以自动执行日常例程的某些部分。 这些日常任务�
 
 欢迎来自[我们的](https://github.com/OfficeDev/office-scripts-docs/blob/master/Contributing.md)脚本Office贡献！ 可随意创建拉取请求进行审阅。
 
-| Project | 详细信息 |
+| 项目 | 详细信息 |
 |---------|---------|
 | [四年问候语动画](community-seasons-greetings.md) | 此脚本由 [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) 在假日假日的快乐中贡献！ 这是一个有趣的脚本，它使用脚本在Excel web 版中显示一Office树。 |
 
