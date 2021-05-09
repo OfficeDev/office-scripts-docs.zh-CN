@@ -3,24 +3,24 @@ title: 编写大型数据集时的性能优化
 description: 了解如何在脚本中编写大型数据集时优化Office性能。
 ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: dcbcf156ef624c4c5ce35c44d501286d507d9c40
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 9622494378a24db16ea43b5500d6efa156726ff8
+ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232716"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "52285946"
 ---
-# <a name="performance-optimization-when-writing-a-large-dataset"></a><span data-ttu-id="f7a57-103">编写大型数据集时的性能优化</span><span class="sxs-lookup"><span data-stu-id="f7a57-103">Performance optimization when writing a large dataset</span></span>
+# <a name="performance-optimization-when-writing-a-large-dataset"></a><span data-ttu-id="3df23-103">编写大型数据集时的性能优化</span><span class="sxs-lookup"><span data-stu-id="3df23-103">Performance optimization when writing a large dataset</span></span>
 
-## <a name="basic-performance-optimization"></a><span data-ttu-id="f7a57-104">基本性能优化</span><span class="sxs-lookup"><span data-stu-id="f7a57-104">Basic performance optimization</span></span>
+## <a name="basic-performance-optimization"></a><span data-ttu-id="3df23-104">基本性能优化</span><span class="sxs-lookup"><span data-stu-id="3df23-104">Basic performance optimization</span></span>
 
-<span data-ttu-id="f7a57-105">有关脚本Office基础知识，请参阅[入门文章](getting-started.md#basic-performance-considerations)的性能部分。</span><span class="sxs-lookup"><span data-stu-id="f7a57-105">For performance basics in Office Scripts, see the [performance section](getting-started.md#basic-performance-considerations) of the Getting Started article.</span></span>
+<span data-ttu-id="3df23-105">有关脚本Office基础知识，请参阅[入门文章](getting-started.md#basic-performance-considerations)的性能部分。</span><span class="sxs-lookup"><span data-stu-id="3df23-105">For performance basics in Office Scripts, see the [performance section](getting-started.md#basic-performance-considerations) of the Getting Started article.</span></span>
 
-## <a name="sample-code-optimize-performance-of-a-large-dataset"></a><span data-ttu-id="f7a57-106">示例代码：优化大型数据集的性能</span><span class="sxs-lookup"><span data-stu-id="f7a57-106">Sample code: Optimize performance of a large dataset</span></span>
+## <a name="sample-code-optimize-performance-of-a-large-dataset"></a><span data-ttu-id="3df23-106">示例代码：优化大型数据集的性能</span><span class="sxs-lookup"><span data-stu-id="3df23-106">Sample code: Optimize performance of a large dataset</span></span>
 
-<span data-ttu-id="f7a57-107">区域 `setValues()` API 允许设置区域的值。</span><span class="sxs-lookup"><span data-stu-id="f7a57-107">The `setValues()` Range API allows setting the values of a range.</span></span> <span data-ttu-id="f7a57-108">此 API 具有数据限制，具体取决于各种因素，如数据大小、网络设置等。为了可靠地更新大量数据，您需要考虑以较小的区块执行数据更新。</span><span class="sxs-lookup"><span data-stu-id="f7a57-108">This API has data limitations depending on various factors such as data size, network settings, etc. In order to reliably update a large range of data, you'll need to think about doing data updates in smaller chunks.</span></span> <span data-ttu-id="f7a57-109">此脚本尝试这样做，并写入区块中的区域行，以便如果需要更新较大区域，可以在较小的部件中完成。</span><span class="sxs-lookup"><span data-stu-id="f7a57-109">This script attempts to do this and writes rows of a range in chunks so that if a large range needs to be updated, it can be done in smaller parts.</span></span> <span data-ttu-id="f7a57-110">**警告**：尚未跨各种大小进行测试，因此如果要在脚本中使用它，请注意这一点。</span><span class="sxs-lookup"><span data-stu-id="f7a57-110">**Warning**: It has not been tested across various sizes so be aware of that if you want to use this in your script.</span></span> <span data-ttu-id="f7a57-111">由于我们有机会进行测试，我们将更新有关它在各种数据大小下如何执行的结果。</span><span class="sxs-lookup"><span data-stu-id="f7a57-111">As we have opportunity to test, we'll update with findings around how it performs for various data sizes.</span></span>
+<span data-ttu-id="3df23-107">区域 `setValues()` API 允许设置区域的值。</span><span class="sxs-lookup"><span data-stu-id="3df23-107">The `setValues()` Range API allows setting the values of a range.</span></span> <span data-ttu-id="3df23-108">此 API 具有数据限制，具体取决于各种因素，如数据大小、网络设置等。为了可靠地更新大量数据，您需要考虑以较小的区块执行数据更新。</span><span class="sxs-lookup"><span data-stu-id="3df23-108">This API has data limitations depending on various factors such as data size, network settings, etc. In order to reliably update a large range of data, you'll need to think about doing data updates in smaller chunks.</span></span> <span data-ttu-id="3df23-109">此脚本尝试这样做，并写入区块中的区域行，以便如果需要更新较大区域，可以在较小的部件中完成。</span><span class="sxs-lookup"><span data-stu-id="3df23-109">This script attempts to do this and writes rows of a range in chunks so that if a large range needs to be updated, it can be done in smaller parts.</span></span> <span data-ttu-id="3df23-110">**警告**：尚未跨各种大小进行测试，因此如果要在脚本中使用它，请注意这一点。</span><span class="sxs-lookup"><span data-stu-id="3df23-110">**Warning**: It has not been tested across various sizes so be aware of that if you want to use this in your script.</span></span> <span data-ttu-id="3df23-111">由于我们有机会进行测试，我们将更新有关它在各种数据大小下如何执行的结果。</span><span class="sxs-lookup"><span data-stu-id="3df23-111">As we have opportunity to test, we'll update with findings around how it performs for various data sizes.</span></span>
 
-<span data-ttu-id="f7a57-112">此脚本选择每个区块 1K 个单元格，但你可以重写以测试它是如何工作的。</span><span class="sxs-lookup"><span data-stu-id="f7a57-112">This script selects 1K cells per chunk but you can override to test out how it works for you.</span></span> <span data-ttu-id="f7a57-113">它使用 6 列数据更新 100k 行。</span><span class="sxs-lookup"><span data-stu-id="f7a57-113">It updates 100k rows with 6 columns of data.</span></span> <span data-ttu-id="f7a57-114">在空白工作表上运行此代码以检查。</span><span class="sxs-lookup"><span data-stu-id="f7a57-114">Run this on a blank sheet to examine.</span></span>
+<span data-ttu-id="3df23-112">此脚本选择每个区块 1K 个单元格，但你可以重写以测试它是如何工作的。</span><span class="sxs-lookup"><span data-stu-id="3df23-112">This script selects 1K cells per chunk but you can override to test out how it works for you.</span></span> <span data-ttu-id="3df23-113">它使用 6 列数据更新 100k 行。</span><span class="sxs-lookup"><span data-stu-id="3df23-113">It updates 100k rows with 6 columns of data.</span></span> <span data-ttu-id="3df23-114">在空白工作表上运行此代码以检查。</span><span class="sxs-lookup"><span data-stu-id="3df23-114">Run this on a blank sheet to examine.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -39,10 +39,8 @@ function main(workbook: ExcelScript.Workbook) {
   console.log(`Calling update range function...`);
   const updated = updateRangeInChunks(sheet.getRange("B2"), data);
   if (!updated) {
-    console.log(`Update did not take place or complete. Check and run again.`)
+    console.log(`Update did not take place or complete. Check and run again.`);
   }
-
-  return;
 }
 
 function updateRangeInChunks(
@@ -151,6 +149,6 @@ function getRandomString(length: number): string {
 }
 ```
 
-## <a name="training-video-optimize-performance-when-writing-a-large-dataset"></a><span data-ttu-id="f7a57-115">培训视频：在编写大型数据集时优化性能</span><span class="sxs-lookup"><span data-stu-id="f7a57-115">Training video: Optimize performance when writing a large dataset</span></span>
+## <a name="training-video-optimize-performance-when-writing-a-large-dataset"></a><span data-ttu-id="3df23-115">培训视频：在编写大型数据集时优化性能</span><span class="sxs-lookup"><span data-stu-id="3df23-115">Training video: Optimize performance when writing a large dataset</span></span>
 
-<span data-ttu-id="f7a57-116">[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/BP9Kp0Ltj7U)。</span><span class="sxs-lookup"><span data-stu-id="f7a57-116">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).</span></span>
+<span data-ttu-id="3df23-116">[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/BP9Kp0Ltj7U)。</span><span class="sxs-lookup"><span data-stu-id="3df23-116">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).</span></span>

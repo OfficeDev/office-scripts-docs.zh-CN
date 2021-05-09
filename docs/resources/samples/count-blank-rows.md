@@ -1,95 +1,128 @@
 ---
 title: 对工作表中的空行计数
 description: 了解如何使用 Office 脚本检测工作表中是否有空行而不是数据，然后报告要用于数据流的空白Power Automate计数。
-ms.date: 03/31/2021
+ms.date: 05/04/2021
 localization_priority: Normal
-ms.openlocfilehash: db84f2446c168f867c325a05129fe982c9645731
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: e636c9b1b24dedb73042cd9ee4d20688698ae8a7
+ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232583"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "52285848"
 ---
-# <a name="count-blank-rows-on-sheets"></a><span data-ttu-id="6d71a-103">对工作表中的空行计数</span><span class="sxs-lookup"><span data-stu-id="6d71a-103">Count blank rows on sheets</span></span>
+# <a name="count-blank-rows-on-sheets"></a><span data-ttu-id="1e3ea-103">对工作表中的空行计数</span><span class="sxs-lookup"><span data-stu-id="1e3ea-103">Count blank rows on sheets</span></span>
 
-<span data-ttu-id="6d71a-104">此项目包括两个脚本：</span><span class="sxs-lookup"><span data-stu-id="6d71a-104">This project includes two scripts:</span></span>
+<span data-ttu-id="1e3ea-104">此项目包括两个脚本：</span><span class="sxs-lookup"><span data-stu-id="1e3ea-104">This project includes two scripts:</span></span>
 
-* <span data-ttu-id="6d71a-105">[对给定工作表上的空](#sample-code-count-blank-rows-on-a-given-sheet)行进行计数：遍历给定工作表上的已用区域并返回空行数。</span><span class="sxs-lookup"><span data-stu-id="6d71a-105">[Count blank rows on a given sheet](#sample-code-count-blank-rows-on-a-given-sheet): Traverses the used range on a given worksheet and returns a blank row count.</span></span>
-* <span data-ttu-id="6d71a-106">[统计所有工作表上的](#sample-code-count-blank-rows-on-all-sheets)空行数：遍历所有工作表上的已用区域并返回空行数。</span><span class="sxs-lookup"><span data-stu-id="6d71a-106">[Count blank rows on all sheets](#sample-code-count-blank-rows-on-all-sheets): Traverses the used range on _all of the worksheets_ and returns a blank row count.</span></span>
+* <span data-ttu-id="1e3ea-105">[对给定工作表上的空](#sample-code-count-blank-rows-on-a-given-sheet)行进行计数：遍历给定工作表上的已用区域并返回空行数。</span><span class="sxs-lookup"><span data-stu-id="1e3ea-105">[Count blank rows on a given sheet](#sample-code-count-blank-rows-on-a-given-sheet): Traverses the used range on a given worksheet and returns a blank row count.</span></span>
+* <span data-ttu-id="1e3ea-106">[统计所有工作表上的](#sample-code-count-blank-rows-on-all-sheets)空行数：遍历所有工作表上的已用区域并返回空行数。</span><span class="sxs-lookup"><span data-stu-id="1e3ea-106">[Count blank rows on all sheets](#sample-code-count-blank-rows-on-all-sheets): Traverses the used range on _all of the worksheets_ and returns a blank row count.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="6d71a-107">对于我们的脚本，空行是没有任何数据的任何行。</span><span class="sxs-lookup"><span data-stu-id="6d71a-107">For our script, a blank row is any row where there's no data.</span></span> <span data-ttu-id="6d71a-108">行可以具有格式。</span><span class="sxs-lookup"><span data-stu-id="6d71a-108">The row can have formatting.</span></span>
+> <span data-ttu-id="1e3ea-107">对于我们的脚本，空行是没有任何数据的任何行。</span><span class="sxs-lookup"><span data-stu-id="1e3ea-107">For our script, a blank row is any row where there's no data.</span></span> <span data-ttu-id="1e3ea-108">行可以具有格式。</span><span class="sxs-lookup"><span data-stu-id="1e3ea-108">The row can have formatting.</span></span>
 
-<span data-ttu-id="6d71a-109">_此工作表返回 4 个空行的计数_</span><span class="sxs-lookup"><span data-stu-id="6d71a-109">_This sheet returns count of 4 blank rows_</span></span>
+<span data-ttu-id="1e3ea-109">_此工作表返回 4 个空行的计数_</span><span class="sxs-lookup"><span data-stu-id="1e3ea-109">_This sheet returns count of 4 blank rows_</span></span>
 
 :::image type="content" source="../../images/blank-rows.png" alt-text="显示包含空白行的数据的工作表":::
 
-<span data-ttu-id="6d71a-111">_此工作表返回 0 个空 (所有行都有一些数据)_</span><span class="sxs-lookup"><span data-stu-id="6d71a-111">_This sheet returns count of 0 blank rows (all rows have some data)_</span></span>
+<span data-ttu-id="1e3ea-111">_此工作表返回 0 个空 (所有行都有一些数据)_</span><span class="sxs-lookup"><span data-stu-id="1e3ea-111">_This sheet returns count of 0 blank rows (all rows have some data)_</span></span>
 
 :::image type="content" source="../../images/no-blank-rows.png" alt-text="显示不含空白行的数据的工作表":::
 
-## <a name="sample-code-count-blank-rows-on-a-given-sheet"></a><span data-ttu-id="6d71a-113">示例代码：对给定工作表上的空白行计数</span><span class="sxs-lookup"><span data-stu-id="6d71a-113">Sample code: Count blank rows on a given sheet</span></span>
+## <a name="sample-code-count-blank-rows-on-a-given-sheet"></a><span data-ttu-id="1e3ea-113">示例代码：对给定工作表上的空白行计数</span><span class="sxs-lookup"><span data-stu-id="1e3ea-113">Sample code: Count blank rows on a given sheet</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): number
 {
+  // Get the worksheet named "Sheet1".
   const sheet = workbook.getWorksheet('Sheet1'); 
-  // Getting the active worksheet is not suitable for a script used by Power Automate.
-  // const sheet = workbook.getActiveWorksheet();
   
-  const range = sheet.getUsedRange(true); // Get value only.
+  // Get the entire data range.
+  const range = sheet.getUsedRange(true);
+
+  // If the used range is empty, end the script.
   if (!range) {
-    console.log(`No data on this sheet. `);
+    console.log(`No data on this sheet.`);
     return;
   }
+  
+  // Log the address of the used range.
   console.log(`Used range for the worksheet: ${range.getAddress()}`);
+    
+  // Look through the values in the range for blank rows.
   const values = range.getValues();
   let emptyRows = 0;
   for (let row of values) {
-    let len = 0; 
+    let emptyRow = true;
+    
+    // Look at every cell in the row for one with a value.
     for (let cell of row) {
-      len = len + cell.toString().length;
+      if (cell.toString().length > 0) {
+        emptyRow = false
+      }
     }
-    if (len === 0) { 
+
+    // If no cell had a value, the row is empty.
+    if (emptyRow) {
       emptyRows++;
     }
   }
-  console.log(`Total empty row: ` + emptyRows);
+
+  // Log the number of empty rows.
+  console.log(`Total empty rows: ${emptyRows}`);
+
+  // Return the number of empty rows for use in a Power Automate flow.
   return emptyRows;
 }
 ```
 
-## <a name="sample-code-count-blank-rows-on-all-sheets"></a><span data-ttu-id="6d71a-114">示例代码：统计所有工作表上的空行数</span><span class="sxs-lookup"><span data-stu-id="6d71a-114">Sample code: Count blank rows on all sheets</span></span>
+## <a name="sample-code-count-blank-rows-on-all-sheets"></a><span data-ttu-id="1e3ea-114">示例代码：统计所有工作表上的空行数</span><span class="sxs-lookup"><span data-stu-id="1e3ea-114">Sample code: Count blank rows on all sheets</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): number
 {
+  // Loop through every worksheet in the workbook.
   const sheets = workbook.getWorksheets();
   let emptyRows = 0;
-  for (let sheet of sheets) { 
-    const range = sheet.getUsedRange(true); // Get value only.
+  for (let sheet of sheets) {     
+    // Get the entire data range.
+    const range = sheet.getUsedRange(true);
+  
+    // If the used range is empty, skip to the next worksheet.
     if (!range) {
-      console.log(`No data on this sheet. `);
+      console.log(`No data on this sheet.`);
       continue;
     }
-    console.log(`Used range for the worksheet ${sheet.getName()}: ${range.getAddress()}`);
+    
+    // Log the address of the used range.
+    console.log(`Used range for the worksheet: ${range.getAddress()}`);
+      
+    // Look through the values in the range for blank rows.
     const values = range.getValues();
-
     for (let row of values) {
-      let len = 0;
+      let emptyRow = true;
+      
+      // Look at every cell in the row for one with a value.
       for (let cell of row) {
-        len = len + cell.toString().length;
+        if (cell.toString().length > 0) {
+          emptyRow = false
+        }
       }
-      if (len === 0) {
+  
+      // If no cell had a value, the row is empty.
+      if (emptyRow) {
         emptyRows++;
       }
     }
   }
-  console.log(`Total empty row: ` + emptyRows);
+
+  // Log the number of empty rows.
+  console.log(`Total empty rows: ${emptyRows}`);
+
+  // Return the number of empty rows for use in a Power Automate flow.
   return emptyRows;
 }
 ```
 
-## <a name="use-with-power-automate"></a><span data-ttu-id="6d71a-115">与 Power Automate</span><span class="sxs-lookup"><span data-stu-id="6d71a-115">Use with Power Automate</span></span>
+## <a name="use-with-power-automate"></a><span data-ttu-id="1e3ea-115">与 Power Automate</span><span class="sxs-lookup"><span data-stu-id="1e3ea-115">Use with Power Automate</span></span>
 
 :::image type="content" source="../../images/use-in-power-automate.png" alt-text="显示Power Automate运行脚本的 Office 流":::
