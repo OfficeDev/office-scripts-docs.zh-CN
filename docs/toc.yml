@@ -21,6 +21,8 @@ items:
         href: develop/scripting-fundamentals.md
       - name: 概念
         items:
+          - name: Office 脚本中的最佳实践
+            href: develop/best-practices.md
           - name: 内置 JavaScript 对象
             href: develop/javascript-objects.md
           - name: 代码编辑器环境
@@ -61,14 +63,14 @@ items:
                 href: resources/samples/excel-samples.md
               - name: 添加备注
                 href: resources/samples/add-excel-comments.md
+              - name: 向工作簿添加图像
+                href: resources/samples/add-image-to-workbook.md
               - name: 将多个表复制到单个表中
                 href: resources/samples/copy-tables-combine.md
           - name: 超越基础设置
             items:
               - name: 对工作表中的空白行进行计数
                 href: resources/samples/count-blank-rows.md
-              - name: 交叉引用和设置 Excel 文件的格式
-                href: resources/samples/excel-cross-reference.md
               - name: 图表和表格的电子邮件图像
                 href: resources/samples/email-images-chart-table.md
               - name: 筛选表格并获取可见区域
@@ -83,10 +85,10 @@ items:
                 href: resources/samples/remove-hyperlinks-from-cells.md
               - name: 对文件夹中的所有 Excel 文件运行脚本
                 href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
-              - name: 通过 Excel 数据发送 Teams 邀请
-                href: resources/samples/send-teams-invite-from-excel-data.md
               - name: 在 Office 脚本中使用外部提取呼叫
                 href: resources/samples/external-fetch-calls.md
+              - name: 编写大型数据集
+                href: resources/samples/write-large-dataset.md
           - name: 应用场景
             items:
               - name: 分析 Web 下载项
