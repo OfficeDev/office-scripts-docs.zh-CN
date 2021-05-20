@@ -1,14 +1,14 @@
 ---
 title: 在 Excel 网页版中录制、编辑和创建 Office 脚本
 description: 有关 Office 脚本基础知识的教程，包括使用操作录制器录制脚本以及将数据写入工作簿。
-ms.date: 01/06/2021
+ms.date: 05/17/2021
 localization_priority: Priority
-ms.openlocfilehash: 9f1b2e29d60ec0e370bdb29fde0f04be831a222b
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 957a36d56af476bafe2c11e7c89a37e79b820cce
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232863"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545024"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中录制、编辑和创建 Office 脚本
 
@@ -39,13 +39,6 @@ ms.locfileid: "52232863"
 4. 按“**录制操作**”按钮。
 5. 选择单元格 **A2:C2**（“橙子”行），并将填充颜色设置为橙色。
 6. 通过按“**停止**”按钮来停止录制。
-7. 在“**脚本名称**”字段中填写一个便于记忆的名称。
-8. *可选：* 在“**描述**”字段中填写有意义的描述。 这用于提供有关脚本功能的上下文。 在本教程中，你可以使用“表格的颜色代码行”。
-
-   > [!TIP]
-   > 稍后可以从“**脚本详细信息**”窗格编辑脚本的描述，该窗格位于代码编辑器的“**...**”菜单下。
-
-9. 通过按“**保存**”按钮来保存脚本。
 
     你的工作表应如下所示（不要担心颜色是否不同）:
 
