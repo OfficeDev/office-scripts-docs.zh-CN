@@ -3,14 +3,14 @@ title: 从脚本返回数据到自动运行 Power Automated 流
 description: 本教程演示了如何通过 Power Automate 运行适用于 Excel 网页版的 Office 脚本来发送提醒电子邮件。
 ms.date: 12/15/2020
 localization_priority: Priority
-ms.openlocfilehash: 54fcfc773d4d2a8d352f7bd22593ac817e7ded0e
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: e7f1051076bf84cfbbec0fcdd72777766dbcf152
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232877"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52544998"
 ---
-# <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow-preview"></a>从脚本返回数据到自动运行 Power Automated 流（预览） 
+# <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>从脚本返回数据到自动运行 Power Automated 流
 
 本教程将教你如何从适用于 Excel 网页版的 Office 脚本中将信息作为自动 [Power Automate](https://flow.microsoft.com) 工作流的一部分返回。 将创建一个脚本，它可以查看时间表并与流一起发送提醒电子邮件。 此流程将按常规计划运行，代表你提供这些提醒。
 
@@ -152,9 +152,9 @@ ms.locfileid: "52232877"
 
     :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate 中的 Excel Online (商业版)选项":::
 
-1. 在“**操作**”下，选择“**运行脚本（预览版）**”。
+1. 在 **操作** 下，选择 **运行脚本**。
 
-    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate 中的“运行脚本”（预览版）操作选项":::
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate 中的运行脚本操作选项":::
 
 1. 接下来，选择要在流步骤中使用的工作簿和脚本。 使用 **on-call-rotation.xlsx** 在 OneDrive 中创建的工作簿。 为 **运行脚本** 连接器指定以下设置：
 

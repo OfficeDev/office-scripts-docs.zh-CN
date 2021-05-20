@@ -3,14 +3,14 @@ title: 将数据传递到自动运行的 Power Automate 流中的脚本
 description: 有关在收到邮件时通过 Power Automate 在 Web 上运行 Office Scripts for Excel，并将流数据传递到脚本的教程。
 ms.date: 12/28/2020
 localization_priority: Priority
-ms.openlocfilehash: f5ee8ef2243aaf597d6022634248403c57597bd8
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 79686eacf4d38bd5db5e082a9bfb73edc969451d
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232884"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545834"
 ---
-# <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow-preview"></a>将数据传递到自动运行的 Power Automate 流中的脚本（预览版）
+# <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow"></a>将数据传递到自动运行的 Power Automate 流中的脚本
 
 本教程教你如何通过自动化的[ Power Automate ](https://flow.microsoft.com)工作流在 Web 上使用 Office Script for Excel。 每当你收到电子邮件时，脚本都会自动运行，并将电子邮件中的信息记录在 Excel 工作簿中。 能够将其他应用程序中的数据传递到 Office 脚本中，可以为你在自动化过程中提供极大的灵活性和自由度。
 
@@ -23,7 +23,7 @@ ms.locfileid: "52232884"
 
 ## <a name="prepare-the-workbook"></a>准备工作簿
 
-Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](../testing/power-automate-troubleshooting.md#avoid-using-relative-references)访问工作簿组件。 因此，我们需要一个具有一致名称的工作簿和工作表，以供 Power Automate 引用。
+Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](../testing/power-automate-troubleshooting.md#avoid-relative-references)访问工作簿组件。 因此，我们需要一个具有一致名称的工作簿和工作表，以供 Power Automate 引用。
 
 1. 创建名为 **MyWorkbook** 的新工作簿。
 
@@ -175,9 +175,9 @@ function main(
 
     :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate 中的 Excel Online (商业版)选项":::
 
-7. 在“**操作**”下，选择“**运行脚本（预览版）**”。
+7. 在 **操作** 下，选择 **运行脚本**。
 
-    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate 中的“运行脚本”（预览版）操作选项":::
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate 中的运行脚本操作选项":::
 
 8. 接下来，选择要在流步骤中使用的工作簿、脚本和脚本输入参数。 对于本教程，你将使用在 OneDrive 中创建的工作簿，但可以在 OneDrive 或 SharePoint 网站中使用任何工作簿。 为 **运行脚本** 连接器指定以下设置：
 
