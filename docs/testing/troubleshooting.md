@@ -1,59 +1,97 @@
 ---
-title: Office 脚本疑难解答
-description: Office 脚本的调试提示和技术，以及帮助资源。
-ms.date: 10/30/2020
+title: 脚本Office疑难解答
+description: 调试脚本的Office以及帮助资源。
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: b45957bd336edce527397253cacec8cb09df715a
-ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
+ms.openlocfilehash: ff0ac1e63084c7c541d2a4925f1f011d16fa4992
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49342876"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545552"
 ---
-# <a name="troubleshooting-office-scripts"></a><span data-ttu-id="bb342-103">Office 脚本疑难解答</span><span class="sxs-lookup"><span data-stu-id="bb342-103">Troubleshooting Office Scripts</span></span>
+# <a name="troubleshoot-office-scripts"></a><span data-ttu-id="70516-103">脚本Office疑难解答</span><span class="sxs-lookup"><span data-stu-id="70516-103">Troubleshoot Office Scripts</span></span>
 
-<span data-ttu-id="bb342-104">开发 Office 脚本时，可能会产生错误。</span><span class="sxs-lookup"><span data-stu-id="bb342-104">As you develop Office Scripts, you may make mistakes.</span></span> <span data-ttu-id="bb342-105">没关系。</span><span class="sxs-lookup"><span data-stu-id="bb342-105">It's okay.</span></span> <span data-ttu-id="bb342-106">我们有一些工具，可帮助查找问题并使你的脚本完美运行。</span><span class="sxs-lookup"><span data-stu-id="bb342-106">We have tools that help find the problems and get your scripts working perfectly.</span></span>
+<span data-ttu-id="70516-104">开发脚本Office时，可能会出错。</span><span class="sxs-lookup"><span data-stu-id="70516-104">As you develop Office Scripts, you may make mistakes.</span></span> <span data-ttu-id="70516-105">没关系。</span><span class="sxs-lookup"><span data-stu-id="70516-105">It's okay.</span></span> <span data-ttu-id="70516-106">你拥有可帮助查找问题和使脚本正常工作的工具。</span><span class="sxs-lookup"><span data-stu-id="70516-106">You have the tools to help find the problems and get your scripts working perfectly.</span></span>
 
-## <a name="console-logs"></a><span data-ttu-id="bb342-107">控制台日志</span><span class="sxs-lookup"><span data-stu-id="bb342-107">Console logs</span></span>
+## <a name="types-of-errors"></a><span data-ttu-id="70516-107">错误类型</span><span class="sxs-lookup"><span data-stu-id="70516-107">Types of errors</span></span>
 
-<span data-ttu-id="bb342-108">有时，在进行故障排除时，您需要将消息打印到屏幕。</span><span class="sxs-lookup"><span data-stu-id="bb342-108">Sometimes while troubleshooting, you'll want to print messages to the screen.</span></span> <span data-ttu-id="bb342-109">这些值可显示变量的当前值或触发的代码路径。</span><span class="sxs-lookup"><span data-stu-id="bb342-109">These can show you the current value of variables or which code paths are being triggered.</span></span> <span data-ttu-id="bb342-110">为此，请将文本记录到控制台。</span><span class="sxs-lookup"><span data-stu-id="bb342-110">To do this, log text to the console.</span></span>
+<span data-ttu-id="70516-108">Office脚本错误分为两类之一：</span><span class="sxs-lookup"><span data-stu-id="70516-108">Office Scripts errors fall into one of two categories:</span></span>
+
+* <span data-ttu-id="70516-109">编译时错误或警告</span><span class="sxs-lookup"><span data-stu-id="70516-109">Compile-time errors or warnings</span></span>
+* <span data-ttu-id="70516-110">运行时错误</span><span class="sxs-lookup"><span data-stu-id="70516-110">Runtime errors</span></span>
+
+### <a name="compile-time-errors"></a><span data-ttu-id="70516-111">编译时错误</span><span class="sxs-lookup"><span data-stu-id="70516-111">Compile-time errors</span></span>
+
+<span data-ttu-id="70516-112">编译时错误和警告最初显示在代码编辑器中。</span><span class="sxs-lookup"><span data-stu-id="70516-112">Compile-time errors and warnings are initially shown in the Code Editor.</span></span> <span data-ttu-id="70516-113">这些由编辑器中的红色波浪下划线显示。</span><span class="sxs-lookup"><span data-stu-id="70516-113">These are shown by the wavy red underlines in the editor.</span></span> <span data-ttu-id="70516-114">它们还会显示在"代码 **编辑器"** 任务窗格底部的"问题"选项卡下。</span><span class="sxs-lookup"><span data-stu-id="70516-114">They are also displayed under the **Problems** tab at the bottom of the Code Editor task pane.</span></span> <span data-ttu-id="70516-115">选择该错误将提供有关问题的更多详细信息，并给出解决方案建议。</span><span class="sxs-lookup"><span data-stu-id="70516-115">Selecting the error will give more details about the problem and suggest solutions.</span></span> <span data-ttu-id="70516-116">在运行脚本之前，应解决编译时错误。</span><span class="sxs-lookup"><span data-stu-id="70516-116">Compile-time errors should be addressed before running the script.</span></span>
+
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="代码编辑器悬停文本中显示的编译器错误":::
+
+<span data-ttu-id="70516-118">你还可能会看到橙色警告下划线和灰色信息性消息。</span><span class="sxs-lookup"><span data-stu-id="70516-118">You may also see orange warning underlines and grey informational messages.</span></span> <span data-ttu-id="70516-119">这些指示性能建议或脚本可能有意外影响的其他可能性。</span><span class="sxs-lookup"><span data-stu-id="70516-119">These indicate performance suggestions or other possibilities where the script may have unintentional effects.</span></span> <span data-ttu-id="70516-120">在消除这些警告之前，应仔细检查这些警告。</span><span class="sxs-lookup"><span data-stu-id="70516-120">Such warnings should be examined closely before dismissing them.</span></span>
+
+### <a name="runtime-errors"></a><span data-ttu-id="70516-121">运行时错误</span><span class="sxs-lookup"><span data-stu-id="70516-121">Runtime errors</span></span>
+
+<span data-ttu-id="70516-122">运行时错误是由于脚本中的逻辑问题而发生的。</span><span class="sxs-lookup"><span data-stu-id="70516-122">Runtime errors happen because of logic issues in the script.</span></span> <span data-ttu-id="70516-123">这可能是因为脚本中使用的对象不在工作簿中，表的格式与预期不同，或者脚本的要求与当前工作簿之间稍有差异。</span><span class="sxs-lookup"><span data-stu-id="70516-123">This could be because an object used in the script isn't in the workbook, a table is formatted differently than anticipated, or some other slight discrepancy between the script's requirements and the current workbook.</span></span> <span data-ttu-id="70516-124">当不存在名为"TestSheet"的工作表时，以下脚本将生成错误。</span><span class="sxs-lookup"><span data-stu-id="70516-124">The following script generates an error when a worksheet named "TestSheet" is not present.</span></span>
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  let mySheet = workbook.getWorksheet('TestSheet');
+
+  // This will throw an error if there is no "TestSheet".
+  mySheet.getRange("A1");
+}
+```
+
+### <a name="console-messages"></a><span data-ttu-id="70516-125">控制台消息</span><span class="sxs-lookup"><span data-stu-id="70516-125">Console messages</span></span>
+
+<span data-ttu-id="70516-126">编译时错误和运行时错误在脚本运行时在控制台中显示错误消息。</span><span class="sxs-lookup"><span data-stu-id="70516-126">Both compile-time and runtime errors display error messages in the console when a script runs.</span></span> <span data-ttu-id="70516-127">它们提供遇到问题的行号。</span><span class="sxs-lookup"><span data-stu-id="70516-127">They give a line number where the problem was encountered.</span></span> <span data-ttu-id="70516-128">请记住，任何问题的根本原因可能是与控制台中指示的代码行不同的代码行。</span><span class="sxs-lookup"><span data-stu-id="70516-128">Keep in mind that the root cause of any issue may be a different line of code than what is indicated in the console.</span></span>
+
+<span data-ttu-id="70516-129">下图显示了显式编译器错误的[控制台 `any` ](../develop/typescript-restrictions.md)输出。</span><span class="sxs-lookup"><span data-stu-id="70516-129">The following image shows the console output for the [explicit `any`](../develop/typescript-restrictions.md) compiler error.</span></span> <span data-ttu-id="70516-130">请注意 `[5, 16]` 错误字符串开头的文本。</span><span class="sxs-lookup"><span data-stu-id="70516-130">Note the text `[5, 16]` at the beginning of the error string.</span></span> <span data-ttu-id="70516-131">这表示错误位于第 5 行，从第 16 个字符开始。</span><span class="sxs-lookup"><span data-stu-id="70516-131">This indicates the error is on line 5, starting at character 16.</span></span>
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="显示显式&quot;任何&quot;错误消息的代码编辑器控制台":::
+
+<span data-ttu-id="70516-133">下图显示了运行时错误的控制台输出。</span><span class="sxs-lookup"><span data-stu-id="70516-133">The follow image shows the console output for a runtime error.</span></span> <span data-ttu-id="70516-134">在此，脚本尝试添加具有现有工作表名称的工作表。</span><span class="sxs-lookup"><span data-stu-id="70516-134">Here, the script tries to add a worksheet with a the name of an existing worksheet.</span></span> <span data-ttu-id="70516-135">同样，请注意错误前面的"第 2 行"，以显示要调查的行。</span><span class="sxs-lookup"><span data-stu-id="70516-135">Again, note the "Line 2" preceding the error to show which line to investigate.</span></span>
+:::image type="content" source="../images/runtime-error-console.png" alt-text="代码编辑器控制台显示&quot;addWorksheet&quot;调用中的错误":::
+
+## <a name="console-logs"></a><span data-ttu-id="70516-137">控制台日志</span><span class="sxs-lookup"><span data-stu-id="70516-137">Console logs</span></span>
+
+<span data-ttu-id="70516-138">使用 语句将消息打印到 `console.log` 屏幕。</span><span class="sxs-lookup"><span data-stu-id="70516-138">Print messages to the screen with the `console.log` statement.</span></span> <span data-ttu-id="70516-139">这些日志可以显示变量的当前值或触发的代码路径。</span><span class="sxs-lookup"><span data-stu-id="70516-139">These logs can show you the current value of variables or which code paths are being triggered.</span></span> <span data-ttu-id="70516-140">为此，请 `console.log` 调用任意对象作为参数。</span><span class="sxs-lookup"><span data-stu-id="70516-140">To do this, call `console.log` with any object as a parameter.</span></span> <span data-ttu-id="70516-141">通常， `string` 是在控制台中读取的最简单类型。</span><span class="sxs-lookup"><span data-stu-id="70516-141">Usually, a `string` is the easiest type to read in the console.</span></span>
 
 ```TypeScript
 console.log("Logging myRange's address.");
 console.log(myRange.getAddress());
 ```
 
-<span data-ttu-id="bb342-111">传递给的字符串 `console.log` 将显示在代码编辑器的日志记录控制台中。</span><span class="sxs-lookup"><span data-stu-id="bb342-111">Strings passed to `console.log` will be displayed in the Code Editor's logging console.</span></span> <span data-ttu-id="bb342-112">若要打开控制台，请按 **省略号** 按钮，然后选择 "**日志 ...** "。</span><span class="sxs-lookup"><span data-stu-id="bb342-112">To turn on the console, press the **Ellipses** button and select **Logs...**</span></span>
+<span data-ttu-id="70516-142">传递给 的字符串显示在任务窗格底部的代码编辑器的日志记录 `console.log` 控制台中。</span><span class="sxs-lookup"><span data-stu-id="70516-142">Strings passed to `console.log` are displayed in the Code Editor's logging console, at the bottom of the task pane.</span></span> <span data-ttu-id="70516-143">日志位于"输出" **选项卡上** ，但写入日志时选项卡会自动获得焦点。</span><span class="sxs-lookup"><span data-stu-id="70516-143">Logs are found on the **Output** tab, though the tab automatically gains focus when a log is written.</span></span>
 
-<span data-ttu-id="bb342-113">日志不会影响工作簿。</span><span class="sxs-lookup"><span data-stu-id="bb342-113">Logs do not affect the workbook.</span></span>
+<span data-ttu-id="70516-144">日志不会影响工作簿。</span><span class="sxs-lookup"><span data-stu-id="70516-144">Logs do not affect the workbook.</span></span>
 
-## <a name="error-messages"></a><span data-ttu-id="bb342-114">错误消息</span><span class="sxs-lookup"><span data-stu-id="bb342-114">Error messages</span></span>
+## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a><span data-ttu-id="70516-145">"自动化"选项卡不显示或Office脚本不可用</span><span class="sxs-lookup"><span data-stu-id="70516-145">Automate tab not appearing or Office Scripts unavailable</span></span>
 
-<span data-ttu-id="bb342-115">如果 Excel 脚本在运行时遇到问题，则会产生错误。</span><span class="sxs-lookup"><span data-stu-id="bb342-115">When your Excel Script encounters a problem running, it produces an error.</span></span> <span data-ttu-id="bb342-116">您将看到提示窗口，询问您是否要 **查看日志**。</span><span class="sxs-lookup"><span data-stu-id="bb342-116">You'll see a prompt pop-up asking if you want to **View Logs**.</span></span> <span data-ttu-id="bb342-117">按该按钮打开控制台并显示任何错误。</span><span class="sxs-lookup"><span data-stu-id="bb342-117">Press that button to open the console and display any errors.</span></span>
+<span data-ttu-id="70516-146">以下步骤应有助于解决与"自动"选项卡未显示在"自动"选项卡Excel web 版。</span><span class="sxs-lookup"><span data-stu-id="70516-146">The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel on the web.</span></span>
 
-## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a><span data-ttu-id="bb342-118">"自动" 选项卡未显示或 Office 脚本不可用</span><span class="sxs-lookup"><span data-stu-id="bb342-118">Automate tab not appearing or Office Scripts unavailable</span></span>
-
-<span data-ttu-id="bb342-119">以下步骤将帮助解决与 web 上的 Excel 中未出现的 " **自动** " 选项卡相关的任何问题。</span><span class="sxs-lookup"><span data-stu-id="bb342-119">The following steps should help troubleshoot any problems related to the **Automate** tab not appearing in Excel on the web.</span></span>
-
-1. <span data-ttu-id="bb342-120">[请确保你的 Microsoft 365 许可证包括 Office 脚本](../overview/excel.md#requirements)。</span><span class="sxs-lookup"><span data-stu-id="bb342-120">[Make sure your Microsoft 365 license includes Office Scripts](../overview/excel.md#requirements).</span></span>
-1. <span data-ttu-id="bb342-121">[检查您的浏览器是否受支持](platform-limits.md#browser-support)。</span><span class="sxs-lookup"><span data-stu-id="bb342-121">[Check that your browser is supported](platform-limits.md#browser-support).</span></span>
-1. <span data-ttu-id="bb342-122">[确保启用了第三方 cookie](platform-limits.md#third-party-cookies)。</span><span class="sxs-lookup"><span data-stu-id="bb342-122">[Ensure third-party cookies are enabled](platform-limits.md#third-party-cookies).</span></span>
-1. <span data-ttu-id="bb342-123">[确保您的管理员未在 Microsoft 365 管理中心中禁用 Office 脚本](/microsoft-365/admin/manage/manage-office-scripts-settings)。</span><span class="sxs-lookup"><span data-stu-id="bb342-123">[Ensure that your admin has not disabled Office Scripts in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-office-scripts-settings).</span></span>
+1. <span data-ttu-id="70516-147">[请确保你的Microsoft 365包括Office脚本](../overview/excel.md#requirements)。</span><span class="sxs-lookup"><span data-stu-id="70516-147">[Make sure your Microsoft 365 license includes Office Scripts](../overview/excel.md#requirements).</span></span>
+1. <span data-ttu-id="70516-148">[检查浏览器是否受支持](platform-limits.md#browser-support)。</span><span class="sxs-lookup"><span data-stu-id="70516-148">[Check that your browser is supported](platform-limits.md#browser-support).</span></span>
+1. <span data-ttu-id="70516-149">[确保已启用第三方 Cookie。](platform-limits.md#third-party-cookies)</span><span class="sxs-lookup"><span data-stu-id="70516-149">[Ensure third-party cookies are enabled](platform-limits.md#third-party-cookies).</span></span>
+1. <span data-ttu-id="70516-150">[确保管理员未在管理中心Office脚本Microsoft 365脚本](/microsoft-365/admin/manage/manage-office-scripts-settings)。</span><span class="sxs-lookup"><span data-stu-id="70516-150">[Ensure that your admin has not disabled Office Scripts in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-office-scripts-settings).</span></span>
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
-## <a name="help-resources"></a><span data-ttu-id="bb342-124">帮助资源</span><span class="sxs-lookup"><span data-stu-id="bb342-124">Help resources</span></span>
+## <a name="troubleshoot-scripts-in-power-automate"></a><span data-ttu-id="70516-151">疑难解答脚本Power Automate</span><span class="sxs-lookup"><span data-stu-id="70516-151">Troubleshoot scripts in Power Automate</span></span>
 
-<span data-ttu-id="bb342-125">[堆栈溢出](https://stackoverflow.com/questions/tagged/office-scripts) 是一种愿意帮助处理编码问题的开发人员社区。</span><span class="sxs-lookup"><span data-stu-id="bb342-125">[Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) is a community of developers willing to help with coding problems.</span></span> <span data-ttu-id="bb342-126">通常情况下，你可以通过快速堆栈溢出搜索找到问题的解决方案。</span><span class="sxs-lookup"><span data-stu-id="bb342-126">Often, you'll be able to find the solution to your problem through a quick Stack Overflow search.</span></span> <span data-ttu-id="bb342-127">如果不是，请询问问题并使用 "office-scripts" 标记对其进行标记。</span><span class="sxs-lookup"><span data-stu-id="bb342-127">If not, ask your question and tag it with the "office-scripts" tag.</span></span> <span data-ttu-id="bb342-128">请务必指出您正在创建 Office *脚本*，而不是 office *外接程序*。</span><span class="sxs-lookup"><span data-stu-id="bb342-128">Be sure to mention you're creating an Office *Script*, not an Office *Add-in*.</span></span>
+<span data-ttu-id="70516-152">有关通过脚本运行脚本Power Automate的信息，请参阅 Troubleshoot [Office Scripts running in Power Automate](power-automate-troubleshooting.md)。</span><span class="sxs-lookup"><span data-stu-id="70516-152">For information specific to running scripts through Power Automate, see [Troubleshoot Office Scripts running in Power Automate](power-automate-troubleshooting.md).</span></span>
 
-<span data-ttu-id="bb342-129">如果您遇到 Office JavaScript API 问题，请在 [OfficeDev/Office js](https://github.com/OfficeDev/office-js) GitHub 存储库中创建问题。</span><span class="sxs-lookup"><span data-stu-id="bb342-129">If you encounter a problem with the Office JavaScript API, create an issue in the [OfficeDev/office-js](https://github.com/OfficeDev/office-js) GitHub repository.</span></span> <span data-ttu-id="bb342-130">产品团队的成员将响应问题并提供进一步的帮助。</span><span class="sxs-lookup"><span data-stu-id="bb342-130">Members of the product team will respond to issues and provide further assistance.</span></span> <span data-ttu-id="bb342-131">在 **OfficeDev/js** 存储库中创建问题表示您在 OFFICE JavaScript API 库中发现产品团队应解决的缺陷。</span><span class="sxs-lookup"><span data-stu-id="bb342-131">Creating an issue in the **OfficeDev/office-js** repository indicates you have found a flaw in the Office JavaScript API library that the product team should address.</span></span>
+## <a name="help-resources"></a><span data-ttu-id="70516-153">帮助资源</span><span class="sxs-lookup"><span data-stu-id="70516-153">Help resources</span></span>
 
-<span data-ttu-id="bb342-132">如果操作记录器或编辑器存在问题，请通过 Excel 中的 "帮助" **> 反馈** 按钮发送反馈。</span><span class="sxs-lookup"><span data-stu-id="bb342-132">If there is a problem with the Action Recorder or Editor, send feedback through the **Help > Feedback** button in Excel.</span></span>
+<span data-ttu-id="70516-154">[Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) 是开发人员愿意帮助解决编码问题的社区。</span><span class="sxs-lookup"><span data-stu-id="70516-154">[Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) is a community of developers willing to help with coding problems.</span></span> <span data-ttu-id="70516-155">通常，你能够通过快速 Stack Overflow 搜索找到问题的解决方案。</span><span class="sxs-lookup"><span data-stu-id="70516-155">Often, you'll be able to find the solution to your problem through a quick Stack Overflow search.</span></span> <span data-ttu-id="70516-156">如果没有，请提出你的问题，并标记"office-scripts"标记。</span><span class="sxs-lookup"><span data-stu-id="70516-156">If not, ask your question and tag it with the "office-scripts" tag.</span></span> <span data-ttu-id="70516-157">请务必提及你正在创建一个Office *脚本*，而不是Office *加载项。*</span><span class="sxs-lookup"><span data-stu-id="70516-157">Be sure to mention you're creating an Office *Script*, not an Office *Add-in*.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bb342-133">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bb342-133">See also</span></span>
+<span data-ttu-id="70516-158">如果遇到 JavaScript API Office问题，请从[OfficeDev/office-js](https://github.com/OfficeDev/office-js) GitHub问题。</span><span class="sxs-lookup"><span data-stu-id="70516-158">If you encounter a problem with the Office JavaScript API, create an issue in the [OfficeDev/office-js](https://github.com/OfficeDev/office-js) GitHub repository.</span></span> <span data-ttu-id="70516-159">产品团队成员将响应问题并提供进一步的帮助。</span><span class="sxs-lookup"><span data-stu-id="70516-159">Members of the product team will respond to issues and provide further assistance.</span></span> <span data-ttu-id="70516-160">在 **OfficeDev/office-js** 存储库中创建问题表明你在 Office JavaScript API 库中发现了产品团队应解决的缺陷。</span><span class="sxs-lookup"><span data-stu-id="70516-160">Creating an issue in the **OfficeDev/office-js** repository indicates you have found a flaw in the Office JavaScript API library that the product team should address.</span></span>
 
-- [<span data-ttu-id="bb342-134">Excel web 版中的 Office 脚本</span><span class="sxs-lookup"><span data-stu-id="bb342-134">Office Scripts in Excel on the web</span></span>](../overview/excel.md)
-- [<span data-ttu-id="bb342-135">Web 上的 Excel 中 Office 脚本的脚本基础</span><span class="sxs-lookup"><span data-stu-id="bb342-135">Scripting Fundamentals for Office Scripts in Excel on the web</span></span>](../develop/scripting-fundamentals.md)
-- [<span data-ttu-id="bb342-136">Office 脚本的平台限制</span><span class="sxs-lookup"><span data-stu-id="bb342-136">Platform Limits with Office Scripts</span></span>](platform-limits.md)
-- [<span data-ttu-id="bb342-137">提高 Office 脚本的性能</span><span class="sxs-lookup"><span data-stu-id="bb342-137">Improve the performance of your Office Scripts</span></span>](../develop/web-client-performance.md)
-- [<span data-ttu-id="bb342-138">消除 Office 脚本的影响</span><span class="sxs-lookup"><span data-stu-id="bb342-138">Undo the effects of an Office Script</span></span>](undo.md)
+<span data-ttu-id="70516-161">如果操作录制器或编辑器出现问题，请通过"帮助 **">"反馈**"按钮发送Excel。</span><span class="sxs-lookup"><span data-stu-id="70516-161">If there is a problem with the Action Recorder or Editor, send feedback through the **Help > Feedback** button in Excel.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="70516-162">另请参阅</span><span class="sxs-lookup"><span data-stu-id="70516-162">See also</span></span>
+
+- [<span data-ttu-id="70516-163">Office 脚本中的最佳实践</span><span class="sxs-lookup"><span data-stu-id="70516-163">Best practices in Office Scripts</span></span>](../develop/best-practices.md)
+- [<span data-ttu-id="70516-164">Office 脚本的平台限制</span><span class="sxs-lookup"><span data-stu-id="70516-164">Platform limits with Office Scripts</span></span>](platform-limits.md)
+- [<span data-ttu-id="70516-165">提高脚本Office性能</span><span class="sxs-lookup"><span data-stu-id="70516-165">Improve the performance of your Office Scripts</span></span>](../develop/web-client-performance.md)
+- [<span data-ttu-id="70516-166">PowerAutomate Office中运行的脚本疑难解答</span><span class="sxs-lookup"><span data-stu-id="70516-166">Troubleshoot Office Scripts running in PowerAutomate</span></span>](power-automate-troubleshooting.md)
+- [<span data-ttu-id="70516-167">消除 Office 脚本的影响</span><span class="sxs-lookup"><span data-stu-id="70516-167">Undo the effects of Office Scripts</span></span>](undo.md)

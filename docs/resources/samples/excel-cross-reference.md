@@ -3,33 +3,34 @@ title: 交叉引用和格式化Excel文件
 description: 了解如何使用脚本Office脚本Power Automate交叉引用和格式化Excel文件。
 ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: 7cc10787190e7ba8f5984ddda8b3c770eb0f7d8a
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ROBOTS: NOINDEX
+ms.openlocfilehash: f07395eb4e6c77b7aee3776e3252d135bc690a6f
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285904"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545764"
 ---
-# <a name="cross-reference-and-format-an-excel-file"></a><span data-ttu-id="4e5de-103">交叉引用和格式化Excel文件</span><span class="sxs-lookup"><span data-stu-id="4e5de-103">Cross-reference and format an Excel file</span></span>
+# <a name="cross-reference-and-format-an-excel-file"></a><span data-ttu-id="3710e-103">交叉引用和格式化Excel文件</span><span class="sxs-lookup"><span data-stu-id="3710e-103">Cross-reference and format an Excel file</span></span>
 
-<span data-ttu-id="4e5de-104">此解决方案演示如何使用脚本Excel脚本和脚本对两个Office文件进行交叉Power Automate。</span><span class="sxs-lookup"><span data-stu-id="4e5de-104">This solution shows how two Excel files can be cross-referenced and formatted using Office Scripts and Power Automate.</span></span>
+<span data-ttu-id="3710e-104">此解决方案演示如何使用脚本Excel脚本和脚本对两个Office文件进行交叉Power Automate。</span><span class="sxs-lookup"><span data-stu-id="3710e-104">This solution shows how two Excel files can be cross-referenced and formatted using Office Scripts and Power Automate.</span></span>
 
-<span data-ttu-id="4e5de-105">项目实现以下目标：</span><span class="sxs-lookup"><span data-stu-id="4e5de-105">The project achieves the following:</span></span>
+<span data-ttu-id="3710e-105">项目实现以下目标：</span><span class="sxs-lookup"><span data-stu-id="3710e-105">The project achieves the following:</span></span>
 
-1. <span data-ttu-id="4e5de-106">使用一个 Run 脚本 <a href="events.xlsx">events.xlsx</a> 事件数据。</span><span class="sxs-lookup"><span data-stu-id="4e5de-106">Extracts event data from <a href="events.xlsx">events.xlsx</a> using one Run script action.</span></span>
-1. <span data-ttu-id="4e5de-107">将该数据传递给包含事件事务数据的第二Excel文件，并使用该数据对数据进行基本验证，并使用 Office Scripts 对缺失或错误数据进行格式设置。</span><span class="sxs-lookup"><span data-stu-id="4e5de-107">Passes that data to the second Excel file containing event transaction data and uses that data to do basic validation of data and formatting of missing or incorrect data using Office Scripts.</span></span>
-1. <span data-ttu-id="4e5de-108">将结果通过电子邮件发送给审阅者。</span><span class="sxs-lookup"><span data-stu-id="4e5de-108">Emails the result to a reviewer.</span></span>
+1. <span data-ttu-id="3710e-106">使用一个 Run 脚本 <a href="events.xlsx">events.xlsx</a> 事件数据。</span><span class="sxs-lookup"><span data-stu-id="3710e-106">Extracts event data from <a href="events.xlsx">events.xlsx</a> using one Run script action.</span></span>
+1. <span data-ttu-id="3710e-107">将该数据传递给包含事件事务数据的第二Excel文件，并使用该数据对数据进行基本验证，并使用 Office Scripts 对缺失或错误数据进行格式设置。</span><span class="sxs-lookup"><span data-stu-id="3710e-107">Passes that data to the second Excel file containing event transaction data and uses that data to do basic validation of data and formatting of missing or incorrect data using Office Scripts.</span></span>
+1. <span data-ttu-id="3710e-108">将结果通过电子邮件发送给审阅者。</span><span class="sxs-lookup"><span data-stu-id="3710e-108">Emails the result to a reviewer.</span></span>
 
-<span data-ttu-id="4e5de-109">有关更多详细信息，请参阅交叉引用和使用脚本[设置两Excel文件Office格式](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)。</span><span class="sxs-lookup"><span data-stu-id="4e5de-109">For further details, see [Cross Reference and formatting two Excel files using Office Scripts](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535).</span></span>
+<span data-ttu-id="3710e-109">有关更多详细信息，请参阅交叉引用和使用脚本[设置两Excel文件Office格式](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)。</span><span class="sxs-lookup"><span data-stu-id="3710e-109">For further details, see [Cross Reference and formatting two Excel files using Office Scripts](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535).</span></span>
 
-## <a name="sample-excel-files"></a><span data-ttu-id="4e5de-110">示例Excel文件</span><span class="sxs-lookup"><span data-stu-id="4e5de-110">Sample Excel files</span></span>
+## <a name="sample-excel-files"></a><span data-ttu-id="3710e-110">示例Excel文件</span><span class="sxs-lookup"><span data-stu-id="3710e-110">Sample Excel files</span></span>
 
-<span data-ttu-id="4e5de-111">下载此解决方案中使用的以下文件，以尝试一下！</span><span class="sxs-lookup"><span data-stu-id="4e5de-111">Download the following files used in this solution to try it out yourself!</span></span>
+<span data-ttu-id="3710e-111">下载此解决方案中使用的以下文件，以尝试一下！</span><span class="sxs-lookup"><span data-stu-id="3710e-111">Download the following files used in this solution to try it out yourself!</span></span>
 
-1. <span data-ttu-id="4e5de-112"><a href="events.xlsx">events.xlsx</a></span><span class="sxs-lookup"><span data-stu-id="4e5de-112"><a href="events.xlsx">events.xlsx</a></span></span>
-1. <span data-ttu-id="4e5de-113"><a href="event-transactions.xlsx">event-transactions.xlsx</a></span><span class="sxs-lookup"><span data-stu-id="4e5de-113"><a href="event-transactions.xlsx">event-transactions.xlsx</a></span></span>
+1. <span data-ttu-id="3710e-112"><a href="events.xlsx">events.xlsx</a></span><span class="sxs-lookup"><span data-stu-id="3710e-112"><a href="events.xlsx">events.xlsx</a></span></span>
+1. <span data-ttu-id="3710e-113"><a href="event-transactions.xlsx">event-transactions.xlsx</a></span><span class="sxs-lookup"><span data-stu-id="3710e-113"><a href="event-transactions.xlsx">event-transactions.xlsx</a></span></span>
 
-## <a name="sample-code-get-event-data"></a><span data-ttu-id="4e5de-114">示例代码：获取事件数据</span><span class="sxs-lookup"><span data-stu-id="4e5de-114">Sample code: Get event data</span></span>
+## <a name="sample-code-get-event-data"></a><span data-ttu-id="3710e-114">示例代码：获取事件数据</span><span class="sxs-lookup"><span data-stu-id="3710e-114">Sample code: Get event data</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): EventData[] {
@@ -66,7 +67,7 @@ interface EventData {
 }
 ```
 
-## <a name="sample-code-validate-event-transactions"></a><span data-ttu-id="4e5de-115">示例代码：验证事件事务</span><span class="sxs-lookup"><span data-stu-id="4e5de-115">Sample code: Validate event transactions</span></span>
+## <a name="sample-code-validate-event-transactions"></a><span data-ttu-id="3710e-115">示例代码：验证事件事务</span><span class="sxs-lookup"><span data-stu-id="3710e-115">Sample code: Validate event transactions</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, keys: string): string {
@@ -149,6 +150,6 @@ interface EventData {
 }
 ```
 
-## <a name="training-video-cross-reference-and-format-an-excel-file"></a><span data-ttu-id="4e5de-116">培训视频：交叉引用和格式化Excel文件</span><span class="sxs-lookup"><span data-stu-id="4e5de-116">Training video: Cross-reference and format an Excel file</span></span>
+## <a name="training-video-cross-reference-and-format-an-excel-file"></a><span data-ttu-id="3710e-116">培训视频：交叉引用和格式化Excel文件</span><span class="sxs-lookup"><span data-stu-id="3710e-116">Training video: Cross-reference and format an Excel file</span></span>
 
-<span data-ttu-id="4e5de-117">[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/dVwqBf483qo")。</span><span class="sxs-lookup"><span data-stu-id="4e5de-117">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/dVwqBf483qo").</span></span>
+<span data-ttu-id="3710e-117">[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/dVwqBf483qo")。</span><span class="sxs-lookup"><span data-stu-id="3710e-117">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/dVwqBf483qo").</span></span>

@@ -1,2 +1,2 @@
 > [!IMPORTANT]
-> <span data-ttu-id="5ea57-101">在团队中使用 Excel 时，web 上的工作组仅支持 Office 脚本 (不是 Windows、Mac、iOS 或 Android) 上的工作组。</span><span class="sxs-lookup"><span data-stu-id="5ea57-101">When using Excel with Teams, Office Scripts are only supported in Teams on the web (not Teams on Windows, Mac, iOS, or Android).</span></span>
+> <span data-ttu-id="616db-101">将 Excel 与 Teams 一Office时，Office 脚本仅在 web 上的 Teams 中受支持 (Teams在 Windows、Mac、iOS 或 Android) 上不受支持。</span><span class="sxs-lookup"><span data-stu-id="616db-101">When using Excel with Teams, Office Scripts are only supported in Teams on the web (not Teams on Windows, Mac, iOS, or Android).</span></span>
