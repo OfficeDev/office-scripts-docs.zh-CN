@@ -1,16 +1,16 @@
 ---
 title: 在 Office 脚本中使用内置的 JavaScript 对象
 description: 如何从 Excel web 版 中的 Office 脚本调用内置 JavaScript EXCEL WEB 版。
-ms.date: 07/16/2020
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: e3b36265f235678eee18fbf369058b165da46210
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 680dd326e357bd06e2fc66cba5bd6745bbd33c24
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232401"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545045"
 ---
-# <a name="using-built-in-javascript-objects-in-office-scripts"></a>在 Office 脚本中使用内置的 JavaScript 对象
+# <a name="use-built-in-javascript-objects-in-office-scripts"></a>在脚本中使用内置的 JavaScript Office对象
 
 JavaScript 提供了多个可用于 Office 脚本的内置对象，无论你是使用 JavaScript 还是[TypeScript](../overview/code-editor-environment.md)编写脚本， (JavaScript 脚本的超集) 。 本文介绍如何使用 Office Scripts for Excel web 版 中的一些内置 JavaScript 对象。
 
@@ -21,7 +21,7 @@ JavaScript 提供了多个可用于 Office 脚本的内置对象，无论你是�
 
 [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)对象提供了一种在脚本中处理数组的标准化方法。 虽然数组是标准 JavaScript 构造，但是它们Office与脚本相关：范围和集合。
 
-### <a name="working-with-ranges"></a>使用区域
+### <a name="work-with-ranges"></a>使用区域
 
 区域包含多个二维数组，这些数组直接映射到该范围中的单元格。 这些数组包含有关该范围中每个单元格的特定信息。 例如，返回这些单元格的所有值 (二维数组映射到该工作表子节中的行和列的行和列 `Range.getValues`) 。 `Range.getFormulas``Range.getNumberFormats`和 是返回数组的其他常用方法，如 `Range.getValues` 。
 
@@ -48,7 +48,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="working-with-collections"></a>使用集合
+### <a name="work-with-collections"></a>使用集合
 
 许多Excel对象都包含在集合中。 该集合由 Office 脚本 API 管理，并作为数组公开。 例如，工作表中所有 [Shapes](/javascript/api/office-scripts/excelscript/excelscript.shape) 都包含在 `Shape[]` 方法返回的 `Worksheet.getShapes` 中。 可以使用此数组读取集合中的值，也可以从父对象的方法访问特定 `get*` 对象。
 

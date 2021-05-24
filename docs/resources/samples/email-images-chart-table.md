@@ -3,12 +3,12 @@ title: 通过电子邮件发送图表和Excel图像
 description: 了解如何使用脚本Office脚本Power Automate提取图表和Excel图像并通过电子邮件发送。
 ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: f8b52cbf8c19b93c5fc4288fe97775a25e922ab9
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: 54b6b67a0f211f2dc6c881bab17ff23220619e6e
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285855"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545772"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>使用Office脚本Power Automate脚本和脚本，以通过电子邮件发送图表和表格的图像
 
@@ -95,7 +95,7 @@ interface ReportImages {
 
 1. 创建新的即时 **云流**。
 1. 选择 **"手动触发流"，** 然后按"**创建"。**
-1. 添加一 **个新** 步骤，该步骤使用 **Excel Online (Business)** 连接器和 **运行脚本 (预览)** 操作。 对操作使用以下值：
+1. 使用 Run **脚本操作** 添加使用 **Excel Online (Business)** 连接器的新步骤。  对操作使用以下值：
     * **位置**：OneDrive for Business
     * **文档库**：OneDrive
     * **文件**：工作簿 ([选择器选项选择)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)

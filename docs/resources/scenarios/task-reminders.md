@@ -3,12 +3,12 @@ title: Office脚本示例方案：自动任务提醒
 description: 一个使用 Power Automate 自适应卡片在项目管理电子表格中自动执行任务提醒的示例。
 ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: c5515abb1e36d1bf588ab034f62dfda2625c65dc
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: c254a627da8442c0974263908a41275182740b6e
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232856"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545597"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Office脚本示例方案：自动任务提醒
 
@@ -22,7 +22,7 @@ ms.locfileid: "52232856"
 - 将数据传递到脚本
 - 从脚本返回数据
 - Teams自适应卡片
-- Tables
+- 表格
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -154,7 +154,7 @@ ms.locfileid: "52232856"
 
 10. 从 **选项中选择"手动触发** 流"，然后按"创建 **"。**
 
-11. 该流需要调用 **"获取人员** "脚本，获取具有空状态字段的所有员工。 按 **"新建步骤****"，然后选择"Excel Online (Business) "。** 在“**操作**”下，选择“**运行脚本（预览版）**”。 为流步骤提供以下条目：
+11. 该流需要调用 **"获取人员** "脚本，获取具有空状态字段的所有员工。 按 **"新建步骤****"，然后选择"Excel Online (Business) "。** 在 **操作** 下，选择 **运行脚本**。 为流步骤提供以下条目：
 
     - **位置**：OneDrive for Business
     - **文档库**：OneDrive
@@ -213,7 +213,7 @@ ms.locfileid: "52232856"
     - **更新消息**：感谢您提交状态报告。 您的响应已成功添加到电子表格。
     - **应更新卡片**：是
 
-16. 在 **"应用到每个块**"中，在将自适应卡片Teams **用户并等待响应** 后，按 **"添加操作"。** 选择 **Excel Online (Business) 。** 在“**操作**”下，选择“**运行脚本（预览版）**”。 为流步骤提供以下条目：
+16. 在 **"应用到每个块**"中，在将自适应卡片Teams **用户并等待响应** 后，按 **"添加操作"。** 选择 **Excel Online (Business) 。** 在 **操作** 下，选择 **运行脚本**。 为流步骤提供以下条目：
 
     - **位置**：OneDrive for Business
     - **文档库**：OneDrive

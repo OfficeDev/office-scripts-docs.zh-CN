@@ -1,14 +1,14 @@
 ---
 title: Office脚本示例
 description: 可用于Office脚本示例和方案。
-ms.date: 05/07/2021
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 6df28f3b9d88f202b3b16661a36296bb8bee6c73
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: 0ea9a8a8986681fca0e45784e2923c1d3b34576d
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285841"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545707"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office脚本示例和方案
 
@@ -18,26 +18,26 @@ ms.locfileid: "52285841"
 
 在 ["应用](#scenarios)场景"中，我们包含了几个演示实际用例的较大方案示例。
 
-我们还欢迎 [来自社区的贡献](#community-contributions)。
+我们还欢迎 [来自社区的贡献](#community-contributions-and-fun-samples)。
 
 [!INCLUDE [Preview note](../../includes/preview-note.md)]
 
 ## <a name="basics"></a>基本信息
 
-| 项目 | 详细信息 |
+| Project | 详细信息 |
 |---------|---------|
 | [脚本基础知识](../excel-samples.md) | 这些示例演示了脚本的基本Office构建基块。 |
-| [在内容中添加Excel](add-excel-comments.md) | 本示例演示如何向单元格添加注释，包括@mentioning添加注释。 |
+| [在内容中添加Excel](add-excel-comments.md) | 本示例向单元格添加注释，@mentioning同事。 |
+| [向工作簿添加图像](add-image-to-workbook.md) | 本示例向工作簿添加一个图像，并跨工作表复制一个图像。|
 | [将多个Excel表复制到单个表中](copy-tables-combine.md) | 此示例将来自多个Excel的数据组合到一个包含所有行的表中。 |
 
 ## <a name="beyond-the-basics"></a>超越基础设置
 
 请查看以下端到端项目，该项目可自动执行示例方案以及 YouTube) 上承载的完整脚本、Excel 文件示例[ (。 ](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)
 
-| 项目 | 详细信息 |
+| Project | 详细信息 |
 |---------|---------|
 | [计算特定工作表或所有工作表中的空行数](count-blank-rows.md) | 本示例检测工作表中是否有预计存在数据的空白行，然后报告空白行计数，以用于Power Automate流。 |
-| [交叉引用和格式化Excel文件](excel-cross-reference.md) | 此解决方案演示如何使用脚本Excel脚本和脚本对两个Office文件进行交叉Power Automate。 |
 | [电子邮件图表和表格图像](email-images-chart-table.md) | 此示例使用Office脚本Power Automate操作来创建图表，并通过电子邮件将图表作为图像发送。 |
 | [外部提取调用](external-fetch-calls.md) | 此示例使用 `fetch` 从脚本的 GitHub获取信息。 |
 | [筛选Excel并获取可见区域](filter-table-get-visible-range.md) | 此示例筛选一Excel，并作为 JSON 对象返回可见区域。 此 JSON 可以作为较大解决方案的Power Automate提供给一个流。 |
@@ -46,7 +46,7 @@ ms.locfileid: "52285841"
 | [输出Excel JSON](get-table-data.md) | 此解决方案演示如何将Excel数据输出为 JSON，以用于Power Automate。 |
 | [从工作表的每个单元格中删除Excel超链接](remove-hyperlinks-from-cells.md) | 本示例清除当前工作表的所有超链接。 |
 | [对文件夹中的所有 Excel 文件运行脚本](automate-tasks-on-all-excel-files-in-folder.md) | 此项目对位于 OneDrive for Business (文件夹中的所有文件执行一组自动化任务，SharePoint文件夹) 。 该代码对Excel文件执行计算，添加格式，并插入一个@mentions注释。 |
-| [从Teams数据发送Excel会议](send-teams-invite-from-excel-data.md) | 此解决方案演示如何使用 Office 脚本和 Power Automate 操作从 Excel 文件选择行，并使用它发送 Teams 会议邀请，然后更新Excel。 |
+| [编写大型数据集](write-large-dataset.md) | 此示例演示如何将较大区域作为较小的子范围发送。 |
 
 ## <a name="scenarios"></a>应用场景
 
@@ -59,12 +59,13 @@ Office脚本可以自动执行日常例程的某些部分。 这些日常任务�
 | [成绩计算器](../scenarios/grade-calculator.md) | 此方案具有一个脚本，用于验证教师的课堂成绩记录。 它展示错误检查、单元格格式设置和正则表达式的技能。 |
 | [任务提醒](../scenarios/task-reminders.md) | 此方案在Office流Power Automate脚本，向同事发送更新项目状态的提醒。 它重点介绍了脚本Power Automate和数据传输的专业技能。 |
 
-## <a name="community-contributions"></a>社区参与
+## <a name="community-contributions-and-fun-samples"></a>Community贡献和有趣的示例
 
 欢迎来自[我们的](https://github.com/OfficeDev/office-scripts-docs/blob/master/Contributing.md)脚本Office贡献！ 可随意创建拉取请求进行审阅。
 
-| 项目 | 详细信息 |
+| Project | 详细信息 |
 |---------|---------|
+| [游戏生活](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | 位于 Tech Excel 上的 Yutao Community"Ready Player Zero"博客包含一个脚本，用于为 John Conway 的《生活游戏》[*建模*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)。 |
 | [四年问候语动画](community-seasons-greetings.md) | 此脚本由 [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) 在假日假日的快乐中贡献！ 这是一个有趣的脚本，它使用脚本在Excel web 版中显示一Office树。 |
 
 ## <a name="try-it-out"></a>试用

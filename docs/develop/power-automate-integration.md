@@ -1,20 +1,20 @@
 ---
 title: 使用Office运行 Power Automate
 description: 如何获取Office脚本Excel web 版工作流Power Automate脚本。
-ms.date: 12/16/2020
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: fd2622880f08c253f4333e642d1ebb0410bce681
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 7562a2b2359cde67a9a47e0640515018fe23ac35
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232415"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545038"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>使用Office运行 Power Automate
 
 [Power Automate，](https://flow.microsoft.com)可以将Office脚本添加到更大的自动化工作流。 可以使用Power Automate操作，如将电子邮件内容添加到工作表表中，或在项目管理工具中基于工作簿注释创建操作。
 
-## <a name="getting-started"></a>入门
+## <a name="get-started"></a>入门
 
 如果你刚开始Power Automate，我们建议你访问入门[Power Automate。](/power-automate/getting-started) 在那里，你可以了解有关所有可用的自动化可能性的信息。 此处的文档重点介绍脚本Office脚本Power Automate以及该脚本如何有助于改进Excel体验。
 
@@ -36,7 +36,7 @@ Power Automate允许你在流的步骤之间传递数据片段。 可以将脚�
 
 以下各节介绍用于脚本的输入和输出的详细信息Power Automate。 如果你想要实践学习本主题的方法，请尝试在自动运行的 Power Automate 流教程中将数据传递到[](../tutorials/excel-power-automate-trigger.md)脚本，或浏览自动[任务](../resources/scenarios/task-reminders.md)提醒示例方案。
 
-### <a name="main-parameters-passing-data-to-a-script"></a>`main` 参数：将数据传递给脚本
+### <a name="main-parameters-pass-data-to-a-script"></a>`main` 参数：将数据传递给脚本
 
 所有脚本输入都指定为 函数的其他 `main` 参数。 例如，如果您希望脚本接受表示作为输入的名称的 ， `string` 则您需要将 `main` 签名更改为 `function main(workbook: ExcelScript.Workbook, name: string)` 。
 
@@ -48,7 +48,7 @@ Power Automate允许你在流的步骤之间传递数据片段。 可以将脚�
 
 2. 每个参数都必须具有类型 (，如 `string` 或 `number`) 。
 
-3. 支持基本类型 `string` `number` 、 、 、 、 `boolean` 、 `any` 和 `unknown` `object` `undefined` 。
+3. 支持基本 `string` 类型 `number` 、 、 、 、 `boolean` `unknown` 和 `object` `undefined` 。
 
 4. 支持前面列出的基本类型的数组。
 
@@ -81,7 +81,7 @@ Power Automate允许你在流的步骤之间传递数据片段。 可以将脚�
 
 10. 允许默认参数值 (例如 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` 。
 
-### <a name="returning-data-from-a-script"></a>从脚本返回数据
+### <a name="return-data-from-a-script"></a>从脚本返回数据
 
 脚本可以从工作簿中返回要用作活动流中的动态Power Automate内容。 与输入参数一样，Power Automate对返回类型施加一些限制。
 

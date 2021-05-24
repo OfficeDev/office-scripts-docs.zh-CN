@@ -1,14 +1,14 @@
 ---
 title: Office脚本的基本Excel web 版
 description: 要与 Excel web 版 中的脚本Office代码示例Excel web 版。
-ms.date: 04/28/2021
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: ea0430910aa16ef8a0eed04cf9ebcab7d611ae62
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: f252934a92126212b9520223826b3b2f5161ed57
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52233005"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545757"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Office脚本的基本Excel web 版
 
@@ -20,7 +20,7 @@ ms.locfileid: "52233005"
 4. 将整个脚本替换为你选择的示例。
 5. 在 **代码** 编辑器的任务窗格中按"运行"。
 
-## <a name="scripting-basics"></a>脚本基础知识
+## <a name="script-basics"></a>脚本基础知识
 
 这些示例演示了脚本的基本Office构建基块。 将其添加到脚本以扩展解决方案并解决常见问题。
 
@@ -155,7 +155,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 这些示例处理工作簿中的对象集合。
 
-### <a name="iterating-over-collections"></a>对集合进行 Iterating
+### <a name="iterate-over-collections"></a>对集合进行 Iterate
 
 此脚本获取并记录工作簿中所有工作表的名称。 它还将选项卡颜色设置为随机颜色。
 
@@ -182,7 +182,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="querying-and-deleting-from-a-collection"></a>查询和删除集合
+### <a name="query-and-delete-from-a-collection"></a>从集合中查询和删除
 
 此脚本创建新的工作表。 它在新建工作表之前检查工作表的现有副本并将其删除。
 
@@ -320,7 +320,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="use-data-validation-to-create-a-drop-down-list"></a>使用数据验证创建下拉列表
+### <a name="create-a-drop-down-list-using-data-validation"></a>使用数据验证创建下拉列表
 
 此脚本为单元格创建下拉选择列表。 它将所选区域的现有值用作列表的选项。
 
@@ -382,9 +382,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="spilling-results-from-a-formula"></a>从公式中溢出结果
+### <a name="handle-a-spill-error-returned-from-a-formula"></a>处理 `#SPILL!` 从公式返回的错误
 
-此脚本使用 TRANSPOSE 函数将区域"A1：D2"转置为"A4：B7"。 如果转置导致错误#SPILL，它将清除目标区域并再次应用公式。
+此脚本使用 TRANSPOSE 函数将区域"A1：D2"转置为"A4：B7"。 如果转置导致错误，它将清除目标 `#SPILL` 区域并再次应用公式。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

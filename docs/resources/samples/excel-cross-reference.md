@@ -3,12 +3,13 @@ title: 交叉引用和格式化Excel文件
 description: 了解如何使用脚本Office脚本Power Automate交叉引用和格式化Excel文件。
 ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: 7cc10787190e7ba8f5984ddda8b3c770eb0f7d8a
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ROBOTS: NOINDEX
+ms.openlocfilehash: f07395eb4e6c77b7aee3776e3252d135bc690a6f
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285904"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545764"
 ---
 # <a name="cross-reference-and-format-an-excel-file"></a>交叉引用和格式化Excel文件
 

@@ -3,12 +3,12 @@ title: 脚本中的 TypeScript Office限制
 description: TypeScript 编译器和 linter 的特定信息，Office脚本代码编辑器。
 ms.date: 02/05/2021
 localization_priority: Normal
-ms.openlocfilehash: 40eb6923d7b0c47dfeb4c846cdcc745e5d893c13
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: a4198e0e56224ac5da89e89c43c8d2f3ef44d6d7
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232457"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545017"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>脚本中的 TypeScript Office限制
 
@@ -16,7 +16,7 @@ Office脚本使用 TypeScript 语言。 在大多数情况下，任何 TypeScrip
 
 ## <a name="no-any-type-in-office-scripts"></a>在脚本中，没有"Office"类型
 
-在[](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) TypeScript 中，写入类型是可选的，因为可以推断出这些类型。 但是，Office脚本要求变量不能为[任何 类型](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)。 在脚本中 `any` 不允许显式和隐式Office脚本。 这些情况报告为错误。
+在[](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) TypeScript 中，写入类型是可选的，因为可以推断出这些类型。 但是Office脚本要求变量不能为[任何 类型](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)。 在脚本中 `any` 不允许显式和隐式Office脚本。 这些情况报告为错误。
 
 ### <a name="explicit-any"></a>显式 `any`
 
@@ -24,7 +24,7 @@ Office脚本使用 TypeScript 语言。 在大多数情况下，任何 TypeScrip
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的显式&quot;any&quot;消息":::
 
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="控制台窗口中的 Explicit Any 错误":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="控制台窗口中的显式&quot;any&quot;错误":::
 
 在上一 `[5, 16] Explicit Any is not allowed` 张屏幕截图中，#5列#16定义 `any` 类型。 这可以帮助您找到错误。
 

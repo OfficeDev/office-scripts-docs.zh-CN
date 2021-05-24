@@ -1,23 +1,23 @@
 ---
-title: 有关使用脚本Power Automate疑Office信息
+title: 对Office中运行的脚本进行Power Automate
 description: 使用技巧脚本和脚本之间的集成时，Office、平台信息和Power Automate。
-ms.date: 01/14/2021
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: bcfedb8db88d74f16e46c604121bceff3c7c7382
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: e26378051c764d97b4e8d748abc85fbe095c7b03
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232646"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545566"
 ---
-# <a name="troubleshooting-information-for-power-automate-with-office-scripts"></a>有关使用脚本Power Automate疑Office信息
+# <a name="troubleshoot-office-scripts-running-in-power-automate"></a>对Office中运行的脚本进行Power Automate
 
 Power Automate，你可以将Office脚本自动化上一个级别。 但是，Power Automate在独立会话中代表您Excel脚本，因此有一些重要的注意事项。
 
 > [!TIP]
 > 如果你刚开始将 Office 脚本与 Power Automate 一起Power Automate运行 Office [Scripts with Power Automate](../develop/power-automate-integration.md)了解平台。
 
-## <a name="avoid-using-relative-references"></a>避免使用相对引用
+## <a name="avoid-relative-references"></a>避免相对引用
 
 Power Automate代表您Excel所选工作簿中运行脚本。 发生这种情况时，工作簿可能会关闭。 任何依赖用户当前状态（如 ）的 API 在用户 `Workbook.getActiveWorksheet` Power Automate。 这是因为 API 基于用户视图或游标的相对位置，并且该引用不存在于Power Automate流中。
 
@@ -58,10 +58,10 @@ Power Automate代表您Excel所选工作簿中运行脚本。 发生这种情况
 
 Excel文件没有固有位置或时区。 用户每次打开工作簿时，其会话都会使用该用户的本地时区进行日期计算。 Power Automate始终使用 UTC。
 
-如果您的脚本使用日期或时间，则在本地测试脚本时与在脚本运行期间的行为Power Automate。 Power Automate允许你转换、设置格式和调整时间。 有关如何[在](https://flow.microsoft.com/blog/working-with-dates-and-times/)Power Automate 和[ `main` Parameters： Passing data to a script](../develop/power-automate-integration.md#main-parameters-passing-data-to-a-script)中使用这些函数的说明，请参阅在流内使用日期和时间，以了解如何为脚本提供该时间信息。
+如果您的脚本使用日期或时间，则在本地测试脚本时与在脚本运行期间的行为Power Automate。 Power Automate允许你转换、设置格式和调整时间。 有关如何[在](https://flow.microsoft.com/blog/working-with-dates-and-times/)Power Automate 和[ `main` Parameters： Pass data to a script](../develop/power-automate-integration.md#main-parameters-pass-data-to-a-script)中使用这些函数的说明，请参阅在流内使用日期和时间，以了解如何为脚本提供该时间信息。
 
 ## <a name="see-also"></a>另请参阅
 
-- [Office 脚本疑难解答](troubleshooting.md)
+- [脚本Office疑难解答](troubleshooting.md)
 - [使用Office运行 Power Automate](../develop/power-automate-integration.md)
 - [ExcelOnline (Business) 连接器参考文档](/connectors/excelonlinebusiness/)

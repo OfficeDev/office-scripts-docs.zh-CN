@@ -1,19 +1,19 @@
 ---
 title: 脚本Office VBA 宏之间的差异
 description: 脚本和 VBA Office之间的行为和 API Excel差异。
-ms.date: 12/14/2020
+ms.date: 05/18/2021
 localization_priority: Normal
-ms.openlocfilehash: ca571e2adad81a87b99696a652a3c49209b870ab
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 612a5f21d935fd262a6e9fd12a3431956105636a
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232842"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545586"
 ---
 # <a name="differences-between-office-scripts-and-vba-macros"></a>脚本Office VBA 宏之间的差异
 
 Office脚本和 VBA 宏有很多共同之处。 它们都允许用户通过易于使用的操作录制器自动处理解决方案，并允许编辑这些录制。 这两个框架旨在让可能不将自己认为是程序员的人在 Excel。
-基本区别在于，VBA 宏针对桌面解决方案开发，Office脚本的设计以跨平台支持和安全性作为指导原则。 目前，Office脚本仅在 Excel web 版 中受支持。
+基本区别在于，VBA 宏是为桌面解决方案开发的，Office脚本专为安全的基于云的解决方案设计。 目前，Office脚本仅在 Excel web 版 中受支持。
 
 :::image type="content" source="../images/office-programmability-diagram.png" alt-text="四象限图，显示不同扩展性解决方案Office区域。Office脚本和 VBA 宏旨在帮助最终用户创建解决方案，但 Office 脚本是为 Web 和协作 (而 VBA 用于桌面) ":::
 
@@ -43,9 +43,12 @@ Office脚本可以运行在Power Automate。 工作簿可以通过计划流或�
 
 VBA 没有Power Automate连接器。 所有支持的 VBA 方案都涉及用户参与宏的执行。
 
+尝试[从手动调用流教程Power Automate调用](../tutorials/excel-power-automate-manual.md)脚本，以开始了解Power Automate。 还可以查看自动任务[提醒示例，](scenarios/task-reminders.md)以查看Office方案中Teams Power Automate脚本。
+
 ## <a name="see-also"></a>另请参阅
 
-- [Excel web 版中的 Office 脚本](../overview/excel.md)
+- [Excel 网页版中的 Office 脚本](../overview/excel.md)
+- [使用Office运行 Power Automate](../develop/power-automate-integration.md)
 - [Office 脚本与 Office 加载项之间的差异](add-ins-differences.md)
 - [Office 脚本疑难解答](../testing/troubleshooting.md)
 - [Excel VBA 参考](/office/vba/api/overview/excel)

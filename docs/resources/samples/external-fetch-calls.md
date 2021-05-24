@@ -1,20 +1,20 @@
 ---
 title: 在 Office 脚本中使用外部提取呼叫
 description: 了解如何在脚本中执行外部 API Office调用。
-ms.date: 05/06/2021
+ms.date: 05/14/2021
 localization_priority: Normal
-ms.openlocfilehash: e8f46f552dee2c1ea43a321c968b00f02ffba49a
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: df8814cbab16969a1140aecfe526fd68e609d43c
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285820"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545750"
 ---
 # <a name="use-external-fetch-calls-in-office-scripts"></a>在 Office 脚本中使用外部提取呼叫
 
-此脚本获取有关用户存储库GitHub信息。 它显示了如何在 `fetch` 简单方案中使用。
+此脚本获取有关用户存储库GitHub信息。 它显示了如何在 `fetch` 简单方案中使用。 有关使用或其他外部调用的信息，请参阅脚本中的外部 `fetch` [API Office支持](../../develop/external-calls.md)
 
-你可以了解有关正在应用 API 参考中使用的 GItHub GITHUB [API。](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user) 您还可以通过访问 Web 浏览器中的内容来查看原始 API 调用输出 (请务必将 {USERNAME} 占位符替换为 `https://api.github.com/users/{USERNAME}/repos` Github ID) 。
+你可以了解有关正在应用 API 参考中使用的 GItHub GITHUB [API。](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user) 您还可以通过访问 Web 浏览器来查看原始 API 调用输出 (请务必将 {USERNAME} 占位符替换为 GitHub `https://api.github.com/users/{USERNAME}/repos` ID) 。
 
 ![获取存储库信息示例](../../images/git.png)
 

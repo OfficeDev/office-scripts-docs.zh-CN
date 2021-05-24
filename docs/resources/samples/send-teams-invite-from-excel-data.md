@@ -3,12 +3,13 @@ title: 从Teams数据发送Excel会议
 description: 了解如何使用 Office 脚本从Teams发送Excel会议。
 ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: d366da45618f211450a4779bc3a1aec4297eb376
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ROBOTS: NOINDEX
+ms.openlocfilehash: 85b39d7e3d1008dee01e7fe9c690116be1d7e5d8
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285827"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545628"
 ---
 # <a name="send-teams-meeting-from-excel-data"></a>从Teams数据发送Excel会议
 

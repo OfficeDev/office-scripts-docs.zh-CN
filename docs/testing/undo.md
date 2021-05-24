@@ -1,28 +1,28 @@
 ---
-title: 通过运行 Office 脚本来撤消所做的更改
-description: 使用 web 上的 Excel 版本历史记录来撤消通过运行脚本所做的更改。
+title: 撤消由脚本Office所做的更改
+description: 使用脚本的版本历史记录Excel web 版运行脚本来撤消所做的更改。
 ms.date: 01/08/2019
 localization_priority: Normal
-ms.openlocfilehash: 17f2d0bc69ce00b80be6db3d89ebb84bf064df98
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: f9f22d4879f8a02c00a5bac9f58d9aa36ae03e38
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700102"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545544"
 ---
-# <a name="undo-the-changes-made-by-running-an-office-script"></a>通过运行 Office 脚本来撤消所做的更改
+# <a name="undo-the-changes-made-by-office-scripts"></a>撤消由脚本Office所做的更改
 
-无法使用 "**撤消**" 命令撤消脚本。 相反，您必须从你的云存储还原以前版本的工作簿。
+无法使用"撤消"命令Excel脚本撤消对工作簿Excel **所做的更改**。 相反，您必须从云存储还原以前版本的工作簿。
 
 ## <a name="version-history"></a>版本历史记录
 
-Office 的版本历史记录是通过 Excel UI 还原较旧的工作簿的简单方法。 此功能仅适用于存储在 OneDrive 或 SharePoint Online 中的文件。
+Office版本历史记录是一种通过自定义 UI 还原旧工作簿Excel方法。 该功能仅适用于存储在 OneDrive 或 SharePoint Online 中的文件。
 
-在运行脚本的 Excel 工作簿中，使用以下步骤撤消 Office 脚本的效果：
+从Excel脚本的工作簿中，使用以下步骤撤消效果：
 
-1. 转到 "**文件** > **信息** > "**版本历史记录**。
+1. 转到文件  >  **信息**  >  **版本历史记录**。
 2. 选择在运行脚本之前保存的版本。
-3. 按 "**还原**"。
+3. 按 **"还原"。**
 
 ## <a name="see-also"></a>另请参阅
 
