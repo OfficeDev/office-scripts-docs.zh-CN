@@ -3,12 +3,12 @@ title: 脚本Office疑难解答
 description: 调试脚本的Office以及帮助资源。
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: ff0ac1e63084c7c541d2a4925f1f011d16fa4992
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 04ea0ea5d49d40667d249a6f4f4b109e03362940
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545552"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631698"
 ---
 # <a name="troubleshoot-office-scripts"></a>脚本Office疑难解答
 
@@ -84,9 +84,11 @@ console.log(myRange.getAddress());
 
 [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) 是开发人员愿意帮助解决编码问题的社区。 通常，你能够通过快速 Stack Overflow 搜索找到问题的解决方案。 如果没有，请提出你的问题，并标记"office-scripts"标记。 请务必提及你正在创建一个Office *脚本*，而不是Office *加载项。*
 
-如果遇到 JavaScript API Office问题，请从[OfficeDev/office-js](https://github.com/OfficeDev/office-js) GitHub问题。 产品团队成员将响应问题并提供进一步的帮助。 在 **OfficeDev/office-js** 存储库中创建问题表明你在 Office JavaScript API 库中发现了产品团队应解决的缺陷。
+若要提交对 Office 脚本的功能请求，将你的想法张贴到"用户[](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)语音"页面，或者如果功能请求已存在，请为它添加投票。 请确保将请求提交到"Excel、脚本和外接程序"类别中的 Web 应用程序下。
 
-如果操作录制器或编辑器出现问题，请通过"帮助 **">"反馈**"按钮发送Excel。
+如果操作录制器或编辑器出现问题，请告诉我们。 在"代码编辑器"任务窗格的 **"..."** 菜单中，选择" **发送反馈"** 按钮以共享任何问题。
+
+:::image type="content" source="../images/code-editor-feedback.png" alt-text="具有&quot;发送反馈&quot;按钮的代码编辑器溢出菜单":::
 
 ## <a name="see-also"></a>另请参阅
 

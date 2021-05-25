@@ -1,14 +1,14 @@
 ---
 title: Office脚本代码编辑器环境
 description: Excel web 版 中脚本Office的先决条件和环境Excel web 版。
-ms.date: 05/10/2021
+ms.date: 05/24/2021
 localization_priority: Normal
-ms.openlocfilehash: aa54939826f8dda2a068df0f3fabf0fd3a2c842b
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: aca97c31ba970617a9fa270021a5b5b976ae4a57
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545820"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639878"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office脚本代码编辑器环境
 
@@ -16,11 +16,11 @@ Office脚本使用 TypeScript 或 JavaScript 编写，并使用 Office 脚本 Ja
 
 ## <a name="scripting-language-typescript-or-javascript"></a>脚本语言：TypeScript 或 JavaScript
 
-Office脚本是用[TypeScript](https://www.typescriptlang.org/docs/home.html)编写的，它是[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript)的超集。 操作录制器在 TypeScript 中生成代码，Office脚本文档使用 TypeScript。 由于 TypeScript 是 JavaScript 的超集，因此在 JavaScript 中编写的任何脚本代码都运行正常。
+Office 脚本以 [TypeScript](https://www.typescriptlang.org/docs/home.html) 编写，它是 [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) 的一个超集。 操作录制器在 TypeScript 中生成代码，Office脚本文档使用 TypeScript。 由于 TypeScript 是 JavaScript 的超集，因此在 JavaScript 中编写的任何脚本代码都运行正常。
 
 Office脚本在很大程度上是自包含的代码片段。 只使用了 TypeScript 功能的一小部分。 因此，您可以编辑脚本，而无需了解 TypeScript 的不一样。 代码编辑器还处理代码的安装、编译和执行，因此，你无需担心脚本本身。 可以学习语言并创建脚本，而无需以前的编程知识。 但是，如果你对编程很新，我们建议先学习一些基础，然后再继续Office脚本：
 
-[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
+[!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
 ## <a name="office-scripts-javascript-api"></a>Office脚本 JavaScript API
 

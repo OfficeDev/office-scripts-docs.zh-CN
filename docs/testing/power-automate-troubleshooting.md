@@ -1,14 +1,14 @@
 ---
 title: 对Office中运行的脚本进行Power Automate
 description: 使用技巧脚本和脚本之间的集成时，Office、平台信息和Power Automate。
-ms.date: 05/17/2021
+ms.date: 05/18/2021
 localization_priority: Normal
-ms.openlocfilehash: e26378051c764d97b4e8d748abc85fbe095c7b03
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 3d114b8b9aceb95285ecfc78ddbd868541b9f04c
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545566"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631662"
 ---
 # <a name="troubleshoot-office-scripts-running-in-power-automate"></a>对Office中运行的脚本进行Power Automate
 
@@ -23,14 +23,14 @@ Power Automate代表您Excel所选工作簿中运行脚本。 发生这种情况
 
 某些相对引用 API 在Power Automate。 其他人有一个默认行为，表示用户的状态。 在设计脚本时，请确保对工作表和范围使用绝对引用。 这样，即使Power Automate重新排列，也使工作表流保持一致。
 
-### <a name="script-methods-that-fail-when-run-power-automate-flows"></a>在流中运行时失败的Power Automate方法
+### <a name="script-methods-that-fail-when-run-in-power-automate-flows"></a>在流中运行时失败的Power Automate方法
 
-以下方法将引发错误，并且从脚本流中的脚本调用时Power Automate失败。
+以下方法引发错误，在从脚本流中的脚本调用时Power Automate失败。
 
-| 类 | 方法 |
+| 类 | Method |
 |--|--|
 | [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
-| [区域](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
+| [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
@@ -41,10 +41,25 @@ Power Automate代表您Excel所选工作簿中运行脚本。 发生这种情况
 
 以下方法使用默认行为代替任何用户的当前状态。
 
-| 类 | 方法 | Power Automate行为 |
+| 类 | Method | Power Automate行为 |
 |--|--|--|
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | 返回工作簿中的第一个工作表或该方法当前激活的 `Worksheet.activate` 工作表。 |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | 出于目的，将工作表标记为活动工作表 `Workbook.getActiveWorksheet` 。 |
+
+## <a name="data-refresh-not-supported-in-power-automate"></a>数据刷新不受支持Power Automate
+
+Office脚本在脚本中运行时无法刷新Power Automate。 在流 `PivotTable.refresh` 中调用此类方法时不执行任何操作。 此外，Power Automate不触发使用工作簿链接的公式的数据刷新。
+
+### <a name="script-methods-that-do-nothing-when-run-in-power-automate-flows"></a>在流中运行时不执行任何操作的Power Automate方法
+
+通过脚本调用时，以下方法在脚本中Power Automate。 它们仍然成功返回，并且不会引发任何错误。
+
+| 类 | Method |
+|--|--|
+| [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllPivotTables` |
+| [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `refreshAllPivotTables` |
 
 ## <a name="select-workbooks-with-the-file-browser-control"></a>使用文件浏览器控件选择工作簿
 

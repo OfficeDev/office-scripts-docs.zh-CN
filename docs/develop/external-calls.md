@@ -1,23 +1,24 @@
 ---
 title: Office 脚本中的外部 API 呼叫支持
 description: 在脚本中执行外部 API 调用Office指南。
-ms.date: 05/17/2021
+ms.date: 05/21/2021
 localization_priority: Normal
-ms.openlocfilehash: fd6ba0c57bf4cabb2d07421355cacff373f6706c
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 5d768b53112473c1774f8fe8257b197ffead4a63
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545080"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631641"
 ---
 # <a name="external-api-call-support-in-office-scripts"></a>Office 脚本中的外部 API 呼叫支持
 
-在平台的预览阶段使用外部 API[](https://developer.mozilla.org/docs/Web/API)时，脚本作者不应期望行为一致。 因此，不要依赖外部 API 实现关键脚本方案。
-
-对外部 API 的调用只能通过 Excel 应用程序进行，而在正常情况下Power Automate[调用](#external-calls-from-power-automate)。
+脚本支持对外部服务的调用。 使用这些服务向工作簿提供数据和其他信息。
 
 > [!CAUTION]
 > 外部调用可能会导致敏感数据向不需要的终结点公开。 管理员可以针对此类呼叫建立防火墙保护。
+
+> [!IMPORTANT]
+> 对外部 API 的调用只能通过 Excel 应用程序进行，而在正常情况下Power Automate[调用](#external-calls-from-power-automate)。
 
 ## <a name="configure-your-script-for-external-calls"></a>为外部调用配置脚本
 
@@ -36,7 +37,7 @@ async function main(workbook: ExcelScript.Workbook) : Promise <void>
 
 * 无法登录或使用 OAuth2 类型的身份验证流。 所有密钥和凭据必须硬编码 (源文件进行硬编码) 。
 * 没有用于存储 API 凭据和密钥的基础结构。 这必须由用户管理。
-* 不支持文档 `localStorage` Cookie、和 `sessionStorage` 对象。 
+* 不支持文档 `localStorage` Cookie、和 `sessionStorage` 对象。
 * 外部调用可能会导致向不需要的终结点公开敏感数据，或导致外部数据进入内部工作簿。 管理员可以针对此类呼叫建立防火墙保护。 在依赖外部调用之前，请务必检查本地策略。
 * 请务必在依赖关系之前检查数据吞吐量。 例如，下拉整个外部数据集可能不是最佳选择，而应该使用分页获取区块中的数据。
 

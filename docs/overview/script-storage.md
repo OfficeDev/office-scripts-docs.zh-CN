@@ -1,14 +1,14 @@
 ---
 title: Office脚本文件存储和所有权
 description: 有关脚本Office和在所有者Microsoft OneDrive传输的信息。
-ms.date: 05/17/2021
+ms.date: 05/21/2021
 localization_priority: Normal
-ms.openlocfilehash: 556d784dc1fe64873866c49ab2726a4c68abc1a7
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 25683d2b6ac2e8ac47b465b24fa087af83175806
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545799"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631655"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Office脚本文件存储和所有权
 
@@ -27,6 +27,15 @@ You Office Scripts are stored in your OneDrive. **.osts** 文件位于 **/Docume
 Office脚本存储在用户的 OneDrive。 它们遵循由用户指定的保留和删除Microsoft OneDrive。 若要了解如何处理从组织中删除了用户所创建和共享的脚本，请参阅 [OneDrive 保留和删除](/onedrive/retention-and-deletion)。
 
 在编辑过程中，文件会临时存储在浏览器中。 必须先保存脚本，然后再关闭Excel，以将其保存到OneDrive位置。 不要忘记在编辑后保存文件，否则这些编辑将仅在浏览器版本的文件中。
+
+## <a name="audit-office-scripts-usage-at-the-admin-level"></a>审核Office级别的脚本使用情况
+
+发现哪些租户在合规性Office脚本审核日志脚本。 若要了解如何使用此工具，请访问在安全与合规审核日志[搜索&搜索。](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#search-the-audit-log)
+
+若要查找将脚本Office搜索工具，请添加"文件"、文件夹或 `.osts` **网站** 字段。 这将搜索所有扩展Office脚本文件的文件。 如果组织中的任何人已使用 Office 脚本功能，用户活动会显示在审核日志搜索结果中。
+
+> [!NOTE]
+> 当前未记录运行脚本。 仅记录创建、查看和修改操作。
 
 ## <a name="see-also"></a>另请参阅
 

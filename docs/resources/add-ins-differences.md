@@ -3,12 +3,12 @@ title: Office 脚本与 Office 加载项之间的差异
 description: 脚本和加载项Office API 的行为Office API 差异。
 ms.date: 06/01/2020
 localization_priority: Normal
-ms.openlocfilehash: 45993d08d85cfceb299216dddbe2e7da9fd2e404
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 5c30406867da05952dedda684f765df5e7a7e53f
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232632"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631676"
 ---
 # <a name="differences-between-office-scripts-and-office-add-ins"></a>Office 脚本与 Office 加载项之间的差异
 
@@ -28,11 +28,9 @@ Office脚本当前仅受 Excel web 版。 所有录制、编辑和运行均在 W
 
 ## <a name="apis"></a>API
 
-没有适用于外接程序的 Office JavaScript API Office版本。标准Office脚本 API 对于平台是唯一的，并且具有许多优化和更改以避免使用 `load` / `sync` 范例。
+尽管Office加载项Office JavaScript API 和 Office 脚本 API 共享一些功能，但两者是不同的平台。 Office脚本 API 是 JavaScript API 模型的优化Excel同步版本。 主要区别是范例 `load` / `sync` 与加载项的用法。此外，加载项还提供事件 API 以及 Excel 之外的一组更广泛的功能，称为通用 API。
 
-一些[Excel JavaScript API](/javascript/api/excel?view=excel-js-preview&preserve-view=true)与 Office[脚本异步 API 兼容](../develop/excel-async-model.md)。 一些示例和外接程序代码块可以移植到 `Excel.run` 转换最少的块。 虽然这两个平台共享功能，但存在一些差异。 加载项具有但Office脚本的两个主要 API 集Office事件和通用 API。
-
-### <a name="events"></a>事件
+### <a name="events"></a>活动
 
 Office脚本不支持[事件](/office/dev/add-ins/excel/excel-add-ins-events)。 每个脚本在一个方法中运行 `main` 代码，然后结束。 它不会在触发事件时重新激活，因此无法注册事件。
 
@@ -42,7 +40,7 @@ Office脚本不能使用[通用 API。](/javascript/api/office) 如果你需要�
 
 ## <a name="see-also"></a>另请参阅
 
-- [Excel web 版中的 Office 脚本](../overview/excel.md)
+- [Excel 网页版中的 Office 脚本](../overview/excel.md)
 - [脚本Office VBA 宏之间的差异](vba-differences.md)
 - [Office 脚本疑难解答](../testing/troubleshooting.md)
 - [生成 Excel 任务窗格加载项](/office/dev/add-ins/quickstarts/excel-quickstart-jquery)

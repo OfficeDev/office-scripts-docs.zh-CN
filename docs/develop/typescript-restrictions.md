@@ -1,14 +1,14 @@
 ---
 title: 脚本中的 TypeScript Office限制
 description: TypeScript 编译器和 linter 的特定信息，Office脚本代码编辑器。
-ms.date: 02/05/2021
+ms.date: 05/24/2021
 localization_priority: Normal
-ms.openlocfilehash: a4198e0e56224ac5da89e89c43c8d2f3ef44d6d7
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 449a8abbcfdcfde53d0c9b96106f73259de368b1
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545017"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639856"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>脚本中的 TypeScript Office限制
 
@@ -20,19 +20,21 @@ Office脚本使用 TypeScript 语言。 在大多数情况下，任何 TypeScrip
 
 ### <a name="explicit-any"></a>显式 `any`
 
-您不能在脚本脚本中显式声明Office类型 `any` (，即 `let someVariable: any;`) 。 类型 `any` 导致由事件处理时Excel。 例如， `Range` 需要知道值是 、 `string` 或 `number` `boolean` 。 如果脚本中的类型明确定义为 (，在运行脚本脚本之前) 出现编译时 `any` 错误。
+您不能在脚本脚本中显式声明Office类型 `any` (，即 `let value: any;`) 。 类型 `any` 导致由事件处理时Excel。 例如， `Range` 需要知道值是 、 `string` 或 `number` `boolean` 。 如果脚本中的类型明确定义为 (，在运行脚本脚本之前) 出现编译时 `any` 错误。
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的显式&quot;any&quot;消息":::
 
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="控制台窗口中的显式&quot;any&quot;错误":::
 
-在上一 `[5, 16] Explicit Any is not allowed` 张屏幕截图中，#5列#16定义 `any` 类型。 这可以帮助您找到错误。
+在上一个屏幕截图 `[2, 14] Explicit Any is not allowed` 中，指示#2、列#14定义 `any` 类型。 这可以帮助您找到错误。
 
 若要解决此问题，请始终定义变量的类型。 如果不确定变量的类型，可以使用联合 [类型](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html)。 对于保留值的变量（可以是 、 或 (值的类型是以下值之一 `Range` `string` `number` `boolean` `Range` `string | number | boolean`) 。
 
 ### <a name="implicit-any"></a>隐式 `any`
 
 TypeScript 变量类型可以 [隐式](https://www.typescriptlang.org/docs/handbook/type-inference.html) 定义。 如果 TypeScript 编译器无法确定变量 (或者因为类型未显式定义或类型推断不可行) ，则它是隐式的，您将收到编译 `any` 时错误。
+
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的隐式&quot;any&quot;消息":::
 
 任何隐式上的最常见情况 `any` 是在变量声明中，例如 `let value;` 。 有两种方法可以避免这种情况：
 
