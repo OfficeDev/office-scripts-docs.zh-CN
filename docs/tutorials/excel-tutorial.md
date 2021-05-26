@@ -1,14 +1,14 @@
 ---
 title: 在 Excel 网页版中录制、编辑和创建 Office 脚本
 description: 有关 Office 脚本基础知识的教程，包括使用操作录制器录制脚本以及将数据写入工作簿。
-ms.date: 05/17/2021
+ms.date: 05/23/2021
 localization_priority: Priority
-ms.openlocfilehash: 957a36d56af476bafe2c11e7c89a37e79b820cce
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 19cd7bf6c3120d674553d37a36f45d36f46ee852
+ms.sourcegitcommit: 0343e4a9843f7ab6ec99d6ddf955050271b061c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545024"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52655903"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中录制、编辑和创建 Office 脚本
 
@@ -35,7 +35,7 @@ ms.locfileid: "52545024"
     |酸橙 |600 |500 |
     |葡萄柚 |900 |700 |
 
-3. 打开“**自动**”选项卡。如果未看到“**自动**”选项卡，请通过按下拉箭头来检查功能区溢出。
+3. 打开“**自动**”选项卡。如果未看到“**自动**”选项卡，请通过按下拉箭头来检查功能区溢出。 如果仍未解决问题，请按照文章[解决 Office 脚本问题](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable)中的建议。
 4. 按“**录制操作**”按钮。
 5. 选择单元格 **A2:C2**（“橙子”行），并将填充颜色设置为橙色。
 6. 通过按“**停止**”按钮来停止录制。
