@@ -3,16 +3,16 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office 脚本文档
 description: 在 Excel 网页版中学习 Office 脚本的资源，包括教程、概念文章和代码示例。
-ms.date: 10/30/2020
+ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: 0d75d1326db0399f64f53b0b25bd6c7b49296e0b
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: baa015f7f6384ccc2cdd7d8a4cbadcbc16167828
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232667"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639899"
 ---
-# <a name="office-scripts-documentation-preview"></a>Office 脚本文档（预览版）
+# <a name="office-scripts-documentation"></a>Office 脚本文档
 
 在 Excel 网页版中使用 Office 脚本以自动化常见任务。 浏览以下文章，了解如何创建和编辑 Office 脚本并立即开始自动化。
 

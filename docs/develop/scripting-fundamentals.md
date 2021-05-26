@@ -1,26 +1,24 @@
 ---
 title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
-ms.date: 05/10/2021
+ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: d930c9ee36933cb0458de8cce4f1d1adc7b6a001
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 629e816ea988d6b8ffe5264c701e3a1eba6c6feb
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545096"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639892"
 ---
-# <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel 网页版中 Office 脚本的脚本基础（预览）
+# <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel 网页版中 Office 脚本的脚本基础
 
 本文将介绍 Office 脚本技术方面的知识。 你将了解 Excel 对象如何协同工作以及代码编辑器如何与工作簿同步。
-
-[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 ## <a name="typescript-the-language-of-office-scripts"></a>TypeScript：Office 脚本的语言
 
 Office 脚本以 [TypeScript](https://www.typescriptlang.org/docs/home.html) 编写，它是 [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) 的一个超集。 如果熟悉 JavaScript，你的知识将会延续下去，因为两种语言的大部分代码是相同的。 在开始 Office 脚本编码之旅之前，我们建议你先掌握一些初级编程知识。 以下资源可以帮助理解 Office 脚本的编码方面。
 
-[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
+[!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
 ## <a name="main-function-the-scripts-starting-point"></a>`main` 函数：脚本的起点
 
@@ -91,7 +89,7 @@ function main(workbook: ExcelScript.Workbook) {
     let productData = [
         ["Almonds", 6, 7.5],
         ["Coffee", 20, 34.5],
-        ["Chocolate", 10, 9.56],
+        ["Chocolate", 10, 9.54],
     ];
     let dataRange = sheet.getRange("B3:D5");
     dataRange.setValues(productData);
@@ -115,6 +113,32 @@ function main(workbook: ExcelScript.Workbook) {
 运行此脚本将在当前工作表中创建以下数据：
 
 :::image type="content" source="../images/range-sample.png" alt-text="包含由值行、公式列和带格式的标头组成的销售记录的工作表":::
+
+### <a name="the-types-of-range-values"></a>范围值的类型
+
+每个单元格都有值。 该值是输入到单元格中的基础值，可能不同于 Excel 中显示的文本。 例如，你可能会看到单元格中的日期显示为“5/2/2021”，但实际值为 44318。 可以使用数字格式更改此显示，但是单元格的实际值和键入内容仅在设置新值时才会发生变化。
+
+使用单元格值时，请告诉 TypeScript 期望从单元格或范围中获得什么值，这一点很重要。 包含以下其中一个类型的单元格：`string`、`number` 或 `boolean`。 为了让脚本将返回的值作为其中一种类型的值，必须声明类型。
+
+以下脚本从上一个示例中的表格中获取平均价格。 为代码添加备注`priceRange.getValues() as number[][]`。 这段代码将范围值的类型[声明](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions)为`number[][]`。 然后，该数组中的所有值都可以视为脚本中的数字。
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the active worksheet.
+  let sheet = workbook.getActiveWorksheet();
+
+  // Get the "Unit Price" column. 
+  // The result of calling getValues is declared to be a number[][] so that we can perform arithmetic operations.
+  let priceRange = sheet.getRange("D3:D5");
+  let prices = priceRange.getValues() as number[][];
+
+  // Get the average price.
+  let totalPrices = 0;
+  prices.forEach((price) => totalPrices += price[0]);
+  let averagePrice = totalPrices / prices.length;
+  console.log(averagePrice);
+}
+```
 
 ## <a name="charts-tables-and-other-data-objects"></a>Chart、Table 和其他数据对象
 
