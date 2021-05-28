@@ -1,14 +1,14 @@
 ---
 title: Office脚本示例
 description: 可用于Office脚本示例和方案。
-ms.date: 05/24/2021
+ms.date: 05/25/2021
 localization_priority: Normal
-ms.openlocfilehash: 6b91e20586faa57c389459b7b8bccf18e5c3bbfa
-ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
+ms.openlocfilehash: aac730fd8a0da76728e4a455339366a75b27a0b2
+ms.sourcegitcommit: 339ecbb9914d54f919e3475018888fb5d00abe89
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52639843"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "52697656"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office脚本示例和方案
 
@@ -22,7 +22,7 @@ ms.locfileid: "52639843"
 
 ## <a name="basics"></a>基本信息
 
-| 项目 | 详细信息 |
+| Project | 详细信息 |
 |---------|---------|
 | [脚本基础知识](../excel-samples.md) | 这些示例演示了脚本的基本Office构建基块。 |
 | [在内容中添加Excel](add-excel-comments.md) | 本示例向单元格添加注释，@mentioning同事。 |
@@ -33,7 +33,7 @@ ms.locfileid: "52639843"
 
 请查看以下端到端项目，该项目可自动执行示例方案以及 YouTube) 上承载的完整脚本、Excel 文件示例[ (。 ](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)
 
-| 项目 | 详细信息 |
+| Project | 详细信息 |
 |---------|---------|
 | [计算特定工作表或所有工作表中的空行数](count-blank-rows.md) | 本示例检测工作表中是否有预计存在数据的空白行，然后报告空白行计数，以用于Power Automate流。 |
 | [电子邮件图表和表格图像](email-images-chart-table.md) | 此示例使用Office脚本Power Automate操作来创建图表，并通过电子邮件将图表作为图像发送。 |
@@ -55,13 +55,14 @@ Office脚本可以自动执行日常例程的某些部分。 这些日常任务�
 | [分析 Web 下载项](../scenarios/analyze-web-downloads.md) | 此方案具有分析 Web 流量记录的脚本，以确定用户的来源国家/地区。 它展示文本分析、在脚本中使用子功能、应用条件格式和使用表的技能。 |
 | [从 NOAA 中提取图形水级别的数据](../scenarios/noaa-data-fetch.md) | 此方案使用Office脚本从 NOAA ([Currents](https://tidesandcurrents.noaa.gov/)数据库的外部源提取数据) 并绘制结果信息的图形。 它重点介绍了使用 `fetch` 获取数据和使用图表的技能。 |
 | [成绩计算器](../scenarios/grade-calculator.md) | 此方案具有一个脚本，用于验证教师的课堂成绩记录。 它展示错误检查、单元格格式设置和正则表达式的技能。 |
+| [安排在Teams](../scenarios/schedule-interviews-in-teams.md) | 此方案演示如何使用 Excel 电子表格管理访谈式会议时间，并创建一个流来安排Teams。 |
 | [任务提醒](../scenarios/task-reminders.md) | 此方案在Office流Power Automate脚本，向同事发送更新项目状态的提醒。 它重点介绍了脚本Power Automate和数据传输的专业技能。 |
 
 ## <a name="community-contributions-and-fun-samples"></a>Community贡献和有趣的示例
 
 欢迎来自[我们的](https://github.com/OfficeDev/office-scripts-docs/blob/master/Contributing.md)脚本Office贡献！ 可随意创建拉取请求进行审阅。
 
-| 项目 | 详细信息 |
+| Project | 详细信息 |
 |---------|---------|
 | [游戏生活](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | 位于 Tech Excel 上的 Yutao Community"Ready Player Zero"博客包含一个脚本，用于为 John Conway 的《生活游戏》[*建模*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)。 |
 | [四年问候语动画](community-seasons-greetings.md) | 此脚本由 [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) 在假日假日的快乐中贡献！ 这是一个有趣的脚本，它使用脚本在Excel web 版中显示一Office树。 |
