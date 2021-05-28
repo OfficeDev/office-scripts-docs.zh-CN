@@ -95,6 +95,8 @@ items:
                 href: resources/scenarios/noaa-data-fetch.md
               - name: 成绩计算器
                 href: resources/scenarios/grade-calculator.md
+              - name: 在 Teams 中安排面试
+                href: resources/scenarios/schedule-interviews-in-teams.md
               - name: 任务提醒（通过 Power Automate）
                 href: resources/scenarios/task-reminders.md
           - name: 社区参与
