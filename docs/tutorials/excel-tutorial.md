@@ -35,7 +35,7 @@ ms.locfileid: "52655903"
     |酸橙 |600 |500 |
     |葡萄柚 |900 |700 |
 
-3. 打开“**自动**”选项卡。如果未看到“**自动**”选项卡，请通过按下拉箭头来检查功能区溢出。 如果仍未解决问题，请按照文章[解决 Office 脚本问题](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable)中的建议。
+3. 打开“**自动**”选项卡。如果未看到“**自动**”选项卡，请通过按下拉箭头来检查功能区溢出。 如果仍未解决问题，请按照文章[解决 Office 脚本问题](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable)中的建议操作。
 4. 按“**录制操作**”按钮。
 5. 选择单元格 **A2:C2**（“橙子”行），并将填充颜色设置为橙色。
 6. 通过按“**停止**”按钮来停止录制。
