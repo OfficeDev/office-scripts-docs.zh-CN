@@ -1,14 +1,14 @@
 ---
 title: Office脚本代码编辑器环境
 description: Excel web 版 中脚本Office的先决条件和环境Excel web 版。
-ms.date: 05/24/2021
+ms.date: 05/27/2021
 localization_priority: Normal
-ms.openlocfilehash: aca97c31ba970617a9fa270021a5b5b976ae4a57
-ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
+ms.openlocfilehash: 2334b0f98dfe03d97c35e6d1f54eeb45c06a134c
+ms.sourcegitcommit: c75f71b8abde962e922927a18145dd1d9b361b05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52639878"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "52731139"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office脚本代码编辑器环境
 
@@ -32,9 +32,15 @@ Office脚本不支持使用外部第三方 JavaScript 库。 目前，您无法�
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense是一种代码编辑器功能，可帮助您在编辑脚本时防止拼写错误和语法错误。 它显示在键入时可能的对象和字段名称，以及每个 API 的内联文档。
+IntelliSense是一组可帮助您编写代码的代码编辑器功能。 它提供了自动完成、语法错误突出显示和内联 API 文档。
 
-代码Excel编辑器使用与IntelliSense相同的Visual Studio Code。 若要了解有关该功能的更多信息，请访问[Visual Studio Code的IntelliSense功能。](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features)
+IntelliSense键入时提供建议，类似于文本建议Excel。 按 Tab 或 Enter 键可插入建议的成员。 通过IntelliSense Ctrl+Space 键在当前光标位置触发触发器。 这些建议在完成方法时尤其有用。 由 IntelliSense 显示的方法签名包含所需参数的列表、每个参数的类型、给定参数是必需参数还是可选参数，以及方法的返回类型。
+
+将光标悬停在方法、类或其他代码对象上以查看详细信息。 将鼠标悬停在语法错误或代码建议（用红色或黄色锯齿线表示）上，以查看如何解决问题的建议。 通常，IntelliSense"快速修复"选项来自动更改代码。
+
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="代码编辑器悬停文本中具有&quot;快速修复&quot;按钮的错误消息":::
+
+the Office Scripts Code Editor uses the same IntelliSense engine as Visual Studio Code. 若要了解有关该功能的更多信息，请访问[Visual Studio Code的IntelliSense功能。](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features)
 
 ## <a name="keyboard-shortcuts"></a>键盘快捷方式
 
