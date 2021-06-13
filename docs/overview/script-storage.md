@@ -1,14 +1,14 @@
 ---
 title: Office脚本文件存储和所有权
 description: 有关脚本Office和在所有者Microsoft OneDrive传输的信息。
-ms.date: 05/21/2021
+ms.date: 06/04/2021
 localization_priority: Normal
-ms.openlocfilehash: 25683d2b6ac2e8ac47b465b24fa087af83175806
-ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
+ms.openlocfilehash: b7ccb3ceae99a3a10bb56d5a4e56cc869d99850e
+ms.sourcegitcommit: 7dcb13daa3a765b87295e5a453a8f123e17ee24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631655"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "52906785"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Office脚本文件存储和所有权
 
@@ -22,6 +22,14 @@ You Office Scripts are stored in your OneDrive. **.osts** 文件位于 **/Docume
 
 与工作簿之一共享的脚本将保留在脚本创建者的OneDrive。 在 OneDrive 中运行共享脚本时，不会将文件复制到任何本地或Excel。 代码 **编辑器的"创建** 副本"按钮会将脚本的单独副本保存在OneDrive。 对副本所做的更改不会影响原始脚本。
 
+### <a name="restore-deleted-scripts"></a>还原已删除的脚本
+
+在删除脚本时，Excel脚本将转到OneDrive回收站。 若要还原已删除的脚本，请按照还原已删除的文件或文件夹中[OneDrive。](https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f) 还原 **.osts** 文件会返回到"所有脚本 **"** 列表。
+
+已删除的脚本未与工作簿共享。 还原脚本时，它不会 **保留** 其脚本访问权限。 你将需要再次共享脚本。
+
+还原的脚本仍像预期的那样与Power Automate工作。 无需重新创建流连接器。
+
 ## <a name="file-ownership-and-retention"></a>文件所有权和保留
 
 Office脚本存储在用户的 OneDrive。 它们遵循由用户指定的保留和删除Microsoft OneDrive。 若要了解如何处理从组织中删除了用户所创建和共享的脚本，请参阅 [OneDrive 保留和删除](/onedrive/retention-and-deletion)。
@@ -30,7 +38,7 @@ Office脚本存储在用户的 OneDrive。 它们遵循由用户指定的保留�
 
 ## <a name="audit-office-scripts-usage-at-the-admin-level"></a>审核Office级别的脚本使用情况
 
-发现哪些租户在合规性Office脚本审核日志脚本。 若要了解如何使用此工具，请访问在安全与合规审核日志[搜索&搜索。](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#search-the-audit-log)
+发现哪些租户在合规性Office脚本审核日志脚本。 若要了解如何使用此工具，请访问在安全与合规审核日志[搜索&搜索。](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log)
 
 若要查找将脚本Office搜索工具，请添加"文件"、文件夹或 `.osts` **网站** 字段。 这将搜索所有扩展Office脚本文件的文件。 如果组织中的任何人已使用 Office 脚本功能，用户活动会显示在审核日志搜索结果中。
 
