@@ -3,12 +3,12 @@ title: 提高脚本Office性能
 description: 通过了解工作簿和脚本之间的通信Excel创建更快的脚本。
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 512e2108cb81cf9ac8ae98980951d5d01b3d2de9
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: a5bd879625b9c3bac0caa621dde312f7c961dd5c
+ms.sourcegitcommit: 2aaf7dc527cb6c9f1206550b2c5745280503b2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52544989"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "52957698"
 ---
 # <a name="improve-the-performance-of-your-office-scripts"></a>提高脚本Office性能
 
@@ -100,7 +100,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="case-by-case-help"></a>按案例帮助
 
-随着 Office 脚本平台的扩展以使用[Power Automate、](https://flow.microsoft.com/)自适应卡片和其他跨产品[](/adaptive-cards)功能，脚本工作簿通信的细节变得更加复杂。 如果您需要有关加快脚本运行速度的帮助，请通过 [Microsoft Q&A 联系](/answers/topics/office-scripts-dev.html)。 请务必使用"office-scripts-dev"标记你的问题，以便专家可以找到它并提供帮助。
+随着 Office 脚本平台的扩展以使用[Power Automate、](https://flow.microsoft.com/)自适应卡片和其他跨产品[](/adaptive-cards)功能，脚本工作簿通信的细节变得更加复杂。 如果您需要有关加快脚本运行速度的帮助，请通过 [Microsoft Q&A 联系](/answers/topics/office-scripts-excel-dev.html)。 请务必使用"office-scripts-dev"标记你的问题，以便专家可以找到它并提供帮助。
 
 ## <a name="see-also"></a>另请参阅
 
