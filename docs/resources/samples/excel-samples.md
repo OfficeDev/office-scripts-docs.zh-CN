@@ -3,30 +3,30 @@ title: Office脚本的基本Excel web 版
 description: 要与 Excel web 版 中的脚本Office代码示例Excel web 版。
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: f252934a92126212b9520223826b3b2f5161ed57
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 3bf3bd5acd10bc5999db4746a2ed62af85237e48
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545757"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074555"
 ---
-# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a><span data-ttu-id="bcacd-103">Office脚本的基本Excel web 版</span><span class="sxs-lookup"><span data-stu-id="bcacd-103">Basic scripts for Office Scripts in Excel on the web</span></span>
+# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a><span data-ttu-id="39084-103">Office脚本的基本Excel web 版</span><span class="sxs-lookup"><span data-stu-id="39084-103">Basic scripts for Office Scripts in Excel on the web</span></span>
 
-<span data-ttu-id="bcacd-104">以下示例是简单脚本，您可以尝试自己的工作簿。</span><span class="sxs-lookup"><span data-stu-id="bcacd-104">The following samples are simple scripts for you to try on your own workbooks.</span></span> <span data-ttu-id="bcacd-105">若要在Excel web 版：</span><span class="sxs-lookup"><span data-stu-id="bcacd-105">To use them in Excel on the web:</span></span>
+<span data-ttu-id="39084-104">以下示例是简单脚本，您可以尝试自己的工作簿。</span><span class="sxs-lookup"><span data-stu-id="39084-104">The following samples are simple scripts for you to try on your own workbooks.</span></span> <span data-ttu-id="39084-105">若要在Excel web 版：</span><span class="sxs-lookup"><span data-stu-id="39084-105">To use them in Excel on the web:</span></span>
 
-1. <span data-ttu-id="bcacd-106">打开“**自动**”选项卡。</span><span class="sxs-lookup"><span data-stu-id="bcacd-106">Open the **Automate** tab.</span></span>
-2. <span data-ttu-id="bcacd-107">按 **代码编辑器**。</span><span class="sxs-lookup"><span data-stu-id="bcacd-107">Press **Code Editor**.</span></span>
-3. <span data-ttu-id="bcacd-108">在 **代码编辑器** 的任务窗格中按"新建脚本"。</span><span class="sxs-lookup"><span data-stu-id="bcacd-108">Press **New Script** in the Code Editor's task pane.</span></span>
-4. <span data-ttu-id="bcacd-109">将整个脚本替换为你选择的示例。</span><span class="sxs-lookup"><span data-stu-id="bcacd-109">Replace the entire script with the sample of your choice.</span></span>
-5. <span data-ttu-id="bcacd-110">在 **代码** 编辑器的任务窗格中按"运行"。</span><span class="sxs-lookup"><span data-stu-id="bcacd-110">Press **Run** in the Code Editor's task pane.</span></span>
+1. <span data-ttu-id="39084-106">打开“**自动**”选项卡。</span><span class="sxs-lookup"><span data-stu-id="39084-106">Open the **Automate** tab.</span></span>
+2. <span data-ttu-id="39084-107">按 **代码编辑器**。</span><span class="sxs-lookup"><span data-stu-id="39084-107">Press **Code Editor**.</span></span>
+3. <span data-ttu-id="39084-108">在 **代码编辑器** 的任务窗格中按"新建脚本"。</span><span class="sxs-lookup"><span data-stu-id="39084-108">Press **New Script** in the Code Editor's task pane.</span></span>
+4. <span data-ttu-id="39084-109">将整个脚本替换为你选择的示例。</span><span class="sxs-lookup"><span data-stu-id="39084-109">Replace the entire script with the sample of your choice.</span></span>
+5. <span data-ttu-id="39084-110">在 **代码** 编辑器的任务窗格中按"运行"。</span><span class="sxs-lookup"><span data-stu-id="39084-110">Press **Run** in the Code Editor's task pane.</span></span>
 
-## <a name="script-basics"></a><span data-ttu-id="bcacd-111">脚本基础知识</span><span class="sxs-lookup"><span data-stu-id="bcacd-111">Script basics</span></span>
+## <a name="script-basics"></a><span data-ttu-id="39084-111">脚本基础知识</span><span class="sxs-lookup"><span data-stu-id="39084-111">Script basics</span></span>
 
-<span data-ttu-id="bcacd-112">这些示例演示了脚本的基本Office构建基块。</span><span class="sxs-lookup"><span data-stu-id="bcacd-112">These samples demonstrate fundamental building blocks for Office Scripts.</span></span> <span data-ttu-id="bcacd-113">将其添加到脚本以扩展解决方案并解决常见问题。</span><span class="sxs-lookup"><span data-stu-id="bcacd-113">Add these to your scripts to extend your solution and solve common problems.</span></span>
+<span data-ttu-id="39084-112">这些示例演示了脚本的基本Office构建基块。</span><span class="sxs-lookup"><span data-stu-id="39084-112">These samples demonstrate fundamental building blocks for Office Scripts.</span></span> <span data-ttu-id="39084-113">将其添加到脚本以扩展解决方案并解决常见问题。</span><span class="sxs-lookup"><span data-stu-id="39084-113">Add these to your scripts to extend your solution and solve common problems.</span></span>
 
-### <a name="read-and-log-one-cell"></a><span data-ttu-id="bcacd-114">读取和记录一个单元格</span><span class="sxs-lookup"><span data-stu-id="bcacd-114">Read and log one cell</span></span>
+### <a name="read-and-log-one-cell"></a><span data-ttu-id="39084-114">读取和记录一个单元格</span><span class="sxs-lookup"><span data-stu-id="39084-114">Read and log one cell</span></span>
 
-<span data-ttu-id="bcacd-115">此示例读取 **A1 的值，** 并打印到控制台。</span><span class="sxs-lookup"><span data-stu-id="bcacd-115">This sample reads the value of **A1** and prints it to the console.</span></span>
+<span data-ttu-id="39084-115">此示例读取 **A1 的值，** 并打印到控制台。</span><span class="sxs-lookup"><span data-stu-id="39084-115">This sample reads the value of **A1** and prints it to the console.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -41,9 +41,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="read-the-active-cell"></a><span data-ttu-id="bcacd-116">读取活动单元格</span><span class="sxs-lookup"><span data-stu-id="bcacd-116">Read the active cell</span></span>
+### <a name="read-the-active-cell"></a><span data-ttu-id="39084-116">读取活动单元格</span><span class="sxs-lookup"><span data-stu-id="39084-116">Read the active cell</span></span>
 
-<span data-ttu-id="bcacd-117">此脚本记录当前活动单元格的值。</span><span class="sxs-lookup"><span data-stu-id="bcacd-117">This script logs the value of the current active cell.</span></span> <span data-ttu-id="bcacd-118">如果选择了多个单元格，将记录最左上方的单元格。</span><span class="sxs-lookup"><span data-stu-id="bcacd-118">If multiple cells are selected, the top-leftmost cell will be logged.</span></span>
+<span data-ttu-id="39084-117">此脚本记录当前活动单元格的值。</span><span class="sxs-lookup"><span data-stu-id="39084-117">This script logs the value of the current active cell.</span></span> <span data-ttu-id="39084-118">如果选择了多个单元格，将记录最左上方的单元格。</span><span class="sxs-lookup"><span data-stu-id="39084-118">If multiple cells are selected, the top-leftmost cell will be logged.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -55,9 +55,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-an-adjacent-cell"></a><span data-ttu-id="bcacd-119">更改相邻单元格</span><span class="sxs-lookup"><span data-stu-id="bcacd-119">Change an adjacent cell</span></span>
+### <a name="change-an-adjacent-cell"></a><span data-ttu-id="39084-119">更改相邻单元格</span><span class="sxs-lookup"><span data-stu-id="39084-119">Change an adjacent cell</span></span>
 
-<span data-ttu-id="bcacd-120">此脚本使用相对引用获取相邻单元格。</span><span class="sxs-lookup"><span data-stu-id="bcacd-120">This script gets adjacent cells using relative references.</span></span> <span data-ttu-id="bcacd-121">请注意，如果活动单元格位于最上面一行，脚本的一部分将失败，因为它引用当前选定单元格上方的单元格。</span><span class="sxs-lookup"><span data-stu-id="bcacd-121">Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.</span></span>
+<span data-ttu-id="39084-120">此脚本使用相对引用获取相邻单元格。</span><span class="sxs-lookup"><span data-stu-id="39084-120">This script gets adjacent cells using relative references.</span></span> <span data-ttu-id="39084-121">请注意，如果活动单元格位于最上面一行，脚本的一部分将失败，因为它引用当前选定单元格上方的单元格。</span><span class="sxs-lookup"><span data-stu-id="39084-121">Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -82,9 +82,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-all-adjacent-cells"></a><span data-ttu-id="bcacd-122">更改所有相邻单元格</span><span class="sxs-lookup"><span data-stu-id="bcacd-122">Change all adjacent cells</span></span>
+### <a name="change-all-adjacent-cells"></a><span data-ttu-id="39084-122">更改所有相邻单元格</span><span class="sxs-lookup"><span data-stu-id="39084-122">Change all adjacent cells</span></span>
 
-<span data-ttu-id="bcacd-123">此脚本将活动单元格中的格式复制到相邻单元格。</span><span class="sxs-lookup"><span data-stu-id="bcacd-123">This script copies the formatting in the active cell to the neighboring cells.</span></span> <span data-ttu-id="bcacd-124">请注意，此脚本仅在活动单元格不在工作表边缘时有效。</span><span class="sxs-lookup"><span data-stu-id="bcacd-124">Note that this script only works when the active cell isn't on an edge of the worksheet.</span></span>
+<span data-ttu-id="39084-123">此脚本将活动单元格中的格式复制到相邻单元格。</span><span class="sxs-lookup"><span data-stu-id="39084-123">This script copies the formatting in the active cell to the neighboring cells.</span></span> <span data-ttu-id="39084-124">请注意，此脚本仅在活动单元格不在工作表边缘时有效。</span><span class="sxs-lookup"><span data-stu-id="39084-124">Note that this script only works when the active cell isn't on an edge of the worksheet.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -105,9 +105,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-each-individual-cell-in-a-range"></a><span data-ttu-id="bcacd-125">更改区域的每个单元格</span><span class="sxs-lookup"><span data-stu-id="bcacd-125">Change each individual cell in a range</span></span>
+### <a name="change-each-individual-cell-in-a-range"></a><span data-ttu-id="39084-125">更改区域的每个单元格</span><span class="sxs-lookup"><span data-stu-id="39084-125">Change each individual cell in a range</span></span>
 
-<span data-ttu-id="bcacd-126">此脚本将循环遍历当前选择的范围。</span><span class="sxs-lookup"><span data-stu-id="bcacd-126">This script loops over the currently select range.</span></span> <span data-ttu-id="bcacd-127">它清除当前格式，将每个单元格中的填充颜色设置为随机颜色。</span><span class="sxs-lookup"><span data-stu-id="bcacd-127">It clears the current formatting and sets the fill color in each cell to a random color.</span></span>
+<span data-ttu-id="39084-126">此脚本将循环遍历当前选择的范围。</span><span class="sxs-lookup"><span data-stu-id="39084-126">This script loops over the currently select range.</span></span> <span data-ttu-id="39084-127">它清除当前格式，将每个单元格中的填充颜色设置为随机颜色。</span><span class="sxs-lookup"><span data-stu-id="39084-127">It clears the current formatting and sets the fill color in each cell to a random color.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -134,9 +134,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="get-groups-of-cells-based-on-special-criteria"></a><span data-ttu-id="bcacd-128">根据特殊条件获取单元格组</span><span class="sxs-lookup"><span data-stu-id="bcacd-128">Get groups of cells based on special criteria</span></span>
+### <a name="get-groups-of-cells-based-on-special-criteria"></a><span data-ttu-id="39084-128">根据特殊条件获取单元格组</span><span class="sxs-lookup"><span data-stu-id="39084-128">Get groups of cells based on special criteria</span></span>
 
-<span data-ttu-id="bcacd-129">此脚本获取当前工作表的已用区域的所有空白单元格。</span><span class="sxs-lookup"><span data-stu-id="bcacd-129">This script gets all the blank cells in the current worksheet's used range.</span></span> <span data-ttu-id="bcacd-130">然后，它用黄色背景突出显示所有这些单元格。</span><span class="sxs-lookup"><span data-stu-id="bcacd-130">It then highlights all those cells with a yellow background.</span></span>
+<span data-ttu-id="39084-129">此脚本获取当前工作表的已用区域的所有空白单元格。</span><span class="sxs-lookup"><span data-stu-id="39084-129">This script gets all the blank cells in the current worksheet's used range.</span></span> <span data-ttu-id="39084-130">然后，它用黄色背景突出显示所有这些单元格。</span><span class="sxs-lookup"><span data-stu-id="39084-130">It then highlights all those cells with a yellow background.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -151,13 +151,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="collections"></a><span data-ttu-id="bcacd-131">收藏</span><span class="sxs-lookup"><span data-stu-id="bcacd-131">Collections</span></span>
+## <a name="collections"></a><span data-ttu-id="39084-131">集合</span><span class="sxs-lookup"><span data-stu-id="39084-131">Collections</span></span>
 
-<span data-ttu-id="bcacd-132">这些示例处理工作簿中的对象集合。</span><span class="sxs-lookup"><span data-stu-id="bcacd-132">These samples work with collections of objects in the workbook.</span></span>
+<span data-ttu-id="39084-132">这些示例处理工作簿中的对象集合。</span><span class="sxs-lookup"><span data-stu-id="39084-132">These samples work with collections of objects in the workbook.</span></span>
 
-### <a name="iterate-over-collections"></a><span data-ttu-id="bcacd-133">对集合进行 Iterate</span><span class="sxs-lookup"><span data-stu-id="bcacd-133">Iterate over collections</span></span>
+### <a name="iterate-over-collections"></a><span data-ttu-id="39084-133">对集合进行 Iterate</span><span class="sxs-lookup"><span data-stu-id="39084-133">Iterate over collections</span></span>
 
-<span data-ttu-id="bcacd-134">此脚本获取并记录工作簿中所有工作表的名称。</span><span class="sxs-lookup"><span data-stu-id="bcacd-134">This script gets and logs the names of all the worksheets in the workbook.</span></span> <span data-ttu-id="bcacd-135">它还将选项卡颜色设置为随机颜色。</span><span class="sxs-lookup"><span data-stu-id="bcacd-135">It also sets the their tab colors to a random color.</span></span>
+<span data-ttu-id="39084-134">此脚本获取并记录工作簿中所有工作表的名称。</span><span class="sxs-lookup"><span data-stu-id="39084-134">This script gets and logs the names of all the worksheets in the workbook.</span></span> <span data-ttu-id="39084-135">它还将选项卡颜色设置为随机颜色。</span><span class="sxs-lookup"><span data-stu-id="39084-135">It also sets the their tab colors to a random color.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -182,9 +182,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="query-and-delete-from-a-collection"></a><span data-ttu-id="bcacd-136">从集合中查询和删除</span><span class="sxs-lookup"><span data-stu-id="bcacd-136">Query and delete from a collection</span></span>
+### <a name="query-and-delete-from-a-collection"></a><span data-ttu-id="39084-136">从集合中查询和删除</span><span class="sxs-lookup"><span data-stu-id="39084-136">Query and delete from a collection</span></span>
 
-<span data-ttu-id="bcacd-137">此脚本创建新的工作表。</span><span class="sxs-lookup"><span data-stu-id="bcacd-137">This script creates a new worksheet.</span></span> <span data-ttu-id="bcacd-138">它在新建工作表之前检查工作表的现有副本并将其删除。</span><span class="sxs-lookup"><span data-stu-id="bcacd-138">It checks for an existing copy of the worksheet and deletes it before making a new sheet.</span></span>
+<span data-ttu-id="39084-137">此脚本创建新的工作表。</span><span class="sxs-lookup"><span data-stu-id="39084-137">This script creates a new worksheet.</span></span> <span data-ttu-id="39084-138">它在新建工作表之前检查工作表的现有副本并将其删除。</span><span class="sxs-lookup"><span data-stu-id="39084-138">It checks for an existing copy of the worksheet and deletes it before making a new sheet.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -211,11 +211,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="dates"></a><span data-ttu-id="bcacd-139">日期</span><span class="sxs-lookup"><span data-stu-id="bcacd-139">Dates</span></span>
+## <a name="dates"></a><span data-ttu-id="39084-139">日期</span><span class="sxs-lookup"><span data-stu-id="39084-139">Dates</span></span>
 
-<span data-ttu-id="bcacd-140">本节中的示例显示如何使用 JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) 对象。</span><span class="sxs-lookup"><span data-stu-id="bcacd-140">The samples in this section show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.</span></span>
+<span data-ttu-id="39084-140">本节中的示例显示如何使用 JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) 对象。</span><span class="sxs-lookup"><span data-stu-id="39084-140">The samples in this section show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.</span></span>
 
-<span data-ttu-id="bcacd-141">以下示例获取当前日期和时间，然后将这些值写入活动工作表中的两个单元格。</span><span class="sxs-lookup"><span data-stu-id="bcacd-141">The following sample gets the current date and time and then writes those values to two cells in the active worksheet.</span></span>
+<span data-ttu-id="39084-141">以下示例获取当前日期和时间，然后将这些值写入活动工作表中的两个单元格。</span><span class="sxs-lookup"><span data-stu-id="39084-141">The following sample gets the current date and time and then writes those values to two cells in the active worksheet.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -234,7 +234,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-<span data-ttu-id="bcacd-142">下一个示例将读取存储在 Excel 并将其转换为 JavaScript Date 对象。</span><span class="sxs-lookup"><span data-stu-id="bcacd-142">The next sample reads a date that's stored in Excel and translates it to a JavaScript Date object.</span></span> <span data-ttu-id="bcacd-143">它将日期 [的数字序列号用作](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript Date 的输入。</span><span class="sxs-lookup"><span data-stu-id="bcacd-143">It uses the [date's numeric serial number](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) as input for the JavaScript Date.</span></span>
+<span data-ttu-id="39084-142">下一个示例将读取存储在 Excel 并将其转换为 JavaScript Date 对象。</span><span class="sxs-lookup"><span data-stu-id="39084-142">The next sample reads a date that's stored in Excel and translates it to a JavaScript Date object.</span></span> <span data-ttu-id="39084-143">它将日期 [的数字序列号用作](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript Date 的输入。</span><span class="sxs-lookup"><span data-stu-id="39084-143">It uses the [date's numeric serial number](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) as input for the JavaScript Date.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -248,13 +248,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="display-data"></a><span data-ttu-id="bcacd-144">显示数据</span><span class="sxs-lookup"><span data-stu-id="bcacd-144">Display data</span></span>
+## <a name="display-data"></a><span data-ttu-id="39084-144">显示数据</span><span class="sxs-lookup"><span data-stu-id="39084-144">Display data</span></span>
 
-<span data-ttu-id="bcacd-145">这些示例演示如何使用工作表数据，并为用户提供更好的视图或组织。</span><span class="sxs-lookup"><span data-stu-id="bcacd-145">These samples demonstrate how to work with worksheet data and provide users with a better view or organization.</span></span>
+<span data-ttu-id="39084-145">这些示例演示如何使用工作表数据，并为用户提供更好的视图或组织。</span><span class="sxs-lookup"><span data-stu-id="39084-145">These samples demonstrate how to work with worksheet data and provide users with a better view or organization.</span></span>
 
-### <a name="apply-conditional-formatting"></a><span data-ttu-id="bcacd-146">应用条件格式</span><span class="sxs-lookup"><span data-stu-id="bcacd-146">Apply conditional formatting</span></span>
+### <a name="apply-conditional-formatting"></a><span data-ttu-id="39084-146">应用条件格式</span><span class="sxs-lookup"><span data-stu-id="39084-146">Apply conditional formatting</span></span>
 
-<span data-ttu-id="bcacd-147">本示例将条件格式应用于工作表中当前使用的范围。</span><span class="sxs-lookup"><span data-stu-id="bcacd-147">This sample applies conditional formatting to the currently used range in the worksheet.</span></span> <span data-ttu-id="bcacd-148">条件格式是前 10% 的值的绿色填充。</span><span class="sxs-lookup"><span data-stu-id="bcacd-148">The conditional formatting is a green fill for the top 10% of values.</span></span>
+<span data-ttu-id="39084-147">本示例将条件格式应用于工作表中当前使用的范围。</span><span class="sxs-lookup"><span data-stu-id="39084-147">This sample applies conditional formatting to the currently used range in the worksheet.</span></span> <span data-ttu-id="39084-148">条件格式是前 10% 的值的绿色填充。</span><span class="sxs-lookup"><span data-stu-id="39084-148">The conditional formatting is a green fill for the top 10% of values.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -274,9 +274,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="create-a-sorted-table"></a><span data-ttu-id="bcacd-149">创建排序表</span><span class="sxs-lookup"><span data-stu-id="bcacd-149">Create a sorted table</span></span>
+### <a name="create-a-sorted-table"></a><span data-ttu-id="39084-149">创建排序表</span><span class="sxs-lookup"><span data-stu-id="39084-149">Create a sorted table</span></span>
 
-<span data-ttu-id="bcacd-150">本示例从当前工作表的已用区域创建一个表格，然后根据第一列对表格进行排序。</span><span class="sxs-lookup"><span data-stu-id="bcacd-150">This sample creates a table from the current worksheet's used range, then sorts it based on the first column.</span></span>
+<span data-ttu-id="39084-150">本示例从当前工作表的已用区域创建一个表格，然后根据第一列对表格进行排序。</span><span class="sxs-lookup"><span data-stu-id="39084-150">This sample creates a table from the current worksheet's used range, then sorts it based on the first column.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -292,11 +292,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="log-the-grand-total-values-from-a-pivottable"></a><span data-ttu-id="bcacd-151">记录数据透视表中的"总计"值</span><span class="sxs-lookup"><span data-stu-id="bcacd-151">Log the "Grand Total" values from a PivotTable</span></span>
+### <a name="log-the-grand-total-values-from-a-pivottable"></a><span data-ttu-id="39084-151">记录数据透视表中的"总计"值</span><span class="sxs-lookup"><span data-stu-id="39084-151">Log the "Grand Total" values from a PivotTable</span></span>
 
-<span data-ttu-id="bcacd-152">本示例查找工作簿中的第一个数据透视表，并记录"总计"单元格 (在下面的图像中以绿色突出显示) 。</span><span class="sxs-lookup"><span data-stu-id="bcacd-152">This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).</span></span>
+<span data-ttu-id="39084-152">本示例查找工作簿中的第一个数据透视表，并记录"总计"单元格 (在下面的图像中以绿色突出显示) 。</span><span class="sxs-lookup"><span data-stu-id="39084-152">This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).</span></span>
 
-:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="一个数据透视表，其中&quot;总计&quot;行突出显示为绿色，":::
+:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="一个数据透视表，其中&quot;总计&quot;行突出显示为绿色，显示品红。":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -320,11 +320,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="create-a-drop-down-list-using-data-validation"></a><span data-ttu-id="bcacd-154">使用数据验证创建下拉列表</span><span class="sxs-lookup"><span data-stu-id="bcacd-154">Create a drop-down list using data validation</span></span>
+### <a name="create-a-drop-down-list-using-data-validation"></a><span data-ttu-id="39084-154">使用数据验证创建下拉列表</span><span class="sxs-lookup"><span data-stu-id="39084-154">Create a drop-down list using data validation</span></span>
 
-<span data-ttu-id="bcacd-155">此脚本为单元格创建下拉选择列表。</span><span class="sxs-lookup"><span data-stu-id="bcacd-155">This script creates a drop-down selection list for a cell.</span></span> <span data-ttu-id="bcacd-156">它将所选区域的现有值用作列表的选项。</span><span class="sxs-lookup"><span data-stu-id="bcacd-156">It uses the existing values of the selected range as the choices for the list.</span></span>
+<span data-ttu-id="39084-155">此脚本为单元格创建下拉选择列表。</span><span class="sxs-lookup"><span data-stu-id="39084-155">This script creates a drop-down selection list for a cell.</span></span> <span data-ttu-id="39084-156">它将所选区域的现有值用作列表的选项。</span><span class="sxs-lookup"><span data-stu-id="39084-156">It uses the existing values of the selected range as the choices for the list.</span></span>
 
-:::image type="content" source="../../images/sample-data-validation.png" alt-text="显示包含颜色选项&quot;红色、蓝色、绿色&quot;且旁边包含颜色选项的三个单元格的工作表，下拉列表中显示的选项相同":::
+:::image type="content" source="../../images/sample-data-validation.png" alt-text="显示包含颜色选项&quot;红色、蓝色、绿色&quot;且旁边有三个单元格的工作表，下拉列表中显示的选项相同。":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -357,13 +357,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="formulas"></a><span data-ttu-id="bcacd-158">公式</span><span class="sxs-lookup"><span data-stu-id="bcacd-158">Formulas</span></span>
+## <a name="formulas"></a><span data-ttu-id="39084-158">公式</span><span class="sxs-lookup"><span data-stu-id="39084-158">Formulas</span></span>
 
-<span data-ttu-id="bcacd-159">这些示例Excel公式，并展示如何在脚本中使用它们。</span><span class="sxs-lookup"><span data-stu-id="bcacd-159">These samples use Excel formulas and show how to work with them in scripts.</span></span>
+<span data-ttu-id="39084-159">这些示例Excel公式，并展示如何在脚本中使用它们。</span><span class="sxs-lookup"><span data-stu-id="39084-159">These samples use Excel formulas and show how to work with them in scripts.</span></span>
 
-### <a name="single-formula"></a><span data-ttu-id="bcacd-160">单个公式</span><span class="sxs-lookup"><span data-stu-id="bcacd-160">Single formula</span></span>
+### <a name="single-formula"></a><span data-ttu-id="39084-160">单个公式</span><span class="sxs-lookup"><span data-stu-id="39084-160">Single formula</span></span>
 
-<span data-ttu-id="bcacd-161">此脚本设置单元格的公式，然后Excel单独存储单元格的公式和值。</span><span class="sxs-lookup"><span data-stu-id="bcacd-161">This script sets a cell's formula, then displays how Excel stores the cell's formula and value separately.</span></span>
+<span data-ttu-id="39084-161">此脚本设置单元格的公式，然后Excel单独存储单元格的公式和值。</span><span class="sxs-lookup"><span data-stu-id="39084-161">This script sets a cell's formula, then displays how Excel stores the cell's formula and value separately.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -382,9 +382,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="handle-a-spill-error-returned-from-a-formula"></a><span data-ttu-id="bcacd-162">处理 `#SPILL!` 从公式返回的错误</span><span class="sxs-lookup"><span data-stu-id="bcacd-162">Handle a `#SPILL!` error returned from a formula</span></span>
+### <a name="handle-a-spill-error-returned-from-a-formula"></a><span data-ttu-id="39084-162">处理 `#SPILL!` 从公式返回的错误</span><span class="sxs-lookup"><span data-stu-id="39084-162">Handle a `#SPILL!` error returned from a formula</span></span>
 
-<span data-ttu-id="bcacd-163">此脚本使用 TRANSPOSE 函数将区域"A1：D2"转置为"A4：B7"。</span><span class="sxs-lookup"><span data-stu-id="bcacd-163">This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function.</span></span> <span data-ttu-id="bcacd-164">如果转置导致错误，它将清除目标 `#SPILL` 区域并再次应用公式。</span><span class="sxs-lookup"><span data-stu-id="bcacd-164">If the transpose results in a `#SPILL` error, it clears the target range and applies the formula again.</span></span>
+<span data-ttu-id="39084-163">此脚本使用 TRANSPOSE 函数将区域"A1：D2"转置为"A4：B7"。</span><span class="sxs-lookup"><span data-stu-id="39084-163">This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function.</span></span> <span data-ttu-id="39084-164">如果转置导致错误，它将清除目标 `#SPILL` 区域并再次应用公式。</span><span class="sxs-lookup"><span data-stu-id="39084-164">If the transpose results in a `#SPILL` error, it clears the target range and applies the formula again.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -416,12 +416,12 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="suggest-new-samples"></a><span data-ttu-id="bcacd-165">建议新示例</span><span class="sxs-lookup"><span data-stu-id="bcacd-165">Suggest new samples</span></span>
+## <a name="suggest-new-samples"></a><span data-ttu-id="39084-165">建议新示例</span><span class="sxs-lookup"><span data-stu-id="39084-165">Suggest new samples</span></span>
 
-<span data-ttu-id="bcacd-166">我们欢迎您提出有关新示例的建议。</span><span class="sxs-lookup"><span data-stu-id="bcacd-166">We welcome suggestions for new samples.</span></span> <span data-ttu-id="bcacd-167">如果有一种有助于其他脚本开发人员的常见方案，请在页面底部的反馈部分告诉我们。</span><span class="sxs-lookup"><span data-stu-id="bcacd-167">If there is a common scenario that would help other script developers, please tell us in the feedback section at the bottom of the page.</span></span>
+<span data-ttu-id="39084-166">我们欢迎您提出有关新示例的建议。</span><span class="sxs-lookup"><span data-stu-id="39084-166">We welcome suggestions for new samples.</span></span> <span data-ttu-id="39084-167">如果有一种有助于其他脚本开发人员的常见方案，请在页面底部的反馈部分告诉我们。</span><span class="sxs-lookup"><span data-stu-id="39084-167">If there is a common scenario that would help other script developers, please tell us in the feedback section at the bottom of the page.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bcacd-168">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bcacd-168">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39084-168">另请参阅</span><span class="sxs-lookup"><span data-stu-id="39084-168">See also</span></span>
 
-* [<span data-ttu-id="bcacd-169">YouTube 上的 Sudhi Ramamurthy 的"Range 基础知识"</span><span class="sxs-lookup"><span data-stu-id="bcacd-169">Sudhi Ramamurthy's "Range basics" on YouTube</span></span>](https://youtu.be/4emjkOFdLBA)
-* [<span data-ttu-id="bcacd-170">Office脚本示例和方案</span><span class="sxs-lookup"><span data-stu-id="bcacd-170">Office Scripts samples and scenarios</span></span>](samples-overview.md)
-* [<span data-ttu-id="bcacd-171">在 Excel 网页版中录制、编辑和创建 Office 脚本</span><span class="sxs-lookup"><span data-stu-id="bcacd-171">Record, edit, and create Office Scripts in Excel on the web</span></span>](../../tutorials/excel-tutorial.md)
+* [<span data-ttu-id="39084-169">YouTube 上的 Sudhi Ramamurthy 的"Range 基础知识"</span><span class="sxs-lookup"><span data-stu-id="39084-169">Sudhi Ramamurthy's "Range basics" on YouTube</span></span>](https://youtu.be/4emjkOFdLBA)
+* [<span data-ttu-id="39084-170">Office脚本示例和方案</span><span class="sxs-lookup"><span data-stu-id="39084-170">Office Scripts samples and scenarios</span></span>](samples-overview.md)
+* [<span data-ttu-id="39084-171">在 Excel 网页版中录制、编辑和创建 Office 脚本</span><span class="sxs-lookup"><span data-stu-id="39084-171">Record, edit, and create Office Scripts in Excel on the web</span></span>](../../tutorials/excel-tutorial.md)
