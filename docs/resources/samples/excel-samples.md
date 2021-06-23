@@ -3,12 +3,12 @@ title: Office脚本的基本Excel web 版
 description: 要与 Excel web 版 中的脚本Office代码示例Excel web 版。
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: f252934a92126212b9520223826b3b2f5161ed57
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 3bf3bd5acd10bc5999db4746a2ed62af85237e48
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545757"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074555"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Office脚本的基本Excel web 版
 
@@ -151,7 +151,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="collections"></a>收藏
+## <a name="collections"></a>集合
 
 这些示例处理工作簿中的对象集合。
 
@@ -296,7 +296,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 本示例查找工作簿中的第一个数据透视表，并记录"总计"单元格 (在下面的图像中以绿色突出显示) 。
 
-:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="一个数据透视表，其中&quot;总计&quot;行突出显示为绿色，":::
+:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="一个数据透视表，其中&quot;总计&quot;行突出显示为绿色，显示品红。":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -324,7 +324,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本为单元格创建下拉选择列表。 它将所选区域的现有值用作列表的选项。
 
-:::image type="content" source="../../images/sample-data-validation.png" alt-text="显示包含颜色选项&quot;红色、蓝色、绿色&quot;且旁边包含颜色选项的三个单元格的工作表，下拉列表中显示的选项相同":::
+:::image type="content" source="../../images/sample-data-validation.png" alt-text="显示包含颜色选项&quot;红色、蓝色、绿色&quot;且旁边有三个单元格的工作表，下拉列表中显示的选项相同。":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

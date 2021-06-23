@@ -3,12 +3,12 @@ title: 对Office中运行的脚本进行Power Automate
 description: 使用技巧脚本和脚本之间的集成时，Office、平台信息和Power Automate。
 ms.date: 05/18/2021
 localization_priority: Normal
-ms.openlocfilehash: 3d114b8b9aceb95285ecfc78ddbd868541b9f04c
-ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
+ms.openlocfilehash: 7ba128314c0d632a3e77792b7ee545bfb7dca71d
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631662"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074632"
 ---
 # <a name="troubleshoot-office-scripts-running-in-power-automate"></a>对Office中运行的脚本进行Power Automate
 
@@ -27,10 +27,10 @@ Power Automate代表您Excel所选工作簿中运行脚本。 发生这种情况
 
 以下方法引发错误，在从脚本流中的脚本调用时Power Automate失败。
 
-| 类 | Method |
+| 类 | 方法 |
 |--|--|
 | [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
-| [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
+| [区域](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
@@ -41,7 +41,7 @@ Power Automate代表您Excel所选工作簿中运行脚本。 发生这种情况
 
 以下方法使用默认行为代替任何用户的当前状态。
 
-| 类 | Method | Power Automate行为 |
+| 类 | 方法 | Power Automate行为 |
 |--|--|--|
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | 返回工作簿中的第一个工作表或该方法当前激活的 `Worksheet.activate` 工作表。 |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | 出于目的，将工作表标记为活动工作表 `Workbook.getActiveWorksheet` 。 |
@@ -54,7 +54,7 @@ Office脚本在脚本中运行时无法刷新Power Automate。 在流 `PivotTabl
 
 通过脚本调用时，以下方法在脚本中Power Automate。 它们仍然成功返回，并且不会引发任何错误。
 
-| 类 | Method |
+| 类 | 方法 |
 |--|--|
 | [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
@@ -65,7 +65,7 @@ Office脚本在脚本中运行时无法刷新Power Automate。 在流 `PivotTabl
 
 构建流 **中的"运行**"Power Automate步骤时，需要选择哪个工作簿是流的一部分。 使用文件浏览器选择工作簿，而不是手动键入工作簿的名称。
 
-:::image type="content" source="../images/power-automate-file-browser.png" alt-text="显示Power Automate选取器文件浏览器选项的&quot;运行脚本&quot;操作":::
+:::image type="content" source="../images/power-automate-file-browser.png" alt-text="显示Power Automate文件浏览器选项的运行脚本操作。":::
 
 有关工作簿动态Power Automate可能的解决方法的更多上下文，请参阅 Microsoft Power Automate Community 中的[此线程](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#)。
 

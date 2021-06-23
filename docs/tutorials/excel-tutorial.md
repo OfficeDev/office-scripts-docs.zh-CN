@@ -3,12 +3,12 @@ title: 在 Excel 网页版中录制、编辑和创建 Office 脚本
 description: 有关 Office 脚本基础知识的教程，包括使用操作录制器录制脚本以及将数据写入工作簿。
 ms.date: 05/23/2021
 localization_priority: Priority
-ms.openlocfilehash: 19cd7bf6c3120d674553d37a36f45d36f46ee852
-ms.sourcegitcommit: 0343e4a9843f7ab6ec99d6ddf955050271b061c7
+ms.openlocfilehash: f9290a3d7dc723b72bfb4913171052472f2361c5
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52655903"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074667"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中录制、编辑和创建 Office 脚本
 
@@ -42,7 +42,7 @@ ms.locfileid: "52655903"
 
     你的工作表应如下所示（不要担心颜色是否不同）:
 
-    :::image type="content" source="../images/tutorial-1.png" alt-text="显示水果销售数据行的工作表，该行包含以橙色突出显示的“橙子”。":::
+    :::image type="content" source="../images/tutorial-1.png" alt-text="一个工作表，其中以橙色突出显示了包含&quot;橙子&quot;的行的水果销售数据行。":::
 
 ## <a name="edit-an-existing-script"></a>编辑现有脚本
 
@@ -71,7 +71,7 @@ ms.locfileid: "52655903"
 
 4. 通过按“**运行**”来测试脚本。 工作簿现在应如下所示：
 
-    :::image type="content" source="../images/tutorial-2.png" alt-text="显示水果销售数据行的工作表，其中“橙子”行以橙色突出显示，“柠檬”行以黄色突出显示":::
+    :::image type="content" source="../images/tutorial-2.png" alt-text="一个工作表，显示以橙色突出显示的&quot;橙子&quot;行和以黄色突出显示的&quot;花样&quot;行。":::
 
 ## <a name="create-a-table"></a>创建表格
 
@@ -106,7 +106,7 @@ ms.locfileid: "52655903"
 
 3. 运行脚本。应看到如下所示的表：
 
-    :::image type="content" source="../images/tutorial-3.png" alt-text="显示已排序水果销售表的工作表。":::
+    :::image type="content" source="../images/tutorial-3.png" alt-text="显示已排序的水果销售表的工作表。":::
 
     > [!NOTE]
     > 如果重新运行该脚本，将会收到错误消息。 这是因为不能在另一个表格的顶部创建表格。 但是，可以在其他工作表或工作簿上运行脚本。

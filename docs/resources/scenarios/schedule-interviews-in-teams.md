@@ -1,14 +1,14 @@
 ---
-title: 安排在Teams
+title: 在 Teams 中安排面试
 description: 了解如何使用 Office 脚本从Teams发送Excel会议。
 ms.date: 05/25/2021
 localization_priority: Normal
-ms.openlocfilehash: f93d9ceca6603ddb9e7123a393787fcf54597cca
-ms.sourcegitcommit: 339ecbb9914d54f919e3475018888fb5d00abe89
+ms.openlocfilehash: 66dae536c4a51ff3e028f06bf3aef3c7509d83bb
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52697772"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074429"
 ---
 # <a name="office-scripts-sample-scenario-schedule-interviews-in-teams"></a>Office脚本示例方案：安排在 Teams
 
@@ -140,7 +140,7 @@ interface InterviewInvite {
     1. **位置**：OneDrive for Business
     1. **文档库**：OneDrive
     1. **文件***：hr-interviews.xlsx (浏览器选项选择)*
-    1. **脚本**：计划面试 已完成的 Excel Online (Business) 连接器的屏幕截图，用于从 Power Automate 中的工作簿获取 :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="面试Power Automate":::
+    1. **脚本**：计划面试 已完成的 Excel Online (Business) 连接器的屏幕截图，用于从 Power Automate 中的工作簿 :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="获取面试Power Automate。":::
 1. 添加一 **个使用**"创建会议 **Teams的新** 步骤。 当你从连接器选择动态内容Excel，将针对你的流生成应用到每个块。 使用下列值完成连接器。
     1. **日历 ID**：日历
     1. **主题**：Contoso Interview
@@ -148,13 +148,13 @@ interface InterviewInvite {
     1. **时区：** 太平洋标准时间
     1. **开始时间****：StartTime** (Excel值) 
     1. **结束时间****：FinishTime** (Excel值) 
-    1. **必选与会者**： **CandidateEmail** ;**ScreenshotEmail** (Excel值) 已完成的 Teams :::image type="content" source="../../images/schedule-interviews-2.png" alt-text="连接器的屏幕截图，用于":::安排Power Automate
+    1. **必选与会者**： **CandidateEmail** ;**ScreenshotEmail** (Excel值) 已完成的 Teams 连接器的屏幕截图，:::image type="content" source="../../images/schedule-interviews-2.png" alt-text="以在 Power Automate 中安排会议。":::
 1. 在同一 **个"应用到每个** 块"中，使用"运行脚本Excel添加 (**Business)** 连接器。  使用以下值。
     1. **位置**：OneDrive for Business
     1. **文档库**：OneDrive
     1. **文件***：hr-interviews.xlsx (浏览器选项选择)*
     1. **脚本**：记录已发送的邀请
-    1. **邀请**：**结果** (Excel值) 已完成的 Excel Online :::image type="content" source="../../images/schedule-interviews-3.png" alt-text=" (Business)":::连接器的屏幕截图，用于录制已Power Automate
+    1. **invites** **：result** (the Excel value) :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="Screenshot of the completed Excel Online (Business) connector to record that invites have been sent in Power Automate.":::
 1. 保存流并试用。
 
 ## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>培训视频：从Teams发送Excel会议

@@ -3,12 +3,12 @@ title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
 ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: 629e816ea988d6b8ffe5264c701e3a1eba6c6feb
-ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
+ms.openlocfilehash: 9c3c10e283e40f1e719e73106bcdacfcff44dbc9
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52639892"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074506"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel 网页版中 Office 脚本的脚本基础
 
@@ -112,7 +112,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 运行此脚本将在当前工作表中创建以下数据：
 
-:::image type="content" source="../images/range-sample.png" alt-text="包含由值行、公式列和带格式的标头组成的销售记录的工作表":::
+:::image type="content" source="../images/range-sample.png" alt-text="包含由值行、公式列和带格式的标头组成的销售记录的工作表。":::
 
 ### <a name="the-types-of-range-values"></a>范围值的类型
 
@@ -162,7 +162,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 在工作表上使用之前的数据运行此脚本将创建下表：
 
-:::image type="content" source="../images/table-sample.png" alt-text="包含根据以前销售记录所创建的表的工作表":::
+:::image type="content" source="../images/table-sample.png" alt-text="包含根据以前销售记录所创建表的工作表。":::
 
 ### <a name="create-a-chart"></a>创建图表
 
@@ -188,7 +188,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 在工作表上使用上一个表运行此脚本将创建以下图表：
 
-:::image type="content" source="../images/chart-sample.png" alt-text="显示上一个销售记录中三个项目的数量的柱形图":::
+:::image type="content" source="../images/chart-sample.png" alt-text="一个柱形图，显示上一个销售记录中三个项目的数量。":::
 
 ## <a name="collections"></a>集合
 

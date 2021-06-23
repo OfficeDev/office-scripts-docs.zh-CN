@@ -3,12 +3,12 @@ title: 脚本中的 TypeScript Office限制
 description: TypeScript 编译器和 linter 的特定信息，Office脚本代码编辑器。
 ms.date: 05/24/2021
 localization_priority: Normal
-ms.openlocfilehash: 449a8abbcfdcfde53d0c9b96106f73259de368b1
-ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
+ms.openlocfilehash: 0bc6b4c0acaf9bb42f8200a0850dd7254632f965
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52639856"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074443"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>脚本中的 TypeScript Office限制
 
@@ -22,9 +22,9 @@ Office脚本使用 TypeScript 语言。 在大多数情况下，任何 TypeScrip
 
 您不能在脚本脚本中显式声明Office类型 `any` (，即 `let value: any;`) 。 类型 `any` 导致由事件处理时Excel。 例如， `Range` 需要知道值是 、 `string` 或 `number` `boolean` 。 如果脚本中的类型明确定义为 (，在运行脚本脚本之前) 出现编译时 `any` 错误。
 
-:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的显式&quot;any&quot;消息":::
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的显式&quot;any&quot;消息。":::
 
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="控制台窗口中的显式&quot;any&quot;错误":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="控制台窗口中的显式&quot;any&quot;错误。":::
 
 在上一个屏幕截图 `[2, 14] Explicit Any is not allowed` 中，指示#2、列#14定义 `any` 类型。 这可以帮助您找到错误。
 
@@ -34,7 +34,7 @@ Office脚本使用 TypeScript 语言。 在大多数情况下，任何 TypeScrip
 
 TypeScript 变量类型可以 [隐式](https://www.typescriptlang.org/docs/handbook/type-inference.html) 定义。 如果 TypeScript 编译器无法确定变量 (或者因为类型未显式定义或类型推断不可行) ，则它是隐式的，您将收到编译 `any` 时错误。
 
-:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的隐式&quot;any&quot;消息":::
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的隐式&quot;any&quot;消息。":::
 
 任何隐式上的最常见情况 `any` 是在变量声明中，例如 `let value;` 。 有两种方法可以避免这种情况：
 

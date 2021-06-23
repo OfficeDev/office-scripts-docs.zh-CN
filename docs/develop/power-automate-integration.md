@@ -3,12 +3,12 @@ title: 使用Office运行 Power Automate
 description: 如何获取Office脚本Excel web 版工作流Power Automate脚本。
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 7562a2b2359cde67a9a47e0640515018fe23ac35
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 96b07501e07383ace5ff88a8bc6b64ef145ebd5e
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545038"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074422"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>使用Office运行 Power Automate
 
@@ -99,7 +99,7 @@ Power Automate允许你在流的步骤之间传递数据片段。 可以将脚�
 
 以下屏幕截图显示了Power Automate分配问题时触发GitHub流。 [](https://github.com/) 该流运行一个脚本，该脚本将问题添加到工作簿Excel表中。 如果该表中存在五个或多个问题，则流将发送电子邮件提醒。
 
-:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="显示Power Automate流的流编辑器":::
+:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="显示Power Automate流的流编辑器。":::
 
 脚本函数将问题 ID 和问题标题指定为输入参数，脚本返回问题 `main` 表中的行数。
 

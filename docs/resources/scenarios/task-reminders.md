@@ -3,12 +3,12 @@ title: Office脚本示例方案：自动任务提醒
 description: 一个使用 Power Automate 自适应卡片在项目管理电子表格中自动执行任务提醒的示例。
 ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: c254a627da8442c0974263908a41275182740b6e
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 1297f10e45c515079994d659378331fc4a2be744
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545597"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074660"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Office脚本示例方案：自动任务提醒
 
@@ -161,7 +161,7 @@ ms.locfileid: "52545597"
     - **文件***：task-reminders.xlsx (浏览器选项选择)*
     - **脚本**：获取人员
 
-    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="显示Power Automate运行脚本流步骤的脚本流":::
+    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="显示Power Automate运行脚本流步骤的脚本流。":::
 
 12. 接下来，该流需要处理脚本返回的数组中的每个 Employee。 按 **"新建步骤**"，然后选择"将自适应卡片 **Teams用户并等待响应**。
 
@@ -222,7 +222,7 @@ ms.locfileid: "52545597"
     - **senderEmail：** email *(dynamic content from Excel)*
     - **statusReportResponse：** 响应 *(动态内容Teams)*
 
-    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="显示Power Automate应用到每个步骤的流":::
+    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="显示Power Automate应用到每个步骤的流。":::
 
 17. 保存流。
 
@@ -234,12 +234,12 @@ ms.locfileid: "52545597"
 
 ### <a name="before-running-the-flow"></a>运行流之前
 
-:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="包含一个缺失状态条目的状态报告工作表":::
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="包含一个缺少状态条目的状态报告工作表。":::
 
 ### <a name="receiving-the-adaptive-card"></a>接收自适应卡片
 
-:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="要求员工Teams状态更新的自适应卡片":::
+:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="要求员工Teams更新的自适应卡片。":::
 
 ### <a name="after-running-the-flow"></a>运行流后
 
-:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="包含状态报告（包含现在填充的状态条目）的工作表":::
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="包含状态报告的工作表，现在填充了状态条目。":::

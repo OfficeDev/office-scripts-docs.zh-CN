@@ -3,12 +3,12 @@ title: 基于活动单元格位置清除表格列筛选器
 description: 了解如何根据活动单元格位置清除表列筛选器。
 ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 06fba191a79f4641d4d1017bda332c7559b50e6d
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: d6f267b433be9a0ddf44edf53ed92a136eb2ded6
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285925"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074436"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>基于活动单元格位置清除表格列筛选器
 
@@ -18,11 +18,11 @@ ms.locfileid: "52285925"
 
 _在清除列筛选器 (，请注意活动单元格)_
 
-:::image type="content" source="../../images/before-filter-applied.png" alt-text="清除列筛选器之前的活动单元格":::
+:::image type="content" source="../../images/before-filter-applied.png" alt-text="清除列筛选器之前的活动单元格。":::
 
 _清除列筛选器后_
 
-:::image type="content" source="../../images/after-filter-cleared.png" alt-text="清除列筛选器后的活动单元格":::
+:::image type="content" source="../../images/after-filter-cleared.png" alt-text="清除列筛选器后的活动单元格。":::
 
 ## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>示例代码：基于活动单元格清除表列筛选器
 

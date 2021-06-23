@@ -4323,8 +4323,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.220 - MIT
-
+@types/office-js-preview 1.0.224 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
 版权所有 (c) Microsoft Corporation。
 
@@ -5186,11 +5185,11 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 2.1.1 - MIT https://github.com/chalk/ansi-regex#readme
 
-版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
+ () Sindre Sorhus (http://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
-MIT 许可证
+MIT 许可证 (MIT) 
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -5205,11 +5204,11 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-ansi-regex 2.1.1 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
 
- () Sindre Sorhus (http://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
+版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
-MIT 许可证 (MIT) 
+MIT 许可证
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -6305,7 +6304,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-camelcase 5.0.0 - MIT https://github.com/sindresorhus/camelcase#readme
+camelcase 5.3.1 - MIT https://github.com/sindresorhus/camelcase#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -6324,7 +6323,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-camelcase 5.3.1 - MIT https://github.com/sindresorhus/camelcase#readme
+camelcase 5.0.0 - MIT https://github.com/sindresorhus/camelcase#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -7195,7 +7194,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-cssesc 2.0.0 - MIT https://mths.be/cssesc
+cssesc 3.0.0 - MIT https://mths.be/cssesc
 
 版权所有 Mathias Bynens <https://mathiasbynens.be/>
 
@@ -7212,7 +7211,7 @@ cssesc 2.0.0 - MIT https://mths.be/cssesc
 
 ---------------------------------------------------------
 
-cssesc 3.0.0 - MIT https://mths.be/cssesc
+cssesc 2.0.0 - MIT https://mths.be/cssesc
 
 版权所有 Mathias Bynens <https://mathiasbynens.be/>
 
@@ -7476,7 +7475,7 @@ debug 2.6.9 - MIT https://github.com/visionmedia/debug#readme
 
 ---------------------------------------------------------
 
-debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
+debug 3.2.6 - MIT https://github.com/visionmedia/debug#readme
 
 版权所有 (c) 2014 TJ Holowaychuk <tj@vision-media.ca> 版权所有 (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -7496,7 +7495,7 @@ debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
 
 ---------------------------------------------------------
 
-debug 3.2.6 - MIT https://github.com/visionmedia/debug#readme
+debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
 
 版权所有 (c) 2014 TJ Holowaychuk <tj@vision-media.ca> 版权所有 (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -9468,26 +9467,6 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-is-accessor-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
-
-版权所有 (2015) Jon Schlinkert。
-版权所有 (2015) Jon Schlinkert (https://github.com/jonschlinkert)
-
-MIT 许可证 (MIT) 
-
-版权所有 (2015) Jon Schlinkert。
-
-向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
-
-上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
-
-本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 is-accessor-descriptor 1.0.0 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
 
 版权所有 (c) 2015-2017，Jon Schlinkert。
@@ -9508,7 +9487,27 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-isarray 1.0.0 - MIT https://github.com/juliangruber/isarray
+is-accessor-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
+
+版权所有 (2015) Jon Schlinkert。
+版权所有 (2015) Jon Schlinkert (https://github.com/jonschlinkert)
+
+MIT 许可证 (MIT) 
+
+版权所有 (2015) Jon Schlinkert。
+
+向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+isarray 0.0.1 - MIT https://github.com/juliangruber/isarray
 
 版权所有 (2013) Julian Gruber <julian@juliangruber.com>
 
@@ -9526,7 +9525,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-isarray 0.0.1 - MIT https://github.com/juliangruber/isarray
+isarray 1.0.0 - MIT https://github.com/juliangruber/isarray
 
 版权所有 (2013) Julian Gruber <julian@juliangruber.com>
 
@@ -9738,7 +9737,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
 
 版权所有 (c) 2015-2017，Jon Schlinkert。
 版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
@@ -9757,7 +9756,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
 
 版权所有 (c) 2015-2017，Jon Schlinkert。
 版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
@@ -9932,14 +9931,14 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-版权所有 (c) 2014-2016，Jon Schlinkert 版权所有 (c) 2014-2015，Jon Schlinkert。
-版权所有 (c) 2016， Jon Schlinkert (https://github.com/jonschlinkert) 。
+版权所有 (c) 2014-present， Jon Schlinkert。
+版权所有 (c) 2018， Jon Schlinkert (https://github.com/jonschlinkert) 。
 
 MIT 许可证 (MIT) 
 
-版权所有 (c) 2014-2016，Jon Schlinkert
+版权所有 (c) 2014-present， Jon Schlinkert。
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -9952,14 +9951,14 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-版权所有 (c) 2014-present， Jon Schlinkert。
-版权所有 (c) 2018， Jon Schlinkert (https://github.com/jonschlinkert) 。
+版权所有 (c) 2014-2016，Jon Schlinkert 版权所有 (c) 2014-2015，Jon Schlinkert。
+版权所有 (c) 2016， Jon Schlinkert (https://github.com/jonschlinkert) 。
 
 MIT 许可证 (MIT) 
 
-版权所有 (c) 2014-present， Jon Schlinkert。
+版权所有 (c) 2014-2016，Jon Schlinkert
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -10314,15 +10313,12 @@ jsesc 2.5.2 - MIT https://mths.be/jsesc
 
 ---------------------------------------------------------
 
-json3 3.3.3 - MIT https://bestiejs.github.io/json3
+json3 3.3.0 - MIT http://bestiejs.github.io/json3
 
-版权所有 (c) 2013-2015 Tan。 https://d10.github.io 《 (2012-2015 kit Cambridge) c.15 版权所有。 http://kitcambridge.be 版权所有 2012-2015，Kit http://kit.mit-license.org Cambridge，Tan (c) 2012-2015 ' Kit http://kitcambridge.be/ Cambridge， ' Tan https://d10.github.io/ Tan
+《 (2012) 2014 Kit Cambridge》的版权保护。 http://kitcambridge.be 版权所有 2012-2014 Kit Cambridge http://kit.mit-license.org
 
-《 (2012-2015 kit Cambridge) c.15 版权所有。
+《 (2012) 2014 Kit Cambridge》的版权保护。
 http://kitcambridge.be/
-
-版权所有 (c) 2013-2015 Tan。
-https://d10.github.io/
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -10334,12 +10330,15 @@ https://d10.github.io/
 
 ---------------------------------------------------------
 
-json3 3.3.0 - MIT http://bestiejs.github.io/json3
+json3 3.3.3 - MIT https://bestiejs.github.io/json3
 
-《 (2012) 2014 Kit Cambridge》的版权保护。 http://kitcambridge.be 版权所有 2012-2014 Kit Cambridge http://kit.mit-license.org
+版权所有 (c) 2013-2015 Tan。 https://d10.github.io 《 (2012-2015 kit Cambridge) c.15 版权所有。 http://kitcambridge.be 版权所有 2012-2015，Kit http://kit.mit-license.org Cambridge，Tan (c) 2012-2015 ' Kit http://kitcambridge.be/ Cambridge， ' Tan https://d10.github.io/ Tan
 
-《 (2012) 2014 Kit Cambridge》的版权保护。
+《 (2012-2015 kit Cambridge) c.15 版权所有。
 http://kitcambridge.be/
+
+版权所有 (c) 2013-2015 Tan。
+https://d10.github.io/
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -11398,7 +11397,7 @@ mkdirp 0.5.5 - MIT https://github.com/substack/node-mkdirp#readme
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 版权所有 (c) 2015 版权 (c) Joshaven Copyright (c) 2014）（ (）C) Artyom Shal进行创作。
 版权所有 (2015) David 为 2015 年 2 月 2 日第二版 (c) 2014 年 3 月 3 日，Microsoft Corporation (2015 年 3 月) 2015 年版 (c) 。
@@ -11424,7 +11423,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 版权所有 (c) 2015 版权 (c) Joshaven Copyright (c) 2014）（ (）C) Artyom Shal进行创作。
 版权所有 (2015) David 为 2015 年 2 月 2 日第二版 (c) 2014 年 3 月 3 日，Microsoft Corporation (2015 年 3 月) 2015 年版 (c) 。
@@ -14979,24 +14978,6 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-schema-utils 2.7.0 - MIT https://github.com/webpack/schema-utils
-
-版权所有 JS Foundation 和其他参与者
-
-版权所有 JS Foundation 和其他参与者
-
-向获取本软件及相关文档文件 (the'Software') 副本的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
-
-上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
-
-本软件"根据情况"提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。
-在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 schema-utils 1.0.0 - MIT https://github.com/webpack-contrib/schema-utils
 
 版权所有 JS Foundation 和其他参与者
@@ -15016,6 +14997,24 @@ schema-utils 1.0.0 - MIT https://github.com/webpack-contrib/schema-utils
 ---------------------------------------------------------
 
 schema-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
+
+版权所有 JS Foundation 和其他参与者
+
+版权所有 JS Foundation 和其他参与者
+
+向获取本软件及相关文档文件 (the'Software') 副本的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。
+在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+schema-utils 2.7.0 - MIT https://github.com/webpack/schema-utils
 
 版权所有 JS Foundation 和其他参与者
 
@@ -15697,7 +15696,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-strip-ansi 5.2.0 - MIT https://github.com/chalk/strip-ansi#readme
+strip-ansi 4.0.0 - MIT https://github.com/chalk/strip-ansi#readme
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -15716,7 +15715,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-strip-ansi 4.0.0 - MIT https://github.com/chalk/strip-ansi#readme
+strip-ansi 5.2.0 - MIT https://github.com/chalk/strip-ansi#readme
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 

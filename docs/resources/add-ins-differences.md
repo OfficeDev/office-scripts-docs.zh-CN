@@ -3,18 +3,18 @@ title: Office 脚本与 Office 加载项之间的差异
 description: 脚本和加载项Office API 的行为Office API 差异。
 ms.date: 06/02/2021
 localization_priority: Normal
-ms.openlocfilehash: 46f5f2ea6fea15e9506f5c7d30941311fc2e669e
-ms.sourcegitcommit: 0bfc9472d107e32c804029659317f8e81fec5d19
+ms.openlocfilehash: 17d66e37c7bf2b1263c0232bb0afb3ee4d29aa36
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "52779361"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074562"
 ---
 # <a name="differences-between-office-scripts-and-office-add-ins"></a>Office 脚本与 Office 加载项之间的差异
 
 了解Office脚本Office外接程序之间的差异，以了解何时使用每个脚本和外接程序。 Office脚本旨在让任何希望改进其工作流的人快速创建脚本。 Office外接程序与 Office UI 集成，通过功能区按钮和任务窗格实现更具交互性的体验。 Office加载项还可以通过提供自定义函数来扩展内置Excel函数。
 
-:::image type="content" source="../images/office-programmability-diagram.png" alt-text="四象限图，显示不同扩展性解决方案Office区域。Office 脚本和 Office Web 外接程序均侧重于 Web 和协作，但 Office 脚本适合最终用户 (而 Office Web 外接程序面向专业开发人员) ":::
+:::image type="content" source="../images/office-programmability-diagram.png" alt-text="四象限图，显示不同扩展性解决方案Office区域。Office 脚本和 Office Web 外接程序都侧重于 Web 和协作，但 Office 脚本适合最终用户 (而 Office Web 外接程序面向专业开发人员) 。":::
 
 Office脚本通过手动按下按钮或作为 Power Automate 中的步骤运行以[](https://flow.microsoft.com/)完成，Office外接程序将继续运行，具体取决于其配置方式。 例如，可以将加载项Office，即使任务窗格关闭，也可以继续运行。 这意味着Office加载项在会话期间保持状态，而Office脚本不会在运行之间保持内部状态。 如果您要构建的解决方案需要保持状态，则应该访问 Office[外接程序](/office/dev/add-ins)文档，以了解有关Office外接程序的信息。
 

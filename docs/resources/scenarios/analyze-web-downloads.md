@@ -3,12 +3,12 @@ title: Office脚本示例方案：分析 Web 下载
 description: 一个示例，在将信息组织到表中Excel工作簿中的原始 Internet 流量数据并确定源位置。
 ms.date: 04/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 6c5958e9957ca49c370ae34456236bdd15f41c44
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: bdd6b43290e5432d87c4a85a35fbaf32967fbf03
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232709"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074457"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office脚本示例方案：分析 Web 下载
 
@@ -23,13 +23,13 @@ ms.locfileid: "52232709"
 - 文本分析
 - 脚本中的子功能
 - 条件格式
-- Tables
+- 表格
 
 ## <a name="setup-instructions"></a>设置说明
 
 1. 将<a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>下载到OneDrive。
 
-2. 使用 Web Excel打开工作簿。
+2. 打开工作簿，Excel 网页版。
 
 3. 在"**自动化"选项卡** 下，打开 **"所有脚本"。**
 
@@ -217,10 +217,10 @@ ms.locfileid: "52232709"
 
 ### <a name="before-running-the-script"></a>运行脚本之前
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="显示原始 Web 流量数据的工作表":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="显示原始 Web 流量数据的工作表。":::
 
 ### <a name="after-running-the-script"></a>运行脚本后
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="显示以前 Web 流量行的格式化 IP 位置信息的工作表":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="显示以前 Web 流量行的格式化 IP 位置信息的工作表。":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="汇总了运行脚本的工作表的摘要表和图表":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="汇总了运行脚本的工作表的摘要表和图表。":::

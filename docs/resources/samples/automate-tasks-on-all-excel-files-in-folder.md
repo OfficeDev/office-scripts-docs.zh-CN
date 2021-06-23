@@ -3,12 +3,12 @@ title: 对文件夹中的所有 Excel 文件运行脚本
 description: 了解如何对 OneDrive for Business 上文件夹中的所有 Excel 文件运行OneDrive for Business。
 ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: fb9a4deb01b52ef031cb1ba3400bd6f10de9d9f5
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 83e091a8b009bac577da9ed53dcf4139c1b845c9
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545787"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074583"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>对文件夹中的所有 Excel 文件运行脚本
 
@@ -77,21 +77,21 @@ function main(workbook: ExcelScript.Workbook) {
 1. 选择 **"手动触发流"，** 然后按"**创建"。**
 1. 添加一 **个新** 步骤，该步骤使用 **OneDrive for Business** 连接器和 **"在文件夹操作中列出文件**"。
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="已完成的OneDrive for Business连接器Power Automate":::
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="已完成的OneDrive for Business连接器Power Automate。":::
 1. 选择包含提取的工作簿的"Sales"文件夹。
 1. 若要确保仅选择工作簿，请选择"**新建步骤"，****然后选择"条件**"并设置以下值：
     1. **文件名** (OneDrive文件名值) 
     1. "ends with"
     1. "xlsx"。
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="将Power Automate操作应用到每个文件的条件块":::
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="The Power Automate condition block that applies subsequent actions to each file.":::
 1. Under the **If yes** branch， add the Excel Online (**Business)** connector with the Run **script** action. 对操作使用以下值：
     1. **位置**：OneDrive for Business
     1. **文档库**：OneDrive
     1. **文件****： (** id OneDrive文件 ID 值) 
     1. **脚本**：脚本名称
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="已完成的 Excel Online (Business) 连接器Power Automate":::
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="已完成的 Excel Online (Business) 连接器Power Automate。":::
 1. 保存流并试用。
 
 ## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>培训视频：对文件夹中的所有Excel文件运行脚本
