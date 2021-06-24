@@ -3,12 +3,12 @@ title: 将数据传递到自动运行的 Power Automate 流中的脚本
 description: 有关在收到邮件时通过 Power Automate 在 Web 上运行 Office Scripts for Excel，并将流数据传递到脚本的教程。
 ms.date: 12/28/2020
 localization_priority: Priority
-ms.openlocfilehash: 79686eacf4d38bd5db5e082a9bfb73edc969451d
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: b459501a955f337c7a0ad4040c7d7f5d9e344b93
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545834"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074681"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow"></a>将数据传递到自动运行的 Power Automate 流中的脚本
 
@@ -156,15 +156,15 @@ function main(
 
 2. 在屏幕左侧显示的菜单中，按 "**创建**"。 这将带你进入创建新工作流的方式列表。
 
-    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate“创建”按钮。":::
+    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate Create 按钮。":::
 
 3. 在 **从空白开始** 部分中，选择 **即时流**。 这将创建由事件（例如接收电子邮件）触发的工作流。
 
-    :::image type="content" source="../images/power-automate-params-tutorial-1.png" alt-text="Power Automate 中的自动化流程选项":::
+    :::image type="content" source="../images/power-automate-params-tutorial-1.png" alt-text=" Power Automate 中的自动化流程选项。":::
 
 4. 在出现的对话框窗口中，在 "**流名称**" 文本框中输入流的名称。 然后从"**选择流的触发器**" 下的 "选项" 列表中选择 "**新电子邮件到达时**"。 可能需要使用搜索框搜索选项。 最后，按 **创建**。
 
-    :::image type="content" source="../images/power-automate-params-tutorial-2.png" alt-text="Power Automate 流程的一部分，显示“流名称”和“选择流的触发器”选项。流名称为“记录电子邮件流”，触发器为“当有新电子邮件到达 Outlook 时”选项。":::
+    :::image type="content" source="../images/power-automate-params-tutorial-2.png" alt-text="Power Automate 流程的一部分，显示&quot;流名称&quot;和&quot;选择流触发器&quot;选项。流名称为&quot;记录电子邮件流&quot;，触发器为&quot;当有新电子邮件到达 Outlook 时&quot;选项。":::
 
     > [!NOTE]
     > 此教程使用 Outlook。可以改用你喜欢的电子邮件服务，但某些选项可能不同。
@@ -173,11 +173,11 @@ function main(
 
 6. 选择 "**标准**" 选项卡，然后选择 "**Excel Online （企业）**"。
 
-    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate 中的 Excel Online (商业版)选项":::
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text=" Power Automate 中的 Excel Online (商业版)选项。":::
 
 7. 在 **操作** 下，选择 **运行脚本**。
 
-    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate 中的运行脚本操作选项":::
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text=" Power Automate 中的运行脚本操作选项。":::
 
 8. 接下来，选择要在流步骤中使用的工作簿、脚本和脚本输入参数。 对于本教程，你将使用在 OneDrive 中创建的工作簿，但可以在 OneDrive 或 SharePoint 网站中使用任何工作簿。 为 **运行脚本** 连接器指定以下设置：
 
@@ -191,7 +191,7 @@ function main(
 
     *请注意，仅当选择脚本后，才会显示脚本的参数。*
 
-    :::image type="content" source="../images/power-automate-params-tutorial-3.png" alt-text="Power Automate 运行脚本操作，显示选择脚本后出现的选项。":::
+    :::image type="content" source="../images/power-automate-params-tutorial-3.png" alt-text="Power Automate 运行脚本操作，显示选择脚本后显示的选项。":::
 
 9. 按“**保存**”。
 
@@ -201,15 +201,15 @@ function main(
 
 1. 在 Power Automate 主页面上，选择 **我的流**。
 
-    :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text="Power Automate 中的&quot;我的流程&quot;按钮":::
+    :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text=" Power Automate 中的&quot;我的流程&quot;按钮。":::
 
 2. 选择你的流程。 可在此处查看 "运行历史记录"。 可刷新页面，或按 "刷新 **所有运行"** 按钮更新历史记录。 收到电子邮件后，流将立即触发。 通过发送自己的邮件来测试流。
 
 当流被触发并成功运行脚本时，应该可以看到工作簿的表和数据透视表更新。
 
-:::image type="content" source="../images/power-automate-params-tutorial-4.png" alt-text="显示该流运行三次后电子邮件表的工作表。":::
+:::image type="content" source="../images/power-automate-params-tutorial-4.png" alt-text="显示此流运行三次后的电子邮件表的工作表。":::
 
-:::image type="content" source="../images/power-automate-params-tutorial-5.png" alt-text="流已运行三次后显示数据透视表的工作表。":::
+:::image type="content" source="../images/power-automate-params-tutorial-5.png" alt-text="流运行三次后显示数据透视表的工作表。":::
 
 ## <a name="next-steps"></a>后续步骤
 

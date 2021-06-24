@@ -3,12 +3,12 @@ title: 通过手动 Power Automate 流呼叫脚本
 description: 有关通过手动触发器在 Power Automate 中使用 Office 脚本的教程。
 ms.date: 05/17/2021
 localization_priority: Priority
-ms.openlocfilehash: f4feb14f70c43497f40dae3a521353dfee63c082
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 6da852fd93599753592ea61eef443ef674ead8ef
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545827"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074499"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow"></a>通过手动 Power Automate 流呼叫脚本
 
@@ -83,11 +83,11 @@ Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](
 
 6. 选择 "**标准**" 选项卡，然后选择 "**Excel Online （企业）**"。
 
-    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate 中的 Excel Online (商业版)选项":::
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text=" Power Automate 中的 Excel Online (商业版)选项。":::
 
 7. 在 **操作** 下，选择 **运行脚本**。
 
-    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate 中的运行脚本操作选项":::
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text=" Power Automate 中的运行脚本操作选项。":::
 
 8. 接下来，选择要在流步骤中使用的工作簿和脚本。 对于本教程，你将使用在 OneDrive 中创建的工作簿，但可以在 OneDrive 或 SharePoint 网站中使用任何工作簿。 为 **运行脚本** 连接器指定以下设置：
 
@@ -106,13 +106,13 @@ Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](
 
 1. 在 Power Automate 主页面上，选择 **我的流**。
 
-    :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text="Power Automate 中的“我的流程”按钮":::
+    :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text=" Power Automate 中的&quot;我的流程&quot;按钮。":::
 
 2. 从 "**我的流**" 选项卡中显示的流列表中选择 **我的教程流**。这将显示之前创建的流程的详细信息。
 
 3. 按 **"运行"**。
 
-    :::image type="content" source="../images/power-automate-tutorial-8.png" alt-text="Power Automate 中的“运行”按钮":::
+    :::image type="content" source="../images/power-automate-tutorial-8.png" alt-text=" Power Automate 中的“运行”按钮。":::
 
 4. 将显示用于运行流的任务窗格。 如果系统要求 **登录** 到 Excel Online，请按 **"继续"** 操作。
 
@@ -122,7 +122,7 @@ Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](
 
 7. 刷新页面，查看 Power Automate 的结果。 如果成功，请转到工作簿查看已更新的单元格。 如果失败，请验证流的设置并再次运行。
 
-    :::image type="content" source="../images/power-automate-tutorial-9.png" alt-text="Power Automate 输出显示成功流运行":::
+    :::image type="content" source="../images/power-automate-tutorial-9.png" alt-text=" Power Automate 输出显示成功流运行。":::
 
 ## <a name="next-steps"></a>后续步骤
 

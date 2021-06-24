@@ -3,12 +3,12 @@ title: 在 Excel 网页版中使用 Office 脚本读取工作簿数据
 description: 有关从工作簿中读取数据并评估脚本中的数据的 Office 脚本教程。
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: 979ad949f999f67ee9de750c53ba4690ce6294e6
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: aa05533f0d7cd3b53e4eb616ae3216d672d026f9
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232849"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074688"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中使用 Office 脚本读取工作簿数据
 
@@ -73,7 +73,7 @@ ms.locfileid: "52232849"
 8. 将二维数组记录到控制台时，它会对每行下面的列值进行分组。 按蓝色三角形展开数组日志。
 9. 通过按新出现的蓝色三角形展开数组的第二级别。现在应该看到以下内容：
 
-    :::image type="content" source="../images/tutorial-4.png" alt-text="控制台日志显示输出&quot;-20.05&quot;，嵌套在两数组":::
+    :::image type="content" source="../images/tutorial-4.png" alt-text="控制台日志显示输出&quot;-20.05&quot;，嵌套在两数组下。":::
 
 ## <a name="modify-the-value-of-a-cell"></a>修改单元格的值
 
@@ -143,7 +143,7 @@ ms.locfileid: "52232849"
 
     现在，你的银行帐单如下所示：
 
-    :::image type="content" source="../images/tutorial-5.png" alt-text="显示银行对账单为仅包含正值的带格式表格的工作表。":::
+    :::image type="content" source="../images/tutorial-5.png" alt-text="一个工作表，显示银行对账单为仅具有正值的带格式的表格。":::
 
 ## <a name="next-steps"></a>后续步骤
 
