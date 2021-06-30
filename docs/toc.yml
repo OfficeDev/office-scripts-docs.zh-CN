@@ -67,6 +67,8 @@ items:
                 href: resources/samples/copy-tables-combine.md
           - name: 超越基础设置
             items:
+              - name: 交叉引用工作表
+                href: resources/samples/excel-cross-reference.md
               - name: 对工作表中的空白行进行计数
                 href: resources/samples/count-blank-rows.md
               - name: 图表和表格的电子邮件图像
