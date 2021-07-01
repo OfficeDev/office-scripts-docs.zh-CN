@@ -1,42 +1,37 @@
 ---
-title: 交叉引用和格式化Excel文件
+title: 跨引用Excel文件Power Automate
 description: 了解如何使用脚本Office脚本Power Automate交叉引用和格式化Excel文件。
-ms.date: 05/06/2021
+ms.date: 06/25/2021
 localization_priority: Normal
-ROBOTS: NOINDEX
-ms.openlocfilehash: f07395eb4e6c77b7aee3776e3252d135bc690a6f
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 89c4a5fa5dcff21681fa20cd4118447d39d9b6da
+ms.sourcegitcommit: a063b3faf6c1b7c294bd6a73e46845b352f2a22d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545764"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53202864"
 ---
-# <a name="cross-reference-and-format-an-excel-file"></a>交叉引用和格式化Excel文件
+# <a name="cross-reference-excel-files-with-power-automate"></a>跨引用Excel文件Power Automate
 
-此解决方案演示如何使用脚本Excel脚本和脚本对两个Office文件进行交叉Power Automate。
+此解决方案演示如何比较两个文件之间的数据Excel查找差异。 它Office脚本来分析数据，Power Automate工作簿之间进行通信。
 
-项目实现以下目标：
+## <a name="example-scenario"></a>示例应用场景
 
-1. 使用一个 Run 脚本 <a href="events.xlsx">events.xlsx</a> 事件数据。
-1. 将该数据传递给包含事件事务数据的第二Excel文件，并使用该数据对数据进行基本验证，并使用 Office Scripts 对缺失或错误数据进行格式设置。
-1. 将结果通过电子邮件发送给审阅者。
-
-有关更多详细信息，请参阅交叉引用和使用脚本[设置两Excel文件Office格式](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)。
+你是安排即将召开的会议的演讲者的事件协调人。 您将事件数据保留在另一个电子表格中，将扬声器注册保留在另一个电子表格中。 若要确保两个工作簿保持同步，请对脚本Office流来突出显示任何潜在的问题。
 
 ## <a name="sample-excel-files"></a>示例Excel文件
 
 下载此解决方案中使用的以下文件，以尝试一下！
 
-1. <a href="events.xlsx">events.xlsx</a>
-1. <a href="event-transactions.xlsx">event-transactions.xlsx</a>
+1. <a href="event-data.xlsx">event-data.xlsx</a>
+1. <a href="speaker-registrations.xlsx">speaker-registrations.xlsx</a>
 
 ## <a name="sample-code-get-event-data"></a>示例代码：获取事件数据
 
 ```TypeScript
-function main(workbook: ExcelScript.Workbook): EventData[] {
+function main(workbook: ExcelScript.Workbook): string {
   // Get the first table in the "Keys" worksheet.
   let table = workbook.getWorksheet('Keys').getTables()[0];
-  
+
   // Get the rows in the event table.
   let range = table.getRangeBetweenHeaderAndTotal();
   let rows = range.getValues();
@@ -44,30 +39,31 @@ function main(workbook: ExcelScript.Workbook): EventData[] {
   // Save each row as an EventData object. This lets them be passed through Power Automate.
   let records: EventData[] = [];
   for (let row of rows) {
-      let [event, date, location, capacity] = row;
-      records.push({
-          event: event as string,
-          date: date as number, 
-          location: location as string,
-          capacity: capacity as number
-      })
+    let [eventId, date, location, capacity] = row;
+    records.push({
+      eventId: eventId as string,
+      date: date as number,
+      location: location as string,
+      capacity: capacity as number
+    })
   }
 
   // Log the event data to the console and return it for a flow.
-  console.log(JSON.stringify(records));
-  return records;
+  let stringResult = JSON.stringify(records);
+  console.log(stringResult);
+  return stringResult;
 }
 
 // An interface representing a row of event data.
 interface EventData {
-  event: string
+  eventId: string
   date: number
   location: string
   capacity: number
 }
 ```
 
-## <a name="sample-code-validate-event-transactions"></a>示例代码：验证事件事务
+## <a name="sample-code-validate-speaker-registrations"></a>示例代码：验证扬声器注册
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, keys: string): string {
@@ -77,44 +73,35 @@ function main(workbook: ExcelScript.Workbook, keys: string): string {
   // Clear the existing formatting in the table.
   let range = table.getRangeBetweenHeaderAndTotal();
   range.clear(ExcelScript.ClearApplyTo.formats);
-    
- // Apply some basic formatting for readability.
-  table.getColumnByName('Date').getRangeBetweenHeaderAndTotal().setNumberFormatLocal("yyyy-mm-dd;@");
-  table.getColumnByName('Capacity').getRangeBetweenHeaderAndTotal().getFormat()
-    .setHorizontalAlignment(ExcelScript.HorizontalAlignment.center);
 
   // Compare the data in the table to the keys passed into the script.
   let keysObject = JSON.parse(keys) as EventData[];
+  let speakerSlotsRemaining = keysObject.map(value => value.capacity);
   let overallMatch = true;
 
-  // Iterate over every row.
+  // Iterate over every row looking for differences from the other worksheet.
   let rows = range.getValues();
   for (let i = 0; i < rows.length; i++) {
     let row = rows[i];
-    let [event, date, location, capacity] = row;
+    let [eventId, date, location, capacity] = row;
     let match = false;
 
     // Look at each key provided for a matching Event ID.
-    for (let keyObject of keysObject) {
-      if (keyObject.event === event) {
+    for (let keyIndex = 0; keyIndex < keysObject.length; keyIndex++) {
+      let event = keysObject[keyIndex];
+      if (event.eventId === eventId) {
         match = true;
-
+        speakerSlotsRemaining[keyIndex]--;
         // If there's a match on the event ID, look for things that don't match and highlight them.
-        if (keyObject.date !== date) {
+        if (event.date !== date) {
           overallMatch = false;
           range.getCell(i, 1).getFormat()
             .getFill()
             .setColor("FFFF00");
         }
-        if (keyObject.location !== location) {
+        if (event.location !== location) {
           overallMatch = false;
           range.getCell(i, 2).getFormat()
-            .getFill()
-            .setColor("FFFF00");
-        }
-        if (keyObject.capacity !== capacity) {
-          overallMatch = false;
-          range.getCell(i, 3).getFormat()
             .getFill()
             .setColor("FFFF00");
         }
@@ -128,28 +115,58 @@ function main(workbook: ExcelScript.Workbook, keys: string): string {
       overallMatch = false;
       range.getCell(i, 0).getFormat()
         .getFill()
-        .setColor("FFFF00");      
-    }  
+        .setColor("FFFF00");
+    }
   }
+
+  
 
   // Choose a message to send to the user.
   let returnString = "All the data is in the right order.";
   if (overallMatch === false) {
     returnString = "Mismatch found. Data requires your review.";
+  } else if (speakerSlotsRemaining.find(remaining => remaining < 0)){
+    returnString = "Event potentially overbooked. Please review."
   }
+
   console.log("Returning: " + returnString);
   return returnString;
 }
 
 // An interface representing a row of event data.
 interface EventData {
-  event: string
+  eventId: string
   date: number
   location: string
   capacity: number
 }
 ```
 
-## <a name="training-video-cross-reference-and-format-an-excel-file"></a>培训视频：交叉引用和格式化Excel文件
+## <a name="power-automate-flow-check-for-inconsistencies-across-the-workbooks"></a>Power Automate流：检查工作簿之间的不一致情况
 
-[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/dVwqBf483qo")。
+此流提取第一个工作簿的事件信息，并使用该数据验证第二个工作簿。
+
+1. 登录到 [Power Automate](https://flow.microsoft.com)并创建新的 **即时云流**。
+1. 选择 **"手动触发流"，** 然后按"**创建"。**
+1. 使用 Run **脚本操作** 添加使用 **Excel Online (Business)** 连接器的新步骤。  对操作使用以下值：
+    * **位置**：OneDrive for Business
+    * **文档库**：OneDrive
+    * **文件**：event-data.xlsx ([文件选择器选项](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)) 
+    * **脚本**：获取事件数据
+
+    :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="已完成的 Excel Online (Business) 连接器，用于 Power Automate。":::
+
+1. 通过运行脚本 **操作** 添加第二个使用 **Excel Online (Business)** 连接器 **的新** 步骤。 对操作使用以下值：
+    * **位置**：OneDrive for Business
+    * **文档库**：OneDrive
+    * **文件**：speaker-registration.xlsx ([文件选择器选项](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)) 
+    * **脚本**：验证扬声器注册
+
+    :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="已完成的 Excel Online (Business) 连接器，用于第二个脚本Power Automate。":::
+1. 此示例使用 Outlook 作为电子邮件客户端。 可以使用任何支持的电子邮件Power Automate连接器。 添加一 **个新** 步骤，该步骤使用 **Office 365 Outlook** 连接器和 **V2** (发送) 操作。 对操作使用以下值：
+    * **目标**：测试电子邮件帐户 (或个人) 
+    * **主题**：事件验证结果
+    * **正文**：结果 (_运行脚本 **2 中的**_ 动态) 
+
+    :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="已完成的Office 365 Outlook连接器Power Automate。":::
+1. 保存流，然后选择" **测试** "以试用。你应该收到一封电子邮件，指出"发现不匹配。 数据需要你审查。" 这表示行中的行与 **speaker-registrations.xlsx行之间存在****event-data.xlsx。** 打开 **speaker-registrations.xlsx** 以查看一些突出显示的单元格，其中扬声器注册列表存在潜在问题。

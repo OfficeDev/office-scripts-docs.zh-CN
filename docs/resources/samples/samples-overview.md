@@ -3,12 +3,12 @@ title: Office脚本示例
 description: 可用于Office脚本示例和方案。
 ms.date: 05/25/2021
 localization_priority: Normal
-ms.openlocfilehash: aac730fd8a0da76728e4a455339366a75b27a0b2
-ms.sourcegitcommit: 339ecbb9914d54f919e3475018888fb5d00abe89
+ms.openlocfilehash: 1b7e9cdd9e23f57d59e5e878a37b50afb63965fd
+ms.sourcegitcommit: a063b3faf6c1b7c294bd6a73e46845b352f2a22d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52697656"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53202849"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office脚本示例和方案
 
@@ -35,6 +35,7 @@ ms.locfileid: "52697656"
 
 | Project | 详细信息 |
 |---------|---------|
+| [交叉引用工作簿](excel-cross-reference.md) | 此示例使用Office脚本Power Automate来交叉引用和验证不同工作簿中的信息。 |
 | [计算特定工作表或所有工作表中的空行数](count-blank-rows.md) | 本示例检测工作表中是否有预计存在数据的空白行，然后报告空白行计数，以用于Power Automate流。 |
 | [电子邮件图表和表格图像](email-images-chart-table.md) | 此示例使用Office脚本Power Automate操作来创建图表，并通过电子邮件将图表作为图像发送。 |
 | [外部提取调用](external-fetch-calls.md) | 此示例使用 `fetch` 从脚本的 GitHub获取信息。 |
@@ -55,7 +56,7 @@ Office脚本可以自动执行日常例程的某些部分。 这些日常任务�
 | [分析 Web 下载项](../scenarios/analyze-web-downloads.md) | 此方案具有分析 Web 流量记录的脚本，以确定用户的来源国家/地区。 它展示文本分析、在脚本中使用子功能、应用条件格式和使用表的技能。 |
 | [从 NOAA 中提取图形水级别的数据](../scenarios/noaa-data-fetch.md) | 此方案使用Office脚本从 NOAA ([Currents](https://tidesandcurrents.noaa.gov/)数据库的外部源提取数据) 并绘制结果信息的图形。 它重点介绍了使用 `fetch` 获取数据和使用图表的技能。 |
 | [成绩计算器](../scenarios/grade-calculator.md) | 此方案具有一个脚本，用于验证教师的课堂成绩记录。 它展示错误检查、单元格格式设置和正则表达式的技能。 |
-| [安排在Teams](../scenarios/schedule-interviews-in-teams.md) | 此方案演示如何使用 Excel 电子表格管理访谈式会议时间，并创建一个流来安排Teams。 |
+| [在 Teams 中安排面试](../scenarios/schedule-interviews-in-teams.md) | 此方案演示如何使用 Excel 电子表格管理访谈式会议时间，并创建一个流来安排Teams。 |
 | [任务提醒](../scenarios/task-reminders.md) | 此方案在Office流Power Automate脚本，向同事发送更新项目状态的提醒。 它重点介绍了脚本Power Automate和数据传输的专业技能。 |
 
 ## <a name="community-contributions-and-fun-samples"></a>Community贡献和有趣的示例
