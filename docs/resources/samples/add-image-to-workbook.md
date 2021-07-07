@@ -1,32 +1,32 @@
 ---
 title: 向工作簿添加图像
 description: 了解如何使用 Office 脚本将图像添加到工作簿中，以及如何跨工作表复制该图像。
-ms.date: 05/17/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 64c356b2d76a561276b2955263555b16de27b3ba
-ms.sourcegitcommit: a2b85168d2b5e2c4e6951f808368f7d726400df0
+ms.openlocfilehash: 2ae77ca1295cf6e55443789506242d9cf888f9a1
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52592752"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313902"
 ---
-# <a name="add-images-to-a-workbook"></a><span data-ttu-id="bb972-103">向工作簿添加图像</span><span class="sxs-lookup"><span data-stu-id="bb972-103">Add images to a workbook</span></span>
+# <a name="add-images-to-a-workbook"></a><span data-ttu-id="1f022-103">向工作簿添加图像</span><span class="sxs-lookup"><span data-stu-id="1f022-103">Add images to a workbook</span></span>
 
-<span data-ttu-id="bb972-104">此示例演示如何使用 Excel 中的 Office 脚本处理Excel。</span><span class="sxs-lookup"><span data-stu-id="bb972-104">This sample shows how to work with images using an Office Script in Excel.</span></span>
+<span data-ttu-id="1f022-104">此示例演示如何使用 Excel 中的 Office 脚本处理Excel。</span><span class="sxs-lookup"><span data-stu-id="1f022-104">This sample shows how to work with images using an Office Script in Excel.</span></span>
 
-## <a name="scenario"></a><span data-ttu-id="bb972-105">应用场景</span><span class="sxs-lookup"><span data-stu-id="bb972-105">Scenario</span></span>
+## <a name="scenario"></a><span data-ttu-id="1f022-105">应用场景</span><span class="sxs-lookup"><span data-stu-id="1f022-105">Scenario</span></span>
 
-<span data-ttu-id="bb972-106">图像有助于打造品牌、视觉标识和模板。</span><span class="sxs-lookup"><span data-stu-id="bb972-106">Images help with branding, visual identity, and templates.</span></span> <span data-ttu-id="bb972-107">它们帮助使工作簿不仅仅是一个大型表。</span><span class="sxs-lookup"><span data-stu-id="bb972-107">They help make a workbook more than just a giant table.</span></span>
+<span data-ttu-id="1f022-106">图像有助于打造品牌、视觉标识和模板。</span><span class="sxs-lookup"><span data-stu-id="1f022-106">Images help with branding, visual identity, and templates.</span></span> <span data-ttu-id="1f022-107">它们帮助使工作簿不仅仅是一个大型表。</span><span class="sxs-lookup"><span data-stu-id="1f022-107">They help make a workbook more than just a giant table.</span></span>
 
-<span data-ttu-id="bb972-108">第一个示例将图像从一个工作表复制到另一个工作表。</span><span class="sxs-lookup"><span data-stu-id="bb972-108">The first sample copies an image from one worksheet to another.</span></span> <span data-ttu-id="bb972-109">这可用于将公司的徽标置于每个工作表上的相同位置。</span><span class="sxs-lookup"><span data-stu-id="bb972-109">This could be used to put your company's logo in the same position on every sheet.</span></span>
+<span data-ttu-id="1f022-108">第一个示例将图像从一个工作表复制到另一个工作表。</span><span class="sxs-lookup"><span data-stu-id="1f022-108">The first sample copies an image from one worksheet to another.</span></span> <span data-ttu-id="1f022-109">这可用于将公司的徽标置于每个工作表上的相同位置。</span><span class="sxs-lookup"><span data-stu-id="1f022-109">This could be used to put your company's logo in the same position on every sheet.</span></span>
 
-<span data-ttu-id="bb972-110">第二个示例从 URL 复制图像。</span><span class="sxs-lookup"><span data-stu-id="bb972-110">The second sample copies an image from a URL.</span></span> <span data-ttu-id="bb972-111">这可用于将同事存储在共享文件夹中的照片复制到相关工作簿。</span><span class="sxs-lookup"><span data-stu-id="bb972-111">This could be used to copy photos that a colleague stored in a shared folder to a related workbook.</span></span>
+<span data-ttu-id="1f022-110">第二个示例从 URL 复制图像。</span><span class="sxs-lookup"><span data-stu-id="1f022-110">The second sample copies an image from a URL.</span></span> <span data-ttu-id="1f022-111">这可用于将同事存储在共享文件夹中的照片复制到相关工作簿。</span><span class="sxs-lookup"><span data-stu-id="1f022-111">This could be used to copy photos that a colleague stored in a shared folder to a related workbook.</span></span>
 
-## <a name="sample-excel-file"></a><span data-ttu-id="bb972-112">示例Excel文件</span><span class="sxs-lookup"><span data-stu-id="bb972-112">Sample Excel file</span></span>
+## <a name="sample-excel-file"></a><span data-ttu-id="1f022-112">示例Excel文件</span><span class="sxs-lookup"><span data-stu-id="1f022-112">Sample Excel file</span></span>
 
-<span data-ttu-id="bb972-113">下载这些 <a href="add-images.xlsx">add-images.xlsx</a> 中使用的文件，然后自己试用！</span><span class="sxs-lookup"><span data-stu-id="bb972-113">Download the file <a href="add-images.xlsx">add-images.xlsx</a> used in these samples and try it out yourself!</span></span>
+<span data-ttu-id="1f022-113">下载 <a href="add-images.xlsx">add-images.xlsx</a> 工作簿的工作簿。</span><span class="sxs-lookup"><span data-stu-id="1f022-113">Download <a href="add-images.xlsx">add-images.xlsx</a> for a ready-to-use workbook.</span></span> <span data-ttu-id="1f022-114">添加以下脚本，然后自己尝试示例！</span><span class="sxs-lookup"><span data-stu-id="1f022-114">Add the following scripts and try the sample yourself!</span></span>
 
-## <a name="sample-code-copy-an-image-across-worksheets"></a><span data-ttu-id="bb972-114">示例代码：跨工作表复制图像</span><span class="sxs-lookup"><span data-stu-id="bb972-114">Sample code: Copy an image across worksheets</span></span>
+## <a name="sample-code-copy-an-image-across-worksheets"></a><span data-ttu-id="1f022-115">示例代码：跨工作表复制图像</span><span class="sxs-lookup"><span data-stu-id="1f022-115">Sample code: Copy an image across worksheets</span></span>
 
 ```TypeScript
 /**
@@ -52,7 +52,7 @@ function main(workbook: ExcelScript.Workbook)
 }
 ```
 
-## <a name="sample-code-add-an-image-from-a-url-to-a-workbook"></a><span data-ttu-id="bb972-115">示例代码：将图像从 URL 添加到工作簿</span><span class="sxs-lookup"><span data-stu-id="bb972-115">Sample code: Add an image from a URL to a workbook</span></span>
+## <a name="sample-code-add-an-image-from-a-url-to-a-workbook"></a><span data-ttu-id="1f022-116">示例代码：将图像从 URL 添加到工作簿</span><span class="sxs-lookup"><span data-stu-id="1f022-116">Sample code: Add an image from a URL to a workbook</span></span>
 
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {

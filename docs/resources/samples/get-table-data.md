@@ -1,41 +1,41 @@
 ---
 title: 输出Excel JSON
 description: 了解如何将Excel数据输出为 JSON，以用于Power Automate。
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: fefeda4f7e60880758f8f01e03f437a70c4111d4
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 63379d1323f5e2084f4aa39af3f4b6e5e6d7e7bb
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074569"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313944"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a><span data-ttu-id="754d0-103">输出Excel数据作为 JSON，用于Power Automate</span><span class="sxs-lookup"><span data-stu-id="754d0-103">Output Excel table data as JSON for usage in Power Automate</span></span>
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a><span data-ttu-id="89148-103">输出Excel数据作为 JSON，用于Power Automate</span><span class="sxs-lookup"><span data-stu-id="89148-103">Output Excel table data as JSON for usage in Power Automate</span></span>
 
-<span data-ttu-id="754d0-104">Excel表数据可以表示为 JSON 形式的对象数组。</span><span class="sxs-lookup"><span data-stu-id="754d0-104">Excel table data can be represented as an array of objects in the form of JSON.</span></span> <span data-ttu-id="754d0-105">每个对象代表表格中的一行。</span><span class="sxs-lookup"><span data-stu-id="754d0-105">Each object represents a row in the table.</span></span> <span data-ttu-id="754d0-106">这有助于以用户可见的Excel格式从数据中提取数据。</span><span class="sxs-lookup"><span data-stu-id="754d0-106">This helps extract the data from Excel in a consistent format that is visible to the user.</span></span> <span data-ttu-id="754d0-107">然后，可通过流向其他系统Power Automate数据。</span><span class="sxs-lookup"><span data-stu-id="754d0-107">The data can then be given to other systems through Power Automate flows.</span></span>
+<span data-ttu-id="89148-104">Excel表数据可以表示为 JSON 形式的对象数组。</span><span class="sxs-lookup"><span data-stu-id="89148-104">Excel table data can be represented as an array of objects in the form of JSON.</span></span> <span data-ttu-id="89148-105">每个对象代表表格中的一行。</span><span class="sxs-lookup"><span data-stu-id="89148-105">Each object represents a row in the table.</span></span> <span data-ttu-id="89148-106">这有助于以用户可见的Excel格式从数据中提取数据。</span><span class="sxs-lookup"><span data-stu-id="89148-106">This helps extract the data from Excel in a consistent format that is visible to the user.</span></span> <span data-ttu-id="89148-107">然后，可通过流向其他系统Power Automate数据。</span><span class="sxs-lookup"><span data-stu-id="89148-107">The data can then be given to other systems through Power Automate flows.</span></span>
 
-<span data-ttu-id="754d0-108">_输入表数据_</span><span class="sxs-lookup"><span data-stu-id="754d0-108">_Input table data_</span></span>
+<span data-ttu-id="89148-108">_输入表数据_</span><span class="sxs-lookup"><span data-stu-id="89148-108">_Input table data_</span></span>
 
 :::image type="content" source="../../images/table-input.png" alt-text="显示输入表数据的工作表。":::
 
-<span data-ttu-id="754d0-110">此示例的变体还包括其中一个表格列中的超链接。</span><span class="sxs-lookup"><span data-stu-id="754d0-110">A variation of this sample also includes the hyperlinks in one of the table columns.</span></span> <span data-ttu-id="754d0-111">这允许在 JSON 中显示其他级别的单元格数据。</span><span class="sxs-lookup"><span data-stu-id="754d0-111">This allows additional levels of cell data to be surfaced in the JSON.</span></span>
+<span data-ttu-id="89148-110">此示例的变体还包括其中一个表格列中的超链接。</span><span class="sxs-lookup"><span data-stu-id="89148-110">A variation of this sample also includes the hyperlinks in one of the table columns.</span></span> <span data-ttu-id="89148-111">这允许在 JSON 中显示其他级别的单元格数据。</span><span class="sxs-lookup"><span data-stu-id="89148-111">This allows additional levels of cell data to be surfaced in the JSON.</span></span>
 
-<span data-ttu-id="754d0-112">_包含超链接的输入表数据_</span><span class="sxs-lookup"><span data-stu-id="754d0-112">_Input table data that includes hyperlinks_</span></span>
+<span data-ttu-id="89148-112">_包含超链接的输入表数据_</span><span class="sxs-lookup"><span data-stu-id="89148-112">_Input table data that includes hyperlinks_</span></span>
 
 :::image type="content" source="../../images/table-hyperlink-view.png" alt-text="显示格式化为超链接的表格数据的列的工作表。":::
 
-<span data-ttu-id="754d0-114">_用于编辑超链接的对话框_</span><span class="sxs-lookup"><span data-stu-id="754d0-114">_Dialog to edit hyperlink_</span></span>
+<span data-ttu-id="89148-114">_用于编辑超链接的对话框_</span><span class="sxs-lookup"><span data-stu-id="89148-114">_Dialog to edit hyperlink_</span></span>
 
 :::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="显示更改超链接的选项的&quot;编辑超链接&quot;对话框。":::
 
-## <a name="sample-excel-file"></a><span data-ttu-id="754d0-116">示例Excel文件</span><span class="sxs-lookup"><span data-stu-id="754d0-116">Sample Excel file</span></span>
+## <a name="sample-excel-file"></a><span data-ttu-id="89148-116">示例Excel文件</span><span class="sxs-lookup"><span data-stu-id="89148-116">Sample Excel file</span></span>
 
-<span data-ttu-id="754d0-117">下载这些 <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> 中使用的文件，然后自己试用！</span><span class="sxs-lookup"><span data-stu-id="754d0-117">Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> used in these samples and try it out yourself!</span></span>
+<span data-ttu-id="89148-117">下载适用于 <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> 工作簿的文件文件。</span><span class="sxs-lookup"><span data-stu-id="89148-117">Download the file <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> for a ready-to-use workbook.</span></span> <span data-ttu-id="89148-118">添加以下脚本以自己试用示例！</span><span class="sxs-lookup"><span data-stu-id="89148-118">Add the following script to try the sample yourself!</span></span>
 
-## <a name="sample-code-return-table-data-as-json"></a><span data-ttu-id="754d0-118">示例代码：以 JSON 返回表数据</span><span class="sxs-lookup"><span data-stu-id="754d0-118">Sample code: Return table data as JSON</span></span>
+## <a name="sample-code-return-table-data-as-json"></a><span data-ttu-id="89148-119">示例代码：以 JSON 返回表数据</span><span class="sxs-lookup"><span data-stu-id="89148-119">Sample code: Return table data as JSON</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="754d0-119">您可以更改 `interface TableData` 结构以匹配表列。</span><span class="sxs-lookup"><span data-stu-id="754d0-119">You can change the `interface TableData` structure to match your table columns.</span></span> <span data-ttu-id="754d0-120">请注意，对于包含空格的列名，请务必将键放在引号中，如 示例中的 `"Event ID"` 。</span><span class="sxs-lookup"><span data-stu-id="754d0-120">Note that for column names with spaces, be sure to place your key in quotation marks, such as with `"Event ID"` in the sample.</span></span>
+> <span data-ttu-id="89148-120">您可以更改 `interface TableData` 结构以匹配表列。</span><span class="sxs-lookup"><span data-stu-id="89148-120">You can change the `interface TableData` structure to match your table columns.</span></span> <span data-ttu-id="89148-121">请注意，对于包含空格的列名，请务必将键放在引号中，如 示例中的 `"Event ID"` 。</span><span class="sxs-lookup"><span data-stu-id="89148-121">Note that for column names with spaces, be sure to place your key in quotation marks, such as with `"Event ID"` in the sample.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -88,7 +88,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-plaintable-worksheet"></a><span data-ttu-id="754d0-121">"PlainTable"工作表中的示例输出</span><span class="sxs-lookup"><span data-stu-id="754d0-121">Sample output from the "PlainTable" worksheet</span></span>
+### <a name="sample-output-from-the-plaintable-worksheet"></a><span data-ttu-id="89148-122">"PlainTable"工作表中的示例输出</span><span class="sxs-lookup"><span data-stu-id="89148-122">Sample output from the "PlainTable" worksheet</span></span>
 
 ```json
 [{
@@ -142,10 +142,10 @@ interface TableData {
 }]
 ```
 
-## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a><span data-ttu-id="754d0-122">示例代码：使用超链接文本以 JSON 格式返回表数据</span><span class="sxs-lookup"><span data-stu-id="754d0-122">Sample code: Return table data as JSON with hyperlink text</span></span>
+## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a><span data-ttu-id="89148-123">示例代码：使用超链接文本以 JSON 格式返回表数据</span><span class="sxs-lookup"><span data-stu-id="89148-123">Sample code: Return table data as JSON with hyperlink text</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="754d0-123">脚本始终从表的第 4 列 (0) 超链接。</span><span class="sxs-lookup"><span data-stu-id="754d0-123">The script always extracts hyperlinks from the 4th column (0 index) of the table.</span></span> <span data-ttu-id="754d0-124">通过修改注释下的代码，可以更改该顺序或包含多个列作为超链接数据 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`</span><span class="sxs-lookup"><span data-stu-id="754d0-124">You can change that order or include multiple columns as hyperlink data by modifying the code under the comment `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`</span></span>
+> <span data-ttu-id="89148-124">脚本始终从表的第 4 列 (0) 超链接。</span><span class="sxs-lookup"><span data-stu-id="89148-124">The script always extracts hyperlinks from the 4th column (0 index) of the table.</span></span> <span data-ttu-id="89148-125">通过修改注释下的代码，可以更改该顺序或包含多个列作为超链接数据 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`</span><span class="sxs-lookup"><span data-stu-id="89148-125">You can change that order or include multiple columns as hyperlink data by modifying the code under the comment `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -202,7 +202,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-withhyperlink-worksheet"></a><span data-ttu-id="754d0-125">"WithHyperLink"工作表中的示例输出</span><span class="sxs-lookup"><span data-stu-id="754d0-125">Sample output from the "WithHyperLink" worksheet</span></span>
+### <a name="sample-output-from-the-withhyperlink-worksheet"></a><span data-ttu-id="89148-126">"WithHyperLink"工作表中的示例输出</span><span class="sxs-lookup"><span data-stu-id="89148-126">Sample output from the "WithHyperLink" worksheet</span></span>
 
 ```json
 [{
@@ -264,6 +264,6 @@ interface TableData {
 }]
 ```
 
-## <a name="use-in-power-automate"></a><span data-ttu-id="754d0-126">在 Power Automate</span><span class="sxs-lookup"><span data-stu-id="754d0-126">Use in Power Automate</span></span>
+## <a name="use-in-power-automate"></a><span data-ttu-id="89148-127">在 Power Automate</span><span class="sxs-lookup"><span data-stu-id="89148-127">Use in Power Automate</span></span>
 
-<span data-ttu-id="754d0-127">若要了解如何在工作流中使用此Power Automate，请参阅使用 Power Automate 创建[自动Power Automate。](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)</span><span class="sxs-lookup"><span data-stu-id="754d0-127">For how to use such a script in Power Automate, see [Create an automated workflow with Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).</span></span>
+<span data-ttu-id="89148-128">若要了解如何在工作流中使用此Power Automate，请参阅使用 Power Automate 创建[自动Power Automate。](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)</span><span class="sxs-lookup"><span data-stu-id="89148-128">For how to use such a script in Power Automate, see [Create an automated workflow with Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).</span></span>

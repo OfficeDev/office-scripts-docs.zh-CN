@@ -1,59 +1,59 @@
 ---
 title: 从脚本返回数据到自动运行 Power Automated 流
 description: 本教程演示了如何通过 Power Automate 运行适用于 Excel 网页版的 Office 脚本来发送提醒电子邮件。
-ms.date: 12/15/2020
+ms.date: 06/29/2021
 localization_priority: Priority
-ms.openlocfilehash: 6c1041ede630319f75ccdad453734828eaa8bd3d
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 6c94ba4382f9d481c0064e89b5f7afa147ab23f4
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074674"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53314000"
 ---
-# <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a><span data-ttu-id="d22e6-103">从脚本返回数据到自动运行 Power Automated 流</span><span class="sxs-lookup"><span data-stu-id="d22e6-103">Return data from a script to an automatically-run Power Automate flow</span></span>
+# <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a><span data-ttu-id="02683-103">从脚本返回数据到自动运行 Power Automated 流</span><span class="sxs-lookup"><span data-stu-id="02683-103">Return data from a script to an automatically-run Power Automate flow</span></span>
 
-<span data-ttu-id="d22e6-104">本教程将教你如何从适用于 Excel 网页版的 Office 脚本中将信息作为自动 [Power Automate](https://flow.microsoft.com) 工作流的一部分返回。</span><span class="sxs-lookup"><span data-stu-id="d22e6-104">This tutorial teaches you how to return information from an Office Script for Excel on the web as part of an automated [Power Automate](https://flow.microsoft.com) workflow.</span></span> <span data-ttu-id="d22e6-105">将创建一个脚本，它可以查看时间表并与流一起发送提醒电子邮件。</span><span class="sxs-lookup"><span data-stu-id="d22e6-105">You'll make a script that looks through a schedule and works with a flow to send reminder emails.</span></span> <span data-ttu-id="d22e6-106">此流程将按常规计划运行，代表你提供这些提醒。</span><span class="sxs-lookup"><span data-stu-id="d22e6-106">This flow will run on a regular schedule, providing these reminders on your behalf.</span></span>
+<span data-ttu-id="02683-104">本教程将教你如何从适用于 Excel 网页版的 Office 脚本中将信息作为自动 [Power Automate](https://flow.microsoft.com) 工作流的一部分返回。</span><span class="sxs-lookup"><span data-stu-id="02683-104">This tutorial teaches you how to return information from an Office Script for Excel on the web as part of an automated [Power Automate](https://flow.microsoft.com) workflow.</span></span> <span data-ttu-id="02683-105">将创建一个脚本，它可以查看时间表并与流一起发送提醒电子邮件。</span><span class="sxs-lookup"><span data-stu-id="02683-105">You'll make a script that looks through a schedule and works with a flow to send reminder emails.</span></span> <span data-ttu-id="02683-106">此流程将按常规计划运行，代表你提供这些提醒。</span><span class="sxs-lookup"><span data-stu-id="02683-106">This flow will run on a regular schedule, providing these reminders on your behalf.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="d22e6-107">如果你不熟悉 Office 脚本，建议先查看[在 Excel 网页版中录制、编辑和创建 Office 脚本](excel-tutorial.md)教程。</span><span class="sxs-lookup"><span data-stu-id="d22e6-107">If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.</span></span>
+> <span data-ttu-id="02683-107">如果你不熟悉 Office 脚本，建议先查看[在 Excel 网页版中录制、编辑和创建 Office 脚本](excel-tutorial.md)教程。</span><span class="sxs-lookup"><span data-stu-id="02683-107">If you are new to Office Scripts, we recommend starting with the [Record, edit, and create Office Scripts in Excel on the web](excel-tutorial.md) tutorial.</span></span>
 >
-> <span data-ttu-id="d22e6-108">如果你没有使用过 Power Automate，建议你从[手动 Power Automated 流中调用脚本](excel-power-automate-manual.md)和[在自动运行 Power Automated 流中将数据传递到脚本](excel-power-automate-trigger.md)教程开始。</span><span class="sxs-lookup"><span data-stu-id="d22e6-108">If you are new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) and [Pass data to scripts in an automatically-run Power Automate flow](excel-power-automate-trigger.md) tutorials.</span></span>
+> <span data-ttu-id="02683-108">如果你没有使用过 Power Automate，建议你从[手动 Power Automated 流中调用脚本](excel-power-automate-manual.md)和[在自动运行 Power Automated 流中将数据传递到脚本](excel-power-automate-trigger.md)教程开始。</span><span class="sxs-lookup"><span data-stu-id="02683-108">If you are new to Power Automate, we recommend starting with the [Call scripts from a manual Power Automate flow](excel-power-automate-manual.md) and [Pass data to scripts in an automatically-run Power Automate flow](excel-power-automate-trigger.md) tutorials.</span></span>
 >
-> <span data-ttu-id="d22e6-109">[Office 脚本使用 TypeScript](../overview/code-editor-environment.md)，本教程面向在 JavaScript 或 TypeScript 方面具备初级到中级知识的人员。</span><span class="sxs-lookup"><span data-stu-id="d22e6-109">[Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript.</span></span> <span data-ttu-id="d22e6-110">如果你不熟悉 JavaScript，建议从 [Mozilla JavaScript 教程](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)入手。</span><span class="sxs-lookup"><span data-stu-id="d22e6-110">If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).</span></span>
+> <span data-ttu-id="02683-109">[Office 脚本使用 TypeScript](../overview/code-editor-environment.md)，本教程面向在 JavaScript 或 TypeScript 方面具备初级到中级知识的人员。</span><span class="sxs-lookup"><span data-stu-id="02683-109">[Office Scripts use TypeScript](../overview/code-editor-environment.md) and this tutorial is intended for people with beginner to intermediate-level knowledge of JavaScript or TypeScript.</span></span> <span data-ttu-id="02683-110">如果你不熟悉 JavaScript，建议从 [Mozilla JavaScript 教程](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)入手。</span><span class="sxs-lookup"><span data-stu-id="02683-110">If you're new to JavaScript, we recommend starting with the [Mozilla JavaScript tutorial](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="d22e6-111">先决条件</span><span class="sxs-lookup"><span data-stu-id="d22e6-111">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="02683-111">先决条件</span><span class="sxs-lookup"><span data-stu-id="02683-111">Prerequisites</span></span>
 
 [!INCLUDE [Tutorial prerequisites](../includes/power-automate-tutorial-prerequisites.md)]
 
-## <a name="prepare-the-workbook"></a><span data-ttu-id="d22e6-112">准备工作簿</span><span class="sxs-lookup"><span data-stu-id="d22e6-112">Prepare the workbook</span></span>
+## <a name="prepare-the-workbook"></a><span data-ttu-id="02683-112">准备工作簿</span><span class="sxs-lookup"><span data-stu-id="02683-112">Prepare the workbook</span></span>
 
-1. <span data-ttu-id="d22e6-113">随时下载工作簿 - <a href="on-call-rotation.xlsx">on-call-rotation.xlsx</a> 到 OneDrive。</span><span class="sxs-lookup"><span data-stu-id="d22e6-113">Download the workbook <a href="on-call-rotation.xlsx">on-call-rotation.xlsx</a> to your OneDrive.</span></span>
+1. <span data-ttu-id="02683-113">随时下载工作簿 - <a href="on-call-rotation.xlsx">on-call-rotation.xlsx</a> 到 OneDrive。</span><span class="sxs-lookup"><span data-stu-id="02683-113">Download the workbook <a href="on-call-rotation.xlsx">on-call-rotation.xlsx</a> to your OneDrive.</span></span>
 
-1. <span data-ttu-id="d22e6-114">在 Excel 网页版中打开 **on-call-rotation.xlsx**。</span><span class="sxs-lookup"><span data-stu-id="d22e6-114">Open **on-call-rotation.xlsx** in Excel on the web.</span></span>
+1. <span data-ttu-id="02683-114">在 Excel 网页版中打开 **on-call-rotation.xlsx**。</span><span class="sxs-lookup"><span data-stu-id="02683-114">Open **on-call-rotation.xlsx** in Excel on the web.</span></span>
 
-1. <span data-ttu-id="d22e6-115">在表中添加行，其中包含姓名、电子邮件地址以及与当前日期重叠的开始和结束日期。</span><span class="sxs-lookup"><span data-stu-id="d22e6-115">Add a row to the table with your name, email address, and start and end dates that overlap with the current date.</span></span>
+1. <span data-ttu-id="02683-115">在表中添加行，其中包含姓名、电子邮件地址以及与当前日期重叠的开始和结束日期。</span><span class="sxs-lookup"><span data-stu-id="02683-115">Add a row to the table with your name, email address, and start and end dates that overlap with the current date.</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="d22e6-116">要编写的脚本使用表中第一个匹配的条目，因此请确保你的名称位于当前周的任何行的上方。</span><span class="sxs-lookup"><span data-stu-id="d22e6-116">The script you'll write uses the first matching entry in the table, so make sure your name is above any row with the current week.</span></span>
+    > <span data-ttu-id="02683-116">要编写的脚本使用表中第一个匹配的条目，因此请确保你的名称位于当前周的任何行的上方。</span><span class="sxs-lookup"><span data-stu-id="02683-116">The script you'll write uses the first matching entry in the table, so make sure your name is above any row with the current week.</span></span>
 
     :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="包含呼叫旋转表格数据的工作表。":::
 
-## <a name="create-an-office-script"></a><span data-ttu-id="d22e6-118">创建 Office 脚本</span><span class="sxs-lookup"><span data-stu-id="d22e6-118">Create an Office Script</span></span>
+## <a name="create-an-office-script"></a><span data-ttu-id="02683-118">创建 Office 脚本</span><span class="sxs-lookup"><span data-stu-id="02683-118">Create an Office Script</span></span>
 
-1. <span data-ttu-id="d22e6-119">转到“**自动**”选项卡，然后选择“**所有脚本**”。</span><span class="sxs-lookup"><span data-stu-id="d22e6-119">Go to the **Automate** tab and select **All Scripts**.</span></span>
+1. <span data-ttu-id="02683-119">转到“**自动**”选项卡，然后选择“**所有脚本**”。</span><span class="sxs-lookup"><span data-stu-id="02683-119">Go to the **Automate** tab and select **All Scripts**.</span></span>
 
-1. <span data-ttu-id="d22e6-120">选择“**新建脚本**”。</span><span class="sxs-lookup"><span data-stu-id="d22e6-120">Select **New Script**.</span></span>
+1. <span data-ttu-id="02683-120">选择“**新建脚本**”。</span><span class="sxs-lookup"><span data-stu-id="02683-120">Select **New Script**.</span></span>
 
-1. <span data-ttu-id="d22e6-121">将脚本命名为“**获取待命人员**”。</span><span class="sxs-lookup"><span data-stu-id="d22e6-121">Name the script **Get On-Call Person**.</span></span>
+1. <span data-ttu-id="02683-121">将脚本命名为“**获取待命人员**”。</span><span class="sxs-lookup"><span data-stu-id="02683-121">Name the script **Get On-Call Person**.</span></span>
 
-1. <span data-ttu-id="d22e6-122">现在应该有一个空脚本。</span><span class="sxs-lookup"><span data-stu-id="d22e6-122">You should now have an empty script.</span></span> <span data-ttu-id="d22e6-123">我们希望使用脚本从电子表格中获取电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="d22e6-123">We want to use the script to get an email address from the spreadsheet.</span></span> <span data-ttu-id="d22e6-124">更改 `main` 以返回字符串，如下所示：</span><span class="sxs-lookup"><span data-stu-id="d22e6-124">Change `main` to return a string, like this:</span></span>
+1. <span data-ttu-id="02683-122">现在应该有一个空脚本。</span><span class="sxs-lookup"><span data-stu-id="02683-122">You should now have an empty script.</span></span> <span data-ttu-id="02683-123">我们希望使用脚本从电子表格中获取电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="02683-123">We want to use the script to get an email address from the spreadsheet.</span></span> <span data-ttu-id="02683-124">更改 `main` 以返回字符串，如下所示：</span><span class="sxs-lookup"><span data-stu-id="02683-124">Change `main` to return a string, like this:</span></span>
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) : string {
     }
     ```
 
-1. <span data-ttu-id="d22e6-125">接下来，需要从表中获取所有数据。</span><span class="sxs-lookup"><span data-stu-id="d22e6-125">Next, we need to get all the data from the table.</span></span> <span data-ttu-id="d22e6-126">这样就可以通过脚本查看每一行。</span><span class="sxs-lookup"><span data-stu-id="d22e6-126">That lets us look through each row with the script.</span></span> <span data-ttu-id="d22e6-127">在 `main` 函数中添加以下代码。</span><span class="sxs-lookup"><span data-stu-id="d22e6-127">Add the following code inside the `main` function.</span></span>
+1. <span data-ttu-id="02683-125">接下来，需要从表中获取所有数据。</span><span class="sxs-lookup"><span data-stu-id="02683-125">Next, we need to get all the data from the table.</span></span> <span data-ttu-id="02683-126">这样就可以通过脚本查看每一行。</span><span class="sxs-lookup"><span data-stu-id="02683-126">That lets us look through each row with the script.</span></span> <span data-ttu-id="02683-127">在 `main` 函数中添加以下代码。</span><span class="sxs-lookup"><span data-stu-id="02683-127">Add the following code inside the `main` function.</span></span>
 
     ```TypeScript
     // Get the H1 worksheet.
@@ -66,7 +66,7 @@ ms.locfileid: "53074674"
     let tableValues = table.getRangeBetweenHeaderAndTotal().getValues();
     ```
 
-1. <span data-ttu-id="d22e6-128">表中的日期使用 [Excel 的日期序列号](https://support.microsoft.com/office/date-systems-in-excel-e7fe7167-48a9-4b96-bb53-5612a800b487)存储。</span><span class="sxs-lookup"><span data-stu-id="d22e6-128">The dates in the table are stored using [Excel's date serial number](https://support.microsoft.com/office/date-systems-in-excel-e7fe7167-48a9-4b96-bb53-5612a800b487).</span></span> <span data-ttu-id="d22e6-129">需要将这些日期转换为 JavaScript 日期以便进行比较。</span><span class="sxs-lookup"><span data-stu-id="d22e6-129">We need to convert those dates to JavaScript dates in order to compare them.</span></span> <span data-ttu-id="d22e6-130">将在脚本中添加帮助程序函数。</span><span class="sxs-lookup"><span data-stu-id="d22e6-130">We'll add a helper function to our script.</span></span> <span data-ttu-id="d22e6-131">在 `main` 函数外添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="d22e6-131">Add the following code outside of the `main` function:</span></span>
+1. <span data-ttu-id="02683-128">表中的日期使用 [Excel 的日期序列号](https://support.microsoft.com/office/date-systems-in-excel-e7fe7167-48a9-4b96-bb53-5612a800b487)存储。</span><span class="sxs-lookup"><span data-stu-id="02683-128">The dates in the table are stored using [Excel's date serial number](https://support.microsoft.com/office/date-systems-in-excel-e7fe7167-48a9-4b96-bb53-5612a800b487).</span></span> <span data-ttu-id="02683-129">需要将这些日期转换为 JavaScript 日期以便进行比较。</span><span class="sxs-lookup"><span data-stu-id="02683-129">We need to convert those dates to JavaScript dates in order to compare them.</span></span> <span data-ttu-id="02683-130">将在脚本中添加帮助程序函数。</span><span class="sxs-lookup"><span data-stu-id="02683-130">We'll add a helper function to our script.</span></span> <span data-ttu-id="02683-131">在 `main` 函数外添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="02683-131">Add the following code outside of the `main` function:</span></span>
 
     ```TypeScript
     // Convert the Excel date to a JavaScript Date object.
@@ -76,7 +76,7 @@ ms.locfileid: "53074674"
     }
     ```
 
-1. <span data-ttu-id="d22e6-132">现在，我们需要弄清楚谁在待命。</span><span class="sxs-lookup"><span data-stu-id="d22e6-132">Now, we need to figure out which person is on call right now.</span></span> <span data-ttu-id="d22e6-133">他们的行将具有围绕当前日期的开始和结束日期。</span><span class="sxs-lookup"><span data-stu-id="d22e6-133">Their row will have a start and end date surrounding the current date.</span></span> <span data-ttu-id="d22e6-134">我们将编写脚本，假设一次只有一个人待命。</span><span class="sxs-lookup"><span data-stu-id="d22e6-134">We'll write the script to assume only one person is on call at a time.</span></span> <span data-ttu-id="d22e6-135">脚本可以返回数组来处理多个值，但现在我们将返回第一个匹配的电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="d22e6-135">Scripts can return arrays to handle multiple values, but for now we'll return the first matching email address.</span></span> <span data-ttu-id="d22e6-136">将以下代码添加到`main` 函数末尾。</span><span class="sxs-lookup"><span data-stu-id="d22e6-136">Add the following code to the end of the `main` function.</span></span>
+1. <span data-ttu-id="02683-132">现在，我们需要弄清楚谁在待命。</span><span class="sxs-lookup"><span data-stu-id="02683-132">Now, we need to figure out which person is on call right now.</span></span> <span data-ttu-id="02683-133">他们的行将具有围绕当前日期的开始和结束日期。</span><span class="sxs-lookup"><span data-stu-id="02683-133">Their row will have a start and end date surrounding the current date.</span></span> <span data-ttu-id="02683-134">我们将编写脚本，假设一次只有一个人待命。</span><span class="sxs-lookup"><span data-stu-id="02683-134">We'll write the script to assume only one person is on call at a time.</span></span> <span data-ttu-id="02683-135">脚本可以返回数组来处理多个值，但现在我们将返回第一个匹配的电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="02683-135">Scripts can return arrays to handle multiple values, but for now we'll return the first matching email address.</span></span> <span data-ttu-id="02683-136">将以下代码添加到`main` 函数末尾。</span><span class="sxs-lookup"><span data-stu-id="02683-136">Add the following code to the end of the `main` function.</span></span>
 
     ```TypeScript
     // Look for the first row where today's date is between the row's start and end dates.
@@ -91,7 +91,7 @@ ms.locfileid: "53074674"
     }
     ```
 
-1. <span data-ttu-id="d22e6-137">最后的脚本应该如下所示：</span><span class="sxs-lookup"><span data-stu-id="d22e6-137">The final script should look like this:</span></span>
+1. <span data-ttu-id="02683-137">最后的脚本应该如下所示：</span><span class="sxs-lookup"><span data-stu-id="02683-137">The final script should look like this:</span></span>
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) : string {
@@ -123,70 +123,70 @@ ms.locfileid: "53074674"
     }
     ```
 
-## <a name="create-an-automated-workflow-with-power-automate"></a><span data-ttu-id="d22e6-138">使用 Power Automate 功能创建自动工作流</span><span class="sxs-lookup"><span data-stu-id="d22e6-138">Create an automated workflow with Power Automate</span></span>
+## <a name="create-an-automated-workflow-with-power-automate"></a><span data-ttu-id="02683-138">使用 Power Automate 功能创建自动工作流</span><span class="sxs-lookup"><span data-stu-id="02683-138">Create an automated workflow with Power Automate</span></span>
 
-1. <span data-ttu-id="d22e6-139">登录 [Power Automate 网站](https://flow.microsoft.com)。</span><span class="sxs-lookup"><span data-stu-id="d22e6-139">Sign in to the [Power Automate site](https://flow.microsoft.com).</span></span>
+1. <span data-ttu-id="02683-139">登录 [Power Automate 网站](https://flow.microsoft.com)。</span><span class="sxs-lookup"><span data-stu-id="02683-139">Sign in to the [Power Automate site](https://flow.microsoft.com).</span></span>
 
-1. <span data-ttu-id="d22e6-140">在屏幕左侧显示的菜单中，按 "**创建**"。</span><span class="sxs-lookup"><span data-stu-id="d22e6-140">In the menu that's displayed on the left side of the screen, press **Create**.</span></span> <span data-ttu-id="d22e6-141">这将带你进入创建新工作流的方式列表。</span><span class="sxs-lookup"><span data-stu-id="d22e6-141">This brings you to list of ways to create new workflows.</span></span>
+1. <span data-ttu-id="02683-140">在屏幕左侧显示的菜单中，选择“**创建**”。</span><span class="sxs-lookup"><span data-stu-id="02683-140">In the menu that's displayed on the left side of the screen, select **Create**.</span></span> <span data-ttu-id="02683-141">这将带你进入创建新工作流的方式列表。</span><span class="sxs-lookup"><span data-stu-id="02683-141">This brings you to list of ways to create new workflows.</span></span>
 
     :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text=" Power Automate 中的&quot;创建&quot;按钮。":::
 
-1. <span data-ttu-id="d22e6-143">在“**从空白开始**”部分下，选择“**计划云流**”。</span><span class="sxs-lookup"><span data-stu-id="d22e6-143">Under the **Start from blank** section, select **Scheduled cloud flow**.</span></span>
+1. <span data-ttu-id="02683-143">在“**从空白开始**”部分下，选择“**计划云流**”。</span><span class="sxs-lookup"><span data-stu-id="02683-143">Under the **Start from blank** section, select **Scheduled cloud flow**.</span></span>
 
     :::image type="content" source="../images/power-automate-return-tutorial-2.png" alt-text=" Power Automate 中的&quot;计划云流&quot;按钮。":::
 
-1. <span data-ttu-id="d22e6-145">现在需要为这个流程设置时间表。</span><span class="sxs-lookup"><span data-stu-id="d22e6-145">Now we need to set the schedule for this flow.</span></span> <span data-ttu-id="d22e6-146">从 2021 年上半年开始，电子表格在每周一都有一个新的待命任务。</span><span class="sxs-lookup"><span data-stu-id="d22e6-146">Our spreadsheet has a new on-call assignment starting every Monday in the first half of 2021.</span></span> <span data-ttu-id="d22e6-147">把流设置为星期一早上的首个运行的项。</span><span class="sxs-lookup"><span data-stu-id="d22e6-147">Let's set the flow to run first thing Monday mornings.</span></span> <span data-ttu-id="d22e6-148">使用以下选项将流配置为每周星期一运行。</span><span class="sxs-lookup"><span data-stu-id="d22e6-148">Use the following options to configure the flow to run on Monday each week.</span></span>
+1. <span data-ttu-id="02683-145">现在需要为这个流程设置时间表。</span><span class="sxs-lookup"><span data-stu-id="02683-145">Now we need to set the schedule for this flow.</span></span> <span data-ttu-id="02683-146">从 2021 年上半年开始，电子表格在每周一都有一个新的待命任务。</span><span class="sxs-lookup"><span data-stu-id="02683-146">Our spreadsheet has a new on-call assignment starting every Monday in the first half of 2021.</span></span> <span data-ttu-id="02683-147">把流设置为星期一早上的首个运行的项。</span><span class="sxs-lookup"><span data-stu-id="02683-147">Let's set the flow to run first thing Monday mornings.</span></span> <span data-ttu-id="02683-148">使用以下选项将流配置为每周星期一运行。</span><span class="sxs-lookup"><span data-stu-id="02683-148">Use the following options to configure the flow to run on Monday each week.</span></span>
 
-    - <span data-ttu-id="d22e6-149">**流名称**：通知待命人</span><span class="sxs-lookup"><span data-stu-id="d22e6-149">**Flow name**: Notify On-Call Person</span></span>
-    - <span data-ttu-id="d22e6-150">**开始时间**：1/4/21 凌晨 1:00</span><span class="sxs-lookup"><span data-stu-id="d22e6-150">**Starting**: 1/4/21 at 1:00am</span></span>
-    - <span data-ttu-id="d22e6-151">**重复间隔**：1 周</span><span class="sxs-lookup"><span data-stu-id="d22e6-151">**Repeat every**: 1 Week</span></span>
-    - <span data-ttu-id="d22e6-152">**这些日期**：星期一</span><span class="sxs-lookup"><span data-stu-id="d22e6-152">**On these days**: M</span></span>
+    - <span data-ttu-id="02683-149">**流名称**：通知待命人</span><span class="sxs-lookup"><span data-stu-id="02683-149">**Flow name**: Notify On-Call Person</span></span>
+    - <span data-ttu-id="02683-150">**开始时间**：1/4/21 凌晨 1:00</span><span class="sxs-lookup"><span data-stu-id="02683-150">**Starting**: 1/4/21 at 1:00am</span></span>
+    - <span data-ttu-id="02683-151">**重复间隔**：1 周</span><span class="sxs-lookup"><span data-stu-id="02683-151">**Repeat every**: 1 Week</span></span>
+    - <span data-ttu-id="02683-152">**这些日期**：星期一</span><span class="sxs-lookup"><span data-stu-id="02683-152">**On these days**: M</span></span>
 
     :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="Power Automate &quot;生成计划云流&quot;对话框显示选项。选项包括流名称、开始时间、重复时间以及一周中的哪一天运行流。":::
 
-1. <span data-ttu-id="d22e6-154">按“**创建**”。</span><span class="sxs-lookup"><span data-stu-id="d22e6-154">Press **Create**.</span></span>
+1. <span data-ttu-id="02683-154">选择“**创建**”。</span><span class="sxs-lookup"><span data-stu-id="02683-154">Select **Create**.</span></span>
 
-1. <span data-ttu-id="d22e6-155">按 **"新建步骤"**。</span><span class="sxs-lookup"><span data-stu-id="d22e6-155">Press **New step**.</span></span>
+1. <span data-ttu-id="02683-155">选择“**新建步骤**”。</span><span class="sxs-lookup"><span data-stu-id="02683-155">Select **New step**.</span></span>
 
-1. <span data-ttu-id="d22e6-156">选择 "**标准**" 选项卡，然后选择 "**Excel Online （企业）**"。</span><span class="sxs-lookup"><span data-stu-id="d22e6-156">Select the **Standard** tab, then select **Excel Online (Business)**.</span></span>
+1. <span data-ttu-id="02683-156">选择 "**标准**" 选项卡，然后选择 "**Excel Online （企业）**"。</span><span class="sxs-lookup"><span data-stu-id="02683-156">Select the **Standard** tab, then select **Excel Online (Business)**.</span></span>
 
-    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate 中的 Excel Online (商业版)选项。":::
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text=" Power Automate 中的 Excel Online (商业版)选项。":::
 
-1. <span data-ttu-id="d22e6-158">在 **操作** 下，选择 **运行脚本**。</span><span class="sxs-lookup"><span data-stu-id="d22e6-158">Under **Actions**, select **Run script**.</span></span>
+1. <span data-ttu-id="02683-158">在 **操作** 下，选择 **运行脚本**。</span><span class="sxs-lookup"><span data-stu-id="02683-158">Under **Actions**, select **Run script**.</span></span>
 
     :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text=" Power Automate 中的运行脚本操作选项。":::
 
-1. <span data-ttu-id="d22e6-160">接下来，选择要在流步骤中使用的工作簿和脚本。</span><span class="sxs-lookup"><span data-stu-id="d22e6-160">Next, you'll select the workbook and script to use in the flow step.</span></span> <span data-ttu-id="d22e6-161">使用 **on-call-rotation.xlsx** 在 OneDrive 中创建的工作簿。</span><span class="sxs-lookup"><span data-stu-id="d22e6-161">Use the **on-call-rotation.xlsx** workbook you created in your OneDrive.</span></span> <span data-ttu-id="d22e6-162">为 **运行脚本** 连接器指定以下设置：</span><span class="sxs-lookup"><span data-stu-id="d22e6-162">Specify the following settings for the **Run script** connector:</span></span>
+1. <span data-ttu-id="02683-160">接下来，选择要在流步骤中使用的工作簿和脚本。</span><span class="sxs-lookup"><span data-stu-id="02683-160">Next, you'll select the workbook and script to use in the flow step.</span></span> <span data-ttu-id="02683-161">使用 **on-call-rotation.xlsx** 在 OneDrive 中创建的工作簿。</span><span class="sxs-lookup"><span data-stu-id="02683-161">Use the **on-call-rotation.xlsx** workbook you created in your OneDrive.</span></span> <span data-ttu-id="02683-162">为 **运行脚本** 连接器指定以下设置：</span><span class="sxs-lookup"><span data-stu-id="02683-162">Specify the following settings for the **Run script** connector:</span></span>
 
-    - <span data-ttu-id="d22e6-163">**位置**：OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="d22e6-163">**Location**: OneDrive for Business</span></span>
-    - <span data-ttu-id="d22e6-164">**文档库**：OneDrive</span><span class="sxs-lookup"><span data-stu-id="d22e6-164">**Document Library**: OneDrive</span></span>
-    - <span data-ttu-id="d22e6-165">**文件**: on-call-rotation.xlsx *（通过文件浏览器选择）*</span><span class="sxs-lookup"><span data-stu-id="d22e6-165">**File**: on-call-rotation.xlsx *(Chosen through the file browser)*</span></span>
-    - <span data-ttu-id="d22e6-166">**脚本**：获取待命人员</span><span class="sxs-lookup"><span data-stu-id="d22e6-166">**Script**: Get On-Call Person</span></span>
+    - <span data-ttu-id="02683-163">**位置**：OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="02683-163">**Location**: OneDrive for Business</span></span>
+    - <span data-ttu-id="02683-164">**文档库**：OneDrive</span><span class="sxs-lookup"><span data-stu-id="02683-164">**Document Library**: OneDrive</span></span>
+    - <span data-ttu-id="02683-165">**文件**: on-call-rotation.xlsx *（通过文件浏览器选择）*</span><span class="sxs-lookup"><span data-stu-id="02683-165">**File**: on-call-rotation.xlsx *(Chosen through the file browser)*</span></span>
+    - <span data-ttu-id="02683-166">**脚本**：获取待命人员</span><span class="sxs-lookup"><span data-stu-id="02683-166">**Script**: Get On-Call Person</span></span>
 
     :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="用于运行脚本的 Power Automate 连接器设置。":::
 
-1. <span data-ttu-id="d22e6-168">按 **"新建步骤"**。</span><span class="sxs-lookup"><span data-stu-id="d22e6-168">Press **New step**.</span></span>
+1. <span data-ttu-id="02683-168">选择“**新建步骤**”。</span><span class="sxs-lookup"><span data-stu-id="02683-168">Select **New step**.</span></span>
 
-1. <span data-ttu-id="d22e6-169">我们将通过发送提醒邮件来结束流。</span><span class="sxs-lookup"><span data-stu-id="d22e6-169">We'll end the flow by sending the reminder email.</span></span> <span data-ttu-id="d22e6-170">使用连接器的搜索栏选择“**发送电子邮件 (V2)**”。</span><span class="sxs-lookup"><span data-stu-id="d22e6-170">Select **Send an email (V2)** by using the connector's search bar.</span></span> <span data-ttu-id="d22e6-171">使用“**新增动态内容**”控件添加脚本返回的电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="d22e6-171">Use the **Add dynamic content** control to add the email address returned by the script.</span></span> <span data-ttu-id="d22e6-172">这将被标记为 **结果**，旁边有 Excel 图标。</span><span class="sxs-lookup"><span data-stu-id="d22e6-172">This will be labelled **result** with the Excel icon next to it.</span></span> <span data-ttu-id="d22e6-173">可以提供你想要的任何主题和正文。</span><span class="sxs-lookup"><span data-stu-id="d22e6-173">You can provide whatever subject and body text you'd like.</span></span>
+1. <span data-ttu-id="02683-169">我们将通过发送提醒邮件来结束流。</span><span class="sxs-lookup"><span data-stu-id="02683-169">We'll end the flow by sending the reminder email.</span></span> <span data-ttu-id="02683-170">使用连接器的搜索栏选择“**发送电子邮件 (V2)**”。</span><span class="sxs-lookup"><span data-stu-id="02683-170">Select **Send an email (V2)** by using the connector's search bar.</span></span> <span data-ttu-id="02683-171">使用“**新增动态内容**”控件添加脚本返回的电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="02683-171">Use the **Add dynamic content** control to add the email address returned by the script.</span></span> <span data-ttu-id="02683-172">这将被标记为 **结果**，旁边有 Excel 图标。</span><span class="sxs-lookup"><span data-stu-id="02683-172">This will be labelled **result** with the Excel icon next to it.</span></span> <span data-ttu-id="02683-173">可以提供你想要的任何主题和正文。</span><span class="sxs-lookup"><span data-stu-id="02683-173">You can provide whatever subject and body text you'd like.</span></span>
 
     :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="用于发送电子邮件的 Power Automate Outlook 连接器设置。选项包括要发送的文件、电子邮件主题、电子邮件正文以及高级选项。":::
 
     > [!NOTE]
-    > <span data-ttu-id="d22e6-p111">此教程使用 Outlook。可以改用你喜欢的电子邮件服务，但某些选项可能不同。</span><span class="sxs-lookup"><span data-stu-id="d22e6-p111">This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.</span></span>
+    > <span data-ttu-id="02683-p111">此教程使用 Outlook。可以改用你喜欢的电子邮件服务，但某些选项可能不同。</span><span class="sxs-lookup"><span data-stu-id="02683-p111">This tutorial uses Outlook. Feel free to use your preferred email service instead, though some options may be different.</span></span>
 
-1. <span data-ttu-id="d22e6-177">按“**保存**”。</span><span class="sxs-lookup"><span data-stu-id="d22e6-177">Press **Save**.</span></span>
+1. <span data-ttu-id="02683-177">选择“**保存**”。</span><span class="sxs-lookup"><span data-stu-id="02683-177">Select **Save**.</span></span>
 
-## <a name="test-the-script-in-power-automate"></a><span data-ttu-id="d22e6-178">在 Power Automate 功能中测试脚本</span><span class="sxs-lookup"><span data-stu-id="d22e6-178">Test the script in Power Automate</span></span>
+## <a name="test-the-script-in-power-automate"></a><span data-ttu-id="02683-178">在 Power Automate 功能中测试脚本</span><span class="sxs-lookup"><span data-stu-id="02683-178">Test the script in Power Automate</span></span>
 
-<span data-ttu-id="d22e6-179">你的流将在每周一早上运行。</span><span class="sxs-lookup"><span data-stu-id="d22e6-179">Your flow will run every Monday morning.</span></span> <span data-ttu-id="d22e6-180">现在可以通过按屏幕右上角的“**测试**”按钮来测试脚本。</span><span class="sxs-lookup"><span data-stu-id="d22e6-180">You can test the script now by pressing the **Test** button in the upper-right corner of the screen.</span></span> <span data-ttu-id="d22e6-181">选择“**手动**”并按 **“运行测试”** 来立即运行流并测试行为。</span><span class="sxs-lookup"><span data-stu-id="d22e6-181">Select **Manually** and press **Run Test** to run the flow now and test the behavior.</span></span> <span data-ttu-id="d22e6-182">可能需要向 Excel 和 Outlook 授予权限才能继续。</span><span class="sxs-lookup"><span data-stu-id="d22e6-182">You may need to grant permissions to Excel and Outlook to continue.</span></span>
+<span data-ttu-id="02683-179">你的流将在每周一早上运行。</span><span class="sxs-lookup"><span data-stu-id="02683-179">Your flow will run every Monday morning.</span></span> <span data-ttu-id="02683-180">现在可以通过选择屏幕右上角的“**测试**”按钮来测试脚本。</span><span class="sxs-lookup"><span data-stu-id="02683-180">You can test the script now by selecting the **Test** button in the upper-right corner of the screen.</span></span> <span data-ttu-id="02683-181">选择“**手动**”，然后选择“**运行测试**”来立即运行流并测试行为。</span><span class="sxs-lookup"><span data-stu-id="02683-181">Select **Manually**, then select **Run Test** to run the flow now and test the behavior.</span></span> <span data-ttu-id="02683-182">可能需要向 Excel 和 Outlook 授予权限才能继续。</span><span class="sxs-lookup"><span data-stu-id="02683-182">You may need to grant permissions to Excel and Outlook to continue.</span></span>
 
 :::image type="content" source="../images/power-automate-return-tutorial-6.png" alt-text="&quot;Power Automate 测试&quot;按钮。":::
 
 > [!TIP]
-> <span data-ttu-id="d22e6-184">如果流无法发送电子邮件，请在电子表格中仔细检查是否在表格顶部列出了当前日期范围的有效电子邮件。</span><span class="sxs-lookup"><span data-stu-id="d22e6-184">If your flow fails to send an email, double-check in the spreadsheet that a valid email is listed for the current date range at the top of the table.</span></span>
+> <span data-ttu-id="02683-184">如果流无法发送电子邮件，请在电子表格中仔细检查是否在表格顶部列出了当前日期范围的有效电子邮件。</span><span class="sxs-lookup"><span data-stu-id="02683-184">If your flow fails to send an email, double-check in the spreadsheet that a valid email is listed for the current date range at the top of the table.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="d22e6-185">后续步骤</span><span class="sxs-lookup"><span data-stu-id="d22e6-185">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="02683-185">后续步骤</span><span class="sxs-lookup"><span data-stu-id="02683-185">Next steps</span></span>
 
-<span data-ttu-id="d22e6-186">访问[使用 Power Automate 运行 Office 脚本](../develop/power-automate-integration.md)，以了解有关将 Office Script 与 Power Automate 连接的更多信息。</span><span class="sxs-lookup"><span data-stu-id="d22e6-186">Visit [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) to learn more about connecting Office Scripts with Power Automate.</span></span>
+<span data-ttu-id="02683-186">访问[使用 Power Automate 运行 Office 脚本](../develop/power-automate-integration.md)，以了解有关将 Office Script 与 Power Automate 连接的更多信息。</span><span class="sxs-lookup"><span data-stu-id="02683-186">Visit [Run Office Scripts with Power Automate](../develop/power-automate-integration.md) to learn more about connecting Office Scripts with Power Automate.</span></span>
 
-<span data-ttu-id="d22e6-187">你还可以查看[自动任务提醒示例场景](../resources/scenarios/task-reminders.md)，以了解如何将 Office 脚本和 Power Automate 与 Team Adaptive Cards 结合使用。</span><span class="sxs-lookup"><span data-stu-id="d22e6-187">You can also check out the [Automated task reminders sample scenario](../resources/scenarios/task-reminders.md) to learn how to combine Office Scripts and Power Automate with Teams Adaptive Cards.</span></span>
+<span data-ttu-id="02683-187">你还可以查看[自动任务提醒示例场景](../resources/scenarios/task-reminders.md)，以了解如何将 Office 脚本和 Power Automate 与 Team Adaptive Cards 结合使用。</span><span class="sxs-lookup"><span data-stu-id="02683-187">You can also check out the [Automated task reminders sample scenario](../resources/scenarios/task-reminders.md) to learn how to combine Office Scripts and Power Automate with Teams Adaptive Cards.</span></span>
