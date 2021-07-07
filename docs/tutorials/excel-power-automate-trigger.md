@@ -1,14 +1,14 @@
 ---
 title: 将数据传递到自动运行的 Power Automate 流中的脚本
 description: 有关在收到邮件时通过 Power Automate 在 Web 上运行 Office Scripts for Excel，并将流数据传递到脚本的教程。
-ms.date: 12/28/2020
+ms.date: 06/29/2021
 localization_priority: Priority
-ms.openlocfilehash: b459501a955f337c7a0ad4040c7d7f5d9e344b93
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 27a028d3cc2af58ca158bb631b7b266cd2a3d488
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074681"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313699"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow"></a>将数据传递到自动运行的 Power Automate 流中的脚本
 
@@ -31,7 +31,7 @@ Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](
 
 3. 选择 "**New Script**"。
 
-4. 将现有代码替换为以下脚本，然后按 "**运行**"。 这会将工作簿设置为一致的工作表、表和数据透视表名称。
+4. 将现有代码替换为以下脚本，并选择“**运行**”。 这会将工作簿设置为一致的工作表、表和数据透视表名称。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -60,7 +60,7 @@ Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](
 
 我们来创建一个脚本来记录电子邮件中的信息。 我们想知道一周中的哪几天我们收到最多的邮件，以及有多少发件人发送邮件。 我们的工作簿中有一个表格，其中包含 **日期**，**星期几**，**电子邮件地址** 和 **主题** 列。 我们的工作表还具有一个数据透视表，该数据透视表在 **星期** 和 **电子邮件地址**（这些是行层次结构）上进行透视。 唯一 **主题** 的计数是所显示的聚合信息（数据层次结构）。 更新电子邮件表后，我们的脚本将刷新该数据透视表。
 
-1. 在“**代码编辑器**”任务窗格中，选择“**新建脚本**”。
+1. 在代码编辑器任务窗格中，选择“**新建脚本**”。
 
 2. 我们将在本指南后面创建流程发送有关收到的每封电子邮件的脚本信息。 脚本需要通过 `main` 函数中的参数接受该输入。 将默认脚本替换为以下脚本：
 
@@ -116,7 +116,7 @@ Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](
     pivotTable.refresh();
     ```
 
-8. 将脚本重命名为 "**录制电子邮件**"，然后按 "**保存脚本**"。
+8. 将脚本重命名为“**录制电子邮件**”，然后选择“**保存脚本**”。
 
 现在，你的脚本已准备就绪，可运行 Power Automate 工作流。 它应类似于以下脚本：
 
@@ -154,7 +154,7 @@ function main(
 
 1. 登录 [Power Automate 网站](https://flow.microsoft.com)。
 
-2. 在屏幕左侧显示的菜单中，按 "**创建**"。 这将带你进入创建新工作流的方式列表。
+2. 在屏幕左侧显示的菜单中，选择“**创建**”。 这将带你进入创建新工作流的方式列表。
 
     :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate Create 按钮。":::
 
@@ -162,14 +162,14 @@ function main(
 
     :::image type="content" source="../images/power-automate-params-tutorial-1.png" alt-text=" Power Automate 中的自动化流程选项。":::
 
-4. 在出现的对话框窗口中，在 "**流名称**" 文本框中输入流的名称。 然后从"**选择流的触发器**" 下的 "选项" 列表中选择 "**新电子邮件到达时**"。 可能需要使用搜索框搜索选项。 最后，按 **创建**。
+4. 在出现的对话框窗口中，在 "**流名称**" 文本框中输入流的名称。 然后从"**选择流的触发器**" 下的 "选项" 列表中选择 "**新电子邮件到达时**"。 可能需要使用搜索框搜索选项。 最后，选择“**创建**”。
 
     :::image type="content" source="../images/power-automate-params-tutorial-2.png" alt-text="Power Automate 流程的一部分，显示&quot;流名称&quot;和&quot;选择流触发器&quot;选项。流名称为&quot;记录电子邮件流&quot;，触发器为&quot;当有新电子邮件到达 Outlook 时&quot;选项。":::
 
     > [!NOTE]
     > 此教程使用 Outlook。可以改用你喜欢的电子邮件服务，但某些选项可能不同。
 
-5. 按 **"新建步骤"**。
+5. 选择“**新建步骤**”。
 
 6. 选择 "**标准**" 选项卡，然后选择 "**Excel Online （企业）**"。
 
@@ -193,7 +193,7 @@ function main(
 
     :::image type="content" source="../images/power-automate-params-tutorial-3.png" alt-text="Power Automate 运行脚本操作，显示选择脚本后显示的选项。":::
 
-9. 按“**保存**”。
+9. 选择“**保存**”。
 
 你的流现已启用。每次通过 Outlook 收到电子邮件时，都将自动运行脚本。
 
@@ -203,7 +203,7 @@ function main(
 
     :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text=" Power Automate 中的&quot;我的流程&quot;按钮。":::
 
-2. 选择你的流程。 可在此处查看 "运行历史记录"。 可刷新页面，或按 "刷新 **所有运行"** 按钮更新历史记录。 收到电子邮件后，流将立即触发。 通过发送自己的邮件来测试流。
+2. 选择你的流程。 可在此处查看 "运行历史记录"。 可刷新页面，或选择刷新“**全部运行**”按钮以更新历史记录。 收到电子邮件后，流将立即触发。 通过发送自己的邮件来测试流。
 
 当流被触发并成功运行脚本时，应该可以看到工作簿的表和数据透视表更新。
 

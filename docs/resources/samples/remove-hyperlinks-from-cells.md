@@ -1,14 +1,14 @@
 ---
 title: 从工作表的每个单元格中删除Excel超链接
 description: 了解如何使用脚本Office工作表中每个单元格删除Excel超链接。
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 048d01691377a7086bdba9ceb87ca98839cfa4d1
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: dc33eb639edac8ada29824a53440031942e59179
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285799"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313748"
 ---
 # <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>从工作表的每个单元格中删除Excel超链接
 
@@ -17,9 +17,11 @@ ms.locfileid: "52285799"
 > [!NOTE]
 > 这仅在单元格计数为 10，000<有效。
 
-## <a name="sample-code-remove-hyperlinks"></a>示例代码：删除超链接
+## <a name="sample-excel-file"></a>示例Excel文件
 
-下载此示例 <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> 使用的文件，然后自己试用！
+下载适用于 <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> 工作簿的文件文件。 添加以下脚本以自己试用示例！
+
+## <a name="sample-code-remove-hyperlinks"></a>示例代码：删除超链接
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {

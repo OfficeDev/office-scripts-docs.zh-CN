@@ -1,21 +1,23 @@
 ---
 title: 对文件夹中的所有 Excel 文件运行脚本
 description: 了解如何对 OneDrive for Business 上文件夹中的所有 Excel 文件运行OneDrive for Business。
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 83e091a8b009bac577da9ed53dcf4139c1b845c9
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: bf9c0c486dacced5c3017b267ea65dfd215a5197
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074583"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313895"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>对文件夹中的所有 Excel 文件运行脚本
 
 此项目对位于 OneDrive for Business 上的文件夹中的所有文件执行一组自动化OneDrive for Business。 它还可用于文件夹SharePoint文件夹。
 该代码对Excel文件执行计算，添加格式，并插入一个[@mentions注释。](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7)
 
-下载文件 <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip，</a>将文件解压缩到本示例中使用的名为 **Sales** 的文件夹，然后自己试用！
+## <a name="sample-excel-files"></a>示例Excel文件
+
+下载 <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a> 此示例需要的所有工作簿的工作簿。 将这些文件解压缩到名为"销售" **的文件夹中**。 将以下脚本添加到脚本集合，以自己试用示例！
 
 ## <a name="sample-code-add-formatting-and-insert-comment"></a>示例代码：添加格式并插入注释
 
@@ -74,7 +76,7 @@ function main(workbook: ExcelScript.Workbook) {
 此流对"销售"文件夹中每个工作簿运行脚本。
 
 1. 创建新的即时 **云流**。
-1. 选择 **"手动触发流"，** 然后按"**创建"。**
+1. 选择 **"手动触发流"，** 然后选择"创建 **"。**
 1. 添加一 **个新** 步骤，该步骤使用 **OneDrive for Business** 连接器和 **"在文件夹操作中列出文件**"。
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="已完成的OneDrive for Business连接器Power Automate。":::
@@ -92,7 +94,7 @@ function main(workbook: ExcelScript.Workbook) {
     1. **脚本**：脚本名称
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="已完成的 Excel Online (Business) 连接器Power Automate。":::
-1. 保存流并试用。
+1. 保存流并试用。使用" **流** 编辑器"页上的"测试"按钮，或通过"我的流" **选项卡运行** 流。请务必在系统提示时允许访问。
 
 ## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>培训视频：对文件夹中的所有Excel文件运行脚本
 

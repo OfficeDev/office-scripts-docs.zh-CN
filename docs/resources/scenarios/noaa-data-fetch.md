@@ -1,14 +1,14 @@
 ---
 title: Office脚本示例方案：Graph NOAA 中的水级数据
 description: 从 NOAA 数据库提取 JSON 数据并使用它创建图表的示例。
-ms.date: 04/26/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: d35af59d9eed1abc9f3844834c92752ed80de80f
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: aca2a966e6a0588c597d6f01f52f2c73354de0c1
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232688"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313762"
 ---
 # <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office脚本示例方案：从 NOAA 提取和绘制水级数据
 
@@ -26,9 +26,7 @@ ms.locfileid: "52232688"
 
 1. 打开工作簿，Excel web 版。
 
-1. 在"**自动化"** 选项卡下，选择"**所有脚本"。**
-
-1. 在" **代码编辑器"** 任务窗格中，选择" **新建脚本** "，然后将以下脚本粘贴到编辑器中。
+1. 在" **自动化"** 选项卡下，选择 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。
 
     ```TypeScript
     /**
@@ -119,4 +117,4 @@ ms.locfileid: "52232688"
 
 ### <a name="after-running-the-script"></a>运行脚本后
 
-:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="运行脚本后的工作表显示一些水级数据和图表":::
+:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="运行脚本后的工作表显示一些水级数据和图表。":::

@@ -1,14 +1,14 @@
 ---
 title: 基于活动单元格位置清除表格列筛选器
 description: 了解如何根据活动单元格位置清除表列筛选器。
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: d6f267b433be9a0ddf44edf53ed92a136eb2ded6
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: f10e23b4ad948a28c5b749533ddedefe164d7142
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074436"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313888"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>基于活动单元格位置清除表格列筛选器
 
@@ -24,9 +24,13 @@ _清除列筛选器后_
 
 :::image type="content" source="../../images/after-filter-cleared.png" alt-text="清除列筛选器后的活动单元格。":::
 
+## <a name="sample-excel-file"></a>示例Excel文件
+
+下载 <a href="table-with-filter.xlsx">table-with-filter.xlsx</a> 工作簿的工作簿。 添加以下脚本以自己试用示例！
+
 ## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>示例代码：基于活动单元格清除表列筛选器
 
-以下脚本基于活动单元格位置清除表格列筛选器，并可以应用于Excel文件。 为方便起见，你可以 <a href="table-with-filter.xlsx"> 下载并使用 </a>table-with-filter.xlsx。
+以下脚本基于活动单元格位置清除表格列筛选器，并可以应用于Excel文件。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

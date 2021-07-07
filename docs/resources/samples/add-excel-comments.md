@@ -1,14 +1,14 @@
 ---
 title: 在内容中添加Excel
 description: 了解如何使用 Office 脚本在工作表中添加注释。
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: e5e5d17c076eceaf06fddeea1a67d31ee3581f31
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: 77e308d020281c71751e2652f8dbaec00c263e44
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285932"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313909"
 ---
 # <a name="add-comments-in-excel"></a>在内容中添加Excel
 
@@ -26,9 +26,11 @@ ms.locfileid: "52285932"
 1. 然后，脚本添加注释 (包括相关的员工电子邮件) 到班次记录中的相应单元格。
 1. 添加新注释之前，将删除单元格中的现有注释。
 
-## <a name="sample-code-add-comments"></a>示例代码：添加注释
+## <a name="sample-excel-file"></a>示例Excel文件
 
-下载此示例 <a href="excel-comments.xlsx">excel-comments.xlsx</a> 使用的文件，然后自己试用！
+下载 <a href="excel-comments.xlsx">excel-comments.xlsx</a> 工作簿的工作簿。 添加以下脚本以自己试用示例！
+
+## <a name="sample-code-add-comments"></a>示例代码：添加注释
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

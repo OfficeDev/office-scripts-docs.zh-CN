@@ -1,14 +1,14 @@
 ---
 title: 通过电子邮件发送图表和Excel图像
 description: 了解如何使用脚本Office脚本Power Automate提取图表和Excel图像并通过电子邮件发送。
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 5eb20025462614d62774ae6c088bdf397dcfb39d
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 50bc65c82df7f5fc68dbebf942c4f607bb6af60a
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074590"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313839"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>使用Office脚本Power Automate脚本和脚本，以通过电子邮件发送图表和表格的图像
 
@@ -40,11 +40,11 @@ _通过流收到Power Automate的电子邮件_
 1. [一Office用于计算和提取图表和Excel的脚本](#sample-code-calculate-and-extract-excel-chart-and-table)
 1. 一Power Automate调用脚本并通过电子邮件发送结果的流。 有关如何执行此操作的示例，请参阅使用 Power Automate 创建自动化[工作流](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
 
+## <a name="sample-excel-file"></a>示例Excel文件
+
+下载 <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> 工作簿的工作簿。 添加以下脚本以自己试用示例！
+
 ## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a>示例代码：计算并提取Excel图表和表
-
-以下脚本计算并提取图表Excel图表。
-
-下载示例文件 <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> 并使用此脚本尝试一下！
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
@@ -94,7 +94,7 @@ interface ReportImages {
 此流运行脚本，并通过电子邮件发送返回的图像。
 
 1. 创建新的即时 **云流**。
-1. 选择 **"手动触发流"，** 然后按"**创建"。**
+1. 选择 **"手动触发流"，** 然后选择"创建 **"。**
 1. 使用 Run **脚本操作** 添加使用 **Excel Online (Business)** 连接器的新步骤。  对操作使用以下值：
     * **位置**：OneDrive for Business
     * **文档库**：OneDrive
@@ -122,7 +122,7 @@ interface ReportImages {
     ```
 
     :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="已完成的Office 365 Outlook连接器Power Automate。":::
-1. 保存流并试用。
+1. 保存流并试用。使用" **流** 编辑器"页上的"测试"按钮，或通过"我的流" **选项卡运行** 流。请务必在系统提示时允许访问。
 
 ## <a name="training-video-extract-and-email-images-of-chart-and-table"></a>培训视频：提取图表和表格的图像和电子邮件图像
 

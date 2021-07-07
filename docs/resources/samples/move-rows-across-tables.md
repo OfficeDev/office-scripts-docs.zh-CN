@@ -1,14 +1,14 @@
 ---
 title: 使用脚本跨表Office行
 description: 了解如何通过保存筛选器，然后处理和重新应用筛选器来跨表移动行。
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: c850ed055457f6733694027469a96a87e74ef66a
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 860521de166108d5a8355ea246c1bfe77e0e064b
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074450"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313755"
 ---
 # <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>通过保存筛选器，然后处理和重新应用筛选器，跨表移动行
 
@@ -22,7 +22,7 @@ ms.locfileid: "53074450"
 
 ## <a name="sample-excel-file"></a>示例Excel文件
 
-下载此 <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> 中使用的文件，以尝试一下！
+下载适用于 <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> 工作簿的文件文件。 添加以下脚本以自己试用示例！
 
 ## <a name="sample-code-move-rows-using-range-values"></a>示例代码：使用范围值移动行
 

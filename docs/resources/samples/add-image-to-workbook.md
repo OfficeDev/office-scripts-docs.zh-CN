@@ -1,14 +1,14 @@
 ---
 title: 向工作簿添加图像
 description: 了解如何使用 Office 脚本将图像添加到工作簿中，以及如何跨工作表复制该图像。
-ms.date: 05/17/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 64c356b2d76a561276b2955263555b16de27b3ba
-ms.sourcegitcommit: a2b85168d2b5e2c4e6951f808368f7d726400df0
+ms.openlocfilehash: 2ae77ca1295cf6e55443789506242d9cf888f9a1
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52592752"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313902"
 ---
 # <a name="add-images-to-a-workbook"></a>向工作簿添加图像
 
@@ -24,7 +24,7 @@ ms.locfileid: "52592752"
 
 ## <a name="sample-excel-file"></a>示例Excel文件
 
-下载这些 <a href="add-images.xlsx">add-images.xlsx</a> 中使用的文件，然后自己试用！
+下载 <a href="add-images.xlsx">add-images.xlsx</a> 工作簿的工作簿。 添加以下脚本，然后自己尝试示例！
 
 ## <a name="sample-code-copy-an-image-across-worksheets"></a>示例代码：跨工作表复制图像
 

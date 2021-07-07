@@ -1,14 +1,14 @@
 ---
 title: 从脚本返回数据到自动运行 Power Automated 流
 description: 本教程演示了如何通过 Power Automate 运行适用于 Excel 网页版的 Office 脚本来发送提醒电子邮件。
-ms.date: 12/15/2020
+ms.date: 06/29/2021
 localization_priority: Priority
-ms.openlocfilehash: 6c1041ede630319f75ccdad453734828eaa8bd3d
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 6c94ba4382f9d481c0064e89b5f7afa147ab23f4
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074674"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53314000"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>从脚本返回数据到自动运行 Power Automated 流
 
@@ -127,7 +127,7 @@ ms.locfileid: "53074674"
 
 1. 登录 [Power Automate 网站](https://flow.microsoft.com)。
 
-1. 在屏幕左侧显示的菜单中，按 "**创建**"。 这将带你进入创建新工作流的方式列表。
+1. 在屏幕左侧显示的菜单中，选择“**创建**”。 这将带你进入创建新工作流的方式列表。
 
     :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text=" Power Automate 中的&quot;创建&quot;按钮。":::
 
@@ -144,13 +144,13 @@ ms.locfileid: "53074674"
 
     :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="Power Automate &quot;生成计划云流&quot;对话框显示选项。选项包括流名称、开始时间、重复时间以及一周中的哪一天运行流。":::
 
-1. 按“**创建**”。
+1. 选择“**创建**”。
 
-1. 按 **"新建步骤"**。
+1. 选择“**新建步骤**”。
 
 1. 选择 "**标准**" 选项卡，然后选择 "**Excel Online （企业）**"。
 
-    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate 中的 Excel Online (商业版)选项。":::
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text=" Power Automate 中的 Excel Online (商业版)选项。":::
 
 1. 在 **操作** 下，选择 **运行脚本**。
 
@@ -165,7 +165,7 @@ ms.locfileid: "53074674"
 
     :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="用于运行脚本的 Power Automate 连接器设置。":::
 
-1. 按 **"新建步骤"**。
+1. 选择“**新建步骤**”。
 
 1. 我们将通过发送提醒邮件来结束流。 使用连接器的搜索栏选择“**发送电子邮件 (V2)**”。 使用“**新增动态内容**”控件添加脚本返回的电子邮件地址。 这将被标记为 **结果**，旁边有 Excel 图标。 可以提供你想要的任何主题和正文。
 
@@ -174,11 +174,11 @@ ms.locfileid: "53074674"
     > [!NOTE]
     > 此教程使用 Outlook。可以改用你喜欢的电子邮件服务，但某些选项可能不同。
 
-1. 按“**保存**”。
+1. 选择“**保存**”。
 
 ## <a name="test-the-script-in-power-automate"></a>在 Power Automate 功能中测试脚本
 
-你的流将在每周一早上运行。 现在可以通过按屏幕右上角的“**测试**”按钮来测试脚本。 选择“**手动**”并按 **“运行测试”** 来立即运行流并测试行为。 可能需要向 Excel 和 Outlook 授予权限才能继续。
+你的流将在每周一早上运行。 现在可以通过选择屏幕右上角的“**测试**”按钮来测试脚本。 选择“**手动**”，然后选择“**运行测试**”来立即运行流并测试行为。 可能需要向 Excel 和 Outlook 授予权限才能继续。
 
 :::image type="content" source="../images/power-automate-return-tutorial-6.png" alt-text="&quot;Power Automate 测试&quot;按钮。":::
 

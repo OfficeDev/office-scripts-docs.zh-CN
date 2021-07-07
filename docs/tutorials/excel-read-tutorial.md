@@ -3,12 +3,12 @@ title: 在 Excel 网页版中使用 Office 脚本读取工作簿数据
 description: 有关从工作簿中读取数据并评估脚本中的数据的 Office 脚本教程。
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: aa05533f0d7cd3b53e4eb616ae3216d672d026f9
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 38a8c64fcf0ed998049c2b95c6d4ede148b6925b
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074688"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313986"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中使用 Office 脚本读取工作簿数据
 
@@ -70,8 +70,8 @@ ms.locfileid: "53074688"
 
 6. 运行脚本。
 7. 应在控制台中看到 `[Array[1]]`。 这不是数字，因为区域是数据的二维数组。 该二维区域直接记录到控制台。 幸运的是，代码编辑器让你能够看到数组的内容。
-8. 将二维数组记录到控制台时，它会对每行下面的列值进行分组。 按蓝色三角形展开数组日志。
-9. 通过按新出现的蓝色三角形展开数组的第二级别。现在应该看到以下内容：
+8. 将二维数组记录到控制台时，它会对每行下面的列值进行分组。 通过选择蓝色三角形展开数组日志。
+9. 通过选择新出现的蓝色三角形展开数组的第二级别。现在应该看到以下内容：
 
     :::image type="content" source="../images/tutorial-4.png" alt-text="控制台日志显示输出&quot;-20.05&quot;，嵌套在两数组下。":::
 

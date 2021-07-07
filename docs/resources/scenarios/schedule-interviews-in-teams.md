@@ -1,14 +1,14 @@
 ---
 title: 在 Teams 中安排面试
 description: 了解如何使用 Office 脚本从Teams发送Excel会议。
-ms.date: 05/25/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 66dae536c4a51ff3e028f06bf3aef3c7509d83bb
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: cb24da12637add805d86da4d07ce878509c6a5f6
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074429"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313727"
 ---
 # <a name="office-scripts-sample-scenario-schedule-interviews-in-teams"></a>Office脚本示例方案：安排在 Teams
 
@@ -32,7 +32,7 @@ ms.locfileid: "53074429"
 
 ## <a name="sample-code-extract-table-data-to-schedule-invites"></a>示例代码：提取表数据以计划邀请
 
-为此流 **命名此脚本 Schedule Interviews。**
+将此脚本添加到脚本集合。 将流程 **命名为"安排** 面试"。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -93,7 +93,7 @@ interface InterviewInvite {
 
 ## <a name="sample-code-mark-rows-as-invited"></a>示例代码：将行标记为受邀
 
-将此脚本 **命名 为流记录已** 发送的邀请。
+将此脚本添加到脚本集合。 Name it **Record Sent Invites** for the flow.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, invites: InterviewInvite[]) {
@@ -135,7 +135,7 @@ interface InterviewInvite {
 ## <a name="sample-flow-run-the-interview-scheduling-scripts-and-send-the-teams-meetings"></a>示例流程：运行访谈计划脚本并发送Teams会议
 
 1. 创建新的即时 **云流**。
-1. 选择 **"手动触发流"，** 然后按"**创建"。**
+1. 选择 **"手动触发流"，** 然后选择"创建 **"。**
 1. 添加使用 **Excel** Online (**Business) 连接器** 和 **"运行** 脚本"操作的新步骤。 使用下列值完成连接器。
     1. **位置**：OneDrive for Business
     1. **文档库**：OneDrive
@@ -155,7 +155,7 @@ interface InterviewInvite {
     1. **文件***：hr-interviews.xlsx (浏览器选项选择)*
     1. **脚本**：记录已发送的邀请
     1. **invites** **：result** (the Excel value) :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="Screenshot of the completed Excel Online (Business) connector to record that invites have been sent in Power Automate.":::
-1. 保存流并试用。
+1. 保存流并试用。使用" **流** 编辑器"页上的"测试"按钮，或通过"我的流" **选项卡运行** 流。请务必在系统提示时允许访问。
 
 ## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>培训视频：从Teams发送Excel会议
 

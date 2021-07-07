@@ -1,14 +1,14 @@
 ---
 title: Office 脚本与 Office 加载项之间的差异
 description: 脚本和加载项Office API 的行为Office API 差异。
-ms.date: 06/02/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 17d66e37c7bf2b1263c0232bb0afb3ee4d29aa36
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: c45fa12369ed8333df0c8f85a2b49900e7079eba
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074562"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313916"
 ---
 # <a name="differences-between-office-scripts-and-office-add-ins"></a>Office 脚本与 Office 加载项之间的差异
 
@@ -32,7 +32,7 @@ Office脚本当前仅受 Excel web 版。 所有录制、编辑和运行均在 W
 
 ### <a name="events"></a>活动
 
-Office脚本不支持工作簿级[事件](/office/dev/add-ins/excel/excel-add-ins-events)。 脚本由用户按脚本的 **"运行**"按钮触发，或Power Automate。 每个脚本在一个方法中运行 `main` 代码，然后结束。
+Office脚本不支持工作簿级[事件](/office/dev/add-ins/excel/excel-add-ins-events)。 脚本由用户为脚本选择"运行"按钮触发，或者通过Power Automate。 每个脚本在一个方法中运行 `main` 代码，然后结束。
 
 ### <a name="common-apis"></a>通用 API
 

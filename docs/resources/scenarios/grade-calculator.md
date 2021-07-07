@@ -1,14 +1,14 @@
 ---
 title: Office脚本示例方案：成绩计算器
 description: 确定一类学生成绩的百分比和字母成绩的示例。
-ms.date: 12/17/2020
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: e2ef6e7522fc88219bf6ba40900a1ecceecb263b
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 2d98e68f37418ade238a707cb74cc7ccf47e8f59
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232695"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313790"
 ---
 # <a name="office-scripts-sample-scenario-grade-calculator"></a>Office脚本示例方案：成绩计算器
 
@@ -27,11 +27,9 @@ ms.locfileid: "52232695"
 
 1. 将<a href="grade-calculator.xlsx">grade-calculator.xlsx</a>下载到OneDrive。
 
-2. 使用 Web Excel打开工作簿。
+1. 打开工作簿，Excel 网页版。
 
-3. 在"**自动化"选项卡** 下，打开 **"所有脚本"。**
-
-4. 在" **代码编辑器"** 任务窗格中，按 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。
+1. 在" **自动化"** 选项卡下，选择 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -174,7 +172,7 @@ ms.locfileid: "52232695"
     }
     ```
 
-5. 将脚本重命名 **为成绩计算器** 并保存它。
+1. 将脚本重命名 **为成绩计算器** 并保存它。
 
 ## <a name="running-the-script"></a>运行脚本
 
@@ -182,8 +180,8 @@ ms.locfileid: "52232695"
 
 ### <a name="before-running-the-script"></a>运行脚本之前
 
-:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="显示学生分数行的工作表":::
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="显示学生分数行的工作表。":::
 
 ### <a name="after-running-the-script"></a>运行脚本后
 
-:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="一个工作表，显示有效学生行中红色总计中无效单元格的学生分数数据":::
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="一个工作表，用于显示有效学生行的学生分数数据，并包含红色总计中的无效单元格。":::

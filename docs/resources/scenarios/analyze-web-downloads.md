@@ -1,14 +1,14 @@
 ---
 title: Office脚本示例方案：分析 Web 下载
 description: 一个示例，在将信息组织到表中Excel工作簿中的原始 Internet 流量数据并确定源位置。
-ms.date: 04/27/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: bdd6b43290e5432d87c4a85a35fbaf32967fbf03
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: ec7ccd2a4f534be825ee4aa358f5d81becc53937
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074457"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313930"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office脚本示例方案：分析 Web 下载
 
@@ -29,11 +29,9 @@ ms.locfileid: "53074457"
 
 1. 将<a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>下载到OneDrive。
 
-2. 打开工作簿，Excel 网页版。
+1. 打开工作簿，Excel 网页版。
 
-3. 在"**自动化"选项卡** 下，打开 **"所有脚本"。**
-
-4. 在" **代码编辑器"** 任务窗格中，按 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。
+1. 在" **自动化"** 选项卡下，选择 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -209,7 +207,7 @@ ms.locfileid: "53074457"
     }
     ```
 
-5. 重命名脚本以 **分析 Web 下载** 并保存它。
+1. 重命名脚本以 **分析 Web 下载** 并保存它。
 
 ## <a name="running-the-script"></a>运行脚本
 

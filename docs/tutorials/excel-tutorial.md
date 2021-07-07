@@ -3,12 +3,12 @@ title: 在 Excel 网页版中录制、编辑和创建 Office 脚本
 description: 有关 Office 脚本基础知识的教程，包括使用操作录制器录制脚本以及将数据写入工作簿。
 ms.date: 05/23/2021
 localization_priority: Priority
-ms.openlocfilehash: f9290a3d7dc723b72bfb4913171052472f2361c5
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 6bcf603211aa07920e99178c35c6f405224c29bd
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074667"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313923"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中录制、编辑和创建 Office 脚本
 
@@ -35,10 +35,10 @@ ms.locfileid: "53074667"
     |酸橙 |600 |500 |
     |葡萄柚 |900 |700 |
 
-3. 打开“**自动**”选项卡。如果未看到“**自动**”选项卡，请通过按下拉箭头来检查功能区溢出。 如果仍未解决问题，请按照文章[解决 Office 脚本问题](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable)中的建议操作。
-4. 按“**录制操作**”按钮。
-5. 选择单元格 **A2:C2**（“橙子”行），并将填充颜色设置为橙色。
-6. 通过按“**停止**”按钮来停止录制。
+3. 打开“**自动**”选项卡。如果未看到“**自动**”选项卡，请通过选择下拉箭头来检查功能区溢出。 如果仍未解决问题，请按照文章 [解决 Office 脚本问题](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable) 中的建议操作。
+4. 选择“**录制操作**”按钮。
+5. 选择单元格“**A2:C2**”（“橙色”行），并将填充颜色设置为橙色。
+6. 通过选择“**停止**”按钮来停止录制。
 
     你的工作表应如下所示（不要担心颜色是否不同）:
 
@@ -48,7 +48,7 @@ ms.locfileid: "53074667"
 
 前面的脚本将“橙子”行的颜色设置为橙色。 让我们为“柠檬”添加黄色行。
 
-1. 从立即打开的“**详细信息**”窗格中，按“**编辑**”按钮。
+1. 从立即打开的 **详细信息** 窗格中，选择“**编辑**”按钮。
 2. 你应该会该看到与此代码类似的内容：
 
     ```TypeScript
@@ -69,7 +69,7 @@ ms.locfileid: "53074667"
     selectedSheet.getRange("A3:C3").getFormat().getFill().setColor("yellow");
     ```
 
-4. 通过按“**运行**”来测试脚本。 工作簿现在应如下所示：
+4. 通过选择“**运行**”来测试脚本。 工作簿现在应如下所示：
 
     :::image type="content" source="../images/tutorial-2.png" alt-text="一个工作表，显示以橙色突出显示的&quot;橙子&quot;行和以黄色突出显示的&quot;花样&quot;行。":::
 

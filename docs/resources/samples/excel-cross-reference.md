@@ -1,14 +1,14 @@
 ---
 title: 跨引用Excel文件Power Automate
 description: 了解如何使用脚本Office脚本Power Automate交叉引用和格式化Excel文件。
-ms.date: 06/25/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 89c4a5fa5dcff21681fa20cd4118447d39d9b6da
-ms.sourcegitcommit: a063b3faf6c1b7c294bd6a73e46845b352f2a22d
+ms.openlocfilehash: 0776ce49cacecfa15339cc7c0cd4866daad789ff
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53202864"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313958"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>跨引用Excel文件Power Automate
 
@@ -20,10 +20,12 @@ ms.locfileid: "53202864"
 
 ## <a name="sample-excel-files"></a>示例Excel文件
 
-下载此解决方案中使用的以下文件，以尝试一下！
+下载以下文件，获取示例的现成工作簿。
 
 1. <a href="event-data.xlsx">event-data.xlsx</a>
 1. <a href="speaker-registrations.xlsx">speaker-registrations.xlsx</a>
+
+添加以下脚本以自己试用示例！
 
 ## <a name="sample-code-get-event-data"></a>示例代码：获取事件数据
 
@@ -147,7 +149,7 @@ interface EventData {
 此流提取第一个工作簿的事件信息，并使用该数据验证第二个工作簿。
 
 1. 登录到 [Power Automate](https://flow.microsoft.com)并创建新的 **即时云流**。
-1. 选择 **"手动触发流"，** 然后按"**创建"。**
+1. 选择 **"手动触发流"，** 然后选择"创建 **"。**
 1. 使用 Run **脚本操作** 添加使用 **Excel Online (Business)** 连接器的新步骤。  对操作使用以下值：
     * **位置**：OneDrive for Business
     * **文档库**：OneDrive
@@ -169,4 +171,5 @@ interface EventData {
     * **正文**：结果 (_运行脚本 **2 中的**_ 动态) 
 
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="已完成的Office 365 Outlook连接器Power Automate。":::
-1. 保存流，然后选择" **测试** "以试用。你应该收到一封电子邮件，指出"发现不匹配。 数据需要你审查。" 这表示行中的行与 **speaker-registrations.xlsx行之间存在****event-data.xlsx。** 打开 **speaker-registrations.xlsx** 以查看一些突出显示的单元格，其中扬声器注册列表存在潜在问题。
+1. 保存流。 使用" **流** 编辑器"页上的"测试"按钮，或通过"我的流" **选项卡运行** 流。请务必在系统提示时允许访问。
+1. 你应该收到一封电子邮件，指出"发现不匹配。 数据需要你审查。" 这表示行中的行与 **speaker-registrations.xlsx行之间存在****event-data.xlsx。** 打开 **speaker-registrations.xlsx** 以查看一些突出显示的单元格，其中扬声器注册列表存在潜在问题。

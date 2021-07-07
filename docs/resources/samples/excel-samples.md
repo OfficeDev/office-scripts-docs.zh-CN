@@ -1,28 +1,27 @@
 ---
 title: Office脚本的基本Excel web 版
 description: 要与 Excel web 版 中的脚本Office代码示例Excel web 版。
-ms.date: 05/17/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 3bf3bd5acd10bc5999db4746a2ed62af85237e48
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 3aaaa7fe8769f6dcd658ae91c577956b56033051
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074555"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313937"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Office脚本的基本Excel web 版
 
 以下示例是简单脚本，您可以尝试自己的工作簿。 若要在Excel web 版：
 
 1. 打开“**自动**”选项卡。
-2. 按 **代码编辑器**。
-3. 在 **代码编辑器** 的任务窗格中按"新建脚本"。
-4. 将整个脚本替换为你选择的示例。
-5. 在 **代码** 编辑器的任务窗格中按"运行"。
+1. 选择 "**New Script**"。
+1. 将整个脚本替换为你选择的示例。
+1. 在 **代码** 编辑器的任务窗格中选择"运行"。
 
 ## <a name="script-basics"></a>脚本基础知识
 
-这些示例演示了脚本的基本Office构建基块。 将其添加到脚本以扩展解决方案并解决常见问题。
+这些示例演示了脚本的基本Office构建基块。 展开这些脚本以扩展您的解决方案并解决常见问题。
 
 ### <a name="read-and-log-one-cell"></a>读取和记录一个单元格
 
@@ -151,7 +150,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="collections"></a>集合
+## <a name="collections"></a>收藏
 
 这些示例处理工作簿中的对象集合。
 

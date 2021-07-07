@@ -1,14 +1,14 @@
 ---
 title: 筛选Excel并获取可见区域
 description: 了解如何使用 Office Scripts 筛选 Excel 表，并获取作为对象数组的可见区域。
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 196e39ffdfb7e6ff2d0898802665d3c2eccc7dbe
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: b19b826f95c7e7aeb331130fde05afaafe500c3d
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285792"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313951"
 ---
 # <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>筛选Excel，并获取作为 JSON 对象的可见区域
 
@@ -20,11 +20,11 @@ ms.locfileid: "52285792"
 * 筛选后提取可见区域。
 * 组合并返回具有特定 [JSON 结构的对象](#sample-json)。
 
+## <a name="sample-excel-file"></a>示例Excel文件
+
+下载 <a href="table-filter.xlsx">table-filter.xlsx</a> 工作簿的工作簿。 添加以下脚本以自己试用示例！
+
 ## <a name="sample-code-filter-a-table-and-get-visible-range"></a>示例代码：筛选表并获取可见区域
-
-以下脚本筛选表并获取可见区域。
-
-下载示例文件 <a href="table-filter.xlsx">table-filter.xlsx</a> 并使用此脚本尝试一下！
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {

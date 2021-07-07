@@ -653,7 +653,7 @@ domhandler 2.4.2 - BSD-2-Clause https://github.com/fb55/DomHandler#readme
 
 ---------------------------------------------------------
 
-domutils 1.7.0 - BSD-2-Clause https://github.com/FB55/domutils#readme
+domutils 1.5.1 - BSD-2-Clause https://github.com/FB55/domutils
 
 版权所有 (c) Felix Bohm
 
@@ -672,7 +672,7 @@ domutils 1.7.0 - BSD-2-Clause https://github.com/FB55/domutils#readme
 
 ---------------------------------------------------------
 
-domutils 1.5.1 - BSD-2-Clause https://github.com/FB55/domutils
+domutils 1.7.0 - BSD-2-Clause https://github.com/FB55/domutils#readme
 
 版权所有 (c) Felix Bohm
 
@@ -1197,28 +1197,6 @@ serialize-javascript 3.1.0 - BSD-3-Clause https://github.com/yahoo/serialize-jav
 
 ---------------------------------------------------------
 
-source-map 0.6.1 - BSD-3-Clause https://github.com/mozilla/source-map
-
-版权所有 2011 关闭编译器版权 2011 Mozilla Foundation 和参与者 版权所有 2014 Mozilla Foundation 和参与者 版权所有 2009-2011 Mozilla Foundation 和参与者版权 (c) 2009-2011、Mozilla Foundation 和参与者
-
-
-版权所有 (c) 2009-2011、Mozilla Foundation 和参与者 保留的所有权利。
-
-如果满足以下条件，则允许在源表单和二进制表单中重新分发和使用（有或无需修改）：
-
-* 重新分发源代码必须保留上述版权声明、此条件列表和以下免责声明。
-
-* 以二进制形式重新分发必须重现上述版权声明、此条件列表以及文档和/或随分发提供的其他材料中的以下免责声明。
-
-* Mozilla Foundation 的名称和项目参与者的名称都不得用于认可或推广从该软件派生的产品，而无需事先获得特定的书面许可。
-
-本软件由版权持有者和参与者"按做"提供，并且任何明示或默示的担保（包括但不限于针对特定用途的适用性和适用性的默示担保）均不声明。 在任何情况下，版权持有者或参与者都不应承担任何直接、间接、附带、特殊、交付或后果性损害 (包括但不限于替代商品或服务采购;使用、数据或利润损失;或业务中断) 或任何责任的理论上所致，无论是在合同、严格责任或 (包括处罚或以其他方式) 由于本软件的使用而引发的，即使被建议存在此类损害的可能性。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 source-map 0.5.7 - BSD-3-Clause https://github.com/mozilla/source-map
 
 版权所有 2011 关闭编译器版权 2011 Mozilla Foundation 和参与者 版权所有 2014 Mozilla Foundation 和参与者 版权所有 2009-2011 Mozilla Foundation 和参与者版权 (c) 2009-2011、Mozilla Foundation 和参与者
@@ -1242,6 +1220,28 @@ source-map 0.5.7 - BSD-3-Clause https://github.com/mozilla/source-map
 ---------------------------------------------------------
 
 source-map 0.7.3 - BSD-3-Clause https://github.com/mozilla/source-map
+
+版权所有 2011 关闭编译器版权 2011 Mozilla Foundation 和参与者 版权所有 2014 Mozilla Foundation 和参与者 版权所有 2009-2011 Mozilla Foundation 和参与者版权 (c) 2009-2011、Mozilla Foundation 和参与者
+
+
+版权所有 (c) 2009-2011、Mozilla Foundation 和参与者 保留的所有权利。
+
+如果满足以下条件，则允许在源表单和二进制表单中重新分发和使用（有或无需修改）：
+
+* 重新分发源代码必须保留上述版权声明、此条件列表和以下免责声明。
+
+* 以二进制形式重新分发必须重现上述版权声明、此条件列表以及文档和/或随分发提供的其他材料中的以下免责声明。
+
+* Mozilla Foundation 的名称和项目参与者的名称都不得用于认可或推广从该软件派生的产品，而无需事先获得特定的书面许可。
+
+本软件由版权持有者和参与者"按做"提供，并且任何明示或默示的担保（包括但不限于针对特定用途的适用性和适用性的默示担保）均不声明。 在任何情况下，版权持有者或参与者都不应承担任何直接、间接、附带、特殊、交付或后果性损害 (包括但不限于替代商品或服务采购;使用、数据或利润损失;或业务中断) 或任何责任的理论上所致，无论是在合同、严格责任或 (包括处罚或以其他方式) 由于本软件的使用而引发的，即使被建议存在此类损害的可能性。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+source-map 0.6.1 - BSD-3-Clause https://github.com/mozilla/source-map
 
 版权所有 2011 关闭编译器版权 2011 Mozilla Foundation 和参与者 版权所有 2014 Mozilla Foundation 和参与者 版权所有 2009-2011 Mozilla Foundation 和参与者版权 (c) 2009-2011、Mozilla Foundation 和参与者
 
@@ -3498,7 +3498,7 @@ ISC 许可证
 
 ---------------------------------------------------------
 
-类型 1.2.0 - ISC https://github.com/medikoo/type#readme
+type 2.0.0 - ISC https://github.com/medikoo/type#readme
 
 版权所有 (c) 2019、Mariusz Nowak、med一o、medikoo.com
 
@@ -3515,7 +3515,7 @@ ISC 许可证
 
 ---------------------------------------------------------
 
-type 2.0.0 - ISC https://github.com/medikoo/type#readme
+类型 1.2.0 - ISC https://github.com/medikoo/type#readme
 
 版权所有 (c) 2019、Mariusz Nowak、med一o、medikoo.com
 
@@ -4323,7 +4323,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.226 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
+@types/office-js-preview 1.0.227 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
 版权所有 (c) Microsoft Corporation。
 
@@ -5166,7 +5166,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 4.1.0 - MIT https://github.com/chalk/ansi-regex#readme
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -5204,7 +5204,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-ansi-regex 4.1.0 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -6304,7 +6304,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-camelcase 5.3.1 - MIT https://github.com/sindresorhus/camelcase#readme
+camelcase 5.0.0 - MIT https://github.com/sindresorhus/camelcase#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -6323,7 +6323,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-camelcase 5.0.0 - MIT https://github.com/sindresorhus/camelcase#readme
+camelcase 5.3.1 - MIT https://github.com/sindresorhus/camelcase#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -6470,6 +6470,24 @@ chardet 0.7.0 - MIT https://github.com/runk/node-chardet
 
 ---------------------------------------------------------
 
+chokidar 2.1.8 - MIT https://github.com/paulmillr/chokidar
+
+版权所有 (2012-2019) Paul Paul (& https://paulmillr.com) Elan一
+
+MIT 许可证
+
+版权 (c) <year><copyright holders>
+
+向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 chokidar 3.4.0 - MIT https://github.com/paulmillr/chokidar
 
  (Paul) <https://paulmillr.com> 2012-2019 (2012-2019) Paul Paul（ (，Elan https://paulmillr.com) 一级）
@@ -6484,24 +6502,6 @@ MIT 许可证 (MIT)
 
 本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-chokidar 2.1.8 - MIT https://github.com/paulmillr/chokidar
-
-版权所有 (2012-2019) Paul Paul (& https://paulmillr.com) Elan一
-
-MIT 许可证
-
-版权 (c) <year><copyright holders>
-
-向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
-
-上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
-
-本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
 ---------------------------------------------------------
 
@@ -6735,7 +6735,7 @@ color-string 1.5.3 - MIT https://github.com/Qix-/color-string#readme
 
 ---------------------------------------------------------
 
-将 2.19.0 - MIT https://github.com/tj/commander.js#readme
+将 2.20.3 - MIT https://github.com/tj/commander.js#readme
 
 版权所有 (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -6775,7 +6775,7 @@ color-string 1.5.3 - MIT https://github.com/Qix-/color-string#readme
 
 ---------------------------------------------------------
 
-将 2.20.3 - MIT https://github.com/tj/commander.js#readme
+将 2.19.0 - MIT https://github.com/tj/commander.js#readme
 
 版权所有 (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -7455,26 +7455,6 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
-
-版权所有 (c) 2014 TJ Holowaychuk <tj@vision-media.ca> 版权所有 (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
-
- (MIT 许可证) 
-
-版权所有 (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
-
-向获取本软件及相关文档文件 (the'Software') 副本的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
-
-上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
-
-本软件"根据情况"提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
-
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 debug 2.6.9 - MIT https://github.com/visionmedia/debug#readme
 
 版权所有 (c) 2014 TJ Holowaychuk <tj@vision-media.ca> 版权所有 (c) 2014-2016 TJ Holowaychuk <tj@vision-media.ca>
@@ -7496,6 +7476,26 @@ debug 2.6.9 - MIT https://github.com/visionmedia/debug#readme
 ---------------------------------------------------------
 
 debug 3.2.6 - MIT https://github.com/visionmedia/debug#readme
+
+版权所有 (c) 2014 TJ Holowaychuk <tj@vision-media.ca> 版权所有 (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
+
+ (MIT 许可证) 
+
+版权所有 (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
+
+向获取本软件及相关文档文件 (the'Software') 副本的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
 
 版权所有 (c) 2014 TJ Holowaychuk <tj@vision-media.ca> 版权所有 (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -7572,13 +7572,14 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-define-property 0.2.5 - MIT https://github.com/jonschlinkert/define-property
+define-property 2.0.2 - MIT https://github.com/jonschlinkert/define-property
 
-版权所有 (jon Schlinkert 2015) 2015 (c) Jon Schlinkert。
+版权所有 (c) 2015-2018，Jon Schlinkert。
+版权所有 (c) 2018， Jon Schlinkert (https://github.com/jonschlinkert) 。
 
 MIT 许可证 (MIT) 
 
-版权所有 (2015) Jon Schlinkert。
+版权所有 (c) 2015-2018，Jon Schlinkert。
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -7591,14 +7592,13 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-define-property 2.0.2 - MIT https://github.com/jonschlinkert/define-property
+define-property 0.2.5 - MIT https://github.com/jonschlinkert/define-property
 
-版权所有 (c) 2015-2018，Jon Schlinkert。
-版权所有 (c) 2018， Jon Schlinkert (https://github.com/jonschlinkert) 。
+版权所有 (jon Schlinkert 2015) 2015 (c) Jon Schlinkert。
 
 MIT 许可证 (MIT) 
 
-版权所有 (c) 2015-2018，Jon Schlinkert。
+版权所有 (2015) Jon Schlinkert。
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -8358,11 +8358,11 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-find-up 2.1.0 - MIT https://github.com/sindresorhus/find-up#readme
+find-up 3.0.0 - MIT https://github.com/sindresorhus/find-up#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
-MIT 许可证 (MIT) 
+MIT 许可证
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -8377,11 +8377,11 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-find-up 3.0.0 - MIT https://github.com/sindresorhus/find-up#readme
+find-up 2.1.0 - MIT https://github.com/sindresorhus/find-up#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
-MIT 许可证
+MIT 许可证 (MIT) 
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -8933,14 +8933,15 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-has-values 1.0.0 - MIT https://github.com/jonschlinkert/has-values
+has-values 0.1.4 - MIT https://github.com/jonschlinkert/has-values
 
-版权所有 (c) 2014-2017，Jon Schlinkert 版权所有 (c) 2014-2015，2017，Jon Schlinkert。
-版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
+版权所有 (c) 2014-2015，Jon Schlinkert。
+版权所有 (2014-2016) Jon Schlinkert。
+版权所有 (c) 2016， Jon Schlinkert (https://github.com/jonschlinkert) 。
 
 MIT 许可证 (MIT) 
 
-版权所有 (c) 2014-2017，Jon Schlinkert
+版权所有 (2014-2016) Jon Schlinkert。
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -8953,15 +8954,14 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-has-values 0.1.4 - MIT https://github.com/jonschlinkert/has-values
+has-values 1.0.0 - MIT https://github.com/jonschlinkert/has-values
 
-版权所有 (c) 2014-2015，Jon Schlinkert。
-版权所有 (2014-2016) Jon Schlinkert。
-版权所有 (c) 2016， Jon Schlinkert (https://github.com/jonschlinkert) 。
+版权所有 (c) 2014-2017，Jon Schlinkert 版权所有 (c) 2014-2015，2017，Jon Schlinkert。
+版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
 
 MIT 许可证 (MIT) 
 
-版权所有 (2014-2016) Jon Schlinkert。
+版权所有 (c) 2014-2017，Jon Schlinkert
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -9543,7 +9543,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-is-arrayish 0.2.1 - MIT https://github.com/qix-/node-is-arrayish#readme
+is-arrayish 0.3.2 - MIT https://github.com/qix-/node-is-arrayish#readme
 
 版权所有 (c) 2015 JD Ballard
 
@@ -9562,7 +9562,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-is-arrayish 0.3.2 - MIT https://github.com/qix-/node-is-arrayish#readme
+is-arrayish 0.2.1 - MIT https://github.com/qix-/node-is-arrayish#readme
 
 版权所有 (c) 2015 JD Ballard
 
@@ -9737,7 +9737,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
 
 版权所有 (c) 2015-2017，Jon Schlinkert。
 版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
@@ -9756,7 +9756,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
 
 版权所有 (c) 2015-2017，Jon Schlinkert。
 版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
@@ -10313,15 +10313,12 @@ jsesc 2.5.2 - MIT https://mths.be/jsesc
 
 ---------------------------------------------------------
 
-json3 3.3.3 - MIT https://bestiejs.github.io/json3
+json3 3.3.0 - MIT http://bestiejs.github.io/json3
 
-版权所有 (c) 2013-2015 Tan。 https://d10.github.io 《 (2012-2015 kit Cambridge) c.15 版权所有。 http://kitcambridge.be 版权所有 2012-2015，Kit http://kit.mit-license.org Cambridge，Tan (c) 2012-2015 ' Kit http://kitcambridge.be/ Cambridge， ' Tan https://d10.github.io/ Tan
+《 (2012) 2014 Kit Cambridge》的版权保护。 http://kitcambridge.be 版权所有 2012-2014 Kit Cambridge http://kit.mit-license.org
 
-《 (2012-2015 kit Cambridge) c.15 版权所有。
+《 (2012) 2014 Kit Cambridge》的版权保护。
 http://kitcambridge.be/
-
-版权所有 (c) 2013-2015 Tan。
-https://d10.github.io/
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -10333,12 +10330,15 @@ https://d10.github.io/
 
 ---------------------------------------------------------
 
-json3 3.3.0 - MIT http://bestiejs.github.io/json3
+json3 3.3.3 - MIT https://bestiejs.github.io/json3
 
-《 (2012) 2014 Kit Cambridge》的版权保护。 http://kitcambridge.be 版权所有 2012-2014 Kit Cambridge http://kit.mit-license.org
+版权所有 (c) 2013-2015 Tan。 https://d10.github.io 《 (2012-2015 kit Cambridge) c.15 版权所有。 http://kitcambridge.be 版权所有 2012-2015，Kit http://kit.mit-license.org Cambridge，Tan (c) 2012-2015 ' Kit http://kitcambridge.be/ Cambridge， ' Tan https://d10.github.io/ Tan
 
-《 (2012) 2014 Kit Cambridge》的版权保护。
+《 (2012-2015 kit Cambridge) c.15 版权所有。
 http://kitcambridge.be/
+
+版权所有 (c) 2013-2015 Tan。
+https://d10.github.io/
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -10461,25 +10461,6 @@ json-stable-stringify 1.0.1 - MIT https://github.com/substack/json-stable-string
 
 ---------------------------------------------------------
 
-js-tokens 4.0.0 - MIT https://github.com/lydell/js-tokens#readme
-
-版权所有：2014、2015、2016、2017、2018、2018、2018、2018、)  (2014、2015、2016、2017、2018
-
-MIT 许可证 (MIT) 
-
-版权所有 (c) 2014、2015、2016、2017、2018©Lydell
-
-向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
-
-上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
-
-本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 js-tokens 3.0.2 - MIT https://github.com/lydell/js-tokens#readme
 
 版权所有 2014、2015、2016、2017、2017、Lydell 版权所有 (c) 2014、2015、2016、2017、Lydell
@@ -10499,6 +10480,25 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
+js-tokens 4.0.0 - MIT https://github.com/lydell/js-tokens#readme
+
+版权所有：2014、2015、2016、2017、2018、2018、2018、2018、)  (2014、2015、2016、2017、2018
+
+MIT 许可证 (MIT) 
+
+版权所有 (c) 2014、2015、2016、2017、2018©Lydell
+
+向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 js-yaml 3.14.0 - MIT https://github.com/nodeca/js-yaml
 
 Copyright (c) 2011-2015 by Vitaly Puzrin
@@ -10506,6 +10506,25 @@ Copyright (c) 2011-2015 by Vitaly Puzrin
  (MIT 许可证) 
 
 Copyright (C) 2011-2015 by Vitaly Puzrin
+
+向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+kind-of 4.0.0 - MIT https://github.com/jonschlinkert/kind-of
+
+版权所有 (c) 2014-2017，Jon Schlinkert 版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
+
+MIT 许可证 (MIT) 
+
+版权所有 (c) 2014-2017，Jon Schlinkert
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -10539,25 +10558,6 @@ MIT 许可证 (MIT)
 ---------------------------------------------------------
 
 kind-of 3.2.2 - MIT https://github.com/jonschlinkert/kind-of
-
-版权所有 (c) 2014-2017，Jon Schlinkert 版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
-
-MIT 许可证 (MIT) 
-
-版权所有 (c) 2014-2017，Jon Schlinkert
-
-向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
-
-上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
-
-本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-kind-of 4.0.0 - MIT https://github.com/jonschlinkert/kind-of
 
 版权所有 (c) 2014-2017，Jon Schlinkert 版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
 
@@ -10633,24 +10633,6 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-loader-utils 1.2.3 - MIT https://github.com/webpack/loader-utils#readme
-
-版权所有 JS Foundation 和其他参与者
-
-版权所有 JS Foundation 和其他参与者
-
-向获取本软件及相关文档文件 (the'Software') 副本的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
-
-上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
-
-本软件"根据情况"提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。
-在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 loader-utils 1.4.0 - MIT https://github.com/webpack/loader-utils#readme
 
 版权所有 JS Foundation 和其他参与者
@@ -10669,11 +10651,29 @@ loader-utils 1.4.0 - MIT https://github.com/webpack/loader-utils#readme
 
 ---------------------------------------------------------
 
-locate-path 2.0.0 - MIT https://github.com/sindresorhus/locate-path#readme
+loader-utils 1.2.3 - MIT https://github.com/webpack/loader-utils#readme
+
+版权所有 JS Foundation 和其他参与者
+
+版权所有 JS Foundation 和其他参与者
+
+向获取本软件及相关文档文件 (the'Software') 副本的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。
+在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+locate-path 3.0.0 - MIT https://github.com/sindresorhus/locate-path#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
-MIT 许可证 (MIT) 
+MIT 许可证
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -10688,11 +10688,11 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-locate-path 3.0.0 - MIT https://github.com/sindresorhus/locate-path#readme
+locate-path 2.0.0 - MIT https://github.com/sindresorhus/locate-path#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
-MIT 许可证
+MIT 许可证 (MIT) 
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -11397,7 +11397,7 @@ mkdirp 0.5.5 - MIT https://github.com/substack/node-mkdirp#readme
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 版权所有 (c) 2015 版权 (c) Joshaven Copyright (c) 2014）（ (）C) Artyom Shal进行创作。
 版权所有 (2015) David 为 2015 年 2 月 2 日第二版 (c) 2014 年 3 月 3 日，Microsoft Corporation (2015 年 3 月) 2015 年版 (c) 。
@@ -11423,7 +11423,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 版权所有 (c) 2015 版权 (c) Joshaven Copyright (c) 2014）（ (）C) Artyom Shal进行创作。
 版权所有 (2015) David 为 2015 年 2 月 2 日第二版 (c) 2014 年 3 月 3 日，Microsoft Corporation (2015 年 3 月) 2015 年版 (c) 。
@@ -11725,11 +11725,11 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-normalize-url 3.3.0 - MIT https://github.com/sindresorhus/normalize-url#readme
+normalize-url 1.9.1 - MIT https://github.com/sindresorhus/normalize-url#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
-MIT 许可证
+MIT 许可证 (MIT) 
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -11744,11 +11744,11 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-normalize-url 1.9.1 - MIT https://github.com/sindresorhus/normalize-url#readme
+normalize-url 3.3.0 - MIT https://github.com/sindresorhus/normalize-url#readme
 
  () Sindre Sorhus (https://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
-MIT 许可证 (MIT) 
+MIT 许可证
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -11939,7 +11939,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-object-keys 1.1.1 - MIT https://github.com/ljharb/object-keys#readme
+object-keys 0.5.0 - MIT https://github.com/ljharb/object-keys
 
 版权所有 (c) 2013 Jordan Harband
 
@@ -11957,7 +11957,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-object-keys 0.5.0 - MIT https://github.com/ljharb/object-keys
+object-keys 1.1.1 - MIT https://github.com/ljharb/object-keys#readme
 
 版权所有 (c) 2013 Jordan Harband
 
@@ -13506,7 +13506,7 @@ postcss-unique-selectors 4.0.1 - MIT https://github.com/cssnano/cssnano
 
 ---------------------------------------------------------
 
-postcss-value-parser 3.3.1 - MIT https://github.com/TrySound/postcss-value-parser
+postcss-value-parser 4.1.0 - MIT https://github.com/TrySound/postcss-value-parser
 
  (一) 一百万 (，) 一 <trysound@yandex.ru>
 
@@ -13523,7 +13523,7 @@ postcss-value-parser 3.3.1 - MIT https://github.com/TrySound/postcss-value-parse
 
 ---------------------------------------------------------
 
-postcss-value-parser 4.1.0 - MIT https://github.com/TrySound/postcss-value-parser
+postcss-value-parser 3.3.1 - MIT https://github.com/TrySound/postcss-value-parser
 
  (一) 一百万 (，) 一 <trysound@yandex.ru>
 
@@ -13810,7 +13810,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-3.0.0 - MIT https://github.com/mafintosh/pump#readme
+2.0.1 - MIT https://github.com/mafintosh/pump#readme
 
 版权所有 (c) 2014 MathiasBuus
 
@@ -13828,7 +13828,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-2.0.1 - MIT https://github.com/mafintosh/pump#readme
+3.0.0 - MIT https://github.com/mafintosh/pump#readme
 
 版权所有 (c) 2014 MathiasBuus
 
@@ -14337,7 +14337,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-redux 4.0.1 - MIT http://redux.js.org/
+redux 4.0.5 - MIT http://redux.js.org/
 
 版权所有 (c) 2015-present Dan Abramov
 
@@ -14356,7 +14356,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-redux 4.0.5 - MIT http://redux.js.org/
+redux 4.0.1 - MIT http://redux.js.org/
 
 版权所有 (c) 2015-present Dan Abramov
 
@@ -14431,25 +14431,6 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-regenerator-runtime 0.11.1 - MIT
-
-
-版权所有 (c) 2014-present， Facebook， Inc.
-
-MIT 许可证
-
-版权 (c) <year><copyright holders>
-
-向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
-
-上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
-
-本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 regenerator-runtime 0.13.5 - MIT
 
 
@@ -14465,6 +14446,25 @@ MIT 许可证
 
 本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+regenerator-runtime 0.11.1 - MIT
+
+
+版权所有 (c) 2014-present， Facebook， Inc.
+
+MIT 许可证
+
+版权 (c) <year><copyright holders>
+
+向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
 
 ---------------------------------------------------------
 
@@ -14978,7 +14978,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-schema-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
+schema-utils 1.0.0 - MIT https://github.com/webpack-contrib/schema-utils
 
 版权所有 JS Foundation 和其他参与者
 
@@ -14996,7 +14996,7 @@ schema-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
 
 ---------------------------------------------------------
 
-schema-utils 1.0.0 - MIT https://github.com/webpack-contrib/schema-utils
+schema-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
 
 版权所有 JS Foundation 和其他参与者
 
@@ -15696,25 +15696,6 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-strip-ansi 3.0.1 - MIT https://github.com/chalk/strip-ansi
-
- () Sindre Sorhus (http://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
-
-MIT 许可证 (MIT) 
-
-版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
-
-向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
-
-上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
-
-本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 strip-ansi 4.0.0 - MIT https://github.com/chalk/strip-ansi#readme
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
@@ -15739,6 +15720,25 @@ strip-ansi 5.2.0 - MIT https://github.com/chalk/strip-ansi#readme
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
 MIT 许可证
+
+版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
+
+向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或暗示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。 在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+strip-ansi 3.0.1 - MIT https://github.com/chalk/strip-ansi
+
+ () Sindre Sorhus (http://sindresorhus.com) 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
+
+MIT 许可证 (MIT) 
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -15863,7 +15863,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-supports-color 5.5.0 - MIT https://github.com/chalk/supports-color#readme
+supports-color 6.1.0 - MIT https://github.com/chalk/supports-color#readme
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -15882,7 +15882,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-supports-color 6.1.0 - MIT https://github.com/chalk/supports-color#readme
+supports-color 5.5.0 - MIT https://github.com/chalk/supports-color#readme
 
 版权所有 (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) 
 
@@ -16709,7 +16709,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-util 0.11.1 - MIT https://github.com/defunctzombie/node-util
+util 0.10.3 - MIT https://github.com/defunctzombie/node-util
 
 版权所有 CopyrightEnt， Inc. 和其他节点参与者。
 
@@ -16725,7 +16725,7 @@ util 0.11.1 - MIT https://github.com/defunctzombie/node-util
 
 ---------------------------------------------------------
 
-util 0.10.3 - MIT https://github.com/defunctzombie/node-util
+util 0.11.1 - MIT https://github.com/defunctzombie/node-util
 
 版权所有 CopyrightEnt， Inc. 和其他节点参与者。
 

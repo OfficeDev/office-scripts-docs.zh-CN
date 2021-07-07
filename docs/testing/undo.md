@@ -1,14 +1,14 @@
 ---
 title: 撤消由脚本Office所做的更改
 description: 使用脚本的版本历史记录Excel web 版运行脚本来撤消所做的更改。
-ms.date: 01/08/2019
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: f9f22d4879f8a02c00a5bac9f58d9aa36ae03e38
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 86ce59ea4715ac6d8b56ca8d165a1e0451e4ee22
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545544"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313965"
 ---
 # <a name="undo-the-changes-made-by-office-scripts"></a>撤消由脚本Office所做的更改
 
@@ -22,7 +22,7 @@ Office版本历史记录是一种通过自定义 UI 还原旧工作簿Excel方�
 
 1. 转到文件  >  **信息**  >  **版本历史记录**。
 2. 选择在运行脚本之前保存的版本。
-3. 按 **"还原"。**
+3. 选择"**还原"。**
 
 ## <a name="see-also"></a>另请参阅
 
