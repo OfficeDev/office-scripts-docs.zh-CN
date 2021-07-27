@@ -1,14 +1,14 @@
 ---
 title: 输出Excel JSON
 description: 了解如何将Excel数据输出为 JSON，以用于Power Automate。
-ms.date: 06/29/2021
+ms.date: 07/22/2021
 localization_priority: Normal
-ms.openlocfilehash: 63379d1323f5e2084f4aa39af3f4b6e5e6d7e7bb
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 7718cba87a93a6384042ee2b09758adf7797cee5
+ms.sourcegitcommit: 8dfb1d94f05901e9627b9b6a7920caf1962c087b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313944"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53547320"
 ---
 # <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>输出Excel数据作为 JSON，用于Power Automate
 
@@ -48,19 +48,19 @@ function main(workbook: ExcelScript.Workbook): TableData[] {
 
   // Create an array of JSON objects that match the row structure.
   let returnObjects: TableData[] = [];
-  if (table.getRowCount() > 0)  {
+  if (table.getRowCount() > 0) {
     returnObjects = returnObjectFromValues(texts);
   }
 
   // Log the information and return it for a Power Automate flow.
-  console.log(JSON.stringify(returnObjects));  
+  console.log(JSON.stringify(returnObjects));
   return returnObjects
 }
 
-// This function converts a 2D-array of values into a generic JSON object.
+// This function converts a 2D array of values into a generic JSON object.
 // In this case, we have defined the TableData object, but any similar interface would work.
 function returnObjectFromValues(values: string[][]): TableData[] {
-  let objectArray = [];
+  let objectArray: TableData[] = [];
   let objectKeys: string[] = [];
   for (let i = 0; i < values.length; i++) {
     if (i === 0) {
@@ -73,10 +73,10 @@ function returnObjectFromValues(values: string[][]): TableData[] {
       object[objectKeys[j]] = values[i][j]
     }
 
-    objectArray.push(object);
+    objectArray.push(object as TableData);
   }
 
-  return objectArray as TableData[];
+  return objectArray;
 }
 
 interface TableData {
@@ -158,18 +158,18 @@ function main(workbook: ExcelScript.Workbook): TableData[] {
 
   // Create an array of JSON objects that match the row structure.
   let returnObjects: TableData[] = [];
-  if (table.getRowCount() > 0)  {
+  if (table.getRowCount() > 0) {
     returnObjects = returnObjectFromValues(range);
   }
 
   // Log the information and return it for a Power Automate flow.
-  console.log(JSON.stringify(returnObjects));  
+  console.log(JSON.stringify(returnObjects));
   return returnObjects
 }
 
 function returnObjectFromValues(range: ExcelScript.Range): TableData[] {
   let values = range.getTexts();
-  let objectArray = [];
+  let objectArray : TableData[] = [];
   let objectKeys: string[] = [];
   for (let i = 0; i < values.length; i++) {
     if (i === 0) {
@@ -187,9 +187,9 @@ function returnObjectFromValues(range: ExcelScript.Range): TableData[] {
       }
     }
 
-    objectArray.push(object);
+    objectArray.push(object as TableData);
   }
-  return objectArray as TableData[];
+  return objectArray;
 }
 
 interface TableData {

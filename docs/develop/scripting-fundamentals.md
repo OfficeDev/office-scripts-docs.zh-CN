@@ -3,12 +3,12 @@ title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
 ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: 9c3c10e283e40f1e719e73106bcdacfcff44dbc9
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 8c153a6e9d5202a2c1f5a7db5c6bad760d211994
+ms.sourcegitcommit: de25e0657e7404bb780851b52633222bc3f80e52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074506"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "53529230"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel 网页版中 Office 脚本的脚本基础
 
@@ -326,3 +326,4 @@ function main(workbook: ExcelScript.Workbook) {
 - [Office 脚本 API 参考](/javascript/api/office-scripts/overview)
 - [在 Office 脚本中使用内置的 JavaScript 对象](javascript-objects.md)
 - [Office 脚本中的最佳实践](best-practices.md)
+- [Office 脚本开发中心](https://developer.microsoft.com/office-scripts)

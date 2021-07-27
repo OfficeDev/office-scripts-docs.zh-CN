@@ -4323,7 +4323,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.227 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
+@types/office-js-preview 1.0.231 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
 版权所有 (c) Microsoft Corporation。
 
@@ -6735,26 +6735,6 @@ color-string 1.5.3 - MIT https://github.com/Qix-/color-string#readme
 
 ---------------------------------------------------------
 
-将 2.20.3 - MIT https://github.com/tj/commander.js#readme
-
-版权所有 (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
-
- (MIT 许可证) 
-
-版权所有 (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
-
-向获取本软件及相关文档文件 (the'Software') 副本的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
-
-上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
-
-本软件"根据情况"提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。
-在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 将 2.17.1 - MIT https://github.com/tj/commander.js#readme
 
 版权所有 (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
@@ -6776,6 +6756,26 @@ color-string 1.5.3 - MIT https://github.com/Qix-/color-string#readme
 ---------------------------------------------------------
 
 将 2.19.0 - MIT https://github.com/tj/commander.js#readme
+
+版权所有 (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
+
+ (MIT 许可证) 
+
+版权所有 (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
+
+向获取本软件及相关文档文件 (the'Software') 副本的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
+
+上述版权声明和此权限声明应包含在本软件的所有副本或大部分部分中。
+
+本软件"根据情况"提供，不提供任何明示或默示的担保，包括但不限于适用性、适合特定用途和不允许任何用途的担保。
+在任何情况下，作者或版权持有者都不应承担任何索赔、损害或其他责任，无论是作为合同、损害或以其他方式引起的、来自本软件或本软件的使用或其他交易。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+将 2.20.3 - MIT https://github.com/tj/commander.js#readme
 
 版权所有 (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -7194,7 +7194,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-cssesc 2.0.0 - MIT https://mths.be/cssesc
+cssesc 3.0.0 - MIT https://mths.be/cssesc
 
 版权所有 Mathias Bynens <https://mathiasbynens.be/>
 
@@ -7211,7 +7211,7 @@ cssesc 2.0.0 - MIT https://mths.be/cssesc
 
 ---------------------------------------------------------
 
-cssesc 3.0.0 - MIT https://mths.be/cssesc
+cssesc 2.0.0 - MIT https://mths.be/cssesc
 
 版权所有 Mathias Bynens <https://mathiasbynens.be/>
 
@@ -7552,14 +7552,14 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-define-property 1.0.0 - MIT https://github.com/jonschlinkert/define-property
+define-property 2.0.2 - MIT https://github.com/jonschlinkert/define-property
 
-版权所有 (c) 2015，2017，Jon Schlinkert。
-版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
+版权所有 (c) 2015-2018，Jon Schlinkert。
+版权所有 (c) 2018， Jon Schlinkert (https://github.com/jonschlinkert) 。
 
 MIT 许可证 (MIT) 
 
-版权所有 (c) 2015，2017，Jon Schlinkert
+版权所有 (c) 2015-2018，Jon Schlinkert。
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -7572,14 +7572,14 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-define-property 2.0.2 - MIT https://github.com/jonschlinkert/define-property
+define-property 1.0.0 - MIT https://github.com/jonschlinkert/define-property
 
-版权所有 (c) 2015-2018，Jon Schlinkert。
-版权所有 (c) 2018， Jon Schlinkert (https://github.com/jonschlinkert) 。
+版权所有 (c) 2015，2017，Jon Schlinkert。
+版权所有 (c) 2017， Jon Schlinkert (https://github.com/jonschlinkert) 。
 
 MIT 许可证 (MIT) 
 
-版权所有 (c) 2015-2018，Jon Schlinkert。
+版权所有 (c) 2015，2017，Jon Schlinkert
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -9931,14 +9931,14 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-版权所有 (c) 2014-2016，Jon Schlinkert 版权所有 (c) 2014-2015，Jon Schlinkert。
-版权所有 (c) 2016， Jon Schlinkert (https://github.com/jonschlinkert) 。
+版权所有 (c) 2014-present， Jon Schlinkert。
+版权所有 (c) 2018， Jon Schlinkert (https://github.com/jonschlinkert) 。
 
 MIT 许可证 (MIT) 
 
-版权所有 (c) 2014-2016，Jon Schlinkert
+版权所有 (c) 2014-present， Jon Schlinkert。
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -9951,14 +9951,14 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-版权所有 (c) 2014-present， Jon Schlinkert。
-版权所有 (c) 2018， Jon Schlinkert (https://github.com/jonschlinkert) 。
+版权所有 (c) 2014-2016，Jon Schlinkert 版权所有 (c) 2014-2015，Jon Schlinkert。
+版权所有 (c) 2016， Jon Schlinkert (https://github.com/jonschlinkert) 。
 
 MIT 许可证 (MIT) 
 
-版权所有 (c) 2014-present， Jon Schlinkert。
+版权所有 (c) 2014-2016，Jon Schlinkert
 
 向获得本软件副本及相关文档文件 ("Software") 的任何人员免费授予权限，以无限制地处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售本软件副本的权限，以及允许软件授权给的人员这样做，但需满足以下条件：
 
@@ -13421,7 +13421,7 @@ MIT 许可证 (MIT)
 
 ---------------------------------------------------------
 
-postcss-selector-parser 5.0.0 - MIT https://github.com/postcss/postcss-selector-parser
+postcss-selector-parser 6.0.2 - MIT https://github.com/postcss/postcss-selector-parser
 
 版权所有 (Ben Briggs) c (<beneb.info@gmail.com>http://beneb.info)
 
@@ -13438,7 +13438,7 @@ postcss-selector-parser 5.0.0 - MIT https://github.com/postcss/postcss-selector-
 
 ---------------------------------------------------------
 
-postcss-selector-parser 6.0.2 - MIT https://github.com/postcss/postcss-selector-parser
+postcss-selector-parser 5.0.0 - MIT https://github.com/postcss/postcss-selector-parser
 
 版权所有 (Ben Briggs) c (<beneb.info@gmail.com>http://beneb.info)
 
@@ -13881,7 +13881,7 @@ punycode 2.1.1 - MIT https://mths.be/punycode
 
 ---------------------------------------------------------
 
-punycode 1.4.1 - MIT https://mths.be/punycode
+punycode 1.3.2 - MIT https://mths.be/punycode
 
 版权所有 Mathias Bynens <https://mathiasbynens.be/>
 
@@ -13898,7 +13898,7 @@ punycode 1.4.1 - MIT https://mths.be/punycode
 
 ---------------------------------------------------------
 
-punycode 1.3.2 - MIT https://mths.be/punycode
+punycode 1.4.1 - MIT https://mths.be/punycode
 
 版权所有 Mathias Bynens <https://mathiasbynens.be/>
 
@@ -15615,7 +15615,7 @@ MIT 许可证
 
 ---------------------------------------------------------
 
-string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
 
 版权所有 CopyrightEnt， Inc. 和其他节点参与者。
 
@@ -15646,7 +15646,7 @@ Node.js许可使用，如下所示：
 
 ---------------------------------------------------------
 
-string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
 
 版权所有 CopyrightEnt， Inc. 和其他节点参与者。
 
