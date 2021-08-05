@@ -3,12 +3,12 @@ title: 对文件夹中的所有 Excel 文件运行脚本
 description: 了解如何对 OneDrive for Business 上文件夹中的所有 Excel 文件运行OneDrive for Business。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: bf9c0c486dacced5c3017b267ea65dfd215a5197
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: a595c31c9e0fa7066d6e18aff4d3778f727714b6
+ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313895"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53772321"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>对文件夹中的所有 Excel 文件运行脚本
 
@@ -81,13 +81,13 @@ function main(workbook: ExcelScript.Workbook) {
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="已完成的OneDrive for Business连接器Power Automate。":::
 1. 选择包含提取的工作簿的"Sales"文件夹。
-1. 若要确保仅选择工作簿，请选择"**新建步骤"，****然后选择"条件**"并设置以下值：
+1. 若要确保仅选择工作簿，请选择"**新建步骤"，** 然后选择"条件 **"。** 对条件使用以下值。
     1. **文件名** (OneDrive文件名值) 
     1. "ends with"
-    1. "xlsx"。
+    1. "xlsx"
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="The Power Automate condition block that applies subsequent actions to each file.":::
-1. Under the **If yes** branch， add the Excel Online (**Business)** connector with the Run **script** action. 对操作使用以下值：
+1. Under the **If yes** branch， add the Excel Online (**Business)** connector with the Run **script** action. 对操作使用以下值。
     1. **位置**：OneDrive for Business
     1. **文档库**：OneDrive
     1. **文件****： (** id OneDrive文件 ID 值) 

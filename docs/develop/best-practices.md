@@ -3,12 +3,12 @@ title: Office 脚本中的最佳实践
 description: 如何防止常见问题，并编写可Office输入或数据的稳固脚本。
 ms.date: 05/10/2021
 localization_priority: Normal
-ms.openlocfilehash: 0697e6fd1fa8f437a4a585d938254deb5a05f20c
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 45dd40ad2f88aecbf66db2a623d92ca81f73657c
+ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52546020"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53772307"
 ---
 # <a name="best-practices-in-office-scripts"></a>Office 脚本中的最佳实践
 
@@ -79,7 +79,7 @@ function main(workbook: ExcelScript.Workbook) {
   // Continue....
 }
 
-function inputPresent( workbook: ExcelScript.Workbook): boolean {
+function inputPresent(workbook: ExcelScript.Workbook): boolean {
   // These tables must be in the workbook for the script.
   const TargetTableName = 'Table1';
   const SourceTableName = 'Table2';
@@ -134,7 +134,7 @@ function main(workbook: ExcelScript.Workbook) {
 range.setValues(someLargeValues);
 ```
 
-如果 `someLargeValues` 大于 web Excel处理， `setValues()` 调用将失败。 脚本随后也会失败，出现 [运行时错误](../testing/troubleshooting.md#runtime-errors)。 语句 `try...catch` 使脚本能够识别此情况，而不会立即结束脚本并显示默认错误。
+如果 `someLargeValues` 大于Excel 网页版，调用 `setValues()` 将失败。 脚本随后也会失败，出现 [运行时错误](../testing/troubleshooting.md#runtime-errors)。 语句 `try...catch` 使脚本能够识别此情况，而不会立即结束脚本并显示默认错误。
 
 为脚本用户提供更好的体验的一个方法是向用户显示自定义错误消息。 以下代码段显示了 `try...catch` 一个语句，它记录更多的错误信息，以更好地帮助读者。
 

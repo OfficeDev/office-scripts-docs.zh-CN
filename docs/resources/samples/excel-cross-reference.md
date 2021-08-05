@@ -3,12 +3,12 @@ title: 跨引用Excel文件Power Automate
 description: 了解如何使用脚本Office脚本Power Automate交叉引用和格式化Excel文件。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 0776ce49cacecfa15339cc7c0cd4866daad789ff
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 3ee3b7851773384c9a51a041c0e93c70accbab7d
+ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313958"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53772314"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>跨引用Excel文件Power Automate
 
@@ -150,7 +150,7 @@ interface EventData {
 
 1. 登录到 [Power Automate](https://flow.microsoft.com)并创建新的 **即时云流**。
 1. 选择 **"手动触发流"，** 然后选择"创建 **"。**
-1. 使用 Run **脚本操作** 添加使用 **Excel Online (Business)** 连接器的新步骤。  对操作使用以下值：
+1. 使用 Run **脚本操作** 添加使用 **Excel Online (Business)** 连接器的新步骤。  对操作使用以下值。
     * **位置**：OneDrive for Business
     * **文档库**：OneDrive
     * **文件**：event-data.xlsx ([文件选择器选项](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)) 
@@ -158,14 +158,14 @@ interface EventData {
 
     :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="已完成的 Excel Online (Business) 连接器，用于 Power Automate。":::
 
-1. 通过运行脚本 **操作** 添加第二个使用 **Excel Online (Business)** 连接器 **的新** 步骤。 对操作使用以下值：
+1. 通过运行脚本 **操作** 添加第二个使用 **Excel Online (Business)** 连接器 **的新** 步骤。 对操作使用以下值。
     * **位置**：OneDrive for Business
     * **文档库**：OneDrive
     * **文件**：speaker-registration.xlsx ([文件选择器选项](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)) 
     * **脚本**：验证扬声器注册
 
     :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="已完成的 Excel Online (Business) 连接器，用于第二个脚本Power Automate。":::
-1. 此示例使用 Outlook 作为电子邮件客户端。 可以使用任何支持的电子邮件Power Automate连接器。 添加一 **个新** 步骤，该步骤使用 **Office 365 Outlook** 连接器和 **V2** (发送) 操作。 对操作使用以下值：
+1. 此示例使用 Outlook 作为电子邮件客户端。 可以使用任何支持的电子邮件Power Automate连接器。 添加一 **个新** 步骤，该步骤使用 **Office 365 Outlook** 连接器和 **V2** (发送) 操作。 对操作使用以下值。
     * **目标**：测试电子邮件帐户 (或个人) 
     * **主题**：事件验证结果
     * **正文**：结果 (_运行脚本 **2 中的**_ 动态) 

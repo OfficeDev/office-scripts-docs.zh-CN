@@ -3,12 +3,12 @@ title: Office 脚本的平台限制和要求
 description: 与脚本一Office脚本的资源限制和浏览器Excel web 版
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 7e81aaf2f96faeb67c815814fe3b7f1795651318
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 8b7afa02f73476e6e98f231a7a7162ad87607b37
+ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545579"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53772356"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Office 脚本的平台限制和要求
 
@@ -16,7 +16,7 @@ ms.locfileid: "52545579"
 
 ## <a name="browser-support"></a>浏览器支持
 
-Office脚本在任何支持 Web Office[的浏览器中工作](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452)。 但是，IE 11 版本 11 Internet Explorer不支持 (JavaScript) 。 [ES6 或更高版本中引入](https://www.w3schools.com/Js/js_es6.asp)的任何功能将不能与 IE 11 一起使用。 如果组织成员仍使用该浏览器，请务必在共享脚本时测试该环境中脚本。
+Office脚本在支持脚本[的任何浏览器中Office 网页版。](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) 但是，IE 11 版本 11 Internet Explorer不支持 (JavaScript) 。 [ES6 或更高版本中引入](https://www.w3schools.com/Js/js_es6.asp)的任何功能将不能与 IE 11 一起使用。 如果组织成员仍使用该浏览器，请务必在共享脚本时测试该环境中脚本。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -40,12 +40,12 @@ Office脚本在任何支持 Web Office[的浏览器中工作](https://support.mi
 
 ### <a name="excel"></a>Excel
 
-Excel通过脚本调用工作簿时，Web 应用程序具有以下限制：
+Excel 网页版通过脚本调用工作簿时，该限制具有以下限制：
 
 - 请求和响应限制为 **5MB。**
 - 范围限制为五百 **万个单元格**。
 
-如果在处理大型数据集时遇到错误，请尝试使用多个较小的范围，而不是较大的区域。 有关示例，请参阅编写 [大型数据集](../resources/samples/write-large-dataset.md) 示例。 您还可以使用 [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getspecialcells-celltype--cellvaluetype-) 等 API 来定位特定单元格，而不是大型区域。
+如果在处理大型数据集时遇到错误，请尝试使用多个较小的范围，而不是较大的区域。 有关示例，请参阅编写 [大型数据集](../resources/samples/write-large-dataset.md) 示例。 您还可以使用 [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getSpecialCells_cellType__cellValueType_) 等 API 来定位特定单元格，而不是大型区域。
 
 ### <a name="power-automate"></a>Power Automate
 
