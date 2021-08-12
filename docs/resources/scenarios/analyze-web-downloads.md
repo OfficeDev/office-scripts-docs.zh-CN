@@ -1,14 +1,14 @@
 ---
 title: Office脚本示例方案：分析 Web 下载
-description: 一个示例，在将信息组织到表中Excel工作簿中的原始 Internet 流量数据并确定源位置。
+description: 一个示例，该示例在将信息组织到表中Excel工作簿中的原始 Internet 流量数据并确定源位置。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: ec7ccd2a4f534be825ee4aa358f5d81becc53937
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: a3ad957492184e358015d6fed5e3850a55f153b6722d1cd02ee8e4f5b2e39f93
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846322"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office脚本示例方案：分析 Web 下载
 
@@ -16,14 +16,14 @@ ms.locfileid: "53313930"
 
 您的同事将原始数据上载到工作簿。 每周的数据集都有自己的工作表。 还有一个 **包含** 表和图表的"摘要"工作表显示一周过去一周的趋势。
 
-您将开发用于分析活动工作表中每周下载数据的脚本。 它将分析与每次下载关联的 IP 地址，并确定该地址是否来自美国。 答案将在工作表中作为布尔值插入 ("TRUE"或"FALSE") 条件格式将应用于这些单元格。 IP 地址位置结果将在工作表上汇总，并复制到摘要表中。
+您将开发用于分析活动工作表中每周下载数据的脚本。 它将分析与每次下载关联的 IP 地址，并确定该地址是否来自美国。 答案将在工作表中作为布尔值插入 ("TRUE"或"FALSE") 并将条件格式应用于这些单元格。 IP 地址位置结果将在工作表上汇总，并复制到摘要表中。
 
 ## <a name="scripting-skills-covered"></a>涵盖的脚本编写技能
 
 - 文本分析
 - 脚本中的子功能
 - 条件格式
-- 表格
+- 表
 
 ## <a name="setup-instructions"></a>设置说明
 

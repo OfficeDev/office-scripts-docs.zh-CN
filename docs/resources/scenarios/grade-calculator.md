@@ -3,12 +3,12 @@ title: Office脚本示例方案：成绩计算器
 description: 确定一类学生成绩的百分比和字母成绩的示例。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 2d98e68f37418ade238a707cb74cc7ccf47e8f59
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 9cef386939ee0740911247e4d494d0b19155577b03d275d026a433e2990d1a61
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313790"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847275"
 ---
 # <a name="office-scripts-sample-scenario-grade-calculator"></a>Office脚本示例方案：成绩计算器
 
@@ -176,7 +176,7 @@ ms.locfileid: "53313790"
 
 ## <a name="running-the-script"></a>运行脚本
 
-在唯 **一的工作表** 上运行成绩计算器脚本。 该脚本将总计成绩，并为每个学生分配一个信函成绩。 如果任何单个成绩的分数大于作业或测试的分数，则有问题的成绩将标记为红色，不计算总分。 此外，任何"A"成绩都用绿色突出显示，而"D"和"F"成绩用黄色突出显示。
+在唯 **一的工作表** 上运行成绩计算器脚本。 该脚本将总计成绩，并为每个学生分配一个信函成绩。 如果任何单个成绩的分数大于作业或测试的分数，则有问题的成绩标记为红色，不计算总分。 此外，任何"A"成绩都用绿色突出显示，而"D"和"F"成绩用黄色突出显示。
 
 ### <a name="before-running-the-script"></a>运行脚本之前
 

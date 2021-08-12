@@ -3,12 +3,12 @@ title: Office脚本的基本Excel web 版
 description: 要与 Excel web 版 中的脚本Office代码示例Excel web 版。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 3aaaa7fe8769f6dcd658ae91c577956b56033051
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 6d74d55556feb93e0f49da375b3c7896d439663f7f922e4ae135b6fdc6a40197
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313937"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847542"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Office脚本的基本Excel web 版
 
@@ -150,7 +150,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="collections"></a>收藏
+## <a name="collections"></a>集合
 
 这些示例处理工作簿中的对象集合。
 
@@ -233,7 +233,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-下一个示例将读取存储在 Excel 并将其转换为 JavaScript Date 对象。 它将日期 [的数字序列号用作](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript Date 的输入。
+下一个示例将读取存储在 Excel并将其转换为 JavaScript Date 对象。 它将日期 [的数字序列号用作](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript Date 的输入。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -321,9 +321,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="create-a-drop-down-list-using-data-validation"></a>使用数据验证创建下拉列表
 
-此脚本为单元格创建下拉选择列表。 它将所选区域的现有值用作列表的选项。
+此脚本为单元格创建下拉选择列表。 它使用所选区域的现有值作为列表的选项。
 
-:::image type="content" source="../../images/sample-data-validation.png" alt-text="显示包含颜色选项&quot;红色、蓝色、绿色&quot;且旁边有三个单元格的工作表，下拉列表中显示的选项相同。":::
+:::image type="content" source="../../images/sample-data-validation.png" alt-text="显示包含颜色选项&quot;红色、蓝色、绿色&quot;及其旁边的三个单元格的工作表，下拉列表中显示的选项相同。":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -417,7 +417,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="suggest-new-samples"></a>建议新示例
 
-我们欢迎您提出有关新示例的建议。 如果有一种有助于其他脚本开发人员的常见方案，请在页面底部的反馈部分告诉我们。
+我们欢迎您提出有关新示例的建议。 如果存在有助于其他脚本开发人员的常见方案，请在页面底部的反馈部分告诉我们。
 
 ## <a name="see-also"></a>另请参阅
 

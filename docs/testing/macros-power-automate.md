@@ -3,18 +3,18 @@ title: 在流中Power Automate文件
 description: 了解如何在流中使用宏文件或 xlsm Power Automate文件。
 ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 91e11424e4220a3e1f80cdd2711d05f219016147
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 67686ca5d677a2d04c47d6312a37fa6375bed4a2bef9ae7b6ee61bba2302bfb4
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847219"
 ---
-# <a name="how-to-use-macro-files-in-power-automate-flows"></a>如何在宏流中Power Automate文件
+# <a name="how-to-use-macro-files-in-power-automate-flows"></a>如何在流中Power Automate文件
 
-[Power Automate](https://flow.microsoft.com/)[流Excel](https://flow.microsoft.com/connectors/shared_excelonlinebusiness/excel-online-business/)连接器，以帮助将 Excel 文件与组织数据的其余部分以及应用程序（如 Teams、Outlook 和 SharePoint）连接。
+[Power Automate](https://flow.microsoft.com/)[流Excel](https://flow.microsoft.com/connectors/shared_excelonlinebusiness/excel-online-business/)连接器，以帮助将 Excel 文件与组织数据和应用（如 Teams、Outlook 和 SharePoint）连接。
 
-但是，无法从"文件"下拉列表中选择宏 (请参阅以下屏幕截图中的示例) 。
+但是，无法从"文件"下拉列表中选择宏文件， (以下屏幕截图中的) 。
 
 :::image type="content" source="../images/no-xlsm.png" alt-text="The Power Automate Run script action showing no macro file selected.显示的错误为&quot;File&quot;是必需的。":::
 

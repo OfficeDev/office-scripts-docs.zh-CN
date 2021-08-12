@@ -3,24 +3,24 @@ title: Office脚本文件存储和所有权
 description: 有关脚本Office和在所有者Microsoft OneDrive传输的信息。
 ms.date: 06/04/2021
 localization_priority: Normal
-ms.openlocfilehash: b7ccb3ceae99a3a10bb56d5a4e56cc869d99850e
-ms.sourcegitcommit: 7dcb13daa3a765b87295e5a453a8f123e17ee24a
+ms.openlocfilehash: 6343b5bad366d9e4c4f349622a33b062de9c8ddd7877c3d40a49635d6aaef9cf
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "52906785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847294"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Office脚本文件存储和所有权
 
 Office脚本作为 **.osts** 文件存储在你的Microsoft OneDrive。 它们独立于工作簿存储。 若要向其他人授予访问权限，[请与一个工作簿Excel脚本](excel.md#sharing-scripts)。 这意味着你要将脚本与文件链接，而不是附加它。 有权访问脚本Excel用户也能够查看、运行或制作脚本副本。
 
-除非你共享脚本，否则其他人无法访问它们。 你的OneDrive设置控制所有脚本 **.osts** 文件的共享访问和权限，而不受Excel设置。 无法从本地磁盘或自定义云位置链接脚本。 Office脚本仅识别并运行脚本（如果它在 OneDrive文件夹中或与工作簿共享）。
+除非你共享脚本，否则其他人无法访问它们。 你的OneDrive设置控制所有脚本 **.osts** 文件的共享访问和权限，独立于任何Excel设置。 无法从本地磁盘或自定义云位置链接脚本。 Office脚本仅识别并运行脚本（如果它在 OneDrive文件夹中或与工作簿共享）。
 
 ## <a name="file-storage"></a>文件存储
 
 You Office Scripts are stored in your OneDrive. **.osts** 文件位于 **/Documents/Office Scripts/** 文件夹中。 对这些 **.osts** 文件进行的任何编辑（如重命名或删除文件）都将反映在代码编辑器和脚本库中。
 
-与工作簿之一共享的脚本将保留在脚本创建者的OneDrive。 在 OneDrive 中运行共享脚本时，不会将文件复制到任何本地或Excel。 代码 **编辑器的"创建** 副本"按钮会将脚本的单独副本保存在OneDrive。 对副本所做的更改不会影响原始脚本。
+与工作簿之一共享的脚本将保留在脚本创建者的OneDrive。 在 Excel 中运行共享脚本时，它们不会复制到任何本地或OneDrive文件夹。 代码 **编辑器的"创建** 副本"按钮会将脚本的单独副本保存在OneDrive。 对副本所做的更改不会影响原始脚本。
 
 ### <a name="restore-deleted-scripts"></a>还原已删除的脚本
 
@@ -28,7 +28,7 @@ You Office Scripts are stored in your OneDrive. **.osts** 文件位于 **/Docume
 
 已删除的脚本未与工作簿共享。 还原脚本时，它不会 **保留** 其脚本访问权限。 你将需要再次共享脚本。
 
-还原的脚本仍像预期的那样与Power Automate工作。 无需重新创建流连接器。
+还原的脚本仍像预期的那样与Power Automate一工作。 无需重新创建流连接器。
 
 ## <a name="file-ownership-and-retention"></a>文件所有权和保留
 

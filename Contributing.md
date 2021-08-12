@@ -15,8 +15,8 @@
 
 * 进行小幅度的更改，[通过 GitHub 参与](#contribute-using-github)。
 * 进行大幅度的更改，或更改涉及代码，[通过 Git 参与](#contribute-using-git)。
-* 报告 [GitHub 问题的文档错误](https://github.com/OfficeDev/office-scripts-docs/issues)。
-* 请求 [GitHub 问题的新文档](https://github.com/OfficeDev/office-scripts-docs/issues)。
+* 报告文档错误GitHub[问题](https://github.com/OfficeDev/office-scripts-docs/issues)。
+* 请求新文档GitHub[问题](https://github.com/OfficeDev/office-scripts-docs/issues)。
 
 ## <a name="contribute-using-github"></a>通过 GitHub 参与
 

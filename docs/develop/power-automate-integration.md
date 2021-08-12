@@ -1,40 +1,40 @@
 ---
-title: 使用Office运行 Power Automate
+title: 使用Office运行脚本Power Automate
 description: 如何获取Office脚本Excel web 版工作流Power Automate脚本。
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 96b07501e07383ace5ff88a8bc6b64ef145ebd5e
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 61b43904cbc46b97a0102230c9c87c1051edd1516668f42fbded63c53c958de9
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846516"
 ---
-# <a name="run-office-scripts-with-power-automate"></a>使用Office运行 Power Automate
+# <a name="run-office-scripts-with-power-automate"></a>使用Office运行脚本Power Automate
 
 [Power Automate，](https://flow.microsoft.com)可以将Office脚本添加到更大的自动化工作流。 可以使用Power Automate操作，如将电子邮件内容添加到工作表表中，或在项目管理工具中基于工作簿注释创建操作。
 
 ## <a name="get-started"></a>入门
 
-如果你刚开始Power Automate，我们建议你访问入门[Power Automate。](/power-automate/getting-started) 在那里，你可以了解有关所有可用的自动化可能性的信息。 此处的文档重点介绍脚本Office脚本Power Automate以及该脚本如何有助于改进Excel体验。
+如果你刚开始Power Automate，我们建议你访问入门[Power Automate。](/power-automate/getting-started) 在那里，你可以了解有关所有可用的自动化可能性的信息。 此处的文档重点介绍脚本Office脚本Power Automate以及它如何有助于改进Excel体验。
 
-若要开始Power Automate脚本Office脚本，请按照教程[开始将脚本与脚本Power Automate。](../tutorials/excel-power-automate-manual.md) 这将教您如何创建调用简单脚本的流。 完成该教程和自动运行的[Power Automate](../tutorials/excel-power-automate-trigger.md)流教程中的将数据传递到脚本后，请返回此处，详细了解如何将 Office 脚本连接到 Power Automate 流。
+若要开始组合Power Automate脚本Office脚本，请按照教程[开始将脚本与脚本Power Automate。](../tutorials/excel-power-automate-manual.md) 这将教您如何创建调用简单脚本的流。 完成本教程和自动运行的 Power Automate 流教程中的"将数据传递到脚本["](../tutorials/excel-power-automate-trigger.md)教程后，请返回此处，详细了解如何将 Office Scripts 连接到 Power Automate 流。
 
 ## <a name="excel-online-business-connector"></a>ExcelOnline (Business) 连接器
 
-[连接器](/connectors/connectors)是应用程序与Power Automate之间的桥梁。 使用[Excel Online (Business) 连接器](/connectors/excelonlinebusiness)，流可以访问Excel工作簿。 通过"运行脚本"操作，您可以调用Office工作簿可访问的任何脚本。 还可以为脚本提供输入参数，以便流提供数据，或让脚本返回流中稍后步骤的信息。
+[连接器](/connectors/connectors)是应用程序与Power Automate之间的桥梁。 The [Excel Online (Business) connector](/connectors/excelonlinebusiness) gives your flows access to Excel workbooks. 通过"运行脚本"操作，您可以调用Office工作簿可访问的任何脚本。 还可以为脚本提供输入参数，以便流提供数据，或让脚本返回流中稍后步骤的信息。
 
 > [!IMPORTANT]
-> "运行脚本"操作为使用 Excel 连接器的人提供对工作簿及其数据的重要访问权限。 此外，执行外部 API 调用的脚本存在安全风险，如外部从 Power Automate[中Power Automate。](external-calls.md) 如果你的管理员关注高度敏感数据的曝光，他们可以通过 Excel 脚本管理员控制来关闭 Excel Online 连接器或Office脚本Office[访问](/microsoft-365/admin/manage/manage-office-scripts-settings)。
+> "运行脚本"操作使使用此连接器Excel对工作簿及其数据的重要访问权限。 此外，执行外部 API 调用的脚本存在安全风险，如外部从 Power Automate 中[Power Automate。](external-calls.md) 如果你的管理员关注高度敏感数据的曝光，他们可以通过 Excel Scripts 管理员控制来关闭 Excel Online 连接器或Office[脚本Office访问](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>脚本流中的数据传输
 
-Power Automate允许你在流的步骤之间传递数据片段。 可以将脚本配置为接受所需的任何类型的信息，并返回流中所需的工作簿中的内容。 通过向函数添加参数来指定脚本的输入 (`main` 以及 `workbook: ExcelScript.Workbook`) 。 脚本的输出通过向 添加返回类型进行声明 `main` 。
+Power Automate允许你在流的步骤之间传递数据片段。 可以将脚本配置为接受所需的任何类型的信息，并返回流中所需的工作簿中的内容。 通过向函数添加参数来指定脚本的 (`main` 以及 `workbook: ExcelScript.Workbook`) 。 脚本的输出通过向 添加返回类型进行声明 `main` 。
 
 > [!NOTE]
 > 当您在流中创建"Run Script"块时，将填充接受的参数和返回的类型。 如果更改脚本的参数或返回类型，则需要恢复流的"运行脚本"块。 这可确保正确分析数据。
 
-以下各节介绍用于脚本的输入和输出的详细信息Power Automate。 如果你想要实践学习本主题的方法，请尝试在自动运行的 Power Automate 流教程中将数据传递到[](../tutorials/excel-power-automate-trigger.md)脚本，或浏览自动[任务](../resources/scenarios/task-reminders.md)提醒示例方案。
+以下各节介绍用于脚本的输入和输出的详细信息Power Automate。 如果你想要实践学习本主题的方法，请尝试在自动运行的[Power Automate](../tutorials/excel-power-automate-trigger.md)流教程中将数据传递到脚本，或浏览自动任务[提醒示例方案](../resources/scenarios/task-reminders.md)。
 
 ### <a name="main-parameters-pass-data-to-a-script"></a>`main` 参数：将数据传递给脚本
 
@@ -77,7 +77,7 @@ Power Automate允许你在流的步骤之间传递数据片段。 可以将脚�
     function main(workbook: ExcelScript.Workbook): {name: string, email: string}
     ```
 
-9. 允许使用可选参数，并且可以使用可选修饰符参数进行 (`?` 例如 `function main(workbook: ExcelScript.Workbook, Name?: string)` ，) 。
+9. 允许使用可选参数，并且可以使用可选修饰符参数 `?` (例如 `function main(workbook: ExcelScript.Workbook, Name?: string)` ，) 。
 
 10. 允许默认参数值 (例如 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` 。
 

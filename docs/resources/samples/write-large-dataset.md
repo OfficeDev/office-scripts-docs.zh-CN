@@ -3,12 +3,12 @@ title: 编写大型数据集
 description: 了解如何在脚本中将大型数据集拆分为Office操作。
 ms.date: 05/13/2021
 localization_priority: Normal
-ms.openlocfilehash: 06abb58c61c18620d638ab3eb61ea68398bf20aa
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: ec058bb1e3aabea52b0127c26b4c4a1352914fb575105ff4a90f82b222d6251d
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847582"
 ---
 # <a name="write-a-large-dataset"></a>编写大型数据集
 
@@ -18,7 +18,7 @@ ms.locfileid: "52545621"
 
 ## <a name="sample-code-write-a-large-dataset"></a>示例代码：编写大型数据集
 
-此脚本以较小的部分写入区域行。 它选择一次写入 1000 个单元格。 在空白工作表上运行脚本以查看更新批处理的运行情况。 控制台输出进一步深入了解发生了什么。
+此脚本以较小的部分写入区域行。 它选择一次写入 1000 个单元格。 在空白工作表上运行脚本以查看更新批处理的运行情况。 控制台输出可进一步深入了解发生了什么。
 
 > [!NOTE]
 > 可以通过更改 的值来更改正在写入的总行数 `SAMPLE_ROWS` 。 可以通过更改 的值，将要写入的单元格数更改为单个操作 `CELLS_IN_BATCH` 。

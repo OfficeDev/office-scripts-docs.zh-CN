@@ -3,12 +3,12 @@ title: Office 脚本中的最佳实践
 description: 如何防止常见问题，并编写可Office输入或数据的稳固脚本。
 ms.date: 05/10/2021
 localization_priority: Normal
-ms.openlocfilehash: 45dd40ad2f88aecbf66db2a623d92ca81f73657c
-ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
+ms.openlocfilehash: cdea3583120109cda05c05cb7c4f908e929bbff0d37e615b1820f67b57fbe24f
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53772307"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846615"
 ---
 # <a name="best-practices-in-office-scripts"></a>Office 脚本中的最佳实践
 
@@ -31,7 +31,7 @@ if (indexSheet) {
 }
 ```
 
-TypeScript `?` 运算符在调用方法之前检查对象是否存在。 如果不需要在对象不存在时执行任何特殊操作，这可以使代码更加简化。
+TypeScript `?` 运算符在调用方法之前检查对象是否存在。 如果无需在对象不存在时执行任何特殊操作，这可以使代码更加简化。
 
 ```TypeScript
 // The ? ensures that the delete() API is only called if the object exists.
@@ -66,7 +66,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 如果验证发生在单独的函数中，您仍必须通过从 函数发出 语句 `return` 来结束 `main` 脚本。 从子函数返回不会结束脚本。
 
-以下脚本与上一脚本具有相同的行为。 区别在于函数 `main` 调用 函数 `inputPresent` 来验证所有内容。 `inputPresent` 返回一个 boolean (`true` 或 `false`) 以指示是否存在所有必需的输入。 函数 `main` 使用该布尔值决定继续或结束脚本。
+以下脚本具有与上一脚本相同的行为。 区别在于函数 `main` 调用 函数 `inputPresent` 来验证所有内容。 `inputPresent` 返回一个 boolean (`true` 或 `false`) 以指示是否存在所有必需的输入。 函数 `main` 使用该布尔值决定继续或结束脚本。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -100,9 +100,9 @@ function inputPresent(workbook: ExcelScript.Workbook): boolean {
 
 ## <a name="when-to-use-a-throw-statement"></a>何时使用 `throw` 语句
 
-语句 [`throw`](https://developer.mozilla.org/docs/web/javascript/reference/statements/throw) 指示发生了意外错误。 它立即结束代码。 大多数情况下，不需要从 `throw` 脚本执行。 通常，脚本会自动通知用户脚本由于问题无法运行。 在大多数情况下，用一条错误消息和函数中的语句结束 `return` 脚本 `main` 就足够了。
+语句 [`throw`](https://developer.mozilla.org/docs/web/javascript/reference/statements/throw) 指示发生了意外错误。 它立即结束代码。 大多数情况下，不需要从 `throw` 脚本执行。 通常，脚本会自动通知用户脚本由于问题无法运行。 在大多数情况下，用一条错误消息和函数中的语句结束脚本 `return` `main` 就足够了。
 
-但是，如果您的脚本作为流Power Automate运行，您可能需要阻止该流继续运行。 `throw`语句将停止脚本，并指示流也停止。
+但是，如果您的脚本作为流Power Automate运行，您可能需要阻止该流继续。 `throw`语句将停止脚本，并指示流也停止。
 
 以下脚本显示如何使用表 `throw` 检查示例中的 语句。
 

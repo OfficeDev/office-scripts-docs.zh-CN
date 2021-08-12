@@ -5,12 +5,12 @@ title: Office 脚本文档
 description: 在 Excel 网页版中学习 Office 脚本的资源，包括教程、概念文章和代码示例。
 ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: 095fffbc0b92f4efb5dcdcde1cd5970d6fd3c3f1
-ms.sourcegitcommit: de25e0657e7404bb780851b52633222bc3f80e52
+ms.openlocfilehash: 108642efda29aa9d794b1202befda0854f5db6305f6c93ee4038727016acebb0
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "53529216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847109"
 ---
 # <a name="office-scripts-documentation"></a>Office 脚本文档
 
@@ -74,7 +74,7 @@ ms.locfileid: "53529216"
 
 <h2>其他资源</h2>
 <p>使用以下资源了解 Office 脚本用于与 Excel 网页版中的工作簿进行交互的 API，询问有关 Excel 网页版 Office 脚本的问题，或请求适用于 Excel 网页版的功能。</p>
-<ul class="panelContent cardsF cols cols3" style="display:flex!important;">
+<ul class="panelContent cardsF cols cols3">
     <li>
         <div class="cardSize">
             <div class="cardPadding">

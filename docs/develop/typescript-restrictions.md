@@ -3,16 +3,16 @@ title: 脚本中的 TypeScript Office限制
 description: TypeScript 编译器和 linter 的特定信息，Office脚本代码编辑器。
 ms.date: 07/14/2021
 localization_priority: Normal
-ms.openlocfilehash: 530314b624ef4674de60e5cfac7735c90044fb56
-ms.sourcegitcommit: de25e0657e7404bb780851b52633222bc3f80e52
+ms.openlocfilehash: ea7b9e34b09409fbe7b4cfdab221a59d50246773167fbe6d1c64bbd61fd0b2df
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "53529223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847038"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>脚本中的 TypeScript Office限制
 
-Office脚本使用 TypeScript 语言。 在大多数情况下，任何 TypeScript 或 JavaScript 代码都适用于Office脚本。 但是，代码编辑器会强制执行一些限制，以确保脚本一致且符合您的工作簿Excel运行。
+Office脚本使用 TypeScript 语言。 大多数情况下，任何 TypeScript 或 JavaScript 代码都适用于Office脚本。 但是，代码编辑器会强制执行一些限制，以确保脚本的运行一致且符合您的Excel要求。
 
 ## <a name="no-any-type-in-office-scripts"></a>在脚本中，没有"Office"类型
 
@@ -20,19 +20,19 @@ Office脚本使用 TypeScript 语言。 在大多数情况下，任何 TypeScrip
 
 ### <a name="explicit-any"></a>显式 `any`
 
-您不能在脚本脚本中显式声明Office类型 `any` (，即 `let value: any;`) 。 类型 `any` 导致由事件处理时Excel。 例如， `Range` 需要知道值是 、 `string` 或 `number` `boolean` 。 如果脚本中的类型明确定义为 (，在运行脚本脚本之前) 出现编译时 `any` 错误。
+您不能在脚本脚本中显式声明Office类型 `any` (，即 `let value: any;`) 。 类型 `any` 在由 Excel 处理时Excel。 例如， `Range` 需要知道值是 、 `string` 或 `number` `boolean` 。 如果在脚本中将任何变量明确定义为 (，在运行脚本脚本之前) 出现编译时 `any` 错误。
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的显式&quot;any&quot;消息。":::
 
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="控制台窗口中的显式&quot;any&quot;错误。":::
 
-在上一个屏幕截图 `[2, 14] Explicit Any is not allowed` 中，指示#2、列#14定义 `any` 类型。 这可以帮助您找到错误。
+在上一个屏幕截图中，指示#2 `[2, 14] Explicit Any is not allowed` 列#14定义 `any` 类型。 这可以帮助您找到错误。
 
 若要解决此问题，请始终定义变量的类型。 如果不确定变量的类型，可以使用联合 [类型](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html)。 对于保留值的变量（可以是 、 或 (值的类型是以下值之一 `Range` `string` `number` `boolean` `Range` `string | number | boolean`) 。
 
 ### <a name="implicit-any"></a>隐式 `any`
 
-TypeScript 变量类型可以 [隐式](https://www.typescriptlang.org/docs/handbook/type-inference.html) 定义。 如果 TypeScript 编译器无法确定变量 (或者因为类型未显式定义或类型推断不可行) ，则它是隐式的，您将收到编译 `any` 时错误。
+TypeScript 变量类型可以 [隐式](https://www.typescriptlang.org/docs/handbook/type-inference.html) 定义。 如果 TypeScript 编译器无法确定变量 (或者由于类型未显式定义或类型推断不可行) ，则它是隐式的，您将收到编译 `any` 时错误。
 
 :::image type="content" source="../images/implicit-any-editor-message.png" alt-text="代码编辑器悬停文本中的隐式&quot;any&quot;消息。":::
 
@@ -41,7 +41,7 @@ TypeScript 变量类型可以 [隐式](https://www.typescriptlang.org/docs/handb
 * 将变量分配给隐式可识别的类型 (`let value = 5;` 或 `let value = workbook.getWorksheet();`) 。
 * 显式键入变量 `let value: number;` () 
 
-## <a name="no-inheriting-office-script-classes-or-interfaces"></a>不继承Office脚本类或接口
+## <a name="no-inheriting-office-script-classes-or-interfaces"></a>没有继承Office脚本类或接口
 
 在脚本中创建的类和Office无法[扩展](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance)或实现Office脚本类或接口。 换句话说，命名空间中 `ExcelScript` 没有任何内容可以有子类或子接口。
 
@@ -83,7 +83,7 @@ let filteredArray = myArray.filter((x) => {
 
 ## <a name="unions-of-excelscript-types-and-user-defined-types-arent-supported"></a>不支持 `ExcelScript` 类型和用户定义类型的联合
 
-Office脚本在运行时从同步代码块转换为异步代码块。 脚本创建者将隐藏通过 [承诺与](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) 工作簿的通信。 此转换不支持包含 [类型和](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) 用户定义类型的 `ExcelScript` 联合类型。 在这种情况下，将返回到 脚本，但脚本Office无法预期它，并且脚本创建者无法与 `Promise` `Promise` 交互。
+Office脚本在运行时从同步代码块转换为异步代码块。 脚本创建者将隐藏通过 [承诺与](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) 工作簿的通信。 此转换不支持包含 [类型和](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) 用户定义类型的 `ExcelScript` 联合类型。 在这种情况下，将 返回到 脚本，但 Office 编译器不会期望它，并且脚本创建者无法与 `Promise` `Promise` 交互。
 
 下面的代码示例演示自定义接口和 `ExcelScript.Table` 自定义接口之间的不受支持的 `MyTable` 联合。
 

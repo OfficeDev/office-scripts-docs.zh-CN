@@ -1,14 +1,14 @@
 ---
 title: 对工作表中的空行计数
-description: 了解如何使用 Office 脚本检测工作表中是否有空行而不是数据，然后报告要用于数据流的空白Power Automate计数。
+description: 了解如何使用 Office Scripts 检测工作表中是否有空行而不是数据，然后报告要用于数据流的空白Power Automate计数。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: e5b60779d2ca2de5f4cf4e03ddd6ff7372515ad6
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 1aea3670d1bc0b50d7a7dd8d55124049c8871b413b7400b7eaf44df714e94f79
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846981"
 ---
 # <a name="count-blank-rows-on-sheets"></a>对工作表中的空行计数
 

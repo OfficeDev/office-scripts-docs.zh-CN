@@ -3,12 +3,12 @@ title: 使用脚本跨表Office行
 description: 了解如何通过保存筛选器，然后处理和重新应用筛选器来跨表移动行。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 860521de166108d5a8355ea246c1bfe77e0e064b
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: ad9d159709c27d2bcc7f7ee4f1fc6886a8d12dd6ae21d17d6eb3259aaa8d7a49
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847435"
 ---
 # <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>通过保存筛选器，然后处理和重新应用筛选器，跨表移动行
 
@@ -111,4 +111,4 @@ function main(workbook: ExcelScript.Workbook) {
 [观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/_3t3Pk4i2L0)。 视频解决方案中显示了两个脚本。 主要区别是如何选择行。
 
 * 第一个变量中，通过应用表筛选器并读取可见区域来选择行。
-* 第二步，通过读取值并提取行值来选择行 (此页上的示例使用行) 。
+* 第二步，通过读取值并提取行值来选择行 (这是此页上的示例使用行) 。

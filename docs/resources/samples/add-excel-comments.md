@@ -1,29 +1,29 @@
 ---
-title: 在内容中添加Excel
+title: 在外接程序中添加Excel
 description: 了解如何使用 Office 脚本在工作表中添加注释。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 77e308d020281c71751e2652f8dbaec00c263e44
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: b57b4112f2092dd83872f63854a8156b2a19384ac1d86a44ab2d9df4e6b7ff7e
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847098"
 ---
-# <a name="add-comments-in-excel"></a>在内容中添加Excel
+# <a name="add-comments-in-excel"></a>在外接程序中添加Excel
 
 本示例演示如何向单元格添加注释，包括 [@mentioning添加注释](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) 。
 
 ## <a name="example-scenario"></a>示例应用场景
 
 * 团队主管负责维护轮班计划。 团队主管向轮班记录分配员工 ID。
-* 团队主管希望通知员工。 通过添加一个@mentions注释，员工将通过电子邮件从工作表收到自定义邮件。
+* 团队主管希望通知员工。 通过向员工@mentions注释，员工将通过电子邮件从工作表收到自定义邮件。
 * 随后，员工可以在方便时查看工作簿并回复注释。
 
 ## <a name="solution"></a>解决方案
 
 1. 该脚本从员工工作表中提取员工信息。
-1. 然后，脚本添加注释 (包括相关的员工电子邮件) 到班次记录中的相应单元格。
+1. 然后，该脚本添加注释 (，包括将) 电子邮件添加到班次记录中的相应单元格。
 1. 添加新注释之前，将删除单元格中的现有注释。
 
 ## <a name="sample-excel-file"></a>示例Excel文件

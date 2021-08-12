@@ -3,16 +3,16 @@ title: Office 脚本的平台限制和要求
 description: 与脚本一Office脚本的资源限制和浏览器Excel web 版
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 8b7afa02f73476e6e98f231a7a7162ad87607b37
-ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
+ms.openlocfilehash: e6a9baa7adac438c88767ae9b4138cc0a6b31f1c5b05ca74ad8b0a50b079075b
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53772356"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847387"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Office 脚本的平台限制和要求
 
-开发脚本时应注意一些平台Office限制。 本文详细介绍了 Office Scripts for Excel web 版 的浏览器支持和Excel web 版。
+在开发脚本时，应注意一些Office限制。 本文详细介绍了 Office Scripts for Excel web 版 的浏览器支持和Excel web 版。
 
 ## <a name="browser-support"></a>浏览器支持
 
@@ -36,7 +36,7 @@ Office脚本在支持脚本[的任何浏览器中Office 网页版。](https://su
 
 ## <a name="data-limits"></a>数据限制
 
-对于一次可Excel的数据量以及可以执行单个数据传输Power Automate存在限制。
+对于一次可Excel的数据量以及可以执行单个数据Power Automate存在限制。
 
 ### <a name="excel"></a>Excel
 
@@ -49,7 +49,7 @@ Excel 网页版通过脚本调用工作簿时，该限制具有以下限制：
 
 ### <a name="power-automate"></a>Power Automate
 
-在将Office脚本与Power Automate时，每个用户每天只能调用 **400 次运行脚本操作**。 此限制在 UTC 时间上午 12：00 重置。
+在使用Office脚本Power Automate，每个用户每天只能调用 **400** 个 Run Script 操作。 此限制在 UTC 时间上午 12：00 重置。
 
 the Power Automate platform also has usage limitations， which can be found in the following articles：
 
