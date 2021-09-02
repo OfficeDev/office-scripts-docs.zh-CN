@@ -3,12 +3,12 @@ title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
 ms.date: 07/04/2021
 localization_priority: Priority
-ms.openlocfilehash: 30058bb2e372e4ad0e344de6202462a744f4e65df9964a8b2329f8b3e0cc27f1
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: f64adc3604dbaf9ac98563cb9eaf8068286bfeeb
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847075"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862080"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Excel 网页版中的 Office 脚本
 
@@ -68,7 +68,7 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 Office 脚本可与 Excel 工作簿的其他用户共享。 当共享了共享工作簿中的脚本时，有权访问该工作簿的每个人都可以查看和运行该脚本。
 
-有关共享和取消共享脚本的详细信息，请参阅 [ 在 Excel 网页版中共享 Office 脚本 ](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b) 一文。
+有关共享和取消共享脚本的详细信息，请参阅 [ 在 Excel 网页版中共享 Office 脚本 ](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b) 一文。
 
 > [!NOTE]
 > 请参阅 [ Office 脚本存储和所有权 ](script-storage.md) 了解关于如何在 OneDrive 中存储脚本的详细信息。
@@ -87,7 +87,6 @@ Office 脚本可与 Excel 工作簿的其他用户共享。 当共享了共享�
 - [Office 脚本 API 参考](/javascript/api/office-scripts/overview)
 - [Office 脚本疑难解答](../testing/troubleshooting.md)
 - [M365 中的 Office 脚本设置](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
-- [Excel 中的 Office 脚本简介 (support.office.com)](https://support.office.com/article/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
-- [在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)
+- [Excel 中的 Office 脚本简介](https://support.microsoft.com/office/9fbe283d-adb8-4f13-a75b-a81c6baf163a)
+- [在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Office 脚本开发中心](https://developer.microsoft.com/office-scripts)
-

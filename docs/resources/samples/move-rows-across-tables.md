@@ -3,22 +3,20 @@ title: 使用脚本跨表Office行
 description: 了解如何通过保存筛选器，然后处理和重新应用筛选器来跨表移动行。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: ad9d159709c27d2bcc7f7ee4f1fc6886a8d12dd6ae21d17d6eb3259aaa8d7a49
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: 54a41bddaebd4916e8bcffc7bc24f9a219c3d6a4
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847435"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862073"
 ---
-# <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>通过保存筛选器，然后处理和重新应用筛选器，跨表移动行
+# <a name="move-rows-across-tables"></a>跨表移动行
 
 此脚本执行以下操作：
 
-* 从源表中选择行，其中列中的值等于 _某个值_。
-* 将所有选定的行移动到另一 (工作表) 中的目标行。
-* 重新应用源表上的相关筛选器。
-
-:::image type="content" source="../../images/table-filter-before-after.png" alt-text="工作簿之前和之后屏幕截图。":::
+* 从源表中选择行，其中列中的值等于脚本 (`FILTER_VALUE` 值中的) 。
+* 将所有选定的行移动到另一张工作表的目标表中。
+* 将相关筛选器重新应用至源表。
 
 ## <a name="sample-excel-file"></a>示例Excel文件
 
@@ -30,29 +28,30 @@ ms.locfileid: "57847435"
 function main(workbook: ExcelScript.Workbook) {
 
   // You can change these names to match the data in your workbook.
-  const TargetTableName = 'Table1';
-  const SourceTableName = 'Table2';
-  const IndexOfColumnToFilterOn = 1;
-  const NameOfColumnToFilterOn = 'Category';
-  const ValueToFilterOn = 'Clothing';
+  const TARGET_TABLE_NAME = 'Table1';
+  const SOURCE_TABLE_NAME = 'Table2';
+
+  // Select what will be moved between tables.
+  const FILTER_COLUMN_INDEX = 1;
+  const FILTER_VALUE = 'Clothing';
 
   // Get the Table objects.
-  let targetTable = workbook.getTable(TargetTableName);
-  let sourceTable = workbook.getTable(SourceTableName);
+  let targetTable = workbook.getTable(TARGET_TABLE_NAME);
+  let sourceTable = workbook.getTable(SOURCE_TABLE_NAME);
 
   // If either table is missing, report that information and stop the script.
   if (!targetTable || !sourceTable) {
-    console.log(`Tables missing - Check to make sure both source (${TargetTableName}) and target table (${SourceTableName}) are present before running the script. `);
+    console.log(`Tables missing - Check to make sure both source (${TARGET_TABLE_NAME}) and target table (${SOURCE_TABLE_NAME}) are present before running the script. `);
     return;
   }
 
-  // Save the filter criteria.
-  const tableFilters = {};
+  // Save the filter criteria currently on the source table.
+  const originalTableFilters = {};
   // For each table column, collect the filter criteria on that column.
   sourceTable.getColumns().forEach((column) => {
-    let colFilterCriteria = column.getFilter().getCriteria();
-    if (colFilterCriteria) {
-      tableFilters[column.getName()] = colFilterCriteria;
+    let originalColumnFilter = column.getFilter().getCriteria();
+    if (originalColumnFilter) {
+      originalTableFilters[column.getName()] = originalColumnFilter;
     }
   });
 
@@ -66,7 +65,7 @@ function main(workbook: ExcelScript.Workbook) {
 
   // Get the data values from the source table.
   for (let i = 0; i < dataRows.length; i++) { 
-    if (dataRows[i][IndexOfColumnToFilterOn] === ValueToFilterOn) {
+    if (dataRows[i][FILTER_COLUMN_INDEX] === FILTER_VALUE) {
       rowsToMoveValues.push(dataRows[i]);
 
       // Get the intersection between table address and the entire row where we found the match. This provides the address of the range to remove.
@@ -100,8 +99,8 @@ function main(workbook: ExcelScript.Workbook) {
   });
 
   // Reapply the original filters. 
-  Object.keys(tableFilters).forEach((columnName) => {
-      sourceTable.getColumnByName(columnName).getFilter().apply(tableFilters[columnName]);
+  Object.keys(originalTableFilters).forEach((columnName) => {
+      sourceTable.getColumnByName(columnName).getFilter().apply(originalTableFilters[columnName]);
     });
 }
 ```
@@ -111,4 +110,4 @@ function main(workbook: ExcelScript.Workbook) {
 [观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/_3t3Pk4i2L0)。 视频解决方案中显示了两个脚本。 主要区别是如何选择行。
 
 * 第一个变量中，通过应用表筛选器并读取可见区域来选择行。
-* 第二步，通过读取值并提取行值来选择行 (这是此页上的示例使用行) 。
+* 第二步，通过读取值并提取行值来选择行 (此页上的示例使用行) 。

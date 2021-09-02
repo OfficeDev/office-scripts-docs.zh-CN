@@ -67,6 +67,8 @@ items:
                 href: resources/samples/copy-tables-combine.md
           - name: 超越基础设置
             items:
+              - name: 转换 CSV 文件
+                href: resources/samples/convert-csv.md
               - name: 交叉引用工作表
                 href: resources/samples/excel-cross-reference.md
               - name: 对工作表中的空白行进行计数
