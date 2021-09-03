@@ -37,6 +37,8 @@ items:
             href: overview/script-storage.md
           - name: 通过 Power Automate 运行脚本
             href: develop/power-automate-integration.md
+          - name: 在 Power Automate 流中使用宏文件
+            href: develop/macros-power-automate.md
       - name: 疑难解答
         items:
           - name: 疑难解答基础知识
