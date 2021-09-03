@@ -3,12 +3,12 @@ title: 从脚本返回数据到自动运行 Power Automated 流
 description: 本教程演示了如何通过 Power Automate 运行适用于 Excel 网页版的 Office 脚本来发送提醒电子邮件。
 ms.date: 06/29/2021
 localization_priority: Priority
-ms.openlocfilehash: c928ca612e08098c85307e22185e2240f47a5adcdfe028815c4dd837b4501c9f
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: 5c021a4d146fc2c0f13c7d7ab560107a1bf5c335
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846425"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862220"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>从脚本返回数据到自动运行 Power Automated 流
 
@@ -66,7 +66,7 @@ ms.locfileid: "57846425"
     let tableValues = table.getRangeBetweenHeaderAndTotal().getValues();
     ```
 
-1. 表中的日期使用 [Excel 的日期序列号](https://support.microsoft.com/office/date-systems-in-excel-e7fe7167-48a9-4b96-bb53-5612a800b487)存储。 需要将这些日期转换为 JavaScript 日期以便进行比较。 将在脚本中添加帮助程序函数。 在 `main` 函数外添加以下代码：
+1. 表中的日期使用 [Excel 的日期序列号](https://support.microsoft.com/office/e7fe7167-48a9-4b96-bb53-5612a800b487)存储。 需要将这些日期转换为 JavaScript 日期以便进行比较。 将在脚本中添加帮助程序函数。 在 `main` 函数外添加以下代码：
 
     ```TypeScript
     // Convert the Excel date to a JavaScript Date object.
