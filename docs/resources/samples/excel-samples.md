@@ -1,14 +1,14 @@
 ---
 title: Office脚本的基本Excel web 版
-description: 要与 Excel web 版 中的脚本Office代码示例Excel web 版。
+description: 要与脚本集中的脚本Office代码Excel web 版。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: 6d74d55556feb93e0f49da375b3c7896d439663f7f922e4ae135b6fdc6a40197
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: c0e852ba2afcc37f5921ff0b2256df0769535f6e
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847542"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59330735"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Office脚本的基本Excel web 版
 
@@ -150,7 +150,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="collections"></a>集合
+## <a name="collections"></a>收藏
 
 这些示例处理工作簿中的对象集合。
 
@@ -293,7 +293,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="log-the-grand-total-values-from-a-pivottable"></a>记录数据透视表中的"总计"值
 
-本示例查找工作簿中的第一个数据透视表，并记录"总计"单元格 (在下面的图像中以绿色突出显示) 。
+本示例查找工作簿中的第一个数据透视表，并记录"Grand Total"单元格 (在下面的图像中以绿色突出显示) 。
 
 :::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="一个数据透视表，其中&quot;总计&quot;行突出显示为绿色，显示品红。":::
 
@@ -323,7 +323,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 此脚本为单元格创建下拉选择列表。 它使用所选区域的现有值作为列表的选项。
 
-:::image type="content" source="../../images/sample-data-validation.png" alt-text="显示包含颜色选项&quot;红色、蓝色、绿色&quot;及其旁边的三个单元格的工作表，下拉列表中显示的选项相同。":::
+:::image type="content" source="../../images/sample-data-validation.png" alt-text="显示包含颜色选项&quot;红色、蓝色、绿色&quot;且旁边有三个单元格的工作表，与下拉列表中显示的选项相同。":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

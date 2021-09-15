@@ -1,18 +1,18 @@
 ---
 title: 筛选Excel表并获取可见区域
-description: 了解如何使用 Office 脚本筛选Excel表，并获取作为对象数组的可见区域。
+description: 了解如何使用 Office 脚本筛选 Excel 表，并获取作为对象数组的可见区域。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: ea4a96882aa3e16dac9ced22c4944d06c2fdcdfd88d202a69643e24a6a39f239
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 35c769ff1d5a088b652833826d41ecad2c317465
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847589"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59333060"
 ---
 # <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>筛选Excel，并获取作为 JSON 对象的可见区域
 
-此示例筛选一Excel，并作为 JSON 对象返回可见区域。 此 JSON 可以作为更大解决方案的一Power Automate流提供给一个流。
+此示例筛选一Excel，并返回可见区域作为 JSON 对象。 此 JSON 可以作为更大解决方案的一Power Automate流提供给一个流。
 
 ## <a name="example-scenario"></a>示例应用场景
 

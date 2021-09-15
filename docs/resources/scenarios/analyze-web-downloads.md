@@ -2,13 +2,13 @@
 title: Office脚本示例方案：分析 Web 下载
 description: 一个示例，该示例在将信息组织到表中Excel工作簿中的原始 Internet 流量数据并确定源位置。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: a3ad957492184e358015d6fed5e3850a55f153b6722d1cd02ee8e4f5b2e39f93
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: c1d7948ef2d87c0bb76ea0bd40f9c9e2823d45f1
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846322"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59337234"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office脚本示例方案：分析 Web 下载
 
@@ -23,7 +23,7 @@ ms.locfileid: "57846322"
 - 文本分析
 - 脚本中的子功能
 - 条件格式
-- 表
+- 表格
 
 ## <a name="setup-instructions"></a>设置说明
 

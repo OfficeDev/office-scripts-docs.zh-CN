@@ -1,14 +1,14 @@
 ---
 title: 对文件夹中的所有 Excel 文件运行脚本
-description: 了解如何对 OneDrive for Business 上文件夹中的所有 Excel 文件运行脚本。
+description: 了解如何对 Excel 上的文件夹中的所有文件运行OneDrive for Business。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: fad1483fbcddaf541874630e8a4e5a06faa784627d44d17ea2ab7ca0af1550a4
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 5da0d63fbdcf8b7333b951e226d9d34321dd6bd5
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847402"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327859"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>对文件夹中的所有 Excel 文件运行脚本
 
@@ -90,7 +90,7 @@ function main(workbook: ExcelScript.Workbook) {
 1. Under the **If yes** branch， add the Excel Online (**Business)** connector with the Run **script** action. 对操作使用以下值。
     1. **位置**：OneDrive for Business
     1. **文档库**：OneDrive
-    1. **文件****： (** id OneDrive文件 ID 值) 
+    1. **文件****： (OneDrive** ID 值的 ID) 
     1. **脚本**：脚本名称
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="已完成的 Excel Online (Business) 连接器Power Automate。":::

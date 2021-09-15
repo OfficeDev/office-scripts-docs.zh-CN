@@ -2,17 +2,17 @@
 title: 输出Excel JSON
 description: 了解如何将表Excel输出为 JSON，以用于Power Automate。
 ms.date: 07/22/2021
-localization_priority: Normal
-ms.openlocfilehash: 503f60e59ec565e644b9c02b9e4b436011662a8910432783752d86396a51a8b9
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 2b613f41618594f6f38634e4126ab8f616f1f3f4
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847451"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59332106"
 ---
 # <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>输出Excel表数据作为 JSON，用于Power Automate
 
-Excel数据可以表示为 JSON 形式的对象数组。 每个对象代表表格中的一行。 这有助于以用户可见的Excel格式从数据中提取数据。 然后，可通过流向其他系统Power Automate数据。
+Excel表数据可以表示为 JSON 形式的对象数组。 每个对象代表表格中的一行。 这有助于以用户可见的Excel格式从数据中提取数据。 然后，可通过流向其他系统Power Automate数据。
 
 _输入表数据_
 
@@ -145,7 +145,7 @@ interface TableData {
 ## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>示例代码：使用超链接文本以 JSON 格式返回表数据
 
 > [!NOTE]
-> 脚本始终从表的第 4 列 (0 索引) 超链接。 通过修改注释下的代码，可以更改该顺序或包含多个列作为超链接数据 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
+> 脚本始终从表的第 4 列 (0) 超链接。 通过修改注释下的代码，可以更改该顺序或包含多个列作为超链接数据 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -266,4 +266,4 @@ interface TableData {
 
 ## <a name="use-in-power-automate"></a>在Power Automate
 
-若要了解如何在工作流中使用此Power Automate，请参阅使用 Power Automate 创建[自动化Power Automate。](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)
+若要了解如何在工作流中使用此Power Automate，请参阅使用 Power Automate 创建[自动化工作流](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。

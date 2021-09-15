@@ -2,19 +2,19 @@
 title: 编写大型数据集
 description: 了解如何在脚本中将大型数据集拆分为Office操作。
 ms.date: 05/13/2021
-localization_priority: Normal
-ms.openlocfilehash: ec058bb1e3aabea52b0127c26b4c4a1352914fb575105ff4a90f82b222d6251d
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 1b37c5892c3b5f9ba26bfc2cdf8b30db321751d3
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847582"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59330581"
 ---
 # <a name="write-a-large-dataset"></a>编写大型数据集
 
 `Range.setValues()`API 将数据放在一个范围中。 此 API 有一些限制，具体取决于各种因素，例如数据大小和网络设置。 这意味着，如果您尝试将大量信息作为单个操作写入工作簿，则需要以较小的批次写入数据，以便可靠地更新 [较大范围](../../testing/platform-limits.md)。
 
-有关脚本Office基础知识，请阅读提高脚本[Office性能](../../develop/web-client-performance.md)。
+有关脚本中Office基础知识，请阅读提高脚本[Office性能](../../develop/web-client-performance.md)。
 
 ## <a name="sample-code-write-a-large-dataset"></a>示例代码：编写大型数据集
 

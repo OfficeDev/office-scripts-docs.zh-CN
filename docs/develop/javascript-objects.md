@@ -2,13 +2,13 @@
 title: 在 Office 脚本中使用内置的 JavaScript 对象
 description: 如何从 Excel web 版 中的 Office 脚本调用内置 JavaScript EXCEL WEB 版。
 ms.date: 05/17/2021
-localization_priority: Normal
-ms.openlocfilehash: 6c15daf0429009d289a17e604caf51b807510442bf6e6fa6e42c85d7457f6164
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: bf12a405814bb626a72c1de4f4c75462ce0018ec
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846608"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327687"
 ---
 # <a name="use-built-in-javascript-objects-in-office-scripts"></a>在脚本中使用内置的 JavaScript Office对象
 
@@ -23,7 +23,7 @@ JavaScript 提供了多个可用于 Office 脚本的内置对象，无论你是�
 
 ### <a name="work-with-ranges"></a>使用区域
 
-区域包含多个二维数组，这些数组直接映射到该范围中的单元格。 这些数组包含有关该范围中每个单元格的特定信息。 例如，返回这些单元格的所有值 (二维数组映射到该工作表子节中的行和列的行和列的行 `Range.getValues`) 。 `Range.getFormulas``Range.getNumberFormats`和 是返回数组的其他常用方法，如 `Range.getValues` 。
+区域包含多个二维数组，这些数组直接映射到该范围中的单元格。 这些数组包含有关该范围中每个单元格的特定信息。 例如，返回这些单元格的所有值 (二维数组映射到该工作表子节的行和列的行和列 `Range.getValues`) 。 `Range.getFormulas``Range.getNumberFormats`和 是返回数组的其他常用方法，如 `Range.getValues` 。
 
 以下脚本在 **A1：D4** 范围内搜索包含"$"的任何数字格式。 该脚本将这些单元格中的填充颜色设置为"黄色"。
 
@@ -50,7 +50,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="work-with-collections"></a>使用集合
 
-集合Excel许多对象。 该集合由 Office 脚本 API 管理，并作为数组公开。 例如，工作表中所有 [Shapes](/javascript/api/office-scripts/excelscript/excelscript.shape) 都包含在 `Shape[]` 方法返回的 `Worksheet.getShapes` 中。 可以使用此数组读取集合中的值，也可以从父对象的方法访问特定 `get*` 对象。
+许多Excel对象都包含在集合中。 该集合由 Office 脚本 API 管理，并作为数组公开。 例如，工作表中所有 [Shapes](/javascript/api/office-scripts/excelscript/excelscript.shape) 都包含在 `Shape[]` 方法返回的 `Worksheet.getShapes` 中。 可以使用此数组读取集合中的值，也可以从父对象的方法访问特定 `get*` 对象。
 
 > [!NOTE]
 > 不要手动添加或删除这些集合数组中的对象。 对 `add` 父对象使用 方法，对 `delete` 集合类型对象使用方法。 例如，使用 方法将 [Table](/javascript/api/office-scripts/excelscript/excelscript.table) 添加到 [Worksheet，](/javascript/api/office-scripts/excelscript/excelscript.worksheet) `Worksheet.addTable` 并删除 using `Table` `Table.delete` 。
@@ -88,11 +88,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="date"></a>Date
+## <a name="date"></a>日期
 
 [Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)对象提供了一种使用脚本中的日期的标准化方法。 `Date.now()` 生成一个包含当前日期和时间的对象，在向脚本的数据输入中添加时间戳时，这非常有用。
 
-以下脚本将当前日期添加到工作表。 请注意，通过使用 `toLocaleDateString` 方法，Excel值识别为日期并自动更改单元格的编号格式。
+以下脚本将当前日期添加到工作表。 请注意，通过使用 方法，Excel值识别为日期并自动更改 `toLocaleDateString` 单元格的编号格式。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

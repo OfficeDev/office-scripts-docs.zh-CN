@@ -2,13 +2,13 @@
 title: 将多个数据表中的Excel组合到一个表中
 description: 了解如何使用 Office 脚本将多个Excel表中的数据合并到一个表中。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: f8285ac2302ef30de66c2bdbfb9277f83a3a75690d59a1e9cb066f544eeffb19
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 490727f39a497dd1d2e31f2fac938b6d518012a5
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846972"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59330770"
 ---
 # <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>将多个数据表中的Excel组合到一个表中
 
@@ -95,6 +95,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>培训视频：将数据从多个Excel组合到一个表中
+## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>培训视频：将来自多个Excel的数据合并到一个表中
 
 [观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/di-8JukK3Lc)。

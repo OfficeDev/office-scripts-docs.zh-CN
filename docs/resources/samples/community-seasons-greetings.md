@@ -2,17 +2,17 @@
 title: 季节问候语
 description: 了解如何使用Office脚本在树状中显示Excel web 版。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: 3474a3e4a87257bba75132b029b57b0c28c922d1b901cda10068d5998d895c53
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: f1339bd267dbe4eba19541b2339742cbde30b1d5
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846601"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327852"
 ---
 # <a name="seasons-greetings"></a>季节问候语
 
-此脚本由 [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) 在假日假日的快乐中贡献！ 这是一个有趣脚本，它使用脚本在 Excel web 版中Office树。
+此脚本由 [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) 在假日假日的快乐中贡献！ 这是一个有趣脚本，它使用脚本Excel web 版树Office树。
 
 享受！
 

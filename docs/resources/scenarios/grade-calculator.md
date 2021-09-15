@@ -2,17 +2,17 @@
 title: Office脚本示例方案：成绩计算器
 description: 确定一类学生成绩的百分比和字母成绩的示例。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: 9cef386939ee0740911247e4d494d0b19155577b03d275d026a433e2990d1a61
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 9036c12cd05e96932171cc0aefdce8eed1cc988e
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847275"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59334208"
 ---
 # <a name="office-scripts-sample-scenario-grade-calculator"></a>Office脚本示例方案：成绩计算器
 
-在此方案中，你是一名教师，对每位学生的学期结束成绩进行评分。 你一直在输入他们的工作分配和测试的分数。 现在，是时候确定学生了。
+在此方案中，你是一名教师，对每位学生的学期结束成绩进行评分。 你一直在输入作业和测试的分数。 现在，是时候确定学生了。
 
 您将开发一个脚本，该脚本将针对每个分数类别对成绩进行总计。 然后，它将基于总数为每个学生分配一个信函成绩。 为了帮助确保准确性，你将添加一些检查，以查看个别分数是否太低或太高。 如果学生的分数小于零或大于可能的分数值，该脚本将用红色填充标记该单元格，而不是该学生的总分。 这将清楚地指示需要仔细检查哪些记录。 你还将向成绩添加一些基本格式，以便快速查看课程的顶部和底部。
 

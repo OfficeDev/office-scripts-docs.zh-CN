@@ -2,13 +2,13 @@
 title: Office 脚本中的最佳实践
 description: 如何防止常见问题，并编写可Office输入或数据的稳固脚本。
 ms.date: 05/10/2021
-localization_priority: Normal
-ms.openlocfilehash: cdea3583120109cda05c05cb7c4f908e929bbff0d37e615b1820f67b57fbe24f
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 49075d52587a1d2c4ed06fc2939aebc7081d4ddb
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846615"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327838"
 ---
 # <a name="best-practices-in-office-scripts"></a>Office 脚本中的最佳实践
 

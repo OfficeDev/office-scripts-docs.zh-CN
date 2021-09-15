@@ -2,13 +2,13 @@
 title: Office脚本示例方案：Graph NOAA 中的水级数据
 description: 从 NOAA 数据库提取 JSON 数据并使用它创建图表的示例。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: a85078e08356aaf00702f35785146141b366a058925c3ba89ba040b46bc8d405
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: f0492c79b9fc2d7d98f4433611fd8589cf52054a
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847022"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327887"
 ---
 # <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office脚本示例方案：从 NOAA 提取和绘制水级数据
 

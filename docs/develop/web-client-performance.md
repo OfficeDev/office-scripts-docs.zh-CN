@@ -1,18 +1,18 @@
 ---
 title: 提高脚本Office性能
-description: 通过了解工作簿和脚本之间的通信Excel创建更快的脚本。
+description: 通过了解工作簿和脚本之间的Excel创建更快的脚本。
 ms.date: 05/17/2021
-localization_priority: Normal
-ms.openlocfilehash: e71fe3d0b25eab99d075e54a63600861d285756d98a6d6dd8490c3f4e73fab33
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 169256bdae809c413c10f1f00240afc28be795f4
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847014"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59331162"
 ---
 # <a name="improve-the-performance-of-your-office-scripts"></a>提高脚本Office性能
 
-使用脚本Office自动化通常执行的一系列任务，以节省时间。 较慢的脚本可能会感觉它无法加快工作流的速度。 大多数情况下，脚本将完全正常并如期运行。 但是，有一些可避免的场景可能会影响性能。
+使用脚本Office自动执行一系列任务，以节省时间。 较慢的脚本可能会感觉它无法加快工作流的速度。 大多数情况下，脚本将完全正常并如期运行。 但是，有一些可避免的场景可能会影响性能。
 
 脚本运行缓慢的最常见原因是与工作簿的通信过多。 当工作簿存在于云中时，脚本将在本地计算机上运行。 在某些时候，脚本会将其本地数据与工作簿的本地数据同步。 这意味着，当 (同步) ，任何写入操作（如) ）都 `workbook.addWorksheet()` 只应用于工作簿。 同样，任何读取操作 (，) 仅在这些时间从脚本 `myRange.getValues()` 的工作簿获取数据。 在任一情况下，脚本都先提取信息，然后再处理数据。 例如，以下代码将准确记录已用区域中的行数。
 
@@ -100,7 +100,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="case-by-case-help"></a>按案例帮助
 
-随着 Office 脚本平台的扩展以使用[Power Automate、](https://flow.microsoft.com/)自适应卡片和其他跨产品[](/adaptive-cards)功能，脚本工作簿通信的细节变得更加复杂。 如果您需要有关加快脚本运行速度的帮助，请通过 [Microsoft Q&A 联系](/answers/topics/office-scripts-excel-dev.html)。 请务必使用"office-scripts-dev"标记你的问题，以便专家可以找到它并提供帮助。
+随着 Office 脚本平台的扩展以使用[Power Automate、](https://flow.microsoft.com/)自适应卡片和其他跨产品[](/adaptive-cards)功能，脚本工作簿通信的细节变得更加复杂。 如果您需要有关加快脚本运行速度的帮助，请通过 Microsoft 问答&[A。](/answers/topics/office-scripts-excel-dev.html) 请务必使用"office-scripts-dev"标记你的问题，以便专家可以找到它并提供帮助。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,36 +1,36 @@
 ---
 title: 对Office中运行的脚本进行Power Automate
-description: 使用技巧脚本和脚本之间的集成时，Office、平台信息和Power Automate。
+description: 使用技巧脚本和脚本之间的集成时，Office、平台信息和已知Power Automate。
 ms.date: 05/18/2021
-localization_priority: Normal
-ms.openlocfilehash: 1746a03022b6d1aa9fc35e1a8875add301dd6a0f2d6d45cedd64308f0738d2f8
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: aa0602720233afddd88ccfb8ee86d3934892a05f
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847204"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59326847"
 ---
 # <a name="troubleshoot-office-scripts-running-in-power-automate"></a>对Office中运行的脚本进行Power Automate
 
-Power Automate使脚本自动化Office一个级别。 但是，Power Automate在独立的独立会话中代表Excel脚本，因此有一些重要的注意事项需要注意。
+Power Automate使脚本自动化Office一个级别。 但是，Power Automate在独立的独立会话中Excel脚本，因此有一些重要的注意事项。
 
 > [!TIP]
-> 如果你刚开始将 Office 脚本与 Power Automate 一起Office[运行](../develop/power-automate-integration.md)脚本Power Automate了解平台。
+> 如果你刚刚开始将 Office 脚本与 Power Automate 一起Power Automate运行 Office [Scripts](../develop/power-automate-integration.md)来了解平台。
 
 ## <a name="avoid-relative-references"></a>避免相对引用
 
-Power Automate代表您Excel所选工作簿中运行脚本。 发生这种情况时，工作簿可能会关闭。 依赖于用户当前状态的任何 API（如 ）在用户 `Workbook.getActiveWorksheet` Power Automate。 这是因为 API 基于用户视图或游标的相对位置，并且该引用不存在于Power Automate流中。
+Power Automate代表您Excel所选工作簿中运行脚本。 发生这种情况时，工作簿可能会关闭。 任何依赖用户当前状态（如 ）的 API 在用户 `Workbook.getActiveWorksheet` Power Automate。 这是因为 API 基于用户视图或游标的相对位置，并且该引用不存在于Power Automate流中。
 
-某些相对引用 API 在Power Automate。 其他人有一个默认行为，表示用户的状态。 在设计脚本时，请确保对工作表和范围使用绝对引用。 这样，即使工作表Power Automate，也使数据流保持一致。
+某些相对引用 API 在Power Automate。 其他人有一个默认行为，表示用户的状态。 在设计脚本时，请确保对工作表和范围使用绝对引用。 这样，即使Power Automate重新排列，也使数据流保持一致。
 
 ### <a name="script-methods-that-fail-when-run-in-power-automate-flows"></a>在流中运行时失败的Power Automate方法
 
-以下方法会引发错误，在从脚本流中的脚本调用时Power Automate失败。
+以下方法引发错误，在从脚本流中的脚本调用时Power Automate失败。
 
 | 类 | 方法 |
 |--|--|
 | [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
-| [区域](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
+| [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
@@ -46,7 +46,7 @@ Power Automate代表您Excel所选工作簿中运行脚本。 发生这种情况
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | 返回工作簿中的第一个工作表或该方法当前激活的 `Worksheet.activate` 工作表。 |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | 出于目的，将工作表标记为活动工作表 `Workbook.getActiveWorksheet` 。 |
 
-## <a name="data-refresh-not-supported-in-power-automate"></a>不支持数据刷新Power Automate
+## <a name="data-refresh-not-supported-in-power-automate"></a>数据刷新不受支持Power Automate
 
 Office脚本在脚本中运行时无法刷新Power Automate。 在流 `PivotTable.refresh` 中调用此类方法时不执行任何操作。 此外，Power Automate不触发使用工作簿链接的公式的数据刷新。
 
@@ -78,5 +78,5 @@ Excel文件没有固有位置或时区。 用户每次打开工作簿时，其�
 ## <a name="see-also"></a>另请参阅
 
 - [脚本Office疑难解答](troubleshooting.md)
-- [使用Office运行脚本Power Automate](../develop/power-automate-integration.md)
+- [使用 Office 运行脚本Power Automate](../develop/power-automate-integration.md)
 - [ExcelOnline (Business) 连接器参考文档](/connectors/excelonlinebusiness/)

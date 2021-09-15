@@ -1,24 +1,24 @@
 ---
 title: 在计算模式下管理Excel
-description: 了解如何在 Office 脚本中管理计算Excel web 版。
+description: 了解如何使用 Office 脚本管理 Excel web 版。
 ms.date: 05/06/2021
-localization_priority: Normal
-ms.openlocfilehash: ee43c3c0477f0d70078cae271081bc5e1e008960
-ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
+ms.localizationpriority: medium
+ms.openlocfilehash: 32ed55f47106c7ff2dadb21aca7fce71ff7d2b3d
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58862150"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59326840"
 ---
 # <a name="manage-calculation-mode-in-excel"></a>在计算模式下管理Excel
 
-此示例演示如何在脚本中使用计算[模式](/javascript/api/office-scripts/excelscript/excelscript.calculationmode)和计算Excel web 版脚本Office方法。 您可以尝试在任何一个脚本Excel脚本。
+此示例演示如何在脚本中使用计算[模式](/javascript/api/office-scripts/excelscript/excelscript.calculationmode)和Excel web 版Office方法。 您可以尝试对任意脚本文件Excel脚本。
 
-## <a name="scenario"></a>方案
+## <a name="scenario"></a>应用场景
 
-包含大量公式的工作簿可能需要一段时间才能重新计算。 与其让Excel控制何时进行计算，不如将它们作为脚本的一部分进行管理。 这将在某些情况下帮助提高性能。
+包含大量公式的工作簿可能需要一段时间才能重新计算。 与其让Excel控制何时进行计算，不如将其作为脚本的一部分进行管理。 这将在某些情况下帮助提高性能。
 
-示例脚本将计算模式设置为手动。 这意味着，当脚本指示工作簿执行自定义操作或通过 UI ([手动](https://support.microsoft.com/office/73fc7dac-91cf-4d36-86e8-67124f6bcce4) 计算时，工作簿将仅重新计算) 。 然后，该脚本显示当前计算模式并完全重新计算整个工作簿。
+示例脚本将计算模式设置为手动。 这意味着，当脚本指示工作簿执行自定义操作或你通过 [UI](https://support.microsoft.com/office/73fc7dac-91cf-4d36-86e8-67124f6bcce4) (手动计算时，工作簿将仅重新计算) 。 然后，该脚本显示当前计算模式并完全重新计算整个工作簿。
 
 ## <a name="sample-code-control-calculation-mode"></a>示例代码：控制计算模式
 
