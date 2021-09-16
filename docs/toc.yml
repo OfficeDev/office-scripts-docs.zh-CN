@@ -69,6 +69,8 @@ items:
                 href: resources/samples/copy-tables-combine.md
           - name: 超越基础设置
             items:
+              - name: 将工作表合并到单个工作簿中
+                href: resources/samples/combine-worksheets-into-single-workbook.md
               - name: 转换 CSV 文件
                 href: resources/samples/convert-csv.md
               - name: 交叉引用工作表
