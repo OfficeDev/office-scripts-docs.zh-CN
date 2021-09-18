@@ -1,14 +1,14 @@
 ---
 title: 脚本Office疑难解答
 description: 调试脚本的Office以及帮助资源。
-ms.date: 05/17/2021
+ms.date: 09/15/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ea133afdf302994126e8051d275d03b938df370
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 5229490e2487974f751456ef63004bcb27f7b09c
+ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59333977"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59447483"
 ---
 # <a name="troubleshoot-office-scripts"></a>脚本Office疑难解答
 
@@ -65,14 +65,14 @@ console.log(myRange.getAddress());
 
 日志不会影响工作簿。
 
-## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>"自动执行"选项卡不显示或Office脚本不可用
+## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>"自动化"选项卡不显示或Office脚本不可用
 
 以下步骤应有助于解决与"自动"选项卡未显示在"自动"选项卡Excel web 版。
 
-1. [请确保你的Microsoft 365包括Office脚本](../overview/excel.md#requirements)。
+1. [请确保你的Microsoft 365包含Office脚本](../overview/excel.md#requirements)。
 1. [检查浏览器是否受支持](platform-limits.md#browser-support)。
 1. [确保已启用第三方 Cookie。](platform-limits.md#third-party-cookies)
-1. [确保管理员未禁用脚本Office脚本Microsoft 365 管理中心。](/microsoft-365/admin/manage/manage-office-scripts-settings)
+1. [确保你的管理员未禁用Office脚本Microsoft 365 管理中心。](/microsoft-365/admin/manage/manage-office-scripts-settings)
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -84,9 +84,7 @@ console.log(myRange.getAddress());
 
 [Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) 是开发人员愿意帮助解决编码问题的社区。 通常，你能够通过快速 Stack Overflow 搜索找到问题的解决方案。 如果没有，请提出你的问题，并标记"office-scripts"标记。 请务必提及你正在创建一个Office *脚本*，而不是Office *加载项。*
 
-若要提交对 Office 脚本的功能请求，将你的想法张贴到"用户语音[](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)"页面，或者如果功能请求已存在，请为它添加投票。 请确保将请求提交到"Excel 网页版、脚本和外接程序"类别中的"文件"下。
-
-如果操作录制器或编辑器出现问题，请告诉我们。 在"代码编辑器"任务窗格的 **"..."** 菜单中，选择" **发送反馈"** 按钮以共享任何问题。
+若要提交对脚本Office或报告功能问题，请使用代码编辑器中的"反馈"按钮。 在"代码编辑器"任务窗格的"更多选项" (...) 菜单中，选择"**发送反馈"** 按钮以共享功能需求和其他体验。
 
 :::image type="content" source="../images/code-editor-feedback.png" alt-text="具有&quot;发送反馈&quot;按钮的代码编辑器溢出菜单。":::
 

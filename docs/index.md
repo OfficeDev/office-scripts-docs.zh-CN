@@ -5,12 +5,12 @@ title: Office 脚本文档
 description: 在 Excel 网页版中学习 Office 脚本的资源，包括教程、概念文章和代码示例。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: e0d14951a9e4b2a8666a516cece87deaad7cf8fd
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 4f8840404d13da483e40d719fa96b5ed154d80fa
+ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59326896"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59447511"
 ---
 # <a name="office-scripts-documentation"></a>Office 脚本文档
 
@@ -134,22 +134,6 @@ ms.locfileid: "59326896"
                     </div>
                     <div class="cardText">
                         <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>提问</h3></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><img src="images/index-landing-page/i_feedback.svg" alt="Feature requests" /></a>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><h3>请求功能</h3></a>
                     </div>
                 </div>
             </div>
