@@ -1,14 +1,14 @@
 ---
 title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
-ms.date: 07/04/2021
+ms.date: 09/17/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 056bf4bb489739d4062dcf422aded2dcc7fc5aa8
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 5b33f4b15733a0e053b7e5fa7ba1051b382f22ca
+ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332878"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59447493"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Excel 网页版中的 Office 脚本
 
@@ -62,7 +62,7 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 完成本教程之后，请阅读 [Excel 网页版中 Office 脚本的编写脚本基础](../develop/scripting-fundamentals.md)，以了解有关代码编辑器以及如何编写和编辑你自己的脚本的详细信息。 有关代码编辑器以及如何解读脚本代码的其他信息，请阅读 [Office 脚本代码编辑器环境](code-editor-environment.md)。
 
-## <a name="sharing-scripts"></a>共享脚本
+## <a name="share-scripts"></a>共享脚本
 
 :::image type="content" source="../images/script-sharing.png" alt-text="显示“在此工作簿中与其他人共享”选项的脚本“详细信息”页面。":::
 
@@ -73,7 +73,19 @@ Office 脚本可与 Excel 工作簿的其他用户共享。 当共享了共享�
 > [!NOTE]
 > 请参阅 [ Office 脚本存储和所有权 ](script-storage.md) 了解关于如何在 OneDrive 中存储脚本的详细信息。
 
-## <a name="connecting-office-scripts-to-power-automate"></a>将 Office 脚本连接到 Power Automate
+### <a name="create-script-buttons-preview"></a>创建脚本按钮（预览）
+
+[!INCLUDE [Public preview](../includes/preview-note.md)]
+
+通过将脚本按钮添加到工作簿，帮助同事查找和运行脚本。 使用任何脚本，转到脚本的详细信息页或代码编辑器任务窗格中的“**更多选项 (…)** 菜单，然后选择“**添加按钮**”。 此操作将在工作簿中创建一个按钮，已在选择该按钮时运行关联的脚本。 它还与工作簿共享脚本，因此对工作簿具有写入权限的每个人都可以使用有用的自动化操作。
+
+以下屏幕截图显示了标题为 **创建报表** 的脚本的详细信息页，其中突出显示了“**更多选项 (…)**”菜单中的“**添加按钮**”选项。
+
+:::image type="content" source="../images/add-button.png" alt-text="脚本详细信息页菜单中的“添加按钮”选项。":::
+
+要停止通过按钮共享脚本，请转到脚本详细信息页中的“**更多选项 (…)**”菜单，然后选择“**停止共享**”。 此操作将删除运行该脚本的所有按钮。 删除单个按钮会从该按钮中删除脚本，即使撤销该操作或剪切并粘贴该按钮也是如此。
+
+## <a name="connect-office-scripts-to-power-automate"></a>将 Office 脚本连接到 Power Automate
 
 [Power Automate](https://flow.microsoft.com/) 是一种可帮助你在多个应用和服务之间创建自动化工作流的服务。 Office 脚本可以在这些工作流中使用，以便你在工作簿之外控制脚本。 你可以按计划运行脚本，在回复电子邮件时触发它们，等等。 若要了解有关连接这些自动化服务的基础知识，请访问[使用 Power Automate 在 Excel 网页版中运行 Office 脚本](../tutorials/excel-power-automate-manual.md)教程。
 
