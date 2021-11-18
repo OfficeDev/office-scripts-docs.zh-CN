@@ -5,18 +5,18 @@ title: Office 脚本文档
 description: 在 Excel 网页版中学习 Office 脚本的资源，包括教程、概念文章和代码示例。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 4f8840404d13da483e40d719fa96b5ed154d80fa
-ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
+ms.openlocfilehash: c3e1c95886ebef3bf34a73a374372e84be91117d
+ms.sourcegitcommit: 24a6b8ae0cc57a0307fbc9b3e87432f1f4a92263
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59447511"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61064187"
 ---
 # <a name="office-scripts-documentation"></a>Office 脚本文档
 
 在 Excel 网页版中使用 Office 脚本以自动化常见任务。 浏览以下文章，了解如何创建和编辑 Office 脚本并立即开始自动化。
 
-<ul class="panelContent cardsF cols cols3">
+<ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -74,7 +74,7 @@ ms.locfileid: "59447511"
 
 <h2>其他资源</h2>
 <p>使用以下资源了解 Office 脚本用于与 Excel 网页版中的工作簿进行交互的 API，询问有关 Excel 网页版 Office 脚本的问题，或请求适用于 Excel 网页版的功能。</p>
-<ul class="panelContent cardsF cols cols3">
+<ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -113,6 +113,22 @@ ms.locfileid: "59447511"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
+                            <a href="develop/power-automate-integration.md" target="_blank"><img src="images/index-landing-page/i_architecture.svg" alt="Integrate with Power Automate"/></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="develop/power-automate-integration.md" target="_blank"><h3>与 Power Automate 集成</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
                             <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Admin settings"/></a>
                         </div>
                     </div>
@@ -129,11 +145,11 @@ ms.locfileid: "59447511"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
+                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>提问</h3></a>
+                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>许可信息</h3></a>
                     </div>
                 </div>
             </div>
@@ -145,11 +161,11 @@ ms.locfileid: "59447511"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
+                            <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>许可信息</h3></a>
+                        <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>提问</h3></a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
-# <a name="office-scripts-in-excel-on-the-web-documentation"></a>Office文档Excel web 版脚本
+# <a name="office-scripts-in-excel-on-the-web-documentation"></a>Office文档中的 Excel web 版 脚本
 
-欢迎使用 Office 脚本文档存储库。 在此存储库，你可以找到有关脚本Office和操作说明指南的文档源文件。 为获得最佳体验，建议在 [docs.microsoft.com](https://docs.microsoft.com/office/dev/scripts) 上查看此类内容。
+欢迎使用 Office 脚本文档存储库。 在此存储库，可以找到有关脚本Office和操作说明指南的文档源文件。 为获得最佳体验，建议在 [docs.microsoft.com](https://docs.microsoft.com/office/dev/scripts) 上查看此类内容。
 
 > **注意**：您可以在 [office-scripts-docs-reference](https://github.com/OfficeDev/office-scripts-docs-reference)存储库中找到 Office Scripts API 的参考文档源文件。 这些 API 包含脚本的所有Excel操作。
 
@@ -23,9 +23,8 @@
 
 如果问题与脚本Office相关，请改为将问题发布至以下频道之一：
 
-- 若要询问有关设计 Office Scripts 或运行 Office Scripts 的 Office.js API 的问题，请向 Stack Overflow 发布问题，然后使用 "office-scripts" 标记 (https://stackoverflow.com/questions/tagged/office-scripts) 。
+- 若要询问有关设计 Office Scripts 或运行 Office Scripts 的 Office.js API 的问题，请向 Stack Overflow 发布问题，然后使用"office-scripts"标记 https://stackoverflow.com/questions/tagged/office-scripts) (。
 - 若要报告 Office.js API 的问题，请创建 [OfficeDev/office-js](https://github.com/OfficeDev/office-js)存储库中的问题，产品团队监视的成员会监视客户报告的问题。
-- 若要提交脚本功能Office，请使用代码编辑器中的"反馈"按钮。 在"代码编辑器"任务窗格的"更多选项" (...) 菜单中，选择"**发送反馈"** 按钮以共享功能需求和其他体验。
 
 ## <a name="copyright"></a>版权
 
