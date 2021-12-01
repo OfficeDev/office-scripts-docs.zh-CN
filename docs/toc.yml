@@ -27,10 +27,6 @@ items:
             href: develop/javascript-objects.md
           - name: 代码编辑器环境
             href: overview/code-editor-environment.md
-          - name: Office 脚本与 VBA 宏之间的差异
-            href: resources/vba-differences.md
-          - name: Office 脚本与 Office 加载项之间的差异
-            href: resources/add-ins-differences.md
           - name: Office 脚本中的外部 API 呼叫支持
             href: develop/external-calls.md
           - name: 文件存储和所有权
@@ -111,3 +107,11 @@ items:
             items:
               - name: 季节问候语
                 href: resources/samples/community-seasons-greetings.md
+      - name: Office 脚本和其他平台
+        items:
+          - name: Office 脚本与 VBA 宏之间的差异
+            href: resources/vba-differences.md
+          - name: Office 脚本与 Office 加载项之间的差异
+            href: resources/add-ins-differences.md
+          - name: 何时使用 Power Query 或 Office 脚本
+            href: resources/power-query-differences.md
