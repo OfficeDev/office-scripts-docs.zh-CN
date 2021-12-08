@@ -3,12 +3,12 @@ title: Office 脚本的平台限制和要求
 description: 与脚本一Office脚本的资源限制和浏览器Excel web 版
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2140ebf249af76447f64efae7fd2008e781bf815
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 6db32cd1c72850f02ee9e2a714c1a0a3bccd727d
+ms.sourcegitcommit: ea9c3685a7407a07acf802705f4f44fb007c7825
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59327873"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "61333489"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Office 脚本的平台限制和要求
 
@@ -16,7 +16,7 @@ ms.locfileid: "59327873"
 
 ## <a name="browser-support"></a>浏览器支持
 
-Office脚本在支持脚本[的任何浏览器中Office 网页版。](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) 但是，IE 11 版本 11 Internet Explorer不支持 (JavaScript) 。 [ES6 或更高版本中引入](https://www.w3schools.com/Js/js_es6.asp)的任何功能将不能与 IE 11 一起使用。 如果组织成员仍使用该浏览器，请务必在共享脚本时测试该环境中脚本。
+Office脚本在任何支持自定义脚本的[浏览器中Office 网页版。](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) 但是，IE 11 版本 11 Internet Explorer不支持 (JavaScript) 。 [ES6 或更高版本中引入](https://www.w3schools.com/Js/js_es6.asp)的任何功能将不能与 IE 11 一起使用。 如果组织成员仍使用该浏览器，请务必在共享脚本时测试该环境中脚本。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -36,11 +36,11 @@ Office脚本在支持脚本[的任何浏览器中Office 网页版。](https://su
 
 ## <a name="data-limits"></a>数据限制
 
-对于可以同时传输Excel数据量以及可以执行单个数据传输Power Automate存在限制。
+对于一次可Excel的数据量以及可以执行单个数据传输Power Automate存在限制。
 
 ### <a name="excel"></a>Excel
 
-Excel 网页版通过脚本调用工作簿时，对工作簿执行下列限制：
+Excel 网页版脚本调用工作簿时，该限制具有以下限制：
 
 - 请求和响应限制为 **5MB。**
 - 范围限制为五百 **万个单元格**。
@@ -49,11 +49,11 @@ Excel 网页版通过脚本调用工作簿时，对工作簿执行下列限制�
 
 ### <a name="power-automate"></a>Power Automate
 
-在使用Office脚本Power Automate，每个用户每天只能调用 **400 次"运行脚本"操作**。 此限制在 UTC 时间上午 12：00 重置。
+将Office脚本Power Automate时，每个用户每天只能调用 **800** 次 Run Script 操作。 此限制在 UTC 时间上午 12：00 重置。
 
 Power Automate平台还具有使用限制，可在以下文章中找到这些限制：
 
-- [中的限制和Power Automate](/power-automate/limits-and-config)
+- [中限制和Power Automate](/power-automate/limits-and-config)
 - [Excel Online (Business) 连接器的已知问题和限制](/connectors/excelonlinebusiness/#known-issues-and-limitations)
 
 ## <a name="see-also"></a>另请参阅
@@ -61,4 +61,4 @@ Power Automate平台还具有使用限制，可在以下文章中找到这些限
 - [脚本Office疑难解答](troubleshooting.md)
 - [消除 Office 脚本的影响](undo.md)
 - [提高脚本Office性能](../develop/web-client-performance.md)
-- [Office脚本的脚本Excel web 版](../develop/scripting-fundamentals.md)
+- [脚本编写基础Office中的脚本Excel web 版](../develop/scripting-fundamentals.md)
