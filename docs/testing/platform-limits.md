@@ -1,22 +1,22 @@
 ---
 title: Office 脚本的平台限制和要求
 description: 与脚本一Office脚本的资源限制和浏览器Excel web 版
-ms.date: 05/17/2021
+ms.date: 12/14/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 6db32cd1c72850f02ee9e2a714c1a0a3bccd727d
-ms.sourcegitcommit: ea9c3685a7407a07acf802705f4f44fb007c7825
+ms.openlocfilehash: e0c2c8108bb36dc979b33e195cdc0e0e17a586ba
+ms.sourcegitcommit: 1e561d245d9ab7f2529a1b071b1fa0326e37c4ca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61333489"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "61513627"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Office 脚本的平台限制和要求
 
-开发脚本时应注意一些平台Office限制。 本文详细介绍了 Office Scripts for Excel web 版 的浏览器支持和Excel web 版。
+在开发脚本时，应注意一些平台Office限制。 本文详细介绍了 Office Scripts for Excel web 版 的浏览器支持和Excel web 版。
 
 ## <a name="browser-support"></a>浏览器支持
 
-Office脚本在任何支持自定义脚本的[浏览器中Office 网页版。](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) 但是，IE 11 版本 11 Internet Explorer不支持 (JavaScript) 。 [ES6 或更高版本中引入](https://www.w3schools.com/Js/js_es6.asp)的任何功能将不能与 IE 11 一起使用。 如果组织成员仍使用该浏览器，请务必在共享脚本时测试该环境中脚本。
+Office脚本在任何支持自定义脚本的[浏览器中Office 网页版。](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) 但是，IE 11 11 Internet Explorer不支持某些 JavaScript (IE 11) 。 [ES6 或更高版本中引入](https://www.w3schools.com/Js/js_es6.asp)的任何功能将不能与 IE 11 一起使用。 如果组织成员仍使用该浏览器，请务必在共享脚本时测试该环境中脚本。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -40,7 +40,7 @@ Office脚本在任何支持自定义脚本的[浏览器中Office 网页版。](h
 
 ### <a name="excel"></a>Excel
 
-Excel 网页版脚本调用工作簿时，该限制具有以下限制：
+Excel 网页版通过脚本调用工作簿时，对工作簿执行下列限制：
 
 - 请求和响应限制为 **5MB。**
 - 范围限制为五百 **万个单元格**。
@@ -49,12 +49,15 @@ Excel 网页版脚本调用工作簿时，该限制具有以下限制：
 
 ### <a name="power-automate"></a>Power Automate
 
-将Office脚本Power Automate时，每个用户每天只能调用 **800** 次 Run Script 操作。 此限制在 UTC 时间上午 12：00 重置。
+在使用Office脚本Power Automate，每个用户每天只能调用 **800 次运行脚本操作**。 此限制在 UTC 时间上午 12：00 重置。
 
-Power Automate平台还具有使用限制，可在以下文章中找到这些限制：
+the Power Automate platform also has usage limitations， which can be found in the following articles.
 
-- [中限制和Power Automate](/power-automate/limits-and-config)
+- [中的限制和Power Automate](/power-automate/limits-and-config)
 - [Excel Online (Business) 连接器的已知问题和限制](/connectors/excelonlinebusiness/#known-issues-and-limitations)
+
+> [!NOTE]
+> 如果你有长时间运行的脚本，请注意同步脚本[操作 120 秒Power Automate超时](/power-automate/limits-and-config#timeout)。 你需要优化脚本或将你的[](../develop/web-client-performance.md)脚本自动化Excel多个脚本。
 
 ## <a name="see-also"></a>另请参阅
 
