@@ -1,18 +1,24 @@
 ---
 title: Office 脚本中的最佳实践
 description: 如何防止常见问题，并编写可Office输入或数据的稳固脚本。
-ms.date: 05/10/2021
+ms.date: 12/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: c37559c978a04bd99fff044674b2f64b7758438b
-ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
+ms.openlocfilehash: 19b10cf6ea778f109edeb74fa5995628bb8bf632
+ms.sourcegitcommit: c62567dc1188527511e4618d3e04e26580d4bb44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59447456"
+ms.lasthandoff: 01/03/2022
+ms.locfileid: "61659192"
 ---
 # <a name="best-practices-in-office-scripts"></a>Office 脚本中的最佳实践
 
 这些模式和做法旨在帮助脚本每次成功运行。 使用它们可以避免开始自动执行工作流时出现Excel错误。
+
+## <a name="use-the-action-recorder-to-learn-new-features"></a>使用操作录制器了解新功能
+
+Excel会做很多工作。 其中大多数都可以编写脚本。 操作录制器会记录Excel操作并将其转换为代码。 这是了解不同功能如何与脚本一Office的方法。 如果需要特定操作的代码，请切换到操作录制器，执行这些操作，选择"作为代码复制"，然后将生成的代码粘贴到脚本中。
+
+:::image type="content" source="../images/action-recorder-copy-code.png" alt-text="突出显示&quot;复制为代码&quot;按钮的&quot;操作录制器&quot;任务窗格。":::
 
 ## <a name="verify-an-object-is-present"></a>验证对象是否存在
 
@@ -66,7 +72,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 如果验证发生在单独的函数中，您仍必须通过从 函数发出 语句 `return` 来结束 `main` 脚本。 从子函数返回不会结束脚本。
 
-以下脚本具有与上一脚本相同的行为。 区别在于函数 `main` 调用 函数 `inputPresent` 来验证所有内容。 `inputPresent` 返回一个 boolean (`true` 或 `false`) 以指示是否存在所有必需的输入。 函数 `main` 使用该布尔值决定继续或结束脚本。
+以下脚本与上一脚本具有相同的行为。 区别在于函数 `main` 调用 函数 `inputPresent` 来验证所有内容。 `inputPresent` 返回一个 boolean (`true` 或 `false`) 以指示是否存在所有必需的输入。 函数 `main` 使用该布尔值决定继续或结束脚本。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -102,7 +108,7 @@ function inputPresent(workbook: ExcelScript.Workbook): boolean {
 
 语句 [`throw`](https://developer.mozilla.org/docs/web/javascript/reference/statements/throw) 指示发生了意外错误。 它立即结束代码。 大多数情况下，不需要从 `throw` 脚本执行。 通常，脚本会自动通知用户脚本由于问题无法运行。 在大多数情况下，用一条错误消息和函数中的语句结束脚本 `return` `main` 就足够了。
 
-但是，如果您的脚本作为流Power Automate运行，您可能需要阻止该流继续。 `throw`语句将停止脚本，并指示流也停止。
+但是，如果您的脚本作为流Power Automate运行，您可能需要阻止该流继续运行。 `throw`语句将停止脚本，并指示流也停止。
 
 以下脚本显示如何使用表 `throw` 检查示例中的 语句。
 
@@ -172,5 +178,5 @@ try {
 
 - [Office 脚本疑难解答](../testing/troubleshooting.md)
 - [有关使用脚本Power Automate疑Office信息](../testing/power-automate-troubleshooting.md)
-- [Office 脚本的平台限制](../testing/platform-limits.md)
+- [使用脚本Office限制](../testing/platform-limits.md)
 - [提高脚本Office性能](web-client-performance.md)
