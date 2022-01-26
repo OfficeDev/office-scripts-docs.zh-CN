@@ -63,6 +63,8 @@ items:
                 href: resources/samples/add-image-to-workbook.md
               - name: 将多个表复制到单个表中
                 href: resources/samples/copy-tables-combine.md
+              - name: 创建工作簿目录
+                href: resources/samples/table-of-contents.md
           - name: 超越基础设置
             items:
               - name: 将工作表合并到单个工作簿中
