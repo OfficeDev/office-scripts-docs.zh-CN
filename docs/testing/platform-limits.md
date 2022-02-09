@@ -1,22 +1,22 @@
 ---
 title: Office 脚本的平台限制和要求
-description: 与脚本一Office脚本的资源限制和浏览器Excel web 版
-ms.date: 12/14/2021
+description: 与脚本一Office脚本的资源限制和浏览器Excel web 版。
+ms.date: 01/31/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: e0c2c8108bb36dc979b33e195cdc0e0e17a586ba
-ms.sourcegitcommit: 1e561d245d9ab7f2529a1b071b1fa0326e37c4ca
+ms.openlocfilehash: 385248e5c62ed3dbf2827105b3097ef27e5187a7
+ms.sourcegitcommit: b84d4c8dd31335e4e39b0da6ad25fd528cb9d8f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61513627"
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62462500"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Office 脚本的平台限制和要求
 
-在开发脚本时，应注意一些平台Office限制。 本文详细介绍了 Office Scripts for Excel web 版 的浏览器支持和Excel web 版。
+开发脚本时应注意一些平台Office限制。 本文详细介绍了 Office Scripts for Excel web 版 的浏览器支持和Excel web 版。
 
 ## <a name="browser-support"></a>浏览器支持
 
-Office脚本在任何支持自定义脚本的[浏览器中Office 网页版。](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) 但是，IE 11 11 Internet Explorer不支持某些 JavaScript (IE 11) 。 [ES6 或更高版本中引入](https://www.w3schools.com/Js/js_es6.asp)的任何功能将不能与 IE 11 一起使用。 如果组织成员仍使用该浏览器，请务必在共享脚本时测试该环境中脚本。
+Office脚本在任何支持自定义脚本的[浏览器中Office 网页版](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452)。 但是，IE 11 版本 11 Internet Explorer不支持 (JavaScript) 。 [ES6 或更高版本中引入](https://www.w3schools.com/Js/js_es6.asp)的任何功能将不能与 IE 11 一起使用。 如果组织成员仍使用该浏览器，请务必在共享脚本时测试该环境中脚本。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -40,16 +40,16 @@ Office脚本在任何支持自定义脚本的[浏览器中Office 网页版。](h
 
 ### <a name="excel"></a>Excel
 
-Excel 网页版通过脚本调用工作簿时，对工作簿执行下列限制：
+Excel 网页版脚本调用工作簿时，对工作簿执行下列限制：
 
-- 请求和响应限制为 **5MB。**
-- 范围限制为五百 **万个单元格**。
+- 请求和响应限制为 **5MB**。
+- 一个范围限制为五 **百万个单元格**。
 
-如果在处理大型数据集时遇到错误，请尝试使用多个较小的范围，而不是较大的区域。 有关示例，请参阅编写 [大型数据集](../resources/samples/write-large-dataset.md) 示例。 您还可以使用 [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getSpecialCells_cellType__cellValueType_) 等 API 来定位特定单元格，而不是大型区域。
+如果在处理大型数据集时遇到错误，请尝试使用多个较小的范围，而不是较大的区域。 有关示例，请参阅编写 [大型数据集](../resources/samples/write-large-dataset.md) 示例。 您还可以使用 [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#excelscript-excelscript-range-getspecialcells-member(1)) 等 API 来定位特定单元格，而不是大型区域。
 
 ### <a name="power-automate"></a>Power Automate
 
-在使用Office脚本Power Automate，每个用户每天只能调用 **800 次运行脚本操作**。 此限制在 UTC 时间上午 12：00 重置。
+在将Office脚本与Power Automate时，每个用户每天只能调用 **1，600 次 Run Script 操作**。 此限制在 UTC 时间上午 12：00 重置。
 
 the Power Automate platform also has usage limitations， which can be found in the following articles.
 
@@ -57,7 +57,7 @@ the Power Automate platform also has usage limitations， which can be found in 
 - [Excel Online (Business) 连接器的已知问题和限制](/connectors/excelonlinebusiness/#known-issues-and-limitations)
 
 > [!NOTE]
-> 如果你有长时间运行的脚本，请注意同步脚本[操作 120 秒Power Automate超时](/power-automate/limits-and-config#timeout)。 你需要优化脚本或将你的[](../develop/web-client-performance.md)脚本自动化Excel多个脚本。
+> 如果你有长时间运行的脚本，请注意同步脚本[操作 120 秒Power Automate超时](/power-automate/limits-and-config#timeout)。 你需要优化脚本，或将[](../develop/web-client-performance.md)你的脚本自动化Excel多个脚本。
 
 ## <a name="see-also"></a>另请参阅
 
