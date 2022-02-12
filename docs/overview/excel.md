@@ -2,14 +2,14 @@
 title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
 ms.topic: overview
-ms.date: 02/04/2022
+ms.date: 02/08/2022
 ms.localizationpriority: high
-ms.openlocfilehash: b4222d4f3d99ccd26dde534659681a5919088450
-ms.sourcegitcommit: b84d4c8dd31335e4e39b0da6ad25fd528cb9d8f3
+ms.openlocfilehash: 7c6027386bf8953d6bd260979ad96e7195a2b786
+ms.sourcegitcommit: fce857e91be769c62685d90290acf75cc54d3ef9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "62462530"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517879"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Excel 网页版中的 Office 脚本
 
@@ -79,8 +79,6 @@ Office 脚本可与 Excel 工作簿的其他用户共享。 当共享了共享�
 
 ### <a name="create-script-buttons"></a>创建脚本按钮
 
-[!INCLUDE [Rollout information](../includes/rollout-note.md)]
-
 :::image type="content" source="../images/run-from-button.png" alt-text="单击时运行脚本的工作表中的一个按钮。":::
 
 通过将脚本按钮添加到工作簿，帮助同事查找和运行脚本。 使用任何脚本，转到脚本的详细信息页或代码编辑器任务窗格中的“**更多选项 (…)** 菜单，然后选择“**添加按钮**”。 此操作将在工作簿中创建一个按钮，已在选择该按钮时运行关联的脚本。 它还与工作簿共享脚本，因此对工作簿具有写入权限的每个人都可以使用有用的自动化操作。
@@ -92,7 +90,7 @@ Office 脚本可与 Excel 工作簿的其他用户共享。 当共享了共享�
 这些脚本按钮也适用于 Windows。 如果在 Excel 网页版中创建按钮，Windows 上的用户只需按下按钮即可运行脚本。 请注意，Windows 上支持仅运行该按钮。 如果需要编辑脚本，则需要通过 Web 应用程序执行此操作。
 
 > [!NOTE]
-> 要在 Windows 上使用此功能，需要连接到 Microsoft 365 订阅的 Excel 副本。 不受支持的平台或较旧的 Office 版本会显示用于脚本按钮的形状，但不可单击。
+> 此功能正在向具有 Microsoft 365 订阅的用户推出，并非所有人都可用。 它缓慢地释放给更多的用户，以确保它按预期工作。 此功能可能会根据你的反馈进行更改。 不支持的平台或不带此功能的 Office 版本将显示用于脚本按钮的形状，但无法单击该按钮。
 
 要停止通过按钮共享脚本，请转到脚本详细信息页中的“**更多选项 (…)**”菜单，然后选择“**停止共享**”。 此操作将删除运行该脚本的所有按钮。 删除单个按钮会从该按钮中删除脚本，即使撤销该操作或剪切并粘贴该按钮也是如此。
 
