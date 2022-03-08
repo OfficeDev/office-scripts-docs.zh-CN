@@ -2,14 +2,14 @@
 title: Excel 网页版中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
 ms.topic: overview
-ms.date: 02/08/2022
+ms.date: 02/25/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 7c6027386bf8953d6bd260979ad96e7195a2b786
-ms.sourcegitcommit: fce857e91be769c62685d90290acf75cc54d3ef9
+ms.openlocfilehash: 88c5c6179b1f459e2e20e6dd0dcd80d71829c714
+ms.sourcegitcommit: 49f527a7f54aba00e843ad4a92385af59c1d7bfa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517879"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63352139"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Excel 网页版中的 Office 脚本
 
@@ -66,33 +66,18 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 我们的[教程](../tutorials/excel-tutorial.md)提供了一种引导式和结构化的方式来了解 Office 脚本的功能。 完成本教程之后，请阅读 [Excel 网页版中 Office 脚本的编写脚本基础](../develop/scripting-fundamentals.md)，以了解有关代码编辑器以及如何编写和编辑你自己的脚本的详细信息。 有关代码编辑器以及如何解读脚本代码的其他信息，请阅读 [Office 脚本代码编辑器环境](code-editor-environment.md)。
 
-## <a name="share-scripts"></a>共享脚本
+## <a name="share-office-scripts"></a>共享Office脚本
+
+Office 脚本可与 Excel 工作簿的其他用户共享。 当共享了共享工作簿中的脚本时，有权访问该工作簿的每个人都可以查看和运行该脚本。 有关共享和取消共享脚本的详细信息，请参阅[在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)。
 
 :::image type="content" source="../images/script-sharing.png" alt-text="显示“在此工作簿中与其他人共享”选项的脚本“详细信息”页面。":::
 
-Office 脚本可与 Excel 工作簿的其他用户共享。 当共享了共享工作簿中的脚本时，有权访问该工作簿的每个人都可以查看和运行该脚本。
+添加运行脚本的按钮，帮助同事发现有价值的解决方案。 在 Run [Office Scripts with buttons 中了解有关脚本按钮的更多信息](../develop/script-buttons.md)。
 
-有关共享和取消共享脚本的详细信息，请参阅[在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)。
+:::image type="content" source="../images/add-button.png" alt-text="单击时运行脚本的工作表中的一个按钮。":::
 
 > [!NOTE]
 > 请参阅 [ Office 脚本存储和所有权 ](script-storage.md) 了解关于如何在 OneDrive 中存储脚本的详细信息。
-
-### <a name="create-script-buttons"></a>创建脚本按钮
-
-:::image type="content" source="../images/run-from-button.png" alt-text="单击时运行脚本的工作表中的一个按钮。":::
-
-通过将脚本按钮添加到工作簿，帮助同事查找和运行脚本。 使用任何脚本，转到脚本的详细信息页或代码编辑器任务窗格中的“**更多选项 (…)** 菜单，然后选择“**添加按钮**”。 此操作将在工作簿中创建一个按钮，已在选择该按钮时运行关联的脚本。 它还与工作簿共享脚本，因此对工作簿具有写入权限的每个人都可以使用有用的自动化操作。
-
-以下屏幕截图显示了标题为 **创建报表** 的脚本的详细信息页，其中突出显示了“**更多选项 (…)**”菜单中的“**添加按钮**”选项。
-
-:::image type="content" source="../images/add-button.png" alt-text="脚本详细信息页菜单中的“添加按钮”选项。":::
-
-这些脚本按钮也适用于 Windows。 如果在 Excel 网页版中创建按钮，Windows 上的用户只需按下按钮即可运行脚本。 请注意，Windows 上支持仅运行该按钮。 如果需要编辑脚本，则需要通过 Web 应用程序执行此操作。
-
-> [!NOTE]
-> 此功能正在向具有 Microsoft 365 订阅的用户推出，并非所有人都可用。 它缓慢地释放给更多的用户，以确保它按预期工作。 此功能可能会根据你的反馈进行更改。 不支持的平台或不带此功能的 Office 版本将显示用于脚本按钮的形状，但无法单击该按钮。
-
-要停止通过按钮共享脚本，请转到脚本详细信息页中的“**更多选项 (…)**”菜单，然后选择“**停止共享**”。 此操作将删除运行该脚本的所有按钮。 删除单个按钮会从该按钮中删除脚本，即使撤销该操作或剪切并粘贴该按钮也是如此。
 
 ## <a name="connect-office-scripts-to-power-automate"></a>将 Office 脚本连接到 Power Automate
 
