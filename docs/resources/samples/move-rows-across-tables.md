@@ -3,18 +3,18 @@ title: 使用脚本跨表Office行
 description: 了解如何通过保存筛选器，然后处理和重新应用筛选器来跨表移动行。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: bffdb17516016d159e61586c116d764f7bb8f3fc
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 9780cd79a55dcb5cd2e039b5198232358b3b1413
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59334967"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585476"
 ---
 # <a name="move-rows-across-tables"></a>跨表移动行
 
 此脚本执行以下操作：
 
-* 从源表中选择行，其中列中的值等于脚本 (`FILTER_VALUE` 值中的) 。
+* 从源表中选择 `FILTER_VALUE` 行，其中列中的值等于脚本 (值中的) 。
 * 将所有选定的行移动到另一张工作表的目标表中。
 * 将相关筛选器重新应用至源表。
 

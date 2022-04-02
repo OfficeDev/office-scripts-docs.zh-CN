@@ -3,12 +3,12 @@ title: 将数据传递到自动运行的 Power Automate 流中的脚本
 description: 有关在收到邮件时通过 Power Automate 在 Web 上运行 Office Scripts for Excel，并将流数据传递到脚本的教程。
 ms.date: 06/29/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 333ccfc753da067111ca4dc0c3e59ce9db360e0a
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: ae57bb52b07df0822f1fac8c931c90de8614a770
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59326868"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64586057"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow"></a>将数据传递到自动运行的 Power Automate 流中的脚本
 

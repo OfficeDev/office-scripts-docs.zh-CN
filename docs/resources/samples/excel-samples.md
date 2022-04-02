@@ -1,16 +1,16 @@
 ---
-title: Office脚本的基本Excel web 版
-description: 要与脚本集中的脚本Office代码Excel web 版。
-ms.date: 06/29/2021
+title: 用于Office脚本的基本Excel web 版
+description: 要与 Office 脚本一Excel web 版。
+ms.date: 03/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: c0e852ba2afcc37f5921ff0b2256df0769535f6e
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 853b00349b246e74765eb2959b4926fad42f07c5
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59330735"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585868"
 ---
-# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Office脚本的基本Excel web 版
+# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>用于Office脚本的基本Excel web 版
 
 以下示例是简单脚本，您可以尝试自己的工作簿。 若要在Excel web 版：
 
@@ -21,7 +21,7 @@ ms.locfileid: "59330735"
 
 ## <a name="script-basics"></a>脚本基础知识
 
-这些示例演示了脚本的基本Office构建基块。 展开这些脚本以扩展您的解决方案并解决常见问题。
+这些示例演示了用于脚本的基本Office构建基块。 展开这些脚本以扩展您的解决方案并解决常见问题。
 
 ### <a name="read-and-log-one-cell"></a>读取和记录一个单元格
 
@@ -150,7 +150,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="collections"></a>收藏
+## <a name="collections"></a>集合
 
 这些示例处理工作簿中的对象集合。
 
@@ -233,7 +233,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-下一个示例将读取存储在 Excel并将其转换为 JavaScript Date 对象。 它将日期 [的数字序列号用作](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript Date 的输入。
+下一个示例将读取存储在 Excel并将其转换为 JavaScript Date 对象。 它将日期的数字序列号用作 JavaScript Date 的输入。 NOW [ () ](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) 函数一文介绍了此序列号。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -293,7 +293,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="log-the-grand-total-values-from-a-pivottable"></a>记录数据透视表中的"总计"值
 
-本示例查找工作簿中的第一个数据透视表，并记录"Grand Total"单元格 (在下面的图像中以绿色突出显示) 。
+本示例查找工作簿中的第一个数据透视表，并记录"总计"单元格 (在下面的图像中以绿色突出显示) 。
 
 :::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="一个数据透视表，其中&quot;总计&quot;行突出显示为绿色，显示品红。":::
 
@@ -321,7 +321,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="create-a-drop-down-list-using-data-validation"></a>使用数据验证创建下拉列表
 
-此脚本为单元格创建下拉选择列表。 它使用所选区域的现有值作为列表的选项。
+此脚本为单元格创建下拉选择列表。 它将所选区域的现有值用作列表的选项。
 
 :::image type="content" source="../../images/sample-data-validation.png" alt-text="显示包含颜色选项&quot;红色、蓝色、绿色&quot;且旁边有三个单元格的工作表，与下拉列表中显示的选项相同。":::
 
@@ -381,9 +381,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="handle-a-spill-error-returned-from-a-formula"></a>处理 `#SPILL!` 从公式返回的错误
+### <a name="handle-a-spill-error-returned-from-a-formula"></a>处理从 `#SPILL!` 公式返回的错误
 
-此脚本使用 TRANSPOSE 函数将区域"A1：D2"转置为"A4：B7"。 如果转置导致错误，它将清除目标 `#SPILL` 区域并再次应用公式。
+此脚本使用 TRANSPOSE 函数将区域"A1：D2"转置为"A4：B7"。 如果转置导致错误 `#SPILL` ，它将清除目标区域并再次应用公式。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

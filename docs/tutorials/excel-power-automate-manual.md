@@ -3,12 +3,12 @@ title: 通过手动 Power Automate 流呼叫脚本
 description: 有关通过手动触发器在 Power Automate 中使用 Office 脚本的教程。
 ms.date: 06/29/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 506481c8b5ee1ae94a4e0a7fc926abc62ba7c5f9
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: e926540976dc066b3f07620c1e710dfa3abc7660
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59330861"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585938"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow"></a>通过手动 Power Automate 流呼叫脚本
 
@@ -100,7 +100,7 @@ Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](
 
 9. 选择“**保存**”。
 
-现在，你的流程可以通过 Power Automate 运行。 可使用流编辑器中的 "**测试**" 按钮对其进行测试，或按照其余教程步骤运行流集合中的流程。
+流现已准备好通过 Power Automate 运行。可以使用流编辑器中的 **测试** 按钮对其进行测试，也可以按照剩余的教程步骤从流集合中运行流。
 
 ## <a name="run-the-script-through-power-automate"></a>通过 Power Automate 运行脚本
 
@@ -116,9 +116,9 @@ Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](
 
 4. 将显示用于运行流的任务窗格。 如果系统要求 **登录** 到 Excel Online，请通过选择“**继续**”来执行操作。
 
-5. 选择“**运行流**”。 此时将运行流，该流将运行相关的 Office 脚本。
+5. 选择 **运行流**。这将运行流，从而运行相关的 Office 脚本。
 
-6. 选择“**完成**”。 你应该看到 **运行** 部分进行了相应的更新。
+6. 选择 **完成**。应该看到 **运行** 部分进行相应的更新。
 
 7. 刷新页面，查看 Power Automate 的结果。 如果成功，请转到工作簿查看已更新的单元格。 如果失败，请验证流的设置并再次运行。
 

@@ -3,16 +3,16 @@ title: Office脚本示例方案：分析 Web 下载
 description: 一个示例，在将信息组织到表中Excel工作簿中的原始 Internet 流量数据并确定源位置。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ad889e75d5f2e4b8af4379c3875b43ff8e1beda6
-ms.sourcegitcommit: ea9c3685a7407a07acf802705f4f44fb007c7825
+ms.openlocfilehash: 9d2d0ba302c72d4ca1f1aaad5e9cee5ba40d64e9
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61333496"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585489"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office脚本示例方案：分析 Web 下载
 
-在此方案中，你需要分析公司网站的下载报告。 此分析的目标是确定 Web 流量是否来自美国或世界上的其他地方。
+在此方案中，你需要分析公司网站的下载报告。 此分析的目标是确定 Web 流量是来自 美国还是世界上的其他地方。
 
 您的同事将原始数据上载到工作簿。 每周的数据集都有自己的工作表。 还有一个 **包含** 表和图表的"摘要"工作表显示一周过去一周的趋势。
 
@@ -211,7 +211,7 @@ ms.locfileid: "61333496"
 
 ## <a name="running-the-script"></a>运行脚本
 
-导航到任何"**周" \* \*** 工作表并运行 **"分析 Web 下载"** 脚本。 该脚本将应用条件格式和当前工作表上标记的位置。 它还将更新 **"摘要"** 工作表。
+导航到任何" **周"\*\*** 工作表并运行 **"分析 Web 下载"** 脚本。 该脚本将应用条件格式和当前工作表上标记的位置。 它还将更新 **"摘要"** 工作表。
 
 ### <a name="before-running-the-script"></a>运行脚本之前
 

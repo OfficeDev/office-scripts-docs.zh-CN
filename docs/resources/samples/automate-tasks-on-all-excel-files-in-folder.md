@@ -1,19 +1,19 @@
 ---
 title: 对文件夹中的所有 Excel 文件运行脚本
-description: 了解如何对 Excel 上的文件夹中的所有文件运行OneDrive for Business。
+description: 了解如何对 OneDrive for Business 文件夹中的所有 Excel 文件运行OneDrive for Business。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 5da0d63fbdcf8b7333b951e226d9d34321dd6bd5
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 924fd1b0ea1d50e18877b5a7808feb906959215e
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59327859"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585875"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>对文件夹中的所有 Excel 文件运行脚本
 
 此项目对位于 OneDrive for Business 上的文件夹中的所有文件执行一组自动化OneDrive for Business。 它还可用于文件夹SharePoint文件夹。
-该代码对Excel文件执行计算，添加格式，并插入一个[@mentions注释。](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7)
+该代码对Excel执行计算，添加格式，并插入一个[@mentions注释。](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7)
 
 ## <a name="sample-excel-files"></a>示例Excel文件
 
@@ -76,21 +76,21 @@ function main(workbook: ExcelScript.Workbook) {
 此流对"销售"文件夹中每个工作簿运行脚本。
 
 1. 创建新的即时 **云流**。
-1. 选择 **"手动触发流"，** 然后选择"创建 **"。**
+1. 选择 **"手动触发流"，** 然后选择"创建 **"**。
 1. 添加一 **个新** 步骤，该步骤使用 **OneDrive for Business** 连接器和 **"在文件夹操作中列出文件**"。
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="已完成的OneDrive for Business连接器Power Automate。":::
 1. 选择包含提取的工作簿的"Sales"文件夹。
-1. 若要确保仅选择工作簿，请选择"**新建步骤"，** 然后选择"条件 **"。** 对条件使用以下值。
+1. 若要确保仅选择工作簿，请选择" **新建步骤"，** 然后选择"条件 **"**。 对条件使用以下值。
     1. **文件名** (OneDrive文件名值) 
     1. "ends with"
     1. "xlsx"
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="The Power Automate condition block that applies subsequent actions to each file.":::
-1. Under the **If yes** branch， add the Excel Online (**Business)** connector with the Run **script** action. 对操作使用以下值。
+1. Under the **If yes** branch， add the **Excel Online (Business)** connector with the **Run script** action. 对操作使用以下值。
     1. **位置**：OneDrive for Business
     1. **文档库**：OneDrive
-    1. **文件****： (OneDrive** ID 值的 ID) 
+    1. **文件**：**(** id OneDrive文件 ID 值) 
     1. **脚本**：脚本名称
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="已完成的 Excel Online (Business) 连接器Power Automate。":::

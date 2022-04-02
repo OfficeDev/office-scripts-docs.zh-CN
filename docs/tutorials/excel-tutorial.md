@@ -3,12 +3,12 @@ title: 在 Excel 网页版中录制、编辑和创建 Office 脚本
 description: 有关 Office 脚本基础知识的教程，包括使用操作录制器录制脚本以及将数据写入工作簿。
 ms.date: 05/23/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 0defd57ef7d2da55deb9d06b11205ea49cfd0dc6
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 15f55eff0d042f862d6607099882ad123369e676
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59333074"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585819"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中录制、编辑和创建 Office 脚本
 
@@ -28,7 +28,7 @@ ms.locfileid: "59333074"
 1. 在 Excel 网页版中创建新的工作簿。
 2. 复制以下水果销售数据，并将其粘贴到工作表中，从单元格 **A1** 开始。
 
-    |水果 |2018 年 |2019 年 |
+    |水果 |2018 |2019 |
     |:---|:---|:---|
     |橙子 |1000 |1200 |
     |柠檬 |800 |900 |

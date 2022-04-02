@@ -3,12 +3,12 @@ title: 在 Excel 网页版中使用 Office 脚本读取工作簿数据
 description: 有关从工作簿中读取数据并评估脚本中的数据的 Office 脚本教程。
 ms.date: 01/06/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 739ad5bd1fa395c5081442246241cd598ce7c39c
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: c1bc867b6df91a7dedde4020177ed87682d060f9
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59335901"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64586036"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中使用 Office 脚本读取工作簿数据
 
@@ -149,4 +149,4 @@ ms.locfileid: "59335901"
 
 打开“代码编辑器”，然后尝试使用一些 [Excel 网页版中的 Office 脚本的示例脚本](../resources/samples/excel-samples.md)。 还可以访问 [Excel 网页版中的 Office 脚本的脚本基础知识](../develop/scripting-fundamentals.md)，了解有关创建 Office 脚本的详细信息。
 
-下一系列的 Office 脚本教程重点介绍如何将 Office 脚本与 Power Automate 一起使用。 在[使用 Power Automate 运行 Office 脚本](../develop/power-automate-integration.md)中了解有关结合两个平台的优势的更多信息，或尝试[通过 Power Automate 手动流调用脚本](excel-power-automate-manual.md)教程来创建使用 Office 脚本的 Power Automate 流。
+下一系列 Office 脚本教程重点介绍如何将 Office 脚本与 Power Automate 配合使用。在 [使用 Power Automate 运行 Office 脚本](../develop/power-automate-integration.md) 或尝试 [在手动 Power Automate 流中的调用脚本](excel-power-automate-manual.md) 教程中了解更多结合这两个平台的优势，以创建使用 Office 脚本的 Power Automate 流。

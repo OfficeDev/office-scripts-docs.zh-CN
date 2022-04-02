@@ -3,20 +3,20 @@ title: 使用Office脚本运行Power Automate
 description: 如何获取Office脚本Excel web 版工作流Power Automate脚本。
 ms.date: 03/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: f7358b79248974ddb548b54437422670a37531bf
-ms.sourcegitcommit: 79ce4fad6d284b1aa71f5ad6d2938d9ad6a09fee
+ms.openlocfilehash: dbf65086e564b20ca0fc3a4dc1c527188540be6b
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63459618"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585749"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>使用Office脚本运行Power Automate
 
 [Power Automate](https://flow.microsoft.com)，可以将Office脚本添加到更大的自动化工作流。 可以使用Power Automate操作，如将电子邮件内容添加到工作表表中，或在项目管理工具中基于工作簿注释创建操作。
 
-## <a name="get-started"></a>开始行动
+## <a name="get-started"></a>入门
 
-如果你刚开始使用Power Automate，我们建议你访问入门[Power Automate](/power-automate/getting-started)。 在那里，你可以了解有关所有可用的自动化可能性的信息。 此处的文档重点介绍脚本Office脚本Power Automate以及它如何有助于改进Excel体验。
+如果你是第一次Power Automate，我们建议你开始[访问Power Automate](/power-automate/getting-started)。 在那里，你可以了解有关所有可用的自动化可能性的信息。 此处的文档重点介绍脚本Office脚本Power Automate以及它如何有助于改进Excel体验。
 
 若要开始组合Power Automate脚本Office脚本，请按照教程开始将脚本与脚本[Power Automate](../tutorials/excel-power-automate-manual.md)。 这将教您如何创建调用简单脚本的流。 完成本教程和在自动运行的 Power Automate 流教程中将数据传递到脚本后，请返回此处，详细了解如何将 [Office](../tutorials/excel-power-automate-trigger.md) 脚本连接到 Power Automate 流。
 

@@ -1,20 +1,20 @@
 ---
 title: 通过电子邮件发送图表和Excel图像
-description: 了解如何使用脚本Office脚本Power Automate提取图表和表格的图像并Excel电子邮件。
+description: 了解如何使用脚本Office脚本Power Automate提取图表和Excel图像并通过电子邮件发送。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a4bdb16bdf5923bf49f26fcba163fc3f0b7354
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 2930a70a5bed4eb49f33f315460ae32f40b5a2f2
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59335065"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585504"
 ---
-# <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>使用Office脚本Power Automate脚本和脚本来发送图表和表格的电子邮件图像
+# <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>使用Office脚本和Power Automate脚本和脚本发送到图表和表格的电子邮件图像
 
 此示例使用Office脚本Power Automate创建图表。 然后，它通过电子邮件发送图表及其基表的图像。
 
-## <a name="example-scenario"></a>示例应用场景
+## <a name="example-scenario"></a>示例方案
 
 * 计算可获取最新结果。
 * 创建图表。
@@ -37,14 +37,14 @@ _通过流收到Power Automate的电子邮件_
 
 此解决方案由两部分组成：
 
-1. [一Office脚本，用于计算和提取Excel图表和表](#sample-code-calculate-and-extract-excel-chart-and-table)
-1. 一Power Automate调用脚本并通过电子邮件发送结果的流。 有关操作方法的示例，请参阅使用 Power Automate 创建[自动化工作流](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
+1. [一Office用于计算和提取图表和Excel的脚本](#sample-code-calculate-and-extract-excel-chart-and-table)
+1. 一Power Automate调用脚本并通过电子邮件发送结果的流。 有关操作方法的示例，请参阅使用自定义工作流[创建Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
 
 ## <a name="sample-excel-file"></a>示例Excel文件
 
 下载 <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> 工作簿的工作簿。 添加以下脚本以自己试用示例！
 
-## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a>示例代码：计算并提取Excel图表和表
+## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a>示例代码：计算和提取Excel图表和表
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
@@ -94,18 +94,18 @@ interface ReportImages {
 此流运行脚本，并通过电子邮件发送返回的图像。
 
 1. 创建新的即时 **云流**。
-1. 选择 **"手动触发流"，** 然后选择"创建 **"。**
-1. 通过运行 **脚本操作** 添加使用 **Excel Online (Business)** 连接器的新步骤。  对操作使用以下值。
+1. 选择 **"手动触发流"，** 然后选择"创建 **"**。
+1. 使用 Run **脚本** 操作添加使用 **Excel Online (Business)** 连接器 **的新步骤。** 对操作使用以下值。
     * **位置**：OneDrive for Business
     * **文档库**：OneDrive
-    * **文件**：工作簿 ([选择器选项选择)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
+    * **文件**：工作簿 ([文件选择器选择)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **脚本**：脚本名称
 
     :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="已完成的 Excel Online (Business) 连接器Power Automate。":::
-1. 此示例使用 Outlook 作为电子邮件客户端。 可以使用支持的任何Power Automate连接器，但其余步骤假定你已选择Outlook。 添加一 **个新** 步骤，该步骤使用 **Office 365 Outlook** 连接器和"发送和电子邮件 (**V2)** 操作。 对操作使用以下值。
+1. 此示例使用 Outlook 作为电子邮件客户端。 可以使用支持的任何Power Automate连接器，但其余步骤假定你已选择Outlook。 添加一 **个使用 V2** Office 365 Outlook  连接器以及"发送和 (**V2**) "操作。 对操作使用以下值。
     * **目标**：测试电子邮件帐户 (或个人) 
     * **主题**：请查看报告数据
-    * 对于" **正文** "字段，选择"代码视图 `</>` " () 并输入以下内容：
+    * 对于" **正文** "字段，选择"代码视图" `</>` () 并输入以下内容：
 
     ```HTML
     <p>Please review the following report data:<br>

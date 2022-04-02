@@ -3,18 +3,18 @@ title: 提高脚本Office性能
 description: 通过了解工作簿和脚本之间的Excel创建更快的脚本。
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 169256bdae809c413c10f1f00240afc28be795f4
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 2deb417d41c4be663efaf83735459eab26146410
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59331162"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585630"
 ---
 # <a name="improve-the-performance-of-your-office-scripts"></a>提高脚本Office性能
 
-使用脚本Office自动执行一系列任务，以节省时间。 较慢的脚本可能会感觉它无法加快工作流的速度。 大多数情况下，脚本将完全正常并如期运行。 但是，有一些可避免的场景可能会影响性能。
+使用脚本Office自动化通常执行的一系列任务，以节省时间。 较慢的脚本可能会感觉它无法加快工作流的速度。 大多数情况下，脚本将完全正常并如期运行。 但是，有一些可避免的场景可能会影响性能。
 
-脚本运行缓慢的最常见原因是与工作簿的通信过多。 当工作簿存在于云中时，脚本将在本地计算机上运行。 在某些时候，脚本会将其本地数据与工作簿的本地数据同步。 这意味着，当 (同步) ，任何写入操作（如) ）都 `workbook.addWorksheet()` 只应用于工作簿。 同样，任何读取操作 (，) 仅在这些时间从脚本 `myRange.getValues()` 的工作簿获取数据。 在任一情况下，脚本都先提取信息，然后再处理数据。 例如，以下代码将准确记录已用区域中的行数。
+脚本运行缓慢的最常见原因是与工作簿的通信过多。 当工作簿存在于云中时，脚本将在本地计算机上运行。 在某些时候，脚本会将其本地数据与工作簿的本地数据同步。 这意味着，当 `workbook.addWorksheet()` (同步) ，任何写入操作（如) ）都只应用于工作簿。 同样，任何读取操作 (， `myRange.getValues()`) 这些时间仅从脚本的工作簿获取数据。 在任一情况下，脚本都先提取信息，然后再处理数据。 例如，以下代码将准确记录已用区域中的行数。
 
 ```TypeScript
 let usedRange = workbook.getActiveWorksheet().getUsedRange();
@@ -24,7 +24,7 @@ let rowCount = usedRange.getRowCount();
 console.log(rowCount);
 ```
 
-Office脚本 API 确保工作簿或脚本中任何数据都准确且在必要时是最新的。 无需担心这些同步，脚本就能够正常运行。 但是，了解此脚本到云通信可以帮助您避免不必要的网络调用。
+Office脚本 API 可确保工作簿或脚本中任何数据准确且在必要时是最新的。 无需担心这些同步，脚本就能够正常运行。 但是，了解此脚本到云通信可以帮助您避免不必要的网络调用。
 
 ## <a name="performance-optimizations"></a>性能优化
 
@@ -70,11 +70,11 @@ function main(workbook: ExcelScript.Workbook) {
 ```
 
 > [!NOTE]
-> 作为实验，请尝试在 `usedRangeValues` 循环中用 替换 `usedRange.getValues()` 。 您可能会注意到，在处理较大范围时，脚本需要更长的时间运行。
+> 作为实验，请尝试在循环 `usedRangeValues` 中用 替换 `usedRange.getValues()`。 您可能会注意到，在处理较大范围时，脚本需要更长的时间运行。
 
-### <a name="avoid-using-trycatch-blocks-in-or-surrounding-loops"></a>避免 `try...catch` 在循环或周围循环中使用块
+### <a name="avoid-using-trycatch-blocks-in-or-surrounding-loops"></a>避免在 `try...catch` 循环或周围循环中使用块
 
-我们不建议在循环 [`try...catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) 或周围循环中使用语句。 这是您避免在循环中读取数据的相同原因：每次迭代都强制脚本与工作簿同步，以确保未引发任何错误。 通过检查从工作簿返回的对象，可以避免大多数错误。 例如，以下脚本在尝试添加行之前检查工作簿返回的表是否存在。
+我们不建议在循环或 [`try...catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) 周围循环中使用语句。 这是您避免在循环中读取数据的相同原因：每次迭代都强制脚本与工作簿同步，以确保未引发任何错误。 通过检查从工作簿返回的对象，可以避免大多数错误。 例如，以下脚本在尝试添加行之前检查工作簿返回的表是否存在。
 
 ```TypeScript
 /**
@@ -96,11 +96,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="remove-unnecessary-consolelog-statements"></a>删除不必要的 `console.log` 语句
 
-控制台日志记录是调试 [脚本的重要工具](../testing/troubleshooting.md)。 但是，它会强制脚本与工作簿同步，以确保记录的信息是最新的。 请考虑在共享脚本 (不必要的日志记录语句，例如) 测试日志的日志记录语句。 这通常不会导致明显的性能问题，除非语句 `console.log()` 位于循环中。
+控制台日志记录是调试脚本 [的重要工具](../testing/troubleshooting.md)。 但是，它会强制脚本与工作簿同步，以确保记录的信息是最新的。 请考虑在共享脚本 (不必要的日志记录语句，例如用于测试) 日志的日志记录语句。 这通常不会导致明显的性能问题，除非 `console.log()` 语句位于循环中。
 
 ## <a name="case-by-case-help"></a>按案例帮助
 
-随着 Office 脚本平台的扩展以使用[Power Automate、](https://flow.microsoft.com/)自适应卡片和其他跨产品[](/adaptive-cards)功能，脚本工作簿通信的细节变得更加复杂。 如果您需要有关加快脚本运行速度的帮助，请通过 Microsoft 问答&[A。](/answers/topics/office-scripts-excel-dev.html) 请务必使用"office-scripts-dev"标记你的问题，以便专家可以找到它并提供帮助。
+随着 Office 脚本平台的扩展以使用 [Power Automate](https://flow.microsoft.com/)、自适应卡片和其他跨产品功能，脚本[](/adaptive-cards)工作簿通信的细节变得更加复杂。 如果您需要有关加快脚本运行速度的帮助，请通过 [Microsoft 问答&联系](/answers/topics/office-scripts-excel-dev.html)。 请务必使用"office-scripts-dev"标记你的问题，以便专家可以找到它并提供帮助。
 
 ## <a name="see-also"></a>另请参阅
 

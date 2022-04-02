@@ -3,18 +3,18 @@ title: 跨引用Excel文件Power Automate
 description: 了解如何使用脚本Office脚本Power Automate交叉引用和格式化Excel文件。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: adeb84140cb9884309c9f37854a29fc4d59b17ed
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 13ba6c8ba6f9232554ea6cfd5f98c308ea981683
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332976"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585483"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>跨引用Excel文件Power Automate
 
 此解决方案演示如何比较两个文件之间的数据Excel查找差异。 它Office脚本来分析数据，Power Automate工作簿之间进行通信。
 
-## <a name="example-scenario"></a>示例应用场景
+## <a name="example-scenario"></a>示例方案
 
 你是安排即将召开的会议的演讲者的事件协调人。 您将事件数据保留在另一个电子表格中，将扬声器注册保留在另一个电子表格中。 若要确保两个工作簿保持同步，请对脚本Office流来突出显示任何潜在的问题。
 
@@ -148,28 +148,28 @@ interface EventData {
 
 此流提取第一个工作簿的事件信息，并使用该数据验证第二个工作簿。
 
-1. 登录到 [Power Automate](https://flow.microsoft.com)并创建新的 **即时云流**。
-1. 选择 **"手动触发流"，** 然后选择"创建 **"。**
-1. 通过运行 **脚本操作** 添加使用 **Excel Online (Business)** 连接器的新步骤。  对操作使用以下值。
+1. 登录 [Power Automate并](https://flow.microsoft.com)创建新的 **即时云流**。
+1. 选择 **"手动触发流"，** 然后选择"创建 **"**。
+1. 使用 Run **脚本** 操作添加使用 **Excel Online (Business)** 连接器 **的新步骤。** 对操作使用以下值。
     * **位置**：OneDrive for Business
     * **文档库**：OneDrive
-    * **文件**：event-data.xlsx ([选择器选项时)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
+    * **文件**：event-data.xlsx ([文件选择器选项选择)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **脚本**：获取事件数据
 
-    :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="Excel中Excel脚本 (Business) 连接器 Power Automate已完成。":::
+    :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="已完成的 Excel Online (Business) 连接器，适用于 Power Automate 中第一个脚本。":::
 
-1. 使用 Run **脚本操作** 添加第二个使用 **Excel Online (Business)** 连接器 **的新** 步骤。 对操作使用以下值。
+1. 使用 Run 脚本 **操作** 添加第二个 **使用 Excel Online (Business)** **连接器的新** 步骤。 对操作使用以下值。
     * **位置**：OneDrive for Business
     * **文档库**：OneDrive
-    * **文件**：speaker-registration.xlsx ([选择器选项时)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
+    * **文件**：speaker-registration.xlsx ([文件选择器选项选择)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **脚本**：验证扬声器注册
 
-    :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="已完成的 Excel Online (Business) 连接器，用于第二个脚本Power Automate。":::
-1. 此示例使用 Outlook 作为电子邮件客户端。 可以使用任何支持的电子邮件Power Automate连接器。 添加一 **个使用 V2** Office 365 Outlook 连接器和 **Send and email (操作)** 步骤。  对操作使用以下值。
+    :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="Excel中Excel脚本 (Business) 连接器已完成Power Automate。":::
+1. 此示例使用 Outlook 作为电子邮件客户端。 可以使用任何支持的电子邮件Power Automate连接器。 添加一 **个使用 V2** Office 365 Outlook  连接器以及"发送和 (**V2**) "操作。 对操作使用以下值。
     * **目标**：测试电子邮件帐户 (或个人) 
     * **主题**：事件验证结果
-    * **正文**：结果 (_运行脚本 **2 中的**_ 动态) 
+    * **正文**：run script _**2 (中的结果)**_
 
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="已完成的Office 365 Outlook连接器Power Automate。":::
 1. 保存流。 使用" **流** 编辑器"页上的"测试"按钮，或通过"我的流" **选项卡运行** 流。请务必在系统提示时允许访问。
-1. 你应该收到一封电子邮件，指出"发现不匹配。 数据需要你审查。" 这表示中行与 **speaker-registrations.xlsx行之间存在****event-data.xlsx。** 打开 **speaker-registrations.xlsx** 以查看一些突出显示的单元格，其中扬声器注册列表存在潜在问题。
+1. 你应该收到一封电子邮件，指出"发现不匹配。 数据需要你审查。" 这表示行中的行与 **speaker-registrations.xlsx行之间存在** **event-data.xlsx**。 打开 **speaker-registrations.xlsx** 以查看一些突出显示的单元格，其中扬声器注册列表存在潜在问题。

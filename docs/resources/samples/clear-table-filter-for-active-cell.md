@@ -3,18 +3,18 @@ title: 基于活动单元格位置清除表格列筛选器
 description: 了解如何根据活动单元格位置清除表列筛选器。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: bb01292017a027e41230d786337b5bf53293a20c
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: c52f1a3501318a479744abc6f2aa15cfaf3f9ded
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332983"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585581"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>基于活动单元格位置清除表格列筛选器
 
 本示例根据活动单元格位置清除表格列筛选器。 该脚本检测单元格是否属于表格，确定表格列，并清除应用了表格的任何筛选器。
 
-如果要了解有关在清除筛选器之前如何保存筛选器 (并稍后重新应用) ，请参阅通过保存筛选器跨表移动行，这是一个更[](move-rows-across-tables.md)高级的示例。
+如果希望了解有关在清除筛选器之前如何保存筛选器 (并稍后重新应用) ，请参阅通过保存筛选器跨表移动行，这是一个更高级的示例[](move-rows-across-tables.md)。
 
 _在清除列筛选器 (，请注意活动单元格)_
 

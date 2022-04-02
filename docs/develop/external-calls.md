@@ -3,12 +3,12 @@ title: Office 脚本中的外部 API 呼叫支持
 description: 在脚本中执行外部 API 调用Office指南。
 ms.date: 05/21/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e7be505f13529e1d3bcff22ce9fa18cc36148f7b
-ms.sourcegitcommit: 79ce4fad6d284b1aa71f5ad6d2938d9ad6a09fee
+ms.openlocfilehash: abcd548c9b62ce9bd5c40866915ae50a6d1cc5be
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63459604"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585735"
 ---
 # <a name="external-api-call-support-in-office-scripts"></a>Office 脚本中的外部 API 呼叫支持
 

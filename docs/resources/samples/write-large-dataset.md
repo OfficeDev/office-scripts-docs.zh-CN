@@ -3,25 +3,25 @@ title: 编写大型数据集
 description: 了解如何在脚本中将大型数据集拆分为Office操作。
 ms.date: 05/13/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b37c5892c3b5f9ba26bfc2cdf8b30db321751d3
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 0702ae5465caf91f5581cbdb79ca75a65e83adbc
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59330581"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585924"
 ---
 # <a name="write-a-large-dataset"></a>编写大型数据集
 
-`Range.setValues()`API 将数据放在一个范围中。 此 API 有一些限制，具体取决于各种因素，例如数据大小和网络设置。 这意味着，如果您尝试将大量信息作为单个操作写入工作簿，则需要以较小的批次写入数据，以便可靠地更新 [较大范围](../../testing/platform-limits.md)。
+API `Range.setValues()` 将数据放在一个范围中。 此 API 有一些限制，具体取决于各种因素，例如数据大小和网络设置。 这意味着，如果您尝试将大量信息作为单个操作写入工作簿，则需要以较小的批次写入数据，以便可靠地更新 [较大范围](../../testing/platform-limits.md)。
 
-有关脚本中Office基础知识，请阅读提高脚本[Office性能](../../develop/web-client-performance.md)。
+有关 Office 脚本的性能基础知识，请阅读改进 Office [脚本的性能](../../develop/web-client-performance.md)。
 
 ## <a name="sample-code-write-a-large-dataset"></a>示例代码：编写大型数据集
 
-此脚本以较小的部分写入区域行。 它选择一次写入 1000 个单元格。 在空白工作表上运行脚本以查看更新批处理的运行情况。 控制台输出可进一步深入了解发生了什么。
+此脚本以较小的部分写入区域行。 它选择一次写入 1000 个单元格。 在空白工作表上运行脚本以查看更新批处理的运行情况。 控制台输出进一步深入了解发生了什么。
 
 > [!NOTE]
-> 可以通过更改 的值来更改正在写入的总行数 `SAMPLE_ROWS` 。 可以通过更改 的值，将要写入的单元格数更改为单个操作 `CELLS_IN_BATCH` 。
+> 可以通过更改 的值来更改正在写入的总行数 `SAMPLE_ROWS`。 可以通过更改 的值，将要写入的单元格数更改为单个操作 `CELLS_IN_BATCH`。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
