@@ -1,14 +1,14 @@
 ---
 title: 从脚本返回数据到自动运行 Power Automated 流
 description: 本教程演示了如何通过 Power Automate 运行适用于 Excel 网页版的 Office 脚本来发送提醒电子邮件。
-ms.date: 06/29/2021
+ms.date: 04/12/2022
 ms.localizationpriority: high
-ms.openlocfilehash: e100fac263dee8f1f39529bd83610576e68eb2e6
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 7d232b4688132532dd2bc029588d6244a4a64ef8
+ms.sourcegitcommit: 8bcd743bebfacafa548b936ca99ad6d4918e7bcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64586050"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64826686"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>从脚本返回数据到自动运行 Power Automated 流
 
@@ -135,10 +135,10 @@ ms.locfileid: "64586050"
 
     :::image type="content" source="../images/power-automate-return-tutorial-2.png" alt-text=" Power Automate 中的&quot;计划云流&quot;按钮。":::
 
-1. 现在需要为这个流程设置时间表。 从 2021 年上半年开始，电子表格在每周一都有一个新的待命任务。 把流设置为星期一早上的首个运行的项。 使用以下选项将流配置为每周星期一运行。
+1. 现在需要为这个流程设置时间表。 从 2022 年上半年开始，电子表格在每周一都有一个新的待命任务。 把流设置为星期一早上的首个运行的项。 使用以下选项将流配置为每周星期一运行。
 
     - **流名称**：通知待命人
-    - **开始时间**：1/4/21 凌晨 1:00
+    - **开始时间**：2022 年 3 月 1 日凌晨 1:00
     - **重复间隔**：1 周
     - **这些日期**：星期一
 
