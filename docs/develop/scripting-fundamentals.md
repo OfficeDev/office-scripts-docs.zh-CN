@@ -3,12 +3,12 @@ title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: e2ba7eaa956f2009c9017bbfd1f390f56eb9008e
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 633772655ca9346055d33682c36f35a5a8610cc8
+ms.sourcegitcommit: 4e3d3aa25fe4e604b806fbe72310b7a84ee72624
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585721"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077044"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel 网页版中 Office 脚本的脚本基础
 
@@ -319,11 +319,14 @@ function main(workbook: ExcelScript.Workbook) {
 - [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook)
 - [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet)
 
+有关特定于数据透视表对象模型的信息，请参阅[在 Office 脚本中使用数据透视表](pivottables.md)。
+
 ## <a name="see-also"></a>另请参阅
 
 - [在 Excel 网页版中录制、编辑和创建 Office 脚本](../tutorials/excel-tutorial.md)
 - [在 Excel 网页版中使用 Office 脚本读取工作簿数据](../tutorials/excel-read-tutorial.md)
 - [Office 脚本 API 参考](/javascript/api/office-scripts/overview)
+- [在 Office 脚本中使用数据透视表](pivottables.md)
 - [在 Office 脚本中使用内置的 JavaScript 对象](javascript-objects.md)
 - [Office 脚本中的最佳实践](best-practices.md)
 - [Office 脚本开发中心](https://developer.microsoft.com/office-scripts)
