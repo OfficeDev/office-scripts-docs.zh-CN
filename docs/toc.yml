@@ -111,6 +111,8 @@ items:
                 href: resources/scenarios/task-reminders.md
           - name: 社区参与
             items:
+              - name: 打卡时钟按钮
+                href: resources/scenarios/punch-clock.md
               - name: 季节问候语
                 href: resources/samples/community-seasons-greetings.md
       - name: Office 脚本和其他平台
