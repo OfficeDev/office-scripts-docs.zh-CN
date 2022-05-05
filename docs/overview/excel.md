@@ -4,12 +4,12 @@ description: Office 脚本中的操作录制器和代码编辑器简介。
 ms.topic: overview
 ms.date: 02/25/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 6e2370d71d7452490243ab492705b8bf037b7115
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 3c5423344bb1d0f619ea1933a2681dc7e5fd8ba1
+ms.sourcegitcommit: f1550e457c220a2d1498907e925768aba0c36dc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585651"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187229"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Excel 网页版中的 Office 脚本
 
@@ -70,7 +70,7 @@ Excel 网页版中的 Office 脚本可以让您可以自动化日常任务。 �
 
 Office 脚本可与 Excel 工作簿的其他用户共享。 当共享了共享工作簿中的脚本时，有权访问该工作簿的每个人都可以查看和运行该脚本。 有关共享和取消共享脚本的详细信息，请参阅[在 Excel 网页版中共享 Office 脚本](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)。
 
-:::image type="content" source="../images/script-sharing.png" alt-text="显示“在此工作簿中与其他人共享”选项的脚本“详细信息”页面。":::
+:::image type="content" source="../images/script-sharing.png" alt-text="显示“在此工作簿中与其他人共享”选项的脚本详细信息页面。":::
 
 添加运行脚本的按钮，帮助同事发现有价值的解决方案。 在 Run [Office Scripts with buttons 中了解有关脚本按钮的更多信息](../develop/script-buttons.md)。
 
