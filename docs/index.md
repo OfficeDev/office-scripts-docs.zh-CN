@@ -2,19 +2,19 @@
 layout: LandingPage
 ms.topic: landing-page
 title: Office 脚本文档
-description: 在 Excel 网页版中学习 Office 脚本的资源，包括教程、概念文章和代码示例。
+description: 在 Excel 中学习 Office 脚本的资源，包括教程、概念文章和代码示例。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 2f9a380408a2df793886093c10b685f918483489
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: b98c746ec89b61f05c3a6ded04100c0a1efc20bc
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585665"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393689"
 ---
 # <a name="office-scripts-documentation"></a>Office 脚本文档
 
-在 Excel 网页版中使用 Office 脚本以自动化常见任务。 浏览以下文章，了解如何创建和编辑 Office 脚本并立即开始自动化。
+在 Excel 中使用 Office 脚本以自动化常见任务。 浏览以下文章，了解如何创建和编辑 Office 脚本并立即开始自动化。
 
 <ul class="panelContent cardsF cols cols3 rows2">
     <li>
@@ -73,7 +73,7 @@ ms.locfileid: "64585665"
 ---
 
 <h2>其他资源</h2>
-<p>使用以下资源了解 Office 脚本用于与 Excel 网页版中的工作簿进行交互的 API，询问有关 Excel 网页版 Office 脚本的问题，或请求适用于 Excel 网页版的功能。</p>
+<p>使用以下资源了解 Office 脚本使用的 API、询问有关 Office 脚本的问题或请求 Office 脚本的功能。</p>
 <ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">
