@@ -1,7 +1,7 @@
 items:
   - name: Office 脚本文档
     href: index.md
-  - name: Excel web 版中的 Office 脚本
+  - name: Excel 中的 Office 脚本
     items:
       - name: 概述
         href: overview/excel.md

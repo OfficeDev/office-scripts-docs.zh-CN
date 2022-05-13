@@ -3,12 +3,12 @@ title: 在 Excel 网页版中录制、编辑和创建 Office 脚本
 description: 有关 Office 脚本基础知识的教程，包括使用操作录制器录制脚本以及将数据写入工作簿。
 ms.date: 05/23/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 15f55eff0d042f862d6607099882ad123369e676
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 30caa66787bce9c4341069461ea54ef3c63d9601
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585819"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393626"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>在 Excel 网页版中录制、编辑和创建 Office 脚本
 
@@ -61,7 +61,7 @@ ms.locfileid: "64585819"
 
     此代码从工作簿中获取当前工作表。 然后，它将设置区域 **A2:C2** 的填充颜色。
 
-    区域是 Excel 网页版中的 Office 脚本的基本组成部分。 区域是一个连续的矩形单元格块，其中包含值、公式和格式。 它们是单元格的基本结构，你可以通过它们执行大多数脚本编写任务。
+    区域是 Excel 中的 Office 脚本的基本组成部分。 区域是一个连续的矩形单元格块，其中包含值、公式和格式。 它们是单元格的基本结构，你可以通过它们执行大多数脚本编写任务。
 
 3. 将以下行添加到脚本的末尾（在 `color` 设置位置和结束 `}` 之间）：
 

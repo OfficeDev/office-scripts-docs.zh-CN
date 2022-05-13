@@ -3,16 +3,16 @@ title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 633772655ca9346055d33682c36f35a5a8610cc8
-ms.sourcegitcommit: 4e3d3aa25fe4e604b806fbe72310b7a84ee72624
+ms.openlocfilehash: bd51f814de60da8006413096f4d6aad125f78fab
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077044"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393598"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel 网页版中 Office 脚本的脚本基础
 
-本文将介绍 Office 脚本技术方面的知识。 你将了解 Excel 对象如何协同工作以及代码编辑器如何与工作簿同步。
+本文将介绍 Office 脚本技术方面的知识。 你将了解基于 TypeScript 的脚本代码的关键部分，以及 Excel 对象和 API 如何协同工作。
 
 ## <a name="typescript-the-language-of-office-scripts"></a>TypeScript：Office 脚本的语言
 
@@ -194,7 +194,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 当 Excel 对象具有一个或多个相同类型对象的集合时，则将它们存储在数组中。 例如，`Workbook` 对象包含一个 `Worksheet[]`。 此数组由 `Workbook.getWorksheets()` 方法访问。 复数形式的 `get` 方法（如 `Worksheet.getCharts()`）将整个对象集合作为数组返回。 你将在整个 Office 脚本 API 中查看此模式：`Worksheet` 对象采用 `getTables()` 方法返回 `Table[]`，`Table` 对象采用 `getColumns()` 方法返回 `TableColumn[]`，以此类推。
 
-返回的数组是一个普通数组，因此所有常规数组操作均可用于脚本。 你还可以使用数组索引值访问集合中的单个对象。 例如，`workbook.getTables()[0]` 将返回集合中的第一个表格。 有关通过 Office 脚本框架使用内置数组功能的详细信息，请参阅 [使用集合工作](javascript-objects.md#work-with-collections)。 
+返回的数组是一个普通数组，因此所有常规数组操作均可用于脚本。 你还可以使用数组索引值访问集合中的单个对象。 例如，`workbook.getTables()[0]` 将返回集合中的第一个表格。 有关通过 Office 脚本框架使用内置数组功能的详细信息，请参阅 [使用集合工作](javascript-objects.md#work-with-collections)。
 
 此外，还可通过 `get` 方法从集合中访问单个对象。 单数形式的 `get` 方法（如 `Worksheet.getTable(name)`）返回单个对象，并且需要特定对象的 ID 或名称。 此 ID 或名称通常由脚本或通过 Excel UI 设置。
 
