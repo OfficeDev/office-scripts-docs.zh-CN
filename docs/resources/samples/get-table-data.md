@@ -1,35 +1,35 @@
 ---
-title: 输出Excel JSON
-description: 了解如何将表Excel输出为 JSON，以用于Power Automate。
-ms.date: 03/18/2022
+title: 将 Excel 数据输出为 JSON
+description: 了解如何将 Excel 表数据输出为要在 Power Automate 中使用的 JSON。
+ms.date: 06/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: d6f15b9b59a2dfe1c74caa11c748f5f52c4ef35e
-ms.sourcegitcommit: 62a62351a0a15a658f93336269f3f50767ca6b62
+ms.openlocfilehash: 2d316a7f1a3def869b59e0ff2b2e64284f0d2022
+ms.sourcegitcommit: 4a28220decc2f25b2ecd0ebaf52a5de68f7b7a83
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746355"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65895039"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>输出Excel表数据作为 JSON，用于Power Automate
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>将 Excel 表数据输出为 JSON 以供 Power Automate 使用
 
-Excel数据可以表示为 JSON 形式的对象数组。 每个对象代表表格中的一行。 这有助于以用户可见的Excel格式从数据中提取数据。 然后，可通过流向其他系统Power Automate数据。
+Excel 表数据可以以 JSON 的形式表示为对象数组。 每个对象表示表中的一行。 这有助于以用户可见的一致格式从 Excel 提取数据。 然后，可以通过 Power Automate 流将数据提供给其他系统。
 
-## <a name="sample-excel-file"></a>示例Excel文件
+## <a name="sample-excel-file"></a>示例 Excel 文件
 
-下载适用于 <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> 工作簿的文件文件。
+下载文件 <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> ，以获取随时可用的工作簿。
 
 :::image type="content" source="../../images/table-input.png" alt-text="显示输入表数据的工作表。":::
 
-此示例的变体还包括其中一个表格列中的超链接。 这允许在 JSON 中显示其他级别的单元格数据。
+此示例的变体还包括其中一个表列中的超链接。 这允许在 JSON 中显示其他级别的单元格数据。
 
-:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="显示格式化为超链接的表格数据的列的工作表。":::
+:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="显示格式为超链接的表数据列的工作表。":::
 
-## <a name="sample-code-return-table-data-as-json"></a>示例代码：以 JSON 返回表数据
+## <a name="sample-code-return-table-data-as-json"></a>示例代码：将表数据作为 JSON 返回
 
-添加以下脚本以自己试用示例！
+添加以下脚本以自行尝试示例！
 
 > [!NOTE]
-> 您可以更改结构 `interface TableData` 以匹配表列。 请注意，对于包含空格的列名，请务必 `"Event ID"` 将键放在引号中，如 示例中的 。
+> 可以更改 `interface TableData` 结构以匹配表列。 请注意，对于具有空格的列名，请务必将密钥放在引号中，如 `"Event ID"` 示例中的键。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -62,12 +62,12 @@ function returnObjectFromValues(values: string[][]): TableData[] {
       continue;
     }
 
-    let object = {}
+    let object: {[key: string]: string} = {}
     for (let j = 0; j < values[i].length; j++) {
       object[objectKeys[j]] = values[i][j]
     }
 
-    objectArray.push(object as TableData);
+    objectArray.push(object as unknown as TableData);
   }
 
   return objectArray;
@@ -82,7 +82,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-plaintable-worksheet"></a>"PlainTable"工作表中的示例输出
+### <a name="sample-output-from-the-plaintable-worksheet"></a>“PlainTable”工作表中的示例输出
 
 ```json
 [{
@@ -136,10 +136,10 @@ interface TableData {
 }]
 ```
 
-## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>示例代码：使用超链接文本以 JSON 格式返回表数据
+## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>示例代码：使用超链接文本将表数据作为 JSON 返回
 
 > [!NOTE]
-> 脚本始终从表的第 4 列 (0) 超链接。 通过修改注释下的代码，可以更改该顺序或包含多个列作为超链接数据 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
+> 该脚本始终从表的第 4 列 (0 索引) 提取超链接。 可以通过修改注释下的代码来更改该顺序或将多个列作为超链接数据包括在内 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -196,7 +196,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-withhyperlink-worksheet"></a>"WithHyperLink"工作表中的示例输出
+### <a name="sample-output-from-the-withhyperlink-worksheet"></a>“WithHyperLink”工作表中的示例输出
 
 ```json
 [{
@@ -258,6 +258,6 @@ interface TableData {
 }]
 ```
 
-## <a name="use-in-power-automate"></a>在Power Automate
+## <a name="use-in-power-automate"></a>在 Power Automate 中使用
 
-若要了解如何在工作流中使用此Power Automate[，请参阅使用](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate) Power Automate。
+有关如何在 Power Automate 中使用此类脚本，请参阅使用 [Power Automate 创建自动化工作流](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
