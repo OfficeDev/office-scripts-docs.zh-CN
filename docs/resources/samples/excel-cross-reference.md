@@ -3,16 +3,18 @@ title: 使用Power Automate交叉引用Excel文件
 description: 了解如何使用Office脚本和Power Automate交叉引用和设置Excel文件的格式。
 ms.date: 06/06/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 02c06b6376d3726b3e1b44255df14aa64be196ea
-ms.sourcegitcommit: f5fc9146d5c096e3a580a3fa8f9714147c548df4
+ms.openlocfilehash: a470ee4c59d0fc0a5612a54326a0dec3ab3a59d6
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2022
-ms.locfileid: "66038670"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088118"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>使用Power Automate交叉引用Excel文件
 
 此解决方案演示如何比较两个Excel文件中的数据，以查找差异。 它使用Office脚本分析数据，Power Automate在工作簿之间进行通信。
+
+此示例使用 [JSON](https://www.w3schools.com/whatis/whatis_json.asp) 对象在工作簿之间传递数据。 有关使用 JSON 的详细信息，请阅读[使用 JSON 向Office脚本传递数据](../../develop/use-json.md)。
 
 ## <a name="example-scenario"></a>示例方案
 

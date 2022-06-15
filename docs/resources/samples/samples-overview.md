@@ -1,14 +1,14 @@
 ---
 title: Office脚本示例
 description: 可用Office脚本示例和方案。
-ms.date: 04/26/2022
+ms.date: 06/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c9bbe9b6f7eb8abad2995dac72ccf636d585d69
-ms.sourcegitcommit: e6428a5214fa38aef036a952a0e3c09dbf6e4d3e
+ms.openlocfilehash: 059a21711f36273207f1e65ba844ba23c502ffe0
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65109153"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088048"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office脚本示例和方案
 
@@ -18,11 +18,14 @@ ms.locfileid: "65109153"
 
 在 [方案中](#scenarios)，我们包含了一些更大的方案示例，这些示例演示了真实的用例。
 
-我们也欢迎 [社区的贡献](#community-contributions-and-fun-samples)。
+我们也欢迎 [社区的贡献](#community-contributions-and-fun-samples)。 这些示例开放源代码。
+
+> [!IMPORTANT]
+> 在尝试示例之前，请务必满足Office脚本的先决条件。 Microsoft 365订阅和帐户的要求位于[Excel概述“要求”部分的Office脚本](../../overview/excel.md#requirements)下。
 
 ## <a name="basics"></a>基本信息
 
-| Project | 详细信息 |
+| 项目 | 详细信息 |
 |---------|---------|
 | [脚本基础知识](../excel-samples.md) | 这些示例演示了Office脚本的基本构建基块。 |
 | [在Excel中添加注释](add-excel-comments.md) | 此示例将注释添加到包含@mentioning同事的单元格。 |
@@ -34,7 +37,7 @@ ms.locfileid: "65109153"
 
 请查看以下端到端项目，该项目可自动执行示例方案以及完整的脚本、所使用的示例Excel文件以及[托管在 YouTube) 上的视频 (](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)。
 
-| Project | 详细信息 |
+| 项目 | 详细信息 |
 |---------|---------|
 | [将工作表合并到单个工作簿中](combine-worksheets-into-single-workbook.md) | 此示例使用Office脚本和Power Automate将数据从其他工作簿拉取到单个工作簿中。 |
 | [将 CSV 文件转换为Excel工作簿](convert-csv.md) | 此示例使用Office脚本和Power Automate从.csv文件创建.xlsx文件。 |
@@ -69,12 +72,8 @@ Office脚本可以自动执行日常程序的各个部分。 这些日常任务�
 | Project | 详细信息 |
 |---------|---------|
 | [生活游戏](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | 黄玉涛在Excel科技Community上的“准备玩家零”博客包括一个脚本，为约翰·康威的 [*《生活游戏》*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)建模。 |
-| [“打孔时钟”按钮](../scenarios/punch-clock.md) | 这个剧本是由 [布赖恩·冈萨雷斯](https://github.com/b-gonzalez)贡献的。 该方案具有一个脚本和一个脚本按钮，用于记录当前时间。 |
+| [打卡时钟按钮](../scenarios/punch-clock.md) | 这个剧本是由 [布赖恩·冈萨雷斯](https://github.com/b-gonzalez)贡献的。 该方案具有一个脚本和一个脚本按钮，用于记录当前时间。 |
 | [季节问候动画](community-seasons-greetings.md) | 这个剧本是由 [莱斯利·布莱克](https://www.linkedin.com/in/lesblackconsultant/) 本着节日的精神贡献的！ 这是一个有趣的脚本，显示一个唱歌的圣诞树在Excel web 版使用Office脚本。 |
-
-## <a name="try-it-out"></a>试用
-
-这些示例开放源代码。 亲自试用它们。 你将需要一个 Microsoft 工作或学校帐户，从工作或学校具有Microsoft 365订阅 (E3 或更高) 的许可证。 只需转到一 https://office.com 下即可登录到帐户并开始使用。
 
 ## <a name="leave-a-comment"></a>保留注释
 

@@ -1,24 +1,24 @@
 ---
 title: 在 Office 脚本中使用外部提取呼叫
-description: 了解如何在脚本中执行外部 API Office调用。
-ms.date: 05/14/2021
+description: 了解如何在Office脚本中进行外部 API 调用。
+ms.date: 06/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: feff9d49f9f50f14fd83b1864568df8dab02d417
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 569d74f1ca8996cd8fe8a4ba3163445d57676d27
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585525"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088090"
 ---
 # <a name="use-external-fetch-calls-in-office-scripts"></a>在 Office 脚本中使用外部提取呼叫
 
-此脚本获取有关用户存储库GitHub信息。 它显示了如何在 `fetch` 简单方案中使用。 有关使用或其他外部调用`fetch`的信息，请阅读外部 [API 调用支持（在 Office Scripts 中）](../../develop/external-calls.md)
+此脚本获取有关用户GitHub存储库的基本信息。 它演示如何在简单方案中使用 `fetch` 。 有关使用或其他外部调用`fetch`的详细信息，请阅读[Office脚本中的外部 API 调用支持](../../develop/external-calls.md)。 有关使用 [JSON]] (https://www.w3schools.com/whatis/whatis_json.asp)对象的信息（例如GitHub API 返回的内容），请阅读[使用 JSON 将数据传入和传入Office脚本](../../develop/use-json.md)。
 
-你可以了解有关正在应用 API 参考中使用的 GItHub GITHUB[内容](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user)。 您还可以通过访问 Web 浏览器来查看原始 API `https://api.github.com/users/{USERNAME}/repos` 调用输出 (请务必将 {USERNAME} 占位符替换为 GitHub ID) 。
+详细了解在 [GitHub API 参考](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user)中使用的 GItHub API。 还可以通过访问 `https://api.github.com/users/{USERNAME}/repos` Web 浏览器来查看原始 API 调用输出 (请务必将 {USERNAME} 占位符替换为GitHub ID) 。
 
 ![获取存储库信息示例](../../images/git.png)
 
-## <a name="sample-code-get-basic-information-about-users-github-repositories"></a>示例代码：获取有关用户数据库GitHub信息
+## <a name="sample-code-get-basic-information-about-users-github-repositories"></a>示例代码：获取有关用户GitHub存储库的基本信息
 
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {
@@ -26,17 +26,19 @@ async function main(workbook: ExcelScript.Workbook) {
   // Replace the {USERNAME} placeholder with your GitHub username.
   const response = await fetch('https://api.github.com/users/{USERNAME}/repos');
   const repos: Repository[] = await response.json();
-  
+
   // Create an array to hold the returned values.
   const rows: (string | boolean | number)[][] = [];
 
   // Convert each repository block into a row.
-  for (let repo of repos){ 
-    rows.push([repo.id, repo.name, repo.license?.name, repo.license?.url])
+  for (let repo of repos) {
+    rows.push([repo.id, repo.name, repo.license?.name, repo.license?.url]);
   }
+  // Create a header row.
+  const sheet = workbook.getActiveWorksheet();
+  sheet.getRange('A1:D1').setValues([["ID", "Name", "License Name", "License URL"]]);
 
   // Add the data to the current worksheet, starting at "A2".
-  const sheet = workbook.getActiveWorksheet();
   const range = sheet.getRange('A2').getResizedRange(rows.length - 1, rows[0].length - 1);
   range.setValues(rows);
 }
@@ -45,7 +47,7 @@ async function main(workbook: ExcelScript.Workbook) {
 interface Repository {
   name: string,
   id: string,
-  license?: License 
+  license?: License
 }
 
 // An interface matching the returned JSON for a GitHub repo license.
@@ -57,4 +59,4 @@ interface License {
 
 ## <a name="training-video-how-to-make-external-api-calls"></a>培训视频：如何进行外部 API 调用
 
-[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/fulP29J418E)。
+[观看苏迪 · 拉马穆尔西在 YouTube 上浏览这个示例](https://youtu.be/fulP29J418E)。

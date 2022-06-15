@@ -1,22 +1,24 @@
 ---
-title: Office脚本示例方案：Graph NOAA 中的水级数据
+title: Office脚本示例方案：Graph来自 NOAA 的水位数据
 description: 从 NOAA 数据库提取 JSON 数据并使用它创建图表的示例。
 ms.date: 03/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 80c9c812662b18d76bd620c512d220a68c65855f
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: b4181edae7d8a46ae381ddfb1a2893b03faffd9b
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585434"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088097"
 ---
-# <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office脚本示例方案：从 NOAA 提取和绘制水级数据
+# <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office脚本示例方案：从 NOAA 提取和绘制水位数据
 
-在此方案中，你需要绘制"国家/地区"和"城市管理"[的西雅图站的水底。](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130) 您将使用外部数据填充电子表格并创建图表。
+在这种情况下，你需要绘制 [国家海洋和大气管理局西雅图站的](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130)水位。 你将使用外部数据填充电子表格并创建图表。
 
-您将开发一个脚本，该 `fetch` 脚本使用 命令查询 [NOAA 更新和当前数据库](https://tidesandcurrents.noaa.gov/)。 这将获取在给定时间跨度中记录的水位。 信息将作为 JSON 返回，因此脚本的一部分会将其转换为范围值。 数据位于电子表格中后，它将用于制作图表。
+你将开发一个脚本，该脚本使用该 `fetch` 命令查询 [NOAA Tides 和 Currents 数据库](https://tidesandcurrents.noaa.gov/)。 这将在给定时间范围内记录水位。 信息将作为 [JSON](https://www.w3schools.com/whatis/whatis_json.asp) 返回，因此脚本的一部分会将其转换为范围值。 数据在电子表格中后，将用于制作图表。
 
-## <a name="scripting-skills-covered"></a>涵盖的脚本编写技能
+有关使用 JSON 的详细信息，请阅读[使用 JSON 向Office脚本传递数据](../../develop/use-json.md)。
+
+## <a name="scripting-skills-covered"></a>所涵盖的脚本技能
 
 - 外部 API 调用 (`fetch`) 
 - JSON 分析
@@ -24,9 +26,9 @@ ms.locfileid: "64585434"
 
 ## <a name="setup-instructions"></a>设置说明
 
-1. 使用"文件"打开Excel web 版。
+1. 使用Excel web 版打开工作簿。
 
-1. 在" **自动化"** 选项卡下，选择 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。
+1. 在 **“自动执行”** 选项卡下，选择 **“新建脚本** ”并将以下脚本粘贴到编辑器中。
 
     ```TypeScript
     /**
@@ -109,12 +111,12 @@ ms.locfileid: "64585434"
     }
     ```
 
-1. 将该脚本重命名为 **NOAA 水级图** 并保存它。
+1. 将脚本重命名为 **NOAA 水位图** 并保存它。
 
 ## <a name="running-the-script"></a>运行脚本
 
-在任何工作表上，运行 **NOAA 水级图表** 脚本。 该脚本提取从 2020 年 12 月 25 日到 2020 年 12 月 27 日的水级数据。 可以将 `const` 脚本开头的变量更改为使用不同的日期或获取不同的工作站信息。 [用于数据检索的 CO-OPS API](https://api.tidesandcurrents.noaa.gov/api/prod/) 介绍如何获取所有这些数据。
+在任何工作表上，运行 **NOAA 水位图** 脚本。 该脚本提取 2020 年 12 月 25 日至 2020 年 12 月 27 日的水位数据。 `const`脚本开头的变量可以更改为使用不同的日期或获取不同的站信息。 [CO-OPS API For Data Retrieval](https://api.tidesandcurrents.noaa.gov/api/prod/) 介绍了如何获取所有这些数据。
 
 ### <a name="after-running-the-script"></a>运行脚本后
 
-:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="运行脚本后的工作表显示一些水级数据和图表。":::
+:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="运行脚本后的工作表显示一些水位数据和图表。":::

@@ -1,40 +1,40 @@
 ---
 title: Office脚本示例方案：自动任务提醒
-description: 在项目管理电子表格Power Automate自适应卡片自动执行任务提醒的示例。
+description: 在项目管理电子表格中使用Power Automate和自适应卡自动执行任务提醒的示例。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: f157601d067bda0d5501ae865d7f63f99926d347
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 08f3713210e83162f86d38bc8eb33d76bf8a7288
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585945"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088111"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Office脚本示例方案：自动任务提醒
 
-在此方案中，你将管理项目。 每月使用Excel一个工作表跟踪员工的状态。 你经常需要提醒用户填写其状态，因此你已决定自动执行该提醒过程。
+在此方案中，你正在管理项目。 使用Excel工作表每月跟踪员工的状态。 你通常需要提醒用户填写其状态，因此你决定自动执行该提醒过程。
 
-您将创建一个Power Automate流，以向缺少状态字段的人发送消息，然后向电子表格应用其响应。 为此，您将开发一对脚本来处理工作簿处理。 第一个脚本获取具有空白状态的人的列表，第二个脚本将状态字符串添加到右侧行。 你还将使用自适应卡片[Teams](/microsoftteams/platform/task-modules-and-cards/what-are-cards)让员工直接从通知中输入其状态。
+你将创建一个Power Automate流，向缺少状态字段的人员发送消息，并将他们的响应应用到电子表格。 为此，你将开发一配对脚本来处理工作簿的使用。 第一个脚本获取具有空白状态的人员列表，第二个脚本将状态字符串添加到右行。 你还将使用[Teams自适应卡片](/microsoftteams/platform/task-modules-and-cards/what-are-cards)让员工直接从通知中输入其状态。
 
-## <a name="scripting-skills-covered"></a>涵盖的脚本编写技能
+## <a name="scripting-skills-covered"></a>所涵盖的脚本技能
 
-- 在 Power Automate
-- 将数据传递到脚本
+- 在Power Automate中创建流
+- 将数据传递给脚本
 - 从脚本返回数据
 - Teams自适应卡片
 - 表格
 
 ## <a name="prerequisites"></a>先决条件
 
-此方案[使用Power Automate](https://flow.microsoft.com)和[Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software)。 你将需要两个与用于开发脚本Office关联。 若要免费访问 Microsoft 开发人员订阅以了解这些应用程序[并使用这些](https://developer.microsoft.com/microsoft-365/dev-program)应用程序，请考虑加入 Microsoft 365 计划。
+此方案使用[Power Automate](https://flow.microsoft.com)和[Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software)。 需要与用于开发Office脚本的帐户相关联。 若要免费访问 Microsoft 开发人员订阅以了解和使用这些应用程序，请考虑加入[Microsoft 365开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。
 
 ## <a name="setup-instructions"></a>设置说明
 
-1. 将<a href="task-reminders.xlsx">task-reminders.xlsx</a>下载到OneDrive。
+1. <a href="task-reminders.xlsx"> 将task-reminders.xlsx</a>下载到OneDrive。
 
-1. 在工作簿中打开Excel web 版。
+1. 在Excel web 版中打开工作簿。
 
-1. 首先，我们需要一个脚本，用于获取电子表格中缺少状态报告的所有员工。 在" **自动化"** 选项卡下，选择 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。
+1. 首先，我们需要一个脚本来获取电子表格中缺少状态报告的所有员工。 在 **“自动执行”** 选项卡下，选择 **“新建脚本** ”并将以下脚本粘贴到编辑器中。
 
     ```TypeScript
     /**
@@ -85,9 +85,9 @@ ms.locfileid: "64585945"
     }
     ```
 
-1. 保存名称为"获取人员 **"的脚本**。
+1. 保存名为 **“获取人员**”的脚本。
 
-1. 接下来，我们需要第二个脚本处理状态报告卡，将新信息放入电子表格中。 在"代码编辑器"任务窗格中，选择" **新建脚本** "，然后将以下脚本粘贴到编辑器中。
+1. 接下来，我们需要第二个脚本来处理状态报表卡，并将新信息放入电子表格中。 在“代码编辑器”任务窗格中，选择 **“新建脚本** ”并将以下脚本粘贴到编辑器中。
 
     ```TypeScript
     /**
@@ -141,31 +141,31 @@ ms.locfileid: "64585945"
     }
     ```
 
-1. 使用名称"保存状态" **保存脚本**。
+1. 保存名为 **“保存状态**”的脚本。
 
 1. 现在，我们需要创建流。 打开[Power Automate](https://flow.microsoft.com/)。
 
     > [!TIP]
-    > 如果之前尚未创建流，请查看我们的教程开始使用脚本和Power Automate了解基础知识[](../../tutorials/excel-power-automate-manual.md)。
+    > 如果之前尚未创建流，请查看本教程["开始"菜单使用带Power Automate的脚本](../../tutorials/excel-power-automate-manual.md)来了解基础知识。
 
-1. 创建新的即时 **流**。
+1. 创建新的 **即时流**。
 
-1. 从 **选项中选择"手动触发** 流"，然后选择"创建 **"**。
+1. 从选项 **中选择“手动触发流** ”，然后选择 **“创建**”。
 
-1. 该流需要调用 **"获取人员** "脚本，获取具有空状态字段的所有员工。 选择 **"新步骤**"，然后选择"**Excel Online (Business) "**。 在 **操作** 下，选择 **运行脚本**。 为流步骤提供以下条目：
+1. 该流需要调用 **Get People** 脚本，以获取具有空状态字段的所有员工。 选择 **“新建步骤**”，然后选择 **“联机 (业务) Excel**。 在 **操作** 下，选择 **运行脚本**。 为流步骤提供以下条目：
 
     - **位置**：OneDrive for Business
     - **文档库**：OneDrive
-    - **文件**：task-reminders.xlsx *(浏览器选项选择)*
+    - **文件**：通过 *文件浏览器) 选择task-reminders.xlsx (*
     - **脚本**：获取人员
 
-    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="显示Power Automate运行脚本流步骤的脚本流。":::
+    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="显示第一个运行脚本流步骤的Power Automate流。":::
 
-1. 接下来，该流需要处理脚本返回的数组中的每个 Employee。 选择 **"新建** 步骤"，然后选择"向用户Teams **自适应卡片并等待响应**。
+1. 接下来，流需要处理脚本返回的数组中的每个 Employee。 选择 **“新建”步骤**，然后选择“**向Teams用户发布自适应卡片并等待响应**。
 
-1. 对于 **"收件人**"字段，**添加来自** 动态内容的电子邮件 (所选内容将具有Excel徽标) 。 添加 **电子邮件** 会导致流步骤被应用到每个块 **包围** 。 这意味着数组将按以下方法进行Power Automate。
+1. 对于 **“收件人”** 字段，添加来自动态内容 **的电子邮件** (所选内容) 包含Excel徽标。 添加 **电子邮件** 会导致流步骤被 **应用到每个** 块所包围。 这意味着数组将通过Power Automate进行迭代。
 
-1. 发送自适应卡片需要将卡片的 JSON 作为消息 **提供**。 可以使用自适应卡片 [设计器创建自定义](https://adaptivecards.io/designer/) 卡片。 对于此示例，请使用以下 JSON。  
+1. 发送自适应卡片需要将卡片的 [JSON](https://www.w3schools.com/whatis/whatis_json.asp) 作为 **消息** 提供。 可以使用 [自适应卡片设计器](https://adaptivecards.io/designer/) 创建自定义卡片。 对于此示例，请使用以下 JSON。  
 
     ```json
     {
@@ -206,38 +206,38 @@ ms.locfileid: "64585945"
     }
     ```
 
-1. 填写其余字段，如下所示：
+1. 按如下所示填写剩余字段：
 
-    - **更新消息**：感谢您提交状态报告。 您的响应已成功添加到电子表格。
-    - **应更新卡片**：是
+    - **更新消息**：感谢你提交状态报告。 响应已成功添加到电子表格中。
+    - **应更新卡** 片：是
 
-1. 在"**应用到每个块**"中，在将自适应卡片Teams **并等待响应后**，选择"**添加操作"**。 选择 **Excel Online (Business)**。 在 **操作** 下，选择 **运行脚本**。 为流步骤提供以下条目：
+1. 在 **“应用到每个** 块”中，在向 **Teams用户发布自适应卡片并等待响应** 后，选择 **“添加操作**”。 选择 **Excel联机 (业务)**。 在 **操作** 下，选择 **运行脚本**。 为流步骤提供以下条目：
 
     - **位置**：OneDrive for Business
     - **文档库**：OneDrive
-    - **文件**：task-reminders.xlsx *(浏览器选项选择)*
+    - **文件**：通过 *文件浏览器) 选择task-reminders.xlsx (*
     - **脚本**：保存状态
-    - **senderEmail**： email *(dynamic content from Excel)*
-    - **statusReportResponse**：响应 *(动态内容Teams)*
+    - **senderEmail**：*从Excel) 发送 (动态内容* 的电子邮件
+    - **statusReportResponse**：响应 *(来自Teams) 的动态内容*
 
-    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="显示Power Automate应用到每个步骤的流。":::
+    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="显示应用到每个步骤的Power Automate流。":::
 
 1. 保存流。
 
 ## <a name="running-the-flow"></a>运行流
 
-若要测试流，请确保任何空状态的表行都使用绑定到 Teams 帐户的电子邮件地址 (在测试) 时，应该使用您自己的) 。 使用" **流** 编辑器"页上的"测试"按钮，或通过"我的流" **选项卡运行** 流。请务必在系统提示时允许访问。
+若要测试流，请确保任何具有空白状态的表行都使用绑定到Teams帐户的电子邮件地址 (在测试) 时，您可能应使用自己的电子邮件地址。 使用流编辑器页上的 **“测试** ”按钮，或通过“ **我的流** ”选项卡运行流。出现提示时，请务必允许访问。
 
-你应该会收到从 Power Automate 到 Teams 的自适应卡片。 在卡片中填写状态字段后，流程将继续，并更新电子表格，并包含你提供的状态。
+应从Power Automate到Teams收到自适应卡片。 在卡片中填写状态字段后，流将继续使用所提供的状态更新电子表格。
 
 ### <a name="before-running-the-flow"></a>运行流之前
 
-:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="包含一个缺少状态条目的状态报告工作表。":::
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="一个包含一个缺失状态条目的状态报告的工作表。":::
 
 ### <a name="receiving-the-adaptive-card"></a>接收自适应卡片
 
-:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="要求员工Teams更新的自适应卡片。":::
+:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="Teams中向员工询问状态更新的自适应卡片。":::
 
 ### <a name="after-running-the-flow"></a>运行流后
 
-:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="包含状态报告的工作表，现在填充了状态条目。":::
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="包含状态报表的工作表，其中包含现在已填充的状态条目。":::

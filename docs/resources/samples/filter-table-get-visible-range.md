@@ -1,30 +1,30 @@
 ---
-title: 筛选Excel表并获取可见区域
-description: 了解如何使用 Office Scripts 筛选 Excel 表，并获取作为对象数组的可见区域。
+title: 筛选Excel表并获取可见范围
+description: 了解如何使用Office脚本筛选Excel表，并获取可见范围作为对象数组。
 ms.date: 03/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 09adbdabb64f9cf15b8219cfd3ef2dfa35d30fe2
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 103ec97111720ab872c0be843aa0573781d98c44
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585833"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088083"
 ---
-# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>筛选Excel，并获取作为 JSON 对象的可见区域
+# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>筛选Excel表，并以 JSON 对象形式获取可见范围
 
-此示例筛选一Excel，并返回可见区域作为 JSON 对象。 此 JSON 可以提供给一个Power Automate更大的解决方案的一部分。
+此示例筛选Excel表，并将可见范围返回为 [JSON](https://www.w3schools.com/whatis/whatis_json.asp) 对象。 此 JSON 可作为更大解决方案的一部分提供给Power Automate流。
 
 ## <a name="example-scenario"></a>示例方案
 
 * 将筛选器应用于表列。
-* 筛选后提取可见区域。
-* 使用特定的 JSON 结构组合并 [返回对象](#sample-json)。
+* 筛选后提取可见范围。
+* 组合并返回具有 [特定 JSON 结构](#sample-json)的对象。
 
 ## <a name="sample-excel-file"></a>示例Excel文件
 
-下载 <a href="table-filter.xlsx">table-filter.xlsx</a> 工作簿的工作簿。 添加以下脚本以自己试用示例！
+下载现成工作簿 <a href="table-filter.xlsx"> 的table-filter.xlsx</a> 。 添加以下脚本以自行尝试示例！
 
-## <a name="sample-code-filter-a-table-and-get-visible-range"></a>示例代码：筛选表并获取可见区域
+## <a name="sample-code-filter-a-table-and-get-visible-range"></a>示例代码：筛选表并获取可见范围
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {
@@ -90,7 +90,7 @@ interface ReturnTemplate {
 
 ### <a name="sample-json"></a>示例 JSON
 
-每个键表示表的唯一值。 每个数组实例表示应用相应筛选器时可见的行。
+每个键表示表的唯一值。 每个数组实例表示应用相应筛选器时可见的行。 有关使用 JSON 的详细信息，请阅读[使用 JSON 向Office脚本传递数据](../../develop/use-json.md)。
 
 ```json
 {
@@ -99,43 +99,43 @@ interface ReturnTemplate {
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Debra Berger",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }, {
     "Station": "Station-1",
     "Shift": "Afternoon",
     "Date": "27-Oct-20",
     "Responsible": "Delia Dennis",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }, {
     "Station": "Station-1",
     "Shift": "Afternoon",
     "Date": "28-Oct-20",
     "Responsible": "Lidia Holloway",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }],
   "Station-2": [{
     "Station": "Station-2",
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Gerhart Moller",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }, {
     "Station": "Station-2",
     "Shift": "Afternoon",
     "Date": "28-Oct-20",
     "Responsible": "Grady Archie",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }],
   "Station-3": [{
     "Station": "Station-3",
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Isaiah Langer",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }]
 }
 ```
 
-## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>培训视频：筛选Excel表并获取可见区域
+## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>培训视频：筛选Excel表并获取可见范围
 
-[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/Mv7BrvPq84A)。
+[观看苏迪 · 拉马穆尔西在 YouTube 上浏览这个示例](https://youtu.be/Mv7BrvPq84A)。

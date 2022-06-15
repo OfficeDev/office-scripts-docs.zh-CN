@@ -1,20 +1,20 @@
 ---
-title: 将 Excel 数据输出为 JSON
-description: 了解如何将 Excel 表数据输出为要在 Power Automate 中使用的 JSON。
+title: 将数据输出Excel为 JSON
+description: 了解如何将Excel表数据输出为要在Power Automate中使用的 JSON。
 ms.date: 06/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d316a7f1a3def869b59e0ff2b2e64284f0d2022
-ms.sourcegitcommit: 4a28220decc2f25b2ecd0ebaf52a5de68f7b7a83
+ms.openlocfilehash: bf7e8ceb7bec5a7362b1894cdfe13d9e01576a66
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65895039"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088104"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>将 Excel 表数据输出为 JSON 以供 Power Automate 使用
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>输出Excel表数据作为 JSON 以用于Power Automate
 
-Excel 表数据可以以 JSON 的形式表示为对象数组。 每个对象表示表中的一行。 这有助于以用户可见的一致格式从 Excel 提取数据。 然后，可以通过 Power Automate 流将数据提供给其他系统。
+Excel表数据可以表示为 [JSON](https://www.w3schools.com/whatis/whatis_json.asp) 形式的对象数组。 每个对象表示表中的一行。 这有助于以用户可见的一致格式从Excel提取数据。 然后，可以通过Power Automate流将数据提供给其他系统。 
 
-## <a name="sample-excel-file"></a>示例 Excel 文件
+## <a name="sample-excel-file"></a>示例Excel文件
 
 下载文件 <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> ，以获取随时可用的工作簿。
 
@@ -29,7 +29,7 @@ Excel 表数据可以以 JSON 的形式表示为对象数组。 每个对象表�
 添加以下脚本以自行尝试示例！
 
 > [!NOTE]
-> 可以更改 `interface TableData` 结构以匹配表列。 请注意，对于具有空格的列名，请务必将密钥放在引号中，如 `"Event ID"` 示例中的键。
+> 可以更改 `interface TableData` 结构以匹配表列。 请注意，对于具有空格的列名，请务必将密钥放在引号中，如 `"Event ID"` 示例中的键。 有关使用 JSON 的详细信息，请阅读[使用 JSON 向Office脚本传递数据](../../develop/use-json.md)。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -258,6 +258,6 @@ interface TableData {
 }]
 ```
 
-## <a name="use-in-power-automate"></a>在 Power Automate 中使用
+## <a name="use-in-power-automate"></a>在Power Automate中使用
 
-有关如何在 Power Automate 中使用此类脚本，请参阅使用 [Power Automate 创建自动化工作流](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
+有关如何在Power Automate中使用此类脚本，请[参阅使用Power Automate创建自动化工作流](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
