@@ -1,14 +1,14 @@
 ---
 title: 将数据传递到自动运行的 Power Automate 流中的脚本
 description: 有关在收到邮件时通过 Power Automate 在 Web 上运行 Office Scripts for Excel，并将流数据传递到脚本的教程。
-ms.date: 06/29/2021
+ms.date: 06/10/2022
 ms.localizationpriority: high
-ms.openlocfilehash: ae57bb52b07df0822f1fac8c931c90de8614a770
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 73a551df09eadba1f6e75de35e17e1c5a93498e9
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64586057"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088129"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow"></a>将数据传递到自动运行的 Power Automate 流中的脚本
 
@@ -210,6 +210,18 @@ function main(
 :::image type="content" source="../images/power-automate-params-tutorial-4.png" alt-text="显示此流运行三次后的电子邮件表的工作表。":::
 
 :::image type="content" source="../images/power-automate-params-tutorial-5.png" alt-text="流运行三次后显示数据透视表的工作表。":::
+
+## <a name="troubleshooting"></a>疑难解答
+
+同时接收多封电子邮件可能会导致 Excel 中的合并冲突。 通过将电子邮件连接器设置为一次只处理一封电子邮件来缓解此风险。 为此:
+
+1. 在电子邮件连接器中选择“**菜单 (...)**”按钮，然后选择“**设置**”。
+
+    :::image type="content" source="../images/outlook-connector-settings-1.png" alt-text="在连接器菜单中突出显示的“设置”选项。":::
+
+1. 在弹出的“**设置**”选项中，将“**并发控制**”设置为“**打开**”。 然后，将“**并行度**”设置为“**1**”。
+
+    :::image type="content" source="../images/outlook-connector-settings-2.png" alt-text="设置菜单中的并发选项。":::
 
 ## <a name="next-steps"></a>后续步骤
 
