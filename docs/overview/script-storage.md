@@ -1,30 +1,49 @@
 ---
 title: Office脚本文件存储和所有权
 description: 有关Office脚本如何存储在Microsoft OneDrive中并在所有者之间传输的信息。
-ms.date: 05/10/2022
+ms.date: 06/01/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e2bc89db54ee5520c3b911ebd0f182777a78e2b
-ms.sourcegitcommit: 8ae932e8b4e521fec8576ab16126eb9fe22a8dd7
+ms.openlocfilehash: 17603660bcafa41f898b15b1226d11fa0d51b0a5
+ms.sourcegitcommit: aecbd5baf1e2122d836c3eef3b15649e132bc68e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65310755"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128207"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Office脚本文件存储和所有权
 
-Office脚本存储为Microsoft OneDrive中的 **.osts** 文件。 它们与工作簿分开存储。 若要授予其他人访问权限，请[使用Excel工作簿共享脚本](excel.md#share-office-scripts)。 这意味着你要将脚本与文件链接，而不是附加它。 无论谁有权访问Excel文件，也都可以查看、运行或复制脚本。
+> [!IMPORTANT]
+> SharePoint正在推出对Office脚本的支持，并非所有人都能使用。 它缓慢地释放给更多的用户，以确保它按预期工作。 此功能可能会根据你的反馈进行更改。
 
-除非共享脚本，否则其他人无法访问它们。 OneDrive设置控制所有脚本 **.osts 文件的** 共享访问权限和权限，与任何Excel设置无关。 无法从本地磁盘或自定义云位置链接脚本。 Office脚本仅在OneDrive文件夹中或与工作簿共享时识别并运行脚本。
+Office脚本存储为Microsoft OneDrive或SharePoint文件夹中的 **.osts** 文件。 它们与工作簿分开存储。 若要向SharePoint网站外部的用户授予对脚本的访问权限，请[使用Excel工作簿共享该脚本](excel.md#share-office-scripts)。 这意味着你要将脚本与文件链接，而不是附加它。 无论谁有权访问Excel文件，也都可以查看、运行或复制脚本。
 
-## <a name="file-storage"></a>文件存储
+Excel仅在脚本位于OneDrive文件夹、Sharepoint 文件夹或与工作簿共享时才能识别并运行该脚本。
 
-Office脚本存储在OneDrive中。 **.osts** 文件位于 **/Documents/Office Scripts/** 文件夹中。 对这些 **.osts** 文件所做的任何编辑（例如重命名或删除文件）都将反映在代码编辑器和脚本库中。
+## <a name="onedrive"></a>OneDrive
+
+默认行为是Office脚本存储在OneDrive中。 **.osts** 文件位于 **/Documents/Office Scripts/** 文件夹中。 对这些 **.osts** 文件所做的任何编辑（例如重命名或删除文件）都将反映在代码编辑器和脚本库中。
 
 与其中一个工作簿共享的脚本仍保留在脚本创建者的OneDrive中。 在Excel中运行共享脚本时，它们不会复制到任何本地或OneDrive文件夹。 代码编辑器的“**创建复制**”按钮会在OneDrive中保存脚本的单独副本。 对副本的更改不会影响原始脚本。
 
-### <a name="restore-deleted-scripts"></a>还原已删除的脚本
+除非共享个人脚本，否则其他人无法访问它们。 OneDrive设置控制所有脚本 **.osts 文件的** 共享访问权限和权限，与任何Excel设置无关。 无法从本地磁盘或自定义云位置链接脚本。
 
-在Excel中删除脚本时，它会转到OneDrive回收站。 若要还原已删除的脚本，请按照[OneDrive中“还原已删除的文件或文件夹”中](https://support.microsoft.com/office/949ada80-0026-4db3-a953-c99083e6a84f)列出的步骤操作。 还原 **.osts** 文件会将其返回到 **“所有脚本”** 列表。
+## <a name="sharepoint"></a>SharePoint
+
+Office保存到SharePoint站点的脚本归团队所有。 具有相应访问权限的组织成员可以从SharePoint运行和编辑脚本。 你还将看到这些脚本显示在 **“自动”** 选项卡的脚本库中。
+
+若要从SharePoint加载脚本，请转到 **“所有”脚本**，然后选择列表底部的 **“查看更多脚本**”。 这会显示一个文件选取器，你可以从你有权访问的任意SharePoint站点中选择 **.osts** 文件。 请注意，已打开的SharePoint脚本将显示在最近脚本的列表中。
+
+若要将脚本保存到SharePoint，请转到 **“更多”选项 (...)** 菜单，然后选择 **“另存为**”。 这将打开文件选取器，可在其中选择SharePoint网站中的文件夹。 保存到新位置会在该位置创建脚本的副本。 原始版本仍位于OneDrive或其他SharePoint位置。
+
+> [!IMPORTANT]
+> 无法从SharePoint运行具有[外部调](../develop/external-calls.md)用的脚本。 你将收到一个错误，指出“目前不支持将脚本保存到SharePoint站点的网络访问调用”。
+
+> [!IMPORTANT]
+> Power Automate目前 **不** 支持存储在SharePoint上的脚本。
+
+## <a name="restore-deleted-scripts"></a>还原已删除的脚本
+
+在Excel中删除脚本时，它会转到OneDrive或SharePoint回收站。 若要还原已删除的脚本，请按照中列出的步骤[恢复工作或学校SharePoint和OneDrive中缺失、已删除或损坏的项](https://support.microsoft.com/office/how-to-recover-missing-deleted-or-corrupted-items-in-sharepoint-and-onedrive-for-work-or-school-3d748edf-c072-46c9-81a4-4989056ebc87)。 还原 **.osts** 文件会将其返回到 **“所有脚本”** 列表。
 
 已删除的脚本与工作簿未共享。 还原脚本时， **它不会保留其** 脚本访问权限。 需要再次共享脚本。
 
@@ -32,7 +51,7 @@ Office脚本存储在OneDrive中。 **.osts** 文件位于 **/Documents/Office S
 
 ## <a name="file-ownership-and-retention"></a>文件所有权和保留
 
-Office脚本存储在用户的OneDrive中。 它们遵循Microsoft OneDrive指定的保留和删除策略。 若要了解如何处理从组织中删除了用户所创建和共享的脚本，请参阅 [OneDrive 保留和删除](/onedrive/retention-and-deletion)。
+Office脚本遵循Microsoft OneDrive和 Microsoft SharePoint 指定的保留和删除策略。 若要了解如何处理被从组织中删除的用户创建和共享的脚本，请[参阅有关SharePoint和OneDrive的保留情况](/microsoft-365/compliance/retention-policies-sharepoint?view=o365-worldwide&preserve-view=true)。
 
 在编辑过程中，文件暂时存储在浏览器中。 在关闭Excel窗口之前，必须保存该脚本，以便将其保存到OneDrive位置。 不要忘记在编辑后保存文件，否则这些编辑将仅在浏览器的文件版本中。
 

@@ -1,14 +1,14 @@
 ---
 title: 使用Power Automate运行Office脚本
 description: 如何获取Excel web 版使用Power Automate工作流的Office脚本。
-ms.date: 03/08/2022
+ms.date: 05/16/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 67e48d297a8db16661ce394a11f2e425bc0a33be
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: 85c335eeb736ec544eccb2fbdbe819bdbef6848c
+ms.sourcegitcommit: aecbd5baf1e2122d836c3eef3b15649e132bc68e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393675"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128228"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>使用Power Automate运行Office脚本
 
@@ -26,6 +26,9 @@ ms.locfileid: "65393675"
 
 > [!IMPORTANT]
 > “运行脚本”操作为使用Excel连接器的人员提供了对工作簿及其数据的重要访问权限。 此外，执行外部 API 调用的脚本存在安全风险，如[来自 Power Automate 的外部调](external-calls.md)用中所述。 如果你的管理员担心高度敏感数据的泄露，他们可以关闭Excel联机连接器，或者通过Office[脚本管理员控件限制对Office脚本](/microsoft-365/admin/manage/manage-office-scripts-settings)的访问。
+
+> [!IMPORTANT]
+> Power Automate目前 **不** 支持存储在SharePoint上的脚本。
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>脚本的流中的数据传输
 

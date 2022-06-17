@@ -4,12 +4,12 @@ description: 将按钮添加到控制Excel中Office脚本的工作簿。
 ms.topic: overview
 ms.date: 05/09/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: fde34d62f9abe897a8b93195ab37a75cfc73f619
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: cc19a13a97d4d11f73cb91bc46b70afff3eadf03
+ms.sourcegitcommit: aecbd5baf1e2122d836c3eef3b15649e132bc68e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393682"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128214"
 ---
 # <a name="run-office-scripts-in-excel-with-buttons"></a>使用按钮在Excel中运行Office脚本
 
@@ -36,4 +36,4 @@ ms.locfileid: "65393682"
 某些Office脚本 API 可能不受Windows上的Excel支持，尤其是较旧的版本。 其中包括用于仅 Web 功能的较新的 API 和 API。 如果脚本包含不受支持的 API，则该脚本不会运行，相反，“**脚本运行状态**”任务窗格会显示一条警告消息，指出“此脚本当前必须在Excel 网页版上运行。 在浏览器中打开工作簿，然后重试，或联系脚本所有者寻求帮助。  
 
 > [!IMPORTANT]
-> 脚本按钮需要 [WebView2](/deployoffice/webview2-install) 在Windows上使用Excel。 默认情况下，在桌面上安装最新版本的Excel，但如果无法单击脚本按钮，请访问[“下载 WebView2 运行时](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section)”并下载浏览器引擎。
+> 脚本按钮需要 [WebView2](/deployoffice/webview2-install) 在Windows上使用Excel。 默认情况下，在桌面上安装最新版本的Excel，但如果无法单击脚本按钮，请访问[“下载 WebView2 运行时](https://developer.microsoft.com/microsoft-edge/webview2/#download-section)”并下载浏览器引擎。

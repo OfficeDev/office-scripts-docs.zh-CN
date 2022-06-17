@@ -3,12 +3,12 @@ title: Office 脚本中的外部 API 呼叫支持
 description: 在Office脚本中进行外部 API 调用的支持和指导。
 ms.date: 06/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: b847400893184533c250ab99b640563ff0cbdb3e
-ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
+ms.openlocfilehash: 472b2e1b4aa38366b68b573fa959deee616b9dbe
+ms.sourcegitcommit: aecbd5baf1e2122d836c3eef3b15649e132bc68e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66088041"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128221"
 ---
 # <a name="external-api-call-support-in-office-scripts"></a>Office 脚本中的外部 API 呼叫支持
 
@@ -18,7 +18,7 @@ ms.locfileid: "66088041"
 > 外部调用可能导致敏感数据暴露到不受欢迎的终结点。 管理员可以针对此类调用建立防火墙保护。
 
 > [!IMPORTANT]
-> 对外部 API 的调用只能通过Excel应用程序进行，而不能通过[正常情况下](#external-calls-from-power-automate)的Power Automate进行。
+> 对外部 API 的调用只能通过Excel应用程序进行，而不能通过[正常情况下](#external-calls-from-power-automate)的Power Automate进行。 存储在SharePoint站点上的脚本也不支持外部调用。
 
 ## <a name="configure-your-script-for-external-calls"></a>为外部调用配置脚本
 
