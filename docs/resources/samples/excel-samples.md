@@ -1,28 +1,28 @@
 ---
-title: Excel中Office脚本的基本脚本
-description: 用于Excel中的Office脚本的代码示例集合。
-ms.date: 03/24/2022
+title: Excel 中 Office 脚本的基本脚本
+description: 用于 Excel 中的 Office 脚本的代码示例集合。
+ms.date: 06/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e28026b7a3498d477cce8b6dc5940da33a30f53
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: 071329e35a1a3fe6197896afe3acaf11d3a53fd5
+ms.sourcegitcommit: c5ffe0a95b962936ee92e7ffe17388bef6d4fad8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393654"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66241840"
 ---
-# <a name="basic-scripts-for-office-scripts-in-excel"></a>Excel中Office脚本的基本脚本
+# <a name="basic-scripts-for-office-scripts-in-excel"></a>Excel 中 Office 脚本的基本脚本
 
-下面的示例是用于尝试自己的工作簿的简单脚本。 若要在Excel中使用它们：
+下面的示例是用于尝试自己的工作簿的简单脚本。 若要在 Excel 中使用它们，请执行以下操作：
 
 1. 在Excel web 版中打开工作簿。
 1. 打开“**自动**”选项卡。
-1. 选择“**新建脚本**”。
+1. 选择 "**New Script**"。
 1. 将整个脚本替换为所选示例。
 1. 在代码编辑器的任务窗格中选择 **“运行** ”。
 
 ## <a name="script-basics"></a>脚本基础知识
 
-这些示例演示了Office脚本的基本构建基块。 展开这些脚本以扩展解决方案并解决常见问题。
+这些示例演示了 Office 脚本的基本构建基块。 展开这些脚本以扩展解决方案并解决常见问题。
 
 ### <a name="read-and-log-one-cell"></a>读取和记录一个单元格
 
@@ -234,7 +234,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-下一个示例读取存储在Excel中的日期，并将其转换为 JavaScript Date 对象。 它使用日期的数字序列号作为 JavaScript 日期的输入。 [NOW () 函](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46)数文章中介绍了此序列号。
+下一个示例读取存储在 Excel 中的日期，并将其转换为 JavaScript Date 对象。 它使用日期的数字序列号作为 JavaScript 日期的输入。 [NOW () 函](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46)数文章中介绍了此序列号。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -359,11 +359,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="formulas"></a>公式
 
-这些示例使用Excel公式，并演示如何在脚本中使用它们。
+这些示例使用 Excel 公式，并演示如何在脚本中使用它们。
 
 ### <a name="single-formula"></a>单个公式
 
-此脚本设置单元格的公式，然后显示Excel如何单独存储单元格的公式和值。
+此脚本设置单元格的公式，然后显示 Excel 如何单独存储单元格的公式和值。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -416,6 +416,27 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### <a name="replace-all-formulas-with-their-result-values"></a>将所有公式替换为其结果值
+
+此脚本将当前工作表中包含公式的每个单元格替换为该公式的结果。 这意味着在运行脚本后不会有任何公式，只有值。
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the ranges with formulas.
+    let sheet = workbook.getActiveWorksheet();
+    let usedRange = sheet.getUsedRange();
+    let formulaCells = usedRange.getSpecialCells(ExcelScript.SpecialCellType.formulas);
+
+    // In each formula range: get the current value, clear the contents, and set the value as the old one.
+    // This removes the formula but keeps the result.
+    formulaCells.getAreas().forEach((range) => {
+      let currentValues = range.getValues();
+      range.clear(ExcelScript.ClearApplyTo.contents);
+      range.setValues(currentValues);
+    });
+}
+```
+
 ## <a name="suggest-new-samples"></a>建议新示例
 
 我们欢迎有关新示例的建议。 如果有有助于其他脚本开发人员的常见方案，请在页面底部的反馈部分中告诉我们。
@@ -423,5 +444,5 @@ function main(workbook: ExcelScript.Workbook) {
 ## <a name="see-also"></a>另请参阅
 
 * [苏迪 · 拉马穆尔西在 YouTube 上的 “范围基础知识”](https://youtu.be/4emjkOFdLBA)
-* [Office脚本示例和方案](samples-overview.md)
+* [Office 脚本示例和方案](samples-overview.md)
 * [在 Excel 网页版中录制、编辑和创建 Office 脚本](../../tutorials/excel-tutorial.md)
