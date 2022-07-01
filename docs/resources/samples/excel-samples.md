@@ -3,12 +3,12 @@ title: Excel 中 Office 脚本的基本脚本
 description: 用于 Excel 中的 Office 脚本的代码示例集合。
 ms.date: 06/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 071329e35a1a3fe6197896afe3acaf11d3a53fd5
-ms.sourcegitcommit: c5ffe0a95b962936ee92e7ffe17388bef6d4fad8
+ms.openlocfilehash: b6588dc4109799a7d615d0bee38c82a2bcd16743
+ms.sourcegitcommit: 82fb78e6907b7c3b95c5c53cfc83af4ea1067a78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66241840"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66572347"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel"></a>Excel 中 Office 脚本的基本脚本
 
@@ -291,6 +291,31 @@ function main(workbook: ExcelScript.Workbook) {
   newTable.getSort().apply([{ key: 0, ascending: true }]);
 }
 ```
+
+### <a name="filter-a-table"></a>筛选表
+
+此示例使用其中一列中的值筛选现有表。
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the table in the workbook named "StationTable".
+  const table = workbook.getTable("StationTable");
+
+  // Get the "Station" table column for the filter.
+  const stationColumn = table.getColumnByName("Station");
+
+  // Apply a filter to the table that will only show rows 
+  // with a value of "Station-1" in the "Station" column.
+  stationColumn.getFilter().applyValuesFilter(["Station-1"]);
+}
+```
+
+> [!TIP]
+> 使用 >a0>在工作簿中复制 `Range.copyFrom`筛选的信息。 将以下行添加到脚本末尾，以使用筛选的数据创建新的工作表。
+>
+> ```typescript
+>   workbook.addWorksheet().getRange("A1").copyFrom(table.getRange());
+> ```
 
 ### <a name="log-the-grand-total-values-from-a-pivottable"></a>从数据透视表记录“总计”值
 
