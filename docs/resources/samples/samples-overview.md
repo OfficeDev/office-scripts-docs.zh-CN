@@ -3,12 +3,12 @@ title: Office 脚本示例
 description: 可用的 Office 脚本示例和方案。
 ms.date: 06/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: c9b16272c893bf048f45d7f3256906c7d550d089
-ms.sourcegitcommit: 82fb78e6907b7c3b95c5c53cfc83af4ea1067a78
+ms.openlocfilehash: 5959bc472dbec04526dcf912a8bd67e2554aa251
+ms.sourcegitcommit: dd632402cb46ec8407a1c98456f1bc9ab96ffa46
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66572333"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66918823"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office 脚本示例和方案
 
@@ -32,6 +32,7 @@ ms.locfileid: "66572333"
 | [向工作簿添加图像](add-image-to-workbook.md) | 此示例将图像添加到工作簿，并跨工作表复制图像。|
 | [将多个 Excel 表复制到单个表中](copy-tables-combine.md) | 此示例将多个 Excel 表中的数据合并到包含所有行的单个表中。 |
 | [创建工作簿目录](table-of-contents.md) | 此示例创建一个包含指向每个工作表链接的内容表。 |
+| [删除表列筛选器](clear-table-filter-for-active-cell.md) | 此示例清除表列中的所有筛选器。 |
 
 ## <a name="beyond-the-basics"></a>超越基础设置
 
@@ -43,7 +44,7 @@ ms.locfileid: "66572333"
 | [将 CSV 文件转换为 Excel 工作簿](convert-csv.md) | 此示例使用 Office 脚本和 Power Automate 从.csv文件创建.xlsx文件。 |
 | [跨引用工作簿](excel-cross-reference.md) | 此示例使用 Office 脚本和 Power Automate 交叉引用和验证不同工作簿中的信息。 |
 | [对特定工作表或所有工作表中的空白行进行计数](count-blank-rows.md) | 此示例检测工作表中是否有任何空白行，你预计数据存在，然后报告 Power Automate 流中的使用情况的空白行计数。 |
-| [电子邮件图表和表格图像](email-images-chart-table.md) | 此示例使用 Office 脚本和 Power Automate 操作创建图表，并通过电子邮件将该图表作为图像发送。 |
+| [Email图表和表格图像](email-images-chart-table.md) | 此示例使用 Office 脚本和 Power Automate 操作创建图表，并通过电子邮件将该图表作为图像发送。 |
 | [外部提取调用](external-fetch-calls.md) | 此示例用于 `fetch` 从 GitHub 获取脚本的信息。 |
 | [在 Excel 中管理计算模式](excel-calculation.md) | 此示例演示如何使用 Office 脚本在Excel web 版中使用计算模式和计算方法。 |
 | [跨表移动行](move-rows-across-tables.md) | 此示例演示如何通过保存筛选器，然后处理和重新应用筛选器来跨表移动行。 |
