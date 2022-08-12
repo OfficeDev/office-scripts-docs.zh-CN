@@ -3,12 +3,12 @@ title: Excel 网页版中 Office 脚本的脚本基础
 description: 在编写 Office 脚本之前需要了解的对象模型信息和其他基础知识。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: bd51f814de60da8006413096f4d6aad125f78fab
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: 97aa840809010f3640b045ce2fd28a39a47243b4
+ms.sourcegitcommit: 33fe0f6807daefb16b148fd73c863de101f47cea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393598"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "67281922"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel 网页版中 Office 脚本的脚本基础
 
@@ -32,7 +32,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 运行脚本时，`main` 函数中的代码将运行。 `main` 可以调用脚本中的其他函数，但是该函数中未包含的代码将不会运行。 脚本无法调用其他 Office 脚本。
 
-通过 [Power Automate](https://flow.microsoft.com)，可以在流中连接脚本。 数据通过 `main` 方法的参数和返回在脚本和流之间传递。 [使用 Power Automate 运行 Office 脚本](power-automate-integration.md) 中详细介绍了如何集成 Office 脚本和 Power Automate。
+通过 [Power Automate](https://flow.microsoft.com)，可以在流中连接脚本。 数据通过 `main` 函数的参数和返回在脚本和流之间传递。 [使用 Power Automate 运行 Office 脚本](power-automate-integration.md) 中详细介绍了如何集成 Office 脚本和 Power Automate。
 
 ## <a name="object-model-overview"></a>对象模型概述
 
