@@ -1,14 +1,14 @@
 ---
 title: 通过手动 Power Automate 流呼叫脚本
 description: 有关通过手动触发器在 Power Automate 中使用 Office 脚本的教程。
-ms.date: 06/29/2021
+ms.date: 08/22/2022
 ms.localizationpriority: high
-ms.openlocfilehash: e926540976dc066b3f07620c1e710dfa3abc7660
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
-ms.translationtype: HT
+ms.openlocfilehash: c7d7df926ac00f4f9ee5ad47ae52089e5c46d2cc
+ms.sourcegitcommit: 4a26aa16a9c8cbedb2bb9f482235ea52a88cf08f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585938"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67424267"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow"></a>通过手动 Power Automate 流呼叫脚本
 
@@ -120,9 +120,13 @@ Power Automate 不应使用`Workbook.getActiveWorksheet`之类的[相对引用](
 
 6. 选择 **完成**。应该看到 **运行** 部分进行相应的更新。
 
-7. 刷新页面，查看 Power Automate 的结果。 如果成功，请转到工作簿查看已更新的单元格。 如果失败，请验证流的设置并再次运行。
+7. 刷新页面，查看 Power Automate 的结果。 如果失败，请验证流的设置并再次运行。
 
     :::image type="content" source="../images/power-automate-tutorial-9.png" alt-text=" Power Automate 输出显示成功流运行。":::
+
+8. 打开工作簿以查看更新后的单元格。 应会在单元格 **A1** 中看到当前日期和 **单元格 B1** 中的当前时间。 Power Automate 使用协调世界时 (UTC) ，因此时间可能会从当前时区中偏移。
+
+    :::image type="content" source="../images/power-automate-tutorial-10.png" alt-text="显示单元格 A1 和 B1 中的日期和时间值的工作簿。":::
 
 ## <a name="next-steps"></a>后续步骤
 
