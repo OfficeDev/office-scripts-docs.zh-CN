@@ -1,16 +1,16 @@
 ---
-title: 删除表列筛选器
+title: 删除表格列筛选器
 description: 了解如何根据活动单元格位置清除表列筛选器。
 ms.date: 07/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 21a79abfdd4aeac79af4a0f9ea4a581d45b9706b
-ms.sourcegitcommit: dd632402cb46ec8407a1c98456f1bc9ab96ffa46
+ms.openlocfilehash: e016f7f2af9e7553229f3b3b19007e011879de8e
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66918809"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572519"
 ---
-# <a name="remove-table-column-filters"></a>删除表列筛选器
+# <a name="remove-table-column-filters"></a>删除表格列筛选器
 
 此示例基于活动单元格位置从表列中删除筛选器。 该脚本检测单元格是否是表的一部分，确定表列，并清除对其应用的任何筛选器。
 
@@ -18,7 +18,7 @@ ms.locfileid: "66918809"
 
 ## <a name="sample-excel-file"></a>示例 Excel 文件
 
-下载现成工作簿 <a href="table-with-filter.xlsx"> 的table-with-filter.xlsx</a> 。 添加以下脚本以自行尝试示例！
+下载现成工作簿 [ 的table-with-filter.xlsx](table-with-filter.xlsx) 。 添加以下脚本以自行尝试示例！
 
 ## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>示例代码：清除基于活动单元格的表列筛选器
 

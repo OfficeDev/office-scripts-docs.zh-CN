@@ -1,26 +1,26 @@
 ---
-title: 使用脚本跨表Office行
+title: 使用 Office 脚本跨表移动行
 description: 了解如何通过保存筛选器，然后处理和重新应用筛选器来跨表移动行。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 9780cd79a55dcb5cd2e039b5198232358b3b1413
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: a7c28c4fef91402b8889d749a03f3aab5e615521
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585476"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572617"
 ---
 # <a name="move-rows-across-tables"></a>跨表移动行
 
 此脚本执行以下操作：
 
-* 从源表中选择 `FILTER_VALUE` 行，其中列中的值等于脚本 (值中的) 。
-* 将所有选定的行移动到另一张工作表的目标表中。
-* 将相关筛选器重新应用至源表。
+* 从源表中选择一行，其中列中的值等于脚本) `FILTER_VALUE` 中的某些值 (。
+* 将所有选定行移到另一个工作表中的目标表中。
+* 将相关筛选器重新安装到源表。
 
-## <a name="sample-excel-file"></a>示例Excel文件
+## <a name="sample-excel-file"></a>示例 Excel 文件
 
-下载适用于 <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> 工作簿的文件文件。 添加以下脚本以自己试用示例！
+下载文件 [input-table-filters.xlsx](input-table-filters.xlsx) ，以获取随时可用的工作簿。 添加以下脚本以自行尝试示例！
 
 ## <a name="sample-code-move-rows-using-range-values"></a>示例代码：使用范围值移动行
 
@@ -107,7 +107,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="training-video-move-rows-across-tables"></a>培训视频：跨表移动行
 
-[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/_3t3Pk4i2L0)。 视频解决方案中显示了两个脚本。 主要区别是如何选择行。
+[观看苏迪 · 拉马穆尔西在 YouTube 上浏览这个示例](https://youtu.be/_3t3Pk4i2L0)。 视频解决方案中显示了两个脚本。 主要区别在于如何选择行。
 
-* 第一个变量中，通过应用表筛选器并读取可见区域来选择行。
-* 第二步，通过读取值并提取行值来选择行 (此页上的示例使用行) 。
+* 在第一个变体中，通过应用表筛选器并读取可见范围来选择行。
+* 在第二个行中，通过读取值并提取行值来选择行值 (此页上的示例使用) 。

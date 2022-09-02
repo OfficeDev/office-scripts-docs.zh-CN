@@ -1,14 +1,14 @@
 ---
 title: Office 脚本示例
 description: 可用的 Office 脚本示例和方案。
-ms.date: 06/14/2022
+ms.date: 08/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5959bc472dbec04526dcf912a8bd67e2554aa251
-ms.sourcegitcommit: dd632402cb46ec8407a1c98456f1bc9ab96ffa46
+ms.openlocfilehash: 5798da37bd4166d18b41c005c4d8cc8a4b6c401d
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66918823"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572484"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office 脚本示例和方案
 
@@ -25,20 +25,21 @@ ms.locfileid: "66918823"
 
 ## <a name="basics"></a>基本信息
 
-| Project | 详细信息 |
+| Microsoft Project | 详细信息 |
 |---------|---------|
 | [脚本基础知识](excel-samples.md) | 这些示例演示了 Office 脚本的基本构建基块。 |
 | [在 Excel 中添加注释](add-excel-comments.md) | 此示例将注释添加到包含@mentioning同事的单元格。 |
 | [向工作簿添加图像](add-image-to-workbook.md) | 此示例将图像添加到工作簿，并跨工作表复制图像。|
 | [将多个 Excel 表复制到单个表中](copy-tables-combine.md) | 此示例将多个 Excel 表中的数据合并到包含所有行的单个表中。 |
 | [创建工作簿目录](table-of-contents.md) | 此示例创建一个包含指向每个工作表链接的内容表。 |
-| [删除表列筛选器](clear-table-filter-for-active-cell.md) | 此示例清除表列中的所有筛选器。 |
+| [删除表格列筛选器](clear-table-filter-for-active-cell.md) | 此示例清除表列中的所有筛选器。 |
+| [在 Excel 中记录日常更改，并使用 Power Automate 流报告这些更改](report-day-to-day-changes.md) | 此示例使用计划的 Power Automate 流来记录每日读数并报告更改。 |
 
 ## <a name="beyond-the-basics"></a>超越基础设置
 
 请查看以下端到端项目，该项目可自动执行示例方案以及完整的脚本、使用的示例 Excel 文件以及 [托管在 YouTube) 上的视频 (](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)。
 
-| Project | 详细信息 |
+| 项目 | 详细信息 |
 |---------|---------|
 | [将工作表合并到单个工作簿中](combine-worksheets-into-single-workbook.md) | 此示例使用 Office 脚本和 Power Automate 将数据从其他工作簿拉取到单个工作簿中。 |
 | [将 CSV 文件转换为 Excel 工作簿](convert-csv.md) | 此示例使用 Office 脚本和 Power Automate 从.csv文件创建.xlsx文件。 |
@@ -69,7 +70,7 @@ Office 脚本可以自动执行日常程序的各个部分。 这些日常任务
 
 我们欢迎来自 Office 脚本社区的 [捐款](https://github.com/OfficeDev/office-scripts-docs/blob/master/Contributing.md) ！ 可以随意创建拉取请求以供审阅。
 
-| Project | 详细信息 |
+| 项目 | 详细信息 |
 |---------|---------|
 | [生活游戏](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | 黄玉涛在 Excel 技术社区的“就绪玩家零”博客包括一个脚本，用于为约翰·康威的 [*《生活游戏》*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)建模。 |
 | [打卡时钟按钮](../scenarios/punch-clock.md) | 这个剧本是由 [布赖恩·冈萨雷斯](https://github.com/b-gonzalez)贡献的。 该方案具有一个脚本和一个脚本按钮，用于记录当前时间。 |

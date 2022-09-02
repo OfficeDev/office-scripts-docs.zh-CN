@@ -3,12 +3,12 @@ title: 将 Excel 数据输出为 JSON
 description: 了解如何将 Excel 表数据输出为要在 Power Automate 中使用的 JSON。
 ms.date: 06/27/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 6453d9f0e92f9b3fcccc6e3ec9c1b6c9af49859c
-ms.sourcegitcommit: 82fb78e6907b7c3b95c5c53cfc83af4ea1067a78
+ms.openlocfilehash: 5078d2d86c92aacb0c0c2438b7298a523c132522
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66572340"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572666"
 ---
 # <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>将 Excel 表数据输出为 JSON 以供 Power Automate 使用
 
@@ -16,7 +16,7 @@ Excel 表数据可以以 [JSON](https://www.w3schools.com/whatis/whatis_json.asp
 
 ## <a name="sample-excel-file"></a>示例 Excel 文件
 
-下载文件 <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> ，以获取随时可用的工作簿。
+下载文件 [table-data-with-hyperlinks.xlsx](table-data-with-hyperlinks.xlsx) ，以获取随时可用的工作簿。
 
 :::image type="content" source="../../images/table-input.png" alt-text="显示输入表数据的工作表。":::
 

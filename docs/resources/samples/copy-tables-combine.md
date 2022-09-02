@@ -1,29 +1,29 @@
 ---
-title: 将多个数据表中的Excel组合到一个表中
-description: 了解如何使用 Office 脚本将多个Excel表中的数据合并到一个表中。
+title: 将多个 Excel 表中的数据合并到单个表中
+description: 了解如何使用 Office 脚本将多个 Excel 表中的数据合并到单个表中。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: bfe2f4af579e5ee59d20e12fe4850dd9c41bcc56
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 3db510514c676b9012fd47abc2a7e92492a9cf87
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585889"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572449"
 ---
-# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>将多个数据表中的Excel组合到一个表中
+# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>将多个 Excel 表中的数据合并到单个表中
 
-此示例将来自多个Excel的数据组合到一个包含所有行的表中。 它假定使用的所有表都具有相同的结构。
+此示例将多个 Excel 表中的数据合并到包含所有行的单个表中。 它假定正在使用的所有表都具有相同的结构。
 
 此脚本有两种变体：
 
-1. 第[一个](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table)脚本合并文件文件Excel表。
-1. 第 [二个](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) 脚本有选择地获取一组工作表中的表。
+1. [第一个脚本](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table)合并了 Excel 文件中的所有表。
+1. 第 [二个脚本](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) 有选择地获取一组工作表中的表。
 
-## <a name="sample-excel-file"></a>示例Excel文件
+## <a name="sample-excel-file"></a>示例 Excel 文件
 
-下载 <a href="tables-copy.xlsx">tables-copy.xlsx</a> 工作簿的工作簿。 添加以下脚本以自己试用示例！
+下载现成工作簿 [ 的tables-copy.xlsx](tables-copy.xlsx) 。 添加以下脚本以自行尝试示例！
 
-## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a>示例代码：将数据从多个Excel组合到一个表中
+## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a>示例代码：将多个 Excel 表中的数据合并到单个表中
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -57,9 +57,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table"></a>示例代码：将选定Excel多个数据表中的数据合并到单个表中
+## <a name="sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table"></a>示例代码：将选定工作表中多个 Excel 表中的数据合并到单个表中
 
-下载示例文件 <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> 并使用以下脚本尝试一下！
+下载示例文件 [tables-select-copy.xlsx](tables-select-copy.xlsx) 并将其与以下脚本一起使用，以便自己试用！
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -95,6 +95,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>培训视频：将来自多个Excel的数据合并到一个表中
+## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>培训视频：将多个 Excel 表中的数据合并到单个表中
 
-[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/di-8JukK3Lc)。
+[观看苏迪 · 拉马穆尔西在 YouTube 上浏览这个示例](https://youtu.be/di-8JukK3Lc)。

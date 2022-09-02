@@ -1,31 +1,31 @@
 ---
-title: 使用Power Automate交叉引用Excel文件
-description: 了解如何使用Office脚本和Power Automate交叉引用和设置Excel文件的格式。
+title: 使用 Power Automate 交叉引用 Excel 文件
+description: 了解如何使用 Office 脚本和 Power Automate 交叉引用和设置 Excel 文件的格式。
 ms.date: 06/06/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: a470ee4c59d0fc0a5612a54326a0dec3ab3a59d6
-ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
+ms.openlocfilehash: b32249dc7cb1e8c1b841a4db6caaff3b4d2998ec
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66088118"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572673"
 ---
-# <a name="cross-reference-excel-files-with-power-automate"></a>使用Power Automate交叉引用Excel文件
+# <a name="cross-reference-excel-files-with-power-automate"></a>使用 Power Automate 交叉引用 Excel 文件
 
-此解决方案演示如何比较两个Excel文件中的数据，以查找差异。 它使用Office脚本分析数据，Power Automate在工作簿之间进行通信。
+此解决方案演示如何比较两个 Excel 文件中的数据以查找差异。 它使用 Office 脚本分析数据，Power Automate 在工作簿之间进行通信。
 
-此示例使用 [JSON](https://www.w3schools.com/whatis/whatis_json.asp) 对象在工作簿之间传递数据。 有关使用 JSON 的详细信息，请阅读[使用 JSON 向Office脚本传递数据](../../develop/use-json.md)。
+此示例使用 [JSON](https://www.w3schools.com/whatis/whatis_json.asp) 对象在工作簿之间传递数据。 有关使用 JSON 的详细信息，请阅读 [“使用 JSON 向 Office 脚本传递数据](../../develop/use-json.md)”。
 
 ## <a name="example-scenario"></a>示例方案
 
-你是一名事件协调器，负责为即将召开的会议安排演讲者。 将事件数据保存在一个电子表格中，将说话人注册保存在另一个电子表格中。 若要确保这两个工作簿保持同步，请使用包含Office脚本的流来突出显示任何潜在问题。
+你是一名事件协调器，负责为即将召开的会议安排演讲者。 将事件数据保存在一个电子表格中，将说话人注册保存在另一个电子表格中。 若要确保这两个工作簿保持同步，请使用带有 Office 脚本的流来突出显示任何潜在问题。
 
-## <a name="sample-excel-files"></a>示例Excel文件
+## <a name="sample-excel-files"></a>示例 Excel 文件
 
 下载以下文件以获取示例的即用工作簿。
 
-1. <a href="event-data.xlsx">event-data.xlsx</a>
-1. <a href="speaker-registrations.xlsx">speaker-registrations.xlsx</a>
+1. [event-data.xlsx](event-data.xlsx)
+1. [speaker-registrations.xlsx](speaker-registrations.xlsx)
 
 添加以下脚本以自行尝试示例！
 
@@ -146,11 +146,11 @@ interface EventData {
 }
 ```
 
-## <a name="power-automate-flow-check-for-inconsistencies-across-the-workbooks"></a>Power Automate流：检查工作簿中的不一致性
+## <a name="power-automate-flow-check-for-inconsistencies-across-the-workbooks"></a>Power Automate 流：检查工作簿中的不一致性
 
 此流从第一个工作簿中提取事件信息，并使用该数据来验证第二个工作簿。
 
-1. 登录 [Power Automate](https://flow.microsoft.com)并创建新的 **即时云流**。
+1. 登录 [Power Automate](https://flow.microsoft.com) 并创建新的 **即时云流**。
 1. 选择 **“手动触发流** ”，然后选择 **“创建**”。
 1. 添加使用 **Excel Online (Business)** 连接器和 **运行脚本** 操作 **的新步骤**。 对操作使用以下值。
     * **位置**：OneDrive for Business
@@ -158,21 +158,21 @@ interface EventData {
     * **文件**：event-data.xlsx ([使用文件选择器) 选中](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **脚本**：获取事件数据
 
-    :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="Power Automate中第一个脚本的已完成 Excel Online (Business) 连接器。":::
+    :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="Power Automate 中第一个脚本的已完成 Excel Online (Business) 连接器。":::
 
-1. 添加第二个新 **步骤**，该步骤使用 **Excel Online (Business)** 连接器和 **运行脚本** 操作。 这会使用 **Get 事件数据** 脚本中返回的值作为 **验证事件数据** 脚本的输入。 对操作使用以下值。
+1. 添加使用 **Excel Online (Business)** 连接器和 **运行脚本** 操作的第二个新 **步骤**。 这会使用 **Get 事件数据** 脚本中返回的值作为 **验证事件数据** 脚本的输入。 对操作使用以下值。
     * **位置**：OneDrive for Business
     * **文档库**：OneDrive
     * **文件**：speaker-registration.xlsx ([使用文件选择器) 选中](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **脚本**：验证说话人注册
     * **键**：运行 _**脚本**)  (动态内容_ 的结果
 
-    :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="Power Automate中第二个脚本的已完成 Excel Online (Business) 连接器。":::
-1. 此示例使用Outlook作为电子邮件客户端。 可以使用任何电子邮件连接器Power Automate支持。 添加使用 **Office 365 Outlook** 连接器和 **发送和电子邮件 (V2)** 操作 **的新步骤**。 这会使用 **验证说话人注册** 脚本中返回的值作为电子邮件正文内容。 对操作使用以下值。
+    :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="Power Automate 中第二个脚本的已完成 Excel Online (Business) 连接器。":::
+1. 此示例使用 Outlook 作为电子邮件客户端。 可以使用 Power Automate 支持的任何电子邮件连接器。 添加使用 **Office 365 Outlook** 连接器和 **发送和电子邮件 (V2)** 操作 **的新步骤**。 这会使用 **验证说话人注册** 脚本中返回的值作为电子邮件正文内容。 对操作使用以下值。
     * **收件** 人：测试电子邮件帐户 (或个人电子邮件) 
     * **主题**：事件验证结果
     * **正文**：运行 _**脚本 2** 中 (动态内容_ 的结果) 
 
-    :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="Power Automate中已完成的Office 365 Outlook连接器。":::
+    :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="Power Automate 中已完成的 Office 365 Outlook 连接器。":::
 1. 保存流。 使用流编辑器页上的 **“测试** ”按钮，或通过“ **我的流** ”选项卡运行流。出现提示时，请务必允许访问。
 1. 应收到一封电子邮件，指出“发现不匹配。 数据需要审阅。” 这表明speaker-registrations.xlsx中的行和 **event-data.xlsx** **中的行** 之间存在差异。 打开 **speaker-registrations.xlsx** ，查看几个突出显示的单元格，其中扬声器注册列表存在潜在问题。

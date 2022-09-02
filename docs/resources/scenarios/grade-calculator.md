@@ -1,22 +1,22 @@
 ---
-title: Office脚本示例方案：成绩计算器
-description: 确定一类学生成绩的百分比和字母成绩的示例。
+title: Office 脚本示例方案：等级计算器
+description: 一个示例，用于确定学生班的百分比和字母成绩。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: fd9009633e4a89e3b236f765543123b3995b9f47
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 7dda3ebe84dc3edd10998cbe2c4cd0806da11411
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585441"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572526"
 ---
-# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office脚本示例方案：成绩计算器
+# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office 脚本示例方案：等级计算器
 
-在此方案中，你是一名教师，对每位学生的学期结束成绩进行评分。 你一直在输入作业和测试的分数。 现在，是时候确定学生了。
+在此方案中，你是一名教师，用于计算每个学生的学期末成绩。 你一直在输入他们的作业和测试的分数，你去。 现在，是时候确定学生的命运了。
 
-您将开发一个脚本，该脚本将针对每个分数类别对成绩进行总计。 然后，它将基于总数为每个学生分配一个信函成绩。 为了帮助确保准确性，你将添加一些检查，以查看个别分数是否太低或太高。 如果学生的分数小于零或大于可能的分数值，该脚本将用红色填充标记该单元格，而不是该学生的总分。 这将清楚地指示需要仔细检查哪些记录。 你还将向成绩添加一些基本格式，以便快速查看课程的顶部和底部。
+你将开发一个脚本，该脚本将每个分数类别的分数总计。 然后，它将根据总数为每个学生分配一个字母成绩。 为了帮助确保准确性，你将添加一些检查，以查看任何单个分数是否太低或过高。 如果学生的分数小于零或大于可能的点值，则脚本将用红色填充标记单元格，而不是该学生的分数总数。 这将清楚地指示需要仔细检查哪些记录。 你还将向成绩添加一些基本格式，以便快速查看类的顶部和底部。
 
-## <a name="scripting-skills-covered"></a>涵盖的脚本编写技能
+## <a name="scripting-skills-covered"></a>所涵盖的脚本技能
 
 - 单元格格式
 - 错误检查
@@ -25,11 +25,11 @@ ms.locfileid: "64585441"
 
 ## <a name="setup-instructions"></a>设置说明
 
-1. 将<a href="grade-calculator.xlsx">grade-calculator.xlsx</a>下载到OneDrive。
+1. 将 [grade-calculator.xlsx](grade-calculator.xlsx) 下载到 OneDrive。
 
-1. 打开工作簿，Excel 网页版。
+1. 使用Excel 网页版打开工作簿。
 
-1. 在" **自动化"** 选项卡下，选择 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。
+1. 在 **“自动执行”** 选项卡下，选择 **“新建脚本** ”并将以下脚本粘贴到编辑器中。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -172,11 +172,11 @@ ms.locfileid: "64585441"
     }
     ```
 
-1. 将脚本重命名 **为成绩计算器** 并保存它。
+1. 将脚本重命名为 **“等级计算器”** 并保存它。
 
 ## <a name="running-the-script"></a>运行脚本
 
-在唯 **一的工作表** 上运行成绩计算器脚本。 该脚本将总计成绩，并为每个学生分配一个信函成绩。 如果任何单个成绩的分数大于作业或测试的分数，则有问题的成绩标记为红色，不计算总分。 此外，任何"A"成绩都用绿色突出显示，而"D"和"F"成绩用黄色突出显示。
+在唯一的工作表上运行 **“等级计算器** ”脚本。 该脚本将汇总成绩，并为每个学生分配一个字母等级。 如果任何单个成绩的分数超过作业或测试值，则将违规成绩标记为红色，并且不计算总分。 此外，任何“A”成绩都以绿色突出显示，而“D”和“F”成绩以黄色突出显示。
 
 ### <a name="before-running-the-script"></a>运行脚本之前
 
@@ -184,4 +184,4 @@ ms.locfileid: "64585441"
 
 ### <a name="after-running-the-script"></a>运行脚本后
 
-:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="一个工作表，用于显示有效学生行的学生分数数据，并包含红色总计中的无效单元格。":::
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="显示有效学生行的无效单元格为红色总计的学生评分数据的工作表。":::

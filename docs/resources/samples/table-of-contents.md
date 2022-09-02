@@ -1,24 +1,24 @@
 ---
 title: 创建工作簿目录
-description: 了解如何创建包含指向每个工作表的链接的目录。
+description: 了解如何创建包含每个工作表链接的内容表。
 ms.date: 01/20/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: b2d69609514c2e1e87f9c0590ea10152fc7d5e7d
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 5b158160ecb9ac29df547c6da6552e21c9875be3
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585518"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572512"
 ---
 # <a name="create-a-workbook-table-of-contents"></a>创建工作簿目录
 
-此示例演示如何为工作簿创建目录。 目录的每个条目都是指向工作簿中工作表之一的超链接。
+此示例演示如何为工作簿创建目录。 目录中的每个条目都是工作簿中某个工作表的超链接。
 
-:::image type="content" source="../../images/table-of-contents-sample.png" alt-text="显示指向其他工作表的链接的目录工作表。":::
+:::image type="content" source="../../images/table-of-contents-sample.png" alt-text="显示指向其他工作表链接的目录工作表。":::
 
-## <a name="sample-excel-file"></a>示例Excel文件
+## <a name="sample-excel-file"></a>示例 Excel 文件
 
-下载 <a href="table-of-contents.xlsx">table-of-contents.xlsx</a> 工作簿的工作簿。 添加以下脚本，然后自己尝试示例！
+下载现成工作簿 [ 的table-of-contents.xlsx](table-of-contents.xlsx) 。 添加以下脚本并自行试用示例！
 
 ## <a name="sample-code-create-a-workbook-table-of-contents"></a>示例代码：创建工作簿目录
 

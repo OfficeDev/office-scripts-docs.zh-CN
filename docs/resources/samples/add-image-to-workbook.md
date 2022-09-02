@@ -1,30 +1,30 @@
 ---
 title: 向工作簿添加图像
-description: 了解如何使用 Office 脚本将图像添加到工作簿中，以及如何跨工作表复制该图像。
+description: 了解如何使用 Office 脚本将映像添加到工作簿并将其复制到工作表中。
 ms.date: 07/12/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b827ebe4050fa8e260ed640a73d583264955b597
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 78c7779cf4d524ed62bf8d419135863228b23d33
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585861"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572603"
 ---
 # <a name="add-images-to-a-workbook"></a>向工作簿添加图像
 
-此示例演示如何使用 Excel 中的 Office 脚本处理Excel。
+此示例演示如何在 Excel 中使用 Office 脚本处理图像。
 
 ## <a name="scenario"></a>应用场景
 
-图像有助于打造品牌、视觉标识和模板。 它们帮助使工作簿不仅仅是一个大型表。
+图像有助于品牌打造、视觉对象标识和模板。 他们帮助制作工作簿不仅仅是一张巨大的桌子。
 
-第一个示例将图像从一个工作表复制到另一个工作表。 这可用于将公司的徽标置于每个工作表上的相同位置。
+第一个示例将图像从一个工作表复制到另一个工作表。 这可用于在每个工作表上将公司徽标放在同一位置。
 
 第二个示例从 URL 复制图像。 这可用于将同事存储在共享文件夹中的照片复制到相关工作簿。
 
-## <a name="sample-excel-file"></a>示例Excel文件
+## <a name="sample-excel-file"></a>示例 Excel 文件
 
-下载 <a href="add-images.xlsx">add-images.xlsx</a> 工作簿的工作簿。 添加以下脚本，然后自己尝试示例！
+下载现成工作簿 [ 的add-images.xlsx](add-images.xlsx) 。 添加以下脚本并自行试用示例！
 
 ## <a name="sample-code-copy-an-image-across-worksheets"></a>示例代码：跨工作表复制图像
 

@@ -1,26 +1,26 @@
 ---
 title: 季节问候语
-description: 了解如何使用Office脚本在树状中显示Excel web 版。
+description: 了解如何使用 Office 脚本在Excel web 版中显示一棵歌唱树。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 56d3bb758edf1b9416a67bc8e806034d086c88ef
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: aee953bd3f92912b6b3bcf55c3a3da110ff38528
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585574"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572442"
 ---
 # <a name="seasons-greetings"></a>季节问候语
 
-此脚本由 [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) 在假日假日的快乐中贡献！ 这是一个有趣脚本，它使用脚本在 Excel web 版中Office树。
+这个剧本是由 [莱斯利·布莱克](https://www.linkedin.com/in/lesblackconsultant/) 本着节日的精神贡献的！ 这是一个有趣的脚本，使用 Office 脚本在Excel web 版中显示一棵歌唱树。
 
 享受！
 
-[观看 YouTube 频道的"Les's IT Blog"上的](https://youtu.be/HBiGEkzmkgo)"四月一日"问候语脚本的运行。
+[在“Les的 IT 博客”YouTube 频道上观看“季节问候”脚本](https://youtu.be/HBiGEkzmkgo)。
 
 ## <a name="script"></a>Script
 
-下载 <a href="happy-tree.xlsx">happy-tree.xlsx</a> 工作簿的工作簿。 添加以下脚本以自己试用示例！
+下载现成工作簿 [ 的happy-tree.xlsx](happy-tree.xlsx) 。 添加以下脚本以自行尝试示例！
 
 ```TypeScript
 /* Original version by Leslie Black.  */

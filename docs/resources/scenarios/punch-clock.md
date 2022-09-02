@@ -1,26 +1,26 @@
 ---
-title: Office脚本示例方案：“打孔时钟”按钮
+title: Office 脚本示例方案：“打孔时钟”按钮
 description: 此示例添加一个打孔时钟按钮，并允许用户使用当前时间打卡和打卡。
 ms.date: 04/26/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: de56fb651d6f6088620678cfd72ce662875eafa7
-ms.sourcegitcommit: e6428a5214fa38aef036a952a0e3c09dbf6e4d3e
+ms.openlocfilehash: ac128a33b653506b6168bd4acfe1713bf6d26759
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65109287"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572680"
 ---
-# <a name="office-scripts-sample-scenario-punch-clock-button"></a>Office脚本示例方案：“打孔时钟”按钮
+# <a name="office-scripts-sample-scenario-punch-clock-button"></a>Office 脚本示例方案：“打孔时钟”按钮
 
-本示例中使用的方案构想和脚本由Office脚本社区成员 [Brian Gonzalez](https://github.com/b-gonzalez) 提供。
+本示例中使用的方案构想和脚本由 Office 脚本社区成员 [Brian Gonzalez](https://github.com/b-gonzalez) 提供。
 
-在此方案中，你将为员工创建一个时间表，允许他们使用 [按钮](../../develop/script-buttons.md)记录开始和结束时间。 根据之前记录的内容，按下按钮将在) 开始他们的一天 (时钟或结束他们的一天 (时钟) 。 该示例适用于Excel web 版和Windows。
+在此方案中，你将为员工创建一个时间表，允许他们使用 [按钮](../../develop/script-buttons.md)记录开始和结束时间。 根据之前记录的内容，按下按钮将在) 开始他们的一天 (时钟或结束他们的一天 (时钟) 。 此示例适用于Excel web 版和 Windows。
 
 :::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="工作簿中包含三列 (“Clock In”、“Clock Out”和“Duration”) 和标记为“打孔时钟”的按钮的表。":::
 
 ## <a name="setup-instructions"></a>设置说明
 
-1. <a href="punch-clock-sample.xlsx"> 将punch-clock-sample.xlsx</a>下载到OneDrive。
+1. 将 [punch-clock-sample.xlsx](punch-clock-sample.xlsx) 下载到 OneDrive。
 
     :::image type="content" source="../../images/punch-clock-sample-1.png" alt-text="包含三列的表：“Clock In”、“Clock Out”和“Duration”。":::
 

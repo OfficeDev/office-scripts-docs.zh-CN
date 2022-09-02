@@ -73,6 +73,8 @@ items:
                 href: resources/samples/table-of-contents.md
               - name: 删除表格列筛选器
                 href: resources/samples/clear-table-filter-for-active-cell.md
+              - name: 在 Power Automate 中报告日常更改
+                href: resources/samples/report-day-to-day-changes.md
           - name: 超越基础设置
             items:
               - name: 将工作表合并到单个工作簿中

@@ -1,34 +1,34 @@
 ---
-title: 在内容中添加Excel
-description: 了解如何使用Office脚本在工作表中添加注释。
+title: 在 Excel 中添加注释
+description: 了解如何使用 Office 脚本在工作表中添加注释。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 101f07fd2f1abcd4120585162dc2b77b8aece91a
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 90f072805e6798a4f9d6e74889ccca15610c87bd
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585595"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572491"
 ---
-# <a name="add-comments-in-excel"></a>在内容中添加Excel
+# <a name="add-comments-in-excel"></a>在 Excel 中添加注释
 
-本示例演示如何向单元格添加注释，包括 [@mentioning添加注释](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) 。
+此示例演示如何向单元格添加注释，包括 [@mentioning](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) 同事。
 
 ## <a name="example-scenario"></a>示例方案
 
-* 团队主管负责维护轮班计划。 团队主管向轮班记录分配员工 ID。
-* 团队主管希望通知员工。 通过向员工添加@mentions注释，员工将通过电子邮件从工作表收到自定义邮件。
-* 随后，员工可以在方便时查看工作簿并回复注释。
+* 团队主管维护轮班计划。 团队主管将员工 ID 分配给轮班记录。
+* 团队主管希望通知员工。 通过添加@mentions员工的注释，将向员工发送来自工作表的自定义消息。
+* 随后，员工可以在方便时查看工作簿并响应批注。
 
 ## <a name="solution"></a>解决方案
 
 1. 该脚本从员工工作表中提取员工信息。
-1. 然后，该脚本添加注释 (，包括相关员工) 添加到班次记录中的相应单元格。
-1. 添加新注释之前，将删除单元格中的现有注释。
+1. 然后，脚本将注释添加 (包括相关员工电子邮件) 到班次记录中的相应单元格。
+1. 在添加新注释之前，将删除单元格中的现有注释。
 
-## <a name="sample-excel-file"></a>示例Excel文件
+## <a name="sample-excel-file"></a>示例 Excel 文件
 
-下载 <a href="excel-comments.xlsx">excel-comments.xlsx</a> 工作簿的工作簿。 添加以下脚本以自己试用示例！
+下载现成工作簿 [ 的excel-comments.xlsx](excel-comments.xlsx) 。 添加以下脚本以自行尝试示例！
 
 ## <a name="sample-code-add-comments"></a>示例代码：添加注释
 
@@ -79,4 +79,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="training-video-add-comments"></a>培训视频：添加注释
 
-[观看 Sudhi Ramamurthy 在 YouTube 上演练此示例](https://youtu.be/CpR78nkaOFw)。
+[观看苏迪 · 拉马穆尔西在 YouTube 上浏览这个示例](https://youtu.be/CpR78nkaOFw)。

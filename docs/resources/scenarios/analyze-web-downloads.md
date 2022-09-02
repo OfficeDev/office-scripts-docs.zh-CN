@@ -1,24 +1,24 @@
 ---
-title: Office脚本示例方案：分析 Web 下载
-description: 一个示例，在将信息组织到表中Excel工作簿中的原始 Internet 流量数据并确定源位置。
+title: Office 脚本示例方案：分析 Web 下载
+description: 一个示例，该示例在将原始 Internet 流量数据组织到表之前，在 Excel 工作簿中获取原始 Internet 流量数据并确定源位置。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d2d0ba302c72d4ca1f1aaad5e9cee5ba40d64e9
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 0ef368c5193fe65c0a01676aa2a8b3a2c5cf3bdc
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585489"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572421"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office脚本示例方案：分析 Web 下载
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office 脚本示例方案：分析 Web 下载
 
-在此方案中，你需要分析公司网站的下载报告。 此分析的目标是确定 Web 流量是来自 美国还是世界上的其他地方。
+在此方案中，你的任务是分析公司网站上的下载报告。 此分析的目的是确定 Web 流量是来自美国还是世界其他地方。
 
-您的同事将原始数据上载到工作簿。 每周的数据集都有自己的工作表。 还有一个 **包含** 表和图表的"摘要"工作表显示一周过去一周的趋势。
+你的同事将原始数据上传到工作簿。 每周的数据集都有自己的工作表。 还有一个 **“摘要** ”工作表，其中包含一个显示每周趋势的表和图表。
 
-您将开发用于分析活动工作表中每周下载数据的脚本。 它将分析与每次下载关联的 IP 地址，并确定该地址是否来自美国。 答案将在工作表中作为布尔值插入 ("TRUE"或"FALSE") 并将条件格式应用于这些单元格。 IP 地址位置结果将在工作表上汇总，并复制到摘要表中。
+你将开发一个脚本，用于分析活动工作表中每周下载的数据。 它将分析与每次下载关联的 IP 地址，并确定它是否来自美国。 答案将作为布尔值插入工作表中， (“TRUE”或“FALSE”) 条件格式将应用于这些单元格。 IP 地址位置结果将汇总在工作表上并复制到摘要表。
 
-## <a name="scripting-skills-covered"></a>涵盖的脚本编写技能
+## <a name="scripting-skills-covered"></a>所涵盖的脚本技能
 
 - 文本分析
 - 脚本中的子功能
@@ -27,11 +27,11 @@ ms.locfileid: "64585489"
 
 ## <a name="setup-instructions"></a>设置说明
 
-1. 将<a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>下载到OneDrive。
+1. 将 [analyze-web-downloads.xlsx](analyze-web-downloads.xlsx) 下载到 OneDrive。
 
-1. 打开工作簿，Excel 网页版。
+1. 使用Excel 网页版打开工作簿。
 
-1. 在" **自动化"** 选项卡下，选择 **"新建脚本** "，然后将以下脚本粘贴到编辑器中。
+1. 在 **“自动执行”** 选项卡下，选择 **“新建脚本** ”并将以下脚本粘贴到编辑器中。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -211,7 +211,7 @@ ms.locfileid: "64585489"
 
 ## <a name="running-the-script"></a>运行脚本
 
-导航到任何" **周"\*\*** 工作表并运行 **"分析 Web 下载"** 脚本。 该脚本将应用条件格式和当前工作表上标记的位置。 它还将更新 **"摘要"** 工作表。
+导航到任何 **一周\*\*** 工作表并运行 **“分析 Web 下载”** 脚本。 该脚本将在当前工作表上应用条件格式和位置标签。 它还将更新 **摘要** 工作表。
 
 ### <a name="before-running-the-script"></a>运行脚本之前
 
@@ -219,6 +219,6 @@ ms.locfileid: "64585489"
 
 ### <a name="after-running-the-script"></a>运行脚本后
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="显示以前 Web 流量行的格式化 IP 位置信息的工作表。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="显示具有前面 Web 流量行的格式化 IP 位置信息的工作表。":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="汇总了运行脚本的工作表的摘要表和图表。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="摘要表和图表，用于汇总已运行脚本的工作表。":::

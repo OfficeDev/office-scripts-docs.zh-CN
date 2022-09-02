@@ -3,12 +3,12 @@ title: 从脚本返回数据到自动运行 Power Automated 流
 description: 本教程演示了如何通过 Power Automate 运行适用于 Excel 网页版的 Office 脚本来发送提醒电子邮件。
 ms.date: 04/12/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 7d232b4688132532dd2bc029588d6244a4a64ef8
-ms.sourcegitcommit: 8bcd743bebfacafa548b936ca99ad6d4918e7bcd
-ms.translationtype: HT
+ms.openlocfilehash: c35e3c0e005c7d64c9a0d860f1f6eafd2e26e13f
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826686"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572596"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>从脚本返回数据到自动运行 Power Automated 流
 
@@ -27,7 +27,7 @@ ms.locfileid: "64826686"
 
 ## <a name="prepare-the-workbook"></a>准备工作簿
 
-1. 随时下载工作簿 - <a href="on-call-rotation.xlsx">on-call-rotation.xlsx</a> 到 OneDrive。
+1. 随时下载工作簿 - [on-call-rotation.xlsx](on-call-rotation.xlsx) 到 OneDrive。
 
 1. 在 Excel 网页版中打开 **on-call-rotation.xlsx**。
 
