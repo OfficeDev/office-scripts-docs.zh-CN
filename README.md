@@ -1,6 +1,6 @@
 # <a name="office-scripts-documentation"></a>Office 脚本文档
 
-欢迎使用 Office 脚本文档存储库。 在此存储库中，可以找到 Office 脚本教程和操作指南的文档源文件。 为了获得最佳体验，建议在[Microsoft Docs](https://docs.microsoft.com/office/dev/scripts)上查看此内容。
+欢迎使用 Office 脚本文档存储库。 在此存储库中，可以找到 Office 脚本教程和操作指南的文档源文件。 为了获得最佳体验，建议在 [Microsoft Learn](https://learn.microsoft.com/office/dev/scripts) 上查看此内容。
 
 > **注意**：可以在 [office-scripts-docs-reference](https://github.com/OfficeDev/office-scripts-docs-reference) 存储库中找到 Office 脚本 API 的参考文档源文件。 这些 API 包含脚本的所有潜在操作。
 
@@ -19,7 +19,7 @@
 - 重现问题的步骤。
 - 控制台输出和错误消息。
 
-我们也鼓励你对所建议的更改进行分叉、修补及创建拉取请求。有关详细信息，请参阅 [归入该文档](Contributing.md)(#归入该文档)。
+We also encourage you to fork, make the fix, and do a pull request of your proposed changes. For details, see [Contribute to this documentation](Contributing.md).
 
 如果问题与 Office 脚本文档无关，请改为将其发布到以下频道之一：
 
@@ -30,6 +30,7 @@
 
 版权 (c) 2019 Microsoft Corporation。 保留所有权利。
 
-## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开放源代码行为准则
+## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开源代码行为准则
 
-此项目采用 [Microsoft 开源行为准则](https://opensource.microsoft.com/codeofconduct/)。有关详细信息，请参阅 [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)（行为准则常见问题解答），有任何其他问题或意见，也可联系 [opencode@microsoft.com](mailto:opencode@microsoft.com)。
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.

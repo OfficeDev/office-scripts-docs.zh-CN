@@ -1,25 +1,25 @@
 ---
-title: 对Office脚本进行故障排除
-description: 调试Office脚本的提示和技术，以及帮助资源。
-ms.date: 11/11/2021
+title: Office 脚本疑难解答
+description: Office 脚本的调试提示和技术，以及帮助资源。
+ms.date: 10/05/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e673d39b6249ccc7598b832d6478cc8dc0751f6
-ms.sourcegitcommit: f5fc9146d5c096e3a580a3fa8f9714147c548df4
+ms.openlocfilehash: 4fe4a9b17d51d078403d1a46abed774d38eeaa80
+ms.sourcegitcommit: 64d506257bee282fb01aedbf4d090781b06e4900
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2022
-ms.locfileid: "66038677"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68495465"
 ---
-# <a name="troubleshoot-office-scripts"></a>对Office脚本进行故障排除
+# <a name="troubleshoot-office-scripts"></a>Office 脚本疑难解答
 
-开发Office脚本时，可能会出错。 没关系。 你可以使用工具帮助查找问题并使脚本完美工作。
+开发 Office 脚本时，可能会出错。 没关系。 你可以使用工具帮助查找问题并使脚本完美工作。
 
 > [!NOTE]
-> 有关特定于使用Power Automate Office脚本的故障排除建议，请[参阅Power Automate中运行的Office脚本故障排除](power-automate-troubleshooting.md)。
+> 有关特定于 Power Automate 的 Office 脚本的故障排除建议，请参阅 [Power Automate 中运行的 Office 脚本故障排除](power-automate-troubleshooting.md)。
 
 ## <a name="types-of-errors"></a>错误类型
 
-Office脚本错误分为两个类别之一：
+Office 脚本错误分为两个类别之一：
 
 * 编译时错误或警告
 * 运行时错误
@@ -68,26 +68,29 @@ console.log(myRange.getAddress());
 
 日志不会影响工作簿。
 
-## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>“自动执行”选项卡未显示或Office脚本不可用
+## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>未显示自动执行选项卡或 Office 脚本不可用
 
 以下步骤应有助于排查与“**自动”** 选项卡未出现在Excel web 版中相关的任何问题。
 
-1. [确保Microsoft 365许可证包含Office脚本](../overview/excel.md#requirements)。
+1. [确保 Microsoft 365 许可证包含 Office 脚本](../overview/excel.md#requirements)。
 1. [检查是否支持浏览器](platform-limits.md#browser-support)。
 1. [确保已启用第三方 Cookie](platform-limits.md#third-party-cookies)。
-1. [确保管理员未在Microsoft 365 管理中心中禁用Office脚本](/microsoft-365/admin/manage/manage-office-scripts-settings)。
+1. [确保管理员未在Microsoft 365 管理中心中禁用 Office 脚本](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 1. 确保未以外部用户或来宾用户身份登录到租户。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
+> [!NOTE]
+> 有一个已知问题阻止存储在 SharePoint 中的脚本始终出现在最近使用的列表中。 当管理员关闭 Exchange Web 服务 (EWS) 时，会发生这种情况。 基于 SharePoint 的脚本仍可访问，可通过文件对话框使用。
+
 ## <a name="help-resources"></a>帮助资源
 
-[Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) 是一个开发人员社区，他们愿意帮助解决编码问题。 通常，可以通过快速的 Stack Overflow 搜索找到问题的解决方案。 如果没有，请提出问题，并使用“office-scripts”标记对其进行标记。 请务必提及你正在创建Office *脚本*，而不是Office *加载项*。
+[Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) 是一个开发人员社区，他们愿意帮助解决编码问题。 通常，可以通过快速的 Stack Overflow 搜索找到问题的解决方案。 如果没有，请提出问题，并使用“office-scripts”标记对其进行标记。 请务必提及你正在创建 Office *脚本*，而不是 Office *加载项*。
 
 ## <a name="see-also"></a>另请参阅
 
 - [Office 脚本中的最佳实践](../develop/best-practices.md)
-- [具有Office脚本的平台限制](platform-limits.md)
-- [提高Office脚本的性能](../develop/web-client-performance.md)
-- [排查 PowerAutomate 中运行的Office脚本问题](power-automate-troubleshooting.md)
+- [Office 脚本的平台限制](platform-limits.md)
+- [提高 Office 脚本的性能](../develop/web-client-performance.md)
+- [排查 PowerAutomate 中运行的 Office 脚本问题](power-automate-troubleshooting.md)
 - [消除 Office 脚本的影响](undo.md)

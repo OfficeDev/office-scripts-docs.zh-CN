@@ -2,14 +2,14 @@
 title: Excel 中的 Office 脚本
 description: Office 脚本中的操作录制器和代码编辑器简介。
 ms.topic: overview
-ms.date: 02/25/2022
+ms.date: 10/05/2022
 ms.localizationpriority: high
-ms.openlocfilehash: a85e8dad8d6e99ee3b4c5558cd2c1b8417956fb3
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
-ms.translationtype: HT
+ms.openlocfilehash: 02a45e5aae468cff2c61e18b35c54ba656d0484b
+ms.sourcegitcommit: 64d506257bee282fb01aedbf4d090781b06e4900
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393633"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68495472"
 ---
 # <a name="office-scripts-in-excel"></a>Excel 中的 Office 脚本
 
@@ -25,7 +25,11 @@ Excel 中的 Office 脚本使你能够自动执行日常任务。 在 Excel 网�
 
 若要使用 Office 脚本，需要以下内容。
 
-1. [Excel 网页版](https://www.office.com/launch/excel)（Excel for Windows 只能将 Office 脚本与[脚本按钮](../develop/script-buttons.md)配合使用）。
+1. [Excel web 版](https://www.office.com/launch/excel) (Windows 上的 Excel 只能将 Office 脚本与[脚本按钮](../develop/script-buttons.md)配合使用) 。
+
+    > [!TIP]
+    > Office 脚本现可在 Windows 版 Office 版和 Mac 版 Office [预览体验成员](https://insider.office.com/)版中使用。
+
 1. OneDrive for Business。
 1. 可访问 Microsoft 365 Office 桌面应用的任何商业版或教育版 Microsoft 365 许可证，例如：
 
