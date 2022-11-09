@@ -1,56 +1,60 @@
 ---
-title: Office脚本代码编辑器环境
-description: Excel web 版脚本的先决条件Office环境信息。
-ms.date: 05/27/2021
+title: Office 脚本代码编辑器环境
+description: Excel web 版 中 Office 脚本的先决条件和环境信息。
+ms.date: 11/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 165365d82aa838f6651461f6edee2389c44e90b1
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: a5a7601285553b1da4001a1870b6120f21bf5f2c
+ms.sourcegitcommit: 7cadf2b637bf62874e43b6e595286101816662aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585931"
+ms.lasthandoff: 11/09/2022
+ms.locfileid: "68891251"
 ---
-# <a name="office-scripts-code-editor-environment"></a>Office脚本代码编辑器环境
+# <a name="office-scripts-code-editor-environment"></a>Office 脚本代码编辑器环境
 
-Office脚本使用 TypeScript 或 JavaScript 编写，并使用 Office Scripts JavaScript API 与 Excel 工作簿进行交互。 代码编辑器基于Visual Studio Code，因此，如果你之前使用过该环境，则感觉像在家一样。
+Office 脚本以 TypeScript 或 JavaScript 编写，并使用 Office 脚本 JavaScript API 与 Excel 工作簿交互。 代码编辑器基于Visual Studio Code，因此，如果你以前使用过该环境，你会感到很自在。
+
+> [!TIP]
+> 如果熟悉Visual Studio Code，现在可以使用它来编写脚本。 访问 [office 脚本 (预览) Visual Studio Code](../develop/vscode-for-scripts.md)试用此功能。
 
 ## <a name="scripting-language-typescript-or-javascript"></a>脚本语言：TypeScript 或 JavaScript
 
-Office 脚本以 [TypeScript](https://www.typescriptlang.org/docs/home.html) 编写，它是 [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) 的一个超集。 操作录制器在 TypeScript 中生成代码，Office脚本文档使用 TypeScript。 由于 TypeScript 是 JavaScript 的超集，因此在 JavaScript 中编写的任何脚本代码都运行正常。
+Office 脚本以 [TypeScript](https://www.typescriptlang.org/docs/home.html) 编写，它是 [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) 的一个超集。 操作记录器在 TypeScript 中生成代码，Office 脚本文档使用 TypeScript。 由于 TypeScript 是 JavaScript 的超集，因此在 JavaScript 中编写的任何脚本代码都将正常工作。
 
-Office脚本在很大程度上是自包含的代码片段。 只使用了 TypeScript 功能的一小部分。 因此，您可以编辑脚本，而无需了解 TypeScript 的不一样。 代码编辑器还处理代码的安装、编译和执行，因此，你无需担心脚本本身。 可以学习语言并创建脚本，而无需以前的编程知识。 但是，如果你对编程很新，我们建议先学习一些基础，然后再继续Office脚本：
+Office 脚本主要是独立的代码片段。 仅使用 TypeScript 功能的一小部分。 因此，无需了解 TypeScript 的复杂之处即可编辑脚本。 代码编辑器还处理代码的安装、编译和执行，因此除了脚本本身之外，你无需担心任何内容。 无需以前的编程知识即可学习语言并创建脚本。 但是，如果你不熟悉编程，我们建议先学习一些基础知识，然后再继续学习 Office 脚本：
 
 [!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
-## <a name="office-scripts-javascript-api"></a>Office脚本 JavaScript API
+## <a name="office-scripts-javascript-api"></a>Office 脚本 JavaScript API
 
-Office脚本使用专用版本的 Office JavaScript API Office[外接程序](/office/dev/add-ins/overview/index)。虽然两个 API 存在相似之处，但不应假定代码可以在两个平台之间移植。 The differences between the two platforms are described in the [Differences between Office Scripts and Office Add-ins](../resources/add-ins-differences.md#apis) article. 可以在脚本 API 参考文档中查看脚本Office [API](/javascript/api/office-scripts/overview)。
+Office 脚本使用 Office [加载项](/office/dev/add-ins/overview/index)的 Office JavaScript API 的专用版本。虽然这两个 API 存在相似之处，但不应假设代码可以在两个平台之间移植。 [Office 脚本和 Office 加载项](../resources/add-ins-differences.md#apis)之间的差异一文介绍了这两个平台之间的差异。 可以在 Office 脚本 API [参考文档中](/javascript/api/office-scripts/overview)查看脚本可用的所有 API。
 
 ## <a name="external-library-support"></a>外部库支持
 
-Office脚本不支持使用外部第三方 JavaScript 库。 目前，无法从脚本调用 Office脚本 API 外的任何库。 你仍然可以访问任何 [内置的 JavaScript](../develop/javascript-objects.md) 对象，如 [数学](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)。
+Office 脚本不支持使用外部第三方 JavaScript 库。 目前，不能从脚本调用除 Office 脚本 API 以外的任何库。 你仍有权访问任何 [内置 JavaScript 对象](../develop/javascript-objects.md)，例如 [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)。
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense是一组可帮助您编写代码的代码编辑器功能。 它提供了自动完成、语法错误突出显示和内联 API 文档。
+IntelliSense 是一组代码编辑器功能，可帮助你编写代码。 它提供自动完成、语法错误突出显示和内联 API 文档。
 
-IntelliSense键入时提供建议，类似于文本建议Excel。 按 Tab 或 Enter 键可插入建议的成员。 通过IntelliSense Ctrl+Space 键在当前光标位置触发键。 这些建议在完成方法时尤其有用。 由 IntelliSense 显示的方法签名包含所需参数的列表、每个参数的类型、给定参数是必需参数还是可选参数以及方法的返回类型。
+IntelliSense 在键入时提供建议，类似于 Excel 中的建议文本。 按 Tab 或 Enter 键将插入建议的成员。 按 Ctrl+空格键在当前光标位置触发 IntelliSense。 这些建议在完成方法时特别有用。 IntelliSense 显示的方法签名包含它所需的参数列表、每个参数的类型、给定参数是必需参数还是可选参数以及方法的返回类型。
 
-将光标悬停在方法、类或其他代码对象上以查看详细信息。 将鼠标悬停在语法错误或代码建议（用红色或黄色锯齿线表示）上，以查看如何解决问题的建议。 通常，IntelliSense"快速修复"选项来自动更改代码。
+将光标悬停在方法、类或其他代码对象上可查看详细信息。 将鼠标悬停在语法错误或代码建议（由红色或黄色波浪线表示）上，以查看有关如何解决问题的建议。 通常，IntelliSense 提供“快速修复”选项来自动更改代码。
 
-:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="代码编辑器悬停文本中具有&quot;快速修复&quot;按钮的错误消息。":::
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="代码编辑器的悬停文本中带有“快速修复”按钮的错误消息。":::
 
-Office脚本代码编辑器使用与 Visual Studio Code 相同的IntelliSense引擎。 若要详细了解此功能，请访问[Visual Studio Code功能IntelliSense功能](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features)。
+Office 脚本代码编辑器使用与 Visual Studio Code 相同的 IntelliSense 引擎。 若要了解有关该功能的详细信息，请访问 [Visual Studio Code 的 IntelliSense 功能](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features)。
 
 ## <a name="keyboard-shortcuts"></a>键盘快捷方式
 
-大多数用于自定义脚本的键盘Visual Studio Code也可在 Office 脚本代码编辑器中运行。 使用以下 PDF 了解可用选项，并充分利用代码编辑器：
+Visual Studio Code的大多数键盘快捷方式也适用于 Office 脚本代码编辑器。 使用以下 PDF 了解可用选项并充分利用代码编辑器：
 
 - [macOS 的键盘快捷方式](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)。
-- [键盘快捷方式用于Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)。
+- [适用于 Windows 的键盘快捷方式](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)。
 
 ## <a name="see-also"></a>另请参阅
 
 - [Office 脚本 API 参考](/javascript/api/office-scripts/overview)
 - [Office 脚本疑难解答](../testing/troubleshooting.md)
 - [在 Office 脚本中使用内置的 JavaScript 对象](../develop/javascript-objects.md)
+- [office 脚本Visual Studio Code (预览版) ](../develop/vscode-for-scripts.md)

@@ -39,6 +39,8 @@ items:
             href: develop/use-json.md
           - name: 在 Power Automate 流中使用 .xlsm 文件
             href: develop/macros-power-automate.md
+          - name: 'vs Code for Office 脚本 (预览版) '
+            href: develop/vscode-for-scripts.md
           - name: 使用数据透视表
             href: develop/pivottables.md
       - name: 疑难解答
@@ -73,7 +75,7 @@ items:
                 href: resources/samples/table-of-contents.md
               - name: 删除表格列筛选器
                 href: resources/samples/clear-table-filter-for-active-cell.md
-              - name: 在 Power Automate 中报告日常更改
+              - name: 报告 Power Automate 中的日常更改
                 href: resources/samples/report-day-to-day-changes.md
           - name: 超越基础设置
             items:

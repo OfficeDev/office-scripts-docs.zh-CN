@@ -1,35 +1,35 @@
 ---
 title: 将 Excel 数据输出为 JSON
 description: 了解如何将 Excel 表数据输出为要在 Power Automate 中使用的 JSON。
-ms.date: 06/27/2022
+ms.date: 11/04/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5078d2d86c92aacb0c0c2438b7298a523c132522
-ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
+ms.openlocfilehash: 96883bb1f74f66065e8f45760858e960ece90e30
+ms.sourcegitcommit: 7cadf2b637bf62874e43b6e595286101816662aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67572666"
+ms.lasthandoff: 11/09/2022
+ms.locfileid: "68891237"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>将 Excel 表数据输出为 JSON 以供 Power Automate 使用
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>将 Excel 表数据输出为 JSON，以便在 Power Automate 中使用
 
-Excel 表数据可以以 [JSON](https://www.w3schools.com/whatis/whatis_json.asp) 的形式表示为对象数组。 每个对象表示表中的一行。 这有助于以用户可见的一致格式从 Excel 提取数据。 然后，可以通过 Power Automate 流将数据提供给其他系统。
+Excel 表数据可以表示为 [JSON](https://www.w3schools.com/whatis/whatis_json.asp) 形式的对象数组。 每个 对象表示表中的一行。 这有助于以用户可见的一致格式从 Excel 中提取数据。 然后，可以通过 Power Automate 流将数据提供给其他系统。
 
 ## <a name="sample-excel-file"></a>示例 Excel 文件
 
-下载文件 [table-data-with-hyperlinks.xlsx](table-data-with-hyperlinks.xlsx) ，以获取随时可用的工作簿。
+下载文件 [table-data-with-hyperlinks.xlsx](table-data-with-hyperlinks.xlsx) 即可使用工作簿。
 
 :::image type="content" source="../../images/table-input.png" alt-text="显示输入表数据的工作表。":::
 
 此示例的变体还包括其中一个表列中的超链接。 这允许在 JSON 中显示其他级别的单元格数据。
 
-:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="显示格式为超链接的表数据列的工作表。":::
+:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="显示格式为超链接的表数据的列的工作表。":::
 
-## <a name="sample-code-return-table-data-as-json"></a>示例代码：将表数据作为 JSON 返回
+## <a name="sample-code-return-table-data-as-json"></a>示例代码：以 JSON 的形式返回表数据
 
-添加以下脚本以自行尝试示例！
+添加以下脚本以亲自试用示例！
 
 > [!NOTE]
-> 可以更改 `interface TableData` 结构以匹配表列。 请注意，对于具有空格的列名，请务必将密钥放在引号中，如 `"Event ID"` 示例中的键。 有关使用 JSON 的详细信息，请阅读 [“使用 JSON 向 Office 脚本传递数据](../../develop/use-json.md)”。
+> 可以更改结构以 `interface TableData` 匹配表列。 请注意，对于带空格的列名，请务必将键放在引号中，如示例中的 。`"Event ID"` 有关使用 JSON 的详细信息，请阅读 [使用 JSON 将数据传入 Office 脚本和从 Office 脚本传递数据](../../develop/use-json.md)。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -82,7 +82,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-plaintable-worksheet"></a>“PlainTable”工作表中的示例输出
+### <a name="sample-output-from-the-plaintable-worksheet"></a>“PlainTable”工作表的示例输出
 
 ```json
 [{
@@ -136,10 +136,10 @@ interface TableData {
 }]
 ```
 
-## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>示例代码：使用超链接文本将表数据作为 JSON 返回
+## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>示例代码：使用超链接文本以 JSON 的形式返回表数据
 
 > [!NOTE]
-> 该脚本始终从表的第 4 列 (0 索引) 提取超链接。 可以通过修改注释下的代码来更改该顺序或将多个列作为超链接数据包括在内 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
+> 该脚本始终从第 4 列提取超链接， (0 索引) 表。 可以通过修改注释下的代码来更改该顺序或包含多个列作为超链接数据 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -196,7 +196,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-withhyperlink-worksheet"></a>“WithHyperLink”工作表中的示例输出
+### <a name="sample-output-from-the-withhyperlink-worksheet"></a>“WithHyperLink”工作表的示例输出
 
 ```json
 [{
@@ -260,4 +260,4 @@ interface TableData {
 
 ## <a name="use-in-power-automate"></a>在 Power Automate 中使用
 
-有关如何在 Power Automate 中使用此类脚本，请参阅使用 [Power Automate 创建自动化工作流](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
+有关如何在 Power Automate 中使用此类脚本，请参阅 [使用 Power Automate 创建自动化工作流](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
